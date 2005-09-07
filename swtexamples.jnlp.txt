@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<jnlp 
+  spec="1.0+" 
+  codebase="file://d:/jws" 
+  href="apps/swtexamples/swtexamples.jnlp"> 
+  <information> 
+    <title>SWT Examples</title> 
+    <vendor>Your website</vendor> 
+    <homepage href="http://eclipse.org/swt"/> 
+    <description>SWT ControlExample</description> 
+    <offline-allowed/> 
+  </information> 
+  <security> 
+      <all-permissions/> 
+  </security> 
+  <resources> 
+    <j2se version="1.3+"/> 
+    <jar href="apps/swtexamples/swtexamples.jar"/> 
+    <extension name="swt" href="swt/swt.jnlp"/>
+  </resources> 
+  <application-desc main-class="org.eclipse.swt.examples.controlexample.ControlExample"/> 
+</jnlp> 
