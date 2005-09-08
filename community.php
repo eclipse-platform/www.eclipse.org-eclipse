@@ -22,7 +22,7 @@ see it listed here, please let us know on the
 <tr><th bgcolor="#0080c0" align="left" style="padding: 2px;"><font color="#ffffff">Code and Bug Fixes</font>
 </table>
 
-<p>Many thanks to the <a href="contributors.txt">various people</a> who have
+<p>Many thanks to the <a href="contributors.txt">people</a> who have
 contributed code and bug fixes to SWT.</p>
 
 <table width="100%">
