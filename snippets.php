@@ -219,6 +219,7 @@ available.</p>
         <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet112.java?rev=HEAD&amp;content-type=text/vnd.viewcvs-markup">display an image in a group</a></li>
         <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet139.java?rev=HEAD&amp;content-type=text/vnd.viewcvs-markup">rotate and flip an image</a></li>
         <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet141.java?rev=HEAD&amp;content-type=text/vnd.viewcvs-markup">display an animated GIF</a></li>
+        <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet194.java?rev=HEAD&amp;content-type=text/vnd.viewcvs-markup">write an animated GIF</a></li>
       </ul>
       <p></p>
 
