@@ -4,13 +4,13 @@
     <title>SWT Snippets</title>
     <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
     <link rel="stylesheet" href="http://dev.eclipse.org/default_style.css" type="text/css">
-    <link rel="stylesheet" href="swt.css" type="text/css">
+    <link rel="stylesheet" href="../swt.css" type="text/css">
     <link rel="shortcut icon" href="http://www.eclipse.org/images/eclipse.ico" type="image/x-icon">
 </head>
 <body bgcolor="#ffffff" text="#000000">
 <table width="635px" style="border-bottom: 1px solid #000000;">
 <colgroup><col width="125px"><col width="510px"></colgroup>
-<tr><?php include "sidebar.php"; ?>
+<tr><?php include "../sidebar.php"; ?>
 <td style="padding: 10px"><h1 style="padding: 0; margin: 0; border-bottom: 1px solid #000000;">SWT Snippets</h1>
 
 <p>Snippets are minimal stand-alone programs that demonstrate specific
