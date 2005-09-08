@@ -32,7 +32,7 @@ bug fixes from there.</p>
 <p>To run a snippet, simply <a href="eclipse.php">set up SWT in your
 Eclipse workspace</a>, create new Java project that depends on SWT, and
 paste the example into a new Java class.
-<a href="snippet-instructions.php">More detailed instructions</a> are
+<a href="instructions.php">More detailed instructions</a> are
 available.</p>
 
   <ul>

@@ -60,7 +60,7 @@ on which it is implemented.</p>
 <ul>
 <li><a href="eclipse.php">How to develop SWT applications in Eclipse</a></li>
 <li><a href="widgets.php">Widget screenshots</a> with links to documentation</li>
-<li><a href="snippets.php">Snippets</a>, helpful code examples</li>
+<li><a href="snippets/">Snippets</a>, helpful code examples</li>
 <li><a href="http://help.eclipse.org/help31/index.jsp?topic=/org.eclipse.platform.doc.isv/reference/api/org/eclipse/swt/package-summary.html" target="_top">Online Javadoc</a></li>
 <li><a href="http://eclipse.org/articles/main.html#SWT">Articles about SWT</a> from eclipse.org</li>
 <li><a href="cvs.php">How to use SWT from CVS</a></li>
