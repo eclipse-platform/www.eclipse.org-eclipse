@@ -50,7 +50,6 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
   <li><a href="#subclassing">Why can't I subclass SWT widgets like Button and Table?</a></li>
   <li><a href="#javawebstart">How can I package my standalone SWT app for Java Web Start?</a></li>
   <li><a href="#whatisasnippet">What is a snippet and why do I care?</a></li>
-  <li><a href="#contributeToSWT">How can I contribute to SWT?</a></li> 
   <li><a href="#whatisbrowser">What is the SWT Browser widget?</a></li>
   <li><a href="#browserlinux">What do I need to run the SWT Browser inside Eclipse on Linux/GTK or Linux/Motif?</a></li>
   <li><a href="#browserlinuxrcp">What do I need to run the SWT Browser in a standalone application on Linux/GTK or Linux/Motif?</a></li>
@@ -148,7 +147,7 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
    <strong>NOTE</strong>: These instructions require you to use Eclipse
 
    <ol>
-     <li>Follow <a href="cvs.html">these instructions</a> to checkout SWT from CVS.
+     <li>Follow <a href="cvs.php">these instructions</a> to checkout SWT from CVS.
 
      <li>Compile the project.  This will create a folder called bin under the org.eclipse.swt project.
 
@@ -811,7 +810,7 @@ Problem" at: <a href="http://www.cas.mcmaster.ca/~emil/publications/fragile/">ht
     display.dispose ();
 }</pre>
     
-	For a list of sample snippets, see the <a href="snippets.html">SWT snippets page</a>.
+	For a list of sample snippets, see the <a href="snippets.php">SWT snippets page</a>.
     
   </dd>
 
@@ -853,45 +852,7 @@ Problem" at: <a href="http://www.cas.mcmaster.ca/~emil/publications/fragile/">ht
     
     <p>This description was originally contributed by &Oslash;yvind Harboe.</p>
   </dd>
-	
-  <dt><strong><a name="contributeToSWT">Q: How can I contribute to SWT?</a></strong>
-  </dt>
-  <dd>A: The SWT team is interested in recruiting more developers to our cause.  There are many ways 
-  you can make contributions to the SWT project:
-  
-  <ul>
-    <li>Enter <a href="https://bugs.eclipse.org/bugs/">bug reports</a> against Platform SWT to request enhancements or when you find errors or platform inconsistencies.</li>
-    <li>Write <a href="http://www.eclipse.org/arg/index.html">articles</a> for Eclipse about how to use SWT.</li>
-    <li>Write snippets for the <a href="snippets.html">SWT snippet page</a> and send them to the mailing list.</li>
-    <li>Create your own web site with useful SWT information and ask us to add it our <a href="SWT_Resources.html">list of other
-    useful information</a>.</li>
-    <li>Help fellow SWT users by answering questions in <a href="news://news.eclipse.org/eclipse.platform.swt">eclipse.platform.swt</a>.</li>
-    <li>Test SWT on a specific platform, particularly one that is less common or that is still 
-    in a beta release.  Run the <a href="test_plan.html">SWT test plan</a> 
-    and post the results in a bug report against Platform SWT.</li>
-    <li>Contribute solutions to bug reports against Platform SWT.  This is the best way to
-    become familiar with the SWT architecture.  If you are familiar with a widget toolkit
-    for a specific Operating System, you should find our Java code quite familiar.
-    Attach your solution as a patch to the bug report.  If your solution is not accepted we will 
-    provide an explanation.  We have fairly strict coding guidelines which we are currently trying 
-    to capture in a document.</li>
-    <li>Implement new widgets.  Since SWT needs to be portable, this task can be difficult because 
-    it requires you to have all the platforms available to you.  Your best bet would be to 
-    implement the widget for Windows and GTK plus an emulated version.  Again, we have fairly 
-    strict coding guidelines which we expect to be followed.</li>
-    <li>Port SWT to a new platform.  If your port is available under CPL and is in a repository
-    that is publicly accessible, we will inspect your code and give you feedback.</li>
-  </ul>
 
-  
-  <p>Code that you contribute to SWT will come under the CPL license.  We will acknowledge any 
-  contributions in the Copyright documentation at the top of the source code file.  Code must either
-  be sent to <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">platform-swt-dev@eclipse.org</a> 
-  or <a href="news://news.eclipse.org/eclipse.platform.swt">eclipse.platform.swt</a> or attached to a 
-  <a href="https://bugs.eclipse.org/bugs/">bug report</a> against Platform SWT to be accepted.  
-  Please do not email code to individual members of the SWT team.</p>
-  </dd>
-  
   <dt><strong><a name="whatisbrowser">Q: What is the SWT Browser widget?</a></strong></dt>
   <dd>A: The SWT Browser widget is used to display HTML documents. It is
       designed to provide a basic and portable API sufficient for essential

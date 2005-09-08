@@ -29,7 +29,7 @@ solution, rather than be finished products.  These snippets are tested
 against the HEAD stream and may sometimes reference new API or require
 bug fixes from there.</p>
 
-<p>To run a snippet, simply <a href="eclipse.html">set up SWT in your
+<p>To run a snippet, simply <a href="eclipse.php">set up SWT in your
 Eclipse workspace</a>, create new Java project that depends on SWT, and
 paste the example into a new Java class.
 <a href="snippet-instructions.php">More detailed instructions</a> are

@@ -34,7 +34,7 @@ on which it is implemented.</p>
   <ul>
   <li><a href="R3_1/plan.html">3.1 Maintenance Plan</a></li>
   <li><a href="R3_1/new_and_noteworthy.html">New and Noteworthy</a></li>
-  <li><a href="language.html">Language Pack</a></li>
+  <li><a href="language.php">Language Pack</a></li>
   </ul>
   </table>
 <td width="50%" valign="top">

@@ -19,7 +19,7 @@ application development it is best to develop against the SWT standalone
 download.  This document will help you get set up.</p>
 
 <p>First, download the .zip of SWT for your platform from the
-<a href="main.html">SWT homepage</a>.</p>
+<a href="http://www.eclipse.org/swt/">SWT homepage</a>.</p>
 
 <p>The SWT .zip file can then be imported into your workspace. In the
 <i>File</i> menu, choose <i>Import</i> and select the
