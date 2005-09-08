@@ -7,8 +7,7 @@
 <tr><td class="nav">&nbsp; <a class="nav" href="community.php">Community</a>
 <tr><td class="nav">&nbsp; <a class="nav" href="http://bugs.eclipse.org/bugs/">Bugs</a>
 <tr><td class="nav">&nbsp; <a class="nav" href="http://www.eclipse.org/swt/">SWT Home</a>
-</table><table class="nav" width="100%">
+</table><p></p><table class="nav" width="100%">
 <tr><td class="nav">&nbsp; <a class="nav" href="http://www.eclipse.org/projects/">Eclipse Projects</a>
 <tr><td class="nav">&nbsp; <a class="nav" href="http://www.eclipse.org/">Eclipse Home</a>
-</table>
-<center><p><a href="http://www.eclipse.org/"><img src="http://www.eclipse.org/images/EclipseBannerPic.jpg" border="0" alt="Eclipse"></a></p></center>
+</table><center><p><a href="http://www.eclipse.org/"><img src="http://www.eclipse.org/images/EclipseBannerPic.jpg" border="0" alt="Eclipse"></a></p></center>
