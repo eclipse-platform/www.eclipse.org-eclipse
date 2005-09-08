@@ -1025,6 +1025,5 @@ Problem" at: <a href="http://www.cas.mcmaster.ca/~emil/publications/fragile/">ht
   </dd>
 </dl>
 </table>
-
 </body>
 </html>
