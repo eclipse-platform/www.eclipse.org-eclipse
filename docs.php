@@ -4,6 +4,7 @@
     <title>SWT Resources and Links</title>
     <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
     <link rel="stylesheet" href="http://dev.eclipse.org/default_style.css" type="text/css">
+    <link rel="stylesheet" href="swt.css" type="text/css">
     <link rel="shortcut icon" href="http://www.eclipse.org/images/eclipse.ico" type="image/x-icon">
 </head>
 <body bgcolor="#ffffff" text="#000000">
