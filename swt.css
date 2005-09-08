@@ -1,0 +1,9 @@
+a.nav:link { text-decoration: none; color: #000000; }
+a.nav:visited { text-decoration: none; color: #000000; }
+a.nav:hover { text-decoration: underline; color: #000000; }
+a.navhead:link { text-decoration: none;}
+a.navhead:visited { text-decoration: none;}
+a.navhead:hover { text-decoration: underline;}
+.navhead { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: xx-small; color: #FFFFFF; font-weight: bold; text-decoration: none }
+td.navhdr { bgcolor: #0080C0; }
+td.nav {border: solid 1px #CFFFFF; }

@@ -4,11 +4,33 @@
     <title>SWT Snippets</title>
     <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
     <link rel="stylesheet" href="http://dev.eclipse.org/default_style.css" type="text/css">
+    <link rel="stylesheet" href="swt.css" type="text/css">
     <link rel="shortcut icon" href="http://www.eclipse.org/images/eclipse.ico" type="image/x-icon">
 </head>
 <body bgcolor="#ffffff" text="#000000">
-<table width="510px" style="border-bottom: 1px solid #000000;">
-<tr><td><h1 style="padding: 0; margin: 0; border-bottom: 1px solid #000000;">SWT Snippets</h1>
+<table width="635px" style="border-bottom: 1px solid #000000;">
+<colgroup><col width="125px"><col width="510px"></colgroup>
+<tr><td valign="top" bgcolor="#6699cc">
+<center>
+<p><table style="border-collapse: collapse" width="90%">
+<tr><td>&nbsp; <b><font color="#ffffff">SWT</font></b>
+</table>
+<table style="border-collapse: collapse" width="90%" bgcolor="#90c8ff">
+<tr><td class="nav">&nbsp; <a class="nav" href="foo">Widgets</a>
+<tr><td class="nav">&nbsp; <a class="nav" href="foo">Snippets</a>
+<tr><td class="nav">&nbsp; <a class="nav" href="foo">FAQ</a>
+<tr><td class="nav">&nbsp; <a class="nav" href="foo">Tools</a>
+<tr><td class="nav">&nbsp; <a class="nav" href="foo">Documentation</a>
+<tr><td class="nav">&nbsp; <a class="nav" href="foo">Community</a>
+<tr><td class="nav">&nbsp; <a class="nav" href="foo">SWT Home</a>
+</table></p>
+<p><table style="border-collapse: collapse" width="90%" bgcolor="#90c8ff">
+<tr><td class="nav">&nbsp; <a class="nav" href="foo">Bugs</a>
+<tr><td class="nav">&nbsp; <a class="nav" href="foo">Mailing List</a>
+</table></p>
+<p><a href="http://www.eclipse.org/"><img src="http://www.eclipse.org/images/EclipseBannerPic.jpg" border="0"></a></p>
+</center>
+<td style="padding: 10px"><h1 style="padding: 0; margin: 0; border-bottom: 1px solid #000000;">SWT Snippets</h1>
 
 <p>Snippets are minimal stand-alone programs that demonstrate specific
 techniques or functionality.  Often simply a small example is the easiest way to
@@ -509,6 +531,6 @@ available.</p>
             <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet87.java?rev=HEAD&amp;content-type=text/vnd.viewcvs-markup">resize automatically as SIP is on or off</a></li>
         </ul>
 </ul>
-</table>  
+</table>
 </body>
 </html>
