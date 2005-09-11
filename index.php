@@ -122,7 +122,7 @@ bugzilla email preferences.</p>
 
 <td valign="top" width="240px">
 <center>
-<p><img src="images/win-example.png" alt="Windows" width="225" height="213"></p>
+<p><img src="images/win-example.png" alt="Windows" width="216" height="204"></p>
 <p><img src="images/lin-example.png" alt="Linux" width="212" height="224"></p>
 <p><img src="images/mac-example.png" alt="Mac OS X" width="232" height="237"></p>
 <p><img src="images/mot-example.png" alt="Motif" width="232" height="210"></p>
