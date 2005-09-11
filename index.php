@@ -54,18 +54,25 @@ on which it is implemented.</p>
 </table>
 
 <table width="100%">
-<tr><th bgcolor="#0080c0" align="left" style="padding: 2px;"><font color="#ffffff">Resources</font>
+<tr><th bgcolor="#0080c0" align="left" style="padding: 2px;"><font color="#ffffff">Articles</font>
 </table>
 
 <ul>
 <li><a href="eclipse.php">How to develop SWT applications in Eclipse</a></li>
+<li><a href="macosx/">How to deploy SWT applications on Mac OS X</a></li>
+<li><a href="cvs.php">How to use SWT from CVS</a></li>
+<li><a href="http://eclipse.org/articles/main.html#SWT">More articles about SWT</a> from eclipse.org</li>
+</ul>
+
+<table width="100%">
+<tr><th bgcolor="#0080c0" align="left" style="padding: 2px;"><font color="#ffffff">Resources</font>
+</table>
+
 <li><a href="widgets/">Widget screenshots</a> with links to documentation</li>
 <li><a href="snippets/">Snippets</a>, helpful code examples</li>
-<li><a href="http://help.eclipse.org/help31/index.jsp?topic=/org.eclipse.platform.doc.isv/reference/api/org/eclipse/swt/package-summary.html" target="_top">Online Javadoc</a></li>
-<li><a href="http://eclipse.org/articles/main.html#SWT">Articles about SWT</a> from eclipse.org</li>
-<li><a href="cvs.php">How to use SWT from CVS</a></li>
-<li><a href="tools.php">Tools and Plug-ins</a> for SWT developers</li>
 <li><a href="faq.php">The SWT FAQ</a> answers many common questions</li>
+<li><a href="tools.php">Tools and Plug-ins</a> for SWT developers</li>
+<li><a href="http://help.eclipse.org/help31/index.jsp?topic=/org.eclipse.platform.doc.isv/reference/api/org/eclipse/swt/package-summary.html" target="_top">Online Javadoc</a></li>
 <li><a href="docs.php">Books and additional documentation</a></li>
 <li><a href="community.php">SWT Community Page</a></li>
 </ul>
