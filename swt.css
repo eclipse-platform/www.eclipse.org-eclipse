@@ -18,3 +18,7 @@ table.nav {
   margin-right: auto;
   padding: 0px;
 }
+table.swtpage {
+  border-bottom: 1px solid #000000;
+  border-collapse: collapse;
+}

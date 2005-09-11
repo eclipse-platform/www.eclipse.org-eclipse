@@ -9,7 +9,7 @@
     <style type="text/css"> dt { padding-top: 20px; padding-bottom: 5px; } </style>
 </head>
 <body bgcolor="#ffffff" text="#000000">
-<table width="825px" style="border-bottom: 1px solid #000000;">
+<table width="825px" class="swtpage">
 <colgroup><col width="125px"><col width="700px"></colgroup>
 <tr><?php include "sidebar.php"; ?>
 <td valign="top" style="padding: 10px"><h1 style="padding: 0; margin: 0; border-bottom: 1px solid #000000;">The SWT FAQ</h1>
