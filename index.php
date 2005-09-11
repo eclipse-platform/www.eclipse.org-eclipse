@@ -68,6 +68,7 @@ on which it is implemented.</p>
 <tr><th bgcolor="#0080c0" align="left" style="padding: 2px;"><font color="#ffffff">Resources</font>
 </table>
 
+<ul>
 <li><a href="widgets/">Widget screenshots</a> with links to documentation</li>
 <li><a href="snippets/">Snippets</a>, helpful code examples</li>
 <li><a href="faq.php">The SWT FAQ</a> answers many common questions</li>
