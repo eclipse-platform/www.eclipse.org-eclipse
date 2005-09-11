@@ -3,7 +3,7 @@
 <tr><td class="nav">&nbsp; <a class="nav" href="http://www.eclipse.org/swt/snippets/">Snippets</a>
 <tr><td class="nav">&nbsp; <a class="nav" href="http://www.eclipse.org/swt/faq.php">FAQ</a>
 <tr><td class="nav">&nbsp; <a class="nav" href="http://www.eclipse.org/swt/tools.php">Tools</a>
-<tr><td class="nav">&nbsp; <a href="http://help.eclipse.org/help31/index.jsp?topic=/org.eclipse.platform.doc.isv/reference/api/org/eclipse/swt/package-summary.html" target="_top">Javadoc</a>
+<tr><td class="nav">&nbsp; <a class="nav" href="http://help.eclipse.org/help31/index.jsp?topic=/org.eclipse.platform.doc.isv/reference/api/org/eclipse/swt/package-summary.html" target="_top">Javadoc</a>
 <tr><td class="nav">&nbsp; <a class="nav" href="http://www.eclipse.org/swt/docs.php">Documentation</a>
 <tr><td class="nav">&nbsp; <a class="nav" href="http://www.eclipse.org/swt/community.php">Community</a>
 <tr><td class="nav">&nbsp; <a class="nav" href="http://bugs.eclipse.org/bugs/">Bugs</a>

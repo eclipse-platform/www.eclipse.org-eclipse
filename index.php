@@ -59,8 +59,8 @@ on which it is implemented.</p>
 
 <ul>
 <li><a href="eclipse.php">How to develop SWT applications in Eclipse</a></li>
-<li><a href="macosx/">How to deploy SWT applications on Mac OS X</a></li>
 <li><a href="cvs.php">How to use SWT from CVS</a></li>
+<li><a href="macosx/">How to deploy SWT applications on Mac OS X</a></li>
 <li><a href="http://eclipse.org/articles/main.html#SWT">More articles about SWT</a> from eclipse.org</li>
 </ul>
 
