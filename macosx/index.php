@@ -30,7 +30,7 @@
     section of the Apple documentation.</p>
 
     <center><table>
-    <tr><td><a href="SWTHello.dmg"><img style="display: block; text-align: center; margin: auto;" src="dmgicon.png" border="0"></a>
+    <tr><td><a href="SWTHello.dmg"><img style="display: block; text-align: center; margin: auto;" src="dmgicon.png" border="0" alt="SWTHello.dmg"></a>
     <tr><td><a href="SWTHello.dmg">Download SWTHello</a> (1MB)
     </table></center>
 
@@ -90,7 +90,7 @@
     the installation process, automatically mounting and copying the
     application to the Desktop.</p>
 
-    <img style="display: block; text-align: center; margin: auto;" src="downloaded.png">
+    <img style="display: block; text-align: center; margin: auto;" src="downloaded.png" alt="Screenshot">
 
     <p>Now that wasn't so bad, was it?</p>
 
