@@ -73,7 +73,7 @@ on which it is implemented.</p>
 <li><a href="snippets/">Snippets</a>, helpful code examples</li>
 <li><a href="faq.php">The SWT FAQ</a> answers many common questions</li>
 <li><a href="tools.php">Tools and Plug-ins</a> for SWT developers</li>
-<li><a href="http://help.eclipse.org/help31/index.jsp?topic=/org.eclipse.platform.doc.isv/reference/api/org/eclipse/swt/package-summary.html" target="_top">Online Javadoc</a></li>
+<li><a href="http://help.eclipse.org/help31/nftopic/org.eclipse.platform.doc.isv/reference/api/overview-summary.html">Online Javadoc</a></li>
 <li><a href="docs.php">Books and additional documentation</a></li>
 <li><a href="community.php">SWT Community Page</a></li>
 </ul>
