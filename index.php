@@ -75,6 +75,7 @@ on which it is implemented.</p>
 <li><a href="tools.php">Tools and Plug-ins</a> for SWT developers</li>
 <li><a href="http://help.eclipse.org/help31/nftopic/org.eclipse.platform.doc.isv/reference/api/overview-summary.html">Online Javadoc</a></li>
 <li><a href="docs.php">Books and additional documentation</a></li>
+<li><a href="test_plan.html">Test Plan for SWT</a></li>
 <li><a href="community.php">SWT Community Page</a></li>
 </ul>
 
