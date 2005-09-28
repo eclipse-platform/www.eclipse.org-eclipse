@@ -21,13 +21,12 @@
 
 <p>An OpenGL plug-in has been developed and is available for download
 here.  The plugin consists of a library that provides bindings for all
-native OpenGL functions, and the classes that facilitate the use of
-these bindings for drawing on an SWT Canvas.  Note that this plug-in is
-purely experimental in nature and is not intended to be part of the
-standard SWT distribution.</p>
+native OpenGL functions, suitable for use with the SWT GL support in
+SWT 3.2.  Note that this plug-in is experimental in nature and is not
+intended to be part of the standard SWT distribution.</p>
 
 <ul>
-  <li><a href="opengl/opengl.html">org.eclipse.swt.opengl</a></li>
+  <li><a href="http://www.eclipse.org/swt/opengl/">org.eclipse.opengl</a></li>
 </ul>
 
 <table width="100%">
