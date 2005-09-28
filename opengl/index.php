@@ -61,16 +61,16 @@ import them using the <i>Existing Projects into Workspace</i> wizard.</p>
 
 <table width="100%" cellpadding="3px">
 <tr><td valign="top"><span style="white-space: nowrap;">27 Sep 2005</span>
-    <td valign="top">Experimental Java binding plugin for Win32
+    <td valign="top">Windows
     <td valign="top"><a href="eclipse-opengl-3.1.0-win32.zip">eclipse-opengl-3.1.0-win32.zip</a>
 <tr><td valign="top"><span style="white-space: nowrap;">27 Sep 2005</span>
-    <td valign="top">Experimental Java binding plugin for Linux x86
+    <td valign="top">Linux x86
     <td valign="top"><a href="eclipse-opengl-3.1.0-linux-x86.zip">eclipse-opengl-3.1.0-linux-x86.zip</a>
 <tr><td valign="top"><span style="white-space: nowrap;">27 Sep 2005</span>
-    <td valign="top">Experimental Java binding plugin for Linux x86-64
+    <td valign="top">Linux x86-64
     <td valign="top"><a href="eclipse-opengl-3.1.0-linux-x86-64.zip">eclipse-opengl-3.1.0-linux-x86-64.zip</a>
 <tr><td valign="top"><span style="white-space: nowrap;">27 Sep 2005</span>
-    <td valign="top">Experimental Java binding plugin for MacOS X
+    <td valign="top">MacOS X
     <td valign="top"><a href="eclipse-opengl-3.1.0-macosx.zip">eclipse-opengl-3.1.0-macosx.zip</a>
 <tr><td valign="top"><span style="white-space: nowrap;">27 Sep 2005</span>
     <td valign="top">Example applications
