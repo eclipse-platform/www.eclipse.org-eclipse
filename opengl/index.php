@@ -50,7 +50,7 @@ example using this binding, see
 <h3>Running the examples</h3>
 
 <p>To run the examples below, download the examples zip along with
-the <i>org.eclipse.opengl</i> zip file and import them using
+the <i>org.eclipse.opengl</i> zip for your platform and import them using
 the <i>Existing Projects into Workspace</i> wizard.</p>
 
 <table width="100%">
@@ -72,10 +72,10 @@ the <i>Existing Projects into Workspace</i> wizard.</p>
     <td valign="top"><a href="eclipse-opengl-3.1.0-macosx.zip">eclipse-opengl-3.1.0-macosx.zip</a>
 <tr><td valign="top"><span style="white-space: nowrap;">27 Sep 2005</span>
     <td valign="top">Example applications
-    <td valign="top"><a href="org.eclipse.swt.examples.opengl_3.1.0.zip">org.eclipse.swt.examples.opengl_3.1.0.zip</a>
+    <td valign="top"><a href="org.eclipse.swt.opengl.examples_3.2.0.zip">org.eclipse.swt.opengl.examples_3.2.0.zip</a>
 <tr><td valign="top"><span style="white-space: nowrap;">27 Sep 2005</span>
     <td valign="top">Example plugin with a view that uses OpenGL
-    <td valign="top"><a href="org.eclipse.swt.examples.openglview_3.1.0.zip">org.eclipse.swt.examples.openglview_3.1.0.zip</a>
+    <td valign="top"><a href="org.eclipse.swt.examples.openglview_3.2.0.zip">org.eclipse.swt.examples.openglview_3.2.0.zip</a>
 <tr><td>&nbsp;<td><td>
 <tr><th colspan="3" bgcolor="#0080c0" align="left" style="padding: 2px;"><font color="#ffffff">&nbsp; Deprecated OpenGL Binding</font>
 <tr><td valign="top"><span style="white-space: nowrap;">10 Nov 2004</span>
