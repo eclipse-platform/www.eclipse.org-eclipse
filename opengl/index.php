@@ -39,7 +39,7 @@ well with SWT.
 <a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=110757">Bug #110757</a>
 is tracking support for using <i>JOGL</i> with SWT.
 <p></p>
-<li><a href="">org.eclipse.opengl</a> is an experimental Java binding
+<li><i>org.eclipse.opengl</i> is an experimental Java binding
 for OpenGL 1.1 and GLU built as an Eclipse plugin. This is useful for
 simple OpenGL applications that do not require a more complete binding.  For an
 example using this binding, see
@@ -47,7 +47,7 @@ example using this binding, see
 <p></p>
 </ol>
 
-<h3>Running the examples</h3>
+<h3>Examples using the org.eclipse.opengl binding</h3>
 
 <p>To run the examples below, download the examples zip along with
 the <i>org.eclipse.opengl</i> zip for your platform and import them using
