@@ -15,15 +15,16 @@
 <td valign="top" style="padding: 10px"><h1 style="padding: 0; margin: 0; border-bottom: 1px solid #000000;">Using OpenGL in SWT Applications</h1>
 
 <p>Support for OpenGL is included in SWT 3.2 in the package
-<i>org.eclipse.swt.opengl</i>.</p>
+<i>org.eclipse.swt.opengl</i>. See the <b>GLCanvas</b> class for
+a widget which hosts an OpenGL context.</p>
+
+<h3>Java OpenGL Bindings</h3>
 
 <p>OpenGL applications use two separate APIs: the window-system
 independent drawing API (OpenGL), and a window-system specific
 integration layer (WGL under Windows, GLX under X, etc).  SWT
 provides a thin layer above the window-system specific integration API,
 enabling applications to use their Java OpenGL binding of choice.</p>
-
-<h3>Java OpenGL Bindings</h3>
 
 <ol>
 <li>The <a href="http://www.lwjgl.org/">Lightweight Java Game Library
@@ -49,9 +50,10 @@ example using this binding, see
 
 <h3>Examples using the org.eclipse.opengl binding</h3>
 
-<p>To run the examples below, download the examples zip along with
-the <i>org.eclipse.opengl</i> zip for your platform and import them using
-the <i>Existing Projects into Workspace</i> wizard.</p>
+<p>The OpenGL view can be run simply by adding the view and the <i>org.eclipse.opengl</i>
+plugin to your Eclipse plugins folder. To run the standalone example below, download
+the examples zip along with the <i>org.eclipse.opengl</i> zip for your platform and
+import them using the <i>Existing Projects into Workspace</i> wizard.</p>
 
 <table width="100%">
 <tr><th bgcolor="#0080c0" align="left" style="padding: 2px;"><font color="#ffffff">&nbsp; Experimental OpenGL Binding</font>
