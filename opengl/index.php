@@ -48,12 +48,12 @@ simple example using this binding, see
 <p></p>
 </ol>
 
-<h3>Examples using the org.eclipse.opengl binding</h3>
+<h3>The org.eclipse.opengl Binding and Examples</h3>
 
-<p>The OpenGL view can be run simply by adding the view and the <i>org.eclipse.opengl</i>
-plugin to your Eclipse plugins folder. To run the standalone example below, download
-the examples zip along with the <i>org.eclipse.opengl</i> zip for your platform and
-import them using the <i>Existing Projects into Workspace</i> wizard.</p>
+<p>To run example OpenGL Eclipse view, simply extract the zip and the
+<i>org.eclipse.opengl</i> plugin to your Eclipse plugins folder. To run the standalone
+example, download the examples zip along with the <i>org.eclipse.opengl</i> zip for
+your platform and import them into your workspace.</p>
 
 <table width="100%">
 <tr><th bgcolor="#0080c0" align="left" style="padding: 2px;"><font color="#ffffff">&nbsp; Experimental OpenGL Binding 0.5</font>
