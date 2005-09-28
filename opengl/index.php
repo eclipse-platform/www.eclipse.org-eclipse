@@ -58,7 +58,7 @@ your platform and import them into your workspace.</p>
 <p>Please note that this binding is experimental and subject to change.</p>
 
 <table width="100%">
-<tr><th bgcolor="#0080c0" align="left" style="padding: 2px;"><font color="#ffffff">&nbsp; Experimental OpenGL Binding 0.5</font>
+<tr><th bgcolor="#0080c0" align="left" style="padding: 2px;"><font color="#ffffff">&nbsp; Experimental OpenGL Binding 0.5 for SWT 3.2</font>
 </table>
 
 <table width="100%" cellpadding="3px">
@@ -81,7 +81,7 @@ your platform and import them into your workspace.</p>
     <td valign="top">Example plugin with a view that uses OpenGL
     <td valign="top"><a href="org.eclipse.swt.examples.openglview_0.5.0.zip">org.eclipse.swt.examples.openglview_0.5.0.zip</a>
 <tr><td>&nbsp;<td><td>
-<tr><th colspan="3" bgcolor="#0080c0" align="left" style="padding: 2px;"><font color="#ffffff">&nbsp; Deprecated OpenGL Binding</font>
+<tr><th colspan="3" bgcolor="#0080c0" align="left" style="padding: 2px;"><font color="#ffffff">&nbsp; Deprecated OpenGL Binding for SWT 3.1</font>
 <tr><td valign="top"><span style="white-space: nowrap;">10 Nov 2004</span>
     <td valign="top">Experimental OpenGL plugins for SWT 3.1
     <td valign="top"><a href="opengl.html">old implementation</a>
