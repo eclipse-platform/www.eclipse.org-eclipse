@@ -60,24 +60,24 @@ import them using the <i>Existing Projects into Workspace</i> wizard.</p>
 </table>
 
 <table width="100%" cellpadding="3px">
-<tr><td valign="top"><span style="white-space: nowrap;">27 Sep 2005</span>
+<tr><td valign="top"><span style="white-space: nowrap;">28 Sep 2005</span>
     <td valign="top">Windows
     <td valign="top"><a href="eclipse-opengl-0.5.0-win32.zip">eclipse-opengl-0.5.0-win32.zip</a>
-<tr><td valign="top"><span style="white-space: nowrap;">27 Sep 2005</span>
+<tr><td valign="top"><span style="white-space: nowrap;">28 Sep 2005</span>
     <td valign="top">Linux x86
     <td valign="top"><a href="eclipse-opengl-0.5.0-linux-x86.zip">eclipse-opengl-0.5.0-linux-x86.zip</a>
-<tr><td valign="top"><span style="white-space: nowrap;">27 Sep 2005</span>
+<tr><td valign="top"><span style="white-space: nowrap;">28 Sep 2005</span>
     <td valign="top">Linux x86-64
     <td valign="top"><a href="eclipse-opengl-0.5.0-linux-x86-64.zip">eclipse-opengl-0.5.0-linux-x86-64.zip</a>
-<tr><td valign="top"><span style="white-space: nowrap;">27 Sep 2005</span>
+<tr><td valign="top"><span style="white-space: nowrap;">28 Sep 2005</span>
     <td valign="top">MacOS X
     <td valign="top"><a href="eclipse-opengl-0.5.0-macosx.zip">eclipse-opengl-0.5.0-macosx.zip</a>
-<tr><td valign="top"><span style="white-space: nowrap;">27 Sep 2005</span>
+<tr><td valign="top"><span style="white-space: nowrap;">28 Sep 2005</span>
     <td valign="top">Example applications
-    <td valign="top"><a href="org.eclipse.swt.opengl.examples_3.2.0.zip">org.eclipse.swt.opengl.examples_3.2.0.zip</a>
-<tr><td valign="top"><span style="white-space: nowrap;">27 Sep 2005</span>
+    <td valign="top"><a href="org.eclipse.swt.opengl.examples_0.5.0.zip">org.eclipse.swt.opengl.examples_0.5.0.zip</a>
+<tr><td valign="top"><span style="white-space: nowrap;">28 Sep 2005</span>
     <td valign="top">Example plugin with a view that uses OpenGL
-    <td valign="top"><a href="org.eclipse.swt.examples.openglview_3.2.0.zip">org.eclipse.swt.examples.openglview_3.2.0.zip</a>
+    <td valign="top"><a href="org.eclipse.swt.examples.openglview_0.5.0.zip">org.eclipse.swt.examples.openglview_0.5.0.zip</a>
 <tr><td>&nbsp;<td><td>
 <tr><th colspan="3" bgcolor="#0080c0" align="left" style="padding: 2px;"><font color="#ffffff">&nbsp; Deprecated OpenGL Binding</font>
 <tr><td valign="top"><span style="white-space: nowrap;">10 Nov 2004</span>
