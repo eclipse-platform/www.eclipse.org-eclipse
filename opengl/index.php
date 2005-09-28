@@ -28,7 +28,7 @@ enabling applications to use their Java OpenGL binding of choice.</p>
 
 <ol>
 <li>The <a href="http://www.lwjgl.org/">Lightweight Java Game Library
-(LWJGL)</a> is a Java binding to OpenGL which supports OpenGL 2.0 and
+(LWJGL)</a> is a Java binding for OpenGL which supports OpenGL 2.0 and
 many interesting extensions.  For an example using <i>LWJGL</i> with SWT, see
 <a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet195.java?rev=HEAD&amp;content-type=text/vnd.viewcvs-markup">Snippet 195</a>.
 <p></p>
@@ -42,8 +42,8 @@ is tracking support for using <i>JOGL</i> with SWT.
 <p></p>
 <li><i>org.eclipse.opengl</i> is an experimental Java binding
 for OpenGL 1.1 and GLU built as an Eclipse plugin. This is useful for
-simple OpenGL applications that do not require a more complete binding.  For an
-example using this binding, see
+simple OpenGL applications that do not require a more complete binding.  For a
+simple example using this binding, see
 <a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet174.java?rev=HEAD&amp;content-type=text/vnd.viewcvs-markup">Snippet 174</a>.
 <p></p>
 </ol>
