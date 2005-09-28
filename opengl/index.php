@@ -55,6 +55,8 @@ simple example using this binding, see
 example, download the examples zip along with the <i>org.eclipse.opengl</i> zip for
 your platform and import them into your workspace.</p>
 
+<p>Please note that this binding is experimental and subject to change.</p>
+
 <table width="100%">
 <tr><th bgcolor="#0080c0" align="left" style="padding: 2px;"><font color="#ffffff">&nbsp; Experimental OpenGL Binding 0.5</font>
 </table>
