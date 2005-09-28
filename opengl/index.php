@@ -56,22 +56,22 @@ the examples zip along with the <i>org.eclipse.opengl</i> zip for your platform 
 import them using the <i>Existing Projects into Workspace</i> wizard.</p>
 
 <table width="100%">
-<tr><th bgcolor="#0080c0" align="left" style="padding: 2px;"><font color="#ffffff">&nbsp; Experimental OpenGL Binding</font>
+<tr><th bgcolor="#0080c0" align="left" style="padding: 2px;"><font color="#ffffff">&nbsp; Experimental OpenGL Binding 0.5</font>
 </table>
 
 <table width="100%" cellpadding="3px">
 <tr><td valign="top"><span style="white-space: nowrap;">27 Sep 2005</span>
     <td valign="top">Windows
-    <td valign="top"><a href="eclipse-opengl-3.1.0-win32.zip">eclipse-opengl-3.1.0-win32.zip</a>
+    <td valign="top"><a href="eclipse-opengl-0.5.0-win32.zip">eclipse-opengl-0.5.0-win32.zip</a>
 <tr><td valign="top"><span style="white-space: nowrap;">27 Sep 2005</span>
     <td valign="top">Linux x86
-    <td valign="top"><a href="eclipse-opengl-3.1.0-linux-x86.zip">eclipse-opengl-3.1.0-linux-x86.zip</a>
+    <td valign="top"><a href="eclipse-opengl-0.5.0-linux-x86.zip">eclipse-opengl-0.5.0-linux-x86.zip</a>
 <tr><td valign="top"><span style="white-space: nowrap;">27 Sep 2005</span>
     <td valign="top">Linux x86-64
-    <td valign="top"><a href="eclipse-opengl-3.1.0-linux-x86-64.zip">eclipse-opengl-3.1.0-linux-x86-64.zip</a>
+    <td valign="top"><a href="eclipse-opengl-0.5.0-linux-x86-64.zip">eclipse-opengl-0.5.0-linux-x86-64.zip</a>
 <tr><td valign="top"><span style="white-space: nowrap;">27 Sep 2005</span>
     <td valign="top">MacOS X
-    <td valign="top"><a href="eclipse-opengl-3.1.0-macosx.zip">eclipse-opengl-3.1.0-macosx.zip</a>
+    <td valign="top"><a href="eclipse-opengl-0.5.0-macosx.zip">eclipse-opengl-0.5.0-macosx.zip</a>
 <tr><td valign="top"><span style="white-space: nowrap;">27 Sep 2005</span>
     <td valign="top">Example applications
     <td valign="top"><a href="org.eclipse.swt.opengl.examples_3.2.0.zip">org.eclipse.swt.opengl.examples_3.2.0.zip</a>
