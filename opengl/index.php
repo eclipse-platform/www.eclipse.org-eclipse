@@ -48,9 +48,9 @@ simple example using this binding, see
 <p></p>
 </ol>
 
-<h3>The org.eclipse.opengl Binding and Examples</h3>
+<h3>The Experimental org.eclipse.opengl Binding</h3>
 
-<p>To run example OpenGL Eclipse view, simply extract the zip and the
+<p>To run the OpenGL view example, simply extract the zip and the
 <i>org.eclipse.opengl</i> plugin to your Eclipse plugins folder. To run the standalone
 example, download the examples zip along with the <i>org.eclipse.opengl</i> zip for
 your platform and import them into your workspace.</p>
