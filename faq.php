@@ -867,7 +867,7 @@ Problem" at: <a href="http://www.cas.mcmaster.ca/~emil/publications/fragile/">ht
       <li>Firefox can be used with SWT 3.1 (Linux only), provided that it has been compiled with linkable Gecko libraries.  It is 
       important to note that Firefox downloads from mozilla.org currently do <em>not</em> satisfy this criteria, but Firefox installations
       that are included in major Linux distributions <em>typically</em> do.  Attempting to use a statically-linked Firefox install will
-      display the error message "No more handles [NS_InitEmbedding...".</li>
+      display the error message "No more handles [NS_InitEmbedding...error -2147221164]".</li>
     </ul>
 
     <br>The version of Mozilla installed on your system varies with your Linux distribution.  The following Linux distributions meet the Mozilla
