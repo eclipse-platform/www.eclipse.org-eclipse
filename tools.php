@@ -1,7 +1,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-    <title>SWT Development Resources</title>
+    <title>SWT Development Tools</title>
     <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
     <link rel="stylesheet" href="http://dev.eclipse.org/default_style.css" type="text/css">
     <link rel="stylesheet" href="swt.css" type="text/css">
@@ -11,27 +11,7 @@
 <table width="635px" class="swtpage">
 <colgroup><col width="125px"><col width="510px"></colgroup>
 <tr><?php include "sidebar.php"; ?>
-<td valign="top" style="padding: 10px"><h1 style="padding: 0; margin: 0; border-bottom: 1px solid #000000;">SWT Development Resources</h1>
-
-<p>This page contains information and tools for SWT developers.</p>
-
-<table width="100%">
-<tr><th bgcolor="#0080c0" align="left" style="padding: 2px;"><font color="#ffffff">Experimental OpenGL Plug-in</font>
-</table>
-
-<p>An OpenGL plug-in has been developed and is available for download
-here.  The plugin consists of a library that provides bindings for all
-native OpenGL functions, suitable for use with the SWT GL support in
-SWT 3.2.  Note that this plug-in is experimental in nature and is not
-intended to be part of the standard SWT distribution.</p>
-
-<ul>
-  <li><a href="http://www.eclipse.org/swt/opengl/">org.eclipse.opengl</a></li>
-</ul>
-
-<table width="100%">
-<tr><th bgcolor="#0080c0" align="left" style="padding: 2px;"><font color="#ffffff">Tools</font>
-</table>
+<td valign="top" style="padding: 10px"><h1 style="padding: 0; margin: 0; border-bottom: 1px solid #000000;">SWT Development Tools</h1>
 
 <p><b>Sleak</b> is a simple tool that monitors the creation and
 disposing of SWT graphics resources.</p>
@@ -50,13 +30,6 @@ disposing of SWT graphics resources.</p>
   <li><b>Sleak for standalone applications </b><a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.swt.tools/Sleak/org/eclipse/swt/tools/internal/Sleak.java?rev=HEAD&amp;content-type=text/vnd.viewcvs-markup">(Sleak.java)</a></li>
 </ul>
 
-<p><b>JniGen</b> is a tool that generates JNI wrappers for creating the SWT Platform Interface.</p>
-
-<ul>
-  <li>Retrieve the org.eclipse.swt.tools project from dev.eclipse.org.</li>
-  <li>Run the org.eclipse.swt.tools.internal.JNIGeneratorAppUI class inside the JNI Generation folder.</li>
-</ul>
-    
 <p><b>SWT Spy plug-in</b> for Eclipse is a simple tool that prints out
 information about the widget under the cursor.  Currently, this includes
 style, layout and parent information.</p>
@@ -71,6 +44,9 @@ style, layout and parent information.</p>
   <li>Move cursor over the control of interest and see data printed in Spy view.</li>
   <li>To start or stop data collection while over a control, toggle the monitor action using ALT+SHIFT+".".</li>
 </ul>
+
+<p><b>JniGen</b> is a tool that generates JNI wrappers for creating the SWT Platform Interface.
+For more information on how to generate the JNI code, see <a href="jnigen.php">this tutorial</a>.</p>
 
 </table>
 </body>
