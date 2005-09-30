@@ -68,9 +68,9 @@ metadata.</p>
 <li>For GTK+ and Motif, all native functions must be wrapped in locking
     code.  When adding functions, simply copy the style and structure of the
     other native functions.
-<li>Many functions on Mac OS X are <b>unions</b>.  For an example of how to
-    add the markup for a union, see the <b>ControlFontStyleRec</b> structure
-    and its metadata.
+<li>Many functions on Mac OS X return structs which use <b>unions</b>.  For
+    an example of how to add the markup for a union, see the
+    <b>ControlFontStyleRec</b> structure and its metadata.
 </ul>
 
 <p>And there you go!  If you're having trouble, please post to the SWT
