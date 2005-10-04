@@ -444,6 +444,7 @@ available.</p>
     <li><a name="textlayout"><b>TextLayout, TextStyle</b></a>
       <ul>
         <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet145.java?rev=HEAD&amp;content-type=text/vnd.viewcvs-markup">draw internationalized styled text on a shell</a></li>
+        <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet197.java?rev=HEAD&amp;content-type=text/vnd.viewcvs-markup">draw dynamically wrapped text on a shell</a></li>
       </ul>
       <p></p>
 
