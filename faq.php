@@ -74,12 +74,15 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
       <ul>
       <li>org.eclipse.swt
       <li>org.eclipse.swt.accessibility
+      <li>org.eclipse.swt.awt
+      <li>org.eclipse.swt.browser
       <li>org.eclipse.swt.custom
       <li>org.eclipse.swt.dnd
       <li>org.eclipse.swt.events
       <li>org.eclipse.swt.graphics
       <li>org.eclipse.swt.internal.* (Not API, do not reference classes in these packages)
       <li>org.eclipse.swt.layout
+      <li>org.eclipse.swt.opengl
       <li>org.eclipse.swt.ole.win32 (Windows only)
       <li>org.eclipse.swt.printing
       <li>org.eclipse.swt.program
