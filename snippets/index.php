@@ -269,6 +269,7 @@ available.</p>
         <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet157.java?rev=HEAD&amp;content-type=text/vnd.viewcvs-markup">embed Word in an applet</a></li>
         <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet186.java?rev=HEAD&amp;content-type=text/vnd.viewcvs-markup">reading and writing to a SAFEARRAY</a></li>
         <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet187.java?rev=HEAD&amp;content-type=text/vnd.viewcvs-markup">execute a script function that exists on a web page</a></li>
+        <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet199.java?rev=HEAD&amp;content-type=text/vnd.viewcvs-markup">listen for Excel AppEvents</a></li>
       </ul>
       <p></p>
 
@@ -277,7 +278,12 @@ available.</p>
         <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet174.java?rev=HEAD&amp;content-type=text/vnd.viewcvs-markup">draw a rectangle</a></li>
       </ul>
       <p></p>
-
+    <li><a name="path"><b>Path</b></a>
+       <ul>
+        <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet198.java?rev=HEAD&amp;content-type=text/vnd.viewcvs-markup">Create a path from some text</a></li>      
+       </ul>
+      <p></p>
+      
     <li><a name="printing"><b>Printing</b></a>
       <ul>
         <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet132.java?rev=HEAD&amp;content-type=text/vnd.viewcvs-markup">print "Hello World!" in black, outlined in red, to default printer</a></li>
@@ -438,6 +444,7 @@ available.</p>
         <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet19.java?rev=HEAD&amp;content-type=text/vnd.viewcvs-markup">verify input (only allow digits)</a></li>
         <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet179.java?rev=HEAD&amp;content-type=text/vnd.viewcvs-markup">verify input in a template (YYYY/MM/DD)</a></li>
         <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet191.java?rev=HEAD&amp;content-type=text/vnd.viewcvs-markup">detect when the user scrolls a text control</a></li>
+        <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet196.java?rev=HEAD&amp;content-type=text/vnd.viewcvs-markup">verify input using a regular expression</a></li>
       </ul>
       <p></p>
 
