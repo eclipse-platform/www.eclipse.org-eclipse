@@ -14,9 +14,9 @@
 <tr><?php include "../sidebar.php"; ?>
 <td valign="top" style="padding: 10px"><h1 style="padding: 0; margin: 0; border-bottom: 1px solid #000000;">Using OpenGL in SWT Applications</h1>
 
-<p>Support for OpenGL is included in SWT 3.2 in the package
-<i>org.eclipse.swt.opengl</i>. See the <b>GLCanvas</b> class for
-a widget which hosts an OpenGL context.</p>
+<p>Support for OpenGL is included in SWT 3.2 (all builds after M2) in
+the package <i>org.eclipse.swt.opengl</i>. See the <b>GLCanvas</b>
+class for a widget which hosts an OpenGL context..</p>
 
 <h3>Java OpenGL Bindings</h3>
 
