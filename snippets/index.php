@@ -29,7 +29,7 @@ solution, rather than be finished products.  These snippets are tested
 against the HEAD stream and may sometimes reference new API or require
 bug fixes from there.</p>
 
-<p>To run a snippet, simply <a href="eclipse.php">set up SWT in your
+<p>To run a snippet, simply <a href="http://www.eclipse.org/swt/eclipse.php">set up SWT in your
 Eclipse workspace</a>, create new Java project that depends on SWT, and
 paste the example into a new Java class.
 <a href="instructions.php">More detailed instructions</a> are
@@ -335,7 +335,7 @@ available.</p>
     <li><a name="scrolledcomposite"><b>ScrolledComposite</b></a>
       <ul>
         <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet5.java?rev=HEAD&amp;content-type=text/vnd.viewcvs-markup">scroll a control in a scrolled composite</a></li>
-        <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet166.java?rev=HEAD&amp;content-type=text/vnd.viewcvs-markup">create a ScrolledComposite with wrapping amp;content</a></li>
+        <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet166.java?rev=HEAD&amp;content-type=text/vnd.viewcvs-markup">create a ScrolledComposite with wrapping content</a></li>
         <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet167.java?rev=HEAD&amp;content-type=text/vnd.viewcvs-markup">create two ScrolledComposites that scroll in tandem</a></li>
         <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet188.java?rev=HEAD&amp;content-type=text/vnd.viewcvs-markup">Scroll widgets into view when they get focus</a></li>
       </ul>
