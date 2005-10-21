@@ -116,7 +116,7 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
    repository or from an eclipse SDK download.
   
    <p>In order to build the required libraries and run Eclipse, you
-   will require a JDK (Java Development Kit) version that is suppored
+   will require a JDK (Java Development Kit) version that is supported
    by Eclipse.  Check eclipse.org for details.</p>
     
    <p><strong>Building the SWT JNI libraries from the eclipse SDK download:</strong>
