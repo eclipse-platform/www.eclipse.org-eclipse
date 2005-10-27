@@ -499,6 +499,7 @@ available.</p>
         <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet90.java?rev=HEAD&amp;content-type=text/vnd.viewcvs-markup">detect mouse down in a tree item</a></li>
         <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet170.java?rev=HEAD&amp;content-type=text/vnd.viewcvs-markup">create a tree with columns</a></li>
         <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet193.java?rev=HEAD&amp;content-type=text/vnd.viewcvs-markup">make columns reorderable by dragging</a></li>
+        <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet202.java?rev=HEAD&amp;content-type=text/vnd.viewcvs-markup">virtual tree - lazy creation of sub nodes</a></li>
       </ul>
       <p></p>
 
