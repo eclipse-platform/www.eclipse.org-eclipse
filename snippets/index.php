@@ -453,7 +453,10 @@ available.</p>
       <ul>
         <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet145.java?rev=HEAD&amp;content-type=text/vnd.viewcvs-markup">draw internationalized styled text on a shell</a></li>
         <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet197.java?rev=HEAD&amp;content-type=text/vnd.viewcvs-markup">draw dynamically wrapped text on a shell</a></li>
-      </ul>
+        <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet203.java?rev=HEAD&amp;content-type=text/vnd.viewcvs-markup">justify, align and indenttext</a></li>
+        <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet204.java?rev=HEAD&amp;content-type=text/vnd.viewcvs-markup">change the rise of text relative to the baseline</a></li>
+        <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet205.java?rev=HEAD&amp;content-type=text/vnd.viewcvs-markup">embed images and widgets in text</a></li>
+       </ul>
       <p></p>
 
     <li><a name="toolbar"><b>ToolBar, ToolItem</b></a>
