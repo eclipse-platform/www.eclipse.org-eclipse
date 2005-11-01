@@ -182,7 +182,116 @@
   </tr>
   <tr>
     <td width="30%" valign="top" align="left">
-      <p align="right"><b>HIView Support on Mac OS X</b></p>
+      <p align="right"><b>Embedding objects in text</b></p>
+    </td>
+    <td width="70%" valign="top" align="left">
+    <p>Using TextLayout, it is now possible to embed objects such as images or 
+    widgets inside text.  Glyph metrics such as ascent, descent and width can be
+    specified.  Objects wrap with the text.
+    <p><img border="0" src="textObjects.png" width="252" height="145"></p>
+    <p>For an example see the SWT  
+     <a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet205.java?rev=HEAD&content-type=text/vnd.viewcvs-markup">snippet</a>.
+    </td>
+  </tr>
+  
+  <tr>
+    <td colspan="2">
+      <hr>
+    </td>
+  </tr>
+  <tr>
+    <td width="30%" valign="top" align="left">
+      <p align="right"><b>Indent, align and justify text</b></p>
+    </td>
+    <td width="70%" valign="top" align="left">
+    <p>TextLayout now supports indenting, justifying and aligning text.
+    <p><img border="0" src="indentJustifyAlign.png" width="264" height="307"></p>
+    <p>For an example see the SWT  
+     <a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet203.java?rev=HEAD&content-type=text/vnd.viewcvs-markup">snippet</a>.
+    </td>
+  </tr>
+  
+  <tr>
+    <td colspan="2">
+      <hr>
+    </td>
+  </tr>
+  <tr>
+    <td width="30%" valign="top" align="left">
+      <p align="right"><b>Text Baseline Rise</b></p>
+    </td>
+    <td width="70%" valign="top" align="left">
+    <p>Usign TextLayout, it is now possible to specify the baseline rise for a range of text.
+    <p><img border="0" src="rise.png" width="207" height="158"></p>
+    <p>For an example see the SWT  
+     <a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet204.java?rev=HEAD&content-type=text/vnd.viewcvs-markup">snippet</a>.
+    </td>
+  </tr>
+  
+  <tr>
+    <td colspan="2">
+      <hr>
+    </td>
+  </tr>
+  <tr>
+    <td width="30%" valign="top" align="left">
+      <p align="right"><b>Virtual Tree</b></p>
+    </td>
+    <td width="70%" valign="top" align="left">
+    <p>Tree now supports the SWT.VIRTUAL style. This allows you to create trees 
+    with large amounts of data quickly. When TreeItems are needed, they are 
+    created on-demand.
+    <p>For an example see the SWT  
+     <a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet202.java?rev=HEAD&content-type=text/vnd.viewcvs-markup">snippet</a>.
+    </td>
+  </tr>
+
+  <tr>
+    <td colspan="2">
+      <hr>
+    </td>
+  </tr>
+  <tr>
+    <td width="30%" valign="top" align="left">
+      <p align="right"><b>OpenGL support</b></p>
+    </td>
+    <td width="70%" valign="top" align="left">
+    <p>You can now use <a href="http://www.eclipse.org/swt/opengl/">
+    OpenGL in SWT applications</a>. 
+    The OpenGL interface works with third-party OpenGL libraries such as LWJGL.
+    <p><img border="0" src="lwjglexample.png" width="372" height="289"></p>
+    <p>For examples, see the SWT snippets 
+    <ul>
+      <li><a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet174.java?rev=HEAD&content-type=text/vnd.viewcvs-markup">org.eclipse.opengl snippet</a></li>
+      <li><a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet195.java?rev=HEAD&content-type=text/vnd.viewcvs-markup">LWJGL snippet</a></li>
+    </ul>
+    </td>
+  </tr>
+  
+  <tr>
+    <td colspan="2">
+      <hr>
+    </td>
+  </tr>
+  <tr>
+    <td width="30%" valign="top" align="left">
+      <p align="right"><b>Buttons with image and text</b></p>
+    </td>
+    <td width="70%" valign="top" align="left">
+    <p>Buttons can now have both image and text.  This feature is supported
+    on Windows XP, Mac OS X, and GTK.
+    <p><img border="0" src="buttonImageText.png" width="123" height="85"></p>
+    </td>
+  </tr>
+
+  <tr>
+    <td colspan="2">
+      <hr>
+    </td>
+  </tr>
+  <tr>
+    <td width="30%" valign="top" align="left">
+      <p align="right"><b>HIView on Mac OS X</b></p>
     </td>
     <td width="70%" valign="top" align="left">
     <p>HIView is now supported on Mac OS X.  This resolves many clipping and sizing issues.
