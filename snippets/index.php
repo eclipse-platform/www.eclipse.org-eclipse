@@ -203,6 +203,7 @@ available.</p>
         <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet95.java?rev=HEAD&amp;content-type=text/vnd.viewcvs-markup">capture a widget image with a GC</a></li>
         <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet168.java?rev=HEAD&amp;content-type=text/vnd.viewcvs-markup">draw lines with different cap and join styles</a></li>
         <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet10.java?rev=HEAD&amp;content-type=text/vnd.viewcvs-markup">drawing with transformations, paths and alpha blending</a></li>
+        <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet207.java?rev=HEAD&amp;content-type=text/vnd.viewcvs-markup">reflect, shear and rotate images using matrix transformations</a></li>
       </ul>
       <p></p>
 
