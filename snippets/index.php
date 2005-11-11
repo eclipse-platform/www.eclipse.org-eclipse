@@ -111,6 +111,12 @@ available.</p>
       </ul>
       <p></p>
 
+    <li><a name="color"><b>Color and RGB</b></a>
+      <ul>
+        <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet208.java?rev=HEAD&amp;content-type=text/vnd.viewcvs-markup">adjust hue, brightness and saturation of a color</a></li>
+     </ul>
+      <p></p>
+      
     <li><a name="control"><b>Control</b></a>
       <ul>
         <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet14.java?rev=HEAD&amp;content-type=text/vnd.viewcvs-markup">detect mouse enter, exit and hover events</a></li>
