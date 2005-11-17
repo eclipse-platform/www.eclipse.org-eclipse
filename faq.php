@@ -34,7 +34,7 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
   <li><a href="#gtkfontsandcolors">On gtk, how do I change the default fonts and colors of widgets?</a></li>
   <li><a href="#gtkselectiongone">On gtk, why does my widget's selection disappear when it loses focus?</a></li>
   <li><a href="#carbonapp">On carbon, how do I run an SWT application from the command line?</a></li>
-  <li><a href="#xpthemes">How do I make SWT show the Windows XP skins?</a></li>
+  <li><a href="#xpthemes">How do I make SWT use the Windows XP theme?</a></li>
   <li><a href="#swinginswt">Can I use Swing or AWT inside Eclipse?</a></li>
   <li><a href="#smallprint">Why does everything I print seem so small?</a></li>
   <li><a href="#supportJavaBeans">Does SWT support JavaBeans?</a></li>
@@ -534,8 +534,8 @@ Eclipse*fontList:-misc-fixed-medium-r-normal-*-10-100-75-75-c-60-iso8859-1
 
   </dd>
   
-  <dt><strong><a name="xpthemes">Q: How do I make SWT show the Windows XP skins?</a></strong></dt>
-  <dd> A: In order for an application to show the Windows XP skins, there must be a manifest file 
+  <dt><strong><a name="xpthemes">Q: How do I make SWT use the Windows XP theme?</a></strong></dt>
+  <dd> A: In order for an application to use the Windows XP theme, there must be a manifest file 
     located in the same place as the executable that launches the application.
     Here is a <a href="javaw.exe.manifest">sample manifest file</a> to download.
     
