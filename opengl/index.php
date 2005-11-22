@@ -14,9 +14,9 @@
 <tr><?php include "../sidebar.php"; ?>
 <td valign="top" style="padding: 10px"><h1 style="padding: 0; margin: 0; border-bottom: 1px solid #000000;">Using OpenGL in SWT Applications</h1>
 
-<p>Support for OpenGL is included in SWT 3.2 (all builds after M2) in
-the package <i>org.eclipse.swt.opengl</i>. See the <b>GLCanvas</b>
-class for a widget which hosts an OpenGL context..</p>
+<p>Support for OpenGL is included in SWT 3.2 M3 in the package
+<i>org.eclipse.swt.opengl</i>. See the <b>GLCanvas</b> class for
+a widget which hosts an OpenGL context.</p>
 
 <h3>Java OpenGL Bindings</h3>
 
@@ -32,13 +32,13 @@ enabling applications to use their Java OpenGL binding of choice.</p>
 many interesting extensions.  For an example using <i>LWJGL</i> with SWT, see
 <a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet195.java?rev=HEAD&amp;content-type=text/vnd.viewcvs-markup">Snippet 195</a>.
 <p></p>
+<li><a href="http://jogl.dev.java.net/">JOGL</a> is a Java binding for OpenGL.
+For an example using <i>JOGL</i> with SWT, see
+<a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet209.java?rev=HEAD&amp;content-type=text/vnd.viewcvs-markup">Snippet 209</a>.
+<p></p>
 <li><a href="http://gljava.sourceforge.net/">gljava</a> is a Java binding
 for OpenGL which aims to be simple and thin.  <i>gljava</i> is reported to work
 well with SWT.
-<p></p>
-<li><a href="http://jogl.dev.java.net/">JOGL</a> is a Java binding for OpenGL.
-<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=110757">Bug #110757</a>
-is tracking support for using <i>JOGL</i> with SWT.
 <p></p>
 <li><i>org.eclipse.opengl</i> is an experimental Java binding
 for OpenGL 1.1 and GLU built as an Eclipse plugin. This is useful for
