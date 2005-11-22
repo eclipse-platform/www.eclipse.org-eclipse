@@ -282,7 +282,9 @@ available.</p>
 
     <li><a name="opengl"><b>OpenGL</b></a>
       <ul>
-        <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet174.java?rev=HEAD&amp;content-type=text/vnd.viewcvs-markup">draw a rectangle</a></li>
+        <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet195.java?rev=HEAD&amp;content-type=text/vnd.viewcvs-markup">draw a rotating torus using the LWJGL OpenGL binding</a></li>
+        <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet209.java?rev=HEAD&amp;content-type=text/vnd.viewcvs-markup">draw a rotating torus using the JOGL OpenGL binding</a></li>
+        <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet174.java?rev=HEAD&amp;content-type=text/vnd.viewcvs-markup">draw a rectangle using the org.eclipse.opengl OpenGL binding</a></li>
       </ul>
       <p></p>
     <li><a name="path"><b>Path</b></a>
