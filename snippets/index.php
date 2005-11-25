@@ -383,6 +383,9 @@ available.</p>
       <ul>
         <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet163.java?rev=HEAD&amp;content-type=text/vnd.viewcvs-markup">change font style, foreground and background colors of StyledText</a></li>
         <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet189.java?rev=HEAD&amp;content-type=text/vnd.viewcvs-markup">underline and strike through text</a></li>
+        <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet211.java?rev=HEAD&amp;content-type=text/vnd.viewcvs-markup">how to use rise and font with StyleRange</a></li>
+        <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet212.java?rev=HEAD&amp;content-type=text/vnd.viewcvs-markup">how to embedded images in StyledText</a></li>
+        <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet213.java?rev=HEAD&amp;content-type=text/vnd.viewcvs-markup">how to use indent, alignment and justify</a></li>
       </ul>
       <p></p>
 
