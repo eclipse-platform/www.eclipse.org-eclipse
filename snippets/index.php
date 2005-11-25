@@ -177,6 +177,7 @@ available.</p>
         <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet83.java?rev=HEAD&amp;content-type=text/vnd.viewcvs-markup">determine data types available (win32 only)</a></li>
         <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet158.java?rev=HEAD&amp;content-type=text/vnd.viewcvs-markup">determine data types available (motif only)</a></li>
         <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet185.java?rev=HEAD&amp;content-type=text/vnd.viewcvs-markup">Dropped data type depends on target item in table</a></li>
+        <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet210.java?rev=HEAD&amp;content-type=text/vnd.viewcvs-markup">dragging text from a StyledText widget</a></li>
       </ul>
       <p></p>
 
