@@ -14,7 +14,7 @@
 <td style="padding: 10px"><h1 style="padding: 0; margin: 0; border-bottom: 1px solid #000000;">SWT Snippets</h1>
 
 <p>Snippets are minimal stand-alone programs that demonstrate specific
-techniques or functionality.  Often simply a small example is the easiest way to
+techniques or functionality.  Often a small example is the easiest way to
 understand how to use a particular feature.</p>
 
 <p>Snippets also help isolate problems.  The best way to report an SWT
@@ -383,9 +383,9 @@ available.</p>
       <ul>
         <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet163.java?rev=HEAD&amp;content-type=text/vnd.viewcvs-markup">change font style, foreground and background colors of StyledText</a></li>
         <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet189.java?rev=HEAD&amp;content-type=text/vnd.viewcvs-markup">underline and strike through text</a></li>
-        <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet211.java?rev=HEAD&amp;content-type=text/vnd.viewcvs-markup">how to use rise and font with StyleRange</a></li>
-        <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet212.java?rev=HEAD&amp;content-type=text/vnd.viewcvs-markup">how to embedded images in StyledText</a></li>
-        <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet213.java?rev=HEAD&amp;content-type=text/vnd.viewcvs-markup">how to use indent, alignment and justify</a></li>
+        <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet211.java?rev=HEAD&amp;content-type=text/vnd.viewcvs-markup">use rise and font with StyleRange</a></li>
+        <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet212.java?rev=HEAD&amp;content-type=text/vnd.viewcvs-markup">embed images in StyledText</a></li>
+        <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet213.java?rev=HEAD&amp;content-type=text/vnd.viewcvs-markup">use indent, alignment and justify</a></li>
       </ul>
       <p></p>
 
