@@ -89,14 +89,14 @@ available.</p>
     <li><a name="clipboard"><b>Clipboard</b></a>
       <ul>
         <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet94.java?rev=HEAD&amp;content-type=text/vnd.viewcvs-markup">copy and paste data with the clipboard</a></li>
-        <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet122.java?rev=HEAD&amp;content-type=text/vnd.viewcvs-markup">enable/disable menu depending on clipboard amp;content availability</a></li>
+        <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet122.java?rev=HEAD&amp;content-type=text/vnd.viewcvs-markup">enable/disable menu depending on clipboard content availability</a></li>
       </ul>
       <p></p>
 
     <li><a name="combo"><b>Combo</b></a>
       <ul>
         <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet26.java?rev=HEAD&amp;content-type=text/vnd.viewcvs-markup">create a combo box (non-editable)</a></li>
-        <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet24.java?rev=HEAD&amp;content-type=text/vnd.viewcvs-markup">detect return in a combo box (default selelection)</a></li>
+        <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet24.java?rev=HEAD&amp;content-type=text/vnd.viewcvs-markup">detect return in a combo box (default selection)</a></li>
         <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet147.java?rev=HEAD&amp;content-type=text/vnd.viewcvs-markup">prevent CR from going to the default button</a></li>
       </ul>
       <p></p>
@@ -448,7 +448,7 @@ available.</p>
     <li><a name="text"><b>Text</b></a>
       <ul>
         <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet117.java?rev=HEAD&amp;content-type=text/vnd.viewcvs-markup">add a select all menu item to the control</a></li>
-        <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet24.java?rev=HEAD&amp;content-type=text/vnd.viewcvs-markup">detect CR in a text control (default selelection)</a></li>
+        <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet24.java?rev=HEAD&amp;content-type=text/vnd.viewcvs-markup">detect CR in a text control (default selection)</a></li>
         <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet116.java?rev=HEAD&amp;content-type=text/vnd.viewcvs-markup">prevent CR from going to the default button</a></li>
         <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet121.java?rev=HEAD&amp;content-type=text/vnd.viewcvs-markup">prompt for a password (set the echo character)</a></li>
         <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet55.java?rev=HEAD&amp;content-type=text/vnd.viewcvs-markup">resize a text control (show about 10 characters)</a></li>
@@ -466,7 +466,7 @@ available.</p>
       <ul>
         <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet145.java?rev=HEAD&amp;content-type=text/vnd.viewcvs-markup">draw internationalized styled text on a shell</a></li>
         <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet197.java?rev=HEAD&amp;content-type=text/vnd.viewcvs-markup">draw dynamically wrapped text on a shell</a></li>
-        <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet203.java?rev=HEAD&amp;content-type=text/vnd.viewcvs-markup">justify, align and indenttext</a></li>
+        <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet203.java?rev=HEAD&amp;content-type=text/vnd.viewcvs-markup">justify, align and indent text</a></li>
         <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet204.java?rev=HEAD&amp;content-type=text/vnd.viewcvs-markup">change the rise of text relative to the baseline</a></li>
         <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet205.java?rev=HEAD&amp;content-type=text/vnd.viewcvs-markup">embed images and widgets in text</a></li>
        </ul>
