@@ -69,9 +69,6 @@ your platform and import them into your workspace.</p>
     <td valign="top">Linux x86
     <td valign="top"><a href="eclipse-opengl-0.5.0-linux-x86.zip">eclipse-opengl-0.5.0-linux-x86.zip</a>
 <tr><td valign="top"><span style="white-space: nowrap;">28 Sep 2005</span>
-    <td valign="top">Linux x86-64
-    <td valign="top"><a href="eclipse-opengl-0.5.0-linux-x86-64.zip">eclipse-opengl-0.5.0-linux-x86-64.zip</a>
-<tr><td valign="top"><span style="white-space: nowrap;">28 Sep 2005</span>
     <td valign="top">MacOS X
     <td valign="top"><a href="eclipse-opengl-0.5.0-macosx.zip">eclipse-opengl-0.5.0-macosx.zip</a>
 <tr><td valign="top"><span style="white-space: nowrap;">28 Sep 2005</span>
