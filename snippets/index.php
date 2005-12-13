@@ -123,6 +123,7 @@ available.</p>
         <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet127.java?rev=HEAD&amp;content-type=text/vnd.viewcvs-markup">prevent Tab from traversing out of a control</a></li>
         <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet25.java?rev=HEAD&amp;content-type=text/vnd.viewcvs-markup">print key state, code and character</a></li>
         <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet62.java?rev=HEAD&amp;content-type=text/vnd.viewcvs-markup">print mouse state and button (down, move, up)</a></li>
+        <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet214.java?rev=HEAD&amp;content-type=text/vnd.viewcvs-markup">set a background image</a></li>
       </ul>
       <p></p>
 
