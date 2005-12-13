@@ -348,14 +348,113 @@
       <p align="right"><b>Hue, Saturation, Brightness</b></p>
     </td>
     <td width="70%" valign="top" align="left">
-    <p>A color can be created by specifying the hue, saturation and brightness
-    and for a given color, the hue saturation and brightness can be queried.
+    <p>A color can be created by specifying the hue, saturation and brightness.
+    In addition, for a given color, the hue saturation and brightness can be queried.
     <p><img border="0" src="hsb.png" width="455" height="605"></p>
     <p>For an example, see the 
     <a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet208.java?rev=HEAD&content-type=text/vnd.viewcvs-markup">
     SWT snippet</a>
     </td>
   </tr>
+
+  <tr>
+    <td colspan="2">
+      <hr>
+    </td>
+  </tr>
+  <tr>
+    <td width="30%" valign="top" align="left">
+      <p align="right"><b>StyledText Alignment, Indentation, Justification</b></p>
+    </td>
+    <td width="70%" valign="top" align="left">
+    <p>StyledText now supports indenting, justifying and aligning text.</p>
+    <p><img border="0" src="styledAlign.png" width="300" height="283"></p>
+    <p>For an example, see the 
+    <a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet213.java?rev=HEAD&content-type=text/vnd.viewcvs-markup">
+    SWT snippet</a></p>
+    </td>
+  </tr>
   
+  <tr>
+    <td colspan="2">
+      <hr>
+    </td>
+  </tr>
+  
+  <tr>
+    <td width="30%" valign="top" align="left">
+      <p align="right"><b>Embedded Objects in StyledText</b></p>
+    </td>
+    <td width="70%" valign="top" align="left">
+    <p>StyledText now allows you to embed objects such as images or widgets 
+    inside the text.  Objects wrap with the text.</p>
+    <p><img border="0" src="styledObject.png" width="422" height="320"></p>
+    <p>For an example, see the 
+    <a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet212.java?rev=HEAD&content-type=text/vnd.viewcvs-markup">
+    SWT snippet</a></p>
+    </td>
+  </tr>
+  
+  <tr>
+    <td colspan="2">
+      <hr>
+    </td>
+  </tr>
+  
+  <tr>
+    <td width="30%" valign="top" align="left">
+      <p align="right"><b>Background Image</b></p>
+    </td>
+    <td width="70%" valign="top" align="left">
+    <p>
+    A background image can be set into a control.  In addition, the background 
+    can be inherited by child widgets such as labels.
+    </p>
+    <p><img border="0" src="backImage.png" width="191" height="184"></p>
+    <p>For an example, see the 
+    <a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet214.java?rev=HEAD&content-type=text/vnd.viewcvs-markup">
+    SWT snippet</a></p>
+    </td>
+  </tr>
+  
+  <tr>
+    <td colspan="2">
+      <hr>
+    </td>
+  </tr>
+  
+  <tr>
+    <td width="30%" valign="top" align="left">
+      <p align="right"><b>Native Image Loading</b></p>
+    </td>
+    <td width="70%" valign="top" align="left">
+    <p>The constructor <code>Image(Device device, String filename)</code> will now load images 
+    using native Operating System calls. This has improved performance of image 
+    loading and increased the maximum size of image that can be loaded.</p>
+    </td>
+  </tr>
+ 
+  <tr>
+    <td colspan="2">
+      <hr>
+    </td>
+  </tr>
+  
+  <tr>
+    <td width="30%" valign="top" align="left">
+      <p align="right"><b>Dragging Text</b></p>
+    </td>
+    <td width="70%" valign="top" align="left">
+    <p>If the <code>SWT.DragDetect</code> event is hooked on Text or StyledText, 
+    the selection will not be cleared when the user drags from within a selected
+    range of text.  This makes it possible to support dragging from the Text and
+    StyledText widgets.</p>
+    <p>For an example, see the 
+    <a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet210.java?rev=HEAD&content-type=text/vnd.viewcvs-markup">
+    SWT snippet</a></p>
+    </td>
+  </tr>  
+ </table>
+ 
 </body>
 </html>
