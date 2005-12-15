@@ -25,6 +25,7 @@ disposing of SWT graphics resources.</p>
            <code>org.eclipse.ui/debug=true</code>
            <br><code>org.eclipse.ui/trace/graphics=true</code></li>
        <li>Launch Eclipse with the "-clean -debug" option on the command line.</li>
+       <li>Open the SWT Sleak view (Window &gt; Show View &gt; Other ... &gt; SWT Tools &gt; Sleak</li>
     </ul>
 
   <li><b>Sleak for standalone applications </b><a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.swt.tools/Sleak/org/eclipse/swt/tools/internal/Sleak.java?rev=HEAD&amp;content-type=text/vnd.viewcvs-markup">(Sleak.java)</a></li>
@@ -39,7 +40,7 @@ style, layout and parent information.</p>
   <li>Extract <a href="tools/org.eclipse.swt.spy_1.0.0.zip">org.eclipse.swt.spy_1.0.0.zip</a>
       into the <code>eclipse/plugins/</code> folder.</li>
   <li>Launch eclipse with "-clean" argument (clears caches so eclipse will pick up new plugin).</li>
-  <li>Open the SWT Spy view (Window &gt; Show View &gt; Other ... &gt; Tools &gt; SWT Spy.</li>
+  <li>Open the SWT Spy view (Window &gt; Show View &gt; Other ... &gt; SWT Tools &gt; SWT Spy.)</li>
   <li>Enable collection of info by clicking on the "Monitor" button in Spy view.</li>
   <li>Move cursor over the control of interest and see data printed in Spy view.</li>
   <li>To start or stop data collection while over a control, toggle the monitor action using ALT+SHIFT+".".</li>
