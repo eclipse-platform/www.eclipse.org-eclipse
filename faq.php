@@ -813,7 +813,7 @@ Problem" at: <a href="http://www.cas.mcmaster.ca/~emil/publications/fragile/">ht
     display.dispose ();
 }</pre>
     
-	For a list of sample snippets, see the <a href="snippets.php">SWT snippets page</a>.
+	For a list of sample snippets, see the <a href="snippets/index.php">SWT snippets page</a>.
     
   </dd>
 
