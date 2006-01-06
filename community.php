@@ -50,6 +50,13 @@ toolkit.</p>
 </table>
 
 <ul>
+<li><b><a href="http://paperclips.sourceforge.net/">PaperClips</a></b>
+    <i>by Woodcraft Mill & Cabinet and Others</i>
+
+    <p>Simplified printing support for SWT. PaperClips provides document building
+     blocks (text, images, tables, borders) which may be combined and sent to the
+     library for printing.</p>
+    
 <li><b><a href="http://www.kupzog.de/fkmk_uk/Programming/Downloads/downloads.html">KTable Widget</a></b>
     <i>by Friederich Kupzog</i>
 
