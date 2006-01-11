@@ -74,8 +74,8 @@
 
     <p>The shell script launches java with the required classpath and
     Java library path settings to use SWT.  The special VM option
-    <tt>-XstartOnFirstThread</tt> is also required for SWT to run
-    properly on the Mac.</p>
+    <tt>-XstartOnFirstThread</tt> is also required for SWT applications
+    to run properly on the Mac.</p>
 
     <h3>Creating a disk image</h3>
 
