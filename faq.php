@@ -683,10 +683,10 @@ Eclipse*fontList:-misc-fixed-medium-r-normal-*-10-100-75-75-c-60-iso8859-1
       <a href="http://xprint.mozdev.org/docs/Xprint_FAQ.html">http://xprint.mozdev.org/docs/Xprint_FAQ.html</a>.</p>
   </dd>
 
-  <dt><strong><a name="printOnGTK">Q: Why is the Print menu item disabled in Eclipse on GTK?</a></strong></dt>
+  <dt><strong><a name="printOnGTK">Q: Why is the Print menu item disabled in Eclipse on GTK (Linux, UNIX)?</a></strong></dt>
   <dd>A: Printing on GTK has not been implemented yet. You can use the
       External Tools support in Eclipse to print files using lpr or some other
-      printing utility.
+      printing utility. See the next answer for the steps to set this up.
   </dd>
 
   <dt><strong><a name="printOnX">Q: How do I print using my favorite Unix print program?</a></strong></dt>
