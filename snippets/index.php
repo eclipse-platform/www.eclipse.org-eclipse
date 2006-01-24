@@ -530,7 +530,7 @@ available.</p>
     <li>... and lots more still to come. Keep checking back.
   </ul>
   
-<h3>Snippets for Pocket PC</h3>
+<h3><a name="pocketpc">Snippets for Pocket PC</h3>
 <ul>
     <li><b>"<a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet85.java">Hello World</a>"</b>
       <p></p>
