@@ -115,6 +115,27 @@ toolkit.</p>
     with SWT. Supports MIME, IMAP, POP, and SMTP.</p>
 </ul>
 
-</table>  
+<table width="100%">
+<tr><th bgcolor="#0080c0" align="left" style="padding: 2px;"><font color="#ffffff">Tutorials</font>
+</table>
+
+<ul>	
+<li><b><a href="http://www.cs.umanitoba.ca/~eclipse/">Getting Started with Eclipse and SWT</a></b></li>
+
+	<p>This site contains some tutorials and example programs that will help programmers who are 
+	new to Eclipse and the Standard Widget Toolkit (SWT) install Eclipse correctly and run some 
+	simple Java/SWT programs.</p>
+	
+	
+<li><b><a href="http://www.cs.umanitoba.ca/~eclipse/6-Compiling.pdf">Compiling Eclipse Applications for Windows With GCJ/MinGW</a></b></li>
+
+	<p>A guide for compiling an SWT application into an executable.</p>
+
+<li><b><a href="http://www.javalobby.org/eps/swt_intro/">An introduction to SWT</a></b></li>
+
+	<p>Adapted from "SWT and JFace", a No Fluff Just Stuff 2004 presentation.</p>
+</ul>
+
+</table>
 </body>
 </html>
