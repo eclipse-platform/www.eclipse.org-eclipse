@@ -489,6 +489,7 @@ available.</p>
     <li><a name="tooltips"><b>Tool Tips</b></a>
       <ul>
         <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet41.java">create tool tips for a tab folder, tool bar and control</a></li>
+        <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet216.java">show a tool tip inside a rectangle</a></li>
         <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet125.java">create fake tool tips for items in a table</a></li>
       </ul>
       <p></p>
