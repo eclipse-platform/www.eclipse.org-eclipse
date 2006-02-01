@@ -917,7 +917,7 @@ Problem" at: <a href="http://www.cas.mcmaster.ca/~emil/publications/fragile/">ht
 	<br>Instructions for other Linux distributions:
 	<br>You need the Mozilla version 1.4 GTK2 for your distribution. Mozilla 1.5 GTK2 or Mozilla 1.6 GTK2 can also be used.
   <ol>
-  	<li>If you are using SWT 3.0, download the Mozilla 1.6 Xft and GTK2 build available from <a href="http://www.mozilla.org/releases/">Mozilla.org</a>. If you are using SWT 3.1, you can choose to use a more recent <a href="http://www.mozilla.org/releases/">Mozilla 1.7.x GTK2 from Mozilla.org</a>.</li>
+  	<li>If you are using SWT 3.0, download the Mozilla 1.6 Xft and GTK2 build from <a href="http://www.mozilla.org/releases/#1.6">Mozilla.org</a>. If you are using SWT 3.1, you can choose to use a more recent Mozilla 1.7.x GTK2 from <a href="http://www.mozilla.org/releases/">Mozilla.org</a>.</li>
   	<li>Uninstall any prior Mozilla version.</li>
   	<li>Extract and install the Mozilla build.</li>
   	<li>Run Mozilla once. Verify the application run correctly and check the version number in the Mozilla About dialog.</li>
