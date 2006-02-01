@@ -905,8 +905,8 @@ Problem" at: <a href="http://www.cas.mcmaster.ca/~emil/publications/fragile/">ht
     <br>If you use the IBM 1.4 VM <a href="#browserlinuxibm">check this.</a>
     <br>
     <br>Instructions for RedHat 9 users:
-  	<br>You need the Mozilla version 1.4 GTK2 RPMs for RedHat 9. Mozilla 1.5 GTK2 or Mozilla 1.6 GTK2 can also be used. For example, the RPMs for the Mozilla version 1.6 GTK2 can be downloaded from the
-	  <a href="http://ftp26moz.newaol.com/pub/mozilla.org/mozilla/yum/SeaMonkey/releases/1.6/redhat/1/i386/">Mozilla ftp site</a>.
+  	<br>You need the Mozilla version 1.4 GTK2 RPMs for RedHat 9. Mozilla 1.5 GTK2 or Mozilla 1.6 GTK2 can also be used. These can be downloaded from
+	  <a href="http://www.mozilla.org/releases/">Mozilla.org</a>.
 	<br>
 	<ol>
     	<li>Uninstall any prior Mozilla version</li>
@@ -917,7 +917,7 @@ Problem" at: <a href="http://www.cas.mcmaster.ca/~emil/publications/fragile/">ht
 	<br>Instructions for other Linux distributions:
 	<br>You need the Mozilla version 1.4 GTK2 for your distribution. Mozilla 1.5 GTK2 or Mozilla 1.6 GTK2 can also be used.
   <ol>
-  	<li>If you are using SWT 3.0, download the Mozilla 1.6 Xft and GTK2 build available from <a href="http://www.braindrain.be/mozilla/">the Mozilla XFT website</a>. If you are using SWT 3.1, you can choose to use the more recent <a href="http://ftp.mozilla.org/pub/mozilla.org/mozilla/releases/mozilla1.7.3/contrib/mozilla-i686-pc-linux-gnu-1.7.3-gtk2+xft.tar.gz">Mozilla 1.7.3 GTK2 from Mozilla.org</a>.</li>
+  	<li>If you are using SWT 3.0, download the Mozilla 1.6 Xft and GTK2 build available from <a href="http://www.mozilla.org/releases/">Mozilla.org</a>. If you are using SWT 3.1, you can choose to use a more recent <a href="http://www.mozilla.org/releases/">Mozilla 1.7.x GTK2 from Mozilla.org</a>.</li>
   	<li>Uninstall any prior Mozilla version.</li>
   	<li>Extract and install the Mozilla build.</li>
   	<li>Run Mozilla once. Verify the application run correctly and check the version number in the Mozilla About dialog.</li>
