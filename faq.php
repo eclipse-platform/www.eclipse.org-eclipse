@@ -51,10 +51,10 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
   <li><a href="#javawebstart">How can I package my standalone SWT app for Java Web Start?</a></li>
   <li><a href="#whatisasnippet">What is a snippet and why do I care?</a></li>
   <li><a href="#whatisbrowser">What is the SWT Browser widget?</a></li>
+  <li><a href="#browserplatforms">Which platforms support the SWT Browser?</a></li>
   <li><a href="#browserlinux">What do I need to run the SWT Browser inside Eclipse on Linux/GTK or Linux/Motif?</a></li>
   <li><a href="#browserlinuxrcp">What do I need to run the SWT Browser in a standalone application on Linux/GTK or Linux/Motif?</a></li>
   <li><a href="#browserlinuxibm">How can I get the SWT Browser to work with the IBM 1.4 VM?</a></li>
-  <li><a href="#browserplatforms">Which platforms are supported by the SWT Browser?</a></li>
   <li><a href="#browserplugins">Why can't I run Java applets in the SWT Browser?</a></li>
   <li><a href="#gtk64">How do I build the 64 bit version of SWT GTK?</a></li>
   <li><a href="#autotest">How can I implement user interaction test cases?</a></li>
@@ -862,6 +862,24 @@ Problem" at: <a href="http://www.cas.mcmaster.ca/~emil/publications/fragile/">ht
       HTML browsing and rendering on the platforms on which it is implemented.
   </dd>
   
+  <dt><strong><a name="browserplatforms">Q: Which platforms support the SWT Browser?</a></strong></dt>
+  <dd>A: The SWT Browser is currently available on the following platforms:
+  <br>
+  <ol>
+    <li>Windows (Internet Explorer 5 or above)</li>
+    <li>Mac (Panther OS X.3 or above. Safari based)</li>
+    <li>Linux GTK and Linux Motif (Mozilla 1.4 GTK2 or above, or Firefox 1.0 or above)
+    <br>The following Linux distributions meet the Mozilla/Firefox requirements for using the Browser widget:
+    <ul>
+    	<li>RedHat Enterprise Linux 3 (Mozilla)</li>
+   		<li>RedHat Enterprise Linux 4 (Firefox)</li>
+    	<li>Suse 9 (Mozilla)</li>
+    </ul>
+    Other Linux distributions require a supported version of Mozilla to be installed. <a href="#browserlinux">See instructions</a>
+    <li>Photon</li>
+  </ol>
+  </dd>
+  
   <dt><strong><a name="browserlinux">Q: What do I need to run the SWT Browser inside Eclipse on Linux/GTK or Linux/Motif?</a></strong></dt>
   <dd>A: You need one of the following:
     <ul>
@@ -924,7 +942,7 @@ Problem" at: <a href="http://www.cas.mcmaster.ca/~emil/publications/fragile/">ht
   <dd>A: The IBM 1.4 VM accidentally removes certain entries of the environment variable LD_LIBRARY_PATH. This occurs in particular
   for entries starting with /usr/lib. It will leave untouched entries such as /usr/../usr/lib.
   
-  <br>Instructions for Red Hat users:
+  <br>Instructions for Red Hat Enterprise Linux 3 users:
     <ol>
     	<li>Mozilla is installed in <code>/usr/lib/mozilla-1.x</code> on this platform. Set the environment variable MOZILLA_FIVE_HOME to <code>/usr/../usr/lib/mozilla-1.x</code></li>
     	<li>Start Eclipse. If you are not using Eclipse, add MOZILLA_FIVE_HOME to LD_LIBRARY_PATH before starting your standalone SWT application.</li>
@@ -932,24 +950,6 @@ Problem" at: <a href="http://www.cas.mcmaster.ca/~emil/publications/fragile/">ht
     </ol>
   </dd>
 
-  <dt><strong><a name="browserplatforms">Q: Which platforms are supported by the SWT Browser?</a></strong></dt>
-  <dd>A: The SWT Browser is currently available on the following platforms:
-  <br>
-  <ol>
-    <li>Windows (Internet Explorer 5 or above)</li>
-    <li>Mac (Panther OS X.3 or above. Safari based)</li>
-    <li>Linux GTK and Linux Motif (Mozilla 1.4 GTK2 or above, or Firefox 1.0 or above)
-    <br>The following Linux distributions meet the Mozilla/Firefox requirements for using the Browser widget:
-    <ul>
-    	<li>RedHat Enterprise Linux 3 (Mozilla)</li>
-   		<li>RedHat Enterprise Linux 4 (Firefox)</li>
-    	<li>Suse 9 (Mozilla)</li>
-    </ul>
-    Other Linux distributions require a supported version of Mozilla to be installed. <a href="#browserlinux">See instructions</a>
-    <li>Photon</li>
-  </ol>
-  </dd>
-  
   <dt><strong><a name="browserplugins">Q: Why can't I run Java applets in the SWT Browser?</a></strong></dt>
   <dd>A: Applets usually don't show up in the SWT Browser. On Windows (Internet Explorer), the Java
   plugin fails to run a second Java virtual machine to execute the applet because two Java virtual machines cannot run
