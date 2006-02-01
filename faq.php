@@ -938,15 +938,16 @@ Problem" at: <a href="http://www.cas.mcmaster.ca/~emil/publications/fragile/">ht
   <ol>
     <li>Windows (Internet Explorer 5 or above)</li>
     <li>Mac (Panther OS X.3 or above. Safari based)</li>
-    <li>Linux GTK and Linux Motif (both using Mozilla 1.4 GTK2 - or above 1.4)
-    <br>The following Linux distributions meet the Mozilla requirements for using the Browser widget:
+    <li>Linux GTK and Linux Motif (Mozilla 1.4 GTK2 or above, or Firefox 1.0 or above)
+    <br>The following Linux distributions meet the Mozilla/Firefox requirements for using the Browser widget:
     <ul>
-    	<li>RedHat Enterprise Linux 3</li>
-    	<li>Suse 9</li>
+    	<li>RedHat Enterprise Linux 3 (Mozilla)</li>
+   		<li>RedHat Enterprise Linux 4 (Firefox)</li>
+    	<li>Suse 9 (Mozilla)</li>
     </ul>
     Other Linux distributions require a supported version of Mozilla to be installed. <a href="#browserlinux">See instructions</a>
     <li>Photon</li>
-  </ol> 
+  </ol>
   </dd>
   
   <dt><strong><a name="browserplugins">Q: Why can't I run Java applets in the SWT Browser?</a></strong></dt>
