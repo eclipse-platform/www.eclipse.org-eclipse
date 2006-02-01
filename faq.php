@@ -874,14 +874,15 @@ Problem" at: <a href="http://www.cas.mcmaster.ca/~emil/publications/fragile/">ht
     </ul>
 
     <br>The version of Mozilla or Firefox installed on your system varies with your Linux distribution.
-    The following Linux distributions meet the Mozilla requirements for using the Browser widget.
+    <br>The following Linux distributions meet the Mozilla requirements for using the Browser widget.
     <ul>
     	<li>RedHat Enterprise Linux 3</li>
     	<li>Suse 9</li>
     </ul>
     <br>The following Linux distributions meet the Firefox requirements for using the Browser widget.
     <ul>
-    	<li>RedHat Enterprise Linux 4</li>
+    	<li>RedHat Enterprise Linux 4
+  		<br>Note that you may need to set the environment variable MOZILLA_FIVE_HOME to the folder containing your Firefox install. e.g. <code>setenv MOZILLA_FIVE_HOME /usr/lib/firefox-1.0.4</code></li>
     </ul>
     <br>If you use the IBM 1.4 VM <a href="#browserlinuxibm">check this.</a>
     <br>
@@ -892,7 +893,7 @@ Problem" at: <a href="http://www.cas.mcmaster.ca/~emil/publications/fragile/">ht
 	<ol>
     	<li>Uninstall any prior Mozilla version</li>
 	    <li>Install the Mozilla RPMs</li>
-    	<li>Run Mozilla once. Verify the application opens HTML documents correctly. Check the version number (1.6) in the Mozilla About dialog.. Verify you now have the Mozilla configuration file /etc/gre.conf.</li>
+    	<li>Run Mozilla once. Verify the application opens HTML documents correctly. Check the version number in the Mozilla About dialog.. Verify you now have the Mozilla configuration file /etc/gre.conf.</li>
     	<li>Start Eclipse. Eclipse is now ready to use the Browser widget.</li>
 	</ol>
 	<br>Instructions for other Linux distributions:
@@ -901,7 +902,7 @@ Problem" at: <a href="http://www.cas.mcmaster.ca/~emil/publications/fragile/">ht
   	<li>If you are using SWT 3.0, download the Mozilla 1.6 Xft and GTK2 build available from <a href="http://www.braindrain.be/mozilla/">the Mozilla XFT website</a>. If you are using SWT 3.1, you can choose to use the more recent <a href="http://ftp.mozilla.org/pub/mozilla.org/mozilla/releases/mozilla1.7.3/contrib/mozilla-i686-pc-linux-gnu-1.7.3-gtk2+xft.tar.gz">Mozilla 1.7.3 GTK2 from Mozilla.org</a>.</li>
   	<li>Uninstall any prior Mozilla version.</li>
   	<li>Extract and install the Mozilla build.</li>
-  	<li>Run Mozilla once. Verify the application run correctly and check the version number (1.6) in the Mozilla About dialog.</li>
+  	<li>Run Mozilla once. Verify the application run correctly and check the version number in the Mozilla About dialog.</li>
   	<li>Set the environment variable MOZILLA_FIVE_HOME to the folder containing your Mozilla install. e.g. <code>setenv MOZILLA_FIVE_HOME /usr/lib/mozilla</code></li>
   	<li>Start Eclipse. Eclipse is now ready to use the Browser widget.</li>
   </ol>
