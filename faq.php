@@ -873,11 +873,15 @@ Problem" at: <a href="http://www.cas.mcmaster.ca/~emil/publications/fragile/">ht
       display the error message "No more handles [NS_InitEmbedding...error -2147221164]".</li>
     </ul>
 
-    <br>The version of Mozilla installed on your system varies with your Linux distribution.  The following Linux distributions meet the Mozilla
-    requirements for using the Browser widget.
+    <br>The version of Mozilla or Firefox installed on your system varies with your Linux distribution.
+    The following Linux distributions meet the Mozilla requirements for using the Browser widget.
     <ul>
-    	<li>RedHat Enterprise Linux 3 and 4</li>
+    	<li>RedHat Enterprise Linux 3</li>
     	<li>Suse 9</li>
+    </ul>
+    <br>The following Linux distributions meet the Firefox requirements for using the Browser widget.
+    <ul>
+    	<li>RedHat Enterprise Linux 4</li>
     </ul>
     <br>If you use the IBM 1.4 VM <a href="#browserlinuxibm">check this.</a>
     <br>
