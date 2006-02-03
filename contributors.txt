@@ -47,4 +47,5 @@ Eric Zimmerman - Bug 93619
 Arnaud Andrillon - Bug 99341
 Mitch Rudominer - Bug 103934
 Matt Scarpino - Bug 46387
-Matthew Hall -  Bug125725  
+Matthew Hall -  Bug125725
+Elfi Heck - Bug 125849
