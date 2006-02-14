@@ -181,7 +181,13 @@ available.</p>
         <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet210.java">dragging text from a StyledText widget</a></li>
       </ul>
       <p></p>
-
+      
+    <li><a name="expandbar"><b>ExpandBar</b></a>
+      <ul>
+        <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet223.java">create a expand bar</a></li>
+      </ul>
+      <p></p>
+      
     <li><a name="filedialog"><b>FileDialog</b></a>
       <ul>
         <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet72.java">prompt for a file name (to save)</a></li>
@@ -389,6 +395,7 @@ available.</p>
         <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet212.java">embed images in StyledText</a></li>
         <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet213.java">use indent, alignment and justify</a></li>
         <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet217.java">embed controls in StyledText</a></li>        
+        <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet222.java">use bulleted lists in StyledText</a></li>        
       </ul>
       <p></p>
 
