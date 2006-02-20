@@ -26,12 +26,12 @@ on which it is implemented.</p>
   <table width="100%">
   <tr><td>
       <b><font size="+1">Stable</font></b><br>
-      <a href="http://www.eclipse.org/downloads/download.php?file=/eclipse/downloads/drops/R-3.1.1-200509290840/swt-3.1.1-win32-win32-x86.zip">Windows</a>,
-      <a href="http://www.eclipse.org/downloads/download.php?file=/eclipse/downloads/drops/R-3.1.1-200509290840/swt-3.1.1-gtk-linux-x86.zip">Linux</a>,
+      <a href="http://www.eclipse.org/downloads/download.php?file=/eclipse/downloads/drops/R-3.1.2-200601181600/swt-3.1.2-win32-win32-x86.zip">Windows</a>,
+      <a href="http://www.eclipse.org/downloads/download.php?file=/eclipse/downloads/drops/R-3.1.2-200601181600/swt-3.1.2-gtk-linux-x86.zip">Linux</a>,
       <span style="white-space: nowrap;">
-      <a href="http://www.eclipse.org/downloads/download.php?file=/eclipse/downloads/drops/R-3.1.1-200509290840/swt-3.1.1-carbon-macosx-ppc.zip">OS X</a></span>,
-      <a href="http://download.eclipse.org/eclipse/downloads/drops/R-3.1.1-200509290840/index.php#swt" target="_top">more...</a><br>
-      <small>3.1.1 - <span style="white-space: nowrap;">29 September 2005</span></small><br>
+      <a href="http://www.eclipse.org/downloads/download.php?file=/eclipse/downloads/drops/R-3.1.2-200601181600/swt-3.1.2-carbon-macosx-ppc.zip">OS X</a></span>,
+      <a href="http://download.eclipse.org/eclipse/downloads/drops/R-3.1.2-200601181600/index.php#swt" target="_top">more...</a><br>
+      <small>3.1.2 - <span style="white-space: nowrap;">19 January 2006</span></small><br>
   <ul>
   <li><a href="R3_1/plan.html">3.1 Maintenance Plan</a></li>
   <li><a href="R3_1/new_and_noteworthy.html">New and Noteworthy</a></li>
