@@ -43,7 +43,7 @@ Rodney Dowdall  - Bugs 90513, 92648, 93151
 Jobi George - Bugs 77661, 82385
 Mike Tab - Bug 91807
 Christof Marti - Bug 92046
-Eric Zimmerman - Bug 93619
+Eric Zimmerman - Bugs 93619, 128448
 Arnaud Andrillon - Bug 99341
 Mitch Rudominer - Bug 103934
 Matt Scarpino - Bug 46387
