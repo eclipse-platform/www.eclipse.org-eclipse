@@ -50,3 +50,4 @@ Matt Scarpino - Bug 46387
 Matthew Hall -  Bug125725
 Elfi Heck - Bug 125849
 Hiroyuki Inaba - Bug 129126
+Toshihiro Izumi - Bug 113019
