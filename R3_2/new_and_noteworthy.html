@@ -529,16 +529,20 @@
   </tr>
   <tr>
     <td width="30%" valign="top" align="left">
-      <p align="right"><b>Custom Draw Table and Tree</b></p>
+      <p align="right"><b>Custom Draw Tree</b></p>
     </td>
     <td width="70%" valign="top" align="left">
-    <p>The Table and Tree widgets now support custom draw for items.
-    <p><img border="0" src="customTreeTable.png" width="412" height="881"></p>
+    <p>The Tree widget now supports custom draw for individual cells.  Applications can 
+    enhance the native look and feel of the tree by custom rendering of the data.
+    The application has control over row height so multiple lines of text can be drawn.
+    In addition, the user can present multiple images in the same cell, change
+    font or color multiple times and change the way selection is drawn.
+    <p><img border="0" src="customTree.png" width="466" height="791"></p>
     <p>For examples, see the following snippets:
     <ul>
        <li><a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet220.java?rev=HEAD&content-type=text/vnd.viewcvs-markup">Images on right side of TreeItem</a>
-       <li><a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet228.java?rev=HEAD&content-type=text/vnd.viewcvs-markup">Bar graph in Table</a>
-       <li><a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet226.java?rev=HEAD&content-type=text/vnd.viewcvs-markup">Custom drawn selection</a>
+       <li><a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet232.java?rev=HEAD&content-type=text/vnd.viewcvs-markup">Show results as a bar chart in Tree</a>
+       <li><a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet226.java?rev=HEAD&content-type=text/vnd.viewcvs-markup">Custom gradient selection for Tree</a>
        <li><a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet227.java?rev=HEAD&content-type=text/vnd.viewcvs-markup">Multiple lines in a TreeItem</a>
     </ul>
     </td>
@@ -548,6 +552,32 @@
       <hr>
     </td>
   </tr>
+  <tr>
+    <td width="30%" valign="top" align="left">
+      <p align="right"><b>Custom Draw Table</b></p>
+    </td>
+    <td width="70%" valign="top" align="left">
+    <p>The Table widget now supports custom draw for individual cells.  While 
+    still maintianing the native look and feel of the table, users can customize
+    how cells are drawn to display data in a form other than text with an image,
+    to show multiple lines of text in one cell, to change font and color multiple
+    times within the same cell, to override the native selection drawing etc.
+    <p><img border="0" src="customTable.png" width="466" height="767"></p>
+    <p>For examples, see the following snippets:
+    <ul>
+       <li><a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet230.java?rev=HEAD&content-type=text/vnd.viewcvs-markup">Images on right side of TableItem</a>
+       <li><a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet228.java?rev=HEAD&content-type=text/vnd.viewcvs-markup">Show results as a bar chart in Table</a>
+       <li><a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet229.java?rev=HEAD&content-type=text/vnd.viewcvs-markup">Custom gradient selection for Table</a>
+       <li><a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet231.java?rev=HEAD&content-type=text/vnd.viewcvs-markup">Multiple lines in a TableItem</a>
+    </ul>
+    </td>
+  </tr>
+    <tr>
+    <td colspan="2">
+      <hr>
+    </td>
+  </tr>
+  <tr>
   <tr>
     <td width="30%" valign="top" align="left">
       <p align="right"><b>Drag over effects for Table and Tree</b></p>
