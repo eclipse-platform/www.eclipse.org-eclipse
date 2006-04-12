@@ -546,7 +546,7 @@ Eclipse*fontList:-misc-fixed-medium-r-normal-*-10-100-75-75-c-60-iso8859-1
     <tt>eclipse.exe</tt> executable does not launch Eclipse; <tt>eclipse.exe</tt>
     displays a splash screen and then invokes the Java VM.</p>
     
-    <p>Note: the manifest file is no longer needed for SWT 3.2.</p>
+    <p>Note: As of SWT 3.2, the manifest file is no longer needed.</p>
   </dd>
   
   <dt><strong><a name="swinginswt">Q: Can I use Swing or AWT inside Eclipse?</a></strong></dt>
