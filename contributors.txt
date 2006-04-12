@@ -38,7 +38,7 @@ L.M. Fridael - Bug 14279
 Michal Tkacz - Bug 70318
 Sebastian Davids - Snippet174 (OpenGL)
 Ron Capelli - Bug 80033
-Florian Priester - Bugs 70854, 84012, 124591
+Florian Priester - Bugs 70854, 84012, 124591, 123922
 Rodney Dowdall  - Bugs 90513, 92648, 93151
 Jobi George - Bugs 77661, 82385
 Mike Tab - Bug 91807
