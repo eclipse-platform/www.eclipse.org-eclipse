@@ -517,20 +517,14 @@ Eclipse*fontList:-misc-fixed-medium-r-normal-*-10-100-75-75-c-60-iso8859-1
       (or Swing) based applications don't have this problem because they seem to use undocumented SPI to register 
       themselves.
 
-      <p>To work around this problem you'll have to use the executable 'java_swt' that is part of the 
-      Eclipse distribution (you can find it inside the Eclipse application Eclipse.app/Contents/MacOS/java_swt). 
-      Basically it is a replacement for /usr/bin/java and the 'JavaApplicationStub' used in bundled applications.</p>
-
-      <p>If you want to run your SWT-based application from the command line just use 'java_swt' instead of 'java':</p>
+      <p>To work around this problem you'll have to pass the -XstartOnFirstThread option to the
+      java executable as follow:</p>
       <pre>
-         java_swt -cp swt.jar:. ControlExample
+         java -XstartOnFirstThread -cp swt.jar:. ControlExample
       </pre>
 	
-      <p>If you want to run a bundled application, you'll have to replace the executable found in the Contents/MacOS 
-      subdirectory of the application bundle with (a renamed) 'java_swt' program.</p>
-
-      <p>If you need to create a new application bundle from scratch, please refer to comment #5 in 
-      <a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=40003">bug #40003</a>.</p>
+      <p>If you want to run a bundled application, take a look at this
+      <a href="http://www.eclipse.org/swt/macosx/">article</a></p>
 
   </dd>
   
