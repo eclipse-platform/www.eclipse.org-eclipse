@@ -524,7 +524,7 @@ Eclipse*fontList:-misc-fixed-medium-r-normal-*-10-100-75-75-c-60-iso8859-1
       </pre>
 	
       <p>If you want to run a bundled application, take a look at this
-      <a href="http://www.eclipse.org/swt/macosx/">article</a></p>
+      <a href="http://www.eclipse.org/swt/macosx/">article</a>.</p>
 
   </dd>
   
