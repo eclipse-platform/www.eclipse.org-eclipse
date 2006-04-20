@@ -119,6 +119,7 @@ enter a bug report</a>. Thanks in advance for your contribution!</p>
     <li><a name="color"><b>Color and RGB</b></a>
       <ul>
         <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet208.java">adjust hue, brightness and saturation of a color</a></li>
+        <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet235.java">Usage of SWT.Settings event</a></li>
      </ul>
       <p></p>
       
