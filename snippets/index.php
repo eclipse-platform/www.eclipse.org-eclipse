@@ -550,6 +550,7 @@ enter a bug report</a>. Thanks in advance for your contribution!</p>
         <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet232.java">show results as a bar chart in Tree</a>
         <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet226.java">custom gradient selection for Tree</a>
         <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet227.java">multiple lines in a TreeItem</a>
+        <!-- <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet240.java">text that spans multiple columns</a> -->
       </ul>
       <p></p>
 
