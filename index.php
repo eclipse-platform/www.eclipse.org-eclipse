@@ -45,7 +45,7 @@ on which it is implemented.</p>
       <a href="http://download.eclipse.org/eclipse/downloads/drops/S-3.2RC2-200604281315/download.php?dropFile=swt-3.2RC2-win32-win32-x86.zip">Windows</a>,
       <a href="http://download.eclipse.org/eclipse/downloads/drops/S-3.2RC2-200604281315/download.php?dropFile=swt-3.2RC2-gtk-linux-x86.zip">Linux</a>,
       <span style="white-space: nowrap;">
-      <a href="http://download.eclipse.org/eclipse/downloads/drops/S-3.2RC2-200604281315/download.php?dropFile=swt-3.2RC2-carbon-macosx-ppc.zip">OS X</a></span>,
+      <a href="http://download.eclipse.org/eclipse/downloads/drops/S-3.2RC2-200604281315/download.php?dropFile=swt-3.2RC2-carbon-macosx.zip">OS X</a></span>,
       <a href="http://download.eclipse.org/eclipse/downloads/drops/S-3.2RC2-200604281315/index.php#swt" target="_top">more...</a><br>
       <small>3.2 RC2 - <span style="white-space: nowrap;">28 April 2006</span></small><br>
   <ul>
