@@ -253,7 +253,7 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
 	<li>Copy the SWT library to a directory that is already on the Java library path.  For example, the jre/bin directory.
     <p>The disadvantage of this solution is that every time you upgrade eclipse you have to remember to copy the native code library.</p>
    </ol>
-    <p>Starting from Eclipse 3.1, the SWT plugin that comes with Eclipse, includes the JNI libraries in the SWT jar.
+    <p>Starting with Eclipse 3.1, the SWT plugin that comes with Eclipse, includes the JNI libraries in the SWT jar.
     This was done to support OSGi and Eclipse RCP. If you are using the plugin you must extract the libraries
     to include them in the path.</p>
   </dd>
