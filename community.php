@@ -113,6 +113,10 @@ toolkit.</p>
 
     <p>Deinonychus is an email client written in Java featuring a GUI built
     with SWT. Supports MIME, IMAP, POP, and SMTP.</p>
+    
+<li><b><a href="http://sourceforge.net/projects/qftp/">VirgoFTP</a></b>
+
+    <p>VirgoFTP is an FTP client, similar to CuteFTP, written in Java using SWT.</p>
 </ul>
 
 <table width="100%">
