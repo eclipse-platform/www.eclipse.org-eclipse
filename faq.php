@@ -61,6 +61,7 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
   <li><a href="#noeventfire">Why are some events not fired in response to programmatic widget changes?</a></li>
   <li><a href="launcher.html">What are the arguments for the Eclipse Launcher?</a></li>
   <li><a href="#nographicslibrary">Why do I get "SWTException: Unable to load graphics library" using GC?</a></li>
+  <li><a href="#swtawtosx">Why does the SWT_AWT bridge not work for me on OS X?</a></li>
 </ul>
 
 <p></p>
@@ -987,6 +988,18 @@ Problem" at: <a href="http://www.cas.mcmaster.ca/~emil/publications/fragile/">ht
       required. If your Windows platform does not have GDI+ by default, you can
       <a href="http://www.microsoft.com/downloads/details.aspx?FamilyID=6a63ab9c-df12-4d41-933c-be590feaa05a&amp;DisplayLang=en">download</a>
       a redistributable package from Microsoft.
+  </dd>
+  
+  <dt><strong><a name="swtawtosx">Q: Why does the SWT_AWT bridge not work for me on OS X?</a></strong></dt>
+  <dd>A: This was an SWT-AWT incompatibility that existed prior to eclipse 3.2.
+      This has been fixed in SWT, but requires that an OS X jre that has support
+      for this fix be used as well.  Specifically, the jre must be version 1.5.0
+      Release 4 (or greater), and the additional "SWT Compatibility Libraries" must
+      be installed.  These libraries can be downloaded from the Downloads section
+      of <a href="http://connect.apple.com">Apple Developer Connection</a>.  It's
+      free to create an account at Apple Developer Connection to access the download,
+      which is approximately 180K.  For more information about this issue see
+      <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=67384">bug 67384</a>.
   </dd>
 </dl>
 </table>
