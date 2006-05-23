@@ -42,10 +42,10 @@ on which it is implemented.</p>
   <table width="100%">
   <tr><td>
       <b><font size="+1">Development</font></b><br>
-      <a href="http://download.eclipse.org/eclipse/downloads/drops/S-3.2RC5-200605191206/download.php?dropFile=swt-3.2RC2-win32-win32-x86.zip">Windows</a>,
-      <a href="http://download.eclipse.org/eclipse/downloads/drops/S-3.2RC5-200605191206/download.php?dropFile=swt-3.2RC2-gtk-linux-x86.zip">Linux</a>,
+      <a href="http://download.eclipse.org/eclipse/downloads/drops/S-3.2RC5-200605191206/download.php?dropFile=swt-3.2RC5-win32-win32-x86.zip">Windows</a>,
+      <a href="http://download.eclipse.org/eclipse/downloads/drops/S-3.2RC5-200605191206/download.php?dropFile=swt-3.2RC5-gtk-linux-x86.zip">Linux</a>,
       <span style="white-space: nowrap;">
-      <a href="http://download.eclipse.org/eclipse/downloads/drops/S-3.2RC5-200605191206/download.php?dropFile=swt-3.2RC2-carbon-macosx.zip">OS X</a></span>,
+      <a href="http://download.eclipse.org/eclipse/downloads/drops/S-3.2RC5-200605191206/download.php?dropFile=swt-3.2RC5-carbon-macosx.zip">OS X</a></span>,
       <a href="http://download.eclipse.org/eclipse/downloads/drops/S-3.2RC5-200605191206/index.php#swt" target="_top">more...</a><br>
       <small>3.2 RC5 - <span style="white-space: nowrap;">19 May 2006</span></small><br>
   <ul>
