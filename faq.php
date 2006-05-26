@@ -97,14 +97,14 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
   <dd>A: The SWT jar can be built from the eclipse CVS repository using an Ant task:
     <ol>
       <li>Connect a CVS client (such as eclipse) to <strong>:pserver:anonymous@dev.eclipse.org:/home/eclipse</strong>.
-      <li>Checkout the projects <strong>org.eclipse.swt</strong> and <strong>org.eclipse.swt.</strong><em>WS</em> where <em>WS</em> is the name of the 
-        windowing system of interest.  For example <strong>org.eclipse.swt.gtk</strong>.
-      <li>In the project <strong>org.eclipse.swt.</strong><em>WS</em>, locate the file <strong>build.xml</strong>.  This is an Ant script.
+      <li>Check out the projects <strong>org.eclipse.swt</strong> and <strong>org.eclipse.swt.</strong><em>WS.OS.ARCH</em> where <em>WS.OS.ARCH</em> are the names of the
+        windowing system, operating system and architecture of interest, respectively.  For example, <strong>org.eclipse.swt.gtk.linux.x86</strong>.
+      <li>In the project <strong>org.eclipse.swt.</strong><em>WS.OS.ARCH</em>, locate the file <strong>build.xml</strong>.  This is an Ant script.
       <li>Run Ant on the target <strong>build.jars</strong>.  If you are using eclipse as your development environment, you can run 
         Ant by selecting the file in the <strong>Navigator</strong> or <strong>Packages</strong> view, then selecting <strong>Run Ant...</strong> from the context
         menu.
-      <li>This will create a file called <strong>swt.jar</strong> and put it in the folder 
-        <strong>org.eclipse.swt.</strong><em>WS</em><strong>/ws/</strong><em>WS</em>.
+      <li>This will create a file called <strong>swt.jar</strong> in the root of the 
+        <strong>org.eclipse.swt.</strong><em>WS.OS.ARCH</em> project.
     </ol>
   </dd>
 
@@ -139,9 +139,9 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
 
      <li>Run the <tt>build</tt> command (<strong>sh build.sh</strong> for UNIX and Linux
          platforms, <strong>build.bat</strong> for Windows).  This will create the appropriate
-         library file(s) in the current directory.  For example, this will create a
-         <tt>swt_XXXX.dll</tt> file on windows, or a <tt>libswt_XXXX.so</tt> file on Linux
-         and Solaris.  On some platforms multiple libraries will be created.
+         library file(s) in the current directory.  For example, this will create
+         <tt>swt-XXXX.dll</tt> files on windows, or <tt>libswt-XXXX.so</tt> files on Linux
+         and Solaris.
    </ol>
 
    <p>This description was originally contributed by Colin R Devilbiss.</p>
@@ -163,9 +163,9 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
 
      <li>Run the <tt>build</tt> command (<strong>sh build.sh</strong> for UNIX and Linux
          platforms, <strong>build.bat</strong> for Windows).  This will create the appropriate
-         library file(s) in the current directory.  For example, this will create a
-         <tt>swt_XXXX.dll</tt> file on windows, or a <tt>libswt_XXXX.so</tt> file on Linux
-         and Solaris.  On some platforms, more than one library will be created.
+         library file(s) in the current directory.  For example, this will create
+         <tt>swt-XXXX.dll</tt> files on windows, or <tt>libswt-XXXX.so</tt> files on Linux
+         and Solaris.
   </ol>
   </dd>
 
@@ -178,7 +178,7 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
     <p><strong>Building the Eclipse executable from the eclipse SDK download:</strong>
     <ol>
       <li>In order to build the required libraries and run Eclipse, 
-        you will require a JDK (Java Development Kit) of version 1.4.1 or later.
+        you will require a JDK (Java Development Kit) of version 1.4.2 or later.
         Download an Eclipse distribution from
         <a href="http://www.eclipse.org/downloads/index.php">http://www.eclipse.org/downloads/index.php</a>.</li>
 
@@ -222,7 +222,7 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
   </dd>
   
 
-  <dt><strong><a name="missingdll">Q: Why do I get the error "java.lang.UnsatisfiedLinkError: no swt-win32-2034 in java.library.path."?</a></strong></dt>
+  <dt><strong><a name="missingdll">Q: Why do I get the error "java.lang.UnsatisfiedLinkError: no swt-win32-3232 in java.library.path."?</a></strong></dt>
   <dd>A: You need to place the SWT JNI libraries that allow Java to use 
     the native widgets in a place where the Java Virtual Machine 
     will find them.
@@ -311,8 +311,8 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
 
   <dt><strong><a name="pocketpcstart">Q: What do I need to do to run SWT on the PocketPC?</a></strong>
   </dt>
-  <dd>A: There is an experimental version of SWT for WinCE devices. If you feel like
-    giving it a try, the following steps might help you getting started.
+  <dd>A: There is an experimental version of SWT for WinCE devices. If you wish to
+    give it a try, the following steps may help you with getting started.
     <ol>
       <li>Install a VM on your PocketPC.
         <br>The port is tested using the J9 VM for ARM WinCE PocketPC.
@@ -418,7 +418,7 @@ public static void main(String[] args) {
     <li>Custom SWT library
       <ol>
 		<li>From Eclipse, check out the projects org.eclipse.swt and org.eclipse.swt.win32.wce_ppc.arm
-		(from the head stream). These projects reside in the Eclipse repository
+		from the head stream. These projects reside in the Eclipse repository
 		<li>Build the swt.jar
 		<br>Open the file org.eclipse.swt.win32.wce_ppc.arm/build_custom.xml
 		<br>The file contains indications on how to build the swt.jar as recommended for WinCE PocketPC.
@@ -534,8 +534,10 @@ Eclipse*fontList:-misc-fixed-medium-r-normal-*-10-100-75-75-c-60-iso8859-1
   </dd>
   
   <dt><strong><a name="swinginswt">Q: Can I use Swing or AWT inside Eclipse?</a></strong></dt>
-  <dd>A: Yes.  As of Eclipse 3.0, Swing and AWT can be embedded in SWT on Windows, Motif and GTK 
-  using JDK 1.5.
+  <dd>A: Yes.  As of Eclipse 3.2, Swing and AWT can be embedded in SWT on Windows, Motif, GTK and OS X.
+  However it is important to note that a supporting JDK is required on some platforms in order for this
+  to work.  Specifically, Motif and GTK require that JDK 1.5 or newer be used, and OS X requires that
+  the JDK specified in <a href="#swtawtosx">Why does the SWT_AWT bridge not work for me on OS X?</a> be used.
   
   <p>See this <a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet135.java?rev=HEAD&amp;content-type=text/vnd.viewcvs-markup">snippet</a> for an example of how to use the API.
   </dd>
@@ -852,9 +854,9 @@ Problem" at: <a href="http://www.cas.mcmaster.ca/~emil/publications/fragile/">ht
   <dd>A: The SWT Browser is currently available on the following platforms:
   <br>
   <ol>
-    <li>Windows (Internet Explorer 5 or above)</li>
-    <li>Mac (Panther OS X.3 or above. Safari based)</li>
-    <li>Linux GTK and Linux Motif (Mozilla 1.4 GTK2 or above, or Firefox 1.0 or above)
+    <li>Windows (Internet Explorer 5 and above)</li>
+    <li>Mac (Panther OS X 10.3 and above. Safari based)</li>
+    <li>Linux GTK and Linux Motif (Mozilla 1.4 GTK2 and above, or Firefox 1.0 and above)
     <br>The following Linux distributions meet the Mozilla/Firefox requirements for using the Browser widget:
     <ul>
     	<li>RedHat Enterprise Linux 3 (Mozilla)</li>
@@ -944,16 +946,14 @@ Problem" at: <a href="http://www.cas.mcmaster.ca/~emil/publications/fragile/">ht
   </dd>
 
   <dt><strong><a name="gtk64">Q: How do I build the 64 bit version of SWT GTK?</a></strong></dt>
-  <dd>Sept. 29th 2004. An SWT GTK library is under development for the 64 bit platform. It is being developed and tested on an AMD64 machine.
-  The SWT build for the AMD64 Linux platform is available from the Eclipse download page along with the other SWT ports.
-  <br>Follow these steps to extract the 64 bit SWT GTK source code and produce your own build.
+  <dd>Follow these steps to extract the 64 bit SWT GTK source code and produce your own build.
   <ol>
-  	<li>Start Eclipse and download the following projects from dev.eclipse.org: org.eclipse.swt, org.eclipse.swt.gtk64, org.eclipse.swt.tools</li>
-  	<li>Open the file build.xml located into the org.eclipse.swt.gtk64 fragment. Run Ant to execute the ant task build.nativeLibraries defined in build.xml.</li>
-  	<li>Refresh the project org.eclipse.swt.gtk64</li>
+  	<li>Start Eclipse and download the following projects from dev.eclipse.org: org.eclipse.swt, org.eclipse.swt.gtk.linux.x86_64, org.eclipse.swt.tools</li>
+  	<li>Open the file build.xml located into the org.eclipse.swt.gtk.linux.x86_64 fragment. Run Ant to execute the ant task build.nativeLibraries defined in build.xml.</li>
+  	<li>Refresh the project org.eclipse.swt.gtk.linux.x86_64</li>
   </ol>
-  The project org.eclipse.swt.gtk64 now contains the 64 bit native libraries. The 64 bit java and C source code
-  has been copied under the org.eclipse.swt.gtk64/src folder.
+  The project org.eclipse.swt.gtk.linux.x86_64 now contains the 64 bit native libraries. The 64 bit java and C source code
+  has been copied under the org.eclipse.swt.gtk.linux.x86_64/src folder.
   </dd>
 
   <dt><strong><a name="autotest">Q: How can I implement user interaction test cases?</a></strong></dt>
@@ -992,8 +992,8 @@ Problem" at: <a href="http://www.cas.mcmaster.ca/~emil/publications/fragile/">ht
   
   <dt><strong><a name="swtawtosx">Q: Why does the SWT_AWT bridge not work for me on OS X?</a></strong></dt>
   <dd>A: This was an SWT-AWT incompatibility that existed prior to eclipse 3.2.
-      This has been fixed in SWT, but requires that an OS X jre that has support
-      for this fix be used as well.  Specifically, the jre must be version 1.5.0
+      This problem has since been fixed in SWT, but requires that an OS X jre that has
+      support for this fix be used as well.  Specifically, the jre must be version 1.5.0
       Release 4 (or greater), and the additional "SWT Compatibility Libraries" must
       be installed.  These libraries can be downloaded from the Downloads section
       of <a href="http://connect.apple.com">Apple Developer Connection</a>.  It's
