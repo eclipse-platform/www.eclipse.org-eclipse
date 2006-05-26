@@ -539,7 +539,7 @@ Eclipse*fontList:-misc-fixed-medium-r-normal-*-10-100-75-75-c-60-iso8859-1
   to work.  Specifically, Motif and GTK require that JDK 1.5 or newer be used, and OS X requires that
   the JDK specified in <a href="#swtawtosx">Why does the SWT_AWT bridge not work for me on OS X?</a> be used.
   
-  <p>See this <a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet135.java?rev=HEAD&amp;content-type=text/vnd.viewcvs-markup">snippet</a> for an example of how to use the API.
+  <p>See this <a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet135.java">snippet</a> for an example of how to use the API.
   </dd>
   
   <dt><strong><a name="smallprint">Q: Why does everything I print seem so small?</a></strong></dt>
