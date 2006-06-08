@@ -58,10 +58,11 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
   <li><a href="#browserplugins">Why can't I run Java applets in the SWT Browser?</a></li>
   <li><a href="#gtk64">How do I build the 64 bit version of SWT GTK?</a></li>
   <li><a href="#autotest">How can I implement user interaction test cases?</a></li>
-  <li><a href="#noeventfire">Why are some events not fired in response to programmatic widget changes?</a></li>
+  <li><a href="#noeventfire">Why are some events like Selection not fired in response to programmatic widget changes?</a></li>
   <li><a href="launcher.html">What are the arguments for the Eclipse Launcher?</a></li>
   <li><a href="#nographicslibrary">Why do I get "SWTException: Unable to load graphics library" using GC?</a></li>
   <li><a href="#swtawtosx">Why does the SWT_AWT bridge not work for me on OS X?</a></li>
+  <li><a href="#noautolayout">Why do I have to resize my shell to get my changed widgets to lay out again?</a></li>
 </ul>
 
 <p></p>
@@ -964,7 +965,7 @@ Problem" at: <a href="http://www.cas.mcmaster.ca/~emil/publications/fragile/">ht
       in the writing of automated test suites.
   </dd>
 
-  <dt><strong><a name="noeventfire">Q: Why are some events not fired in response to programmatic widget changes?</a></strong></dt>
+  <dt><strong><a name="noeventfire">Q: Why are some events like Selection not fired in response to programmatic widget changes?</a></strong></dt>
   <dd>A: This is a design decision that was made in order to minimize
       notification of potentially unwanted events.  For example, when the
       selection of a control is changed programmatically, SWT does not issue a
@@ -1000,6 +1001,15 @@ Problem" at: <a href="http://www.cas.mcmaster.ca/~emil/publications/fragile/">ht
       free to create an account at Apple Developer Connection to access the download,
       which is approximately 180K.  For more information about this issue see
       <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=67384">bug 67384</a>.
+  </dd>
+
+  <dt><strong><a name="noautolayout">Q: Why do I have to resize my shell to get my changed widgets to lay out again?</a></strong></dt>
+  <dd>A: A layout is only performed automatically on a Composite's children when the
+      Composite is resized, including when it is initially shown.  To make a Composite
+      lay out its children under any other circumstances, such as when children are created
+      or disposed, its <em>layout()</em> method must be called.  For an example of this see
+      SWT example snippet
+      <a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet98.java">create and dispose children of a composite</a>.
   </dd>
 </dl>
 </table>
