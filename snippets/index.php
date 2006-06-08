@@ -401,6 +401,7 @@ enter a bug report</a>. Thanks in advance for your contribution!</p>
     <li><a name="styledtext"><b>StyledText</b></a>
       <ul>
         <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet163.java">change font style, foreground and background colors of StyledText</a></li>
+        <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet244.java">draw a box around text</a></li>
         <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet189.java">underline and strike through text</a></li>
         <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet211.java">use rise and font with StyleRange</a></li>
         <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet212.java">embed images in StyledText</a></li>
