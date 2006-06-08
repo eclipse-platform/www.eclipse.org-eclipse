@@ -79,6 +79,7 @@ enter a bug report</a>. Thanks in advance for your contribution!</p>
 
     <li><a name="canvas"><b>Canvas</b></a>
       <ul>
+        <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet245.java">paint a circle in a canvas</a></li>
         <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet48.java">scroll an image (flicker free, no double buffering)</a></li>
         <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet21.java">implement tab traversal (behave like a tab group)</a></li>
       </ul>
