@@ -1004,11 +1004,10 @@ Problem" at: <a href="http://www.cas.mcmaster.ca/~emil/publications/fragile/">ht
   </dd>
 
   <dt><strong><a name="noautolayout">Q: Why do I have to resize my shell to get my changed widgets to lay out again?</a></strong></dt>
-  <dd>A: A layout is only performed automatically on a Composite's children when the
-      Composite is resized, including when it is initially shown.  To make a Composite
-      lay out its children under any other circumstances, such as when children are created
-      or disposed, its <em>layout()</em> method must be called.  For an example of this see
-      SWT example snippet
+  <dd>A: A layout is only performed automatically on a Composite's children when the Composite
+      is resized, including when it is initially shown.  To make a Composite lay out its
+      children under any other circumstances, such as when children are created or disposed,
+      its <em>layout()</em> method must be called.  For an example of this see SWT snippet
       <a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet98.java">create and dispose children of a composite</a>.
   </dd>
 </dl>
