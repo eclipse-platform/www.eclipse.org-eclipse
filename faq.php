@@ -19,50 +19,56 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
 
 <ul>
   <li><a href="#whatpackagesinSWT">What packages make up SWT?</a></li>
+  <li><a href="#supportJavaBeans">Does SWT support JavaBeans?</a></li>
+  <li><a href="#guibuilder">Is there a GUI Builder for SWT?</a></li>
+  <li><a href="#whatisasnippet">What is a snippet and why do I care?</a></li>
+  <p>
   <li><a href="#howbuildjar">How do I build an SWT jar for my platform?</a></li>
   <li><a href="#howbuilddll">How do I build the SWT JNI libraries for my platform?</a></li>
   <li><a href="#buildeclipseexe">How do I build the Eclipse executable for my platform?</a></li>
-  <li><a href="#guibuilder">Is there a GUI Builder for SWT?</a></li>
-  <li><a href="#missingjar">Why do I get the error "java.lang.NoClassDefFoundError: org/eclipse/swt/internal/XXX/OS."?</a></li>
-  <li><a href="#missingdll">Why do I get the error "java.lang.UnsatisfiedLinkError: no swt-win32-2034 in java.library.path."?</a></li>
-  <li><a href="#missinglibXm">Why do I get the error "java.lang.UnsatisfiedLinkError: libXm.so.2: cannot open shared object file: No such file or directory."?</a></li>
-  <li><a href="#uithread">Why do I get the error "org.eclipse.swt.SWTException: Invalid thread access"?</a></li>
+  <li><a href="#gtk64">How do I build the 64 bit version of SWT GTK?</a></li>
+  <p>
+  <li><a href="#gtkstartup">What do I need to run SWT on Linux/GTK?</a></li>
+  <li><a href="#carbonapp">On carbon, how do I run an SWT application from the command line?</a></li>
+  <li><a href="launcher.html">What are the arguments for the Eclipse Launcher?</a></li>
+  <li><a href="#javawebstart">How can I package my standalone SWT app for Java Web Start?</a></li>
   <li><a href="#pocketpcstart">What do I need to do to run SWT on the PocketPC?</a></li>
   <li><a href="#pocketpclibrary">Where is the SWT library for the PocketPC?</a></li>
-  <li><a href="#gtkstartup">What do I need to run SWT on Linux/GTK?</a></li>
-  <li><a href="#motiffontsandcolors">On motif, how do I change the default fonts and colors of widgets?</a></li>
-  <li><a href="#gtkfontsandcolors">On gtk, how do I change the default fonts and colors of widgets?</a></li>
-  <li><a href="#gtkselectiongone">On gtk, why does my widget's selection disappear when it loses focus?</a></li>
-  <li><a href="#carbonapp">On carbon, how do I run an SWT application from the command line?</a></li>
+  <p>
   <li><a href="#xpthemes">How do I make SWT use the Windows XP themes?</a></li>
-  <li><a href="#swinginswt">Can I use Swing or AWT inside Eclipse?</a></li>
-  <li><a href="#smallprint">Why does everything I print seem so small?</a></li>
-  <li><a href="#supportJavaBeans">Does SWT support JavaBeans?</a></li>
-  <li><a href="#scrollonlinux">Why doesn't mouse scrolling work on Linux/Motif?</a></li>
-  <li><a href="#printstacktrace">Why don't SWTError and SWTException override all printStackTrace methods?</a></li>
-  <li><a href="#noprintimage">How do I print a snapshot of a widget?</a></li>
-  <li><a href="#printOnMotif">Why is the Print menu item disabled in Eclipse on Motif?</a></li>
-  <li><a href="#printOnGTK">Why is the Print menu item disabled in Eclipse on GTK?</a></li>
-  <li><a href="#printOnX">How do I print using my favorite Unix print program?</a></li>
-  <li><a href="#usingLesstif">Why do I get the warning "XmParseMappingCreate() is not implemented yet" on Linux/Motif?</a></li>
+  <li><a href="#gtkfontsandcolors">On gtk, how do I change the default fonts and colors of widgets?</a></li>
+  <li><a href="#motiffontsandcolors">On motif, how do I change the default fonts and colors of widgets?</a></li>
+  <p>    
+  <li><a href="#missingjar">Why do I get the error "java.lang.NoClassDefFoundError: org/eclipse/swt/internal/XXX/OS."?</a></li>
+  <li><a href="#missingdll">Why do I get the error "java.lang.UnsatisfiedLinkError: no swt-win32-3232 in java.library.path."?</a></li>
   <li><a href="#konquerorUnzip">Why do I get an error beginning with "...SWTException: Unsupported or unrecognized format" on startup?</a></li>
   <li><a href="#useUnzip">Why do I get the error "error while loading shared libraries: ./libXm.so.2: file too short" on startup?</a></li>
+  <li><a href="#missinglibXm">Why do I get the error "java.lang.UnsatisfiedLinkError: libXm.so.2: cannot open shared object file: No such file or directory."?</a></li>
+  <li><a href="#usingLesstif">Why do I get the warning "XmParseMappingCreate() is not implemented yet" on Linux/Motif?</a></li>
+  <p>
+  <li><a href="#swinginswt">Can I use Swing or AWT inside Eclipse?</a></li>
   <li><a href="#subclassing">Why can't I subclass SWT widgets like Button and Table?</a></li>
-  <li><a href="#javawebstart">How can I package my standalone SWT app for Java Web Start?</a></li>
-  <li><a href="#whatisasnippet">What is a snippet and why do I care?</a></li>
+  <li><a href="#noeventfire">Why are some events like Selection not fired in response to programmatic widget changes?</a></li>
+  <li><a href="#printstacktrace">Why don't SWTError and SWTException override all printStackTrace methods?</a></li>
   <li><a href="#whatisbrowser">What is the SWT Browser widget?</a></li>
   <li><a href="#browserplatforms">Which platforms support the SWT Browser?</a></li>
   <li><a href="#browserlinux">What do I need to run the SWT Browser inside Eclipse on Linux/GTK or Linux/Motif?</a></li>
   <li><a href="#browserlinuxrcp">What do I need to run the SWT Browser in a standalone application on Linux/GTK or Linux/Motif?</a></li>
   <li><a href="#browserlinuxibm">How can I get the SWT Browser to work with the IBM 1.4 VM?</a></li>
   <li><a href="#browserplugins">Why can't I run Java applets in the SWT Browser?</a></li>
-  <li><a href="#gtk64">How do I build the 64 bit version of SWT GTK?</a></li>
+  <li><a href="#noprintimage">How do I print a snapshot of a widget?</a></li>
+  <li><a href="#printOnX">How do I print using my favorite Unix print program?</a></li>
+  <li><a href="#smallprint">Why does everything I print seem so small?</a></li>
   <li><a href="#autotest">How can I implement user interaction test cases?</a></li>
-  <li><a href="#noeventfire">Why are some events like Selection not fired in response to programmatic widget changes?</a></li>
-  <li><a href="launcher.html">What are the arguments for the Eclipse Launcher?</a></li>
-  <li><a href="#nographicslibrary">Why do I get "SWTException: Unable to load graphics library" using GC?</a></li>
+  <li><a href="#gtkselectiongone">On gtk, why does my widget's selection disappear when it loses focus?</a></li>
+  <p>  
   <li><a href="#swtawtosx">Why does the SWT_AWT bridge not work for me on OS X?</a></li>
+  <li><a href="#printOnGTK">Why is the Print menu item disabled in Eclipse on GTK?</a></li>
+  <li><a href="#printOnMotif">Why is the Print menu item disabled in Eclipse on Motif?</a></li>
+  <li><a href="#uithread">Why do I get the error "org.eclipse.swt.SWTException: Invalid thread access"?</a></li>
   <li><a href="#noautolayout">Why do I have to resize my shell to get my changed widgets to lay out again?</a></li>
+  <li><a href="#nographicslibrary">Why do I get "SWTException: Unable to load graphics library" using GC?</a></li>
+  <li><a href="#scrollonlinux">Why doesn't mouse scrolling work on Linux/Motif?</a></li>
 </ul>
 
 <p></p>
@@ -92,7 +98,61 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
       </ul>
       <p>Classes that are not in these packages do not belong to SWT.</p>
   </dd>
- 
+
+  <dt><strong><a name="supportJavaBeans">Q: Does SWT support JavaBeans?</a></strong></dt>
+  <dd>A: To the extent that it makes sense, given the constraints of operating system
+    compatibility, SWT mirrors the beans behavior. An example of this is the use
+    of standard beans mechanisms for event dispatch (EventListener, EventObject and adapter
+    classes). Some aspects of the beans paradigm, such as the ability to create beans with
+    null constructors, run counter to the constraints of the underlying operating systems
+    that SWT runs on.  For example, operating systems do not typically support creating a
+    widget without specifying its parent. 
+    <p></p>
+    The essence of the problem is that if you allow a widget to be created with a null
+    constructor, then you can't actually create the o/s resources at the time the constructor
+    runs (you would have to wait until later, after the parent has been set). We can not
+    do this, since we <em>always</em> create the o/s resources in the constructor, and for
+    performance/efficiency/consistency reasons do not keep slots in the object to hold
+    whatever state would be required if the object were to be created later. 
+  </dd>
+
+  <dt><strong><a name="guibuilder">Q: Is there a GUI Builder for SWT?</a></strong></dt>
+  <dd>A: SWT itself does not provide a GUI Builder (also known as "GUI Designer", "GUI Editor",
+  "Visual Builder", "Visual Designer", "Visual Editor", or "Visual Composition Editor").
+  There are, however, several mature 'third-party' products listed at
+  <a href="http://www.eclipseplugincentral.com/">http://www.eclipseplugincentral.com/</a>.
+  Or you can follow the progress on the <a href="http://www.eclipse.org/vep/">Eclipse Visual Editor Project</a>.
+  </dd>
+
+  <dt><strong><a name="whatisasnippet">Q: What is a snippet and why do I care?</a></strong>
+  </dt>
+  <dd>A: A snippet is a <em>minimal stand alone</em> program that demonstrates functionality or
+  	lack of functionality.  
+  	
+  	<p>Why is this important?  Posting a snippet to the news group is the
+  	quickest way to get help.  Including a snippet in a bug report is the fastest
+  	way to get a bug fixed.  Taking the time to construct a snippet helps you understand
+  	the API of the library you are calling and focuses your thinking.  For example, the
+  	SWT team uses C and Java snippets internally to prove or disprove problems in the operating system.
+	Often, something you think is a bug is actually caused by something elsewhere
+	in your program.  
+	
+	<p>Snippets isolate problems.  Code speaks louder than words.  
+	
+	<p>Here is a minimal stand alone SWT program to help you get started:
+<pre>public static void main (String [] args) {
+    Display display = new Display ();
+    Shell shell = new Shell (display);
+    shell.open ();
+    while (!shell.isDisposed ()) {
+        if (!display.readAndDispatch ()) display.sleep ();
+    }
+    display.dispose ();
+}</pre>
+    
+	For a list of sample snippets, see the <a href="snippets">SWT snippets page</a>.
+  </dd>
+
   <dt><strong><a name="howbuildjar">Q: How do I build an SWT jar for my platform?</a></strong>
   </dt>
   <dd>A: The SWT jar can be built from the eclipse CVS repository using an Ant task:
@@ -203,112 +263,91 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
     <p>This description was originally contributed by Colin R Devilbiss.</p>
   </dd>
 
-  <dt><strong><a name="guibuilder">Q: Is there a GUI Builder for SWT?</a></strong></dt>
-  <dd>A: SWT itself does not provide a GUI Builder (also known as "GUI Designer", "GUI Editor",
-  "Visual Builder", "Visual Designer", "Visual Editor", or "Visual Composition Editor").
-  There are, however, several mature 'third-party' products listed at
-  <a href="http://www.eclipseplugincentral.com/">http://www.eclipseplugincentral.com/</a>.
-  Or you can follow the progress on the <a href="http://www.eclipse.org/vep/">Eclipse Visual Editor Project</a>.
+  <dt><strong><a name="gtk64">Q: How do I build the 64 bit version of SWT GTK?</a></strong></dt>
+  <dd>Follow these steps to extract the 64 bit SWT GTK source code and produce your own build.
+  <ol>
+  	<li>Start Eclipse and download the following projects from dev.eclipse.org: org.eclipse.swt, org.eclipse.swt.gtk.linux.x86_64, org.eclipse.swt.tools</li>
+  	<li>Open the file build.xml located into the org.eclipse.swt.gtk.linux.x86_64 fragment. Run Ant to execute the ant task build.nativeLibraries defined in build.xml.</li>
+  	<li>Refresh the project org.eclipse.swt.gtk.linux.x86_64</li>
+  </ol>
+  The project org.eclipse.swt.gtk.linux.x86_64 now contains the 64 bit native libraries. The 64 bit java and C source code
+  has been copied under the org.eclipse.swt.gtk.linux.x86_64/src folder.
   </dd>
 
-  <dt><strong><a name="missingjar">Q: Why do I get the error "java.lang.NoClassDefFoundError: org/eclipse/swt/internal/XXX/OS."?</a></strong></dt>
-  <dd>A: On some platforms such as GTK, SWT is broken into multiple jars.  Therefore,
-      you must ensure that all required jars are on the classpath.  The required jars are:
-      <ul>
-      <li>swt.jar (all platforms)</li>
-      <li>swt-pi.jar (some platforms like GTK and Carbon)</li>
-      <li>swt-mozilla.jar (for Browser widget on GTK and Motif)</li>
-      <li>swt-gtk.jar (on Linux Motif)</li>
-      </ul>
+  <dt><strong><a name="gtkstartup">Q: What do I need to run SWT on Linux/GTK?</a></strong></dt>
+  <dd>A: SWT requires the following libraries with the specified versions or later:
+    <p>For Eclipse 3.0:</p>
+    <ul>
+      <li>GTK 2.2.1</li>
+      <li>ATK 1.2.0</li>
+      <li>glib 2.2.1</li>
+      <li>Pango 1.2.1</li>
+      <li>Freetype 2.1.3</li>
+    </ul>
+    <p>For Eclipse 2.1:</p>
+    <ul>
+      <li>GTK 2.0.6</li>
+      <li>ATK 1.0.1</li>
+      <li>glib 2.0.4</li>
+      <li>Pango 1.0.3</li>
+      <li>Freetype 2.1.2</li>
+    </ul>
   </dd>
-  
 
-  <dt><strong><a name="missingdll">Q: Why do I get the error "java.lang.UnsatisfiedLinkError: no swt-win32-3232 in java.library.path."?</a></strong></dt>
-  <dd>A: You need to place the SWT JNI libraries that allow Java to use 
-    the native widgets in a place where the Java Virtual Machine 
-    will find them.
-    
-    <p>The SWT JNI libraries are included in the SWT download.  
+  <dt><strong><a name="carbonapp">Q: On carbon, how do I run an SWT application from the command line?</a></strong></dt>
+  <dd>A: If you run a Java application that uses Carbon via JNI, the application is not registered with the OS as 
+      a 'normal' UI application.  As a consequence, it has no entry in the dock and it cannot be activated. AWT 
+      (or Swing) based applications don't have this problem because they seem to use undocumented SPI to register 
+      themselves.
 
-    <p>A Java application can be informed of the location of the libraries in several ways:
-    <p></p>
-      <ol>
-      <li>Set the library path in the VM launch arguments.
-      
-      <p>In the Launch Configuration Dialog of eclipse select the Arguments 
-      page, and in the VM arguments field enter:
-      <tt>-Djava.library.path={runtime-library-path}</tt>
-      Where the runtime-library-path is the absolute path to the directory containing
-      the native code library (see above). 
-    
-      <p>This solution means that the SWT libraries have to be manually 
-      added to every project that uses SWT.</p><p></p>
-    
-    <li>Set the library location in an environment variable.
-    <p>For Windows this is done by editing the PATH environment variable to 
-    include the above mentioned runtime-library-path.
-    <br>in Win 9X this is done by editing the Autoexec.bat file,
-    <br>on NT or 2K the variable is edited through <strong>My Computer</strong> &gt; <strong>Properties</strong> &gt; <strong>Advanced</strong> &gt; <strong>Environment Variables</strong>.
-	<p>On linux/unix, modify the LD_LIBRARY_PATH environment variable to include the runtime-library-path.
-	<p></p>
+      <p>To work around this problem you'll have to pass the -XstartOnFirstThread option to the
+      java executable as follow:</p>
+      <pre>
+         java -XstartOnFirstThread -cp swt.jar:. ControlExample
+      </pre>
 	
-	<li>Copy the SWT library to a directory that is already on the Java library path.  For example, the jre/bin directory.
-    <p>The disadvantage of this solution is that every time you upgrade eclipse you have to remember to copy the native code library.</p>
-   </ol>
-    <p>Starting with Eclipse 3.1, the SWT plugin that comes with Eclipse, includes the JNI libraries in the SWT jar.
-    This was done to support OSGi and Eclipse RCP. If you are using the plugin you must extract the libraries
-    to include them in the path.</p>
+      <p>If you want to run a bundled application, take a look at this
+      <a href="http://www.eclipse.org/swt/macosx/">article</a>.</p>
   </dd>
 
-  <dt><strong><a name="missinglibXm">Q: Why do I get the error "java.lang.UnsatisfiedLinkError: libXm.so.2: cannot open shared object file: No such file or directory."?</a></strong></dt>
-  <dd>A: On motif, the SWT library links against the open motif library libXm.so.2.  On most platforms, the open motif library is installed 
-  and added to the library path by default. However, on some Linux platforms, either open motif is not installed or is not on the default library 
-  path, or lesstif is installed.  Eclipse (and the standalone version of SWT) includes the libXm.so.2 library in the root of the Eclipse install.
-  <p>You need to either launch Eclipse from the installed directory or modify the LD_LIBRARY_PATH environment variable to 
-  include the location of libXm.so.2. </p>
-  <p>Note <code>-Djava.library.path</code> is used by the VM to locate libraries for System.loadLibrary calls.  However, it does
-  not update the LD_LIBRARY_PATH and therefore does not help libraries locate other libraries.</p>
+  <dt><strong><a name="javawebstart">Q: How can I package my standalone SWT app for Java Web Start?</a></strong></dt>
+  <dd>A: Follow the steps below to deploy your SWT app with Java Web
+      Start. You can also follow the article from Jeff Gunther on how to
+      <a href="http://www-106.ibm.com/developerworks/opensource/library/os-jws/">Deploy
+      an SWT application using Java Web Start</a>.
+
+      <p>NOTE: As of 2.1, SWT Java Web Start apps can only be deployed
+      on Windows and GTK.  <p>Example:  Package the SWT ControlExample
+      application.</p>
+    <ol>
+	<li>Create the file "<a href="swtexamples.jnlp.txt">swtexamples.jnlp</a>".
+            In the file, replace the value of the codebase attribute with your own URI.
+    	<li>Create the file "<a href="swt.jnlp.txt">swt.jnlp</a>"
+            In the file, replace the value of the codebase attribute with your own URI.
+    	<li>Create the following folders and files:
+	    	<ul>
+    			<li>root (e.g. d:/jws or the URL of your website)
+    			<ul>
+    				<li>apps/swtexamples/swtexamples.jar contains the SWT ControlExample
+	    			<li>apps/swtexamples/swtexamples.jnlp (Java Web Start extension file)
+	    			<li>swt/swt.jnlp (Java Web Start extension file)
+	    			<li>swt/os/linux/x86/swtNativeLib.jar contains the GTK linux native libraries: libswt-gtk-xxxx.so, libswt-pi-gtk-xxxx.so, libswt-gnome-gtk-xxxx.so
+	    			<li>swt/os/win32/x86/swtNativeLib.jar contains the Win32 native library: swt-win32-xxxx.dll
+					<li>swt/ws/linux/swt.jar contains the SWT Linux GTK jar library
+					<li>swt/ws/linux/swt-pi.jar contains the SWT Linux GTK jar library
+					<li>swt/ws/win32/swt.jar contains the SWT Win32 jar library
+    			</ul>
+	    	</ul>
+	    	<br>- The swtexamples.jar can be found in the Example Plug-ins section of the Eclipse download page.
+	    	<br>- The SWT jars and native libraries can also be downloaded from the Eclipse download page.
+	    	<br>- You need to create the swtNativeLib.jar files described previously. Create empty jars with the name 'swtNativeLib.jar'.  Add the native SWT library into the swtNativeLib.jar file you just created. As indicated previously, insert the SWT Win32 native library (swt-win32-xxxx.dll) into the swt/os/win32/x86/swtNativeLib.jar file. Insert the SWT GTK linux native libraries in the swt/os/linux/x86/swtNativeLib.jar.
+	    <li>Sign the jar files
+	    	<br>Each jar file must be signed with your own key certificate.
+	    <li>Create a web page linking to the extension file root/apps/swtexamples/swtexamples.jnlp
+    </ol>
+    
+    <p>This description was originally contributed by &Oslash;yvind Harboe.</p>
   </dd>
-
-  <dt><strong><a name="uithread">Q: Why do I get the error "org.eclipse.swt.SWTException: Invalid thread access"?</a></strong></dt>
-  <dd>A: In SWT, by definition the thread that creates the Display is a UI-thread.  This thread is responsible for 
-  reading and dispatching events from the operating system event queue, and invoking listeners in response to these events.  
-  Listener code is executed in the UI-thread.  This makes an SWT application generally quite responsive, behaving like most 
-  other operating system programs.  However, any long operation, when executed by a listener, will run in the UI-thread 
-  and prevent it from reading and dispatching events, thus hanging the application.
-  
-  <p>If a listener has a large amount of work to perform, instead of performing that work in the UI-thread, it can 
-  fork a separate thread so the UI-thread can continue dispatching events. If the other thread needs to execute code 
-  that accesses an SWT object, such as changing the string in a label, there is a concurrency issue.  At the very 
-  least, some kind of synchronization is necessary to prevent the operating system or SWT from crashing, hanging or 
-  behaving unpredictably.</p>
-
-  <p>SWT implements a single-threaded UI model often called apartment threading.  In this model, only the UI-thread 
-  can invoke UI operations.  SWT strictly enforces this rule.  If you try and access an SWT object from outside the 
-  UI-thread, you get the exception "org.eclipse.swt.SWTException: Invalid thread access".  Different operating systems 
-  have different rules governing threads, UI components and synchronization.  Some use a single-threaded UI model 
-  like SWT.  Others allow only one thread at a time in the window system library, controlling access through a 
-  global lock.  This type of multi-threaded UI model is often called free threading.  Currently, in order to be 
-  simple, efficient and portable, SWT is apartment threaded.</p>
-
-  <p>To allow background threads to perform operations on objects belonging to the UI-thread, the methods 
-  syncExec(Runnable runnable) and asyncExec(Runnable runnable) of Display are used.  These are the only 
-  methods in SWT that can be called from any thread.  They allow a runnable to be executed by the UI-thread, 
-  either synchronously, causing the background thread to wait for the runnable to finish, or asynchronously 
-  allowing the background thread to continue execution without waiting for the result.  A runnable that is 
-  executed using syncExec() most closely matches the equivalent direct call to the UI operation because a 
-  Java method call always waits for the result before proceeding, just like syncExec().</p>
- 
-  <p>The following code sets the text of a label from a background thread and waits for the operation to complete:
-
-<pre>display.syncExec(
-  new Runnable() {
-    public void run(){
-      label.setText(text);
-    }
-  });
-</pre>
-   </dd>
 
   <dt><strong><a name="pocketpcstart">Q: What do I need to do to run SWT on the PocketPC?</a></strong>
   </dt>
@@ -428,42 +467,22 @@ public static void main(String[] args) {
 	  </ol>
 	</ol>
   </dd>
-  
-  <dt><strong><a name="gtkstartup">Q: What do I need to run SWT on Linux/GTK?</a></strong></dt>
-  <dd>A: SWT requires the following libraries with the specified versions or later:
-    <p>For Eclipse 3.0:</p>
-    <ul>
-      <li>GTK 2.2.1</li>
-      <li>ATK 1.2.0</li>
-      <li>glib 2.2.1</li>
-      <li>Pango 1.2.1</li>
-      <li>Freetype 2.1.3</li>
-    </ul>
-    <p>For Eclipse 2.1:</p>
-    <ul>
-      <li>GTK 2.0.6</li>
-      <li>ATK 1.0.1</li>
-      <li>glib 2.0.4</li>
-      <li>Pango 1.0.3</li>
-      <li>Freetype 2.1.2</li>
-    </ul>
-  </dd>
-  
 
-  <dt><strong><a name="motiffontsandcolors">Q: On motif, how do I change the default fonts and colors of widgets?</a></strong></dt>
-  <dd>A: Motif uses a file called <tt>.Xdefaults</tt> which is located in your home directory.
-    Here is an example of the content of that file which sets the font and colors for Eclipse:
-<pre>Eclipse*spacing:0
-Eclipse*XmForm.background:#e8e7e3
-Eclipse*XmList.background:#e8e7e3
-Eclipse*XmTextField.background:#e8e7e3
-Eclipse*background:#d6d3ce
-Eclipse*fontList:-misc-fixed-medium-r-normal-*-10-100-75-75-c-60-iso8859-1
-</pre>
+  <dt><strong><a name="xpthemes">Q: How do I make SWT use the Windows XP themes?</a></strong></dt>
+  <dd> A: In order for an application to use Windows XP themes, there must be a manifest file 
+    located in the same place as the executable that launches the application.
+    Here is a <a href="javaw.exe.manifest">sample manifest file</a> to download.
     
-    After creating/modifying this file, you must run "xrdb ~/.Xdefaults" or restart X to make the changes take effect.
+    <p>The name of the manifest file must match the name of the executable.  
+    In the case of eclipse, the executable is <tt>javaw.exe</tt> and the manifest file 
+    must have the name <tt>javaw.exe.manifest</tt>.  The manifest file must be in the
+    <tt>jre\bin</tt> folder for the VM you use to launch Eclipse.  Note: the 
+    <tt>eclipse.exe</tt> executable does not launch Eclipse; <tt>eclipse.exe</tt>
+    displays a splash screen and then invokes the Java VM.</p>
+    
+    <p>Note: As of SWT 3.2, the manifest file is no longer needed.</p>
   </dd>
-  
+
   <dt><strong><a name="gtkfontsandcolors">Q: On GTK, how do I change the default fonts and colors of widgets?</a></strong></dt>
   <dd>A: GTK uses a file called <tt>.gtkrc</tt> which is located in your home directory.  
     On some versions of Linux, this file is called <tt>.gtkrc-2.0</tt>.
@@ -496,206 +515,87 @@ Eclipse*fontList:-misc-fixed-medium-r-normal-*-10-100-75-75-c-60-iso8859-1
     </pre>
   </dd>
 
-  <dt><strong><a name="gtkselectiongone">Q: On GTK, why does my widget's selection disappear when it loses focus?</a></strong></dt>
-  <dd>A: This effect may be seen if KDE color settings are being
-      utilized.  This can be fixed by unchecking the "Apply KDE colors to
-      non-KDE apps" option in the KDE colors control panel.
-  </dd>
-
-  <dt><strong><a name="carbonapp">Q: On carbon, how do I run an SWT application from the command line?</a></strong></dt>
-  <dd>A: If you run a Java application that uses Carbon via JNI, the application is not registered with the OS as 
-      a 'normal' UI application.  As a consequence, it has no entry in the dock and it cannot be activated. AWT 
-      (or Swing) based applications don't have this problem because they seem to use undocumented SPI to register 
-      themselves.
-
-      <p>To work around this problem you'll have to pass the -XstartOnFirstThread option to the
-      java executable as follow:</p>
-      <pre>
-         java -XstartOnFirstThread -cp swt.jar:. ControlExample
-      </pre>
-	
-      <p>If you want to run a bundled application, take a look at this
-      <a href="http://www.eclipse.org/swt/macosx/">article</a>.</p>
-
-  </dd>
-  
-  <dt><strong><a name="xpthemes">Q: How do I make SWT use the Windows XP themes?</a></strong></dt>
-  <dd> A: In order for an application to use Windows XP themes, there must be a manifest file 
-    located in the same place as the executable that launches the application.
-    Here is a <a href="javaw.exe.manifest">sample manifest file</a> to download.
+  <dt><strong><a name="motiffontsandcolors">Q: On motif, how do I change the default fonts and colors of widgets?</a></strong></dt>
+  <dd>A: Motif uses a file called <tt>.Xdefaults</tt> which is located in your home directory.
+    Here is an example of the content of that file which sets the font and colors for Eclipse:
+<pre>Eclipse*spacing:0
+Eclipse*XmForm.background:#e8e7e3
+Eclipse*XmList.background:#e8e7e3
+Eclipse*XmTextField.background:#e8e7e3
+Eclipse*background:#d6d3ce
+Eclipse*fontList:-misc-fixed-medium-r-normal-*-10-100-75-75-c-60-iso8859-1
+</pre>
     
-    <p>The name of the manifest file must match the name of the executable.  
-    In the case of eclipse, the executable is <tt>javaw.exe</tt> and the manifest file 
-    must have the name <tt>javaw.exe.manifest</tt>.  The manifest file must be in the
-    <tt>jre\bin</tt> folder for the VM you use to launch Eclipse.  Note: the 
-    <tt>eclipse.exe</tt> executable does not launch Eclipse; <tt>eclipse.exe</tt>
-    displays a splash screen and then invokes the Java VM.</p>
+    After creating/modifying this file, you must run "xrdb ~/.Xdefaults" or restart X to make the changes take effect.
+  </dd>
+
+  <dt><strong><a name="missingjar">Q: Why do I get the error "java.lang.NoClassDefFoundError: org/eclipse/swt/internal/XXX/OS."?</a></strong></dt>
+  <dd>A: On some platforms such as GTK, SWT is broken into multiple jars.  Therefore,
+      you must ensure that all required jars are on the classpath.  The required jars are:
+      <ul>
+      <li>swt.jar (all platforms)</li>
+      <li>swt-pi.jar (some platforms like GTK and Carbon)</li>
+      <li>swt-mozilla.jar (for Browser widget on GTK and Motif)</li>
+      <li>swt-gtk.jar (on Linux Motif)</li>
+      </ul>
+  </dd>
+
+  <dt><strong><a name="missingdll">Q: Why do I get the error "java.lang.UnsatisfiedLinkError: no swt-win32-3232 in java.library.path."?</a></strong></dt>
+  <dd>A: You need to place the SWT JNI libraries that allow Java to use 
+    the native widgets in a place where the Java Virtual Machine 
+    will find them.
     
-    <p>Note: As of SWT 3.2, the manifest file is no longer needed.</p>
-  </dd>
-  
-  <dt><strong><a name="swinginswt">Q: Can I use Swing or AWT inside Eclipse?</a></strong></dt>
-  <dd>A: Yes.  As of Eclipse 3.2, Swing and AWT can be embedded in SWT on Windows, Motif, GTK and OS X.
-  However it is important to note that a supporting JDK is required on some platforms in order for this
-  to work.  Specifically, Motif and GTK require that JDK 1.5 or newer be used, and OS X requires that
-  the JDK specified in <a href="#swtawtosx">Why does the SWT_AWT bridge not work for me on OS X?</a> be used.
-  
-  <p>See this <a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet135.java">snippet</a> for an example of how to use the API.
-  </dd>
-  
-  <dt><strong><a name="smallprint">Q: Why does everything I print seem so small?</a></strong></dt>
-  <dd>A: When you are printing something from the screen to a printer device, you
-    need to think about scaling. What is happening is that your figure is being drawn
-    in something like 72 x 72 dots per inch on the screen, but then you are printing
-    it to something like a 300 x 300 or 600 x 600 DPI printer. What you have to do is
-    ask both the screen and the printer what their DPI is, and then figure out what
-    scale factor you need to use when you draw to the printer GC. The code might look
-    like this:
-    <pre>
-      Point screenDPI = display.getDPI();
-      Point printerDPI = printer.getDPI();
-      int scaleFactor = printerDPI.x / screenDPI.x;
-    </pre>
-    Please see the ImageAnalyzer example in the org.eclipse.swt.examples project
-    for an example of printing an image to a printer. Look at method
-    menuPrint(). Note however that this is a pretty rough example, and it does
-    not take into account what happens if the image is larger than the page - it
-    just clips.
+    <p>The SWT JNI libraries are included in the SWT download.  
 
-    <p>Text printing takes some thought also. You need to wrap words, put your page
-    breaks in the right place, know where your margins are, etc. The SWT
-    StyledText widget does its own text printing. If you need to see a more
-    complicated example of printing a document, wrapping, margins, multi-page,
-    etc., then please look at the inner class Printing in StyledText in
-    org.eclipse.swt.custom. An instance of this class is created by the
-    StyledText.print(Printer) API method.
-    
-    <p>Note also that when printing, any graphics objects that you use to draw,
-    such as fonts, colors, and images, need to be re-created on the printer
-    device before you can draw them to the printer GC.
-
-    <p>We also recommend that you run your print job in a separate thread and not in
-    the UI thread, because printing a long document to a slow printer can hang
-    your entire UI while the printer spools.
-
-    <p>Unfortunately, printing is not simply a matter of just passing in the
-    printer GC instead of the screen GC. Printing has to be designed into your
-    drawing classes. You don't have scrollbars anymore, so you have to either
-    cut stuff off and print it on another page, or reorganize it, or scale it
-    down, or wrap it somehow. Maybe you want to give some control to your users,
-    and let them specify how many inches something should be, or whatever -
-    maybe give them a ruler. There is no magic bullet - you
-    will definitely have to give it some thought.
-  </dd>
-
-  <dt><strong><a name="supportJavaBeans">Q: Does SWT support JavaBeans?</a></strong></dt>
-  <dd>A: To the extent that it makes sense, given the constraints of operating system
-    compatibility, SWT mirrors the beans behavior. An example of this is the use
-    of standard beans mechanisms for event dispatch (EventListener, EventObject and adapter
-    classes). Some aspects of the beans paradigm, such as the ability to create beans with
-    null constructors, run counter to the constraints of the underlying operating systems
-    that SWT runs on.  For example, operating systems do not typically support creating a
-    widget without specifying its parent. 
+    <p>A Java application can be informed of the location of the libraries in several ways:
     <p></p>
-    The essence of the problem is that if you allow a widget to be created with a null
-    constructor, then you can't actually create the o/s resources at the time the constructor
-    runs (you would have to wait until later, after the parent has been set). We can not
-    do this, since we <em>always</em> create the o/s resources in the constructor, and for
-    performance/efficiency/consistency reasons do not keep slots in the object to hold
-    whatever state would be required if the object were to be created later. 
-  </dd>
-  
-  <dt><strong><a name="scrollonlinux"> Q: Why doesn't mouse scrolling work on Linux/Motif?</a></strong></dt>
-  <dd>A: Mouse scrolling on Linux/Motif relies on the IMWheel driver.  Here is how it works:
-    <ol>
-      <li>The X Server gets the wheel event.</li>
-      <li>Your /etc/X11/XF86Config must contain "ZAxisMap 4 5" (or the equivalent "Option" 
-        line if you use XFree86 4.x) in the Mouse section.  This maps the wheel to emulated
-        mouse buttons "4" and "5".</li>
-      <li>IMWheel has a global hook on the mouse, only looking for button4/5 events.
-        When it sees one, it looks in /etc/X11/imwheel which is a table of what to do for
-        which application.  E.g., GTK-based applications support the idea of 5-button mice
-        natively, so the imwheel file says "do nothing (pass through) for gtk".
-        On the other hand, no known Motif-based app seems to know about these, so imwheel
-        eats the mouse event and emits an accelerator event for "PgUp" or whatever your
-        preference is.  It has some clever pre-sets for xterm, netscape, and so on.</li>
-    </ol>
-  </dd>
-  
-  <dt><strong><a name="printstacktrace">Q: Why don't SWTError and SWTException override all printStackTrace methods?</a></strong></dt>
-  <dd>A: SWTError and SWTException each contain a slot which records the original
-    exception (if it is known) that caused the SWTError or SWTException to be thrown.
-    The printStackTrace() method in these classes has been overridden to print the
-    stacktrace of the original exception as well.
-
-    <p>The problem with the other two API methods (i.e. printStackTrace(PrintStream) and 
-    printStackTrace(PrintWriter)) is that the classes mentioned in their arguments 
-    (PrintStream and PrintWriter) are not available in the CLDC class library.
-    Because we need to maintain compatability with CLDC, we can not override them.
-  </dd>
-
-  <dt><strong><a name="noprintimage">Q: How do I print a snapshot of a widget?</a></strong></dt>
-  <dd>A: To print an image, the image needs to be created on the <em>printer</em>.
-    A common mistake is to try to print an image that was created on a <em>display</em>.
-
-    <p>First take the snapshot into an image that was created on the display,
-    and then get the imageData and create a new Image just for printing.
-    Something like this:
-<pre>  // Take the snapshot into a display Image
-  Point size = myWidget.getSize();
-  Image image = new Image(display, size.x, size.y);
-  GC gc = new GC(myWidget);
-  gc.copyArea(image, 0, 0);
-  gc.dispose();
-
-  // Get the ImageData and create a new printer Image from it
-  ImageData imageData = image.getImageData();
-  Image printImage = new Image(printer, imageData);</pre>
+      <ol>
+      <li>Set the library path in the VM launch arguments.
+      
+      <p>In the Launch Configuration Dialog of eclipse select the Arguments 
+      page, and in the VM arguments field enter:
+      <tt>-Djava.library.path={runtime-library-path}</tt>
+      Where the runtime-library-path is the absolute path to the directory containing
+      the native code library (see above). 
     
-    <p>Then print using <em>printImage</em>.
-    (Remember to dispose both images when you are done with them).
-
-    <p>This is true for all graphic objects that you want to use for printing:
-    Fonts, Colors, and Images. You need to recreate them on the printer before
-    you can use them for drawing on the printer GC. You might get lucky sometimes,
-    if the printer happens to have this font or that color, but you won't get lucky
-    on all platforms and for all printers, and you won't get lucky for images.
-    So get into the habit of thinking "Did I create this graphics resource
-    on the same device that I am now trying to draw to?"
+      <p>This solution means that the SWT libraries have to be manually 
+      added to every project that uses SWT.</p><p></p>
+    
+    <li>Set the library location in an environment variable.
+    <p>For Windows this is done by editing the PATH environment variable to 
+    include the above mentioned runtime-library-path.
+    <br>in Win 9X this is done by editing the Autoexec.bat file,
+    <br>on NT or 2K the variable is edited through <strong>My Computer</strong> &gt; <strong>Properties</strong> &gt; <strong>Advanced</strong> &gt; <strong>Environment Variables</strong>.
+	<p>On linux/unix, modify the LD_LIBRARY_PATH environment variable to include the runtime-library-path.
+	<p></p>
+	
+	<li>Copy the SWT library to a directory that is already on the Java library path.  For example, the jre/bin directory.
+    <p>The disadvantage of this solution is that every time you upgrade eclipse you have to remember to copy the native code library.</p>
+   </ol>
+    <p>Starting with Eclipse 3.1, the SWT plugin that comes with Eclipse, includes the JNI libraries in the SWT jar.
+    This was done to support OSGi and Eclipse RCP. If you are using the plugin you must extract the libraries
+    to include them in the path.</p>
   </dd>
 
-  <dt><strong><a name="printOnMotif">Q: Why is the Print menu item disabled in Eclipse on Motif?</a></strong></dt>
-  <dd>A: Printing on Motif requires that Xprint be installed on your
-      machine.
-
-      <p>A good FAQ regarding Xprint can be found at
-      <a href="http://xprint.mozdev.org/docs/Xprint_FAQ.html">http://xprint.mozdev.org/docs/Xprint_FAQ.html</a>.</p>
+  <dt><strong><a name="konquerorUnzip">Q: Why do I get an error beginning with "...SWTException: Unsupported or unrecognized format" on startup?</a></strong></dt>
+  <dd>A: There is a bug in the Konqueror decompressor which causes Eclipse to be improperly extracted
+    if used.  To avoid this the Eclipse archive should first be downloaded to your machine and
+    then extracted using unzip at the command line.
   </dd>
 
-  <dt><strong><a name="printOnGTK">Q: Why is the Print menu item disabled in Eclipse on GTK (Linux, UNIX)?</a></strong></dt>
-  <dd>A: Printing on GTK has not been implemented yet. You can use the
-      External Tools support in Eclipse to print files using lpr or some other
-      printing utility. See the next answer for the steps to set this up.
+  <dt><strong><a name="useUnzip">Q: Why do I get the error "error while loading shared libraries: ./libXm.so.2: file too short" on startup?</a></strong>
+  </dt>
+  <dd>A: You must use unzip, not jar, to extract your eclipse download.  Jar does not extract the libXm.so.2 link file properly.
   </dd>
 
-  <dt><strong><a name="printOnX">Q: How do I print using my favorite Unix print program?</a></strong></dt>
-  <dd>A: You can use the External Tools support in Eclipse to print files using external programs.
-    Just create a new Program launch config from the External Tools dialog that launches your
-    favorite printing utility and you can pass the selected resource as a parameter.
-    <ol>
-    <li>Select the file you want to print.</li>
-    <li><i>Run &gt; External Tools &gt; External Tools...</i></li>
-    <li>Select "Program" in the Configurations: list.</li>
-    <li>Click New</li>
-    <li>Type: Print Selected File<br>
-   in the Name: field.</li>
-    <li>Type the full path name of your favorite printing program in the Location: field.
-    For example: /usr/bin/lpr</li>
-    <li>Type: ${container_loc}/${resource_name}<br>
-   in the Arguments: field.</li>
-    <li>Click Apply</li>
-    <li>Click Run</li>
-    </ol>
+  <dt><strong><a name="missinglibXm">Q: Why do I get the error "java.lang.UnsatisfiedLinkError: libXm.so.2: cannot open shared object file: No such file or directory."?</a></strong></dt>
+  <dd>A: On motif, the SWT library links against the open motif library libXm.so.2.  On most platforms, the open motif library is installed 
+  and added to the library path by default. However, on some Linux platforms, either open motif is not installed or is not on the default library 
+  path, or lesstif is installed.  Eclipse (and the standalone version of SWT) includes the libXm.so.2 library in the root of the Eclipse install.
+  <p>You need to either launch Eclipse from the installed directory or modify the LD_LIBRARY_PATH environment variable to 
+  include the location of libXm.so.2. </p>
+  <p>Note <code>-Djava.library.path</code> is used by the VM to locate libraries for System.loadLibrary calls.  However, it does
+  not update the LD_LIBRARY_PATH and therefore does not help libraries locate other libraries.</p>
   </dd>
 
   <dt><strong><a name="usingLesstif">Q: Why do I get the warning "XmParseMappingCreate() is not implemented yet" on Linux/Motif?</a></strong></dt>
@@ -705,18 +605,16 @@ Eclipse*fontList:-misc-fixed-medium-r-normal-*-10-100-75-75-c-60-iso8859-1
     
     <pre>setenv LD_LIBRARY_PATH /opt/eclipse:${LD_LIBRARY_PATH}</pre>
   </dd>
-    
-  <dt><strong><a name="konquerorUnzip">Q: Why do I get an error beginning with "...SWTException: Unsupported or unrecognized format" on startup?</a></strong></dt>
-  <dd>A: There is a bug in the Konqueror decompressor which causes Eclipse to be improperly extracted
-    if used.  To avoid this the Eclipse archive should first be downloaded to your machine and
-    then extracted using unzip at the command line.
+
+  <dt><strong><a name="swinginswt">Q: Can I use Swing or AWT inside Eclipse?</a></strong></dt>
+  <dd>A: Yes.  As of Eclipse 3.2, Swing and AWT can be embedded in SWT on Windows, Motif, GTK and OS X.
+  However it is important to note that a supporting JDK is required on some platforms in order for this
+  to work.  Specifically, Motif and GTK require that JDK 1.5 or newer be used, and OS X requires that
+  the JDK specified in <a href="#swtawtosx">Why does the SWT_AWT bridge not work for me on OS X?</a> be used.
+  
+  <p>See this <a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet135.java">snippet</a> for an example of how to use the API.
   </dd>
-    
-  <dt><strong><a name="useUnzip">Q: Why do I get the error "error while loading shared libraries: ./libXm.so.2: file too short" on startup?</a></strong>
-  </dt>
-  <dd>A: You must use unzip, not jar, to extract your eclipse download.  Jar does not extract the libXm.so.2 link file properly.
-  </dd>
-    
+
   <dt><strong><a name="subclassing">Q: Why can't I subclass SWT widgets like Button and Table?</a></strong></dt>
   <dd>A: You can but it is not recommended.  The article <a href="http://eclipse.org/articles/Article-Writing%20Your%20Own%20Widget/Writing%20Your%20Own%20Widget.htm">Creating Your Own Widget using SWT</a> describes the reasons in detail:
   
@@ -776,73 +674,31 @@ Problem" at: <a href="http://www.cas.mcmaster.ca/~emil/publications/fragile/">ht
   before overriding it.</p>
   </dd>
 
-  <dt><strong><a name="whatisasnippet">Q: What is a snippet and why do I care?</a></strong>
-  </dt>
-  <dd>A: A snippet is a <em>minimal stand alone</em> program that demonstrates functionality or
-  	lack of functionality.  
-  	
-  	<p>Why is this important?  Posting a snippet to the news group is the
-  	quickest way to get help.  Including a snippet in a bug report is the fastest
-  	way to get a bug fixed.  Taking the time to construct a snippet helps you understand
-  	the API of the library you are calling and focuses your thinking.  For example, the
-  	SWT team uses C and Java snippets internally to prove or disprove problems in the operating system.
-	Often, something you think is a bug is actually caused by something elsewhere
-	in your program.  
-	
-	<p>Snippets isolate problems.  Code speaks louder than words.  
-	
-	<p>Here is a minimal stand alone SWT program to help you get started:
-<pre>public static void main (String [] args) {
-    Display display = new Display ();
-    Shell shell = new Shell (display);
-    shell.open ();
-    while (!shell.isDisposed ()) {
-        if (!display.readAndDispatch ()) display.sleep ();
-    }
-    display.dispose ();
-}</pre>
-    
-	For a list of sample snippets, see the <a href="snippets">SWT snippets page</a>.
-    
+  <dt><strong><a name="noeventfire">Q: Why are some events like Selection not fired in response to programmatic widget changes?</a></strong></dt>
+  <dd>A: This is a design decision that was made in order to minimize
+      notification of potentially unwanted events.  For example, when the
+      selection of a control is changed programmatically, SWT does not issue a
+      selection event.  If this were not the case then changing the selection
+      multiple times would send multiple notifications and run application
+      listener code multiple times, thereby leading to a potential performance
+      problem.  Clients that wish to notify widget listeners of changes made
+      programatically can do so by creating an <code>Event</code> object and
+      invoking <code>Widget.notifyListeners(int, Event)</code> on the widget.
+      Note that some programmatically-triggered events are sent, typically in
+      response to low-level widget operations such as focus, move and resize
+      changes.
   </dd>
 
-  <dt><strong><a name="javawebstart">Q: How can I package my standalone SWT app for Java Web Start?</a></strong></dt>
-  <dd>A: Follow the steps below to deploy your SWT app with Java Web
-      Start. You can also follow the article from Jeff Gunther on how to
-      <a href="http://www-106.ibm.com/developerworks/opensource/library/os-jws/">Deploy
-      an SWT application using Java Web Start</a>.
+  <dt><strong><a name="printstacktrace">Q: Why don't SWTError and SWTException override all printStackTrace methods?</a></strong></dt>
+  <dd>A: SWTError and SWTException each contain a slot which records the original
+    exception (if it is known) that caused the SWTError or SWTException to be thrown.
+    The printStackTrace() method in these classes has been overridden to print the
+    stacktrace of the original exception as well.
 
-      <p>NOTE: As of 2.1, SWT Java Web Start apps can only be deployed
-      on Windows and GTK.  <p>Example:  Package the SWT ControlExample
-      application.</p>
-    <ol>
-	<li>Create the file "<a href="swtexamples.jnlp.txt">swtexamples.jnlp</a>".
-            In the file, replace the value of the codebase attribute with your own URI.
-    	<li>Create the file "<a href="swt.jnlp.txt">swt.jnlp</a>"
-            In the file, replace the value of the codebase attribute with your own URI.
-    	<li>Create the following folders and files:
-	    	<ul>
-    			<li>root (e.g. d:/jws or the URL of your website)
-    			<ul>
-    				<li>apps/swtexamples/swtexamples.jar contains the SWT ControlExample
-	    			<li>apps/swtexamples/swtexamples.jnlp (Java Web Start extension file)
-	    			<li>swt/swt.jnlp (Java Web Start extension file)
-	    			<li>swt/os/linux/x86/swtNativeLib.jar contains the GTK linux native libraries: libswt-gtk-xxxx.so, libswt-pi-gtk-xxxx.so, libswt-gnome-gtk-xxxx.so
-	    			<li>swt/os/win32/x86/swtNativeLib.jar contains the Win32 native library: swt-win32-xxxx.dll
-					<li>swt/ws/linux/swt.jar contains the SWT Linux GTK jar library
-					<li>swt/ws/linux/swt-pi.jar contains the SWT Linux GTK jar library
-					<li>swt/ws/win32/swt.jar contains the SWT Win32 jar library
-    			</ul>
-	    	</ul>
-	    	<br>- The swtexamples.jar can be found in the Example Plug-ins section of the Eclipse download page.
-	    	<br>- The SWT jars and native libraries can also be downloaded from the Eclipse download page.
-	    	<br>- You need to create the swtNativeLib.jar files described previously. Create empty jars with the name 'swtNativeLib.jar'.  Add the native SWT library into the swtNativeLib.jar file you just created. As indicated previously, insert the SWT Win32 native library (swt-win32-xxxx.dll) into the swt/os/win32/x86/swtNativeLib.jar file. Insert the SWT GTK linux native libraries in the swt/os/linux/x86/swtNativeLib.jar.
-	    <li>Sign the jar files
-	    	<br>Each jar file must be signed with your own key certificate.
-	    <li>Create a web page linking to the extension file root/apps/swtexamples/swtexamples.jnlp
-    </ol>
-    
-    <p>This description was originally contributed by &Oslash;yvind Harboe.</p>
+    <p>The problem with the other two API methods (i.e. printStackTrace(PrintStream) and 
+    printStackTrace(PrintWriter)) is that the classes mentioned in their arguments 
+    (PrintStream and PrintWriter) are not available in the CLDC class library.
+    Because we need to maintain compatability with CLDC, we can not override them.
   </dd>
 
   <dt><strong><a name="whatisbrowser">Q: What is the SWT Browser widget?</a></strong></dt>
@@ -946,15 +802,99 @@ Problem" at: <a href="http://www.cas.mcmaster.ca/~emil/publications/fragile/">ht
   <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=59506">See bug 59506</a> .
   </dd>
 
-  <dt><strong><a name="gtk64">Q: How do I build the 64 bit version of SWT GTK?</a></strong></dt>
-  <dd>Follow these steps to extract the 64 bit SWT GTK source code and produce your own build.
-  <ol>
-  	<li>Start Eclipse and download the following projects from dev.eclipse.org: org.eclipse.swt, org.eclipse.swt.gtk.linux.x86_64, org.eclipse.swt.tools</li>
-  	<li>Open the file build.xml located into the org.eclipse.swt.gtk.linux.x86_64 fragment. Run Ant to execute the ant task build.nativeLibraries defined in build.xml.</li>
-  	<li>Refresh the project org.eclipse.swt.gtk.linux.x86_64</li>
-  </ol>
-  The project org.eclipse.swt.gtk.linux.x86_64 now contains the 64 bit native libraries. The 64 bit java and C source code
-  has been copied under the org.eclipse.swt.gtk.linux.x86_64/src folder.
+  <dt><strong><a name="noprintimage">Q: How do I print a snapshot of a widget?</a></strong></dt>
+  <dd>A: To print an image, the image needs to be created on the <em>printer</em>.
+    A common mistake is to try to print an image that was created on a <em>display</em>.
+
+    <p>First take the snapshot into an image that was created on the display,
+    and then get the imageData and create a new Image just for printing.
+    Something like this:
+<pre>  // Take the snapshot into a display Image
+  Point size = myWidget.getSize();
+  Image image = new Image(display, size.x, size.y);
+  GC gc = new GC(myWidget);
+  gc.copyArea(image, 0, 0);
+  gc.dispose();
+
+  // Get the ImageData and create a new printer Image from it
+  ImageData imageData = image.getImageData();
+  Image printImage = new Image(printer, imageData);</pre>
+    
+    <p>Then print using <em>printImage</em>.
+    (Remember to dispose both images when you are done with them).
+
+    <p>This is true for all graphic objects that you want to use for printing:
+    Fonts, Colors, and Images. You need to recreate them on the printer before
+    you can use them for drawing on the printer GC. You might get lucky sometimes,
+    if the printer happens to have this font or that color, but you won't get lucky
+    on all platforms and for all printers, and you won't get lucky for images.
+    So get into the habit of thinking "Did I create this graphics resource
+    on the same device that I am now trying to draw to?"
+  </dd>
+
+  <dt><strong><a name="printOnX">Q: How do I print using my favorite Unix print program?</a></strong></dt>
+  <dd>A: You can use the External Tools support in Eclipse to print files using external programs.
+    Just create a new Program launch config from the External Tools dialog that launches your
+    favorite printing utility and you can pass the selected resource as a parameter.
+    <ol>
+    <li>Select the file you want to print.</li>
+    <li><i>Run &gt; External Tools &gt; External Tools...</i></li>
+    <li>Select "Program" in the Configurations: list.</li>
+    <li>Click New</li>
+    <li>Type: Print Selected File<br>
+   in the Name: field.</li>
+    <li>Type the full path name of your favorite printing program in the Location: field.
+    For example: /usr/bin/lpr</li>
+    <li>Type: ${container_loc}/${resource_name}<br>
+   in the Arguments: field.</li>
+    <li>Click Apply</li>
+    <li>Click Run</li>
+    </ol>
+  </dd>
+
+  <dt><strong><a name="smallprint">Q: Why does everything I print seem so small?</a></strong></dt>
+  <dd>A: When you are printing something from the screen to a printer device, you
+    need to think about scaling. What is happening is that your figure is being drawn
+    in something like 72 x 72 dots per inch on the screen, but then you are printing
+    it to something like a 300 x 300 or 600 x 600 DPI printer. What you have to do is
+    ask both the screen and the printer what their DPI is, and then figure out what
+    scale factor you need to use when you draw to the printer GC. The code might look
+    like this:
+    <pre>
+      Point screenDPI = display.getDPI();
+      Point printerDPI = printer.getDPI();
+      int scaleFactor = printerDPI.x / screenDPI.x;
+    </pre>
+    Please see the ImageAnalyzer example in the org.eclipse.swt.examples project
+    for an example of printing an image to a printer. Look at method
+    menuPrint(). Note however that this is a pretty rough example, and it does
+    not take into account what happens if the image is larger than the page - it
+    just clips.
+
+    <p>Text printing takes some thought also. You need to wrap words, put your page
+    breaks in the right place, know where your margins are, etc. The SWT
+    StyledText widget does its own text printing. If you need to see a more
+    complicated example of printing a document, wrapping, margins, multi-page,
+    etc., then please look at the inner class Printing in StyledText in
+    org.eclipse.swt.custom. An instance of this class is created by the
+    StyledText.print(Printer) API method.
+    
+    <p>Note also that when printing, any graphics objects that you use to draw,
+    such as fonts, colors, and images, need to be re-created on the printer
+    device before you can draw them to the printer GC.
+
+    <p>We also recommend that you run your print job in a separate thread and not in
+    the UI thread, because printing a long document to a slow printer can hang
+    your entire UI while the printer spools.
+
+    <p>Unfortunately, printing is not simply a matter of just passing in the
+    printer GC instead of the screen GC. Printing has to be designed into your
+    drawing classes. You don't have scrollbars anymore, so you have to either
+    cut stuff off and print it on another page, or reorganize it, or scale it
+    down, or wrap it somehow. Maybe you want to give some control to your users,
+    and let them specify how many inches something should be, or whatever -
+    maybe give them a ruler. There is no magic bullet - you
+    will definitely have to give it some thought.
   </dd>
 
   <dt><strong><a name="autotest">Q: How can I implement user interaction test cases?</a></strong></dt>
@@ -965,32 +905,12 @@ Problem" at: <a href="http://www.cas.mcmaster.ca/~emil/publications/fragile/">ht
       in the writing of automated test suites.
   </dd>
 
-  <dt><strong><a name="noeventfire">Q: Why are some events like Selection not fired in response to programmatic widget changes?</a></strong></dt>
-  <dd>A: This is a design decision that was made in order to minimize
-      notification of potentially unwanted events.  For example, when the
-      selection of a control is changed programmatically, SWT does not issue a
-      selection event.  If this were not the case then changing the selection
-      multiple times would send multiple notifications and run application
-      listener code multiple times, thereby leading to a potential performance
-      problem.  Clients that wish to notify widget listeners of changes made
-      programatically can do so by creating an <code>Event</code> object and
-      invoking <code>Widget.notifyListeners(int, Event)</code> on the widget.
-      Note that some programmatically-triggered events are sent, typically in
-      response to low-level widget operations such as focus, move and resize
-      changes.
+  <dt><strong><a name="gtkselectiongone">Q: On GTK, why does my widget's selection disappear when it loses focus?</a></strong></dt>
+  <dd>A: This effect may be seen if KDE color settings are being
+      utilized.  This can be fixed by unchecking the "Apply KDE colors to
+      non-KDE apps" option in the KDE colors control panel.
   </dd>
-  
-  <dt><strong><a name="nographicslibrary">Q: Why do I get "SWTException: Unable to load graphics library" using GC?</a></strong></dt>
-  <dd>A: Support for advanced graphics operations such as path for curvers and
-      lines, alpha blending, antialiasing, patterns and transformations was
-      added to SWT 3.1. On Windows, <a href="http://msdn.microsoft.com/library/default.asp?url=/library/en-us/gdicpp/gdiplus/gdiplus.asp">GDI+</a>
-      is required. On X Windows platforms (i.e. GTK and Motif),
-      <a href="http://cairographics.org/introduction">Cairo 0.4.0</a> is
-      required. If your Windows platform does not have GDI+ by default, you can
-      <a href="http://www.microsoft.com/downloads/details.aspx?FamilyID=6a63ab9c-df12-4d41-933c-be590feaa05a&amp;DisplayLang=en">download</a>
-      a redistributable package from Microsoft.
-  </dd>
-  
+
   <dt><strong><a name="swtawtosx">Q: Why does the SWT_AWT bridge not work for me on OS X?</a></strong></dt>
   <dd>A: This was an SWT-AWT incompatibility that existed prior to eclipse 3.2.
       This problem has since been fixed in SWT, but requires that an OS X jre that has
@@ -1003,12 +923,94 @@ Problem" at: <a href="http://www.cas.mcmaster.ca/~emil/publications/fragile/">ht
       <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=67384">bug 67384</a>.
   </dd>
 
+  <dt><strong><a name="printOnGTK">Q: Why is the Print menu item disabled in Eclipse on GTK (Linux, UNIX)?</a></strong></dt>
+  <dd>A: Printing on GTK has not been implemented yet. You can use the
+      External Tools support in Eclipse to print files using lpr or some other
+      printing utility. See the next answer for the steps to set this up.
+  </dd>
+  
+  <dt><strong><a name="printOnMotif">Q: Why is the Print menu item disabled in Eclipse on Motif?</a></strong></dt>
+  <dd>A: Printing on Motif requires that Xprint be installed on your
+      machine.
+
+      <p>A good FAQ regarding Xprint can be found at
+      <a href="http://xprint.mozdev.org/docs/Xprint_FAQ.html">http://xprint.mozdev.org/docs/Xprint_FAQ.html</a>.</p>
+  </dd>
+
+  <dt><strong><a name="uithread">Q: Why do I get the error "org.eclipse.swt.SWTException: Invalid thread access"?</a></strong></dt>
+  <dd>A: In SWT, by definition the thread that creates the Display is a UI-thread.  This thread is responsible for 
+  reading and dispatching events from the operating system event queue, and invoking listeners in response to these events.  
+  Listener code is executed in the UI-thread.  This makes an SWT application generally quite responsive, behaving like most 
+  other operating system programs.  However, any long operation, when executed by a listener, will run in the UI-thread 
+  and prevent it from reading and dispatching events, thus hanging the application.
+  
+  <p>If a listener has a large amount of work to perform, instead of performing that work in the UI-thread, it can 
+  fork a separate thread so the UI-thread can continue dispatching events. If the other thread needs to execute code 
+  that accesses an SWT object, such as changing the string in a label, there is a concurrency issue.  At the very 
+  least, some kind of synchronization is necessary to prevent the operating system or SWT from crashing, hanging or 
+  behaving unpredictably.</p>
+
+  <p>SWT implements a single-threaded UI model often called apartment threading.  In this model, only the UI-thread 
+  can invoke UI operations.  SWT strictly enforces this rule.  If you try and access an SWT object from outside the 
+  UI-thread, you get the exception "org.eclipse.swt.SWTException: Invalid thread access".  Different operating systems 
+  have different rules governing threads, UI components and synchronization.  Some use a single-threaded UI model 
+  like SWT.  Others allow only one thread at a time in the window system library, controlling access through a 
+  global lock.  This type of multi-threaded UI model is often called free threading.  Currently, in order to be 
+  simple, efficient and portable, SWT is apartment threaded.</p>
+
+  <p>To allow background threads to perform operations on objects belonging to the UI-thread, the methods 
+  syncExec(Runnable runnable) and asyncExec(Runnable runnable) of Display are used.  These are the only 
+  methods in SWT that can be called from any thread.  They allow a runnable to be executed by the UI-thread, 
+  either synchronously, causing the background thread to wait for the runnable to finish, or asynchronously 
+  allowing the background thread to continue execution without waiting for the result.  A runnable that is 
+  executed using syncExec() most closely matches the equivalent direct call to the UI operation because a 
+  Java method call always waits for the result before proceeding, just like syncExec().</p>
+ 
+  <p>The following code sets the text of a label from a background thread and waits for the operation to complete:
+
+<pre>display.syncExec(
+  new Runnable() {
+    public void run(){
+      label.setText(text);
+    }
+  });
+</pre>
+   </dd>
+
   <dt><strong><a name="noautolayout">Q: Why do I have to resize my shell to get my changed widgets to lay out again?</a></strong></dt>
   <dd>A: A layout is only performed automatically on a Composite's children when the Composite
       is resized, including when it is initially shown.  To make a Composite lay out its
       children under any other circumstances, such as when children are created or disposed,
       its <em>layout()</em> method must be called.  For an example of this see SWT snippet
       <a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet98.java">create and dispose children of a composite</a>.
+  </dd>
+
+  <dt><strong><a name="nographicslibrary">Q: Why do I get "SWTException: Unable to load graphics library" using GC?</a></strong></dt>
+  <dd>A: Support for advanced graphics operations such as path for curvers and
+      lines, alpha blending, antialiasing, patterns and transformations was
+      added to SWT 3.1. On Windows, <a href="http://msdn.microsoft.com/library/default.asp?url=/library/en-us/gdicpp/gdiplus/gdiplus.asp">GDI+</a>
+      is required. On X Windows platforms (i.e. GTK and Motif),
+      <a href="http://cairographics.org/introduction">Cairo 0.4.0</a> is
+      required. If your Windows platform does not have GDI+ by default, you can
+      <a href="http://www.microsoft.com/downloads/details.aspx?FamilyID=6a63ab9c-df12-4d41-933c-be590feaa05a&amp;DisplayLang=en">download</a>
+      a redistributable package from Microsoft.
+  </dd>
+  
+  <dt><strong><a name="scrollonlinux"> Q: Why doesn't mouse scrolling work on Linux/Motif?</a></strong></dt>
+  <dd>A: Mouse scrolling on Linux/Motif relies on the IMWheel driver.  Here is how it works:
+    <ol>
+      <li>The X Server gets the wheel event.</li>
+      <li>Your /etc/X11/XF86Config must contain "ZAxisMap 4 5" (or the equivalent "Option" 
+        line if you use XFree86 4.x) in the Mouse section.  This maps the wheel to emulated
+        mouse buttons "4" and "5".</li>
+      <li>IMWheel has a global hook on the mouse, only looking for button4/5 events.
+        When it sees one, it looks in /etc/X11/imwheel which is a table of what to do for
+        which application.  E.g., GTK-based applications support the idea of 5-button mice
+        natively, so the imwheel file says "do nothing (pass through) for gtk".
+        On the other hand, no known Motif-based app seems to know about these, so imwheel
+        eats the mouse event and emits an accelerator event for "PgUp" or whatever your
+        preference is.  It has some clever pre-sets for xterm, netscape, and so on.</li>
+    </ol>
   </dd>
 </dl>
 </table>
