@@ -63,7 +63,7 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
   <li><a href="#gtkselectiongone">On gtk, why does my widget's selection disappear when it loses focus?</a></li>
   <p></p>
   <li><a href="#swtawtosx">Why does the SWT_AWT bridge not work for me on OS X?</a></li>
-  <li><a href="#printOnGTK">Why is the Print menu item disabled in Eclipse on GTK?</a></li>
+  <li><a href="#printOnGTK">Why is the Print menu item disabled in Eclipse on GTK (Linux, UNIX)?</a></li>
   <li><a href="#printOnMotif">Why is the Print menu item disabled in Eclipse on Motif?</a></li>
   <li><a href="#uithread">Why do I get the error "org.eclipse.swt.SWTException: Invalid thread access"?</a></li>
   <li><a href="#noautolayout">Why do I have to resize my shell to get my changed widgets to lay out again?</a></li>
