@@ -22,30 +22,30 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
   <li><a href="#supportJavaBeans">Does SWT support JavaBeans?</a></li>
   <li><a href="#guibuilder">Is there a GUI Builder for SWT?</a></li>
   <li><a href="#whatisasnippet">What is a snippet and why do I care?</a></li>
-  <p>
+  <p></p>
   <li><a href="#howbuildjar">How do I build an SWT jar for my platform?</a></li>
   <li><a href="#howbuilddll">How do I build the SWT JNI libraries for my platform?</a></li>
   <li><a href="#buildeclipseexe">How do I build the Eclipse executable for my platform?</a></li>
   <li><a href="#gtk64">How do I build the 64 bit version of SWT GTK?</a></li>
-  <p>
+  <p></p>
   <li><a href="#gtkstartup">What do I need to run SWT on Linux/GTK?</a></li>
   <li><a href="#carbonapp">On carbon, how do I run an SWT application from the command line?</a></li>
   <li><a href="launcher.html">What are the arguments for the Eclipse Launcher?</a></li>
   <li><a href="#javawebstart">How can I package my standalone SWT app for Java Web Start?</a></li>
   <li><a href="#pocketpcstart">What do I need to do to run SWT on the PocketPC?</a></li>
   <li><a href="#pocketpclibrary">Where is the SWT library for the PocketPC?</a></li>
-  <p>
+  <p></p>
   <li><a href="#xpthemes">How do I make SWT use the Windows XP themes?</a></li>
   <li><a href="#gtkfontsandcolors">On gtk, how do I change the default fonts and colors of widgets?</a></li>
   <li><a href="#motiffontsandcolors">On motif, how do I change the default fonts and colors of widgets?</a></li>
-  <p>    
+  <p></p>
   <li><a href="#missingjar">Why do I get the error "java.lang.NoClassDefFoundError: org/eclipse/swt/internal/XXX/OS."?</a></li>
   <li><a href="#missingdll">Why do I get the error "java.lang.UnsatisfiedLinkError: no swt-win32-3232 in java.library.path."?</a></li>
   <li><a href="#konquerorUnzip">Why do I get an error beginning with "...SWTException: Unsupported or unrecognized format" on startup?</a></li>
   <li><a href="#useUnzip">Why do I get the error "error while loading shared libraries: ./libXm.so.2: file too short" on startup?</a></li>
   <li><a href="#missinglibXm">Why do I get the error "java.lang.UnsatisfiedLinkError: libXm.so.2: cannot open shared object file: No such file or directory."?</a></li>
   <li><a href="#usingLesstif">Why do I get the warning "XmParseMappingCreate() is not implemented yet" on Linux/Motif?</a></li>
-  <p>
+  <p></p>
   <li><a href="#swinginswt">Can I use Swing or AWT inside Eclipse?</a></li>
   <li><a href="#subclassing">Why can't I subclass SWT widgets like Button and Table?</a></li>
   <li><a href="#noeventfire">Why are some events like Selection not fired in response to programmatic widget changes?</a></li>
@@ -61,7 +61,7 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
   <li><a href="#smallprint">Why does everything I print seem so small?</a></li>
   <li><a href="#autotest">How can I implement user interaction test cases?</a></li>
   <li><a href="#gtkselectiongone">On gtk, why does my widget's selection disappear when it loses focus?</a></li>
-  <p>  
+  <p></p>
   <li><a href="#swtawtosx">Why does the SWT_AWT bridge not work for me on OS X?</a></li>
   <li><a href="#printOnGTK">Why is the Print menu item disabled in Eclipse on GTK?</a></li>
   <li><a href="#printOnMotif">Why is the Print menu item disabled in Eclipse on Motif?</a></li>
