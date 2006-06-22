@@ -1,4 +1,0 @@
-feature@a.feature=HEAD,:pserver:anonymous@dev.eclipse.org:/cvsroot/eclipse,,platform-releng-home/examples/build_jdtcore/source/a-feature
-
-#entry for org.eclipse.jdt.core plug-in which builds from APT branch
-plugin@org.eclipse.jdt.core=APT, :pserver:anonymous@dev.eclipse.org:/cvsroot/eclipse,

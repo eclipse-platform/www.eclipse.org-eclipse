@@ -1,8 +1,0 @@
-Platform
-http://www.eclipse.org/eclipse
-3.1 6/2005 Completed http://download.eclipse.org/eclipse/downloads/drops/R-3.1-200506271435/index.php
-3.1.1 9/2005 Completed http://download.eclipse.org/eclipse/downloads/drops/R-3.1.1-200509290840/index.php
-3.1.2 1/2006 Confirmed
-3.2 6/2006 Planned http://www.eclipse.org/eclipse/development/eclipse_project_plan_3_2.html
-3.2.1 9/2006 Tentative
-3.2.2 1/2007 Tentative
