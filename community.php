@@ -113,7 +113,17 @@ toolkit.</p>
 
     <p>Deinonychus is an email client written in Java featuring a GUI built
     with SWT. Supports MIME, IMAP, POP, and SMTP.</p>
+
+<li><b><a href="http://fnr.sourceforge.net">Feed'n Read</a></b>
+
+    <p>Feed'n Read is a Java-based open source newsfeed reader. It is powered by the
+    Sun ROME syndication framework and uses JFace and SWT.</p>
     
+<li><b><a href="http://siahe.com/zekr">The Zekr Project</a></b>
+
+    <p>Zekr is an open platform for research and development on the Holy Quran.
+    It is written in Java and uses SWT as the widget toolkit.</p>
+       
 <li><b><a href="http://sourceforge.net/projects/qftp/">VirgoFTP</a></b>
 
     <p>VirgoFTP is an FTP client, similar to CuteFTP, written in Java using SWT.</p>
