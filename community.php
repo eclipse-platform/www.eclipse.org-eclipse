@@ -118,11 +118,17 @@ toolkit.</p>
 
     <p>Feed'n Read is a Java-based open source newsfeed reader. It is powered by the
     Sun ROME syndication framework and uses JFace and SWT.</p>
-    
+
 <li><b><a href="http://siahe.com/zekr">The Zekr Project</a></b>
 
     <p>Zekr is an open platform for research and development on the Holy Quran.
     It is written in Java and uses SWT as the widget toolkit.</p>
+
+<li><b><a href="http://www.spotdev.net/spotmanager">SPOT Manager</a></b>
+
+	<p>SPOT Manager is a program to forward email and RSS items to your MSNDirect-powered
+	Smart Watch (<a href="http://www.msndirect.com">http://www.msndirect.com</a>). It is
+	written in Java, uses SWT, and is supported on Windows, Linux, and Mac platforms.</p>
        
 <li><b><a href="http://sourceforge.net/projects/qftp/">VirgoFTP</a></b>
 
