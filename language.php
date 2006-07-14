@@ -30,15 +30,20 @@ java -Duser.language=fr -Djava.library.path=C:\MyApp
   -classpath C:\MyApp\swt.jar;C:\MyApp\swt-nl.jar;C:\MyApp\myApp.jar
   my.org.HelloWorld</pre>
 
-<p>IBM has donated translations from their products to Eclipse.  This
-language pack contains translations for German, Spanish, French,
-Italian, Japanese, Korean, Portuguese (Brazil), Traditional Chinese and
-Simplified Chinese.  These translations are based on the Eclipse 3.0.1
-build but should work with all 2.1 and 3.0 releases of SWT.</p>
+<p>IBM has donated translations from their products to Eclipse. 
+These translations are based on the Eclipse 3.2
+build but should work with older releases of SWT.</p>
 
 <p>To use the translations, simply download
-<a href="swt-nl.jar">swt-nl.jar</a> and place it on the classpath of your
+the appropriate language pack and place it on the classpath of your
 application.</p>
+
+<ul>
+  <li><a href="org.eclipse.swt.nl1_3.2.0.v200606220026.jar">NLpack1</a>– German, Spanish, French, Italian, Japanese, Korean, Portuguese (Brazil), Traditional Chinese and Simplified Chinese.</a>
+  <li><a href="org.eclipse.swt.nl2_3.2.0.v200606220026.jar">NLpack2</a> – Czech, Hungarian, Polish and Russian.</a>
+  <li><a href="org.eclipse.swt.nl2a_3.2.0.v200606220026.jar">NLpack2a</a> – Danish, Dutch, Finnish, Greek, Norwegian, Portuguese, Swedish and Turkish.</a>
+  <li><a href="org.eclipse.swt.nlBidi_3.2.0.v200606220026.jar">NLpackBidi</a> – Arabic and Hebrew.</a>
+</ul
 </table>
 </body>
 </html>
