@@ -116,17 +116,6 @@ bugzilla email preferences.</p>
     <li><a href="R3_1/plan.html">3.1 Development Plan</a></li>
     <li><a href="R3_1/new_and_noteworthy.html">New and Noteworthy</a> items for each milestone</li>
     </ul>
-<li><a href="http://download.eclipse.org/eclipse/downloads/drops/R-3.0.2-200503110845/index.php">SWT 3.0.2</a>, 11 March 2005.
-    <ul>
-    <li><a href="R3_0/plan.html">3.0 Development Plan</a></li>
-    <li><a href="R3_0/new_and_noteworthy.html">New and Noteworthy</a> items for each milestone</li>
-    </ul>
-</ul>
-<ul>
-<li><a href="http://download.eclipse.org/downloads/drops/R-2.1.3-200403101828/index.php">SWT 2.1.3</a>, 10 March 2004.
-    <ul>
-    <li><a href="R2_1/plan.html">2.1 Development Plan</a></li>
-    </ul>
 </ul>
 
 <td valign="top" width="240px">
