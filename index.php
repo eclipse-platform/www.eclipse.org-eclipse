@@ -26,15 +26,15 @@ on which it is implemented.</p>
   <table width="100%">
   <tr><td>
       <b><font size="+1">Stable</font></b><br>
-      <a href="http://www.eclipse.org/downloads/download.php?file=/eclipse/downloads/drops/R-3.1.2-200601181600/swt-3.1.2-win32-win32-x86.zip">Windows</a>,
-      <a href="http://www.eclipse.org/downloads/download.php?file=/eclipse/downloads/drops/R-3.1.2-200601181600/swt-3.1.2-gtk-linux-x86.zip">Linux</a>,
+      <a href="http://www.eclipse.org/downloads/download.php?file=/eclipse/downloads/drops/R-3.2-200606291905/swt-3.2-win32-win32-x86.zip">Windows</a>,
+      <a href="http://www.eclipse.org/downloads/download.php?file=/eclipse/downloads/drops/R-3.2-200606291905/swt-3.2-gtk-linux-x86.zip">Linux</a>,
       <span style="white-space: nowrap;">
-      <a href="http://www.eclipse.org/downloads/download.php?file=/eclipse/downloads/drops/R-3.1.2-200601181600/swt-3.1.2-carbon-macosx-ppc.zip">OS X</a></span>,
-      <a href="http://download.eclipse.org/eclipse/downloads/drops/R-3.1.2-200601181600/index.php#swt" target="_top">more...</a><br>
-      <small>3.1.2 - <span style="white-space: nowrap;">19 January 2006</span></small><br>
+      <a href="http://www.eclipse.org/downloads/download.php?file=/eclipse/downloads/drops/R-3.2-200606291905/swt-3.2-carbon-macosx.zip">OS X</a></span>,
+      <a href="http://download.eclipse.org/eclipse/downloads/drops/R-3.2-200606291905/index.php#swt" target="_top">more...</a><br>
+      <small>3.2 - <span style="white-space: nowrap;">29 June 2006</span></small><br>
   <ul>
-  <li><a href="R3_1/plan.html">3.1 Maintenance Plan</a></li>
-  <li><a href="R3_1/new_and_noteworthy.html">New and Noteworthy</a></li>
+  <li><a href="R3_2/plan.html">3.2 Maintenance Plan</a></li>
+  <li><a href="R3_2/new_and_noteworthy.html">New and Noteworthy</a></li>
   <li><a href="language.php">Language Pack</a></li>
   </ul>
   </table>
@@ -42,15 +42,15 @@ on which it is implemented.</p>
   <table width="100%">
   <tr><td>
       <b><font size="+1">Development</font></b><br>
-      <a href="http://download.eclipse.org/eclipse/downloads/drops/S-3.2RC7-200606021317/download.php?dropFile=swt-3.2RC7-win32-win32-x86.zip">Windows</a>,
-      <a href="http://download.eclipse.org/eclipse/downloads/drops/S-3.2RC7-200606021317/download.php?dropFile=swt-3.2RC7-gtk-linux-x86.zip">Linux</a>,
+      <a href="http://download.eclipse.org/eclipse/downloads/drops/I20060711-1100/download.php?dropFile=swt-I20060711-1100-win32-win32-x86.zip">Windows</a>,
+      <a href="http://download.eclipse.org/eclipse/downloads/drops/I20060711-1100/download.php?dropFile=swt-I20060711-1100-gtk-linux-x86.zip">Linux</a>,
       <span style="white-space: nowrap;">
-      <a href="http://download.eclipse.org/eclipse/downloads/drops/S-3.2RC7-200606021317/download.php?dropFile=swt-3.2RC7-carbon-macosx.zip">OS X</a></span>,
-      <a href="http://download.eclipse.org/eclipse/downloads/drops/S-3.2RC7-200606021317/index.php#swt" target="_top">more...</a><br>
-      <small>3.2 RC7 - <span style="white-space: nowrap;">2 June 2006</span></small><br>
+      <a href="http://download.eclipse.org/eclipse/downloads/drops/I20060711-1100/download.php?dropFile=swt-I20060711-1100-carbon-macosx.zip">OS X</a></span>,
+      <a href="http://download.eclipse.org/eclipse/downloads/drops/I20060711-1100/index.php#swt" target="_top">more...</a><br>
+      <small>3.3 pre milestone 1 build - <span style="white-space: nowrap;">11 July 2006</span></small><br>
   <ul>
-  <li><a href="R3_2/plan.html">3.2 Development Plan</a></li>
-  <li><a href="R3_2/new_and_noteworthy.html">New and Noteworthy</a></li>
+  <li><a href="R3_3/plan.html">3.3 Development Plan</a></li>
+  <li><a href="R3_3/new_and_noteworthy.html">New and Noteworthy</a></li>
   </ul>
   </table>
 </table>
@@ -111,11 +111,15 @@ bugzilla email preferences.</p>
 </table>
 
 <ul>
+<li><a href="http://download.eclipse.org/eclipse/downloads/drops/R-3.1.2-200601181600/index.php">SWT 3.1.2</a>, 19 January 2006.
+    <ul>
+    <li><a href="R3_1/plan.html">3.1 Development Plan</a></li>
+    <li><a href="R3_1/new_and_noteworthy.html">New and Noteworthy</a> items for each milestone</li>
+    </ul>
 <li><a href="http://download.eclipse.org/eclipse/downloads/drops/R-3.0.2-200503110845/index.php">SWT 3.0.2</a>, 11 March 2005.
     <ul>
     <li><a href="R3_0/plan.html">3.0 Development Plan</a></li>
-    <li><a href="R3_0/new_and_noteworthy.html">New and Noteworthy</a> items
-        for each milestone</li>
+    <li><a href="R3_0/new_and_noteworthy.html">New and Noteworthy</a> items for each milestone</li>
     </ul>
 </ul>
 <ul>
