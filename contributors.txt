@@ -54,3 +54,4 @@ Toshihiro Izumi - Bug 113019
 Oliver Frouin - Bug 135040
 Miklos Fazekas - Bug 53260
 Scott Kovatch - Bug 67384
+Geoff Strom - Bug 24697
