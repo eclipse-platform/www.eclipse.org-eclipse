@@ -56,8 +56,8 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
   <li><a href="#browserlinuxrcp">What do I need to run the SWT Browser in a standalone application on Linux/GTK or Linux/Motif?</a></li>
   <li><a href="#browserlinuxibm">How can I get the SWT Browser to work with the IBM 1.4 VM?</a></li>
   <li><a href="#browserplugins">Why can't I run Java applets in the SWT Browser?</a></li>
-  <li><a href="#noprintimage">How do I print a snapshot of a widget?</a></li>
   <li><a href="#printOnX">How do I print using my favorite Unix print program?</a></li>
+  <li><a href="#noprintimage">How do I print a snapshot of a widget?</a></li>
   <li><a href="#smallprint">Why does everything I print seem so small?</a></li>
   <li><a href="#printertrim">What does computeTrim mean for a Printer?</a></li>
   <li><a href="#autotest">How can I implement user interaction test cases?</a></li>
@@ -803,6 +803,26 @@ Problem" at: <a href="http://www.cas.mcmaster.ca/~emil/publications/fragile/">ht
   <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=59506">See bug 59506</a> .
   </dd>
 
+  <dt><strong><a name="printOnX">Q: How do I print using my favorite Unix print program?</a></strong></dt>
+  <dd>A: You can use the External Tools support in Eclipse to print files using external programs.
+    Just create a new Program launch config from the External Tools dialog that launches your
+    favorite printing utility and you can pass the selected resource as a parameter.
+    <ol>
+    <li>Select the file you want to print.</li>
+    <li><i>Run &gt; External Tools &gt; External Tools...</i></li>
+    <li>Select "Program" in the Configurations: list.</li>
+    <li>Click New</li>
+    <li>Type: Print Selected File<br>
+   in the Name: field.</li>
+    <li>Type the full path name of your favorite printing program in the Location: field.
+    For example: /usr/bin/lpr</li>
+    <li>Type: ${container_loc}/${resource_name}<br>
+   in the Arguments: field.</li>
+    <li>Click Apply</li>
+    <li>Click Run</li>
+    </ol>
+  </dd>
+
   <dt><strong><a name="noprintimage">Q: How do I print a snapshot of a widget?</a></strong></dt>
   <dd>A: To print an image, the image needs to be created on the <em>printer</em>.
     A common mistake is to try to print an image that was created on a <em>display</em>.
@@ -831,26 +851,6 @@ Problem" at: <a href="http://www.cas.mcmaster.ca/~emil/publications/fragile/">ht
     on all platforms and for all printers, and you won't get lucky for images.
     So get into the habit of thinking "Did I create this graphics resource
     on the same device that I am now trying to draw to?"
-  </dd>
-
-  <dt><strong><a name="printOnX">Q: How do I print using my favorite Unix print program?</a></strong></dt>
-  <dd>A: You can use the External Tools support in Eclipse to print files using external programs.
-    Just create a new Program launch config from the External Tools dialog that launches your
-    favorite printing utility and you can pass the selected resource as a parameter.
-    <ol>
-    <li>Select the file you want to print.</li>
-    <li><i>Run &gt; External Tools &gt; External Tools...</i></li>
-    <li>Select "Program" in the Configurations: list.</li>
-    <li>Click New</li>
-    <li>Type: Print Selected File<br>
-   in the Name: field.</li>
-    <li>Type the full path name of your favorite printing program in the Location: field.
-    For example: /usr/bin/lpr</li>
-    <li>Type: ${container_loc}/${resource_name}<br>
-   in the Arguments: field.</li>
-    <li>Click Apply</li>
-    <li>Click Run</li>
-    </ol>
   </dd>
 
   <dt><strong><a name="smallprint">Q: Why does everything I print seem so small?</a></strong></dt>
@@ -900,12 +900,16 @@ Problem" at: <a href="http://www.cas.mcmaster.ca/~emil/publications/fragile/">ht
 
   <dt><strong><a name="printertrim">Q: What does computeTrim mean for a Printer?</a></strong></dt>
   <dd>A: The "trim" is the area of the page that the printer cannot print on.
-  	Usually, computeTrim is used as follows: <code>Rectangle trim = printer.computeTrim(0, 0, 0, 0);</code>
-	A printer that can print edge-to-edge would have a trim.x and trim.y of 0,0.
+  	Usually, computeTrim is used as follows: <br><code>Rectangle trim = printer.computeTrim(0, 0, 0, 0);</code>
+  	
+	<p>A printer that can print edge-to-edge would have a trim.x and trim.y of 0,0.
 	The trim.width and trim.height would be the same as the width and height of the physical paper.
-	A 600 dot per inch printer that cannot print on the leftmost 0.18 inch of the paper would have a trim.x of -108.
+	</p>
+	
+	<p>A 600 dot per inch printer that cannot print on the leftmost 0.18 inch of the paper would have a trim.x of -108.
 	So to print starting at precisely 1" from the left edge, take 600 (i.e. 1") and "add" -108 (i.e. subtract 0.18") to get the starting x position.
 	Trim positions are negative because they are relative to the 0,0 position of the client area (or 'printable area') of the paper.
+	</p>
   </dd>
 
   <dt><strong><a name="autotest">Q: How can I implement user interaction test cases?</a></strong></dt>
