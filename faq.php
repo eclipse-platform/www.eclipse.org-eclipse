@@ -927,7 +927,7 @@ Problem" at: <a href="http://www.cas.mcmaster.ca/~emil/publications/fragile/">ht
   <dd>A: Printing on GTK has not been implemented yet. You can use the
       External Tools support in Eclipse to print files using lpr or some other
       printing utility. See <a href="#printOnX">here</a> for the steps to set this up.
-      <p><b>20060719 Update:</b> Printing on GTK+ has now been implemented. You need to get the latest eclipse and run at least GTK+ 2.10.</p>
+      <p>20060719 Update: Printing on GTK has now been implemented. To use it, get the latest eclipse and run at least GTK+ 2.10.</p>
   </dd>
   
   <dt><strong><a name="printOnMotif">Q: Why is the Print menu item disabled in Eclipse on Motif?</a></strong></dt>
