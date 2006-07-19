@@ -59,6 +59,7 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
   <li><a href="#noprintimage">How do I print a snapshot of a widget?</a></li>
   <li><a href="#printOnX">How do I print using my favorite Unix print program?</a></li>
   <li><a href="#smallprint">Why does everything I print seem so small?</a></li>
+  <li><a href="#printertrim">What does computeTrim mean for a Printer?</a></li>
   <li><a href="#autotest">How can I implement user interaction test cases?</a></li>
   <li><a href="#gtkselectiongone">On gtk, why does my widget's selection disappear when it loses focus?</a></li>
   <p></p>
@@ -897,6 +898,16 @@ Problem" at: <a href="http://www.cas.mcmaster.ca/~emil/publications/fragile/">ht
     will definitely have to give it some thought.
   </dd>
 
+  <dt><strong><a name="printertrim">Q: What does computeTrim mean for a Printer?</a></strong></dt>
+  <dd>A: The "trim" is the area of the page that the printer cannot print on.
+  	Usually, computeTrim is used as follows: <code>Rectangle trim = printer.computeTrim(0, 0, 0, 0);</code>
+	A printer that can print edge-to-edge would have a trim.x and trim.y of 0,0.
+	The trim.width and trim.height would be the same as the width and height of the physical paper.
+	A 600 dot per inch printer that cannot print on the leftmost 0.18 inch of the paper would have a trim.x of -108.
+	So to print starting at precisely 1" from the left edge, take 600 (i.e. 1") and "add" -108 (i.e. subtract 0.18") to get the starting x position.
+	Trim positions are negative because they are relative to the 0,0 position of the client area (or 'printable area') of the paper.
+  </dd>
+
   <dt><strong><a name="autotest">Q: How can I implement user interaction test cases?</a></strong></dt>
   <dd>A: The method <code>org.eclipse.swt.widgets.Display.post(Event)</code> can be used to
       post mouse and keyboard events into the OS, which emulates a user
@@ -931,9 +942,7 @@ Problem" at: <a href="http://www.cas.mcmaster.ca/~emil/publications/fragile/">ht
   </dd>
   
   <dt><strong><a name="printOnMotif">Q: Why is the Print menu item disabled in Eclipse on Motif?</a></strong></dt>
-  <dd>A: Printing on Motif requires that Xprint be installed on your
-      machine.
-
+  <dd>A: Printing on Motif requires that Xprint be installed on your machine.
       <p>A good FAQ regarding Xprint can be found at
       <a href="http://xprint.mozdev.org/docs/Xprint_FAQ.html">http://xprint.mozdev.org/docs/Xprint_FAQ.html</a>.</p>
   </dd>
