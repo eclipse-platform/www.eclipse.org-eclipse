@@ -108,14 +108,14 @@ those that don't screeenshot well, see the
     <td align="center" valign="bottom">
         <table>
         <tr><td align="center">
-        <!-- <a href="http://help.eclipse.org/help32/nftopic/org.eclipse.platform.doc.isv/reference/api/org/eclipse/swt/widgets/ExpandBar.html"> -->
+        <a href="http://help.eclipse.org/help32/nftopic/org.eclipse.platform.doc.isv/reference/api/org/eclipse/swt/widgets/ExpandBar.html">
         	<img src="gallery-expandbar.png" width="293" height="195" border="0" alt="ExpandBar">
-        <!-- </a> -->
+        </a>
         <tr><td align="center"><b>ExpandBar</b><br>
         <small>
-        <!-- <a href="http://help.eclipse.org/help32/nftopic/org.eclipse.platform.doc.isv/reference/api/org/eclipse/swt/widgets/ExpandBar.html"> -->
+        <a href="http://help.eclipse.org/help32/nftopic/org.eclipse.platform.doc.isv/reference/api/org/eclipse/swt/widgets/ExpandBar.html">
         javadoc
-        <!-- </a> -->
+        </a>
          - <a href="../snippets/#expandbar">snippets</a></small>
         </table>
 <tr><td height="25px"><td><td>
