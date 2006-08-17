@@ -42,11 +42,11 @@ on which it is implemented.</p>
   <table width="100%">
   <tr><td>
       <b><font size="+1">Development</font></b><br>
-      <a href="http://download.eclipse.org/eclipse/downloads/drops/I20060711-1100/download.php?dropFile=swt-I20060711-1100-win32-win32-x86.zip">Windows</a>,
-      <a href="http://download.eclipse.org/eclipse/downloads/drops/I20060711-1100/download.php?dropFile=swt-I20060711-1100-gtk-linux-x86.zip">Linux</a>,
+      <a href="http://download.eclipse.org/eclipse/downloads/drops/S-3.3M1-200608101230/download.php?dropFile=swt-3.3M1-win32-win32-x86.zip">Windows</a>,
+      <a href="http://download.eclipse.org/eclipse/downloads/drops/S-3.3M1-200608101230/download.php?dropFile=swt-3.3M1-gtk-linux-x86.zip">Linux</a>,
       <span style="white-space: nowrap;">
-      <a href="http://download.eclipse.org/eclipse/downloads/drops/I20060711-1100/download.php?dropFile=swt-I20060711-1100-carbon-macosx.zip">OS X</a></span>,
-      <a href="http://download.eclipse.org/eclipse/downloads/drops/I20060711-1100/index.php#swt" target="_top">more...</a><br>
+      <a href="http://download.eclipse.org/eclipse/downloads/drops/S-3.3M1-200608101230/download.php?dropFile=swt-3.3M1-carbon-macosx.zip">OS X</a></span>,
+      <a href="http://download.eclipse.org/eclipse/downloads/drops/drops/S-3.3M1-200608101230/index.php#swt" target="_top">more...</a><br>
       <small>3.3 pre milestone 1 build - <span style="white-space: nowrap;">11 July 2006</span></small><br>
   <ul>
   <li><a href="R3_3/plan.html">3.3 Development Plan</a></li>
