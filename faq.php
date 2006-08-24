@@ -45,6 +45,7 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
   <li><a href="#useUnzip">Why do I get the error "error while loading shared libraries: ./libXm.so.2: file too short" on startup?</a></li>
   <li><a href="#missinglibXm">Why do I get the error "java.lang.UnsatisfiedLinkError: libXm.so.2: cannot open shared object file: No such file or directory."?</a></li>
   <li><a href="#usingLesstif">Why do I get the warning "XmParseMappingCreate() is not implemented yet" on Linux/Motif?</a></li>
+  <li><a href="#reflectionX">Why do I get an error beginning with "org.eclipse.swt.SWTError: Font not valid" on startup?</a></li>
   <p></p>
   <li><a href="#swinginswt">Can I use Swing or AWT inside Eclipse?</a></li>
   <li><a href="#subclassing">Why can't I subclass SWT widgets like Button and Table?</a></li>
@@ -605,6 +606,13 @@ Eclipse*fontList:-misc-fixed-medium-r-normal-*-10-100-75-75-c-60-iso8859-1
     to your LD_LIBRARY_PATH before launching eclipse. For example, if you are using csh: <br>
     
     <pre>setenv LD_LIBRARY_PATH /opt/eclipse:${LD_LIBRARY_PATH}</pre>
+  </dd>
+
+  <dt><strong><a name="reflectionX">Q: Why do I get an error beginning with "org.eclipse.swt.SWTError: Font not valid" on startup?</a></strong></dt>
+  <dd>A: This error occurs if a recognized font cannot be resolved at startup time.  The scenario where
+  this has been observed to sometimes happen is when accessing a remote machine via Reflection X.  This
+  situation can be made to work by changing some settings in Reflection X.  For information about how to
+  do this see <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=33828#c14">bug 33828</a>.
   </dd>
 
   <dt><strong><a name="swinginswt">Q: Can I use Swing or AWT inside Eclipse?</a></strong></dt>
