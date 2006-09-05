@@ -8,8 +8,8 @@ Ron Baldwin - Bug 29100
 Takashi Okamoto - Bug 32954
 Tomasz Stanczak - Bug 29027
 Semion Chichelnitsky - BIDI work for Windows and GTK, Bugs 29765, 29784, 29788, 36684, 36679, 29786, 29787 37497, 41188, 41200, 81987
-Ed Burnette - Bug 36226
-Oyvind Harboe- Bug 27474
+Ed Burnette - Bugs 36226, 154943
+Oyvind Harboe - Bug 27474
 Evan Sac - Bug 37519
 Richard Colley - Bug 6220
 John Ponzo - Prototype for Browser Widget on Windows and GTK
