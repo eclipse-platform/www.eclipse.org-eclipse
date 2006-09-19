@@ -7,9 +7,6 @@ for 3.2.1:
 	Business Phone : Unknown
 	Contribution : fix for: https://bugs.eclipse.org/bugs/show_bug.cgi?id=142335 Perf Fix for: org.eclipse.swt.internal.image.PngHuffmanTable.generateTable
 	Title / Rights : EPL 1.0
-	1) Added new features or enhancements?  NO
-	2) Changed more than 5% of the code base? NO
-	3) Added any open source packages that were previously not approved for this component? NO
 
 	Name :  Ed Burnette 
 	Company : SAS
@@ -18,6 +15,3 @@ for 3.2.1:
 	Business Phone : Unknown
 	Contribution : investigation for: https://bugs.eclipse.org/bugs/show_bug.cgi?id=154943 JavaScript error with generated content from GWT
 	Title / Rights : EPL 1.0
-	1) Added new features or enhancements? NO
-	2) Changed more than 5% of the code base? NO
-	3) Added any open source packages that were previously not approved for this component? NO
