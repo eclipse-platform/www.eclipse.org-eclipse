@@ -14,7 +14,7 @@
 <td valign="top" style="padding: 10px"><h1 style="padding: 0; margin: 0; border-bottom: 1px solid #000000;">SWT Snippet Instructions</h1>
 
 <p>In order to compile an SWT snippet, you need to first have SWT in
-your workspace.  First <a href="../eclipse.html">follow these instructions</a>
+your workspace.  First <a href="../eclipse.php">follow these instructions</a>
 to get set up.</p>
 
 <p>Next you need to create a class called Main, paste the snippet code
