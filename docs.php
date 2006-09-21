@@ -56,6 +56,16 @@ format</a>.</p>
   <li>Examples Guide: Standard Widget Toolkit</li>
 </ul>
 
+
+
+<table width="100%">
+<tr><th bgcolor="#0080c0" align="left" style="padding: 2px;"><font color="#ffffff">Eclipse Corner articles about SWT</font>
+</table>
+
+<p>
+<a href="http://www.eclipse.org/articles/index.php?filter=SWT">Click here to search Eclipse Corner for SWT articles.</a>
+</p>
+
 <table width="100%">
 <tr><th bgcolor="#0080c0" align="left" style="padding: 2px;"><font color="#ffffff">More articles about SWT</font>
 </table>
