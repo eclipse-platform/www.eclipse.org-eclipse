@@ -59,7 +59,7 @@ format</a>.</p>
 
 
 <table width="100%">
-<tr><th bgcolor="#0080c0" align="left" style="padding: 2px;"><font color="#ffffff">Eclipse Corner articles about SWT</font>
+<tr><th bgcolor="#0080c0" align="left" style="padding: 2px;"><font color="#ffffff">SWT articles on Eclipse Corner</font>
 </table>
 
 <p><ul>
