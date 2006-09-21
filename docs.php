@@ -62,9 +62,9 @@ format</a>.</p>
 <tr><th bgcolor="#0080c0" align="left" style="padding: 2px;"><font color="#ffffff">Eclipse Corner articles about SWT</font>
 </table>
 
-<p>
-<a href="http://www.eclipse.org/articles/index.php?filter=SWT">Click here to search Eclipse Corner for SWT articles.</a>
-</p>
+<p><ul>
+  <li><a href="http://www.eclipse.org/articles/index.php?filter=SWT">Click here to search Eclipse Corner for SWT articles.</a></li>
+</ul></p>
 
 <table width="100%">
 <tr><th bgcolor="#0080c0" align="left" style="padding: 2px;"><font color="#ffffff">More articles about SWT</font>
