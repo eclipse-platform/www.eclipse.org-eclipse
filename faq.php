@@ -790,7 +790,7 @@ Problem" at: <a href="http://www.cas.mcmaster.ca/~emil/publications/fragile/">ht
   <dt><strong><a name="browserlinuxrcp">Q: What do I need to run the SWT Browser in a standalone application on Linux GTK or Linux Motif?</a></strong></dt>
   <dd>A: Follow the steps below to use the SWT Browser widget in your standalone SWT application.
     <ol>
-    	<li>A supported version of XULRunner, Firefox or Mozilla must be installed (<a href="#browserlinux">instructions here</a>).</li>
+    	<li>A supported version of XULRunner, Firefox or Mozilla must be installed. (<a href="#browserlinux">instructions</a>)</li>
     	<li>Set the environment variable MOZILLA_FIVE_HOME to your XULRunner/Firefox/Mozilla installation folder. e.g. <code>setenv MOZILLA_FIVE_HOME /usr/lib/mozilla</code></li>
     	<li>Set the environmnent variable LD_LIBRARY_PATH to include MOZILLA_FIVE_HOME. e.g. <code>setenv LD_LIBRARY_PATH ${MOZILLA_FIVE_HOME}:${LD_LIBRARY_PATH}</code></li>
     	<li>Your standalone SWT application can now use the Browser widget.
