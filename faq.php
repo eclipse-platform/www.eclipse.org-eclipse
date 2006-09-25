@@ -743,8 +743,8 @@ Problem" at: <a href="http://www.cas.mcmaster.ca/~emil/publications/fragile/">ht
       <li>Mozilla version 1.4 GTK2 - Mozilla 1.7.8 GTK2 can be used with SWT 3.1 and newer.</li>
       <li>Firefox can be used with SWT 3.1 and newer (Linux only), provided that it has been compiled with linkable Gecko libraries.  It is 
       important to note that Firefox downloads from mozilla.org currently do <em>not</em> satisfy this criteria, but Firefox installations
-      that are included in major Linux distributions often do in the absence of XULRunner.  Attempting to use a statically-linked Firefox
-      install will display the error message "No more handles [NS_InitEmbedding...error -2147221164]".</li>
+      that are included in major Linux distributions often do in the absence of a XULRunner installation.  Attempting to use a statically-linked
+      Firefox install will display the error message "No more handles [NS_InitEmbedding...error -2147221164]".</li>
       <li>XULRunner can be used with SWT 3.2.1 and newer</li>
     </ul>
 
