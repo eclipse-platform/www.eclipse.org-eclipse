@@ -779,7 +779,7 @@ Problem" at: <a href="http://www.cas.mcmaster.ca/~emil/publications/fragile/">ht
   	Mozilla 1.7.x GTK2 from <a href="http://www.mozilla.org/releases/">Mozilla.org</a>.</li>
   	<li>Uninstall any prior Mozilla version.</li>
   	<li>Extract and install the Mozilla build.</li>
-  	<li>Run Mozilla once. Verify the application run correctly and check the version number in the Mozilla About dialog.</li>
+  	<li>Run Mozilla once. Verify that the application runs correctly and check the version number in the Mozilla About dialog.</li>
   	<li>Set the environment variable MOZILLA_FIVE_HOME to the folder containing your Mozilla install. e.g. <code>setenv MOZILLA_FIVE_HOME /usr/lib/mozilla</code></li>
   	<li>Start Eclipse. Eclipse is now ready to use the Browser widget.</li>
   </ol>
