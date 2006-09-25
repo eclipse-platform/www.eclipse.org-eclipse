@@ -722,7 +722,7 @@ Problem" at: <a href="http://www.cas.mcmaster.ca/~emil/publications/fragile/">ht
   <ol>
     <li>Windows (Internet Explorer 5 and above)</li>
     <li>Mac (Panther OS X 10.3 and above. Safari-based)</li>
-    <li>Linux GTK and Linux Motif (Mozilla 1.4 GTK2 and above, or Firefox 1.0 and above)
+    <li>Linux GTK and Linux Motif (XULRunner-1.8.0.1 and above, Firefox 1.0 and above, Mozilla 1.4 GTK2 and above)
     <br>The following Linux distributions meet the Mozilla/Firefox requirements for using the Browser widget:
     <ul>
     	<li>RedHat Enterprise Linux 3 (Mozilla)</li>
