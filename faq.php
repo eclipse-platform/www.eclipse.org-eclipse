@@ -739,13 +739,13 @@ Problem" at: <a href="http://www.cas.mcmaster.ca/~emil/publications/fragile/">ht
   <dt><strong><a name="browserlinux">Q: What do I need to run the SWT Browser inside Eclipse on Linux/GTK or Linux/Motif?</a></strong></dt>
   <dd>A: You need one of the following:
     <ul>
-      <li>Mozilla version 1.4 GTK2 - Mozilla 1.6 GTK2 can be used with SWT 3.0 and newer.</li>
-      <li>Mozilla version 1.4 GTK2 - Mozilla 1.7.8 GTK2 can be used with SWT 3.1 and newer.</li>
-      <li>Firefox can be used with SWT 3.1 and newer (Linux only), provided that it has been compiled with linkable Gecko libraries.  It is 
+      <li>Mozilla version 1.4 GTK2 - Mozilla 1.6 GTK2 can be used with Eclipse 3.0 and newer.</li>
+      <li>Mozilla version 1.4 GTK2 - Mozilla 1.7.8 GTK2 can be used with Eclipse 3.1 and newer.</li>
+      <li>Firefox can be used with Eclipse 3.1 and newer (Linux only), provided that it has been compiled with linkable Gecko libraries.  It is 
       important to note that Firefox downloads from mozilla.org currently do <em>not</em> satisfy this criteria, but Firefox installations
       that are included in major Linux distributions often do in the absence of a XULRunner installation.  Attempting to use a statically-linked
       Firefox install will display the error message "No more handles [NS_InitEmbedding...error -2147221164]".</li>
-      <li>XULRunner can be used with SWT 3.2.1 and newer</li>
+      <li>XULRunner can be used with Eclipse 3.2.1 and newer</li>
     </ul>
 
     <br>The version of Mozilla or Firefox installed on your system varies with your Linux distribution.
@@ -775,10 +775,10 @@ Problem" at: <a href="http://www.cas.mcmaster.ca/~emil/publications/fragile/">ht
 	<br>If you are running with eclipse 3.2.1 or newer then you can just run eclipse and it will attempt to detect a browser on your system to use.  If it fails to find one then you will need to download and install a GRE
 	such as mozilla, as outlined below:
   <ol>
-  	<li>If you are using SWT 3.0, download the Mozilla 1.6 Xft and GTK2 build from <a href="http://www.mozilla.org/releases/#1.6">Mozilla.org</a>. If you are using SWT 3.1 or newer, you can choose to use a more recent
+  	<li>If you are using Eclipse 3.0, download the Mozilla 1.6 Xft and GTK2 build from <a href="http://www.mozilla.org/releases/#1.6">Mozilla.org</a>. If you are using Eclipse 3.1 or newer, you can choose to use a more recent
   	Mozilla 1.7.x GTK2 from <a href="http://www.mozilla.org/releases/">Mozilla.org</a>.</li>
   	<li>Uninstall any prior Mozilla version.</li>
-  	<li>Extract and install the Mozilla build.</li>
+  	<li>Extract and install the Mozilla download.</li>
   	<li>Run Mozilla once. Verify that the application runs correctly and check the version number in the Mozilla About dialog.</li>
   	<li>Set the environment variable MOZILLA_FIVE_HOME to the folder containing your Mozilla install. e.g. <code>setenv MOZILLA_FIVE_HOME /usr/lib/mozilla</code>, and prepend this directory to your LD_LIBRARY_PATH
   	environment variable</li>
