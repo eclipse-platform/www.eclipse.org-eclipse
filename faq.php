@@ -721,7 +721,7 @@ Problem" at: <a href="http://www.cas.mcmaster.ca/~emil/publications/fragile/">ht
   <br>
   <ol>
     <li>Windows (Internet Explorer 5 and above)</li>
-    <li>Mac (Panther OS X 10.3 and above. Safari based)</li>
+    <li>Mac (Panther OS X 10.3 and above. Safari-based)</li>
     <li>Linux GTK and Linux Motif (Mozilla 1.4 GTK2 and above, or Firefox 1.0 and above)
     <br>The following Linux distributions meet the Mozilla/Firefox requirements for using the Browser widget:
     <ul>
@@ -729,7 +729,7 @@ Problem" at: <a href="http://www.cas.mcmaster.ca/~emil/publications/fragile/">ht
    		<li>RedHat Enterprise Linux 4 (Firefox)</li>
     	<li>Suse 9 (Mozilla)</li>
     </ul>
-    Other Linux distributions require a supported version of Mozilla to be installed. <a href="#browserlinux">See instructions</a>
+    Other Linux distributions may require a supported version of Mozilla to be installed. <a href="#browserlinux">See instructions</a>
     <li>Photon</li>
   </ol>
   </dd>
@@ -737,12 +737,13 @@ Problem" at: <a href="http://www.cas.mcmaster.ca/~emil/publications/fragile/">ht
   <dt><strong><a name="browserlinux">Q: What do I need to run the SWT Browser inside Eclipse on Linux/GTK or Linux/Motif?</a></strong></dt>
   <dd>A: You need one of the following:
     <ul>
-      <li>Mozilla version 1.4 GTK2 - Mozilla 1.6 GTK2 can be used with SWT 3.0.</li>
-      <li>Mozilla version 1.4 GTK2 - Mozilla 1.7.8 GTK2 can be used with SWT 3.1.</li>
-      <li>Firefox can be used with SWT 3.1 (Linux only), provided that it has been compiled with linkable Gecko libraries.  It is 
+      <li>Mozilla version 1.4 GTK2 - Mozilla 1.6 GTK2 can be used with SWT 3.0 and newer.</li>
+      <li>Mozilla version 1.4 GTK2 - Mozilla 1.7.8 GTK2 can be used with SWT 3.1 and newer.</li>
+      <li>Firefox can be used with SWT 3.1 and newer (Linux only), provided that it has been compiled with linkable Gecko libraries.  It is 
       important to note that Firefox downloads from mozilla.org currently do <em>not</em> satisfy this criteria, but Firefox installations
       that are included in major Linux distributions <em>typically</em> do.  Attempting to use a statically-linked Firefox install will
       display the error message "No more handles [NS_InitEmbedding...error -2147221164]".</li>
+      <li>XULRunner can be used with SWT 3.2.1 and newer</li>
     </ul>
 
     <br>The version of Mozilla or Firefox installed on your system varies with your Linux distribution.
@@ -783,8 +784,10 @@ Problem" at: <a href="http://www.cas.mcmaster.ca/~emil/publications/fragile/">ht
   <dt><strong><a name="browserlinuxrcp">Q: What do I need to run the SWT Browser in a standalone application on Linux GTK or Linux Motif?</a></strong></dt>
   <dd>A: Follow the steps below to use the SWT Browser widget in your standalone SWT application.
     <ol>
-    	<li>A supported version of Mozilla or Firefox must be installed (<a href="#browserlinux">instructions here</a>).</li>
-    	<li>Set the environment variable MOZILLA_FIVE_HOME to your Mozilla/Firefox installation folder. e.g. <code>setenv MOZILLA_FIVE_HOME /usr/lib/mozilla</code></li>
+    	<li>A supported version of Mozilla, Firefox or XULRunner must be installed (<a href="#browserlinux">instructions here</a>).</li>
+    	<li>Set the environment variable MOZILLA_FIVE_HOME to your Mozilla/Firefox/XULRunner installation folder. e.g. <code>setenv MOZILLA_FIVE_HOME /usr/lib/mozilla</code>
+    	(note that this step and the next step are no longer necessary if you are running with swt 3.2.1 or newer and are using the default GRE in your linux
+    	distribtion's /usr/lib directory)</li>
     	<li>Set the environmnent variable LD_LIBRARY_PATH to include MOZILLA_FIVE_HOME. e.g. <code>setenv LD_LIBRARY_PATH ${MOZILLA_FIVE_HOME}:${LD_LIBRARY_PATH}</code></li>
     	<li>Your standalone SWT application can now use the Browser widget.
     </ol>
