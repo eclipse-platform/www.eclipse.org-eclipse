@@ -762,17 +762,6 @@ Problem" at: <a href="http://www.cas.mcmaster.ca/~emil/publications/fragile/">ht
     </ul>
     <br>If you use the IBM 1.4 VM <a href="#browserlinuxibm">check this.</a>
     <br>
-    <br>Instructions for RedHat 9 users:
-  	<br>You need the Mozilla version 1.4 GTK2 RPMs for RedHat 9. Mozilla 1.5 GTK2 or Mozilla 1.6 GTK2 can also be used. These can be downloaded from
-	  <a href="http://www.mozilla.org/releases/">Mozilla.org</a>.
-	<br>
-	<ol>
-    	<li>Uninstall any prior Mozilla version</li>
-	    <li>Install the Mozilla RPMs</li>
-    	<li>Run Mozilla once. Verify the application opens HTML documents correctly. Check the version number in the Mozilla About dialog.. Verify you now have the Mozilla configuration file /etc/gre.conf.</li>
-    	<li>Start Eclipse. Eclipse is now ready to use the Browser widget.</li>
-	</ol>
-	<br>Instructions for other Linux distributions:
 	<br>If you are running with eclipse 3.2.1 or newer then you can just run eclipse and it will attempt to detect a browser on your system to use.  If it fails to find one then you will need to download and install a GRE
 	such as mozilla, as outlined below:
   <ol>
@@ -782,6 +771,7 @@ Problem" at: <a href="http://www.cas.mcmaster.ca/~emil/publications/fragile/">ht
   	<li>Extract and install the Mozilla download.</li>
   	<li>Run Mozilla once. Verify that the application runs correctly and check the version number in the Mozilla About dialog.</li>
   </ol>
+  <br>
   If you are using an eclipse prior to version 3.2.1, or if you want the Browser to use a GRE (such as Mozilla) that you have installed yourself, then you must set the MOZILLA_FIVE_HOME environment variable to the folder
   containing your GRE (e.g. <code>setenv MOZILLA_FIVE_HOME /usr/lib/mozilla</code>), and prepend this directory to your LD_LIBRARY_PATH environment variable</li>
   </dd>
