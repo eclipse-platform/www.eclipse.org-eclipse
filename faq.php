@@ -741,6 +741,7 @@ Problem" at: <a href="http://www.cas.mcmaster.ca/~emil/publications/fragile/">ht
     <ul>
       <li>Mozilla version 1.4 GTK2 - Mozilla 1.6 GTK2 can be used with Eclipse 3.0 and newer.</li>
       <li>Mozilla version 1.4 GTK2 - Mozilla 1.7.8 GTK2 can be used with Eclipse 3.1 and newer.</li>
+      <li>Mozilla version 1.4 GTK2 - Mozilla 1.7.12 GTK2 can be used with Eclipse 3.2 and newer.</li>
       <li>Firefox can be used with Eclipse 3.1 and newer (Linux only), provided that it has been compiled with linkable Gecko libraries.  It is 
       important to note that Firefox downloads from mozilla.org currently do <em>not</em> satisfy this criteria, but Firefox installations
       that are included in major Linux distributions often do in the absence of a XULRunner installation.  Attempting to use a statically-linked
