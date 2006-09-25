@@ -731,7 +731,7 @@ Problem" at: <a href="http://www.cas.mcmaster.ca/~emil/publications/fragile/">ht
    		<li>RedHat Enterprise Linux 4 (Firefox)</li>
     	<li>Suse 9 (Mozilla)</li>
     </ul>
-    Other Linux distributions may require a supported version of Mozilla to be installed. <a href="#browserlinux">See instructions</a>
+    Other Linux distributions may require a supported version of Mozilla to be installed. (<a href="#browserlinux">instructions</a>)
     <li>Photon</li>
   </ol>
   </dd>
