@@ -773,7 +773,7 @@ Problem" at: <a href="http://www.cas.mcmaster.ca/~emil/publications/fragile/">ht
   </ol>
   <br>
   If you are using an eclipse prior to version 3.2.1, or if you want the Browser to use a GRE (such as Mozilla) that you have installed yourself, then you must set the MOZILLA_FIVE_HOME environment variable to the folder
-  containing your GRE (e.g. <code>setenv MOZILLA_FIVE_HOME /usr/lib/mozilla</code>), and prepend this directory to your LD_LIBRARY_PATH environment variable</li>
+  containing your GRE (e.g. <code>setenv MOZILLA_FIVE_HOME /usr/lib/mozilla</code>), and prepend this directory to your LD_LIBRARY_PATH environment variable</li>.
   </dd>
 
   <dt><strong><a name="browserlinuxrcp">Q: What do I need to run the SWT Browser in a standalone application on Linux GTK or Linux Motif?</a></strong></dt>
