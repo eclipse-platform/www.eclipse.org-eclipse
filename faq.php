@@ -772,7 +772,8 @@ Problem" at: <a href="http://www.cas.mcmaster.ca/~emil/publications/fragile/">ht
     	<li>Start Eclipse. Eclipse is now ready to use the Browser widget.</li>
 	</ol>
 	<br>Instructions for other Linux distributions:
-	<br>If you are running with eclipse 3.2.1 or newer then you can just run eclipse and it will attempt to detect a browser on your system to use.  If it fails to find one then you will need to download and install a GRE such as mozilla.
+	<br>If you are running with eclipse 3.2.1 or newer then you can just run eclipse and it will attempt to detect a browser on your system to use.  If it fails to find one then you will need to download and install a GRE
+	such as mozilla, as outlined below:
   <ol>
   	<li>If you are using SWT 3.0, download the Mozilla 1.6 Xft and GTK2 build from <a href="http://www.mozilla.org/releases/#1.6">Mozilla.org</a>. If you are using SWT 3.1, you can choose to use a more recent Mozilla 1.7.x
   	GTK2 from <a href="http://www.mozilla.org/releases/">Mozilla.org</a>.</li>
