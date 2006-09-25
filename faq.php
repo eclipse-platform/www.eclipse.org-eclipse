@@ -342,7 +342,8 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
 	    	</ul>
 	    	<br>- The swtexamples.jar can be found in the Example Plug-ins section of the Eclipse download page.
 	    	<br>- The SWT jars and native libraries can also be downloaded from the Eclipse download page.
-	    	<br>- You need to create the swtNativeLib.jar files described previously. Create empty jars with the name 'swtNativeLib.jar'.  Add the native SWT library into the swtNativeLib.jar file you just created. As indicated previously, insert the SWT Win32 native library (swt-win32-xxxx.dll) into the swt/os/win32/x86/swtNativeLib.jar file. Insert the SWT GTK linux native libraries in the swt/os/linux/x86/swtNativeLib.jar.
+	    	<br>- You need to create the swtNativeLib.jar files described previously. Create empty jars with the name 'swtNativeLib.jar'.  Add the native SWT library into the swtNativeLib.jar file you just created. As
+	    	indicated previously, insert the SWT Win32 native library (swt-win32-xxxx.dll) into the swt/os/win32/x86/swtNativeLib.jar file. Insert the SWT GTK linux native libraries in the swt/os/linux/x86/swtNativeLib.jar.
 	    <li>Sign the jar files
 	    	<br>Each jar file must be signed with your own key certificate.
 	    <li>Create a web page linking to the extension file root/apps/swtexamples/swtexamples.jnlp
@@ -625,7 +626,8 @@ Eclipse*fontList:-misc-fixed-medium-r-normal-*-10-100-75-75-c-60-iso8859-1
   </dd>
 
   <dt><strong><a name="subclassing">Q: Why can't I subclass SWT widgets like Button and Table?</a></strong></dt>
-  <dd>A: You can but it is not recommended.  The article <a href="http://eclipse.org/articles/Article-Writing%20Your%20Own%20Widget/Writing%20Your%20Own%20Widget.htm">Creating Your Own Widget using SWT</a> describes the reasons in detail:
+  <dd>A: You can but it is not recommended.  The article <a href="http://eclipse.org/articles/Article-Writing%20Your%20Own%20Widget/Writing%20Your%20Own%20Widget.htm">Creating Your Own Widget using SWT</a>
+  describes the reasons in detail:
   
   <h3>Subclassing Widgets Directly</h3>
 
@@ -741,8 +743,8 @@ Problem" at: <a href="http://www.cas.mcmaster.ca/~emil/publications/fragile/">ht
       <li>Mozilla version 1.4 GTK2 - Mozilla 1.7.8 GTK2 can be used with SWT 3.1 and newer.</li>
       <li>Firefox can be used with SWT 3.1 and newer (Linux only), provided that it has been compiled with linkable Gecko libraries.  It is 
       important to note that Firefox downloads from mozilla.org currently do <em>not</em> satisfy this criteria, but Firefox installations
-      that are included in major Linux distributions <em>typically</em> do.  Attempting to use a statically-linked Firefox install will
-      display the error message "No more handles [NS_InitEmbedding...error -2147221164]".</li>
+      that are included in major Linux distributions often do in the absence of XULRunner.  Attempting to use a statically-linked Firefox
+      install will display the error message "No more handles [NS_InitEmbedding...error -2147221164]".</li>
       <li>XULRunner can be used with SWT 3.2.1 and newer</li>
     </ul>
 
@@ -770,9 +772,10 @@ Problem" at: <a href="http://www.cas.mcmaster.ca/~emil/publications/fragile/">ht
     	<li>Start Eclipse. Eclipse is now ready to use the Browser widget.</li>
 	</ol>
 	<br>Instructions for other Linux distributions:
-	<br>You need the Mozilla version 1.4 GTK2 for your distribution. Mozilla 1.5 GTK2 or Mozilla 1.6 GTK2 can also be used.
+	<br>If you are running with eclipse 3.2.1 or newer then you can just run eclipse and it will attempt to detect a browser on your system to use.  If it fails to find one then you will need to download and install a GRE such as mozilla.
   <ol>
-  	<li>If you are using SWT 3.0, download the Mozilla 1.6 Xft and GTK2 build from <a href="http://www.mozilla.org/releases/#1.6">Mozilla.org</a>. If you are using SWT 3.1, you can choose to use a more recent Mozilla 1.7.x GTK2 from <a href="http://www.mozilla.org/releases/">Mozilla.org</a>.</li>
+  	<li>If you are using SWT 3.0, download the Mozilla 1.6 Xft and GTK2 build from <a href="http://www.mozilla.org/releases/#1.6">Mozilla.org</a>. If you are using SWT 3.1, you can choose to use a more recent Mozilla 1.7.x
+  	GTK2 from <a href="http://www.mozilla.org/releases/">Mozilla.org</a>.</li>
   	<li>Uninstall any prior Mozilla version.</li>
   	<li>Extract and install the Mozilla build.</li>
   	<li>Run Mozilla once. Verify the application run correctly and check the version number in the Mozilla About dialog.</li>
