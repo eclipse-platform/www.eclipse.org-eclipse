@@ -780,7 +780,8 @@ Problem" at: <a href="http://www.cas.mcmaster.ca/~emil/publications/fragile/">ht
   	<li>Uninstall any prior Mozilla version.</li>
   	<li>Extract and install the Mozilla build.</li>
   	<li>Run Mozilla once. Verify that the application runs correctly and check the version number in the Mozilla About dialog.</li>
-  	<li>Set the environment variable MOZILLA_FIVE_HOME to the folder containing your Mozilla install. e.g. <code>setenv MOZILLA_FIVE_HOME /usr/lib/mozilla</code></li>
+  	<li>Set the environment variable MOZILLA_FIVE_HOME to the folder containing your Mozilla install. e.g. <code>setenv MOZILLA_FIVE_HOME /usr/lib/mozilla</code>, and prepend this directory to your LD_LIBRARY_PATH
+  	environment variable</li>
   	<li>Start Eclipse. Eclipse is now ready to use the Browser widget.</li>
   </ol>
   </dd>
