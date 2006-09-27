@@ -35,28 +35,13 @@
 	</resources>
 	
 	<resources os="Linux">
-		<nativelib href="swt-native-motif-linux-x86.jar" />
-	    <jar href="swt-motif-linux-x86.jar" />
-	</resources>
-	
-	<resources os="Mac OS X" arch="ppc">
-		<nativelib href="swt-native-carbon-macosx.jar" />
-	    <jar href="swt-carbon-macosx.jar" />
+		<nativelib href="swt-native-gtk-linux-x86.jar" />
+	    <jar href="swt-gtk-linux-x86.jar" />
 	</resources>
 	
 	<resources os="SunOS" arch="sparc">
 		<nativelib href="swt-native-gtk-solaris-sparc.jar" />
 	    <jar href="swt-gtk-solaris-sparc.jar" />
-	</resources>
-	
-	<resources os="AIX">
-		<nativelib href="swt-native-motif-aix-ppc.jar" />
-	    <jar href="swt-motif-aix-ppc.jar" />
-	</resources>
-	
-	<resources os="HP-UX" arch="PA-RISC">
-		<nativelib href="swt-native-motif-hpux-PA_RISC.jar" />
-	    <jar href="swt-motif-hpux-PA_RISC.jar" />
 	</resources>
 	
 	<application-desc main-class="org.eclipse.swt.examples.controlexample.ControlExample" />
