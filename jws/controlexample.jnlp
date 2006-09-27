@@ -9,40 +9,40 @@
   		<description>A demonstration of SWT Widgets</description>
   		<description>Control Example</description>
 	</information>
-	
+
 	<security>
 		<all-permissions />
 	</security>
-	
+
 	<resources>
 		<j2se version="1.4+" />
 		<jar href="controlexample.jar" />
 	</resources>
-	
+
 	<resources os="Windows" arch="x86">
 		<nativelib href="swt-native-win32-win32.jar" />
-	    <jar href="swt-win32-win32.jar" />
+		<jar href="swt-win32-win32.jar" />
 	</resources>
-	
+
 	<resources os="Linux" arch="ppc">
 		<nativelib href="swt-native-gtk-linux-ppc.jar" />
-	    <jar href="swt-gtk-linux-ppc.jar" />
+		<jar href="swt-gtk-linux-ppc.jar" />
 	</resources>
-	
+
 	<resources os="Linux" arch="x86_64">
 		<nativelib href="swt-native-gtk-linux-x86_64.jar" />
-	    <jar href="swt-gtk-linux-x86_64.jar" />
+		<jar href="swt-gtk-linux-x86_64.jar" />
 	</resources>
-	
+
 	<resources os="Linux">
 		<nativelib href="swt-native-gtk-linux-x86.jar" />
-	    <jar href="swt-gtk-linux-x86.jar" />
+		<jar href="swt-gtk-linux-x86.jar" />
 	</resources>
-	
+
 	<resources os="SunOS" arch="sparc">
 		<nativelib href="swt-native-gtk-solaris-sparc.jar" />
-	    <jar href="swt-gtk-solaris-sparc.jar" />
+		<jar href="swt-gtk-solaris-sparc.jar" />
 	</resources>
-	
+
 	<application-desc main-class="org.eclipse.swt.examples.controlexample.ControlExample" />
 </jnlp>

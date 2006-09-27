@@ -54,41 +54,41 @@ The example .jnlp file below demonstrates how to specify the correct SWT jars to
   		&lt;description&gt;A demonstration of SWT Widgets&lt;/description&gt;
   		&lt;description&gt;Control Example&lt;/description&gt;
 	&lt;/information&gt;
-	
+
 	&lt;security&gt;
 		&lt;all-permissions /&gt;
 	&lt;/security&gt;
-	
+
 	&lt;resources&gt;
 		&lt;j2se version="1.4+" /&gt;
 		&lt;jar href="controlexample.jar" /&gt;
 	&lt;/resources&gt;
-	
+
 	&lt;resources os="Windows" arch="x86"&gt;
 		&lt;nativelib href="swt-native-win32-win32.jar" /&gt;
-	    &lt;jar href="swt-win32-win32.jar" /&gt;
+		&lt;jar href="swt-win32-win32.jar" /&gt;
 	&lt;/resources&gt;
-	
+
 	&lt;resources os="Linux" arch="ppc"&gt;
 		&lt;nativelib href="swt-native-gtk-linux-ppc.jar" /&gt;
-	    &lt;jar href="swt-gtk-linux-ppc.jar" /&gt;
+		&lt;jar href="swt-gtk-linux-ppc.jar" /&gt;
 	&lt;/resources&gt;
-	
+
 	&lt;resources os="Linux" arch="x86_64"&gt;
 		&lt;nativelib href="swt-native-gtk-linux-x86_64.jar" /&gt;
-	    &lt;jar href="swt-gtk-linux-x86_64.jar" /&gt;
+		&lt;jar href="swt-gtk-linux-x86_64.jar" /&gt;
 	&lt;/resources&gt;
-	
+
 	&lt;resources os="Linux"&gt;
 		&lt;nativelib href="swt-native-motif-linux-x86.jar" /&gt;
-	    &lt;jar href="swt-motif-linux-x86.jar" /&gt;
+		&lt;jar href="swt-motif-linux-x86.jar" /&gt;
 	&lt;/resources&gt;
-	
+
 	&lt;resources os="SunOS" arch="sparc"&gt;
 		&lt;nativelib href="swt-native-gtk-solaris-sparc.jar" /&gt;
-	    &lt;jar href="swt-gtk-solaris-sparc.jar" /&gt;
+		&lt;jar href="swt-gtk-solaris-sparc.jar" /&gt;
 	&lt;/resources&gt;
-	
+
 	&lt;application-desc main-class="org.eclipse.swt.examples.controlexample.ControlExample" /&gt;
 &lt;/jnlp&gt;</pre></td></tr></table>
 
