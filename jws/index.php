@@ -102,7 +102,7 @@ JWS will ask if you want to trust your own unverified signature, and after answe
 <p>Voil&agrave;, your application is now deployable via Java Web Start!</p>
 
 <a name="platformsnote"></a><b>Note:</b> As of SWT 3.2, SWT applications are deployable on all platforms with available implementations of SWT and
-JWS, except for Mac OS X.  This is a result of known bug <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=63306">https://bugs.eclipse.org/bugs/show_bug.cgi?id=63306</a>.
+JWS, except for Mac OS X.  See <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=63306">bug 63306</a>.
 </table>
 </body>
 </html>
