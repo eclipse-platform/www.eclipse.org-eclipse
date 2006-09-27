@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <jnlp spec="1.0+"
-  codebase="file:///bluebird/teamswt/ggayed/321/solaris/eclipse/workspace/Grant/jwscontrolexample"
+  codebase="http://www.eclipse.org/swt/jws"
   href="controlexample.jnlp">
 	<information>
   		<title>Control Example</title>

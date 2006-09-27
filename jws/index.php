@@ -50,7 +50,7 @@ The example .jnlp file below demonstrates how to specify the correct SWT jars to
 	&lt;information&gt;
   		&lt;title&gt;Control Example&lt;/title&gt;
   		&lt;vendor&gt;eclipse.org&lt;/vendor&gt;
-  		&lt;homepage href="SWTJWSindex.html" /&gt;
+  		&lt;homepage href="http://www.eclipse.org/swt/jws/" /&gt;
   		&lt;description&gt;A demonstration of SWT Widgets&lt;/description&gt;
   		&lt;description&gt;Control Example&lt;/description&gt;
 	&lt;/information&gt;
