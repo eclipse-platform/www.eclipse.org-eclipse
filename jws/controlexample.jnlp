@@ -5,7 +5,7 @@
 	<information>
   		<title>Control Example</title>
   		<vendor>eclipse.org</vendor>
-  		<homepage href="./index.php" />
+  		<homepage href="http://www.eclipse.org/swt/jws/" />
   		<description>A demonstration of SWT Widgets</description>
   		<description>Control Example</description>
 	</information>

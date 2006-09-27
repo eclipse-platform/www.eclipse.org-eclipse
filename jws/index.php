@@ -96,7 +96,7 @@ The example .jnlp file below demonstrates how to specify the correct SWT jars to
 installed on your machine). You can also create a link to the .jnlp file from an HTML page, as shown below. If all steps have been done correctly then
 JWS will ask if you want to trust your own unverified signature, and after answering yes, your application will appear.</p>
 
-<img src="swtjwscontrol.png" alt="SWT Control Example via Java Web Start">
+<img src="./swtjwscontrol.png" alt="SWT Control Example launched via Java Web Start">
 
 <p>Voil&agrave;, your application is now deployable via Java Web Start!</p>
 
