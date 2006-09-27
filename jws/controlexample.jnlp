@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <jnlp spec="1.0+"
-  codebase="http://www.eclipse.org/swt/jws"
-  href="controlexample.jnlp">
+	codebase="http://www.eclipse.org/swt/jws"
+	href="controlexample.jnlp">
 	<information>
   		<title>Control Example</title>
   		<vendor>eclipse.org</vendor>

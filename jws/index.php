@@ -45,8 +45,8 @@ The example .jnlp file below demonstrates how to specify the correct SWT jars to
 <table style="border: solid 1px #000000; margin-left: auto; margin-right: auto; background-color: #eeeeff">
 <tr><td><pre style="margin: 0; padding:0;">&lt;?xml version="1.0" encoding="utf-8"?&gt;
 &lt;jnlp spec="1.0+"
-  codebase="http://www.eclipse.org/swt/jws"
-  href="controlexample.jnlp"&gt;
+	codebase="http://www.eclipse.org/swt/jws"
+	href="controlexample.jnlp"&gt;
 	&lt;information&gt;
   		&lt;title&gt;Control Example&lt;/title&gt;
   		&lt;vendor&gt;eclipse.org&lt;/vendor&gt;
@@ -94,7 +94,7 @@ The example .jnlp file below demonstrates how to specify the correct SWT jars to
 
 <p>Now you can test the deployment of your application by pointing your browser at your .jnlp file (note that you must either have Java 1.5 or JWS
 installed on your machine). You can also create a link to the .jnlp file from an HTML page, as shown below. If all steps have been done correctly then
-JWS will ask if you want to trust your own unverified signature, and after answering yes, your application will appear.  (Example:
+JWS will ask if you want to trust your own unverified signature, and after answering Yes, your application will appear.  (Example:
 <a href="http://www.eclipse.org/swt/jws/controlexample.jnlp">http://www.eclipse.org/swt/jws/controlexample.jnlp</a>).</p>
 
 <img src="./swtjwscontrol.png" alt="SWT Control Example launched via Java Web Start">
