@@ -15,7 +15,7 @@
 <td valign="top" style="padding: 10px"><h1 style="padding: 0; margin: 0; border-bottom: 1px solid #000000;">How to deploy SWT Applications with Java Web Start</h1>
 
 <p>SWT applications can be deployed to users through the standard Java Web Start (JWS) mechanism.  Here are the steps to help you package and deploy your SWT application with JWS.</p>
-<p>First, create jar archives with SWT and its libraries for each platform that you wish to run on: (<a href="#platformsnote">supported platforms</a>)</p>
+<p>First, create jar archives with SWT and its libraries for each platform that you wish to run on: (see <a href="#platformsnote">supported platforms</a> note)</p>
 <ol>
 	<li>Create a directory <em>&lt;yourApplication&gt;</em> for collecting the deployable .jar archives.</li>
 	<li>Go to <a href="http://www.eclipse.org/swt/">http://www.eclipse.org/swt</a> and download the desired SWT Release for one of your target platforms. Extract this into a convenient location.</li>
