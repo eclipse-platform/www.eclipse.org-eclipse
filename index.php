@@ -65,6 +65,7 @@ on which it is implemented.</p>
 <li><a href="cvs.php">How to use SWT from CVS</a></li>
 <li><a href="jnigen.php">How to generate the SWT JNI Code</a></li>
 <li><a href="opengl/">Using OpenGL with SWT 3.2</a></li>
+<li><a href="jws/">How to deploy SWT Applications with Java Web Start</a></li>
 <li><a href="http://www.eclipse.org/articles/index.php?filter=swt">More articles about SWT</a> from eclipse.org</li>
 </ul>
 
