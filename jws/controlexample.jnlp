@@ -34,6 +34,11 @@
 		<jar href="swt-gtk-linux-x86_64.jar" />
 	</resources>
 
+	<resources os="Linux" arch="amd64">
+		<nativelib href="swt-native-gtk-linux-x86_64.jar" />
+		<jar href="swt-gtk-linux-x86_64.jar" />
+	</resources>
+
 	<resources os="Linux">
 		<nativelib href="swt-native-gtk-linux-x86.jar" />
 		<jar href="swt-gtk-linux-x86.jar" />

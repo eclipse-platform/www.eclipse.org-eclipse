@@ -79,6 +79,11 @@ The example .jnlp file below demonstrates how to specify the correct SWT jars to
 		&lt;jar href="swt-gtk-linux-x86_64.jar" /&gt;
 	&lt;/resources&gt;
 
+	&lt;resources os="Linux" arch="amd64"&gt;
+		&lt;nativelib href="swt-native-gtk-linux-x86_64.jar" /&gt;
+		&lt;jar href="swt-gtk-linux-x86_64.jar" /&gt;
+	&lt;/resources&gt;
+
 	&lt;resources os="Linux"&gt;
 		&lt;nativelib href="swt-native-motif-linux-x86.jar" /&gt;
 		&lt;jar href="swt-motif-linux-x86.jar" /&gt;
