@@ -31,7 +31,7 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
   <li><a href="#gtkstartup">What do I need to run SWT on Linux/GTK?</a></li>
   <li><a href="#carbonapp">On carbon, how do I run an SWT application from the command line?</a></li>
   <li><a href="launcher.html">What are the arguments for the Eclipse Launcher?</a></li>
-  <li><a href="#javawebstart">How can I package my standalone SWT app for Java Web Start?</a></li>
+  <li><a href="#javawebstart">How can I deploy my standalone SWT application with Java Web Start?</a></li>
   <li><a href="#pocketpcstart">What do I need to do to run SWT on the PocketPC?</a></li>
   <li><a href="#pocketpclibrary">Where is the SWT library for the PocketPC?</a></li>
   <p></p>
@@ -312,44 +312,12 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
       <a href="http://www.eclipse.org/swt/macosx/">article</a>.</p>
   </dd>
 
-  <dt><strong><a name="javawebstart">Q: How can I package my standalone SWT app for Java Web Start?</a></strong></dt>
-  <dd>A: Follow the steps below to deploy your SWT app with Java Web
-      Start. You can also follow the article from Jeff Gunther on how to
-      <a href="http://www-106.ibm.com/developerworks/opensource/library/os-jws/">Deploy
-      an SWT application using Java Web Start</a>.
-
-      <p>NOTE: As of 2.1, SWT Java Web Start apps can only be deployed
-      on Windows and GTK.  <p>Example:  Package the SWT ControlExample
-      application.</p>
-    <ol>
-	<li>Create the file "<a href="swtexamples.jnlp.txt">swtexamples.jnlp</a>".
-            In the file, replace the value of the codebase attribute with your own URI.
-    	<li>Create the file "<a href="swt.jnlp.txt">swt.jnlp</a>"
-            In the file, replace the value of the codebase attribute with your own URI.
-    	<li>Create the following folders and files:
-	    	<ul>
-    			<li>root (e.g. d:/jws or the URL of your website)
-    			<ul>
-    				<li>apps/swtexamples/swtexamples.jar contains the SWT ControlExample
-	    			<li>apps/swtexamples/swtexamples.jnlp (Java Web Start extension file)
-	    			<li>swt/swt.jnlp (Java Web Start extension file)
-	    			<li>swt/os/linux/x86/swtNativeLib.jar contains the GTK linux native libraries: libswt-gtk-xxxx.so, libswt-pi-gtk-xxxx.so, libswt-gnome-gtk-xxxx.so
-	    			<li>swt/os/win32/x86/swtNativeLib.jar contains the Win32 native library: swt-win32-xxxx.dll
-					<li>swt/ws/linux/swt.jar contains the SWT Linux GTK jar library
-					<li>swt/ws/linux/swt-pi.jar contains the SWT Linux GTK jar library
-					<li>swt/ws/win32/swt.jar contains the SWT Win32 jar library
-    			</ul>
-	    	</ul>
-	    	<br>- The swtexamples.jar can be found in the Example Plug-ins section of the Eclipse download page.
-	    	<br>- The SWT jars and native libraries can also be downloaded from the Eclipse download page.
-	    	<br>- You need to create the swtNativeLib.jar files described previously. Create empty jars with the name 'swtNativeLib.jar'.  Add the native SWT library into the swtNativeLib.jar file you just created. As
-	    	indicated previously, insert the SWT Win32 native library (swt-win32-xxxx.dll) into the swt/os/win32/x86/swtNativeLib.jar file. Insert the SWT GTK linux native libraries in the swt/os/linux/x86/swtNativeLib.jar.
-	    <li>Sign the jar files
-	    	<br>Each jar file must be signed with your own key certificate.
-	    <li>Create a web page linking to the extension file root/apps/swtexamples/swtexamples.jnlp
-    </ol>
-    
-    <p>This description was originally contributed by &Oslash;yvind Harboe.</p>
+  <dt><strong><a name="javawebstart">Q: How can I deploy my standalone SWT application with Java Web Start?</a></strong></dt>
+  <dd>A: For steps that can be used to package and deploy an SWT application with Java Web Start (JWS) see
+    <a href="http://www.eclipse.org/swt/jws/">How to deploy SWT Applications with Java Web Start</a>.  A related article
+    that describes the deployment of SWT applications with JWS (but does not outline the process of packaging SWT) can be found at
+    <a href="http://www-106.ibm.com/developerworks/opensource/library/os-jws/">http://www-106.ibm.com/developerworks/opensource/library/os-jws/</a>.
+    <p>Note: As of eclipse 3.3, SWT applications cannot be deployed via JWS on Mac OS X (see <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=63306">bug 63306</a>).
   </dd>
 
   <dt><strong><a name="pocketpcstart">Q: What do I need to do to run SWT on the PocketPC?</a></strong>
