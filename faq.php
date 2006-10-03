@@ -317,7 +317,7 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
     <a href="http://www.eclipse.org/swt/jws/">How to deploy SWT Applications with Java Web Start</a>.  A related article
     that describes the deployment of SWT applications with JWS (but does not outline the process of packaging SWT) can be found at
     <a href="http://www-106.ibm.com/developerworks/opensource/library/os-jws/">http://www-106.ibm.com/developerworks/opensource/library/os-jws/</a>.
-    <p>Note: As of eclipse 3.3, SWT applications cannot be deployed via JWS on Mac OS X (see <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=63306">bug 63306</a>).
+    <p>Note: As of eclipse 3.3, SWT applications cannot be deployed via JWS to clients on Mac OS X (see <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=63306">bug 63306</a>).
   </dd>
 
   <dt><strong><a name="pocketpcstart">Q: What do I need to do to run SWT on the PocketPC?</a></strong>
