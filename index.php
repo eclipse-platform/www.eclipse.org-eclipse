@@ -62,7 +62,7 @@ on which it is implemented.</p>
 <ul>
 <li><a href="eclipse.php">How to develop SWT applications in Eclipse</a></li>
 <li><a href="macosx/">How to deploy SWT applications on Mac OS X</a></li>
-<li><a href="jws/">How to deploy SWT Applications with Java Web Start</a></li>
+<li><a href="jws/">How to deploy SWT Applications using Java Web Start</a></li>
 <li><a href="cvs.php">How to use SWT from CVS</a></li>
 <li><a href="jnigen.php">How to generate the SWT JNI Code</a></li>
 <li><a href="opengl/">Using OpenGL with SWT 3.2</a></li>

@@ -14,7 +14,7 @@
 <tr><?php include "../sidebar.php"; ?>
 <td valign="top" style="padding: 10px"><h1 style="padding: 0; margin: 0; border-bottom: 1px solid #000000;">How to deploy SWT Applications with Java Web Start</h1>
 
-<p>SWT applications can be deployed to users through the standard Java Web Start (JWS) mechanism.  Here are the steps to help you package and deploy your SWT application with JWS.</p>
+<p>SWT applications can be deployed using Java Web Start (JWS).  Here are the steps to help you package and deploy your SWT application with JWS.</p>
 <p>First, create jar archives with SWT and its libraries for each platform that you wish to run on: (see <a href="#platformsnote">supported platforms</a> note)</p>
 <ol>
 	<li>Create a directory <em>&lt;yourApplication&gt;</em> for collecting the deployable .jar archives.</li>
@@ -40,7 +40,7 @@
 </ol>
 
 <p>The last step is to create a .jnlp file that will be used to launch your application through JWS <a href="http://java.sun.com/j2se/1.5.0/docs/guide/javaws/developersguide/syntax.html">(jnlp syntax guide)</a>.
-The example .jnlp file below demonstrates how to specify the correct SWT jars to be used based on the target platform. </p>
+The example .jnlp file below demonstrates how to specify the SWT jars based on the target platform. </p>
 
 <table style="border: solid 1px #000000; margin-left: auto; margin-right: auto; background-color: #eeeeff">
 <tr><td><pre style="margin: 0; padding:0;">&lt;?xml version="1.0" encoding="utf-8"?&gt;
@@ -106,8 +106,8 @@ JWS will ask if you want to trust your own unverified signature, and after answe
 
 <p>Voil&agrave;, your application is now deployable via Java Web Start!</p>
 
-<a name="platformsnote"></a><b>Note:</b> As of SWT 3.2, SWT applications are deployable on all platforms with available implementations of SWT and
-JWS, except for Mac OS X.  See <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=63306">bug 63306</a>.
+<a name="platformsnote"></a><b>Note:</b> As of SWT 3.2, SWT applications are not deployable using JWS on Mac OS X.
+See <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=63306">bug 63306</a>.
 </table>
 </body>
 </html>
