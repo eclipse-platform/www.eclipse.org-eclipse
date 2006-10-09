@@ -1,7 +1,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-    <title>How to Deploy SWT Applications with Java Web Start</title>
+    <title>How to Deploy SWT Applications using Java Web Start</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta http-equiv="Content-Style-Type" content="text/css">
     <link rel="stylesheet" href="http://dev.eclipse.org/default_style.css" type="text/css">
