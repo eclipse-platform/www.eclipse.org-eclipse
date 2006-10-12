@@ -31,7 +31,7 @@
 
     <center><table>
     <tr><td><a href="SWTHello.dmg"><img style="display: block; text-align: center; margin: auto;" src="dmgicon.png" border="0" alt="SWTHello.dmg"></a>
-    <tr><td><a href="SWTHello.dmg">Download SWTHello</a> (1MB)
+    <tr><td><a href="SWTHello.dmg">Download SWTHello</a> (1.4MB)
     </table></center>
 
     <p><a href="SWTHello.dmg">SWTHello.dmg</a> is a disk image of a simple
