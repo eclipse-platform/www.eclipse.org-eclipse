@@ -32,8 +32,6 @@ bug fixes from there.</p>
 <p>To run a snippet, simply <a href="http://www.eclipse.org/swt/eclipse.php">set up SWT in your
 Eclipse workspace</a>, create new Java project that depends on SWT, and
 paste the example into a new Java class.
-<a href="instructions.php">More detailed instructions</a> are
-available.</p>
 
 <p>To contribute a new snippet, 
 <a href="https://bugs.eclipse.org/bugs/enter_bug.cgi?product=Platform&bug_severity=enhancement&component=SWT&short_desc=New%20Snippet%20Contribution%3A%20%5Bsummary%20here%5D&comment=Eclipse%20build%20id%20or%20SWT%20version%3A%20%5Bbuild%20id%20here%5D%0D%0A%0D%0APlatform%28s%29%20tested%20on%3A%20%5Blist%20platform%28s%29%20here%5D%0D%0A%0D%0ASnippet%20title%3A%20%5Bsnippet%20title%20or%20short%20description%20here%5D%0D%0A%0D%0ASnippet%20code%3A%20%5Bpaste%20snippet%20code%20here%5D">
