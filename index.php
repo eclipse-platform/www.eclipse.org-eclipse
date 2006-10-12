@@ -26,12 +26,12 @@ on which it is implemented.</p>
   <table width="100%">
   <tr><td>
       <b><font size="+1">Stable</font></b><br>
-      <a href="http://www.eclipse.org/downloads/download.php?file=/eclipse/downloads/drops/R-3.2-200606291905/swt-3.2-win32-win32-x86.zip">Windows</a>,
-      <a href="http://www.eclipse.org/downloads/download.php?file=/eclipse/downloads/drops/R-3.2-200606291905/swt-3.2-gtk-linux-x86.zip">Linux</a>,
+      <a href="http://www.eclipse.org/downloads/download.php?file=/eclipse/downloads/drops/R-3.2.1-200609210945/swt-3.2.1-win32-win32-x86.zip">Windows</a>,
+      <a href="http://www.eclipse.org/downloads/download.php?file=/eclipse/downloads/drops/R-3.2.1-200609210945/swt-3.2.1-gtk-linux-x86.zip">Linux</a>,
       <span style="white-space: nowrap;">
-      <a href="http://www.eclipse.org/downloads/download.php?file=/eclipse/downloads/drops/R-3.2-200606291905/swt-3.2-carbon-macosx.zip">OS X</a></span>,
-      <a href="http://download.eclipse.org/eclipse/downloads/drops/R-3.2-200606291905/index.php#swt" target="_top">more...</a><br>
-      <small>3.2 - <span style="white-space: nowrap;">29 June 2006</span></small><br>
+      <a href="http://www.eclipse.org/downloads/download.php?file=/eclipse/downloads/drops/R-3.2.1-200609210945/swt-3.2.1-carbon-macosx.zip">OS X</a></span>,
+      <a href="http://download.eclipse.org/eclipse/downloads/drops/R-3.2.1-200609210945/index.php#swt" target="_top">more...</a><br>
+      <small>3.2.1 - <span style="white-space: nowrap;">21 September 2006</span></small><br>
   <ul>
   <li><a href="R3_2/plan.html">3.2 Maintenance Plan</a></li>
   <li><a href="R3_2/new_and_noteworthy.html">New and Noteworthy</a></li>
@@ -112,11 +112,12 @@ bugzilla email preferences.</p>
 </table>
 
 <ul>
+<li><a href="http://download.eclipse.org/eclipse/downloads/drops/R-3.2-200606291905/index.php">SWT 3.2</a>, 29 June 2006.</li>
 <li><a href="http://download.eclipse.org/eclipse/downloads/drops/R-3.1.2-200601181600/index.php">SWT 3.1.2</a>, 19 January 2006.
     <ul>
     <li><a href="R3_1/plan.html">3.1 Development Plan</a></li>
     <li><a href="R3_1/new_and_noteworthy.html">New and Noteworthy</a> items for each milestone</li>
-    </ul>
+    </ul></li>
 </ul>
 
 <td valign="top" width="240px">
