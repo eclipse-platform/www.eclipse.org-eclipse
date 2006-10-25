@@ -65,6 +65,7 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
   <li><a href="#gtkselectiongone">On gtk, why does my widget's selection disappear when it loses focus?</a></li>
   <p></p>
   <li><a href="#swtawtosx">Why does the SWT_AWT bridge not work for me on OS X?</a></li>
+  <li><a href="#swtawtsolaris">Why does the SWT_AWT bridge not work for me on Solaris?</a></li>
   <li><a href="#printOnGTK">Why is the Print menu item disabled in Eclipse on GTK (Linux, UNIX)?</a></li>
   <li><a href="#printOnMotif">Why is the Print menu item disabled in Eclipse on Motif?</a></li>
   <li><a href="#uithread">Why do I get the error "org.eclipse.swt.SWTException: Invalid thread access"?</a></li>
@@ -589,6 +590,8 @@ Eclipse*fontList:-misc-fixed-medium-r-normal-*-10-100-75-75-c-60-iso8859-1
   However it is important to note that a supporting JDK is required on some platforms in order for this
   to work.  Specifically, Motif and GTK require that JDK 1.5 or newer be used, and OS X requires that
   the JDK specified in <a href="#swtawtosx">Why does the SWT_AWT bridge not work for me on OS X?</a> be used.
+  Additionally, Solaris users must ensure that AWT is using XToolkit, as described in
+  <a href="#swtawtsolaris">Why does the SWT_AWT bridge not work for me on Solaris?</a>
   
   <p>See this <a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet135.java">snippet</a> for an example of how to use the API.
   </dd>
@@ -908,6 +911,12 @@ Problem" at: <a href="http://www.cas.mcmaster.ca/~emil/publications/fragile/">ht
       free to create an account at Apple Developer Connection to access the download,
       which is approximately 180K.  For more information about this issue see
       <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=67384">bug 67384</a>.
+  </dd>
+  
+  <dt><strong><a name="swtawtosx">Q: Why does the SWT_AWT bridge not work for me on Solaris?</a></strong></dt>
+  <dd>A: The SWT_AWT bridge requires that AWT be using XToolkit, since this implements the XEmbed
+      protocol.  However by default AWT on Solaris uses MToolkit.  This can be easily changed as
+      described in <a href="http://java.sun.com/j2se/1.5.0/docs/guide/awt/1.5/xawt.html">XToolkit on Solaris/Linux</a>.
   </dd>
 
   <dt><strong><a name="printOnGTK">Q: Why is the Print menu item disabled in Eclipse on GTK (Linux, UNIX)?</a></strong></dt>
