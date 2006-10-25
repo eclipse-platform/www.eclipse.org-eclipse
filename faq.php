@@ -913,7 +913,7 @@ Problem" at: <a href="http://www.cas.mcmaster.ca/~emil/publications/fragile/">ht
       <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=67384">bug 67384</a>.
   </dd>
   
-  <dt><strong><a name="swtawtosx">Q: Why does the SWT_AWT bridge not work for me on Solaris?</a></strong></dt>
+  <dt><strong><a name="swtawtsolaris">Q: Why does the SWT_AWT bridge not work for me on Solaris?</a></strong></dt>
   <dd>A: The SWT_AWT bridge requires that AWT be using XToolkit, since this implements the XEmbed
       protocol.  However by default AWT on Solaris uses MToolkit.  This can be easily changed as
       described in <a href="http://java.sun.com/j2se/1.5.0/docs/guide/awt/1.5/xawt.html">XToolkit on Solaris/Linux</a>.
