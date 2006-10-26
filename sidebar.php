@@ -1,6 +1,7 @@
 <td valign="top" bgcolor="#6699cc" style="padding: 5px"><table class="nav" width="100%">
 <tr><td class="nav">&nbsp; <a class="nav" href="http://www.eclipse.org/swt/widgets/">Widgets</a>
 <tr><td class="nav">&nbsp; <a class="nav" href="http://www.eclipse.org/swt/snippets/">Snippets</a>
+<tr><td class="nav">&nbsp; <a class="nav" href="http://www.eclipse.org/swt/examples.php">Examples</a>
 <tr><td class="nav">&nbsp; <a class="nav" href="http://www.eclipse.org/swt/faq.php">FAQ</a>
 <tr><td class="nav">&nbsp; <a class="nav" href="http://www.eclipse.org/swt/tools.php">Tools</a>
 <tr><td class="nav">&nbsp; <a class="nav" href="http://help.eclipse.org/help31/nftopic/org.eclipse.platform.doc.isv/reference/api/overview-summary.html">API Javadoc</a>
