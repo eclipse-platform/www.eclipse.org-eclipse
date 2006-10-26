@@ -88,7 +88,8 @@ the eclipse SWT Examples:
 <ol>
   <li><a href="eclipse.php">Load SWT into your workspace.</a></li>
   <li><a href="#insideEclipse">Load the SWT examples into your workspace by one of the methods listed above</a>.</li>
-  <li>Run a standalone example by selecting the main class (e.g. org.eclipse.swt.examples.controlexample.ControlExample) and selecting <strong>Run &gt; Run As &gt; SWT Application</strong></li>
+  <li>Run a standalone example by selecting the main class (e.g. org.eclipse.swt.examples.controlexample.ControlExample) and selecting
+	<br><strong>Run &gt; Run As &gt; SWT Application</strong></li>
 </ol>
 
 <table width="100%">
