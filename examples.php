@@ -70,11 +70,13 @@ and the examples in org.eclipse.swt.examples.* packages are eclipse plug-ins.
 the eclipse SWT Examples:
 <ol>
 <li><a href = "http://help.eclipse.org/help32/topic/org.eclipse.platform.doc.isv/samples/samples.html">
-	Get examples from here</a></li>
+	Installing the examples</a></li>
 <li><a href = "http://help.eclipse.org/help32/topic/org.eclipse.platform.doc.isv/samples/org.eclipse.swt.examples.launcher/doc-html/swt_launcher_ex.html">
-	Install examples</a></li>
+	Running the SWT examples as views or with the SWT Example Launcher</a></li>
 <li><a href = "http://help.eclipse.org/help32/topic/org.eclipse.platform.doc.isv/samples/org.eclipse.swt.examples/doc-html/swt_manual_setup.html">
-	Run examples</a></li>
+	Running the SWT standalone examples</a></li>
+<li><a href = "http://help.eclipse.org/help32/topic/org.eclipse.platform.doc.isv/samples/org.eclipse.swt.examples/doc-html/swt_manual_setup.html#ExamplesOverview">
+	SWT Examples Overview</a></li>
 </ol>
 </p>
 
@@ -87,6 +89,7 @@ the eclipse SWT Examples:
 <ol>
   <li><a href="eclipse.php">Load SWT into your workspace.</a></li>
   <li><a href="#insideEclipse">Load the SWT examples into your workspace by one of the methods listed above</a>.</li>
+  <li>Run a standalone example by selecting the main class (e.g. org.eclipse.swt.examples.controlexample.ControlExample) and selecting <strong>Run &gt; Run As &gt; SWT Application</strong></li>
 </ol>
 
 <table width="100%">
