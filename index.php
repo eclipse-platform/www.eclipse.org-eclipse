@@ -61,6 +61,7 @@ on which it is implemented.</p>
 
 <ul>
 <li><a href="eclipse.php">How to develop SWT applications in Eclipse</a></li>
+<li><a href="examples.php">How to run the ControlExample and other SWT examples</a></li>
 <li><a href="macosx/">How to deploy SWT applications on Mac OS X</a></li>
 <li><a href="jws/">How to deploy SWT Applications using Java Web Start</a></li>
 <li><a href="cvs.php">How to use SWT from CVS</a></li>
@@ -75,7 +76,8 @@ on which it is implemented.</p>
 
 <ul>
 <li><a href="widgets/">Widget screenshots</a> with links to documentation</li>
-<li><a href="snippets/">Snippets</a>, helpful code examples</li>
+<li><a href="snippets/">Snippets</a>, helpful little code examples</li>
+<li><a href="examples.php">Examples</a>, helpful big code examples</li>
 <li><a href="faq.php">The SWT FAQ</a> answers many common questions</li>
 <li><a href="tools.php">Tools and Plug-ins</a> for SWT developers</li>
 <li><a href="http://help.eclipse.org/help31/nftopic/org.eclipse.platform.doc.isv/reference/api/overview-summary.html">Online Javadoc</a></li>
