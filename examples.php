@@ -15,8 +15,7 @@
 
 <p></p>
 <table width="100%">
-<tr><th bgcolor="#0080c0" align="left" style="padding: 2px;"><font color="#ffffff">
-<a name="insideEclipse">SWT Examples</a></font>
+<tr><th bgcolor="#0080c0" align="left" style="padding: 2px;"><font color="#ffffff">SWT Examples</font>
 </table>
 
 <p>The following SWT examples can be downloaded from the eclipse download page:
