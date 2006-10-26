@@ -1,7 +1,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-    <title>SWT Resources and Links</title>
+    <title>SWT Documentation</title>
     <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
     <link rel="stylesheet" href="http://dev.eclipse.org/default_style.css" type="text/css">
     <link rel="stylesheet" href="swt.css" type="text/css">
@@ -11,10 +11,9 @@
 <table width="635px" class="swtpage">
 <colgroup><col width="125px"><col width="510px"></colgroup>
 <tr><?php include "sidebar.php"; ?>
-<td valign="top" style="padding: 10px"><h1 style="padding: 0; margin: 0; border-bottom: 1px solid #000000;">SWT Resources and Links</h1>
+<td valign="top" style="padding: 10px"><h1 style="padding: 0; margin: 0; border-bottom: 1px solid #000000;">SWT Documentation</h1>
 
-<p>This page contains links and references to books, tutorials, and
-articles about SWT.</p>
+<p>This page contains links to books, tutorials, and articles about SWT.</p>
 
 <table width="100%">
 <tr><th bgcolor="#0080c0" align="left" style="padding: 2px;"><font color="#ffffff">SWT in Books</font>
@@ -40,12 +39,11 @@ articles about SWT.</p>
 </table>
 
 <p>The Eclipse Help system contains good solid documentation for SWT in
-the <em>Platform Plug-in Developer Guide</em>. To get there in Eclipse,
-select <strong>Help</strong> &gt; <strong>Help Contents</strong> &gt;
+the <em>Platform Plug-in Developer Guide</em>. To get there in Eclipse, select
+<br><strong>Help</strong> &gt; <strong>Help Contents</strong> &gt;
 <strong>Platform Plug-in Developer Guide</strong>.</p>
 
-<p>You can also get this document <a
-href="http://www.eclipse.org/documentation/">in PDF format</a>.</p>
+<p>You can also get this document <a href="http://www.eclipse.org/documentation/">in PDF format</a>.</p>
 
 <p>SWT documentation appears in the following sections of the
 <em>Platform Plug-in Developer Guide</em>:</p>
