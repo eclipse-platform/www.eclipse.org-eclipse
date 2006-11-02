@@ -403,6 +403,12 @@ enter a bug report</a>. Thanks in advance for your contribution!</p>
         <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet190.java">use floats in a spinner widget</a></li>
       </ul>
       <p></p>
+      
+    <li><a name="stacklayout"><b>StackLayout</b></a>
+      <ul>
+        <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet249.java">use a stack layout to switch between composites</a></li>
+      </ul>
+      <p></p>
 
     <li><a name="styledtext"><b>StyledText</b></a>
       <ul>
