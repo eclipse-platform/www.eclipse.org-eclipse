@@ -17,7 +17,7 @@
 <p>SWT lives in Eclipse CVS at <a href="http://dev.eclipse.org/viewcvs/">dev.eclipse.org</a>.</p>
 
 <ul>
-<li>Anonymous CVS access: <tt>:pserver:anonymous@dev.eclipse.org:/home/eclipse</tt></li>
+<li>Anonymous CVS access: <tt>:pserver:anonymous@dev.eclipse.org:/cvsroot/eclipse</tt></li>
 <li><a href="http://dev.eclipse.org/viewcvs/">Browse the CVS repository</a> on the web
 </ul>
 

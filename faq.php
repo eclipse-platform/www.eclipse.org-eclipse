@@ -160,7 +160,7 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
   </dt>
   <dd>A: The SWT jar can be built from the eclipse CVS repository using an Ant task:
     <ol>
-      <li>Connect a CVS client (such as eclipse) to <strong>:pserver:anonymous@dev.eclipse.org:/home/eclipse</strong>.
+      <li>Connect a CVS client (such as eclipse) to <strong>:pserver:anonymous@dev.eclipse.org:/cvsroot/eclipse</strong>.
       <li>Check out the projects <strong>org.eclipse.swt</strong> and <strong>org.eclipse.swt.</strong><em>WS.OS.ARCH</em> where <em>WS.OS.ARCH</em> are the names of the
         windowing system, operating system and architecture of interest, respectively.  For example, <strong>org.eclipse.swt.gtk.linux.x86</strong>.
       <li>In the project <strong>org.eclipse.swt.</strong><em>WS.OS.ARCH</em>, locate the file <strong>build.xml</strong>.  This is an Ant script.
