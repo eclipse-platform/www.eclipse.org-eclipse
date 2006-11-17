@@ -162,6 +162,12 @@ enter a bug report</a>. Thanks in advance for your contribution!</p>
       </ul>
       <p></p>
 
+    <li><a name="datetime"><b>DateTime</b></a>
+      <ul>
+        <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet250.java">create a DateTime calendar and a DateTime time</a></li>
+       </ul>
+      <p></p>
+
     <li><a name="directorydialog"><b>DirectoryDialog</b></a>
       <ul>
         <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet33.java">prompt for a directory</a></li>
