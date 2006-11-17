@@ -108,18 +108,21 @@ those that don't screeenshot well, see the
     <td align="center" valign="bottom">
         <table>
         <tr><td align="center">
-        <a href="http://help.eclipse.org/help32/nftopic/org.eclipse.platform.doc.isv/reference/api/org/eclipse/swt/widgets/ExpandBar.html">
-        	<img src="gallery-expandbar.png" width="293" height="195" border="0" alt="ExpandBar">
-        </a>
-        <tr><td align="center"><b>ExpandBar</b><br>
-        <small>
-        <a href="http://help.eclipse.org/help32/nftopic/org.eclipse.platform.doc.isv/reference/api/org/eclipse/swt/widgets/ExpandBar.html">
-        javadoc
-        </a>
-         - <a href="../snippets/#expandbar">snippets</a></small>
+        <a href="http://help.eclipse.org/help32/nftopic/org.eclipse.platform.doc.isv/reference/api/org/eclipse/swt/widgets/DateTime.html"><img src="gallery-datetime.png" width="202" height="157" border="0" alt="DateTime"></a>
+        <tr><td align="center"><b>DateTime</b><br>
+        <small><a href="http://help.eclipse.org/help32/nftopic/org.eclipse.platform.doc.isv/reference/api/org/eclipse/swt/widgets/DateTime.html">javadoc</a> -
+        <a href="../snippets/#datetime">snippets</a></small>
         </table>
 <tr><td height="25px"><td><td>
 <tr><td align="center" valign="bottom">
+        <table>
+        <tr><td align="center">
+        <a href="http://help.eclipse.org/help32/nftopic/org.eclipse.platform.doc.isv/reference/api/org/eclipse/swt/widgets/ExpandBar.html"><img src="gallery-expandbar.png" width="293" height="195" border="0" alt="ExpandBar"></a>
+        <tr><td align="center"><b>ExpandBar</b><br>
+        <small><a href="http://help.eclipse.org/help32/nftopic/org.eclipse.platform.doc.isv/reference/api/org/eclipse/swt/widgets/ExpandBar.html">javadoc</a> -
+        <a href="../snippets/#expandbar">snippets</a></small>
+        </table>
+	<td align="center" valign="bottom">
         <table>
         <tr><td align="center"><a href="http://help.eclipse.org/help31/nftopic/org.eclipse.platform.doc.isv/reference/api/org/eclipse/swt/widgets/Group.html"><img src="gallery-group.png" width="106" height="115" border="0" alt="Group"></a>
         <tr><td align="center"><b>Group</b><br>
@@ -133,15 +136,15 @@ those that don't screeenshot well, see the
         <small><a href="http://help.eclipse.org/help31/nftopic/org.eclipse.platform.doc.isv/reference/api/org/eclipse/swt/widgets/Label.html">javadoc</a> -
         <a href="../snippets/#label">snippets</a></small>
         </table>
-    <td align="center" valign="bottom">
+<tr><td height="25px"><td><td>
+<tr><td align="center" valign="bottom">
         <table>
         <tr><td align="center"><a href="http://help.eclipse.org/help31/nftopic/org.eclipse.platform.doc.isv/reference/api/org/eclipse/swt/widgets/Link.html"><img src="gallery-link.png" width="210" height="50" border="0" alt="Link"></a>
         <tr><td align="center"><b>Link</b><br>
         <small><a href="http://help.eclipse.org/help31/nftopic/org.eclipse.platform.doc.isv/reference/api/org/eclipse/swt/widgets/Link.html">javadoc</a> -
         <a href="../snippets/#link">snippets</a></small>
         </table>
-<tr><td height="25px"><td><td>
-<tr><td align="center" valign="bottom">
+	<td align="center" valign="bottom">
         <table>
         <tr><td align="center"><a href="http://help.eclipse.org/help31/nftopic/org.eclipse.platform.doc.isv/reference/api/org/eclipse/swt/widgets/List.html"><img src="gallery-list.png" width="147" height="168" border="0" alt="List"></a>
         <tr><td align="center"><b>List</b><br>
@@ -155,15 +158,15 @@ those that don't screeenshot well, see the
         <small><a href="http://help.eclipse.org/help31/nftopic/org.eclipse.platform.doc.isv/reference/api/org/eclipse/swt/widgets/Menu.html">javadoc</a> -
         <a href="../snippets/#menu">snippets</a></small>
         </table>
-    <td align="center" valign="bottom">
+<tr><td height="25px"><td><td>
+<tr><td align="center" valign="bottom">
         <table>
         <tr><td align="center"><a href="http://help.eclipse.org/help31/nftopic/org.eclipse.platform.doc.isv/reference/api/org/eclipse/swt/widgets/ProgressBar.html"><img src="gallery-progressbar.png" width="159" height="51" border="0" alt="ProgressBar"></a>
         <tr><td align="center"><b>ProgressBar</b><br>
         <small><a href="http://help.eclipse.org/help31/nftopic/org.eclipse.platform.doc.isv/reference/api/org/eclipse/swt/widgets/ProgressBar.html">javadoc</a> -
         <a href="../snippets/#progressbar">snippets</a></small>
         </table>
-<tr><td height="25px"><td><td>
-<tr><td align="center" valign="bottom">
+	<td align="center" valign="bottom">
         <table>
         <tr><td align="center"><a href="http://help.eclipse.org/help31/nftopic/org.eclipse.platform.doc.isv/reference/api/org/eclipse/swt/widgets/Sash.html"><img src="gallery-sash.png" width="144" height="141" border="0" alt="Sash"></a>
         <tr><td align="center"><b>Sash</b><br>
@@ -177,15 +180,15 @@ those that don't screeenshot well, see the
         <small><a href="http://help.eclipse.org/help31/nftopic/org.eclipse.platform.doc.isv/reference/api/org/eclipse/swt/custom/ScrolledComposite.html">javadoc</a> -
         <a href="../snippets/#scrolledcomposite">snippets</a></small>
         </table>
-    <td align="center" valign="bottom">
+<tr><td height="25px"><td><td>
+<tr><td align="center" valign="bottom">
         <table>
         <tr><td align="center"><a href="http://help.eclipse.org/help31/nftopic/org.eclipse.platform.doc.isv/reference/api/org/eclipse/swt/widgets/Shell.html"><img src="gallery-shell.png" width="222" height="47" border="0" alt="Shell"></a>
         <tr><td align="center"><b>Shell</b><br>
         <small><a href="http://help.eclipse.org/help31/nftopic/org.eclipse.platform.doc.isv/reference/api/org/eclipse/swt/widgets/Shell.html">javadoc</a> -
         <a href="../snippets/#shell">snippets</a></small>
         </table>
-<tr><td height="25px"><td><td>
-<tr><td align="center" valign="bottom">
+	<td align="center" valign="bottom">
         <table>
         <tr><td align="center"><a href="http://help.eclipse.org/help31/nftopic/org.eclipse.platform.doc.isv/reference/api/org/eclipse/swt/widgets/Slider.html"><img src="gallery-slider.png" width="189" height="54" border="0" alt="Slider"></a>
         <tr><td align="center"><b>Slider</b><br>
@@ -199,15 +202,15 @@ those that don't screeenshot well, see the
         <small><a href="http://help.eclipse.org/help31/nftopic/org.eclipse.platform.doc.isv/reference/api/org/eclipse/swt/widgets/Scale.html">javadoc</a> -
         <a href="../snippets/#scale">snippets</a></small>
         </table>
-    <td align="center" valign="bottom">
+<tr><td height="25px"><td><td>
+<tr><td align="center" valign="bottom">
         <table>
         <tr><td align="center"><a href="http://help.eclipse.org/help31/nftopic/org.eclipse.platform.doc.isv/reference/api/org/eclipse/swt/widgets/Spinner.html"><img src="gallery-spinner.png" width="98" height="67" border="0" alt="Spinner"></a>
         <tr><td align="center"><b>Spinner</b><br>
         <small><a href="http://help.eclipse.org/help31/nftopic/org.eclipse.platform.doc.isv/reference/api/org/eclipse/swt/widgets/Spinner.html">javadoc</a> -
         <a href="../snippets/#spinner">snippets</a></small>
         </table>
-<tr><td height="25px"><td><td>
-<tr><td align="center" valign="bottom">
+	<td align="center" valign="bottom">
         <table>
         <tr><td align="center"><a href="http://help.eclipse.org/help31/nftopic/org.eclipse.platform.doc.isv/reference/api/org/eclipse/swt/custom/StyledText.html"><img src="gallery-styledtext.png" width="208" height="98" border="0" alt="StyledText"></a>
         <tr><td align="center"><b>StyledText</b><br>
@@ -221,15 +224,15 @@ those that don't screeenshot well, see the
         <small><a href="http://help.eclipse.org/help31/nftopic/org.eclipse.platform.doc.isv/reference/api/org/eclipse/swt/widgets/TabFolder.html">javadoc</a> -
         <a href="../snippets/#tabfolder">snippets</a></small>
         </table>
-    <td align="center" valign="bottom">
+<tr><td height="25px"><td><td>
+<tr><td align="center" valign="bottom">
         <table>
         <tr><td align="center"><a href="http://help.eclipse.org/help31/nftopic/org.eclipse.platform.doc.isv/reference/api/org/eclipse/swt/widgets/Table.html"><img src="gallery-table.png" width="210" height="130" border="0" alt="Table"></a>
         <tr><td align="center"><b>Table</b><br>
         <small><a href="http://help.eclipse.org/help31/nftopic/org.eclipse.platform.doc.isv/reference/api/org/eclipse/swt/widgets/Table.html">javadoc</a> -
         <a href="../snippets/#table">snippets</a></small>
         </table>
-<tr><td height="25px"><td><td>
-<tr><td align="center" valign="bottom">
+	<td align="center" valign="bottom">
         <table>
         <tr><td align="center"><a href="http://help.eclipse.org/help31/nftopic/org.eclipse.platform.doc.isv/reference/api/org/eclipse/swt/widgets/Text.html"><img src="gallery-textsingle.png" width="185" height="66" border="0" alt="Text"></a>
         <tr><td align="center"><b>Text</b> (<tt>SWT.SINGLE</tt>)<br>
@@ -243,15 +246,15 @@ those that don't screeenshot well, see the
         <small><a href="http://help.eclipse.org/help31/nftopic/org.eclipse.platform.doc.isv/reference/api/org/eclipse/swt/widgets/Text.html">javadoc</a> -
         <a href="../snippets/#text">snippets</a></small>
         </table>
-    <td align="center" valign="bottom">
+<tr><td height="25px"><td><td>
+<tr><td align="center" valign="bottom">
         <table>
         <tr><td align="center"><a href="http://help.eclipse.org/help31/nftopic/org.eclipse.platform.doc.isv/reference/api/org/eclipse/swt/widgets/ToolBar.html"><img src="gallery-toolbar.png" width="185" height="60" border="0" alt="ToolBar"></a>
         <tr><td align="center"><b>ToolBar</b><br>
         <small><a href="http://help.eclipse.org/help31/nftopic/org.eclipse.platform.doc.isv/reference/api/org/eclipse/swt/widgets/ToolBar.html">javadoc</a> -
         <a href="../snippets/#toolbar">snippets</a></small>
         </table>
-<tr><td height="25px"><td><td>
-<tr><td align="center" valign="bottom">
+	<td align="center" valign="bottom">
         <table>
         <tr><td align="center"><a href="http://help.eclipse.org/help31/nftopic/org.eclipse.platform.doc.isv/reference/api/org/eclipse/swt/widgets/Tray.html"><img src="gallery-tray.png" width="180" height="90" border="0" alt="Tray"></a>
         <tr><td align="center"><b>Tray</b><br>
@@ -265,7 +268,6 @@ those that don't screeenshot well, see the
         <small><a href="http://help.eclipse.org/help31/nftopic/org.eclipse.platform.doc.isv/reference/api/org/eclipse/swt/widgets/Tree.html">javadoc</a> -
         <a href="../snippets/#tree">snippets</a></small>
         </table>
-    <td align="center" valign="bottom">
 </table>
 </table>
 </body>
