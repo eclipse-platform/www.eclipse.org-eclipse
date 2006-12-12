@@ -16,6 +16,7 @@
 	<li><a href="#m1">Milestone M1</a></li>
 	<li><a href="#m2">Milestone M2</a></li>
 	<li><a href="#m3">Milestone M3</a></li>
+	<li><a href="#m4">Milestone M4</a></li>
 </ul>
 
 <h2><font face="Verdana"><a name=m1>Milestone M1</a></font></h2>
@@ -163,6 +164,54 @@
       <p><img border="0" src="images/datetime-calendar.png" alt="DateTime control with SWT.CALENDAR style on Windows" /></p>
       <p>For more information, please see <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=19945#c41">this
           comment</a> in the feature request.</p></td>
+  </tr>
+</table>
+
+<h2><font face="Verdana"><a name=m4>Milestone M4</a></font></h2>
+<table border="0" width="80%" cellpadding="10" cellspacing="0">
+  <tr> 
+    <td colspan="2"> <hr> </td>
+  </tr>
+  <tr>
+    <td width="30%" valign="top" align="left"><b>New DateTime styles</b></td>
+    <td width="70%" valign="top">DateTime control now supports <code>SWT.SHORT</code>, <code>SWT.MEDIUM</code>, and <code>SWT.LONG</code> styles.
+      This <a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet251.java">example snippet</a>
+      created the snapshots shown below.
+      <p><img border="0" src="images/datetime-short-date.png" alt="DateTime control with SWT.DATE | SWT.SHORT style on Windows" /></p>
+      <p><img border="0" src="images/datetime-short-time.png" alt="DateTime control with SWT.TIME | SWT.SHORT style" /></p>
+    </td>
+  </tr>
+  <tr> 
+    <td colspan="2"> <hr> </td>
+  </tr>
+  <tr>
+    <td width="30%" valign="top" align="left"><b>New graphics line drawing capabilities</b></td>
+    <td width="70%" valign="top">SWT graphics now supports much finer control of line attributes, including fractional line widths,
+      dashed line offsets, and miter limits. These capabilities are provided by the new <code>LineAttributes</code> class and the new
+      <code>GC</code> methods <code>GC.setLineAttributes(LineAttributes)</code> and <code>GC.getLineAttributes(LineAttributes)</code>.
+      This <a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet252.java">example snippet</a>
+      created the snapshot shown below.
+      <p><img border="0" src="images/line-attributes.png" alt="LineAttributes" /></p>
+    </td>
+  </tr>
+  <tr> 
+    <td colspan="2"> <hr> </td>
+  </tr>
+  <tr>
+    <td width="30%" valign="top" align="left"><b>SWT libraries automatically found</b></td>
+    <td width="70%" valign="top">The SWT libraries are now loaded from the SWT jar when an SWT application is launched.
+      Within Eclipse, you can just use the <b>Run As-&gt;Java Application</b> menu item and the libraries will be found.
+      When launching from the command line, you no longer need to specify the SWT library path.
+    </td>
+  </tr>
+  <tr> 
+    <td colspan="2"> <hr> </td>
+  </tr>
+  <tr>
+    <td width="30%" valign="top" align="left"><b>SWT on Vista (win32)</b></td>
+    <td width="70%" valign="top">SWT now gets everything right on Vista.
+      <p><img border="0" src="images/vista-win32.png" alt="Eclipse on Vista (win32)" /></p>
+    </td>
   </tr>
 </table>
 </body>
