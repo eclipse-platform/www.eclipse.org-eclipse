@@ -89,7 +89,8 @@ the eclipse SWT Examples:
   <li><a href="eclipse.php">Load SWT into your workspace.</a></li>
   <li><a href="#insideEclipse">Load the SWT examples into your workspace by one of the methods listed above</a>.</li>
   <li>Run a standalone example by selecting the main class (e.g. org.eclipse.swt.examples.controlexample.ControlExample) and selecting
-	<br><strong>Run &gt; Run As &gt; SWT Application</strong></li>
+	<br><strong>Run &gt; Run As &gt; SWT Application</strong> (note: as of Eclipse 3.3M4 you should use
+	<strong>Run &gt; Run As &gt; Java Application</strong> instead).</li>
 </ol>
 
 <table width="100%">
@@ -107,8 +108,6 @@ the eclipse SWT Examples:
 <li>Scroll down a little bit until you see "Example Plug-ins" section.
    Download the examples zip for your platform, and unzip it to the same place
    that you originally unzipped eclipse.
-   For example, for Windows, the example zip is:
-   http://fullmoon.ottawa.ibm.com/eclipse/downloads/drops/R-3.1-200506271435/download.php?dropFile=eclipse-examples-3.1-win32.zip
    Let's say you unzip both eclipse and its examples to d:\
    (Just say Yes when it asks if you want to overwrite the license files).
    which installs them in d:\eclipse. Let's further say that you have a java jre in D:\jdk1.4.2_06\jre.</li>
@@ -128,6 +127,8 @@ the eclipse SWT Examples:
 <li>Type the following line:<br>
 
 <code>D:\jdk1.4.2_06\jre\bin\java -classpath .;..\org.eclipse.swt_3.1.0.jar;..\org.eclipse.swt.win32.win32.x86_3.1.0.jar;.\swtexamples.jar -Djava.library.path=.. org.eclipse.swt.examples.controlexample.ControlExample</code>
+
+<p>(note that as of eclipse 3.3M4 the <code>-Djava.library.path</code> argument is no longer needed)
 
 <p>This is the ControlExample. There is a tab for each control, and you can
 change the various styles, etc, to see what changes in the controls. To run
