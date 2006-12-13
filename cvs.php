@@ -76,7 +76,7 @@ to help you get set up.<p>
         <center><p><img src="images/swt-controlexample.png" alt="controlexample"></p></center>
 
     <li>After we've selected the ControlExample.java file, we can run
-        it using <b>Run As Java Application</b> from the menu.
+        it using <b>Run As &gt; Java Application</b> from the menu.
 
         <center><p><img src="images/swt-runas.png" alt="runas"></p></center>
 
