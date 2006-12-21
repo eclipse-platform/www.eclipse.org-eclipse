@@ -56,3 +56,4 @@ Miklos Fazekas - Bug 53260
 Scott Kovatch - Bug 67384
 Geoff Strom - Bug 24697
 Oleg Krasilnikov - Bug 155212, 57151
+Diego Pettenò - Bug 167173
