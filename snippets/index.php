@@ -197,7 +197,8 @@ enter a bug report</a>. Thanks in advance for your contribution!</p>
         <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet83.java">determine data types available (win32 only)</a></li>
         <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet158.java">determine data types available (motif only)</a></li>
         <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet185.java">make a dropped data type depend on a target item in table</a></li>
-        <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet210.java">dragging text from a StyledText widget</a></li>
+        <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet210.java">drag text between two StyledText widgets</a></li>
+        <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet257.java">drag text within a StyledText widget</a></li>
       </ul>
       <p></p>
       
