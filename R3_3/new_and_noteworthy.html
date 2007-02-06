@@ -229,9 +229,11 @@
   </tr>
   <tr>
     <td width="30%" valign="top" align="left"><b>DragDetect API</b></td>
-    <td width="70%" valign="top">Custom widget implementors can now use <code>Control.dragDetect()</code>
-      to customize drag detection in mouse down. For example, a custom list control could start dragging only when an item is selected. 
-      Typed events for drag detect are now available (see <code>DragDetectListener</code> and <code>DragDetectEvent</code>).
+    <td width="70%" valign="top">Custom widget implementors can now use <code>Control.setDragDetect()</code>
+      to disable the default drag detection and <code>Control.dragDetect()</code>
+      to implement their own drag detection. For example, a custom list control could start dragging only
+      when an item is selected in a mouse down listener. 
+      Typed events for drag detection are now available (see <code>DragDetectListener</code> and <code>DragDetectEvent</code>).
       This <a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet259.java">example snippet</a> created the snapshot shown below.
       <p><img border="0" src="images/drag-detect-api.png" alt="Drag detect in a custom control" /></p>
     </td>
@@ -241,12 +243,12 @@
   </tr>
   <tr>
     <td width="30%" valign="top" align="left"><b>Drag over & drag under effects API</b></td>
-    <td width="70%" valign="top">Custom drag over and drag under effects can now be specified so that widgets can provide their own feedback.
-      Use <code>DragSource.setDragSourceEffect()</code> and <code>DropTarget.setDropTargetEffect()</code> to specify effects.
-      Subclass <code>DragSourceEffect</code> and <code>DropTargetEffect</code> to implement the effects.
-	  <code>Table</code>, <code>Tree</code> and <code>StyledText</code> widgets now use this API.
-      For an example of <code>Tree</code> drag under effect, implemented in  <code>TreeDragSourceEffect</code> and <code>TreeDropTargetEffect</code>,
-      see this <a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet91.java">example snippet</a>.
+    <td width="70%" valign="top">Custom drag over and drag under effects can now be implemented
+      for any control.  Custom widget implementors can provide the feedback that is appropriate
+      for their control by subclassing <code>DragSourceEffect</code> and <code>DropTargetEffect</code>.
+ 	  The default effects for the <code>Table</code>, <code>Tree</code> and <code>StyledText</code>
+      controls have been changed to use these classes (see <code>TreeDragSourceEffect</code>,
+      <code>TreeDropTargetEffect</code> and the cooresponding classes for these controls).
       This <code>StyledText</code> <a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet257.java">example snippet</a>
       created the snapshot shown below.
       <p><img border="0" src="images/drag-under.png" alt="StyledText dragging selected text to show 'insert cursor' drag under effect" /></p>
@@ -268,8 +270,10 @@
   </tr>
   <tr>
     <td width="30%" valign="top" align="left"><b>Text SEARCH style</b></td>
-    <td width="70%" valign="top"><code>Text</code> can now have the look and feel of a search field by creating with SWT.SEARCH style.
-      Adding SWT.CANCEL style gives the user a way to cancel the search.
+    <td width="70%" valign="top">On platforms that have this concept,
+      <code>Text</code> controls can now have the look and feel of a search
+      field using the SWT.SEARCH style.
+      Adding the SWT.CANCEL style gives the user a way to cancel the search.
       This <a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet258.java">example snippet</a>
 	  created the <code>Text</code> control shown in the snapshot below.
       <p><img border="0" src="images/search-text.png" alt="A search Text on the Mac"></p>
@@ -279,8 +283,8 @@
     <td colspan="2"> <hr> </td>
   </tr>
   <tr>
-    <td width="30%" valign="top" align="left"><b>Custom widget mnemonics & focus</b></td>
-    <td width="70%" valign="top">Custom widgets now only draw mnemonics and focus indicator when the platform wants them drawn.
+    <td width="30%" valign="top" align="left"><b>Mnemonics and the focus indicator</b></td>
+    <td width="70%" valign="top">Custom widgets respect the platform settings when drawing mnemonics and the focus indicator.
       You do not need to do anything special to get this behavior - the paint gc respects platform preferences.
       See <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=118709">this bug</a> for more information.
     </td>
@@ -290,9 +294,9 @@
   </tr>
   <tr>
     <td width="30%" valign="top" align="left"><b>Mozilla everywhere</b></td>
-    <td width="70%" valign="top">Mozilla can now be used to render the Browser's content on Windows and OS X (as well as Linux),
+    <td width="70%" valign="top">Mozilla can now be used as the underlying browser control on Windows and OS X,
       providing that you have <a href="http://developer.mozilla.org/en/docs/XULRunner">XULRunner</a> installed and registered.
-	  To use this just create your Browser with style <code>SWT.MOZILLA</code>.
+	  To use this just create your Browser with the style <code>SWT.MOZILLA</code>.
 	  For more specific version requirements for running on OS X see
 	  <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=79213#c46">bug 79213 comment 46</a>.
       This <a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet260.java">example snippet</a>
@@ -304,8 +308,8 @@
     <td colspan="2"> <hr> </td>
   </tr>
   <tr>
-    <td width="30%" valign="top" align="left"><b>Vista WPF</b></td>
-    <td width="70%" valign="top">The SWT port to Vista's WPF is now in Alpha!
+    <td width="30%" valign="top" align="left"><b>SWT on Vista (WPF)</b></td>
+    <td width="70%" valign="top">The SWT port to Vista WPF is now in Alpha!
     </td>
   </tr>
   <tr> 
