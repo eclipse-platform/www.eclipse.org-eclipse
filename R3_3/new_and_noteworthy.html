@@ -17,7 +17,9 @@
 	<li><a href="#m2">Milestone M2</a></li>
 	<li><a href="#m3">Milestone M3</a></li>
 	<li><a href="#m4">Milestone M4</a></li>
+	<li><a href="#m5">Milestone M5</a></li>
 </ul>
+
 
 <h2><font face="Verdana"><a name=m1>Milestone M1</a></font></h2>
 
@@ -148,6 +150,7 @@
 
 
 <h2><font face="Verdana"><a name=m3>Milestone M3</a></font></h2>
+
 <table border="0" width="80%" cellpadding="10" cellspacing="0">
   <tr> 
     <td colspan="2"> <hr> </td>
@@ -167,7 +170,9 @@
   </tr>
 </table>
 
+
 <h2><font face="Verdana"><a name=m4>Milestone M4</a></font></h2>
+
 <table border="0" width="80%" cellpadding="10" cellspacing="0">
   <tr> 
     <td colspan="2"> <hr> </td>
@@ -214,5 +219,99 @@
     </td>
   </tr>
 </table>
+
+
+<h2><font face="Verdana"><a name=m5>Milestone M5</a></font></h2>
+
+<table border="0" width="80%" cellpadding="10" cellspacing="0">
+  <tr> 
+    <td colspan="2"> <hr> </td>
+  </tr>
+  <tr>
+    <td width="30%" valign="top" align="left"><b>DragDetect API</b></td>
+    <td width="70%" valign="top">Custom widget implementors can now use <code>Control.dragDetect()</code>
+      to customize drag detection in mouse down. For example, a custom list control could start dragging only when an item is selected. 
+      Typed events for drag detect are now available (see <code>DragDetectListener</code> and <code>DragDetectEvent</code>).
+      This <a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet259.java">example snippet</a> created the snapshot shown below.
+      <p><img border="0" src="images/drag-detect-api.png" alt="Drag detect in a custom control" /></p>
+    </td>
+  </tr>
+  <tr> 
+    <td colspan="2"> <hr> </td>
+  </tr>
+  <tr>
+    <td width="30%" valign="top" align="left"><b>Drag over & drag under effects API</b></td>
+    <td width="70%" valign="top">Custom drag over and drag under effects can now be specified so that widgets can provide their own feedback.
+      Use <code>DragSource.setDragSourceEffect()</code> and <code>DropTarget.setDropTargetEffect()</code> to specify effects.
+      Subclass <code>DragSourceEffect</code> and <code>DropTargetEffect</code> to implement the effects.
+	  <code>Table</code>, <code>Tree</code> and <code>StyledText</code> widgets now use this API.
+      For an example of <code>Tree</code> drag under effect, implemented in  <code>TreeDragSourceEffect</code> and <code>TreeDropTargetEffect</code>,
+      see this <a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet91.java">example snippet</a>.
+      This <code>StyledText</code> <a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet257.java">example snippet</a>
+      created the snapshot shown below.
+      <p><img border="0" src="images/drag-under.png" alt="StyledText dragging selected text to show 'insert cursor' drag under effect" /></p>
+    </td>
+  </tr>
+  <tr> 
+    <td colspan="2"> <hr> </td>
+  </tr>
+  <tr>
+    <td width="30%" valign="top" align="left"><b>Color cursors on GTK</b></td>
+    <td width="70%" valign="top">You can now create color cursors on GTK.
+      This <a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet119.java">example snippet</a>
+      created the cursor shown in the snapshot below.
+      <p><img border="0" src="images/gtk-cursor.png" alt="A Color Cursor on GTK"></p>
+    </td>
+  </tr>
+  <tr> 
+    <td colspan="2"> <hr> </td>
+  </tr>
+  <tr>
+    <td width="30%" valign="top" align="left"><b>Text SEARCH style</b></td>
+    <td width="70%" valign="top"><code>Text</code> can now have the look and feel of a search field by creating with SWT.SEARCH style.
+      Adding SWT.CANCEL style gives the user a way to cancel the search.
+      This <a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet258.java">example snippet</a>
+	  created the <code>Text</code> control shown in the snapshot below.
+      <p><img border="0" src="images/search-text.png" alt="A search Text on the Mac"></p>
+    </td>
+  </tr>
+  <tr> 
+    <td colspan="2"> <hr> </td>
+  </tr>
+  <tr>
+    <td width="30%" valign="top" align="left"><b>Custom widget mnemonics & focus</b></td>
+    <td width="70%" valign="top">Custom widgets now only draw mnemonics and focus indicator when the platform wants them drawn.
+      You do not need to do anything special to get this behavior - the paint gc respects platform preferences.
+      See <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=118709">this bug</a> for more information.
+    </td>
+  </tr>
+  <tr> 
+    <td colspan="2"> <hr> </td>
+  </tr>
+  <tr>
+    <td width="30%" valign="top" align="left"><b>Mozilla everywhere</b></td>
+    <td width="70%" valign="top">Mozilla can now be used to render the Browser's content on Windows and OS X (as well as Linux),
+      providing that you have <a href="http://developer.mozilla.org/en/docs/XULRunner">XULRunner</a> installed and registered.
+	  To use this just create your Browser with style <code>SWT.MOZILLA</code>.
+	  For more specific version requirements for running on OS X see
+	  <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=79213#c46">bug 79213 comment 46</a>.
+      This <a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet260.java">example snippet</a>
+	  created the snapshot below.
+	  <p><img border="0" src="images/mozilla.png" alt="Mozilla on Windows"></p>
+    </td>
+  </tr>
+  <tr> 
+    <td colspan="2"> <hr> </td>
+  </tr>
+  <tr>
+    <td width="30%" valign="top" align="left"><b>Vista WPF</b></td>
+    <td width="70%" valign="top">The SWT port to Vista's WPF is now in Alpha!
+    </td>
+  </tr>
+  <tr> 
+    <td colspan="2"> <hr> </td>
+  </tr>
+</table>
+
 </body>
 </html>
