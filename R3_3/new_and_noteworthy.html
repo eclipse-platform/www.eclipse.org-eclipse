@@ -168,6 +168,9 @@
       <p>For more information, please see <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=19945#c41">this
           comment</a> in the feature request.</p></td>
   </tr>
+  <tr> 
+    <td colspan="2"> <hr> </td>
+  </tr>
 </table>
 
 
@@ -218,6 +221,9 @@
       <p><img border="0" src="images/vista-win32.png" alt="Eclipse on Vista (win32)" /></p>
     </td>
   </tr>
+  <tr> 
+    <td colspan="2"> <hr> </td>
+  </tr>
 </table>
 
 
@@ -244,11 +250,11 @@
   <tr>
     <td width="30%" valign="top" align="left"><b>Drag over and drag under effects</b></td>
     <td width="70%" valign="top">Custom drag over and drag under effects can now be implemented
-      for any control.  Custom widget implementors can provide the feedback that is appropriate
+      for any control.  Custom widget implementors can provide feedback that is appropriate
       for their control by subclassing <code>DragSourceEffect</code> and <code>DropTargetEffect</code>.
  	  The default effects for the <code>Table</code>, <code>Tree</code> and <code>StyledText</code>
       controls have been changed to use these classes (see <code>TreeDragSourceEffect</code>,
-      <code>TreeDropTargetEffect</code> and the cooresponding classes for these controls).
+      <code>TreeDropTargetEffect</code> and the corresponding classes for these controls).
       This <code>StyledText</code> <a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet257.java">example snippet</a>
       created the snapshot shown below.
       <p><img border="0" src="images/drag-under.png" alt="StyledText dragging selected text to show 'insert cursor' drag under effect" /></p>
@@ -272,8 +278,8 @@
     <td width="30%" valign="top" align="left"><b>Text SEARCH style</b></td>
     <td width="70%" valign="top">On platforms that have this concept,
       <code>Text</code> controls can now have the look and feel of a search
-      field with the SWT.SEARCH style.
-      Adding the SWT.CANCEL style gives the user a way to cancel the search.
+      field with the <code>SWT.SEARCH</code> style.
+      Adding the <code>SWT.CANCEL</code> style gives the user a way to cancel the search.
       This <a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet258.java">example snippet</a>
 	  created the <code>Text</code> control shown in the snapshot below.
       <p><img border="0" src="images/search-text.png" alt="A search Text on the Mac"></p>
@@ -296,7 +302,7 @@
     <td width="30%" valign="top" align="left"><b>Mozilla everywhere</b></td>
     <td width="70%" valign="top">Mozilla can now be used as the underlying browser control on Windows and OS X,
       providing that you have <a href="http://developer.mozilla.org/en/docs/XULRunner">XULRunner</a> installed and registered.
-	  To use this just create your Browser with the style <code>SWT.MOZILLA</code>.
+	  To use this just create your Browser with the <code>SWT.MOZILLA</code> style.
 	  For more specific version requirements for running on OS X see
 	  <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=79213#c46">bug 79213 comment 46</a>.
       This <a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet260.java">example snippet</a>
