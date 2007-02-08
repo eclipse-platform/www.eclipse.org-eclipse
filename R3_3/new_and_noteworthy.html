@@ -17,6 +17,7 @@
 	<li><a href="#m2">Milestone M2</a></li>
 	<li><a href="#m3">Milestone M3</a></li>
 	<li><a href="#m4">Milestone M4</a></li>
+	<li><a href="#m5">Milestone M5</a></li>
 </ul>
 
 
@@ -225,6 +226,119 @@
   </tr>
 </table>
 
+
+<h2><font face="Verdana"><a name=m5>Milestone M5</a></font></h2>
+
+<table border="0" width="80%" cellpadding="10" cellspacing="0">
+  <tr> 
+    <td colspan="2"> <hr> </td>
+  </tr>
+  <tr>
+    <td width="30%" valign="top" align="left"><b>DragDetect API</b></td>
+    <td width="70%" valign="top">Custom widget implementors can now use <code>Control.setDragDetect()</code>
+      to disable the default drag detection and <code>Control.dragDetect()</code>
+      to implement their own. For example, a custom list control could start dragging only
+      when an item is selected. 
+      Typed events for drag detection are now available (see <code>DragDetectListener</code> and <code>DragDetectEvent</code>).
+      This <a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet259.java">example snippet</a> created the snapshot shown below.
+      <p><img border="0" src="images/drag-detect-api.png" alt="Drag detect in a custom control" /></p>
+    </td>
+  </tr>
+  <tr> 
+    <td colspan="2"> <hr> </td>
+  </tr>
+  <tr>
+    <td width="30%" valign="top" align="left"><b>Drag over and drag under effects</b></td>
+    <td width="70%" valign="top">Custom drag over and drag under effects can now be implemented
+      for any control.  Custom widget implementors can provide feedback that is appropriate
+      for their control by subclassing <code>DragSourceEffect</code> and <code>DropTargetEffect</code>.
+ 	  The default effects for the <code>Table</code>, <code>Tree</code> and <code>StyledText</code>
+      controls have been changed to use these classes (see <code>TreeDragSourceEffect</code>,
+      <code>TreeDropTargetEffect</code> and the corresponding classes for these controls).
+      This <code>StyledText</code> <a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet257.java">example snippet</a>
+      created the snapshot shown below.
+      <p><img border="0" src="images/drag-under.png" alt="StyledText dragging selected text to show 'insert cursor' drag under effect" /></p>
+    </td>
+  </tr>
+  <tr> 
+    <td colspan="2"> <hr> </td>
+  </tr>
+  <tr>
+    <td width="30%" valign="top" align="left"><b>Color cursors on GTK</b></td>
+    <td width="70%" valign="top">You can now create color cursors on GTK.
+      This <a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet119.java">example snippet</a>
+      created the cursor shown in the snapshot below.
+      <p><img border="0" src="images/gtk-cursor.png" alt="A Color Cursor on GTK"></p>
+    </td>
+  </tr>
+  <tr> 
+    <td colspan="2"> <hr> </td>
+  </tr>
+  <tr>
+    <td width="30%" valign="top" align="left"><b>Text SEARCH style</b></td>
+    <td width="70%" valign="top">On platforms that have this concept,
+      <code>Text</code> controls can now have the look and feel of a search
+      field with the <code>SWT.SEARCH</code> style.
+      Adding the <code>SWT.CANCEL</code> style gives the user a way to cancel the search.
+      This <a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet258.java">example snippet</a>
+	  created the <code>Text</code> control shown in the snapshot below.
+      <p><img border="0" src="images/search-text.png" alt="A search Text on the Mac"></p>
+    </td>
+  </tr>
+  <tr> 
+    <td colspan="2"> <hr> </td>
+  </tr>
+  <tr>
+    <td width="30%" valign="top" align="left"><b>Mnemonics and the focus indicator</b></td>
+    <td width="70%" valign="top">Custom widgets respect the platform settings when drawing mnemonics and the focus indicator.
+      You do not need to do anything special to get this behavior - the paint gc respects platform preferences.
+      See <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=118709">this bug</a> for more information.
+    </td>
+  </tr>
+  <tr> 
+    <td colspan="2"> <hr> </td>
+  </tr>
+  <tr>
+    <td width="30%" valign="top" align="left"><b>Mozilla everywhere</b></td>
+    <td width="70%" valign="top">Mozilla can now be used as the underlying browser control on Windows and OS X,
+      providing that you have <a href="http://developer.mozilla.org/en/docs/XULRunner">XULRunner</a> installed and registered.
+	  To use this just create your Browser with the <code>SWT.MOZILLA</code> style.
+	  For more specific version requirements for running on OS X see
+	  <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=79213#c46">bug 79213 comment 46</a>.
+      This <a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet260.java">example snippet</a>
+	  created the snapshot below.
+	  <p><img border="0" src="images/mozilla.png" alt="Mozilla on Windows"></p>
+    </td>
+  </tr>
+  <tr> 
+    <td colspan="2"> <hr> </td>
+  </tr>
+  <tr>
+    <td width="30%" valign="top" align="left"><b>SWT on Vista (WPF)</b></td>
+    <td width="70%" valign="top">
+		There is now an early access version of the SWT port to Windows Presentation Foundation (WPF),
+		a new window system that comes pre-installed on Microsoft Windows Vista. 
+		<p>
+		The port is in its
+		early stages. Many things work, including the ControlExample, but there is still a lot more
+		work to do. You can help by trying out the new code and entering bug reports. The new code
+		is available in the Eclipse CVS repository
+		
+	 	<a href="http://www.eclipse.org/swt/cvs.php">(Using SWT from CVS)</a>
+
+		but there are no regular builds at this time.
+		</p>
+		<p>
+		Note that the Win32 port of SWT continues to work well on Windows platforms and fully exploits
+		the new look and feel of Windows Vista.
+		</p>
+      <p><img border="0" src="images/vista-wpf.png" alt="ControlExample on Vista (WPF)"></p>
+    </td>
+  </tr>
+  <tr> 
+    <td colspan="2"> <hr> </td>
+  </tr>
+</table>
 
 </body>
 </html>
