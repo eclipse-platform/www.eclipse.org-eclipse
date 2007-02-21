@@ -114,6 +114,7 @@ bugzilla email preferences.</p>
 </table>
 
 <ul>
+<li><a href="http://download.eclipse.org/eclipse/downloads/drops/R-3.2.1-200609210945/index.php">SWT 3.2.1</a>, 21 September 2006.</li>
 <li><a href="http://download.eclipse.org/eclipse/downloads/drops/R-3.2-200606291905/index.php">SWT 3.2</a>, 29 June 2006.</li>
 <li><a href="http://download.eclipse.org/eclipse/downloads/drops/R-3.1.2-200601181600/index.php">SWT 3.1.2</a>, 19 January 2006.
     <ul>
