@@ -51,18 +51,20 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
   <li><a href="#subclassing">Why can't I subclass SWT widgets like Button and Table?</a></li>
   <li><a href="#noeventfire">Why are some events like Selection not fired in response to programmatic widget changes?</a></li>
   <li><a href="#printstacktrace">Why don't SWTError and SWTException override all printStackTrace methods?</a></li>
-  <li><a href="#whatisbrowser">What is the SWT Browser widget?</a></li>
-  <li><a href="#browserplatforms">Which platforms support the SWT Browser?</a></li>
-  <li><a href="#browserlinux">What do I need to run the SWT Browser inside Eclipse on Linux/GTK or Linux/Motif?</a></li>
-  <li><a href="#browserlinuxrcp">What do I need to run the SWT Browser in a standalone application on Linux/GTK or Linux/Motif?</a></li>
-  <li><a href="#browserlinuxibm">How can I get the SWT Browser to work with the IBM 1.4 VM?</a></li>
-  <li><a href="#browserplugins">Why can't I run Java applets in the SWT Browser?</a></li>
   <li><a href="#printOnX">How do I print using my favorite Unix print program?</a></li>
   <li><a href="#noprintimage">How do I print a snapshot of a widget?</a></li>
   <li><a href="#smallprint">Why does everything I print seem so small?</a></li>
   <li><a href="#printertrim">What does computeTrim mean for a Printer?</a></li>
   <li><a href="#autotest">How can I implement user interaction test cases?</a></li>
   <li><a href="#gtkselectiongone">On gtk, why does my widget's selection disappear when it loses focus?</a></li>
+  <p></p>
+  <li><a href="#whatisbrowser">What is the SWT Browser widget?</a></li>
+  <li><a href="#howusemozilla">How do I use Mozilla as the Browser's underlying renderer?</a></li>
+  <li><a href="#browserplatforms">Which platforms support the SWT Browser?</a></li>
+  <li><a href="#browserlinux">What do I need to run the SWT Browser inside Eclipse on Linux/GTK or Linux/Motif?</a></li>
+  <li><a href="#browserlinuxrcp">What do I need to run the SWT Browser in a standalone application on Linux/GTK or Linux/Motif?</a></li>
+  <li><a href="#browserlinuxibm">How can I get the SWT Browser to work with the IBM 1.4 VM?</a></li>
+  <li><a href="#browserplugins">Why can't I run Java applets in the SWT Browser?</a></li>
   <p></p>
   <li><a href="#swtawtosx">Why does the SWT_AWT bridge not work for me on OS X?</a></li>
   <li><a href="#swtawtsolaris">Why does the SWT_AWT bridge not work for me on Solaris?</a></li>
@@ -683,101 +685,6 @@ Problem" at: <a href="http://www.cas.mcmaster.ca/~emil/publications/fragile/">ht
     Because we need to maintain compatability with CLDC, we can not override them.
   </dd>
 
-  <dt><strong><a name="whatisbrowser">Q: What is the SWT Browser widget?</a></strong></dt>
-  <dd>A: The SWT Browser widget is used to display HTML documents. It is
-      designed to provide a basic and portable API sufficient for essential
-      HTML browsing and rendering on the platforms on which it is implemented.
-  </dd>
-  
-  <dt><strong><a name="browserplatforms">Q: Which platforms support the SWT Browser?</a></strong></dt>
-  <dd>A: The SWT Browser is currently available on the following platforms:
-  <br>
-  <ol>
-    <li>Windows (Internet Explorer 5 and above)</li>
-    <li>Mac (Panther OS X 10.3 and above. Safari-based)</li>
-    <li>Linux GTK and Linux Motif (XULRunner-1.8.0.1 and above, Firefox 1.0 and above, Mozilla 1.4 GTK2 and above)
-    <br>The following Linux distributions meet the Mozilla/Firefox requirements for using the Browser widget:
-    <ul>
-    	<li>RedHat Enterprise Linux 3 (Mozilla)</li>
-   		<li>RedHat Enterprise Linux 4 (Firefox)</li>
-    	<li>Suse 9 (Mozilla)</li>
-    </ul>
-    Other Linux distributions may require a supported version of Mozilla to be installed. (<a href="#browserlinux">instructions</a>)
-    <li>Photon</li>
-  </ol>
-  </dd>
-  
-  <dt><strong><a name="browserlinux">Q: What do I need to run the SWT Browser inside Eclipse on Linux/GTK or Linux/Motif?</a></strong></dt>
-  <dd>A: You need one of the following:
-    <ul>
-      <li>Mozilla version 1.4 GTK2 - Mozilla 1.6 GTK2 can be used with Eclipse 3.0 and newer.</li>
-      <li>Mozilla version 1.4 GTK2 - Mozilla 1.7.8 GTK2 can be used with Eclipse 3.1 and newer.</li>
-      <li>Mozilla version 1.4 GTK2 - Mozilla 1.7.12 GTK2 can be used with Eclipse 3.2 and newer.</li>
-      <li>Firefox can be used with Eclipse 3.1 and newer (Linux only), provided that it has been compiled with linkable Gecko libraries.  It is 
-      important to note that Firefox downloads from mozilla.org currently do <em>not</em> satisfy this criteria, but Firefox installations
-      that are included in major Linux distributions often do in the absence of a XULRunner installation.  Attempting to use a statically-linked
-      Firefox install will display the error message "No more handles [NS_InitEmbedding...error -2147221164]".</li>
-      <li>XULRunner can be used with Eclipse 3.2.1 and newer</li>
-    </ul>
-
-    <br>The version of Mozilla or Firefox installed on your system varies with your Linux distribution.
-    <br>The following Linux distributions meet the Mozilla requirements for using the Browser widget.
-    <ul>
-    	<li>RedHat Enterprise Linux 3</li>
-    	<li>Suse 9</li>
-    </ul>
-    <br>The following Linux distributions meet the Firefox requirements for using the Browser widget.
-    <ul>
-    	<li>RedHat Enterprise Linux 4
-  		<br>Note that you may need to set the environment variable MOZILLA_FIVE_HOME to the folder containing your Firefox install. e.g. <code>setenv MOZILLA_FIVE_HOME /usr/lib/firefox-1.0.4</code></li>
-    </ul>
-    <br>If you use the IBM 1.4 VM <a href="#browserlinuxibm">check this.</a>
-    <br>
-	<br>If you are running with eclipse 3.2.1 or newer then you can just run eclipse and it will attempt to detect a browser on your system to use.  If it fails to find one then you will need to download and install a GRE
-	such as mozilla, as outlined below:
-  <ol>
-  	<li>If you are using Eclipse 3.0, download the Mozilla 1.6 Xft and GTK2 build from <a href="http://www.mozilla.org/releases/#1.6">Mozilla.org</a>. If you are using Eclipse 3.1 or newer, you can choose to use a more recent
-  	Mozilla 1.7.x GTK2 from <a href="http://www.mozilla.org/releases/">Mozilla.org</a>.</li>
-  	<li>Uninstall any prior Mozilla version.</li>
-  	<li>Extract and install the Mozilla download.</li>
-  	<li>Run Mozilla once. Verify that the application runs correctly and check the version number in the Mozilla About dialog.</li>
-  </ol>
-  <br>
-  If you are using an eclipse prior to version 3.2.1, or if you want the Browser to use a GRE (such as Mozilla) that you have installed yourself, then you must set the MOZILLA_FIVE_HOME environment variable to the folder
-  containing your GRE (e.g. <code>setenv MOZILLA_FIVE_HOME /usr/lib/mozilla</code>), and prepend this directory to your LD_LIBRARY_PATH environment variable</li>.
-  </dd>
-
-  <dt><strong><a name="browserlinuxrcp">Q: What do I need to run the SWT Browser in a standalone application on Linux GTK or Linux Motif?</a></strong></dt>
-  <dd>A: Follow the steps below to use the SWT Browser widget in your standalone SWT application.
-    <ol>
-    	<li>A supported version of XULRunner, Firefox or Mozilla must be installed. (<a href="#browserlinux">instructions</a>)</li>
-    	<li>Set the environment variable MOZILLA_FIVE_HOME to your XULRunner/Firefox/Mozilla installation folder. e.g. <code>setenv MOZILLA_FIVE_HOME /usr/lib/mozilla</code></li>
-    	<li>Set the environmnent variable LD_LIBRARY_PATH to include MOZILLA_FIVE_HOME. e.g. <code>setenv LD_LIBRARY_PATH ${MOZILLA_FIVE_HOME}:${LD_LIBRARY_PATH}</code></li>
-    	<li>Your standalone SWT application can now use the Browser widget.
-    </ol>
-    <br>If you use the IBM 1.4 VM <a href="#browserlinuxibm">check this.</a>
-    <br>
-  </dd>
-
-  <dt><strong><a name="browserlinuxibm">Q: How can I get the SWT Browser to work with the IBM 1.4 VM?</a></strong></dt>
-  <dd>A: The IBM 1.4 VM accidentally removes certain entries of the environment variable LD_LIBRARY_PATH. This occurs in particular
-  for entries starting with /usr/lib. It will leave untouched entries such as /usr/../usr/lib.
-  
-  <br>Instructions for Red Hat Enterprise Linux 3 users:
-    <ol>
-    	<li>Mozilla is installed in <code>/usr/lib/mozilla-1.x</code> on this platform. Set the environment variable MOZILLA_FIVE_HOME to <code>/usr/../usr/lib/mozilla-1.x</code></li>
-    	<li>Start Eclipse. If you are not using Eclipse, add MOZILLA_FIVE_HOME to LD_LIBRARY_PATH before starting your standalone SWT application.</li>
-		<li>The Browser widget should now work with the IBM VM.</li>
-    </ol>
-  </dd>
-
-  <dt><strong><a name="browserplugins">Q: Why can't I run Java applets in the SWT Browser?</a></strong></dt>
-  <dd>A: Applets usually don't show up in the SWT Browser. On Windows (Internet Explorer), the Java
-  plugin fails to run a second Java virtual machine to execute the applet because two Java virtual machines cannot run
-  in the same process. On Linux (Mozilla), the Java plug-in has been reported to work because it executes in its own process.
-  <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=59506">See bug 59506</a> .
-  </dd>
-
   <dt><strong><a name="printOnX">Q: How do I print using my favorite Unix print program?</a></strong></dt>
   <dd>A: You can use the External Tools support in Eclipse to print files using external programs.
     Just create a new Program launch config from the External Tools dialog that launches your
@@ -899,6 +806,114 @@ Problem" at: <a href="http://www.cas.mcmaster.ca/~emil/publications/fragile/">ht
   <dd>A: This effect may be seen if KDE color settings are being
       utilized.  This can be fixed by unchecking the "Apply KDE colors to
       non-KDE apps" option in the KDE colors control panel.
+  </dd>
+
+  <dt><strong><a name="whatisbrowser">Q: What is the SWT Browser widget?</a></strong></dt>
+  <dd>A: The SWT Browser widget is used to display HTML documents. It is
+      designed to provide a basic and portable API sufficient for essential
+      HTML browsing and rendering on the platforms on which it is implemented.
+  </dd>
+
+  <dt><strong><a name="howusemozilla">Q: How do I use Mozilla as the Browser's underlying renderer?</a></strong></dt>
+    <dd>A: The Browser has been extended as of Eclipse 3.3 to facilitate the use of the Mozilla HTML renderer on all
+      supported browser platforms, provided that the following are satisfied:
+    <ul>
+	    <li>The Browser instance is created with style <code>SWT.MOZILLA</code></li>
+	    <li>The user has <a href="http://developer.mozilla.org/en/docs/XULRunner">XULRunner</a> properly
+	      <a href="http://developer.mozilla.org/en/docs/XULRunner_1.8.0.1_Release_Notes#Installing_XULRunner">installed</a>
+	      on their system</li>
+	    <li>If the Browser's <code>getWebBrowser()</code> API is used then the installed XULRunner version must be 1.8.1.2
+	      or newer; if this API is not used then any XULRunner version will work</li>
+    </ul>
+  </dd>
+  
+  <dt><strong><a name="browserplatforms">Q: Which platforms support the SWT Browser?</a></strong></dt>
+  <dd>A: The SWT Browser is currently available on the following platforms:
+  <br>
+  <ol>
+    <li>Windows (Internet Explorer 5 and above)</li>
+    <li>Mac (Panther OS X 10.3 and above. Safari-based)</li>
+    <li>Linux GTK and Linux Motif (XULRunner-1.8.0.1 and above, Firefox 1.0 and above, Mozilla 1.4 GTK2 and above)
+    <br>The following Linux distributions meet the Mozilla/Firefox requirements for using the Browser widget:
+    <ul>
+    	<li>RedHat Enterprise Linux 3 (Mozilla)</li>
+   		<li>RedHat Enterprise Linux 4 (Firefox)</li>
+    	<li>Suse 9 (Mozilla)</li>
+    </ul>
+    Other Linux distributions may require a supported version of Mozilla to be installed. (<a href="#browserlinux">instructions</a>)
+    <li>Photon</li>
+  </ol>
+  </dd>
+  
+  <dt><strong><a name="browserlinux">Q: What do I need to run the SWT Browser inside Eclipse on Linux/GTK or Linux/Motif?</a></strong></dt>
+  <dd>A: You need one of the following:
+    <ul>
+      <li>Mozilla version 1.4 GTK2 - Mozilla 1.6 GTK2 can be used with Eclipse 3.0 and newer.</li>
+      <li>Mozilla version 1.4 GTK2 - Mozilla 1.7.8 GTK2 can be used with Eclipse 3.1 and newer.</li>
+      <li>Mozilla version 1.4 GTK2 - Mozilla 1.7.12 GTK2 can be used with Eclipse 3.2 and newer.</li>
+      <li>Firefox can be used with Eclipse 3.1 and newer (Linux only), provided that it has been compiled with linkable Gecko libraries.  It is 
+      important to note that Firefox downloads from mozilla.org currently do <em>not</em> satisfy this criteria, but Firefox installations
+      that are included in major Linux distributions often do in the absence of a XULRunner installation.  Attempting to use a statically-linked
+      Firefox install will display the error message "No more handles [NS_InitEmbedding...error -2147221164]".</li>
+      <li>XULRunner can be used with Eclipse 3.3 and newer</li>
+    </ul>
+
+    <br>The version of Mozilla or Firefox installed on your system varies with your Linux distribution.
+    <br>The following Linux distributions meet the Mozilla requirements for using the Browser widget.
+    <ul>
+    	<li>RedHat Enterprise Linux 3</li>
+    	<li>Suse 9</li>
+    </ul>
+    <br>The following Linux distributions meet the Firefox requirements for using the Browser widget.
+    <ul>
+    	<li>RedHat Enterprise Linux 4
+  		<br>Note that you may need to set the environment variable MOZILLA_FIVE_HOME to the folder containing your Firefox install. e.g. <code>setenv MOZILLA_FIVE_HOME /usr/lib/firefox-1.0.4</code></li>
+    </ul>
+    <br>If you use the IBM 1.4 VM <a href="#browserlinuxibm">check this.</a>
+    <br>
+	<br>If you are running with eclipse 3.2.1 or newer then you can just run eclipse and it will attempt to detect a browser on your system to use.  If it fails to find one then you will need to download and install a GRE
+	such as mozilla, as outlined below:
+  <ol>
+  	<li>If you are using Eclipse 3.0, download the Mozilla 1.6 Xft and GTK2 build from <a href="http://www.mozilla.org/releases/#1.6">Mozilla.org</a>. If you are using Eclipse 3.1 or newer, you can choose to use a more recent
+  	Mozilla 1.7.x GTK2 from <a href="http://www.mozilla.org/releases/">Mozilla.org</a>.</li>
+  	<li>Uninstall any prior Mozilla version.</li>
+  	<li>Extract and install the Mozilla download.</li>
+  	<li>Run Mozilla once. Verify that the application runs correctly and check the version number in the Mozilla About dialog.</li>
+  </ol>
+  <br>
+  If you are using an eclipse prior to version 3.2.1, or if you want the Browser to use a GRE (such as Mozilla) that you have installed yourself, then you must set the MOZILLA_FIVE_HOME environment variable to the folder
+  containing your GRE (e.g. <code>setenv MOZILLA_FIVE_HOME /usr/lib/mozilla</code>), and prepend this directory to your LD_LIBRARY_PATH environment variable</li>.
+  </dd>
+
+  <dt><strong><a name="browserlinuxrcp">Q: What do I need to run the SWT Browser in a standalone application on Linux GTK or Linux Motif?</a></strong></dt>
+  <dd>A: Follow the steps below to use the SWT Browser widget in your standalone SWT application.
+    <ol>
+    	<li>A supported version of XULRunner, Firefox or Mozilla must be installed. (<a href="#browserlinux">instructions</a>)</li>
+    	<li>Set the environment variable MOZILLA_FIVE_HOME to your XULRunner/Firefox/Mozilla installation folder. e.g. <code>setenv MOZILLA_FIVE_HOME /usr/lib/mozilla</code></li>
+    	<li>Set the environmnent variable LD_LIBRARY_PATH to include MOZILLA_FIVE_HOME. e.g. <code>setenv LD_LIBRARY_PATH ${MOZILLA_FIVE_HOME}:${LD_LIBRARY_PATH}</code></li>
+    	<li>Your standalone SWT application can now use the Browser widget.
+    </ol>
+    <br>If you use the IBM 1.4 VM <a href="#browserlinuxibm">check this.</a>
+    <br>
+  </dd>
+
+  <dt><strong><a name="browserlinuxibm">Q: How can I get the SWT Browser to work with the IBM 1.4 VM?</a></strong></dt>
+  <dd>A: The IBM 1.4 VM accidentally removes certain entries of the environment variable LD_LIBRARY_PATH. This occurs in particular
+  for entries starting with /usr/lib. It will leave untouched entries such as /usr/../usr/lib.
+  
+  <br>Instructions for Red Hat Enterprise Linux 3 users:
+    <ol>
+    	<li>Mozilla is installed in <code>/usr/lib/mozilla-1.x</code> on this platform. Set the environment variable MOZILLA_FIVE_HOME to <code>/usr/../usr/lib/mozilla-1.x</code></li>
+    	<li>Start Eclipse. If you are not using Eclipse, add MOZILLA_FIVE_HOME to LD_LIBRARY_PATH before starting your standalone SWT application.</li>
+		<li>The Browser widget should now work with the IBM VM.</li>
+    </ol>
+  </dd>
+
+  <dt><strong><a name="browserplugins">Q: Why can't I run Java applets in the SWT Browser?</a></strong></dt>
+  <dd>A: Applets usually don't show up in the SWT Browser. On Windows (Internet Explorer), the Java
+  plugin fails to run a second Java virtual machine to execute the applet because two Java virtual machines cannot run
+  in the same process. On Linux (Mozilla), the Java plug-in has been reported to work because it executes in its own process.
+  <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=59506">See bug 59506</a> .
   </dd>
 
   <dt><strong><a name="swtawtosx">Q: Why does the SWT_AWT bridge not work for me on OS X?</a></strong></dt>
