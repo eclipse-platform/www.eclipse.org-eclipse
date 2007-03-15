@@ -63,7 +63,7 @@ enter a bug report</a>. Thanks in advance for your contribution!</p>
         <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet160.java">query DOM node value</a></li>
         <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet159.java">modify HTML title tag</a></li>
         <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet260.java">Mozilla in a browser</a></li>
-        <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet267.java">Toggle a Mozilla Browser between Design mode and View mode</a></li>
+        <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet267.java">toggle a Mozilla Browser between Design mode and View mode</a></li>
       </ul>
       <p></p>
 
