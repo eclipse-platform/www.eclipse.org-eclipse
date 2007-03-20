@@ -35,6 +35,7 @@
 <li>PaintExample</li>
 <li>TextEditor</li>
 <li>GraphicsExample</li>
+<li>OLEExample (win32 only, OLE)</li>
 <li>OleWebBrowser (win32 only, OLE)</li>
 </ul>
 
