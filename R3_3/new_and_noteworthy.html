@@ -18,6 +18,7 @@
 	<li><a href="#m3">Milestone M3</a></li>
 	<li><a href="#m4">Milestone M4</a></li>
 	<li><a href="#m5">Milestone M5</a></li>
+	<li><a href="#m6">Milestone M6</a></li>
 </ul>
 
 
@@ -333,6 +334,88 @@
 		the new look and feel of Windows Vista.
 		</p>
       <p><img border="0" src="images/vista-wpf.png" alt="ControlExample on Vista (WPF)"></p>
+    </td>
+  </tr>
+  <tr> 
+    <td colspan="2"> <hr> </td>
+  </tr>
+</table>
+
+<h2><font face="Verdana"><a name=m6>Milestone M6</a></font></h2>
+
+<table border="0" width="80%" cellpadding="10" cellspacing="0">
+  <tr> 
+    <td colspan="2"> <hr> </td>
+  </tr>
+  <tr>
+    <td width="30%" valign="top" align="left"><b>Eclipse on Vista (WPF)</b></td>
+    <td width="70%" valign="top">Eclipse now runs on WPF (Windows Presentation Foundation).
+    	It is still early access, but it is stable enough for us to develop on it.
+    	You can try it yourself by getting it from the eclipse downloads page.
+		<p><img border="0" src="images/eclipse-vista-wpf.png" alt="Eclipse on Vista (WPF)"></p>
+    </td>
+  </tr>
+  <tr> 
+    <td colspan="2"> <hr> </td>
+  </tr>
+  <tr>
+    <td width="30%" valign="top" align="left"><b>Native features on Vista (win32)</b></td>
+    <td width="70%" valign="top">We are now exploiting more of the native features of the Vista platform.
+    For example, using native double-buffering on Vista win32 makes painting in double-buffered Canvases twice as fast.
+    </td>
+  </tr>
+  <tr> 
+    <td colspan="2"> <hr> </td>
+  </tr>
+  <tr>
+    <td width="30%" valign="top" align="left"><b>JavaXPCOM support</b></td>
+    <td width="70%" valign="top"><code>SWT.MOZILLA</code>-style Browsers can now be programmed to via JavaXPCOM.
+    	This requires that <a href="http://developer.mozilla.org/en/docs/XULRunner">XULRunner</a> 1.8.1.2 be installed,
+    	whose current release status is summarized <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=173117#c2">here</a>.
+    	This <a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet267.java">example snippet</a>
+    	created the snapshot below.
+		<p><img border="0" src="images/javaxpcom.png" alt="Browser JavaXPCOM"></p>
+    </td>
+  </tr>
+  <tr> 
+    <td colspan="2"> <hr> </td>
+  </tr>
+  <tr>
+    <td width="30%" valign="top" align="left"><b>OLEExample and OLE improvements</b></td>
+    <td width="70%" valign="top">The new OLEExample showcases SWT OLE (win32) support.
+    	We now do a better job of hosting OLE documents in SWT. For example, OleClientSite
+    	in-place activation scrollbars work correctly.
+		The OLEExample comes with the Example Plug-ins on the Eclipse Project Downloads page.
+    	To install and run the SWT Examples, see <a href="http://www.eclipse.org/swt/examples.php">this page</a>.
+		<p><img border="0" src="images/oleexample.png" alt="OLEExample"></p>
+    </td>
+  </tr>
+  <tr> 
+    <td colspan="2"> <hr> </td>
+  </tr>
+  <tr>
+    <td width="30%" valign="top" align="left"><b>Reparenting support on Mac OSX</b></td>
+    <td width="70%" valign="top">SWT on Mac OSX now supports reparenting.
+    </td>
+  </tr>
+  <tr> 
+    <td colspan="2"> <hr> </td>
+  </tr>
+  <tr>
+    <td width="30%" valign="top" align="left"><b>Display.post() supports more mouse events</b></td>
+    <td width="70%" valign="top">Display.post() now supports generating mouse button 4 and 5 and mouse wheel events.
+    This <a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet268.java">example snippet</a>
+    automatically scrolls a StyledText.
+    </td>
+  </tr>
+  <tr> 
+    <td colspan="2"> <hr> </td>
+  </tr>
+  <tr>
+    <td width="30%" valign="top" align="left"><b>Advanced graphics supports mirroring</b></td>
+    <td width="70%" valign="top">Advanced graphics now renders correctly in RTL mode. The snapshot below
+    shows Arabic text drawn using transforms and patterns on a Canvas.
+	<p><img border="0" src="images/advanced-bidi.png" alt="Advanced graphics in RTL mode"></p>
     </td>
   </tr>
   <tr> 
