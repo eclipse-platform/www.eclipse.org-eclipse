@@ -818,12 +818,13 @@ Problem" at: <a href="http://www.cas.mcmaster.ca/~emil/publications/fragile/">ht
     <dd>A: The Browser has been extended as of Eclipse 3.3 to facilitate the use of the Mozilla HTML renderer on all
       supported browser platforms, provided that the following are satisfied:
     <ul>
-	    <li>The Browser instance is created with style <code>SWT.MOZILLA</code></li>
-	    <li>The user has <a href="http://developer.mozilla.org/en/docs/XULRunner">XULRunner</a> properly
-	      <a href="http://developer.mozilla.org/en/docs/XULRunner_1.8.0.1_Release_Notes#Installing_XULRunner">installed</a>
-	      on their system</li>
-	    <li>If the Browser's <code>getWebBrowser()</code> API is used then the installed XULRunner version must be 1.8.1.2
-	      or newer; if this API is not used then any XULRunner version will work</li>
+	  <li>The Browser instance is created with style <code>SWT.MOZILLA</code></li>
+	  <li>The user has <a href="http://developer.mozilla.org/en/docs/XULRunner">XULRunner</a> properly
+	    <a href="http://developer.mozilla.org/en/docs/XULRunner_1.8.0.1_Release_Notes#Installing_XULRunner">installed</a>
+	    on their system</li>
+	  <li>If the Browser's <code>getWebBrowser()</code> API is used and/or JavaXPCOM is referenced then the installed
+	    XULRunner version must be 1.8.1.2 or newer; if this API is not used then any XULRunner version will work
+	    (<a href="http://releases.mozilla.org/pub/mozilla.org/xulrunner/releases/1.8.1.3/contrib/">download XULRunner 1.8.1.3</a>)</li>
     </ul>
   </dd>
   
