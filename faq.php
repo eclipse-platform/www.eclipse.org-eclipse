@@ -936,10 +936,10 @@ Problem" at: <a href="http://www.cas.mcmaster.ca/~emil/publications/fragile/">ht
   </dd>
 
   <dt><strong><a name="printOnGTK">Q: Why is the Print menu item disabled in Eclipse on GTK (Linux, UNIX)?</a></strong></dt>
-  <dd>A: Printing on GTK has not been implemented yet. You can use the
-      External Tools support in Eclipse to print files using lpr or some other
-      printing utility. See <a href="#printOnX">here</a> for the steps to set this up.
-      <p>20060719 Update: Printing on GTK has now been implemented. To use it, get the latest eclipse and run at least GTK+ 2.10.</p>
+  <dd>A: GTK+ began supporting printing in 2.10. To print in Eclipse, you need to have Eclipse version 3.3 M1 or later,
+  and at least GTK+ 2.10.0 (rpm -q gtk2).
+  <p>Before Eclipse 3.3. M1, printing was not yet implemented on GTK, however you can use the External Tools support in Eclipse
+  to print files using lpr or some other printing utility. See <a href="#printOnX">here</a> for the steps to set this up.</p>
   </dd>
   
   <dt><strong><a name="printOnMotif">Q: Why is the Print menu item disabled in Eclipse on Motif?</a></strong></dt>
