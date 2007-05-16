@@ -365,7 +365,7 @@ public static void main(String[] args) {
     shell.setText("HelloWorld");
   
     /*
-     * Set a menubar to follow UI guidelines
+     * Set a menu bar to follow UI guidelines
      * on Pocket PC
      */
     Menu mb = new Menu(shell, SWT.BAR);
