@@ -538,7 +538,7 @@ Eclipse*fontList:-misc-fixed-medium-r-normal-*-10-100-75-75-c-60-iso8859-1
     <li>Set the library location in an environment variable.
     <p>For Windows this is done by editing the PATH environment variable to 
     include the above mentioned runtime-library-path.
-    <br>in Win 9X this is done by editing the Autoexec.bat file,
+    <br>in Win 9X this is done by editing the autoexec.bat file,
     <br>on NT or 2K the variable is edited through <strong>My Computer</strong> &gt; <strong>Properties</strong> &gt; <strong>Advanced</strong> &gt; <strong>Environment Variables</strong>.
 	<p>On linux/unix, modify the LD_LIBRARY_PATH environment variable to include the runtime-library-path.
 	<p></p>
