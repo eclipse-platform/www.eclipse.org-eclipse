@@ -60,6 +60,7 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
   <p></p>
   <li><a href="#whatisbrowser">What is the SWT Browser widget?</a></li>
   <li><a href="#howusemozilla">How do I use Mozilla as the Browser's underlying renderer?</a></li>
+  <li><a href="#howusejavaxpcom">How do I use JavaXPCOM with the Browser?</a></li>
   <li><a href="#browserplatforms">Which platforms support the SWT Browser?</a></li>
   <li><a href="#browserlinux">What do I need to run the SWT Browser inside Eclipse on Linux/GTK or Linux/Motif?</a></li>
   <li><a href="#browserlinuxrcp">What do I need to run the SWT Browser in a standalone application on Linux/GTK or Linux/Motif?</a></li>
@@ -827,7 +828,29 @@ Problem" at: <a href="http://www.cas.mcmaster.ca/~emil/publications/fragile/">ht
 	    (<a href="http://releases.mozilla.org/pub/mozilla.org/xulrunner/releases/1.8.1.3/contrib/">download XULRunner 1.8.1.3</a>)</li>
     </ul>
   </dd>
-  
+
+  <dt><strong><a name="howusejavaxpcom">Q: How do I use JavaXPCOM with the Browser?</a></strong></dt>  
+  <dd>A: First, ensure that you have all of the requirements listed in
+    <a href="http://www.eclipse.org/swt/faq.php#howusemozilla">How do I use Mozilla as the Browser's underlying renderer?</a>.
+    Once these are in place then you can reference JavaXPCOM as follows:
+    <p><ul>
+      <li>If your application runs as an Eclipse plug-in:
+      <ul>
+        <li>download the org.mozilla.xpcom Eclipse plug-in
+          (<a href="http://releases.mozilla.org/pub/mozilla.org/xulrunner/releases/1.8.1.3/contrib/eclipse/org.mozilla.xpcom_1.8.1.3-20070320.jar">download XULRunner 1.8.1.3 Eclipse plug-in</a>)</li>
+        <li>import it into your Eclipse workspace</li>
+        <li>add it to your plug-in's list of Required Plug-ins (specified in your plug-in's META-INF/MANIFEST.MF file)</li>
+      </ul>
+      <li>If your application runs as a stand-alone application:
+      <ul>
+        <li>download the XULRunner SDK for your platform (<a href="http://releases.mozilla.org/pub/mozilla.org/xulrunner/releases/1.8.1.3/contrib/sdk/">download XULRunner 1.8.1.3 SDK</a>)</li>
+        <li>add its lib/MozillaInterfaces.jar file to your application's java build path</li>
+      </ul>
+    </ul>
+    <p>You can use <code>Browser.getWebBrowser()</code> to access the JavaXPCOM <code>nsIWebBrowser</code> that represents the Browser instance.  For an example of using JavaXPCOM see
+      <a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet267.java">Snippet 267</a>.
+  </dd>
+
   <dt><strong><a name="browserplatforms">Q: Which platforms support the SWT Browser?</a></strong></dt>
   <dd>A: The SWT Browser is currently available on the following platforms:
   <br>
