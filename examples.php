@@ -90,7 +90,7 @@ the eclipse SWT Examples:
   <li><a href="eclipse.php">Load SWT into your workspace.</a></li>
   <li><a href="#insideEclipse">Load the SWT examples into your workspace by one of the methods listed above</a>.</li>
   <li>Run a standalone example by selecting the main class (e.g. org.eclipse.swt.examples.controlexample.ControlExample) and selecting
-	<br><strong>Run &gt; Run As &gt; SWT Application</strong> (note: as of Eclipse 3.3M4 you should use
+	<br><strong>Run &gt; Run As &gt; SWT Application</strong> (note: as of Eclipse 3.3 you should use
 	<strong>Run &gt; Run As &gt; Java Application</strong> instead).</li>
 </ol>
 
@@ -99,22 +99,21 @@ the eclipse SWT Examples:
 <a name="standaloneOutsideEclipse">Running standalone SWT Examples outside of eclipse</a></font>
 </table>
 
-<p>To run the ControlExample and CustomControlExample standalone:</p>
+<p>(Note that these instructions will only work for eclipse 3.1 and newer).  To run the ControlExample and CustomControlExample standalone:</p>
 <ol>
 <li>Go to the download page for the eclipse version you are running.
-   For example, for eclipse 3.1.0, this is:<br>
+   For example, for eclipse 3.1 this is:<br>
    http://download.eclipse.org/downloads/drops/R-3.1-200506271435/index.php
-   (Note that these instructions won't work for any eclipse prior to 3.1M7)</li>
+   </li>
 
-<li>Scroll down a little bit until you see "Example Plug-ins" section.
-   Download the examples zip for your platform, and unzip it to the same place
-   that you originally unzipped eclipse.
-   Let's say you unzip both eclipse and its examples to d:\
-   (Just say Yes when it asks if you want to overwrite the license files).
-   which installs them in d:\eclipse. Let's further say that you have a java jre in D:\jdk1.4.2_06\jre.</li>
+<li>Scroll down to the "Example Plug-ins" section, download the examples zip for your platform, and unzip
+   it to the same place that you originally unzipped eclipse.
+   Let's say that you unzip both eclipse and its examples to d:\
+   (answer Yes when it asks if you want to overwrite the license files).
+   </li>
 
-<li>Open the file d:\eclipse\plugins\org.eclipse.swt.win32.win32.x86_3.1.0.jar
-   in winzip, and extract the following 3 files into d:\eclipse\plugins
+<li>(If you are using eclipse 3.3 or newer then you can skip this step) Open the file d:\eclipse\plugins\org.eclipse.swt.win32.win32.x86_3.1.0.jar
+   in winzip and extract the following 3 files into d:\eclipse\plugins
    <ul>
    <li>swt-awt-win32-3138.dll
    <li>swt-gdip-win32-3138.dll
@@ -125,11 +124,9 @@ the eclipse SWT Examples:
    <code>d:<br>
    cd d:\eclipse\plugins\org.eclipse.swt.examples_3.1.0</code></li>
 
-<li>Type the following line:<br>
+<li>Type the following line: (if you are using eclipse 3.3 or newer then the <code>-Djava.library.path</code> argument can be omitted)<br>
 
-<code>D:\jdk1.4.2_06\jre\bin\java -classpath .;..\org.eclipse.swt_3.1.0.jar;..\org.eclipse.swt.win32.win32.x86_3.1.0.jar;.\swtexamples.jar -Djava.library.path=.. org.eclipse.swt.examples.controlexample.ControlExample</code>
-
-<p>(note that as of eclipse 3.3M4 the <code>-Djava.library.path</code> argument is no longer needed)
+<code><i>&lt;pathToYourJRE&gt;</i>\bin\java -classpath .;..\org.eclipse.swt_3.1.0.jar;..\org.eclipse.swt.win32.win32.x86_3.1.0.jar;.\swtexamples.jar -Djava.library.path=.. org.eclipse.swt.examples.controlexample.ControlExample</code>
 
 <p>This is the ControlExample. There is a tab for each control, and you can
 change the various styles, etc, to see what changes in the controls. To run
