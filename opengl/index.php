@@ -14,7 +14,7 @@
 <tr><?php include "../sidebar.php"; ?>
 <td valign="top" style="padding: 10px"><h1 style="padding: 0; margin: 0; border-bottom: 1px solid #000000;">Using OpenGL in SWT Applications</h1>
 
-<p>Support for OpenGL is included in SWT 3.2 M3 in the package
+<p>Support for OpenGL is included in SWT as of Eclipse 3.2 in the package
 <i>org.eclipse.swt.opengl</i>. See the <b>GLCanvas</b> class for
 a widget which hosts an OpenGL context.</p>
 
@@ -55,10 +55,11 @@ simple example using this binding, see
 example, download the examples zip along with the <i>org.eclipse.opengl</i> zip for
 your platform and import them into your workspace.</p>
 
-<p>Please note that this binding is experimental and subject to change.</p>
+<p>Please note that this binding is experimental and subject to change.  If you are using SWT 3.2 or newer then you should
+use the supported OpenGL binding that is included in the SWT package instead.</p>
 
 <table width="100%">
-<tr><th bgcolor="#0080c0" align="left" style="padding: 2px;"><font color="#ffffff">&nbsp; Experimental OpenGL Binding 0.5 for SWT 3.2</font>
+<tr><th bgcolor="#0080c0" align="left" style="padding: 2px;"><font color="#ffffff">&nbsp; Experimental OpenGL Binding 0.5 for SWT</font>
 </table>
 
 <table width="100%" cellpadding="3px">
