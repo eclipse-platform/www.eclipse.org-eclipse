@@ -282,7 +282,7 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
 
   <dt><strong><a name="gtkstartup">Q: What do I need to run SWT on Linux/GTK?</a></strong></dt>
   <dd>A: SWT requires the following libraries with the specified versions or later:
-    <p>For Eclipse 3.0:</p>
+    <p>For Eclipse 3.0 and newer:</p>
     <ul>
       <li>GTK 2.2.1</li>
       <li>ATK 1.2.0</li>
@@ -872,14 +872,14 @@ Problem" at: <a href="http://www.cas.mcmaster.ca/~emil/publications/fragile/">ht
   <dt><strong><a name="browserlinux">Q: What do I need to run the SWT Browser inside Eclipse on Linux/GTK or Linux/Motif?</a></strong></dt>
   <dd>A: You need one of the following:
     <ul>
-      <li>Mozilla version 1.4 GTK2 - Mozilla 1.6 GTK2 can be used with Eclipse 3.0 and newer.</li>
-      <li>Mozilla version 1.4 GTK2 - Mozilla 1.7.8 GTK2 can be used with Eclipse 3.1 and newer.</li>
-      <li>Mozilla version 1.4 GTK2 - Mozilla 1.7.12 GTK2 can be used with Eclipse 3.2 and newer.</li>
+      <li>Mozilla 1.4 GTK2 - 1.6 GTK2 can be used with Eclipse 3.0 and newer.</li>
+      <li>Mozilla 1.4 GTK2 - 1.7.8 GTK2 can be used with Eclipse 3.1 and newer.</li>
+      <li>Mozilla 1.4 GTK2 - 1.7.12 GTK2 can be used with Eclipse 3.2 and newer.</li>
       <li>Firefox can be used with Eclipse 3.1 and newer (Linux only), provided that it has been compiled with linkable Gecko libraries.  It is 
       important to note that Firefox downloads from mozilla.org currently do <em>not</em> satisfy this criteria, but Firefox installations
       that are included in major Linux distributions often do in the absence of a XULRunner installation.  Attempting to use a statically-linked
       Firefox install will display the error message "No more handles [NS_InitEmbedding...error -2147221164]".</li>
-      <li>XULRunner can be used with Eclipse 3.3 and newer</li>
+      <li>XULRunner 1.8.0.1 - 1.8.1.x can be used with Eclipse 3.3 and newer</li>
     </ul>
 
     <br>The version of Mozilla or Firefox installed on your system varies with your Linux distribution.
@@ -891,12 +891,13 @@ Problem" at: <a href="http://www.cas.mcmaster.ca/~emil/publications/fragile/">ht
     <br>The following Linux distributions meet the Firefox requirements for using the Browser widget.
     <ul>
     	<li>RedHat Enterprise Linux 4
-  		<br>Note that you may need to set the environment variable MOZILLA_FIVE_HOME to the folder containing your Firefox install. e.g. <code>setenv MOZILLA_FIVE_HOME /usr/lib/firefox-1.0.4</code></li>
+  		<br>Note that you may need to set the environment variable MOZILLA_FIVE_HOME to the folder containing your Firefox install. e.g.
+  			<code>setenv MOZILLA_FIVE_HOME /usr/lib/firefox-1.0.4</code></li>
     </ul>
     <br>If you use the IBM 1.4 VM <a href="#browserlinuxibm">check this.</a>
     <br>
-	<br>If you are running with eclipse 3.2.1 or newer then you can just run eclipse and it will attempt to detect a browser on your system to use.  If it fails to find one then you will need to download and install a GRE
-	such as mozilla, as outlined below:
+	<br>If you are running with eclipse 3.2.1 or newer then you can just run eclipse and it will attempt to detect a browser on your system to use.
+		If it fails to find one then you will need to download and install a GRE such as Mozilla, as outlined below:
   <ol>
   	<li>If you are using Eclipse 3.0, download the Mozilla 1.6 Xft and GTK2 build from <a href="http://www.mozilla.org/releases/#1.6">Mozilla.org</a>. If you are using Eclipse 3.1 or newer, you can choose to use a more recent
   	Mozilla 1.7.x GTK2 from <a href="http://www.mozilla.org/releases/">Mozilla.org</a>.</li>
@@ -934,7 +935,7 @@ Problem" at: <a href="http://www.cas.mcmaster.ca/~emil/publications/fragile/">ht
   </dd>
 
   <dt><strong><a name="browserplugins">Q: Why can't I run Java applets in the SWT Browser?</a></strong></dt>
-  <dd>A: Applets usually don't show up in the SWT Browser. On Windows (Internet Explorer), the Java
+  <dd>A: Applets usually don't show up in the SWT Browser. On Windows (Internet Explorer) and OSX (Safari), the Java
   plugin fails to run a second Java virtual machine to execute the applet because two Java virtual machines cannot run
   in the same process. On Linux (Mozilla), the Java plug-in has been reported to work because it executes in its own process.
   <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=59506">See bug 59506</a> .
@@ -942,7 +943,7 @@ Problem" at: <a href="http://www.cas.mcmaster.ca/~emil/publications/fragile/">ht
 
   <dt><strong><a name="swtawtosx">Q: Why does the SWT_AWT bridge not work for me on OS X?</a></strong></dt>
   <dd>A: This was an SWT-AWT incompatibility that existed prior to eclipse 3.2.
-      This problem has since been fixed in SWT, but requires that an OS X jre that has
+      This problem has since been fixed in SWT, but requires that an OS X jre with
       support for this fix be used as well.  Specifically, the jre must be version 1.5.0
       Release 4 (or greater), and the additional "SWT Compatibility Libraries" must
       be installed.  These libraries can be downloaded from the Downloads section
@@ -962,13 +963,12 @@ Problem" at: <a href="http://www.cas.mcmaster.ca/~emil/publications/fragile/">ht
   <dd>A: GTK+ began supporting printing in version 2.10. To print in Eclipse, you need to have Eclipse version 3.3 M1 or later,
   and at least GTK+ 2.10.0. To determine what GTK+ version you are running, type: rpm -q gtk2.
   <p>Prior to Eclipse 3.3 M1, printing was not implemented on GTK; however you can use the External Tools support in Eclipse
-  to print files using lpr or some other printing utility. See <a href="#printOnX">here</a> for the steps to set this up.</p>
+  to print files using lpr or some other printing utility. See <a href="#printOnX">here</a> for the steps to set this up.
   </dd>
   
   <dt><strong><a name="printOnMotif">Q: Why is the Print menu item disabled in Eclipse on Motif?</a></strong></dt>
-  <dd>A: Printing on Motif requires that Xprint be installed on your machine.
-      <p>A good FAQ regarding Xprint can be found at
-      <a href="http://xprint.mozdev.org/docs/Xprint_FAQ.html">http://xprint.mozdev.org/docs/Xprint_FAQ.html</a>.</p>
+  <dd>A: Printing on Motif requires that Xprint be installed on your machine.  A good FAQ regarding Xprint can be found at
+      <a href="http://xprint.mozdev.org/docs/Xprint_FAQ.html">http://xprint.mozdev.org/docs/Xprint_FAQ.html</a>.
   </dd>
 
   <dt><strong><a name="uithread">Q: Why do I get the error "org.eclipse.swt.SWTException: Invalid thread access"?</a></strong></dt>
@@ -1025,7 +1025,7 @@ Problem" at: <a href="http://www.cas.mcmaster.ca/~emil/publications/fragile/">ht
       added to SWT 3.1. On Windows, <a href="http://msdn.microsoft.com/library/default.asp?url=/library/en-us/gdicpp/gdiplus/gdiplus.asp">GDI+</a>
       is required. On X Windows platforms (i.e. GTK and Motif),
       <a href="http://cairographics.org/introduction">Cairo 0.4.0</a> is
-      required. If your Windows platform does not have GDI+ by default, you can
+      required. If your Windows platform does not have GDI+ by default then you can
       <a href="http://www.microsoft.com/downloads/details.aspx?FamilyID=6a63ab9c-df12-4d41-933c-be590feaa05a&amp;DisplayLang=en">download</a>
       a redistributable package from Microsoft.
   </dd>
