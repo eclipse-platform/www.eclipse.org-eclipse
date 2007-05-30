@@ -68,7 +68,7 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
   <li><a href="#browserplugins">Why can't I run Java applets in the SWT Browser?</a></li>
   <p></p>
   <li><a href="#swtawtosx">Why does the SWT_AWT bridge not work for me on OS X?</a></li>
-  <li><a href="#swtawtsolaris">Why does the SWT_AWT bridge not work for me on Solaris?</a></li>
+  <li><a href="#swtawtsolaris">Why does the SWT_AWT bridge not work for me on AIX or Solaris?</a></li>
   <li><a href="#printOnGTK">Why is the Print menu item disabled in Eclipse on GTK (Linux, UNIX)?</a></li>
   <li><a href="#printOnMotif">Why is the Print menu item disabled in Eclipse on Motif?</a></li>
   <li><a href="#uithread">Why do I get the error "org.eclipse.swt.SWTException: Invalid thread access"?</a></li>
@@ -516,9 +516,10 @@ Eclipse*fontList:-misc-fixed-medium-r-normal-*-10-100-75-75-c-60-iso8859-1
   </dd>
 
   <dt><strong><a name="missingdll">Q: Why do I get the error "java.lang.UnsatisfiedLinkError: no swt-win32-3232 in java.library.path."?</a></strong></dt>
-  <dd>A: You need to place the SWT JNI libraries that allow Java to use 
-    the native widgets in a place where the Java Virtual Machine 
-    will find them.
+  <dd>A: The SWT JNI libraries must be found at runtime.  As of Eclipse/SWT 3.3 this should happen
+    automatically if the platform-specific SWT jar is on the java classpath.  For older Eclipse/SWT
+    versions you need to place the SWT JNI libraries in a place where the Java Virtual Machine will
+    find them.
     
     <p>The SWT JNI libraries are included in the SWT download.  
 
@@ -593,8 +594,8 @@ Eclipse*fontList:-misc-fixed-medium-r-normal-*-10-100-75-75-c-60-iso8859-1
   However it is important to note that a supporting JDK is required on some platforms in order for this
   to work.  Specifically, Motif and GTK require that JDK 1.5 or newer be used, and OS X requires that
   the JDK specified in <a href="#swtawtosx">Why does the SWT_AWT bridge not work for me on OS X?</a> be used.
-  Additionally, Solaris users must ensure that AWT is using XToolkit, as described in
-  <a href="#swtawtsolaris">Why does the SWT_AWT bridge not work for me on Solaris?</a>
+  Additionally, Solaris and AIX users must ensure that AWT is using XToolkit, as described in
+  <a href="#swtawtsolaris">Why does the SWT_AWT bridge not work for me on AIX or Solaris?</a>
   
   <p>See this <a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet135.java">snippet</a> for an example of how to use the API.
   </dd>
@@ -860,11 +861,10 @@ Problem" at: <a href="http://www.cas.mcmaster.ca/~emil/publications/fragile/">ht
     <li>Linux GTK and Linux Motif (XULRunner-1.8.0.1 and above, Firefox 1.0 and above, Mozilla 1.4 GTK2 and above)
     <br>The following Linux distributions meet the Mozilla/Firefox requirements for using the Browser widget:
     <ul>
-    	<li>RedHat Enterprise Linux 3 (Mozilla)</li>
-   		<li>RedHat Enterprise Linux 4 (Firefox)</li>
-    	<li>Suse 9 (Mozilla)</li>
+    	<li>RedHat Enterprise Linux 3</li>
+    	<li>SuSE 9</li>
     </ul>
-    Other Linux distributions may require a supported version of Mozilla to be installed. (<a href="#browserlinux">instructions</a>)
+    Older Linux distributions may require a supported version of Mozilla to be installed. (<a href="#browserlinux">instructions</a>)
     <li>Photon</li>
   </ol>
   </dd>
@@ -953,7 +953,7 @@ Problem" at: <a href="http://www.cas.mcmaster.ca/~emil/publications/fragile/">ht
       <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=67384">bug 67384</a>.
   </dd>
   
-  <dt><strong><a name="swtawtsolaris">Q: Why does the SWT_AWT bridge not work for me on Solaris?</a></strong></dt>
+  <dt><strong><a name="swtawtsolaris">Q: Why does the SWT_AWT bridge not work for me on AIX or Solaris?</a></strong></dt>
   <dd>A: The SWT_AWT bridge requires that AWT be using XToolkit, since this implements the XEmbed
       protocol.  However by default AWT on Solaris uses MToolkit.  This can be easily changed as
       described in <a href="http://java.sun.com/j2se/1.5.0/docs/guide/awt/1.5/xawt.html">XToolkit on Solaris/Linux</a>.
