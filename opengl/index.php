@@ -40,9 +40,8 @@ For an example using <i>JOGL</i> with SWT, see
 for OpenGL which aims to be simple and thin.  <i>gljava</i> is reported to work
 well with SWT.
 <p></p>
-<li><i>org.eclipse.opengl</i> is an experimental Java binding
-for OpenGL 1.1 and GLU built as an Eclipse plugin. This is useful for
-simple OpenGL applications that do not require a more complete binding.  For a
+<li><i>org.eclipse.opengl</i> was SWT's first experimental Java binding
+for OpenGL 1.1 and GLU built as an Eclipse plugin. For a
 simple example using this binding, see
 <a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet174.java?rev=HEAD&amp;content-type=text/vnd.viewcvs-markup">Snippet 174</a>.
 <p></p>
@@ -55,8 +54,8 @@ simple example using this binding, see
 example, download the examples zip along with the <i>org.eclipse.opengl</i> zip for
 your platform and import them into your workspace.</p>
 
-<p>Please note that this binding is experimental and subject to change.  If you are using SWT 3.2 or newer then you should
-use the supported OpenGL binding that is included in the SWT package instead.</p>
+<p>Please note that this binding is experimental and subject to change.  <b>If you are using SWT 3.2 or newer then you should
+use the supported OpenGL binding that is included in the SWT package instead.</b></p>
 
 <table width="100%">
 <tr><th bgcolor="#0080c0" align="left" style="padding: 2px;"><font color="#ffffff">&nbsp; Experimental OpenGL Binding 0.5 for SWT</font>
