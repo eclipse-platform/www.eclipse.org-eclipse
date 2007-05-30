@@ -594,7 +594,7 @@ Eclipse*fontList:-misc-fixed-medium-r-normal-*-10-100-75-75-c-60-iso8859-1
   However it is important to note that a supporting JDK is required on some platforms in order for this
   to work.  Specifically, Motif and GTK require that JDK 1.5 or newer be used, and OS X requires that
   the JDK specified in <a href="#swtawtosx">Why does the SWT_AWT bridge not work for me on OS X?</a> be used.
-  Additionally, Solaris and AIX users must ensure that AWT is using XToolkit, as described in
+  Additionally, AIX and Solaris users must ensure that AWT is using XToolkit, as described in
   <a href="#swtawtsolaris">Why does the SWT_AWT bridge not work for me on AIX or Solaris?</a>
   
   <p>See this <a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet135.java">snippet</a> for an example of how to use the API.
