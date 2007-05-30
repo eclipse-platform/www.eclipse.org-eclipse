@@ -955,7 +955,7 @@ Problem" at: <a href="http://www.cas.mcmaster.ca/~emil/publications/fragile/">ht
   
   <dt><strong><a name="swtawtsolaris">Q: Why does the SWT_AWT bridge not work for me on AIX or Solaris?</a></strong></dt>
   <dd>A: The SWT_AWT bridge requires that AWT be using XToolkit, since this implements the XEmbed
-      protocol.  However by default AWT on Solaris uses MToolkit.  This can be easily changed as
+      protocol.  However by default AWT on AIX and Solaris use MToolkit.  This can be easily changed as
       described in <a href="http://java.sun.com/j2se/1.5.0/docs/guide/awt/1.5/xawt.html">XToolkit on Solaris/Linux</a>.
   </dd>
 
