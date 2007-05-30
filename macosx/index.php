@@ -60,7 +60,7 @@
     <h3>Launching the application</h3>
 
     <p>In the SWTHello example, a small shell script is used as the
-    executable to run.  This allows us to easily lauch Java with
+    executable to run.  This allows us to easily launch Java with
     any required options.</p>
 
 <table style="border: solid 1px #000000; margin-left: auto; margin-right: auto;" bgcolor="#eeeeff">
