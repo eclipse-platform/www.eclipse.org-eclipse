@@ -37,8 +37,8 @@ style, layout and parent information.</p>
 
 <ul>
   <li>Requires Eclipse 3.0 or later.</li>
-  <li>Extract <a href="tools/org.eclipse.swt.spy_1.0.0.zip">org.eclipse.swt.spy_1.0.0.zip</a>
-      into the <code>eclipse/plugins/</code> folder.</li>
+  <li>Save <a href="tools/org.eclipse.swt.spy_1.0.1.jar">org.eclipse.swt.spy_1.0.1.jar</a>
+      in the <code>eclipse/plugins/</code> folder.</li>
   <li>Launch eclipse with "-clean" argument (clears caches so eclipse will pick up new plugin).</li>
   <li>Open the SWT Spy view (Window &gt; Show View &gt; Other ... &gt; SWT Tools &gt; SWT Spy.)</li>
   <li>Enable collection of info by clicking on the "Monitor" button in Spy view.</li>
