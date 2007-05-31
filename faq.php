@@ -252,7 +252,7 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
       <li>Unzip the distribution.  This will create a directory called <tt>eclipse</tt>.
         This directory is subsequently referred to as <em>&lt;eclipseRoot&gt;</em>.
 
-      <li>In the directory <tt><em>&lt;eclipseRoot&gt;</em>/plugins/org.eclipse.platform.source_X.X.X</tt>,
+      <li>In the directory <tt><em>&lt;eclipseRoot&gt;</em>/plugins/org.eclipse.platform.source_X.X.X/src</tt>,
         find the <tt>launchersrc.zip</tt> file under <tt>org.eclipse.platform_X.X.X</tt>.
 
       <li>Unzip the file <tt>launchersrc.zip</tt>.  This will create a directory called <tt>library</tt>.
