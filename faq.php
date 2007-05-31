@@ -516,7 +516,7 @@ Eclipse*fontList:-misc-fixed-medium-r-normal-*-10-100-75-75-c-60-iso8859-1
   </dd>
 
   <dt><strong><a name="missingdll">Q: Why do I get the error "java.lang.UnsatisfiedLinkError: no swt-win32-3232 in java.library.path."?</a></strong></dt>
-  <dd>A: The SWT JNI libraries must be found at runtime.  As of Eclipse/SWT 3.3 this should happen
+  <dd>A: The SWT JNI libraries must be found at runtime.  As of Eclipse/SWT 3.3 this will happen
     automatically if the platform-specific SWT jar is on the java classpath.  For older Eclipse/SWT
     versions you need to place the SWT JNI libraries in a place where the Java Virtual Machine will
     find them.
