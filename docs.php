@@ -81,6 +81,8 @@ the <em>Platform Plug-in Developer Guide</em>. To get there in Eclipse, select
     <li><a href="http://www-106.ibm.com/developerworks/opensource/library/os-ecgui1/">Using the Eclipse GUI outside the Eclipse Workbench</a></li>
     <li><a href="http://www-106.ibm.com/developerworks/opensource/library/os-activex/">Integrate ActiveX controls into SWT applications</a></li>
     <li><a href="http://www-106.ibm.com/developerworks/opensource/library/os-ecca/">Equipping SWT applications with content assistants</a></li>
+    <li><a href="http://www.ibm.com/developerworks/views/opensource/libraryview.jsp?search_by=gentle+introduction+SWT+JFace">A Gentle Introduction to SWT and JFace</a> (4 parts)</li>
+    <li><a href="http://www.ibm.com/developerworks/views/opensource/libraryview.jsp?search_by=eclipse+game+plug-in">Create an Eclipse Game Plug-in</a> (4 parts)</li>
   </ul>
 </ul>
 
