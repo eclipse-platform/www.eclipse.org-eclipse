@@ -31,19 +31,19 @@ Sergey Prigogin - Bug 68950
 Martin Berkemeier - Bug 71570
 Darin Fisher - Bugs 61384, 76963, 80033
 Max Stepanov - Bug 68267
-Javier Pedemonte - Bugs 76983, 80033
+Javier Pedemonte - Bugs 76983, 80033, 178134
 Ivan Markov - Bug 77342 
 Artyom Kuanbekov - Bugs 78854, 79557
 L.M. Fridael - Bug 14279
 Michal Tkacz - Bug 70318
 Sebastian Davids - Snippet174 (OpenGL)
 Ron Capelli - Bug 80033
-Florian Priester - Bugs 70854, 84012, 124591, 123922, 136890
+Florian Priester - Bugs 70854, 84012, 124591, 123922, 136890, 174565
 Rodney Dowdall  - Bugs 90513, 92648, 93151
 Jobi George - Bugs 77661, 82385
 Mike Tab - Bug 91807
 Christof Marti - Bug 92046
-Eric Zimmerman - Bugs 93619, 128448
+Eric Zimmerman - Bugs 93619, 128448, 139987
 Arnaud Andrillon - Bug 99341
 Mitch Rudominer - Bug 103934
 Matt Scarpino - Bug 46387
@@ -57,3 +57,5 @@ Scott Kovatch - Bug 67384
 Geoff Strom - Bug 24697
 Oleg Krasilnikov - Bug 155212, 57151
 Diego Pettenò - Bug 167173
+Jeff Wu - Bugs 169293, 177284
+Ben Konrath - Bug 172590
