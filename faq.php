@@ -60,6 +60,8 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
   <p></p>
   <li><a href="#whatisbrowser">What is the SWT Browser widget?</a></li>
   <li><a href="#howusemozilla">How do I use Mozilla as the Browser's underlying renderer?</a></li>
+  <li><a href="#mozillaplugins">How can my Mozilla-based Browser find my Mozilla plug-ins?</a></li>
+  <li><a href="#specifyxulrunner">Can I specify which XULRunner installation is used?</a></li>
   <li><a href="#howusejavaxpcom">How do I use JavaXPCOM with the Browser?</a></li>
   <li><a href="#browserplatforms">Which platforms support the SWT Browser?</a></li>
   <li><a href="#browserlinux">What do I need to run the SWT Browser inside Eclipse on Linux/GTK or Linux/Motif?</a></li>
@@ -828,6 +830,18 @@ Problem" at: <a href="http://www.cas.mcmaster.ca/~emil/publications/fragile/">ht
 	    XULRunner version must be 1.8.1.2 or newer; if this API is not used then any XULRunner version will work
 	    (<a href="http://releases.mozilla.org/pub/mozilla.org/xulrunner/releases/1.8.1.3/contrib/">download XULRunner 1.8.1.3</a>)</li>
     </ul>
+  </dd>
+
+  <dt><strong><a name="mozillaplugins">Q: How can my Mozilla-based Browser find my Mozilla plug-ins?</a></strong></dt>
+    <dd>A: As of eclipse 3.3 the default set of Mozilla plug-in paths that are searched can be augmented by defining
+    environment variable <code>MOZ_PLUGIN_PATH</code>. For example: <code>export MOZ_PLUGIN_PATH=/usr/lib/browser-plugins</code>. 
+  </dd>
+
+  <dt><strong><a name="specifyxulrunner">Q: Can I specify which XULRunner installation gets used?</a></strong></dt>
+    <dd>A: Typically a Mozilla-based Browser uses XULRunner's lookup mechanism to find a registered XULRunner at runtime.
+    If you wish to override this mechanism you can set the value of java system property
+    <code>org.eclipse.swt.browser.XULRunnerPath</code> to point at the target XULRunner's path.  This property must be set
+    before the <em>first</em> Browser instance is created.
   </dd>
 
   <dt><strong><a name="howusejavaxpcom">Q: How do I use JavaXPCOM with the Browser?</a></strong></dt>  
