@@ -42,12 +42,12 @@ on which it is implemented.</p>
   <table width="100%">
   <tr><td>
       <b><font size="+1">Development</font></b><br>
-      <a href="http://download.eclipse.org/eclipse/downloads/drops/S-3.3RC4-200706081718/download.php?dropFile=swt-3.3RC2-win32-win32-x86.zip">Windows</a>,
-      <a href="http://download.eclipse.org/eclipse/downloads/drops/S-3.3RC4-200706081718/download.php?dropFile=swt-3.3RC2-gtk-linux-x86.zip">Linux</a>,
+      <a href="http://download.eclipse.org/eclipse/downloads/drops/R-3.3-200706251500/download.php?dropFile=swt-3.3-win32-win32-x86.zip">Windows</a>,
+      <a href="http://download.eclipse.org/eclipse/downloads/drops/R-3.3-200706251500/download.php?dropFile=swt-3.3-gtk-linux-x86.zip">Linux</a>,
       <span style="white-space: nowrap;">
-      <a href="http://download.eclipse.org/eclipse/downloads/drops/S-3.3RC4-200706081718/download.php?dropFile=swt-3.3RC2-carbon-macosx.zip">OS X</a></span>,
-      <a href="http://download.eclipse.org/eclipse/downloads/drops/S-3.3RC4-200706081718/index.php#swt" target="_top">more...</a><br>
-      <small>3.3 Release Candidate 4 build - <span style="white-space: nowrap;">8 June 2007</span></small><br>
+      <a href="http://download.eclipse.org/eclipse/downloads/drops/R-3.3-200706251500/download.php?dropFile=swt-3.3-carbon-macosx.zip">OS X</a></span>,
+      <a href="http://download.eclipse.org/eclipse/downloads/drops/R-3.3-200706251500/index.php#swt" target="_top">more...</a><br>
+      <small>3.3 Final Release - <span style="white-space: nowrap;">25 June 2007</span></small><br>
   <ul>
   <li><a href="R3_3/plan.html">3.3 Development Plan</a></li>
   <li><a href="R3_3/new_and_noteworthy.html">New and Noteworthy</a></li>
