@@ -264,6 +264,10 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
       <li>Run the <tt>build</tt> command (<strong>sh build.sh</strong> for UNIX and Linux, <strong>build.bat</strong> for Windows).
         This will create an executable launcher called <tt>eclipse</tt>.
         Move this <tt>eclipse</tt> executable to <em>&lt;eclipseRoot&gt;</em>.
+
+      <li>As of eclipse 3.3 an <tt>eclipse_<em>&lt;version&gt;</em></tt> shared library is also created by the previous step.
+       Move this library to the appropriate <tt>org.eclipse.equinox.launcher.<em>&lt;ws&gt;</em>.<em>&lt;os&gt;</em>.<em>&lt;arch&gt;</em></tt>
+       fragment.
     </ol>
 
     <p>This description was originally contributed by Colin R Devilbiss.</p>
