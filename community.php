@@ -50,6 +50,10 @@ toolkit.</p>
 </table>
 
 <ul>
+<li><b><a href="http://www.eclipse.org/nebula/">The Nebula Project</a></b>
+
+    <p>An Eclipse project that collects various custom SWT widgets and other UI components.</p>
+
 <li><b><a href="http://paperclips.sourceforge.net/">PaperClips</a></b>
     <i>by Woodcraft Mill & Cabinet and Others</i>
 
@@ -102,27 +106,26 @@ toolkit.</p>
     interface, save selected information in various formats for offline viewing
     and sharing, and much more.</p>
 
-<li><b><a href="http://sancho-gui.sourceforge.net/">sancho</a></b>
-
-    <p>sancho is a gui that connects to a p2p core application. Power users
-    that use p2p applications usually choose one that has core/gui separation.
-    sancho provides an easy to use, powerful, and configurable gui, currently
-    supporting the gui protocol of the popular mldonkey core.</p>
-
 <li><b><a href="http://sourceforge.net/projects/deinonychus/">Deinonychus</a></b>
 
     <p>Deinonychus is an email client written in Java featuring a GUI built
     with SWT. Supports MIME, IMAP, POP, and SMTP.</p>
+
+<li><b><a href="http://eclipse-games.sourceforge.net/">eclipse-games</a></b>
+
+    <p>A collection of games that run as eclipse plug-ins.</p>
 
 <li><b><a href="http://fnr.sourceforge.net">Feed'n Read</a></b>
 
     <p>Feed'n Read is a Java-based open source newsfeed reader. It is powered by the
     Sun ROME syndication framework and uses JFace and SWT.</p>
 
-<li><b><a href="http://siahe.com/zekr">The Zekr Project</a></b>
+<li><b><a href="http://sancho-gui.sourceforge.net/">sancho</a></b>
 
-    <p>Zekr is an open platform for research and development on the Holy Quran.
-    It is written in Java and uses SWT as the widget toolkit.</p>
+    <p>sancho is a gui that connects to a p2p core application. Power users
+    that use p2p applications usually choose one that has core/gui separation.
+    sancho provides an easy to use, powerful, and configurable gui, currently
+    supporting the gui protocol of the popular mldonkey core.</p>
 
 <li><b><a href="http://www.spotdev.net/spotmanager">SPOT Manager</a></b>
 
@@ -133,6 +136,12 @@ toolkit.</p>
 <li><b><a href="http://sourceforge.net/projects/qftp/">VirgoFTP</a></b>
 
     <p>VirgoFTP is an FTP client, similar to CuteFTP, written in Java using SWT.</p>
+    
+<li><b><a href="http://siahe.com/zekr">The Zekr Project</a></b>
+
+    <p>Zekr is an open platform for research and development on the Holy Quran.
+    It is written in Java and uses SWT as the widget toolkit.</p>
+
 </ul>
 
 <table width="100%">
