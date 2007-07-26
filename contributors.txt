@@ -17,7 +17,7 @@ Alex Keahan - Bug 41968
 Lorne Mach - Bug 42882
 Lina Kemmel - BIDI work for GTK
 Udagawa - Bug 45149
-Andrew Haley - SWT GTK 64 bit patch - Bug 37775
+Andrew Haley - SWT GTK 64-bit patch - Bug 37775
 Stefan Zeiger - Bug 32537
 Rutger Ovidius - Bug 55133
 Billy Biggs - Bugs 17563, 43684
@@ -55,7 +55,7 @@ Oliver Frouin - Bug 135040
 Miklos Fazekas - Bug 53260
 Scott Kovatch - Bug 67384
 Geoff Strom - Bug 24697
-Oleg Krasilnikov - Bug 155212, 57151
+Oleg Krasilnikov - Bug 155212, SWT Windows 64-bit patch - Bug 57151
 Diego Pettenò - Bug 167173
 Jeff Wu - Bugs 169293, 177284
 Ben Konrath - Bug 172590
