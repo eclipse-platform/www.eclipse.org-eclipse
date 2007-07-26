@@ -13,11 +13,12 @@
 <tr><?php include "sidebar.php"; ?>
 <td valign="top" style="padding: 10px"><h1 style="padding: 0; margin: 0; border-bottom: 1px solid #000000;">SWT Development Tools</h1>
 
-<p><b>Sleak</b> is a simple tool that monitors the creation and
-disposing of SWT graphics resources.</p>
+<p><b>Sleak</b> is a simple tool that monitors the creation and disposing of SWT graphics resources.
+(<a href="http://www.eclipse.org/articles/swt-design-2/sleak.htm">see tutorial</a>)</p>
 <ul>
   <li><b>Sleak plug-in for Eclipse</b> <a href="tools/org.eclipse.swt.sleak_1.0.0.zip">(zip file)</a>
     <ul>
+      <li>Monitors all other plug-ins running in its Eclipse environment.</li>
       <li>Requires Eclipse 2.1.0 or later.</li>
       <li>Extract the zip file above into the <code>eclipse/plugins/</code> folder.</li>
       <li>Extract the <code>.options</code> file from the <code>eclipse/plugins/org.eclipse.ui_&lt;version&gt;.jar/</code> archive to the <code>eclipse/</code> folder.</li>
@@ -25,7 +26,7 @@ disposing of SWT graphics resources.</p>
            <code>org.eclipse.ui/debug=true</code>
            <br><code>org.eclipse.ui/trace/graphics=true</code></li>
        <li>Launch Eclipse with the "-clean -debug" option on the command line.</li>
-       <li>Open the SWT Sleak view (Window &gt; Show View &gt; Other ... &gt; SWT Tools &gt; Sleak</li>
+       <li>Open the SWT Sleak view (Window &gt; Show View &gt; Other ... &gt; SWT Tools &gt; Sleak)</li>
     </ul>
 
   <li><b>Sleak for standalone applications </b><a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.swt.tools/Sleak/org/eclipse/swt/tools/internal/Sleak.java?rev=HEAD&amp;content-type=text/vnd.viewcvs-markup">(Sleak.java)</a></li>
