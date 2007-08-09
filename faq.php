@@ -70,11 +70,13 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
   <li><a href="#swtawtosx">Why does the SWT_AWT bridge not work for me on OS X?</a></li>
   <li><a href="#swtawtsolaris">Why does the SWT_AWT bridge not work for me on AIX or Solaris?</a></li>
   <li><a href="#printOnGTK">Why is the Print menu item disabled in Eclipse on GTK (Linux, UNIX)?</a></li>
+  <li><a href="#printOnGTKHangs">Why does it take so long for any editor to open on Eclipse 3.3 with GTK 2.10 (Linux, UNIX)?</a></li>
   <li><a href="#printOnMotif">Why is the Print menu item disabled in Eclipse on Motif?</a></li>
   <li><a href="#uithread">Why do I get the error "org.eclipse.swt.SWTException: Invalid thread access"?</a></li>
   <li><a href="#noautolayout">Why do I have to resize my shell to get my changed widgets to lay out again?</a></li>
   <li><a href="#nographicslibrary">Why do I get "SWTException: Unable to load graphics library" using GC?</a></li>
   <li><a href="#scrollonlinux">Why doesn't mouse scrolling work on Linux/Motif?</a></li>
+  <li><a href="#twmfocusfollowsmouse">Why can't I move my mouse into certain controls using TWM on Linux/Motif?</a></li>
 </ul>
 
 <p></p>
@@ -982,10 +984,18 @@ Problem" at: <a href="http://www.cas.mcmaster.ca/~emil/publications/fragile/">ht
   </dd>
 
   <dt><strong><a name="printOnGTK">Q: Why is the Print menu item disabled in Eclipse on GTK (Linux, UNIX)?</a></strong></dt>
-  <dd>A: GTK+ began supporting printing in version 2.10. To print in Eclipse, you need to have Eclipse version 3.3 M1 or later,
+  <dd>A: GTK+ began supporting printing in version 2.10. To print in Eclipse, you need to have Eclipse version 3.3 or later,
   and at least GTK+ 2.10.0. To determine what GTK+ version you are running, type: rpm -q gtk2.
-  <p>Prior to Eclipse 3.3 M1, printing was not implemented on GTK; however you can use the External Tools support in Eclipse
+  <p>Prior to Eclipse 3.3, printing was not implemented on GTK; however you can use the External Tools support in Eclipse
   to print files using lpr or some other printing utility. See <a href="#printOnX">here</a> for the steps to set this up.
+  </dd>
+  
+  <dt><strong><a name="printOnGTKHangs">Q: Why does it take so long for any editor to open on Eclipse 3.3 with GTK 2.10 (Linux, UNIX)?</a></strong></dt>
+  <dd>A: There is a bug that was fixed in GTK 2.10.12 that causes certain print backends to hang. To determine what GTK+ version you are running,
+  type: rpm -q gtk2.
+  <p>If you do not want to upgrade your GTK to the fixed version, you can make use of the org.eclipse.swt.internal.gtk.disablePrinting
+   flag available in Eclipse 3.3.1 maintenance builds as well as 3.4 M1 and later. To use this, you must pass the flag to eclipse on startup: 
+   <br>./eclipse -vmargs -Dorg.eclipse.swt.internal.gtk.disablePrinting
   </dd>
   
   <dt><strong><a name="printOnMotif">Q: Why is the Print menu item disabled in Eclipse on Motif?</a></strong></dt>
@@ -1066,6 +1076,18 @@ Problem" at: <a href="http://www.cas.mcmaster.ca/~emil/publications/fragile/">ht
         On the other hand, no known Motif-based app seems to know about these, so imwheel
         eats the mouse event and emits an accelerator event for "PgUp" or whatever your
         preference is.  It has some clever pre-sets for xterm, netscape, and so on.</li>
+    </ol>
+  </dd>
+  
+  <dt><strong><a name="twmfocusfollowsmouse"> Q: Why can't I move my mouse into certain controls using TWM on Linux/Motif?</a></strong></dt>
+  <dd>A: TWM by default is configured with focus-follows-mouse. It has been noticed that in this mode
+  it is not possible to enter any secondary window brought up by a widget (such as a ToolTip or a drop down
+  box on a Combo).
+  <br>The two possible workarounds are:
+    <ol>
+      <li>Add NoTitleFocus to your $HOME/.twmrc file. By doing this you are instructing TWM not 
+      to set keyboard focus to each window as it is entered.</li>
+      <li>Switch to another window manager.</li>
     </ol>
   </dd>
 </dl>
