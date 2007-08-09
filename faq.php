@@ -1086,7 +1086,8 @@ Problem" at: <a href="http://www.cas.mcmaster.ca/~emil/publications/fragile/">ht
   <br>The two possible workarounds are:
     <ol>
       <li>Add NoTitleFocus to your $HOME/.twmrc file. By doing this you are instructing TWM not 
-      to set keyboard focus to each window as it is entered.</li>
+      to set keyboard focus to each window as it is entered. <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=188135#c11">Bug 188135</a> 
+      has an example .twmrc file attachment.</li>
       <li>Switch to another window manager.</li>
     </ol>
   </dd>
