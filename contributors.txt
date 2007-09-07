@@ -59,3 +59,4 @@ Oleg Krasilnikov - Bug 155212, SWT Windows 64-bit patch - Bug 57151
 Diego Pettenò - Bug 167173
 Jeff Wu - Bugs 169293, 177284
 Ben Konrath - Bug 172590
+Brad Reynolds - Bug 116854
