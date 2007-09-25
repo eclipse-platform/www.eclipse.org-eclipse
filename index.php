@@ -42,12 +42,12 @@ on which it is implemented.</p>
   <table width="100%">
   <tr><td>
       <b><font size="+1">Development</font></b><br>
-      <a href="http://download.eclipse.org/eclipse/downloads/drops/S-3.4M1-200708091105/download.php?dropFile=swt-3.4M1-win32-win32-x86.zip">Windows</a>,
-      <a href="http://download.eclipse.org/eclipse/downloads/drops/S-3.4M1-200708091105/download.php?dropFile=swt-3.4M1-gtk-linux-x86.zip">Linux</a>,
+      <a href="http://download.eclipse.org/eclipse/downloads/drops/S-3.4M2-200709210919/download.php?dropFile=swt-3.4M2-win32-win32-x86.zip">Windows</a>,
+      <a href="http://download.eclipse.org/eclipse/downloads/drops/S-3.4M2-200709210919/download.php?dropFile=swt-3.4M2-gtk-linux-x86.zip">Linux</a>,
       <span style="white-space: nowrap;">
-      <a href="http://download.eclipse.org/eclipse/downloads/drops/S-3.4M1-200708091105/download.php?dropFile=swt-3.4M1-carbon-macosx.zip">OS X</a></span>,
-      <a href="http://download.eclipse.org/eclipse/downloads/drops/S-3.4M1-200708091105/index.php#swt" target="_top">more...</a><br>
-      <small>3.4 M1 - <span style="white-space: nowrap;">10 August 2007</span></small><br>
+      <a href="http://download.eclipse.org/eclipse/downloads/drops/S-3.4M2-200709210919/download.php?dropFile=swt-3.4M2-carbon-macosx.zip">OS X</a></span>,
+      <a href="http://download.eclipse.org/eclipse/downloads/drops/S-3.4M2-200709210919/index.php#swt" target="_top">more...</a><br>
+      <small>3.4 M2 - <span style="white-space: nowrap;">21 September 2007</span></small><br>
   <ul>
   <li>3.4 Development Plan</li>
   <li><a href="R3_4/new_and_noteworthy.html">New and Noteworthy</a></li>
