@@ -60,3 +60,4 @@ Diego Pettenò - Bug 167173
 Jeff Wu - Bugs 169293, 177284
 Ben Konrath - Bug 172590
 Brad Reynolds - Bug 116854
+ArronM - Bug 173556 - WMP fix
