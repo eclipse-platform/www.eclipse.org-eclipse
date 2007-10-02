@@ -49,7 +49,7 @@ on which it is implemented.</p>
       <a href="http://download.eclipse.org/eclipse/downloads/drops/S-3.4M2-200709210919/index.php#swt" target="_top">more...</a><br>
       <small>3.4 M2 - <span style="white-space: nowrap;">21 September 2007</span></small><br>
   <ul>
-  <li>3.4 Development Plan</li>
+  <li><a href="R3_4/plan.html">3.4 Development Plan</a></li>
   <li><a href="R3_4/new_and_noteworthy.html">New and Noteworthy</a></li>
   </ul>
   </table>
