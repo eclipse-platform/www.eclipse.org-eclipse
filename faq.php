@@ -304,7 +304,9 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
       <li>Pango 1.0.3</li>
       <li>Freetype 2.1.2</li>
     </ul>
+    <p>
     You can determine which version of GTK you are running using <pre>rpm -q gtk2</pre>.
+    </p>
   </dd>
 
   <dt><strong><a name="carbonapp">Q: On carbon, how do I run an SWT application from the command line?</a></strong></dt>
