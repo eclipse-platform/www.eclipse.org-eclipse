@@ -102,6 +102,7 @@ enter a bug report</a>. Thanks in advance for your contribution!</p>
     <li><a name="clipboard"><b>Clipboard</b></a>
       <ul>
         <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet94.java">copy and paste data with the clipboard</a></li>
+        <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet282.java">copy and paste image with the clipboard using ImageTransfer</a></li>
         <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet122.java">enable/disable menu depending on clipboard content availability</a></li>
       </ul>
       <p></p>
