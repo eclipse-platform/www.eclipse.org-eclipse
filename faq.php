@@ -22,6 +22,7 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
   <li><a href="#supportJavaBeans">Does SWT support JavaBeans?</a></li>
   <li><a href="#guibuilder">Is there a GUI Builder for SWT?</a></li>
   <li><a href="#whatisasnippet">What is a snippet and why do I care?</a></li>
+  <li><a href="#swtsource">Where do I find the SWT source?</a></li>
   <p></p>
   <li><a href="#howbuildjar">How do I build an SWT jar for my platform?</a></li>
   <li><a href="#howbuilddll">How do I build the SWT JNI libraries for my platform?</a></li>
@@ -160,6 +161,12 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
 }</pre>
     
 	For a list of sample snippets, see the <a href="snippets">SWT snippets page</a>.
+  </dd>
+
+  <dt><strong><a name="swtsource">Q: Where do I find the SWT source?</a></strong>
+  <dd>SWT's source can be retrieved directly from CVS as described in <a href="http://www.eclipse.org/swt/cvs.php">How to use SWT from CVS</a>.  It's also provided
+      in eclipse's <code>plugins/org.eclipse.rcp.source.<em>&lt;os&gt;</em>.<em>&lt;ws&gt;</em>.<em>&lt;arch&gt;</em>_X.X.X.<em>&lt;version&gt;</em>/src/</code>
+      directory.
   </dd>
 
   <dt><strong><a name="howbuildjar">Q: How do I build an SWT jar for my platform?</a></strong>
