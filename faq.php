@@ -66,6 +66,7 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
   <li><a href="#browserlinuxrcp">What do I need to run the SWT Browser in a standalone application on Linux/GTK or Linux/Motif?</a></li>
   <li><a href="#browserlinuxibm">How can I get the SWT Browser to work with the IBM 1.4 VM?</a></li>
   <li><a href="#browserplugins">Why can't I run Java applets in the SWT Browser?</a></li>
+  <li><a href="#browserscrollbar">How do I hide the Browser's scrollbars?</a></li>
   <p></p>
   <li><a href="#swtawtosx">Why does the SWT_AWT bridge not work for me on OS X?</a></li>
   <li><a href="#swtawtsolaris">Why does the SWT_AWT bridge not work for me on AIX or Solaris?</a></li>
@@ -968,6 +969,17 @@ Problem" at: <a href="http://www.cas.mcmaster.ca/~emil/publications/fragile/">ht
   <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=59506">See bug 59506</a> .
   </dd>
 
+  <dt><strong><a name="browserscrollbar">Q: How do I hide the Browser's scrollbars?</a></strong></dt>
+  <dd>A: The only way to influence whether scrollbars are shown in a Browser or not is for the document it's showing to
+      specify a style such as <code>'overflow:auto'</code> or <code>'overflow:hidden'</code>.  There are two ways to do this:
+      <ol>
+    	<li>If you are providing the document being shown then its body tag can specify this style like
+    	    <code>&lt;body style='overflow:hidden'&gt;</code>.</li>
+    	<li>Alternatively, this style can be changed in the DOM for any document that has been loaded.  The easiest way
+    	    to do this is with a line like <code><em>&lt;yourBrowser&gt;</em>.execute("document.getElementsByTagName('body')[0].style.overflow='auto'");</code>.</li>
+      </ol>
+  </dd>
+
   <dt><strong><a name="swtawtosx">Q: Why does the SWT_AWT bridge not work for me on OS X?</a></strong></dt>
   <dd>A: This was an SWT-AWT incompatibility that existed prior to eclipse 3.2.
       This problem has since been fixed in SWT, but requires that an OS X jre with
@@ -979,7 +991,7 @@ Problem" at: <a href="http://www.cas.mcmaster.ca/~emil/publications/fragile/">ht
       which is approximately 180K.  For more information about this issue see
       <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=67384">bug 67384</a>.
   </dd>
-  
+
   <dt><strong><a name="swtawtsolaris">Q: Why does the SWT_AWT bridge not work for me on AIX or Solaris?</a></strong></dt>
   <dd>A: The SWT_AWT bridge requires that AWT be using XToolkit, since this implements the XEmbed
       protocol.  However by default AWT on AIX and Solaris use MToolkit.  This can be easily changed as
