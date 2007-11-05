@@ -47,7 +47,7 @@ on which it is implemented.</p>
       <span style="white-space: nowrap;">
       <a href="http://download.eclipse.org/eclipse/downloads/drops/S-3.4M3-200711012000/download.php?dropFile=swt-3.4M3-carbon-macosx.zip">OS X</a></span>,
       <a href="http://download.eclipse.org/eclipse/downloads/drops/S-3.4M3-200711012000/index.php#swt" target="_top">more...</a><br>
-      <small>3.4 M3 - <span style="white-space: nowrap;">01 November 2007</span></small><br>
+      <small>3.4 M3 - <span style="white-space: nowrap;">02 November 2007</span></small><br>
   <ul>
   <li><a href="R3_4/plan.html">3.4 Development Plan</a></li>
   <li><a href="R3_4/new_and_noteworthy.html">New and Noteworthy</a></li>
