@@ -79,6 +79,7 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
   <li><a href="#nographicslibrary">Why do I get "SWTException: Unable to load graphics library" using GC?</a></li>
   <li><a href="#scrollonlinux">Why doesn't mouse scrolling work on Linux/Motif?</a></li>
   <li><a href="#twmfocusfollowsmouse">Why can't I move my mouse into certain controls using TWM on Linux/Motif?</a></li>
+  <li><a href="#twmmodaldialogs">Why don't modal dialogs stay on top of other windows on Solaris 10 using CDE and DTWM?</a></li>
 </ul>
 
 <p></p>
@@ -314,7 +315,7 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
       <li>Freetype 2.1.2</li>
     </ul>
     <p>
-    You can determine which version of GTK you are running using <tt>rpm -q gtk2</tt> or <tt>gtk-config --version</tt>.
+    You can determine which version of GTK you are running using <tt>rpm -q gtk2</tt>.
     </p>
   </dd>
 
@@ -1008,14 +1009,14 @@ Problem" at: <a href="http://www.cas.mcmaster.ca/~emil/publications/fragile/">ht
 
   <dt><strong><a name="printOnGTK">Q: Why is the Print menu item disabled in Eclipse on GTK (Linux, UNIX)?</a></strong></dt>
   <dd>A: GTK+ began supporting printing in version 2.10. To print in Eclipse, you need to have Eclipse version 3.3 or later,
-  and at least GTK+ 2.10.0. To determine what GTK+ version you are running, type: <tt>rpm -q gtk2</tt> or <tt>gtk-config --version</tt>.
+  and at least GTK+ 2.10.0. To determine what GTK+ version you are running, type: <tt>rpm -q gtk2</tt>.
   <p>Prior to Eclipse 3.3, printing was not implemented on GTK; however you can use the External Tools support in Eclipse
   to print files using lpr or some other printing utility. See <a href="#printOnX">here</a> for the steps to set this up.
   </dd>
   
   <dt><strong><a name="printOnGTKHangs">Q: Why does it take so long for any editor to open on Eclipse 3.3 with GTK 2.10 (Linux, UNIX)?</a></strong></dt>
   <dd>A: There is a bug that was fixed in GTK 2.10.12 that causes certain print backends to hang. To determine what GTK+ version you are running,
-  type: <tt>rpm -q gtk2</tt> or <tt>gtk-config --version</tt>.
+  type: <tt>rpm -q gtk2</tt>.
   <p>If you do not want to upgrade your GTK to the fixed version, you can make use of the org.eclipse.swt.internal.gtk.disablePrinting
    flag available in Eclipse 3.3.1 maintenance builds as well as 3.4 M1 and later. To use this, you must pass the flag to eclipse on startup: 
    <br>./eclipse -vmargs -Dorg.eclipse.swt.internal.gtk.disablePrinting
@@ -1113,6 +1114,15 @@ Problem" at: <a href="http://www.cas.mcmaster.ca/~emil/publications/fragile/">ht
       has an example .twmrc file attachment.</li>
       <li>Switch to another window manager.</li>
     </ol>
+  </dd>
+  
+  <dt><strong><a name="twmmodaldialogs"> Q: Why don't modal dialogs stay on top of other windows on Solaris 10 using CDE and DTWM?</a></strong></dt>
+  <dd>A: The default setting of CDE is to allow modal dialogs to be hidden by other windows. To change this, you must:
+  <ol>
+   <li>Add the following line to your $HOME/.Xdefaults file: <tt>Dtwm*secondariesOnTop: True</tt></li>
+   <li>Make sure that the "Allow primary windows on top" option is disabled in CDE. Under Style Manager>Windows, uncheck "Allow Primary windows on top" and click "Apply".</li>
+   <li>Reload the .Xdefaults (<tt>xrdb $HOME/.Xdefaults</tt>) and restart the window manager. (<tt>killall dtwm</tt> then <tt>/usr/dt/bin/dtwm &</tt>)</li>
+  </ol>
   </dd>
 </dl>
 </table>
