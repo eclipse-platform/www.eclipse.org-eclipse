@@ -1121,7 +1121,7 @@ Problem" at: <a href="http://www.cas.mcmaster.ca/~emil/publications/fragile/">ht
   <ol>
    <li>Add the following line to your $HOME/.Xdefaults file: <tt>Dtwm*secondariesOnTop: True</tt></li>
    <li>Make sure that the "Allow primary windows on top" option is disabled in CDE. Under Style Manager>Windows, uncheck "Allow Primary windows on top" and click "Apply".</li>
-   <li>Reload the .Xdefaults (<tt>xrdb $HOME/.Xdefaults</tt>) and restart the window manager. (<tt>killall dtwm</tt>) followed by (<tt>/usr/dt/bin/dtwm &</tt>)</li>
+   <li>Reload the .Xdefaults - <tt>xrdb $HOME/.Xdefaults</tt> - and restart the window manager. <tt>killall dtwm</tt> followed by <tt>/usr/dt/bin/dtwm &</tt></li>
   </ol>
   </dd>
 </dl>
