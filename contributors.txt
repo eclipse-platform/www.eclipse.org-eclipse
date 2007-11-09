@@ -62,3 +62,4 @@ Ben Konrath - Bug 172590
 Brad Reynolds - Bug 116854
 ArronM - Bug 173556 - WMP fix
 George Comninos - Bug 204626
+Tobias Gerdin - Bug 202328
