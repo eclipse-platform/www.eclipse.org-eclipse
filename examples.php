@@ -53,8 +53,8 @@
 </table>
 
 <ol>
-  <li>To get the examples, go to the eclipse download page: <a href="http://download.eclipse.org/downloads/index.php">
-      http://download.eclipse.org/downloads/index.php</a></li>
+  <li>To get the examples, go to the eclipse download page: <a href="http://download.eclipse.org/eclipse/downloads/index.php">
+      http://download.eclipse.org/eclipse/downloads/index.php</a></li>
   <li>Click on the eclipse build that you would like examples for
       (i.e. the eclipse build that you are running; typically the latest Stable Build).</li>
   <li>Scroll down until you see "Example Plug-ins". Read the paragraph on installing them, and select the download for your platform.</li>
@@ -102,8 +102,8 @@ the eclipse SWT Examples:
 <p>(Note that these instructions will only work for eclipse 3.1 and newer).  To run the ControlExample and CustomControlExample standalone:</p>
 <ol>
 <li>Go to the download page for the eclipse version you are running.
-   For example, for eclipse 3.1 this is:<br>
-   http://download.eclipse.org/downloads/drops/R-3.1-200506271435/index.php
+   For example, for eclipse 3.3 this is:<br>
+   <a href="http://download.eclipse.org/eclipse/downloads/drops/R-3.3-200706251500/index.php">http://download.eclipse.org/eclipse/downloads/drops/R-3.3-200706251500/index.php</a>.
    </li>
 
 <li>Scroll down to the "Example Plug-ins" section, download the examples zip for your platform, and unzip
@@ -112,21 +112,21 @@ the eclipse SWT Examples:
    (answer Yes when it asks if you want to overwrite the license files).
    </li>
 
-<li>(If you are using eclipse 3.3 or newer then you can skip this step) Open the file d:\eclipse\plugins\org.eclipse.swt.win32.win32.x86_3.1.0.jar
+<li>(If you are using eclipse 3.3 or newer then you can skip this step) Open the file d:\eclipse\plugins\org.eclipse.swt.win32.win32.x86_3.X.X.jar
    in winzip and extract the following 3 files into d:\eclipse\plugins
    <ul>
-   <li>swt-awt-win32-3138.dll
-   <li>swt-gdip-win32-3138.dll
-   <li>swt-win32-3138.dll
+   <li>swt-awt-win32-XXXX.dll
+   <li>swt-gdip-win32-XXXX.dll
+   <li>swt-win32-XXXX.dll
    </ul></li>
 
 <li>Open a DOS window and type:<br>
    <code>d:<br>
-   cd d:\eclipse\plugins\org.eclipse.swt.examples_3.1.0</code></li>
+   cd d:\eclipse\plugins\org.eclipse.swt.examples_3.X.X</code></li>
 
 <li>Type the following line: (if you are using eclipse 3.3 or newer then the <code>-Djava.library.path</code> argument can be omitted)<br>
 
-<code><i>&lt;pathToYourJRE&gt;</i>\bin\java -classpath .;..\org.eclipse.swt_3.1.0.jar;..\org.eclipse.swt.win32.win32.x86_3.1.0.jar;.\swtexamples.jar -Djava.library.path=.. org.eclipse.swt.examples.controlexample.ControlExample</code>
+<code><i>&lt;pathToYourJRE&gt;</i>\bin\java -classpath .;..\org.eclipse.swt_3.X.X.jar;..\org.eclipse.swt.win32.win32.x86_3.X.X.jar;.\swtexamples.jar -Djava.library.path=.. org.eclipse.swt.examples.controlexample.ControlExample</code>
 
 <p>This is the ControlExample. There is a tab for each control, and you can
 change the various styles, etc, to see what changes in the controls. To run
