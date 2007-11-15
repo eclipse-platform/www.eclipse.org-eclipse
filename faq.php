@@ -1005,13 +1005,17 @@ Problem" at: <a href="http://www.cas.mcmaster.ca/~emil/publications/fragile/">ht
   	  	System Preferences and the Browser will automatically use the new values.</li>
   	  <li>Mozilla-based Browser instances (ie.- those that are either running on Linux or are created with style
   	    <code>SWT.MOZILLA</code>) do not access any global proxy settings, so proxy information must be explicitly specified
-  	    for them.  As of Eclipse 3.4 this can be done by setting the standard java properties <code>http.proxyHost</code> and
-  	    <code>http.proxyPort</code> to the appropriate values.  Changes made to these properties will be used for all non-local
-  	    HTTP, HTTPS and FTP requests in all Mozilla-based Browser instances, including those that are already open.  To stop using
-  	    a previously-set proxy, set both of these java properties to &quot;&quot; (empty string).
-  	  <li>Prior to Eclipse 3.4 the only way to set a proxy in Mozilla-based Browsers was via JavaXPCOM.  JavaXPCOM support was
-  	    introduced in Eclipse 3.3, and using it to set a proxy is demonstrated by
-  	    <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=82295#c18">bug 82295 comment 18</a>.
+  	    for them.  There are two ways to do this:
+  	    <ul>
+  	      <li>As of Eclipse 3.4, a user can do this by setting values for java properties <code>network.proxy_host</code> and
+  	        <code>network.proxy_port</code>.  These properties are checked the first time a Mozilla-based Browser is created, and
+  	        if set, will be used for all non-local HTTP, HTTPS and FTP requests in all Mozilla-based Browser instances.  A user
+  	        wishing to set these values should do so by passing <code>-D...</code> VM arguments to the JRE at startup.</li>
+  	      <li>As of Eclipse 3.3, an application can do this at any time by creating a Browser with style <code>SWT.MOZILLA</code>
+  	        and using JavaXPCOM to update the values in the shared preferences.  An example of this is shown in
+  	        <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=82295#c18">bug 82295 comment 18</a>.  For more general
+  	        information about using JavaXPCOM with a Browser see <a href="#howusejavaxpcom">How do I use JavaXPCOM with the Browser?</a></li>.
+  	    </ul> 
     </ul>
   </dd>
 
