@@ -1011,10 +1011,10 @@ Problem" at: <a href="http://www.cas.mcmaster.ca/~emil/publications/fragile/">ht
   	        <code>network.proxy_port</code>.  These properties are checked the first time a Mozilla-based Browser is created, and
   	        if set, will be used for all non-local HTTP, HTTPS and FTP requests in all Mozilla-based Browser instances.  A user
   	        wishing to set these values should do so by passing <code>-D...</code> VM arguments to the JRE at startup.</li>
-  	      <li>As of Eclipse 3.3, an application can do this at any time by creating a Browser with style <code>SWT.MOZILLA</code>
-  	        and using JavaXPCOM to update the values in the shared preferences.  An example of this is shown in
-  	        <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=82295#c18">bug 82295 comment 18</a>.  For more general
-  	        information about using JavaXPCOM with a Browser see <a href="#howusejavaxpcom">How do I use JavaXPCOM with the Browser?</a></li>.
+  	      <li>As of Eclipse 3.3, an application can do this at any time by using JavaXPCOM to update the values in the shared
+  	        preferences.  An example of this is shown in <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=82295#c18">bug 82295 comment 18</a>.
+  	        For more general information about using JavaXPCOM with a Browser see
+  	        <a href="#howusejavaxpcom">How do I use JavaXPCOM with the Browser?</a></li>.
   	    </ul> 
     </ul>
   </dd>
