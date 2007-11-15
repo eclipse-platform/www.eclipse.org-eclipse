@@ -70,6 +70,7 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
   <li><a href="#browserlinuxibm">How can I get the SWT Browser to work with the IBM 1.4 VM?</a></li>
   <li><a href="#browserplugins">Why can't I run Java applets in the SWT Browser?</a></li>
   <li><a href="#browserscrollbar">How do I hide the Browser's scrollbars?</a></li>
+  <li><a href="#browserproxy">How do I set a proxy for the Browser to use?</a></li>
   <p></p>
   <li><a href="#swtawtosx">Why does the SWT_AWT bridge not work for me on OS X?</a></li>
   <li><a href="#swtawtsolaris">Why does the SWT_AWT bridge not work for me on AIX or Solaris?</a></li>
@@ -989,6 +990,29 @@ Problem" at: <a href="http://www.cas.mcmaster.ca/~emil/publications/fragile/">ht
     	<li>Alternatively, this style can be changed in the DOM for any document that has been loaded.  The easiest way
     	    to do this is with a line like <code><em>&lt;yourBrowser&gt;</em>.execute("document.getElementsByTagName('body')[0].style.overflow='auto'");</code>.</li>
       </ol>
+  </dd>
+
+  <dt><strong><a name="browserproxy">Q: How do I set a proxy for the Browser to use?</a></strong></dt>
+  <dd>A: This is dependent on the platform and native renderer being used:
+  	<ul>
+  	  <li>On Windows all instances of Internet Explorer use a shared set of global proxy settings.  Since on Windows the
+  	  	SWT Browser embeds the IE renderer by default (ie.- if the Browser is created with style <code>SWT.NONE</code>),
+  	  	the Browser automatically inheirits these proxy settings.  These settings can be changed at any time in the Internet
+  	  	Options of a running IE instance and the Browser will automatically use the new values.</li>
+  	  <li>Similarly, on OSX all instances of Safari use a shared set of global proxy settings.  Since on OSX the
+  	  	SWT Browser embeds the Safari renderer by default (ie.- if the Browser is created with style <code>SWT.NONE</code>),
+  	  	the Browser automatically inheirits these proxy settings.  These settings can be changed at any time in the OSX
+  	  	System Preferences and the Browser will automatically use the new values.</li>
+  	  <li>Mozilla-based Browser instances (ie.- those that are either running on Linux or are created with style
+  	    <code>SWT.MOZILLA</code>) do not access any global proxy settings, so proxy information must be explicitly specified
+  	    for them.  As of Eclipse 3.4 this can be done by setting the standard java properties <code>http.proxyHost</code> and
+  	    <code>http.proxyPort</code> to the appropriate Strings.  Changes made to these properties will be used for all non-local
+  	    HTTP, HTTPS and FTP requests in all Mozilla-based Browser instances, including those that are already open.  To stop using
+  	    a previously-set proxy, set both of these java properties to &quot;&quot; (empty string).
+  	  <li>Prior to Eclipse 3.4 the only way to set a proxy in Mozilla-based Browsers was via JavaXPCOM.  JavaXPCOM support was
+  	    introduced in Eclipse 3.3, and using it to set a proxy is demonstrated by
+  	    <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=82295#c18">bug 82295 comment 18</a>.
+    </ul>
   </dd>
 
   <dt><strong><a name="swtawtosx">Q: Why does the SWT_AWT bridge not work for me on OS X?</a></strong></dt>
