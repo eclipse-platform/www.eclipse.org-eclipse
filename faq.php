@@ -83,6 +83,7 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
   <li><a href="#scrollonlinux">Why doesn't mouse scrolling work on Linux/Motif?</a></li>
   <li><a href="#twmfocusfollowsmouse">Why can't I move my mouse into certain controls using TWM on Linux/Motif?</a></li>
   <li><a href="#twmmodaldialogs">Why don't modal dialogs stay on top of other windows on Solaris 10 using CDE and DTWM?</a></li>
+  <li><a href="#32eclipsegtk64">Why do I get strange drawing behaviour when running 32 bit Eclipse on a 64 bit GTK platform?</a></li>
 </ul>
 
 <p></p>
@@ -1153,6 +1154,11 @@ Problem" at: <a href="http://www.cas.mcmaster.ca/~emil/publications/fragile/">ht
    <li>Make sure that the "Allow primary windows on top" option is disabled in CDE. Under Style Manager>Windows, uncheck "Allow Primary windows on top" and click "Apply".</li>
    <li>Reload the .Xdefaults - <tt>xrdb $HOME/.Xdefaults</tt> - and restart the window manager. <tt>killall dtwm</tt> followed by <tt>/usr/dt/bin/dtwm &</tt></li>
   </ol>
+  </dd>
+  
+   <dt><strong><a name="32eclipsegtk64"> Q:  Why do I get strange drawing behaviour when running 32 bit Eclipse on a 64 bit GTK platform?</a></strong></dt>
+  <dd>A: A 64 bit Linux OS comes configured by default with 64 bit libraries. If you wish to run the 32 bit version of Eclipse, you must ensure that you have
+  a 32 bit JRE as well as the 32 bit version of the GTK libraries. Red Hat bundles the 32 bit libraries in their installer under the "Compatibility Arch Support" package.
   </dd>
 </dl>
 </table>
