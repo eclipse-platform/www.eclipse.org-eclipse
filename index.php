@@ -35,7 +35,7 @@ with <b>Component: SWT</b>, <b>Platform: Macintosh</b> and <b>OS: Mac OSX - Coco
 pick an interesting bug from here</a>.
 </p><p>Then see if you can figure out how to fix the problem, and if so, attach a patch to the bug report.
 Discussion can take place on the <a href="news://news.eclipse.org/eclipse.platform.swt">SWT newsgroup</a>.
-</p><p>See Steve's blog for a bit of background:
+</p><p>See Steve Northover's blog for a bit of background:
 <ul>
 <li><a href="http://inside-swt.blogspot.com/2007/11/hacking-at-apple.html">Hacking at Apple</a></li>
 <li><a href="http://inside-swt.blogspot.com/2007/11/great-success.html">Great Success</a></li>
