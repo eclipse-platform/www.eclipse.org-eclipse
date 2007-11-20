@@ -22,12 +22,6 @@ on which it is implemented.</p>
 </table>
 
 <p>We are looking for help with the cocoa port of SWT.
-See Steve's blog for background discussion:
-<ul>
-<li><a href="http://inside-swt.blogspot.com/2007/11/hacking-at-apple.html">Hacking at Apple</a></li>
-<li><a href="http://inside-swt.blogspot.com/2007/11/great-success.html">Great Success</a></li>
-<li><a href="http://inside-swt.blogspot.com/2007/11/ok-community-blow-your-brains-out.html">Call For Volunteers</a></li>
-</ul>
 </p><p>To get started, <a href="http://www.eclipse.org/swt/cvs.php">load SWT from CVS</a> into your eclipse workspace.
 The projects you need are:
 <ul>
@@ -37,11 +31,17 @@ The projects you need are:
 </ul>
 <p>If you find a bug, <a href="https://bugs.eclipse.org/bugs/enter_bug.cgi?product=Platform">open an eclipse bug report</a>
 with <b>Component: SWT</b>, <b>Platform: Macintosh</b> and <b>OS: Mac OSX - Cocoa</b>.
-</p>
-<p>Then see if you can figure out how to fix the problem, and if so, attach a patch to the bug report.
+</p><p>Also, you can pick an interesting bug from <a href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&short_desc_type=allwordssubstr&short_desc=&classification=Eclipse&product=Platform&component=SWT&long_desc_type=allwordssubstr&long_desc=&bug_file_loc_type=allwordssubstr&bug_file_loc=&status_whiteboard_type=allwordssubstr&status_whiteboard=&keywords_type=allwords&keywords=&op_sys=Mac+OS+X+-+Cocoa&emailtype1=substring&email1=&emailtype2=substring&email2=&bugidtype=include&bug_id=&votes=&chfieldfrom=&chfieldto=Now&chfieldvalue=&cmdtype=doit&order=Reuse+same+sort+as+last+time&field0-0-0=noop&type0-0-0=noop&value0-0-0=">
+here</a>.
+</p><p>Then see if you can figure out how to fix the problem, and if so, attach a patch to the bug report.
 Discussion can take place on the <a href="news://news.eclipse.org/eclipse.platform.swt">SWT newsgroup</a>.
-Thanks to those who are already jumping in and getting their feet wet!
-</p><p>- The SWT Team
+</p><p>See Steve's blog for a bit of background:
+<ul>
+<li><a href="http://inside-swt.blogspot.com/2007/11/hacking-at-apple.html">Hacking at Apple</a></li>
+<li><a href="http://inside-swt.blogspot.com/2007/11/great-success.html">Great Success</a></li>
+<li><a href="http://inside-swt.blogspot.com/2007/11/ok-community-blow-your-brains-out.html">Call For Volunteers</a></li>
+</ul>
+</p><p>Thanks to those who are already jumping in and getting their feet wet!
 </p>
 
 <table width="100%">
