@@ -84,6 +84,7 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
   <li><a href="#twmfocusfollowsmouse">Why can't I move my mouse into certain controls using TWM on Linux/Motif?</a></li>
   <li><a href="#twmmodaldialogs">Why don't modal dialogs stay on top of other windows on Solaris 10 using CDE and DTWM?</a></li>
   <li><a href="#32eclipsegtk64">Why do I get strange drawing behaviour when running 32 bit Eclipse on a 64 bit GTK platform?</a></li>
+  <li><a href="#PCEdialogVista">Why do I get Program Compatibility Error dialog that tells me it could not find flash.ocx on Vista?</a></li>
 </ul>
 
 <p></p>
@@ -1156,9 +1157,23 @@ Problem" at: <a href="http://www.cas.mcmaster.ca/~emil/publications/fragile/">ht
   </ol>
   </dd>
   
-   <dt><strong><a name="32eclipsegtk64"> Q:  Why do I get strange drawing behaviour when running 32 bit Eclipse on a 64 bit GTK platform?</a></strong></dt>
+  <dt><strong><a name="32eclipsegtk64"> Q:  Why do I get strange drawing behaviour when running 32 bit Eclipse on a 64 bit GTK platform?</a></strong></dt>
   <dd>A: A 64 bit Linux OS comes configured by default with 64 bit libraries. If you wish to run the 32 bit version of Eclipse, you must ensure that you have
   a 32 bit JRE as well as the 32 bit version of the GTK libraries. Red Hat bundles the 32 bit libraries in their installer under the "Compatibility Arch Support" package.
+  </dd>
+  
+  <dt><strong><a name="PCEdialogVista"> Q:  Why do I get Program Compatibility Error dialog that tells me it could not find flash.ocx on Vista?</a></strong></dt>
+  <dd>A: When you create an OleControlSite for a given application, SWT will query for the presence of 
+  license info for the application. If the license info is not available, Vista will interpret this as a 
+  creation of legacy COM object failure that was removed. 
+  <br>To turn off the "Detect application failures caused by deprecated Windows DLLs or COM objects" property, do the following:
+  	<ol>
+  	  <li>Open the group policy editor (type gpedit from a command line)</li>
+	  <li>Find Administrative Templates -> System -> Troubleshooting and Diagnostics -> Application Compatibility Diagnostics</li>
+	  <li>Select "Detect application failures caused by deprecated Windows DLLs or COM objects"</li>
+	  <li>Select "Properties" to open a properties dialog</li>
+	  <li>Select "Disabled" radio button</li>
+   	</ol>
   </dd>
 </dl>
 </table>
