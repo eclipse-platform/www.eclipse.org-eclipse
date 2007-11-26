@@ -42,10 +42,10 @@ Run by selecting the class and then selecting <i>Run &gt; Run As &gt; Java Appli
 enter a bug report</a>. Thanks in advance for your contribution!</p>
 
   <ul>
-    <li><b>"<a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet1.java">Hello World</a>"</b>
+    <li><b>"<a name=helloworld href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet1.java">Hello World</a>"</b>
       <p></p>
 
-    <li><b>Accessibility</b>
+    <li><a name="accessibility"><b>Accessibility</b></a>
       <ul>
         <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet162.java">an accessible listener to provide state information</a></li>
         <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet164.java">override the text that is spoken for a native Button</a></li>
