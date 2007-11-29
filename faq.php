@@ -169,9 +169,12 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
   </dd>
 
   <dt><strong><a name="swtsource">Q: Where do I find the SWT source?</a></strong>
-  <dd>SWT's source can be retrieved directly from CVS as described in <a href="http://www.eclipse.org/swt/cvs.php">How to use SWT from CVS</a>.  It's also provided
-      in eclipse's <code>plugins/org.eclipse.rcp.source.<em>&lt;os&gt;</em>.<em>&lt;ws&gt;</em>.<em>&lt;arch&gt;</em>_X.X.X.<em>&lt;version&gt;</em>/src/</code>
-      directory.
+  <dd>A: SWT's source can be retrieved directly from CVS as described in <a href="http://www.eclipse.org/swt/cvs.php">How to use SWT from CVS</a>.  It's also included
+      in eclipse as follows:
+      <ul>
+        <li>eclipse 3.4 and newer: <code>plugins/org.eclipse.swt.<em>&lt;ws&gt;</em>.<em>&lt;os&gt;</em>.<em>&lt;arch&gt;</em>.source_<em>X.X.X.&lt;version&gt;</em>.jar</code></li>
+        <li>eclipse 3.3.2 and earlier: directory <code>plugins/org.eclipse.rcp.source.<em>&lt;os&gt;</em>.<em>&lt;ws&gt;</em>.<em>&lt;arch&gt;</em>_<em>X.X.X.&lt;version&gt;</em>/src/</code></li>
+      </ul>
   </dd>
 
   <dt><strong><a name="howbuildjar">Q: How do I build an SWT jar for my platform?</a></strong>
