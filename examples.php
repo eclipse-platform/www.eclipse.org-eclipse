@@ -27,6 +27,7 @@
 <li>ClipboardExample</li>
 <li>DNDExample (Drag and Drop)</li>
 <li>FileViewer</li>
+<li>GraphicsExample</li>
 <li>HelloWorld [1-5]</li>
 <li>HoverHelp</li>
 <li>ImageAnalyzer</li>
@@ -34,10 +35,18 @@
 <li>LayoutExample</li>
 <li>PaintExample</li>
 <li>TextEditor</li>
-<li>GraphicsExample</li>
 <li>OLEExample (win32 only, OLE)</li>
 <li>OleWebBrowser (win32 only, OLE)</li>
 </ul>
+</p>
+
+<p>The ControlExample, CustomControlExample, LayoutExample, and PaintExample are also available as Eclipse plugins,
+and the following examples are only available as Eclipse plugins:
+<ul>
+<li>BrowserDemo</li>
+<li>WebBrowser</li>
+</ul>
+</p>
 
 <p>There are several ways to download and run the SWT examples:
 <ul>
