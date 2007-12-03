@@ -43,8 +43,8 @@
 <p>The ControlExample, CustomControlExample, LayoutExample, and PaintExample are also available as Eclipse plugins,
 and the following examples are only available as Eclipse plugins:
 <ul>
-<li>BrowserDemo</li>
-<li>WebBrowser</li>
+<li>BrowserDemo in the org.eclipse.swt.examples.browser.demos project</li>
+<li>WebBrowser in the org.eclipse.swt.examples.browser project</li>
 </ul>
 </p>
 
