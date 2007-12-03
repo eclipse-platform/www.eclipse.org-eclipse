@@ -22,7 +22,8 @@ Stefan Zeiger - Bug 32537
 Rutger Ovidius - Bug 55133
 Billy Biggs - Bugs 17563, 43684
 Sebastian Peleato - SWT Automation API, Bugs 15025, 53107
-Alex Blewitt - Bug 57876
+Alex Blewitt - Bug 57876, 211361, 210861, 210869
+Leo dos Santos - Bug 210894
 Ryan Lowe - Bug 53506
 Sam Robb - Bugs 40523, 72123
 Sumit Sarkar - Bug 61649
