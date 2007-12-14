@@ -534,9 +534,9 @@ Eclipse*fontList:-misc-fixed-medium-r-normal-*-10-100-75-75-c-60-iso8859-1
   <dt><strong><a name="keyboardshortcuts">Q: What are the standard keyboard shortcuts on Windows, Mac OS X, GTK?</a></strong></dt>
   <dd>A: Since SWT uses native controls, standard keyboard shortcuts can be used in SWT applications.
   Here is a useful <a href="http://en.wikipedia.org/wiki/Table_of_keyboard_shortcuts">Table of Keyboard Shortcuts</a>.
-  On Mac OS X, the OS screen reader, VoiceOver, can also be used to navigate through controls using the keyboard.
+  <br>On Mac OS X, the OS screen reader, VoiceOver, can also be used to navigate through controls using the keyboard.
   Here is the <a href="http://www.apple.com/accessibility/voiceover/manual.html">VoiceOver User's Manual</a>.
-  Eclipse has additional keyboard shortcuts. For a list, type Ctrl + Shift + L.
+  <br>Eclipse has additional keyboard shortcuts. For a list, type Ctrl + Shift + L.
   </dd>
 
   <dt><strong><a name="missingjar">Q: Why do I get the error "java.lang.NoClassDefFoundError: org/eclipse/swt/internal/XXX/OS."?</a></strong></dt>
