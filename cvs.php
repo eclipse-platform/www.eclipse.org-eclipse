@@ -59,7 +59,7 @@ to help you get set up.<p>
         <center><p><img src="images/swt-resource-perspective.png" alt="perspective"></p></center>
 
     <li>Next, we expand <b>org.eclipse.swt</b> and find the
-        <b>.classpath</b> file for our platform and rename it to
+        <b>.classpath_<em>xxx</em></b> file for our platform and copy it to a file named
         <b>.classpath</b>.
 
         <center><p><img src="images/swt-classpath.png" alt="classpath"></p></center>
@@ -67,6 +67,8 @@ to help you get set up.<p>
     <li>After changing a <b>.classpath</b> file, it's usually a good
         idea to clean the projects that depend on it to make sure
         everyone is cool.
+        <br>(Note that if you are building for a 64-bit platform, there is an extra step needed.
+        Please see <a href="http://www.eclipse.org/swt/faq.php#gtk64">this FAQ</a> for details).
 
         <center><p><img src="images/swt-clean.png" alt="classpath"></p></center>
 

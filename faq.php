@@ -297,13 +297,17 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
   <ol>
   	<li>Start Eclipse and retrieve the following projects from dev.eclipse.org: org.eclipse.swt, org.eclipse.swt.gtk.linux.x86_64, org.eclipse.swt.tools
       (see <a href="http://www.eclipse.org/swt/cvs.php">How to use SWT from CVS</a>)</li>
-  	<li>Open the file build.xml located into the org.eclipse.swt.gtk.linux.x86_64 fragment. Run Ant to execute the ant task build.nativeLibraries defined in build.xml.</li>
-  	<li>Refresh the project org.eclipse.swt.gtk.linux.x86_64</li>
+    <li>Use the .classpath_gtk as the .classpath file in the org.eclipse.swt project</li>
+  	<li>You need to run the 32 to 64 bit conversion on the swt code base.
+  	To do this: go to the org.eclipse.swt.gtk.linux.x86_64 fragment, click on build.xml and 
+	right click &gt; Run As &gt; Ant Build... . Once the ant dialog is up, clear all 
+	targets listed and select the "replace.32.to.64" target. Run it!</li>
+  	<li>Once the ant target is done, you need to refresh the org.eclipse.swt project.</li>
   </ol>
   The project org.eclipse.swt.gtk.linux.x86_64 now contains the 64 bit native libraries. The 64 bit java and C source code
   has been copied under the org.eclipse.swt.gtk.linux.x86_64/src folder.
   </dd>
-
+  
   <dt><strong><a name="gtkstartup">Q: What do I need to run SWT on Linux/GTK?</a></strong></dt>
   <dd>A: SWT requires the following libraries with the specified versions or later:
     <p>For Eclipse 3.0 and newer:</p>
