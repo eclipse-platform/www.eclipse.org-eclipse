@@ -16,6 +16,7 @@
 	<li><a href="#m1">Milestone M1</a></li>
 	<li><a href="#m2">Milestone M2</a></li>
 	<li><a href="#m3">Milestone M3</a></li>
+	<li><a href="#m4">Milestone M4</a></li>
 </ul>
 
 
@@ -117,6 +118,71 @@
     <td width="70%" valign="top">New API was added to support copy and paste
       of an image to and from the clipboard.</td>
   </tr>
+</table>
+<h2><font face="Verdana"><a name=m4>Milestone M4</a></font></h2>
+
+<table border="0" width="80%" cellpadding="10" cellspacing="0">
+   <tr>
+    <td colspan="2"><hr />    </td>
+  </tr>
+ <tr id="swt-1">
+    <td width="30%" valign="top" align="left"><b>Accessibility for Mac OS X</b></td>
+    <td width="70%" valign="top">Eclipse is now accessible on Mac OS X Carbon.
+      The Mac screen reader, VoiceOver, can be turned on and off with <b>Command+F5</b>.
+      The snapshot below shows the VoiceOver cursor highlighting a tool item
+      in Eclipse.
+      <p><img src="images/voiceover.png" alt="VoiceOver showing focus on Eclipse tool item" /></p></td>
+  </tr>
+  <tr>
+    <td colspan="2"><hr />
+    </td>
+  </tr>
+  <tr id="swt-2">
+    <td width="30%" valign="top" align="left"><b>URL transfer support</b></td>
+    <td width="70%" valign="top">There is new Drag and Drop API to support the
+      conversion between text in URL format and a platform-specific representation
+      of the data.
+  <p><img src="images/URL-transfer-before.png" alt="URL transfer before" />
+  <p><img src="images/URL-transfer-after.png" alt="URL transfer after" /></p>
+  For further details, see <a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet284.java">Snippet 284</a>.
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><hr />
+    </td>
+  </tr>
+  <tr id="swt-3">
+    <td width="30%" valign="top" align="left"><b>Create a region from a path</b></td>
+    <td width="70%" valign="top">There is new API to flatten a graphics path
+      into line segments. Line segments can be used to create a region, which
+      is used for non-rectangular shells. This <a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet285.java">snippet</a> creates
+      a circular shell from a path.
+      <p><img src="images/regionfrompath.png" alt="Region from Path" /></p></td>
+  </tr>
+  <tr>
+    <td colspan="2"><hr />
+    </td>
+  </tr>
+  <tr id="swt-4">
+    <td width="30%" valign="top" align="left"><b>OpenGL support on Solaris</b></td>
+    <td width="70%" valign="top">OpenGL support has been added on the Solaris-GTK
+      and Solaris-Motif platforms.
+      <p><img src="images/solarisopengl.png" alt="Solaris OpenGL" /></p></td>
+  </tr>
+  <tr>
+    <td colspan="2"><hr />
+    </td>
+  </tr>
+  <tr id="swt-5">
+    <td width="30%" valign="top" align="left"><b>Proxy settings on Mozilla-based
+        Browsers</b></td>
+    <td width="70%" valign="top">Mozilla-based Browsers now support access to
+      the web through a proxy. This can be set by specifying the <code>network.proxy_host</code> and <code>network.proxy_port</code> java
+      properties at startup.
+      <p> For more info see <a href="http://www.eclipse.org/swt/faq.php#browserproxy">How
+          do I set a proxy for the Browser to use?</a></p></td>
+  </tr>
+ 
 </table>
 
 </body>
