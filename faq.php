@@ -48,6 +48,7 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
   <li><a href="#missinglibXm">Why do I get the error "java.lang.UnsatisfiedLinkError: libXm.so.2: cannot open shared object file: No such file or directory."?</a></li>
   <li><a href="#usingLesstif">Why do I get the warning "XmParseMappingCreate() is not implemented yet" on Linux/Motif?</a></li>
   <li><a href="#reflectionX">Why do I get an error beginning with "org.eclipse.swt.SWTError: Font not valid" on startup?</a></li>
+  <li><a href="#notenoughheap">Why do I get the error "java.lang.OutOfMemoryError: Java heap space" when I try to create a very large Image?</a></li>
   <p></p>
   <li><a href="#swinginswt">Can I use Swing or AWT inside Eclipse?</a></li>
   <li><a href="#subclassing">Why can't I subclass SWT widgets like Button and Table?</a></li>
@@ -626,6 +627,14 @@ Eclipse*fontList:-misc-fixed-medium-r-normal-*-10-100-75-75-c-60-iso8859-1
   this has been observed to sometimes happen is when accessing a remote machine via Reflection X.  This
   situation can be made to work by changing some settings in Reflection X.  For information about how to
   do this see <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=33828#c14">bug 33828</a>.
+  </dd>
+
+  <dt><strong><a name="notenoughheap">Q: Why do I get the error "java.lang.OutOfMemoryError: Java heap space" when I try to create a very large Image?</a></strong></dt>
+  <dd>A: This error occurs if there is not enough Java heap space to create a very large image, for example:<br>
+    <pre>new Image(display, 10985, 1102);</pre>
+  <br>To allocate more heap space for the Java VM, start eclipse with a VM argument that allocates more heap, for example:
+    <pre>eclipse -vmargs -Xmx400m</pre>
+  <br>allocates 400 Mb of heap space.
   </dd>
 
   <dt><strong><a name="swinginswt">Q: Can I use Swing or AWT inside Eclipse?</a></strong></dt>
