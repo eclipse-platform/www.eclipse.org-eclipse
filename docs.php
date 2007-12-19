@@ -68,11 +68,12 @@ the <em>Platform Plug-in Developer Guide</em>. To get there in Eclipse, select
 </table>
 
 <ul>
-<li>SWT articles published in JDJ:
+<li>SWT articles published in JDJ and OS News:
   <ul>
     <li><a href="http://eclipse.sys-con.com/read/345650.htm">Ship Happens! Insights From the Eclipse SWT Community</a></li>
     <li><a href="http://www.sys-con.com/story/?storyid=37463&amp;DE=1">SWT: A Native Widget Toolkit for Java, Part 1 of 2</a></li>
     <li><a href="http://www.sys-con.com/story/?storyid=37509&amp;DE=1">SWT: A Native Widget Toolkit for Java, Part 2 of 2</a></li>
+    <li><a href="http://www.osnews.com/story.php/10883/Desktop-Java-with-SWT-an-interview-with-Steve-Northover/">Desktop Java with SWT: an interview with Steve Northover</a></li>
   </ul>
   <p></p>
 
