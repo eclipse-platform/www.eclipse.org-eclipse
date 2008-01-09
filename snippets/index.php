@@ -100,6 +100,12 @@ enter a bug report</a>. Thanks in advance for your contribution!</p>
       </ul>
       <p></p>
 
+    <li><a name="ccombo"><b>CCombo</b></a>
+      <ul>
+        <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet39.java">create a ccombo</a></li>
+      </ul>
+      <p></p>
+
     <li><a name="clipboard"><b>Clipboard</b></a>
       <ul>
         <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet94.java">copy and paste data with the clipboard</a></li>
