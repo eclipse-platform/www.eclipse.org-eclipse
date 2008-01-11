@@ -26,7 +26,7 @@ Here are some useful links:</p>
 
 <h4>
 <form action="https://bugs.eclipse.org/bugs/buglist.cgi" method="get">
-Find an open SWT bug report containing: 
+Find open SWT bug reports containing: 
 <input type="text" name="long_desc" />
 <input type="submit" value="Search" />
 <input type="hidden" name="order" value="Bug Number" />
@@ -40,7 +40,7 @@ Find an open SWT bug report containing:
 
 <h4>
 <form action="https://bugs.eclipse.org/bugs/buglist.cgi" method="get">
-Find any SWT bug report containing: 
+Find any SWT bug reports containing: 
 <input type="text" name="long_desc" />
 <input type="submit" value="Search" />
 <input type="hidden" name="order" value="Bug Number" />
