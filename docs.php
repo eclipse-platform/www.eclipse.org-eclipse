@@ -59,6 +59,8 @@ the <em>Platform Plug-in Developer Guide</em>. To get there in Eclipse, select
 <tr><th bgcolor="#0080c0" align="left" style="padding: 2px;"><font color="#ffffff">SWT Articles at eclipse.org</font>
 </table>
 
+<p>There are all sorts of articles here:</p>
+
   <ul>
 	<li><a href="eclipse.php">How to develop SWT applications in Eclipse</a></li>
 	<li><a href="examples.php">How to run the ControlExample and other SWT examples</a></li>
@@ -73,6 +75,8 @@ the <em>Platform Plug-in Developer Guide</em>. To get there in Eclipse, select
 <table width="100%">
 <tr><th bgcolor="#0080c0" align="left" style="padding: 2px;"><font color="#ffffff">More Articles about SWT</font>
 </table>
+
+<p>External articles, interviews in online journals:</p>
 
 <ul>
 <li>SWT articles published in JDJ and OS News:
@@ -95,14 +99,35 @@ the <em>Platform Plug-in Developer Guide</em>. To get there in Eclipse, select
 </ul>
 
 <table width="100%">
+<tr><th bgcolor="#0080c0" align="left" style="padding: 2px;"><font color="#ffffff">SWT Online Javadoc</font>
+</table>
+
+<p>In addition to reading the Javadoc inside Eclipse, you can read it online here:</p>
+ 
+  <ul>
+	<li><a href="http://help.eclipse.org/stable/nftopic/org.eclipse.platform.doc.isv/reference/api/overview-summary.html">Online Javadoc</a></li>
+  </ul>
+
+<table width="100%">
 <tr><th bgcolor="#0080c0" align="left" style="padding: 2px;"><font color="#ffffff">SWT Online Tutorials</font>
 </table>
 
-<p>There have been a few tutorials posted about SWT which you may find useful.</p>
+<p>There have been a few tutorials posted about SWT that you may find useful:</p>
 
 <ul>
-  <li><a href="http://www.cs.umanitoba.ca/~eclipse/">Getting Started
-       with Eclipse and SWT</a> from the University of Manitoba.
+	<li><a href="http://www.cs.umanitoba.ca/~eclipse/">Getting Started with Eclipse and SWT</a></li>
+	
+		<p>This site contains some tutorials and example programs that will help programmers who are 
+		new to Eclipse and the Standard Widget Toolkit (SWT) install Eclipse correctly and run some 
+		simple Java/SWT programs.</p>
+		
+	<li><a href="http://www.cs.umanitoba.ca/~eclipse/6-Compiling.pdf">Compiling Eclipse Applications for Windows With GCJ/MinGW</a></li>
+	
+		<p>A guide for compiling an SWT application into an executable.</p>
+	
+	<li><a href="http://www.javalobby.org/eps/swt_intro/">An introduction to SWT</a></li>
+	
+		<p>Adapted from "SWT and JFace", a No Fluff Just Stuff 2004 presentation.</p>
 </ul>
 
 </table>
