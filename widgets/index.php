@@ -17,7 +17,7 @@
 <p>Below are screenshots and links to documentation for many of the
 widgets included in SWT.  For a complete list of classes including
 those that don't screeenshot well, see the
-<a href="http://help.eclipse.org/stable/nftopic/org.eclipse.platform.doc.isv/reference/api/org/eclipse/swt/package-summary.html">SWT Javadoc</a>.</p>
+<a href="http://help.eclipse.org/stable/nftopic/org.eclipse.platform.doc.isv/reference/api/overview-summary.html">SWT Javadoc</a>.</p>
 
 <table width="100%" style="border-bottom: 1px solid #000000;">
 <colgroup>
