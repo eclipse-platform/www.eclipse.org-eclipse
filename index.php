@@ -22,7 +22,7 @@ on which it is implemented.</p>
 </table>
 
 <p>We are looking for help with the cocoa port of SWT.
-</p><p>To get started, <a href="http://www.eclipse.org/swt/cvs.php">load SWT from CVS</a> into your eclipse workspace.
+To get started, <a href="http://www.eclipse.org/swt/cvs.php">load SWT from CVS</a> into your eclipse workspace.
 The projects you need are:
 <ul>
 <li>org.eclipse.swt</li>
@@ -31,9 +31,9 @@ The projects you need are:
 </ul>
 <p>If you find a bug, <a href="https://bugs.eclipse.org/bugs/enter_bug.cgi?product=Platform&component=SWT">open an eclipse bug report</a>
 with <b>Platform: Macintosh</b> and <b>OS: Mac OSX - Cocoa</b>.
-</p><p>Also, you can <a href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&short_desc_type=allwordssubstr&short_desc=&classification=Eclipse&product=Platform&component=SWT&long_desc_type=allwordssubstr&long_desc=&bug_file_loc_type=allwordssubstr&bug_file_loc=&status_whiteboard_type=allwordssubstr&status_whiteboard=&keywords_type=allwords&keywords=&op_sys=Mac+OS+X+-+Cocoa&emailtype1=substring&email1=&emailtype2=substring&email2=&bugidtype=include&bug_id=&votes=&chfieldfrom=&chfieldto=Now&chfieldvalue=&cmdtype=doit&order=Reuse+same+sort+as+last+time&field0-0-0=noop&type0-0-0=noop&value0-0-0=">
+Also, you can <a href="https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&short_desc_type=allwordssubstr&short_desc=&classification=Eclipse&product=Platform&component=SWT&long_desc_type=allwordssubstr&long_desc=&bug_file_loc_type=allwordssubstr&bug_file_loc=&status_whiteboard_type=allwordssubstr&status_whiteboard=&keywords_type=allwords&keywords=&op_sys=Mac+OS+X+-+Cocoa&emailtype1=substring&email1=&emailtype2=substring&email2=&bugidtype=include&bug_id=&votes=&chfieldfrom=&chfieldto=Now&chfieldvalue=&cmdtype=doit&order=Reuse+same+sort+as+last+time&field0-0-0=noop&type0-0-0=noop&value0-0-0=">
 pick an interesting bug from here</a>.
-</p><p>Then see if you can figure out how to fix the problem, and if so, attach a patch to the bug report.
+Then see if you can figure out how to fix the problem, and if so, attach a patch to the bug report.
 Discussion can take place on the <a href="news://news.eclipse.org/eclipse.platform.swt">SWT newsgroup</a>.
 </p><p>See Steve Northover's blog for a bit of background:
 <ul>
@@ -94,7 +94,8 @@ Discussion can take place on the <a href="news://news.eclipse.org/eclipse.platfo
 <li><a href="cvs.php">How to use SWT from CVS</a></li>
 <li><a href="jnigen.php">How to generate the SWT JNI Code</a></li>
 <li><a href="opengl/">Using OpenGL with SWT 3.2</a></li>
-<li><a href="http://www.eclipse.org/articles/index.php?filter=SWT">More articles about SWT</a> from eclipse.org</li>
+<li><a href="http://www.eclipse.org/articles/index.php?sort=date&category=SWT">Many more articles about SWT</a> on Eclipse Corner at eclipse.org</li>
+<li><a href="http://www.eclipse.org/swt/docs.php">Full list of articles and documentation</a></li>
 </ul>
 
 <table width="100%">

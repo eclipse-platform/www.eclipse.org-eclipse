@@ -56,15 +56,22 @@ the <em>Platform Plug-in Developer Guide</em>. To get there in Eclipse, select
 
 
 <table width="100%">
-<tr><th bgcolor="#0080c0" align="left" style="padding: 2px;"><font color="#ffffff">SWT articles on Eclipse Corner</font>
+<tr><th bgcolor="#0080c0" align="left" style="padding: 2px;"><font color="#ffffff">SWT Articles at eclipse.org</font>
 </table>
 
-<p><ul>
-  <li><a href="http://www.eclipse.org/articles/index.php?filter=SWT">Click here to search Eclipse Corner for SWT articles.</a></li>
-</ul></p>
+  <ul>
+	<li><a href="eclipse.php">How to develop SWT applications in Eclipse</a></li>
+	<li><a href="examples.php">How to run the ControlExample and other SWT examples</a></li>
+	<li><a href="macosx/">How to deploy SWT applications on Mac OS X</a></li>
+	<li><a href="jws/">How to deploy SWT applications using Java Web Start</a></li>
+	<li><a href="cvs.php">How to use SWT from CVS</a></li>
+	<li><a href="jnigen.php">How to generate the SWT JNI Code</a></li>
+	<li><a href="opengl/">Using OpenGL with SWT 3.2</a></li>
+	<li><a href="http://www.eclipse.org/articles/index.php?sort=date&category=SWT">Many more articles about SWT</a> on Eclipse Corner at eclipse.org</li>
+  </ul>
 
 <table width="100%">
-<tr><th bgcolor="#0080c0" align="left" style="padding: 2px;"><font color="#ffffff">More articles about SWT</font>
+<tr><th bgcolor="#0080c0" align="left" style="padding: 2px;"><font color="#ffffff">More Articles about SWT</font>
 </table>
 
 <ul>
