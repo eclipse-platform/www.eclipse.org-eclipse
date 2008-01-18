@@ -16,11 +16,10 @@
 <p><b>Sleak</b> is a simple tool that monitors the creation and disposing of SWT graphics resources.
 (<a href="http://www.eclipse.org/articles/swt-design-2/sleak.htm">see tutorial</a>)</p>
 <ul>
-  <li><b>Sleak plug-in for Eclipse 3.3</b> <a href="tools/org.eclipse.swt.sleak_1.0.0.zip">(zip file)</a>
-  <li><b>Sleak plug-in for Eclipse 3.4</b> <a href="tools/org.eclipse.swt.sleak_1.0.1.zip">(zip file)</a>
+  <li><b>Sleak plug-in for Eclipse 2.1.0 to 3.3</b> <a href="tools/org.eclipse.swt.sleak_1.0.0.zip">(zip file)</a>
+  <li><b>Sleak plug-in for Eclipse 3.4 or later</b> <a href="tools/org.eclipse.swt.sleak_1.0.1.zip">(zip file)</a>
     <ul>
       <li>Monitors all other plug-ins running in its Eclipse environment.</li>
-      <li>Requires Eclipse 2.1.0 or later.</li>
       <li>Extract the zip file above into the <code>eclipse/plugins/</code> folder.</li>
       <li>Extract the <code>.options</code> file from the <code>eclipse/plugins/org.eclipse.ui_&lt;version&gt;.jar/</code> archive to the <code>eclipse/</code> folder.</li>
        <li>Add the following lines to the <code>.options</code> file:<br>
