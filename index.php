@@ -53,12 +53,12 @@ Discussion can take place on the <a href="news://news.eclipse.org/eclipse.platfo
   <table width="100%">
   <tr><td>
       <b><font size="+1">Stable</font></b><br>
-      <a href="http://download.eclipse.org/eclipse/downloads/drops/R-3.3-200706251500/download.php?dropFile=swt-3.3-win32-win32-x86.zip">Windows</a>,
-      <a href="http://download.eclipse.org/eclipse/downloads/drops/R-3.3-200706251500/download.php?dropFile=swt-3.3-gtk-linux-x86.zip">Linux</a>,
+      <a href="http://download.eclipse.org/eclipse/downloads/drops/R-3.3.1.1-200710231652/download.php?dropFile=swt-3.3.1.1-win32-win32-x86.zip">Windows</a>,
+      <a href="http://download.eclipse.org/eclipse/downloads/drops/R-3.3.1.1-200710231652/download.php?dropFile=swt-3.3.1.1-gtk-linux-x86.zip">Linux</a>,
       <span style="white-space: nowrap;">
-      <a href="http://download.eclipse.org/eclipse/downloads/drops/R-3.3-200706251500/download.php?dropFile=swt-3.3-carbon-macosx.zip">OS X</a></span>,
-      <a href="http://download.eclipse.org/eclipse/downloads/drops/R-3.3-200706251500/index.php#swt" target="_top">more...</a><br>
-      <small>3.3 Final Release - <span style="white-space: nowrap;">25 June 2007</span></small><br>
+      <a href="http://download.eclipse.org/eclipse/downloads/drops/R-3.3.1.1-200710231652/download.php?dropFile=swt-3.3.1.1-carbon-macosx.zip">OS X</a></span>,
+      <a href="http://download.eclipse.org/eclipse/downloads/drops/R-3.3.1.1-200710231652/index.php#swt" target="_top">more...</a><br>
+      <small>3.3.1.1 Final Release - <span style="white-space: nowrap;">25 October 2007</span></small><br>
   <ul>
   <li><a href="R3_3/plan.html">3.3 Development Plan</a></li>
   <li><a href="R3_3/new_and_noteworthy.html">New and Noteworthy</a></li>
