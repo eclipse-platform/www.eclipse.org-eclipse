@@ -14,11 +14,11 @@
 <tr><?php include "../sidebar.php"; ?>
 <td valign="top" style="padding: 10px"><h1 style="padding: 0; margin: 0; border-bottom: 1px solid #000000;">Using OpenGL in SWT Applications</h1>
 
+<h3>Java OpenGL Bindings (SWT 3.2 and newer)</h3>
+
 <p>Support for OpenGL is included in SWT as of Eclipse 3.2 in the package
 <i>org.eclipse.swt.opengl</i>. See the <b>GLCanvas</b> class for
 a widget which hosts an OpenGL context.</p>
-
-<h3>Java OpenGL Bindings</h3>
 
 <p>OpenGL applications use two separate APIs: the window-system
 independent drawing API (OpenGL), and a window-system specific
@@ -40,25 +40,23 @@ For an example using <i>JOGL</i> with SWT, see
 for OpenGL which aims to be simple and thin.  <i>gljava</i> is reported to work
 well with SWT.
 <p></p>
-<li><i>org.eclipse.opengl</i> was SWT's first experimental Java binding
-for OpenGL 1.1 and GLU built as an Eclipse plugin. For a
-simple example using this binding, see
-<a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet174.java?rev=HEAD&amp;content-type=text/vnd.viewcvs-markup">Snippet 174</a>.
-<p></p>
 </ol>
 
-<h3>The Experimental org.eclipse.opengl Binding</h3>
+<h3>The Experimental org.eclipse.opengl Binding (pre-SWT 3.2)</h3>
 
-<p>To run the OpenGL view example, simply extract the zip and the
+<p>Prior to Eclipse 3.2 there were experimental packages (available below) that facilitated the use of OpenGL in SWT.
+To run the OpenGL view example, simply extract the zip and the
 <i>org.eclipse.opengl</i> plugin to your Eclipse plugins folder. To run the standalone
 example, download the examples zip along with the <i>org.eclipse.opengl</i> zip for
-your platform and import them into your workspace.</p>
+your platform and import them into your workspace.  There is also a stand-alone snippet that uses this package
+(<a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet174.java?rev=HEAD&amp;content-type=text/vnd.viewcvs-markup">Snippet 174</a>).
+</p>
 
-<p>Please note that this binding is experimental and subject to change.  <b>If you are using SWT 3.2 or newer then you should
-use the supported OpenGL binding that is included in the SWT package instead.</b></p>
+<p><b>If you are using SWT 3.2 or newer then you should use the supported OpenGL binding that is
+included in the SWT package instead of these experimental downloads which are not supported.</b></p>
 
 <table width="100%">
-<tr><th bgcolor="#0080c0" align="left" style="padding: 2px;"><font color="#ffffff">&nbsp; Experimental OpenGL Binding 0.5 for SWT</font>
+<tr><th bgcolor="#0080c0" align="left" style="padding: 2px;"><font color="#ffffff">&nbsp; Deprecated OpenGL Binding for SWT (Experimental)</font>
 </table>
 
 <table width="100%" cellpadding="3px">
