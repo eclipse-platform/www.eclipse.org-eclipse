@@ -93,7 +93,7 @@ Discussion can take place on the <a href="news://news.eclipse.org/eclipse.platfo
 <li><a href="jws/">How to deploy SWT applications using Java Web Start</a></li>
 <li><a href="cvs.php">How to use SWT from CVS</a></li>
 <li><a href="jnigen.php">How to generate the SWT JNI Code</a></li>
-<li><a href="opengl/">Using OpenGL with SWT</a></li>
+<li><a href="opengl/">Using OpenGL in SWT Applications</a></li>
 <li><a href="http://www.eclipse.org/articles/index.php?sort=date&category=SWT">Many more articles about SWT</a> on Eclipse Corner at eclipse.org</li>
 <li><a href="http://www.eclipse.org/swt/docs.php">Full list of articles and documentation</a></li>
 </ul>
