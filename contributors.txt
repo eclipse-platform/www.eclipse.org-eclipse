@@ -65,5 +65,5 @@ ArronM - Bug 173556 - WMP fix
 George Comninos - Bug 204626
 Tobias Gerdin - Bug 202328
 Josh Arnold - Bug 209854
-Mark Powell - Bugs 47783, 86457
+Mark Powell - Bugs 47783, 86457, 196864
 Sky Yan - Bug 211865
