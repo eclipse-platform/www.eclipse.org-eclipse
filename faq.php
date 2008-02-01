@@ -27,7 +27,7 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
   <li><a href="#howbuildjar">How do I build an SWT jar for my platform?</a></li>
   <li><a href="#howbuilddll">How do I build the SWT JNI libraries for my platform?</a></li>
   <li><a href="#buildeclipseexe">How do I build the Eclipse executable for my platform?</a></li>
-  <li><a href="#gtk64">How do I build the 64 bit version of SWT GTK?</a></li>
+  <li><a href="#gtk64">How do I build the 64-bit version of SWT GTK?</a></li>
   <li><a href="launcher.html">What are the arguments for the Eclipse Launcher?</a></li>
   <p></p>
   <li><a href="#gtkstartup">What do I need to run SWT on Linux/GTK?</a></li>
@@ -293,20 +293,23 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
     <p>This description was originally contributed by Colin R Devilbiss.</p>
   </dd>
 
-  <dt><strong><a name="gtk64">Q: How do I build the 64 bit version of SWT GTK?</a></strong></dt>
-  <dd>Follow these steps to extract the 64 bit SWT GTK source code and produce your own build.
+  <dt><strong><a name="gtk64">Q: How do I build the 64-bit version of SWT GTK?</a></strong></dt>
+  <dd>A: Follow these steps to extract the 64-bit SWT GTK source code from CVS and produce your own build:
   <ol>
-  	<li>Start Eclipse and retrieve org.eclipse.swt and org.eclipse.swt.gtk.linux.x86_64 from dev.eclipse.org
-      (See <a href="http://www.eclipse.org/swt/cvs.php">How to use SWT from CVS</a>).</li>
-    <li>Use .classpath_gtk as the .classpath file in the org.eclipse.swt project</li>
-  	<li>You need to run the 32 to 64 bit conversion on the swt code base.
-  	To do this, go to the org.eclipse.swt.gtk.linux.x86_64 fragment, click on build.xml and 
-	right click &gt; Run As &gt; Ant Build... In the Ant dialog, clear all targets listed
-	and select the "replace.32.to.64" target. Run it!</li>
-  	<li>Once the Ant target is done, you need to refresh the org.eclipse.swt project.</li>
+    <li>Start Eclipse and retrieve the <code>org.eclipse.swt</code> and <code>org.eclipse.swt.gtk.linux.x86_64</code> projects
+      from dev.eclipse.org (see <a href="http://www.eclipse.org/swt/cvs.php">How to use SWT from CVS</a>, use <code>.classpath_gtk</code>
+      as the <code>.classpath</code> file in the <code>org.eclipse.swt</code> project).</li>
+    <li>Convert SWT's Java and C code from its 32-bit form to 64-bit:</li>
+    <ul>
+      <li>To convert the Java code in-place, go to the <code>build.xml</code> ant script in the <code>org.eclipse.swt.gtk.linux.x86_64</code>
+        project and run its "replace.32.to.64" target.  Once this target has completed you must refresh (F5)
+        the <code>org.eclipse.swt</code> project in order to pick up the changes.</li>
+      <li>To convert and build the C code, run the "buildNatives" target in the same <code>build.xml</code> file.  Refresh (F5)
+        the <code>org.eclipse.swt.gtk.linux.x86_64</code> project when this target has completed, to pick up the new libraries.</li>
+    </ul>
+    <li>You're done!  The <code>org.eclipse.swt.gtk.linux.x86_64</code> project will now contain the 64-bit native libraries, and if you're
+      interested, the 64-bit source code will now be available in the <code>org.eclipse.swt.gtk.linux.x86_64/src</code> folder.  
   </ol>
-  The project org.eclipse.swt.gtk.linux.x86_64 now contains the 64 bit native libraries. The 64 bit java and C source code
-  has been copied under the org.eclipse.swt.gtk.linux.x86_64/src folder.
   </dd>
   
   <dt><strong><a name="gtkstartup">Q: What do I need to run SWT on Linux/GTK?</a></strong></dt>
