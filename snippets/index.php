@@ -47,8 +47,9 @@ enter a bug report</a>. Thanks in advance for your contribution!</p>
 
     <li><a name="accessibility"><b>Accessibility</b></a>
       <ul>
-        <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet162.java">an accessible listener to provide state information</a></li>
-        <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet164.java">override the text that is spoken for a native Button</a></li>
+        <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet162.java">using an accessible listener to provide state information</a></li>
+        <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet164.java">override the text that is spoken for a native button</a></li>
+		<li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet291.java">give accessible names to a tree and its tree items</a></li>
       </ul>
       <p></p>
 
