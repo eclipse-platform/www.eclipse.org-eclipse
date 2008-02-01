@@ -296,8 +296,9 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
   <dt><strong><a name="gtk64">Q: How do I build the 64-bit version of SWT GTK?</a></strong></dt>
   <dd>A: Follow these steps to extract the 64-bit SWT GTK source code from CVS and produce your own build:
   <ol>
-    <li>Start Eclipse and retrieve the <code>org.eclipse.swt</code> and <code>org.eclipse.swt.gtk.linux.x86_64</code> projects
-      from dev.eclipse.org (see <a href="http://www.eclipse.org/swt/cvs.php">How to use SWT from CVS</a>, use <code>.classpath_gtk</code>
+    <li>Start Eclipse and retrieve the <code>org.eclipse.swt</code>, <code>org.eclipse.swt.gtk.linux.x86_64</code> and
+      <code>org.eclipse.swt.tools</code> projects from dev.eclipse.org (see
+      <a href="http://www.eclipse.org/swt/cvs.php">How to use SWT from CVS</a>, use <code>.classpath_gtk</code>
       as the <code>.classpath</code> file in the <code>org.eclipse.swt</code> project).</li>
     <li>Convert SWT's Java and C code from its 32-bit form to 64-bit:</li>
     <ul>
