@@ -15,49 +15,38 @@
 	</security>
 
 	<resources>
+		<j2se version="1.4+" />
 		<jar href="controlexample.jar" />
 	</resources>
 
 	<resources os="Windows" arch="x86">
-		<j2se version="1.4+" />
 		<nativelib href="swt-native-win32-win32.jar" />
 		<jar href="swt-win32-win32.jar" />
 	</resources>
 
 	<resources os="Linux" arch="ppc">
-		<j2se version="1.4+" />
 		<nativelib href="swt-native-gtk-linux-ppc.jar" />
 		<jar href="swt-gtk-linux-ppc.jar" />
 	</resources>
 
 	<resources os="Linux" arch="x86_64">
-		<j2se version="1.4+" />
 		<nativelib href="swt-native-gtk-linux-x86_64.jar" />
 		<jar href="swt-gtk-linux-x86_64.jar" />
 	</resources>
 
 	<resources os="Linux" arch="amd64">
-		<j2se version="1.4+" />
 		<nativelib href="swt-native-gtk-linux-x86_64.jar" />
 		<jar href="swt-gtk-linux-x86_64.jar" />
 	</resources>
 
 	<resources os="Linux">
-		<j2se version="1.4+" />
 		<nativelib href="swt-native-gtk-linux-x86.jar" />
 		<jar href="swt-gtk-linux-x86.jar" />
 	</resources>
 
 	<resources os="SunOS" arch="sparc">
-		<j2se version="1.4+" />
 		<nativelib href="swt-native-gtk-solaris-sparc.jar" />
 		<jar href="swt-gtk-solaris-sparc.jar" />
-	</resources>
-
-	<resources os="Mac\ OS\ X">
-		<j2se version="1.5*" java-vm-args="-XstartOnFirstThread"/>
-		<nativelib href="swt-native-carbon-macosx.jar" />
-		<jar href="swt-carbon-macosx.jar" />
 	</resources>
 
 	<application-desc main-class="org.eclipse.swt.examples.controlexample.ControlExample" />
