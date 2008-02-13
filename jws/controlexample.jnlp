@@ -56,7 +56,8 @@
 
 	<resources os="Mac\ OS\ X">
 		<j2se version="1.5*" java-vm-args="-XstartOnFirstThread"/>
-		<jar href="swt-carbon-osx-universal.jar" />
+		<nativelib href="swt-native-carbon-macosx.jar" />
+		<jar href="swt-carbon-macosx.jar" />
 	</resources>
 
 	<application-desc main-class="org.eclipse.swt.examples.controlexample.ControlExample" />
