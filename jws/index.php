@@ -20,7 +20,7 @@
 	<li>Create a directory <em>&lt;yourApplication&gt;</em> for collecting the deployable .jar archives.</li>
 	<li>Go to <a href="http://www.eclipse.org/swt/">http://www.eclipse.org/swt</a> and download the desired SWT Release for one of your target platforms. Extract this into a convenient location.</li>
 	<li>Rename the <em>swt.jar</em> file in the extracted folder to a name that describes its target platform, such as <em>swt-&lt;platform&gt;.jar</em>.</li>
-	<li>Create a .jar archive of SWT's native libraries for the target platform by going into the extracted folder and executing <em>"<code>jar cvf swt-native-&lt;platform&gt;.jar *.&lt;library-suffix&gt;</code>"</em>.
+	<li><em>(If you are packaging SWT version 3.3 or newer then this step should be skipped)</em> Create a .jar archive of SWT's native libraries for the target platform by going into the extracted folder and executing <em>"<code>jar cvf swt-native-&lt;platform&gt;.jar *.&lt;library-suffix&gt;</code>"</em>.
 		<em>&lt;library-suffix&gt;</em> will be <em>"dll"</em> for Windows and <em>"so"</em> for Linux and Solaris.</li>
 	<li>Copy the jars from steps 3 and 4 into the <em>&lt;yourApplication&gt;</em> directory.  Repeat steps 2 through 4 for each target platform.</li>
 </ol>
@@ -40,7 +40,8 @@
 </ol>
 
 <p>The last step is to create a .jnlp file that will be used to launch your application through JWS <a href="http://java.sun.com/j2se/1.5.0/docs/guide/javaws/developersguide/syntax.html">(jnlp syntax guide)</a>.
-The example .jnlp file below demonstrates how to specify the SWT jars based on the target platform. </p>
+The example .jnlp file below demonstrates how to specify the SWT jars based on the target platform
+<em>(note that if you are packaging SWT version 3.3 or newer then the &lt;nativelib&gt; tags are not needed)</em>.</p>
 
 <table style="border: solid 1px #000000; margin-left: auto; margin-right: auto; background-color: #eeeeff">
 <tr><td><pre style="margin: 0; padding:0;">&lt;?xml version="1.0" encoding="utf-8"?&gt;
