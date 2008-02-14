@@ -28,7 +28,6 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
   <li><a href="#howbuilddll">How do I build the SWT JNI libraries for my platform?</a></li>
   <li><a href="#buildeclipseexe">How do I build the Eclipse executable for my platform?</a></li>
   <li><a href="#gtk64">How do I build the 64-bit version of SWT GTK?</a></li>
-  <li><a href="launcher.html">What are the arguments for the Eclipse Launcher?</a></li>
   <p></p>
   <li><a href="#gtkstartup">What do I need to run SWT on Linux/GTK?</a></li>
   <li><a href="#carbonapp">On carbon, how do I run an SWT application from the command line?</a></li>
