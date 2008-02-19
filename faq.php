@@ -57,7 +57,7 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
   <li><a href="#noprintimage">How do I print a snapshot of a widget?</a></li>
   <li><a href="#smallprint">Why does everything I print seem so small?</a></li>
   <li><a href="#printertrim">What does computeTrim mean for a Printer?</a></li>
-  <li><a href="#autotest">How can I implement user interaction test cases?</a></li>
+  <li><a href="#autotest">How can I implement user interaction tests?</a></li>
   <li><a href="#gtkselectiongone">On gtk, why does my widget's selection disappear when it loses focus?</a></li>
   <p></p>
   <li><a href="#whatisbrowser">What is the SWT Browser widget?</a></li>
@@ -848,12 +848,17 @@ Problem" at: <a href="http://www.cas.mcmaster.ca/~emil/publications/fragile/">ht
 	</p>
   </dd>
 
-  <dt><strong><a name="autotest">Q: How can I implement user interaction test cases?</a></strong></dt>
-  <dd>A: The method <code>org.eclipse.swt.widgets.Display.post(Event)</code> can be used to
-      post mouse and keyboard events into the OS, which emulates a user
-      performing the specified action.  Also, open source application
-      <a href="http://sourceforge.net/projects/abbot/">"Abbot for SWT"</a> assists
-      in the writing of automated test suites.
+  <dt><strong><a name="autotest">Q: How can I implement user interaction tests?</a></strong></dt>
+  <dd>A: The method <code>org.eclipse.swt.widgets.Display.post(Event)</code> can be used to post
+      mouse and keyboard events into the OS, which emulates the user performing the specified action.
+      This is the typical approach that is used for implementing JUnit test cases.
+      <p>There are also stand-alone applications available for automating SWT user interaction tests:
+      <ul>
+        <li><a href="http://sourceforge.net/projects/abbot/">Abbot for SWT</a> (open source)</li>
+        <li><a href="http://swtbot.sourceforge.net/wiki/Main_Page">SWTBot</a> (open source)</li>
+        <li><a href="http://www.instantiations.com/windowtester/">Instantiations Window Tester</a> (commercial)</li>
+      </ul>
+      </p>
   </dd>
 
   <dt><strong><a name="gtkselectiongone">Q: On GTK, why does my widget's selection disappear when it loses focus?</a></strong></dt>
