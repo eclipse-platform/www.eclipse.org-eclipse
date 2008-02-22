@@ -120,6 +120,11 @@ toolkit.</p>
     <p>Feed'n Read is a Java-based open source newsfeed reader. It is powered by the
     Sun ROME syndication framework and uses JFace and SWT.</p>
 
+<li><b><a href="http://matrex.sourceforge.net/">Matrex</a></b>
+
+    <p>Matrex is a multithreaded vectorial spreadsheet application that is
+    written in Java with SWT.</p>
+
 <li><b><a href="http://sancho-gui.sourceforge.net/">sancho</a></b>
 
     <p>sancho is a gui that connects to a p2p core application. Power users
