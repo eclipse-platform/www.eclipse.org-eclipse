@@ -13,6 +13,7 @@
 <tr><?php include "sidebar.php"; ?>
 <td valign="top" style="padding: 10px"><h1 style="padding: 0; margin: 0; border-bottom: 1px solid #000000;">SWT Cocoa Port</h1>
 
+<p></p>
 <table width="100%">
 <tr><th bgcolor="#0080c0" align="left" style="padding: 2px;"><font color="#ffffff">Cocoa Port</font>
 </table>
@@ -25,8 +26,7 @@ The projects you need are:
 <li>org.eclipse.swt.cocoa.macosx</li>
 <li>org.eclipse.swt.examples (not required, but useful for testing)</li>
 </ul>
-<p>If you find a bug, <a href="https://bugs.eclipse.org/bugs/enter_bug.cgi?product=Platform&component=SWT">open an eclipse bug report</a>
-with <b>Platform: Macintosh</b> and <b>OS: Mac OSX - Cocoa</b>.
+<p>If you find a bug, <a href="https://bugs.eclipse.org/bugs/enter_bug.cgi?product=Platform&component=SWT&rep_platform=Macintosh&op_sys=Mac+OS+X+-+Cocoa">open an eclipse bug report</a>.
 Also, you can <a href="https://bugs.eclipse.org/bugs/buglist.cgi?classification=Eclipse&product=Platform&component=SWT&op_sys=Mac+OS+X+-+Cocoa&bug_status=UNCONFIRMED&bug_status=NEW&bug_status=ASSIGNED&bug_status=REOPENED">
 pick an interesting bug from here</a>.
 Then see if you can figure out how to fix the problem, and if so, attach a patch to the bug report.
