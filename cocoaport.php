@@ -28,8 +28,7 @@ The projects you need are:
 </ul>
 <p>If you find a bug, <a href="https://bugs.eclipse.org/bugs/enter_bug.cgi?product=Platform&component=SWT&rep_platform=Macintosh&op_sys=Mac+OS+X+-+Cocoa">open an eclipse bug report</a>.
 Also, you can <a href="https://bugs.eclipse.org/bugs/buglist.cgi?classification=Eclipse&product=Platform&component=SWT&op_sys=Mac+OS+X+-+Cocoa&bug_status=UNCONFIRMED&bug_status=NEW&bug_status=ASSIGNED&bug_status=REOPENED">
-pick an interesting bug from here</a>.
-Then see if you can figure out how to fix the problem, and if so, attach a patch to the bug report.
+pick an interesting bug from here</a>, see if you can figure out how to fix the problem, and if so, attach a patch to the bug report.
 Discussion can take place on the <a href="news://news.eclipse.org/eclipse.platform.swt">SWT newsgroup</a>.
 </p><p>See Steve Northover's blog for a bit of background:
 <ul>
