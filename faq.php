@@ -48,6 +48,7 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
   <li><a href="#usingLesstif">Why do I get the warning "XmParseMappingCreate() is not implemented yet" on Linux/Motif?</a></li>
   <li><a href="#reflectionX">Why do I get an error beginning with "org.eclipse.swt.SWTError: Font not valid" on startup?</a></li>
   <li><a href="#notenoughheap">Why do I get the error "java.lang.OutOfMemoryError: Java heap space" when I try to create a very large Image?</a></li>
+  <li><a href="#debugmode">How do I enable debug mode in Eclipse for SWT?</a></li>
   <p></p>
   <li><a href="#swinginswt">Can I use Swing or AWT inside Eclipse?</a></li>
   <li><a href="#subclassing">Why can't I subclass SWT widgets like Button and Table?</a></li>
@@ -641,6 +642,18 @@ Eclipse*fontList:-misc-fixed-medium-r-normal-*-10-100-75-75-c-60-iso8859-1
   <br>allocates 400 Mb of heap space.
   </dd>
 
+  <dt><strong><a name="debugmode">Q: How do I enable debug mode in Eclipse for SWT?</a></strong></dt>
+  <dd>A: Follow these steps:
+   <ol>
+    <li>Create a .options file in the same directory as your eclipse executable.</li>
+    <li>Place the following lines in the .options file:
+		<br>org.eclipse.ui/debug=true
+		<br>org.eclipse.ui/debug/swtdebugglobal=true</li>
+    <li>Start up eclipse from the command line with the debug flag: ./eclipse -debug</li>
+    </ol>
+	All messages from SWT will be printed to the console window.
+  </dd>
+  
   <dt><strong><a name="swinginswt">Q: Can I use Swing or AWT inside Eclipse?</a></strong></dt>
   <dd>A: Yes.  As of Eclipse 3.2, Swing and AWT can be embedded in SWT on Windows, Motif, GTK and OS X.
   However it is important to note that a supporting JDK is required on some platforms in order for this
