@@ -651,7 +651,7 @@ Eclipse*fontList:-misc-fixed-medium-r-normal-*-10-100-75-75-c-60-iso8859-1
 		<br>org.eclipse.ui/debug/swtdebugglobal=true</li>
     <li>Start up eclipse from the command line with the debug flag: ./eclipse -debug</li>
     </ol>
-	All messages from SWT will be printed to the console window.
+	<p>All messages from SWT will be printed to the console window.
   </dd>
   
   <dt><strong><a name="swinginswt">Q: Can I use Swing or AWT inside Eclipse?</a></strong></dt>
