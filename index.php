@@ -3,19 +3,9 @@
 <head>
     <title>SWT: The Standard Widget Toolkit</title>
     <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-<!--
     <link rel="stylesheet" href="http://dev.eclipse.org/default_style.css" type="text/css">
     <link rel="stylesheet" href="swt.css" type="text/css">
     <link rel="shortcut icon" href="http://www.eclipse.org/images/eclipse.ico" type="image/x-icon">
--->    
-    <link rel="stylesheet" type="text/css" href="/eclipse.org-common/themes/Phoenix/css/small.css" title="small" />
-    <link rel="alternate stylesheet" type="text/css" href="/eclipse.org-common/themes/Phoenix/css/large.css" title="large" />
-    <link rel="stylesheet" type="text/css" href="/eclipse.org-common/themes/Phoenix/css/visual.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="/eclipse.org-common/themes/Phoenix/css/layout.css" media="screen" />
-    <!--[if IE]> 	<link rel="stylesheet" type="text/css" href="/eclipse.org-common/themes/Phoenix/css/ie_style.css" media="screen"/> <![endif]-->
-    <link rel="stylesheet" type="text/css" href="/eclipse.org-common/themes/Phoenix/css/print.css" media="print" />
-    <link rel="stylesheet" type="text/css" href="/eclipse.org-common/themes/Phoenix/css/header.css" media="screen" />
-    <script type="text/javascript" src="/eclipse.org-common/themes/Phoenix/styleswitcher.js"></script>
 </head>
 <body bgcolor="#ffffff" text="#000000">
 <table width="875px" class="swtpage">
