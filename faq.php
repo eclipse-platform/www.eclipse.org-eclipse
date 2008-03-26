@@ -926,7 +926,7 @@ Problem" at: <a href="http://www.cas.mcmaster.ca/~emil/publications/fragile/">ht
       <li>If your application runs as an Eclipse plug-in:
       <ul>
         <li>download the org.mozilla.xpcom Eclipse plug-in
-          (<a href="http://releases.mozilla.org/pub/mozilla.org/xulrunner/releases/1.8.1.3/contrib/eclipse/org.mozilla.xpcom_1.8.1.3-20070320.jar">download XULRunner 1.8.1.3 Eclipse plug-in</a>)</li>
+          (<a href="http://releases.mozilla.org/pub/mozilla.org/xulrunner/releases/1.8.1.3/contrib/eclipse/plugins/org.mozilla.xpcom_1.8.1.3-20080312.jar">download XULRunner 1.8.1.3 Eclipse plug-in</a>)</li>
         <li>import it into your Eclipse workspace</li>
         <li>add it to your plug-in's list of Required Plug-ins (specified in your plug-in's META-INF/MANIFEST.MF file)</li>
       </ul>
