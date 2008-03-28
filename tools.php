@@ -24,7 +24,6 @@
     <ul><li>Extract the zip file into the <code>eclipse/<b>dropins</b>/</code> folder.</li></ul></li>
   <li><b>After extracting the Sleak plug-in (above):</b></li>
     <ul>
-      <li>Monitors all other plug-ins running in its Eclipse environment.</li>
       <li>Extract the <code>.options</code> file from the <code>eclipse/plugins/org.eclipse.ui_&lt;version&gt;.jar/</code> archive to the <code>eclipse/</code> folder.</li>
        <li>Add the following lines to the <code>.options</code> file:<br>
            <code>org.eclipse.ui/debug=true</code>
@@ -32,6 +31,7 @@
        <li>Launch Eclipse with the "-clean -debug" option on the command line.
        	   <ul><li>Note that you do not need the "-clean" option with Eclipse 3.4 M6 or later.</li></ul></li>
        <li>Open the SWT Sleak view (Window &gt; Show View &gt; Other ... &gt; SWT Tools &gt; Sleak)</li>
+       <li>The plug-in monitors all other plug-ins running in its Eclipse environment.</li>
     </ul>
 
   <li><b>Sleak for standalone applications </b><a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.swt.tools/Sleak/org/eclipse/swt/tools/internal/Sleak.java?rev=HEAD&amp;content-type=text/vnd.viewcvs-markup">(Sleak.java)</a></li>
