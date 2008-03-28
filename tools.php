@@ -22,7 +22,7 @@
     <ul><li>Extract the zip file into the <code>eclipse/plugins/</code> folder.</li></ul></li>
   <li><b>Sleak plug-in for Eclipse 3.4 M6 or later</b> <a href="tools/org.eclipse.swt.sleak_1.0.2.zip">(zip file)</a>
     <ul><li>Extract the zip file into the <code>eclipse/<b>dropins</b>/</code> folder.</li></ul></li>
-  <li><b>The Sleak plugin:</b></li>
+  <li><b>After extracting the Sleak plug-in (above):</b></li>
     <ul>
       <li>Monitors all other plug-ins running in its Eclipse environment.</li>
       <li>Extract the <code>.options</code> file from the <code>eclipse/plugins/org.eclipse.ui_&lt;version&gt;.jar/</code> archive to the <code>eclipse/</code> folder.</li>
