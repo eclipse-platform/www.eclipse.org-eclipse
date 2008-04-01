@@ -42,10 +42,10 @@ on which it is implemented.</p>
   <table width="100%">
   <tr><td>
       <b><font size="+1">Development</font></b><br>
-      <a href="http://download.eclipse.org/eclipse/downloads/drops/S-3.4M6-200803301350/download.php?dropFile=swt-3.4M5-win32-win32-x86.zip">Windows</a>,
-      <a href="http://download.eclipse.org/eclipse/downloads/drops/S-3.4M6-200803301350/download.php?dropFile=swt-3.4M5-gtk-linux-x86.zip">Linux</a>,
+      <a href="http://download.eclipse.org/eclipse/downloads/drops/S-3.4M6-200803301350/download.php?dropFile=swt-3.4M6-win32-win32-x86.zip">Windows</a>,
+      <a href="http://download.eclipse.org/eclipse/downloads/drops/S-3.4M6-200803301350/download.php?dropFile=swt-3.4M6-gtk-linux-x86.zip">Linux</a>,
       <span style="white-space: nowrap;">
-      <a href="http://download.eclipse.org/eclipse/downloads/drops/S-3.4M6-200803301350/download.php?dropFile=swt-3.4M5-carbon-macosx.zip">OS X</a></span>,
+      <a href="http://download.eclipse.org/eclipse/downloads/drops/S-3.4M6-200803301350/download.php?dropFile=swt-3.4M6-carbon-macosx.zip">OS X</a></span>,
       <a href="http://download.eclipse.org/eclipse/downloads/drops/S-3.4M6-200803301350/index.php#swt" target="_top">more...</a><br>
       <small>3.4 M6 - <span style="white-space: nowrap;">30 March 2008</span></small><br>
   <ul>
