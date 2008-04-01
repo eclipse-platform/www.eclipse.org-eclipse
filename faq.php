@@ -87,6 +87,7 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
   <li><a href="#twmmodaldialogs">Why don't modal dialogs stay on top of other windows on Solaris 10 using CDE and DTWM?</a></li>
   <li><a href="#32eclipsegtk64">Why do I get strange drawing behaviour when running 32 bit Eclipse on a 64 bit GTK platform?</a></li>
   <li><a href="#rtlgtk28">Why doesn't SWT.RIGHT_TO_LEFT work on some GTK versions (less than 2.8)?</a></li>
+  <li><a href="#decorationHints">Why doesn't my Shell have the trim decorations that I specified in its constructor?</a></li>
 </ul>
 
 <p></p>
@@ -1211,6 +1212,12 @@ Problem" at: <a href="http://www.cas.mcmaster.ca/~emil/publications/fragile/">ht
   <dt><strong><a name="rtlgtk28"> Q:  Why doesn't SWT.RIGHT_TO_LEFT work on some GTK versions (less than 2.8)?</a></strong></dt>
   <dd>A: SWT relies on the Cairo graphics library to render strings and GTK started using Cairo in version 2.8. 
   </dd>
+
+  <dt><strong><a name="decorationHints"> Q:  Why doesn't my Shell have the trim decorations that I specified in its constructor?</a></strong></dt>
+  <dd>A: The native window system is responsible for creating the decorations for all windows, and has the right to not fully honor the set of requested decorations.
+    For this reason, styles that are passed to a Shell's constructor are considered to be hints.  This is a constraint that all native applications are subject to.
+  </dd>
+
 </dl>
 </table>
 </body>
