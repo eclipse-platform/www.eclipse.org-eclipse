@@ -77,7 +77,7 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
   <li><a href="#swtawtosx">Why does the SWT_AWT bridge not work for me on OS X?</a></li>
   <li><a href="#swtawtsolaris">Why does the SWT_AWT bridge not work for me on AIX or Solaris?</a></li>
   <li><a href="#printOnGTK">Why is the Print menu item disabled in Eclipse on GTK (Linux, UNIX)?</a></li>
-  <li><a href="#printOnGTKHangs">Why does it take so long for any editor to open on Eclipse 3.3 with GTK 2.10 (Linux, UNIX)?</a></li>
+  <li><a href="#printOnGTKHangs">Why does Eclipse 3.3 freeze when I open an editor on GTK 2.10 (Linux, UNIX)?</a></li>
   <li><a href="#printOnMotif">Why is the Print menu item disabled in Eclipse on Motif?</a></li>
   <li><a href="#uithread">Why do I get the error "org.eclipse.swt.SWTException: Invalid thread access"?</a></li>
   <li><a href="#noautolayout">Why do I have to resize my shell to get my changed widgets to lay out again?</a></li>
@@ -1093,9 +1093,9 @@ Problem" at: <a href="http://www.cas.mcmaster.ca/~emil/publications/fragile/">ht
   to print files using lpr or some other printing utility. See <a href="#printOnX">here</a> for the steps to set this up.
   </dd>
   
-  <dt><strong><a name="printOnGTKHangs">Q: Why does it take so long for any editor to open on Eclipse 3.3 with GTK 2.10 (Linux, UNIX)?</a></strong></dt>
-  <dd>A: There is a bug that was fixed in GTK 2.10.12 that causes certain print backends to hang. To determine what GTK+ version you are running,
-  type: <tt>rpm -q gtk2</tt>.
+  <dt><strong><a name="printOnGTKHangs">Q: Why does Eclipse 3.3 freeze when I open an editor on GTK 2.10 (Linux, UNIX)?</a></strong></dt>
+  <dd>A: There is a bug in GTK that was fixed in GTK 2.10.12 that causes certain print backends to hang.
+  To determine what GTK+ version you are running, type: <tt>rpm -q gtk2</tt>.
   <p>If you do not want to upgrade your GTK to the fixed version, you can make use of the org.eclipse.swt.internal.gtk.disablePrinting
    flag available in Eclipse 3.3.1 maintenance builds as well as 3.4 M1 and later. To use this, you must pass the flag to eclipse on startup: 
    <br>./eclipse -vmargs -Dorg.eclipse.swt.internal.gtk.disablePrinting
