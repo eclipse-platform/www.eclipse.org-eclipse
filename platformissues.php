@@ -19,7 +19,7 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
 
 <p><b>Linux</b></p>
 <ul>
-  <li><a href="#whatpackagesinSWT">What packages make up SWT?</a></li>
+  <li><a href="#copyandpaste">Why am I having problems with cut and paste?</a></li>
   <li><a href="#supportJavaBeans">Does SWT support JavaBeans?</a></li>
   <li><a href="#guibuilder">Is there a GUI Builder for SWT?</a></li>
   <li><a href="#whatisasnippet">What is a snippet and why do I care?</a></li>
@@ -32,27 +32,8 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
 <p></p>
 
 <dl>
-  <dt><strong><a name="whatpackagesinSWT"> Q: What packages make up SWT?</a></strong></dt>
-  <dd>A:  Package names in SWT begin with the prefix <strong>org.eclipse.swt</strong>.<br>
-      <p>Here is the complete list:</p>
-      <ul>
-      <li>org.eclipse.swt
-      <li>org.eclipse.swt.accessibility
-      <li>org.eclipse.swt.awt
-      <li>org.eclipse.swt.browser
-      <li>org.eclipse.swt.custom
-      <li>org.eclipse.swt.dnd
-      <li>org.eclipse.swt.events
-      <li>org.eclipse.swt.graphics
-      <li>org.eclipse.swt.internal.* (Not API, do not reference classes in these packages)
-      <li>org.eclipse.swt.layout
-      <li>org.eclipse.swt.opengl
-      <li>org.eclipse.swt.ole.win32 (Windows only)
-      <li>org.eclipse.swt.printing
-      <li>org.eclipse.swt.program
-      <li>org.eclipse.swt.widgets
-      </ul>
-      <p>Classes that are not in these packages do not belong to SWT.</p>
+  <dt><strong><a name="whatpackagesinSWT"> Q: Why am I having problems with cut and paste?</a></strong></dt>
+  <dd>A: Running Klipper in the background can interfere with copy/paste. 
   </dd>
 
   <dt><strong><a name="supportJavaBeans">Q: Does SWT support JavaBeans?</a></strong></dt>
