@@ -20,7 +20,6 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
 <p><b>Linux</b></p>
 <ul>
   <li><a href="#copyandpaste">Why am I having problems with cut and paste?</a></li>
-  
   <p></p>
 </ul>
 
