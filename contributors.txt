@@ -70,3 +70,5 @@ Sky Yan - Bugs 210430, 211359, 211865
 Luma - Bug 211360
 David Green - Bug 220836
 Calman Steynberg - Bug 210858
+Andrew Overholt - Bug 226356
+Leo Dos Santos - Bug 225677
