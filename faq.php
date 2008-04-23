@@ -1234,8 +1234,8 @@ Problem" at: <a href="http://www.cas.mcmaster.ca/~emil/publications/fragile/">ht
   </dd>
   
   <dt><strong><a name="relayout"> Q:  Why doesn't my layout update when I create/dispose/move/resize a control?</a></strong></dt>
-  <dd>A: Control layouts are only performed automatically when a parent Composite is first shown or is resized.  In all other cases, <code>layout()</code> must be
-    invoked on the parent Composite to make changes like this take effect. 
+  <dd>A: Changes like this do not automatically trigger layouts to occur, <code>layout()</code> must be invoked
+    on the parent Composite for layout modifications to be realized. 
   </dd>
   
 </dl>
