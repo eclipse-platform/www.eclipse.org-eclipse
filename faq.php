@@ -88,6 +88,8 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
   <li><a href="#32eclipsegtk64">Why do I get strange drawing behaviour when running 32 bit Eclipse on a 64 bit GTK platform?</a></li>
   <li><a href="#rtlgtk28">Why doesn't SWT.RIGHT_TO_LEFT work on some GTK versions (less than 2.8)?</a></li>
   <li><a href="#decorationHints">Why doesn't my Shell have the trim decorations that I specified in its constructor?</a></li>
+  <li><a href="#noevents">Why doesn't a widget send events when I change it programmatically?</a></li>
+  <li><a href="#relayout">Why doesn't my layout update when I create/dispose/move/resize a control?</a></li>
 </ul>
 
 <p></p>
@@ -1218,6 +1220,24 @@ Problem" at: <a href="http://www.cas.mcmaster.ca/~emil/publications/fragile/">ht
     For this reason, styles that are passed to a Shell's constructor are considered to be hints.  This is a constraint that all native applications are subject to.
   </dd>
 
+  <dt><strong><a name="noevents"> Q:  Why doesn't a widget send events when I change it programmatically?</a></strong></dt>
+  <dd>A: This is a design decision that is applied throughout SWT.  Events are usually not sent in response to programmatic changes (as opposed to user actions)
+    in order to reduce redundant events that listeners must handle.  As a result, patterns like the following are <em>not</em> needed:
+    <pre>
+    ignoreNextSelectionEvent = true;
+    myTable.select(2);
+    ignoreNextSelectionEvent = false;
+    </pre>
+    Since a programmatic change implies that the application is already aware of the change being made, it can trigger the appropriate action directly.  If firing
+    an event is still desired (for instance, to preserve object de-coupling) then the application can create the event and send it to the widget's listeners
+    with <code>Widget.notifyListeners(int,Event)</code>. 
+  </dd>
+  
+  <dt><strong><a name="relayout"> Q:  Why doesn't my layout update when I create/dispose/move/resize a control?</a></strong></dt>
+  <dd>A: Control layouts are only performed automatically when a parent Composite is first shown or is resized.  In all other cases, <code>layout()</code> must be
+    invoked on the parent Composite to make changes like this take effect. 
+  </dd>
+  
 </dl>
 </table>
 </body>
