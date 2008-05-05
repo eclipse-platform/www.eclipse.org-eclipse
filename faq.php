@@ -90,6 +90,7 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
   <li><a href="#decorationHints">Why doesn't my Shell have the trim decorations that I specified in its constructor?</a></li>
   <li><a href="#noevents">Why doesn't a widget send events when I change it programmatically?</a></li>
   <li><a href="#relayout">Why doesn't my layout update when I create/dispose/move/resize a control?</a></li>
+  <li><a href="#scrolledcomposite">How do I programmatically scroll a Composite?</a></li>
 </ul>
 
 <p></p>
@@ -1149,11 +1150,7 @@ Problem" at: <a href="http://www.cas.mcmaster.ca/~emil/publications/fragile/">ht
    </dd>
 
   <dt><strong><a name="noautolayout">Q: Why do I have to resize my shell to get my changed widgets to lay out again?</a></strong></dt>
-  <dd>A: A layout is only performed automatically on a Composite's children when the Composite
-      is resized, including when it is initially shown.  To make a Composite lay out its
-      children under any other circumstances, such as when children are created or disposed,
-      its <em>layout()</em> method must be called.  For an example of this see SWT snippet
-      <a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet98.java">create and dispose children of a composite</a>.
+  <dd>A: See <a href="#relayout">Why doesn't my layout update when I create/dispose/move/resize a control?</a>
   </dd>
 
   <dt><strong><a name="nographicslibrary">Q: Why do I get "SWTException: Unable to load graphics library" using GC?</a></strong></dt>
@@ -1234,10 +1231,18 @@ Problem" at: <a href="http://www.cas.mcmaster.ca/~emil/publications/fragile/">ht
   </dd>
   
   <dt><strong><a name="relayout"> Q:  Why doesn't my layout update when I create/dispose/move/resize a control?</a></strong></dt>
-  <dd>A: Layouts on a child control is performed automatically only when the parent of the control is resized.  In all other cases, <code>layout()</code> must be
-    invoked on the parent to force it to run the layout algorithm and reposition the child.
+  <dd>A: A layout is only performed automatically on a Composite's children when the Composite
+      is resized, including when it is initially shown.  To make a Composite lay out its
+      children under any other circumstances, such as when children are created or disposed,
+      its <em>layout()</em> method must be called.  For an example of this see SWT snippet
+      <a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet98.java">create and dispose children of a composite</a>.
   </dd>
   
+  <dt><strong><a name="scrolledcomposite"> Q:  How do I programmatically scroll a Composite?</a></strong></dt>
+  <dd>A: This is done by using a ScrolledComposite instead of a Composite, and invoking
+      <code>ScrolledComposite.setOrigin(...)</code> to scroll it.  For an example of this see SWT snippet
+      <a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet296.java">use a ScrolledComposite to scroll a Tree vertically</a>. 
+  </dd>
 </dl>
 </table>
 </body>
