@@ -91,6 +91,7 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
   <li><a href="#noevents">Why doesn't a widget send events when I change it programmatically?</a></li>
   <li><a href="#relayout">Why doesn't my layout update when I create/dispose/move/resize a control?</a></li>
   <li><a href="#scrolledcomposite">How do I programmatically scroll a Composite?</a></li>
+  <li><a href="#copypastewithKlipper">Why does Copy/Paste sometimes does not work on Linux?</a></li>
 </ul>
 
 <p></p>
@@ -1242,6 +1243,13 @@ Problem" at: <a href="http://www.cas.mcmaster.ca/~emil/publications/fragile/">ht
   <dd>A: This is done by using a ScrolledComposite instead of a Composite, and invoking
       <code>ScrolledComposite.setOrigin(...)</code> to scroll it.  For an example of this see SWT snippet
       <a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet296.java">use a ScrolledComposite to scroll a Tree vertically</a>. 
+  </dd>
+
+  <dt><strong><a name="copypastewithKlipper"> Q:  Why does Copy/Paste sometimes does not work on Linux?</a></strong></dt>
+  <dd>A: There's a known Copy/Paste problem for people who run Klipper Clipboard applet which 
+  		cause Eclipse clipboard operations to fail. For more information about this issue see 
+  		<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=153809">Bug 153809</a> 
+  		<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=226540">Bug 226540</a> 
   </dd>
 </dl>
 </table>
