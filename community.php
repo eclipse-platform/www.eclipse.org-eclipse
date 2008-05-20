@@ -13,7 +13,7 @@
 <tr><?php include "sidebar.php"; ?>
 <td valign="top" style="padding: 10px"><h1 style="padding: 0; margin: 0; border-bottom: 1px solid #000000;">The SWT Community Page</h1>
 
-<p>This page provides links to additional SWT ports, widgets, and applications
+<p>This page provides links to additional SWT ports, widgets, applications, and information
 maintained elsewhere in the community.  If you have a project and would like to
 see it listed here, please let us know on the
 <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT developer mailing list</a>.</p>
@@ -24,6 +24,12 @@ see it listed here, please let us know on the
 
 <p>Many thanks to the <a href="contributors.txt">people</a> who have
 contributed code and bug fixes to SWT.</p>
+
+<table width="100%">
+<tr><th bgcolor="#0080c0" align="left" style="padding: 2px;"><font color="#ffffff">SWT Wiki</font>
+</table>
+
+<p>The community is welcome to use and contribute to the <a href="http://wiki.eclipse.org/SWT">SWT wiki</a>.</p>
 
 <table width="100%">
 <tr><th bgcolor="#0080c0" align="left" style="padding: 2px;"><font color="#ffffff">Ports</font>
