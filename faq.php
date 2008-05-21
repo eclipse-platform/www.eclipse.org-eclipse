@@ -972,7 +972,8 @@ Problem" at: <a href="http://www.cas.mcmaster.ca/~emil/publications/fragile/">ht
       important to note that Firefox downloads from mozilla.org currently do <em>not</em> satisfy this criteria, but Firefox installations
       that are included in major Linux distributions often do in the absence of a XULRunner installation.  Attempting to use a statically-linked
       Firefox install will display the error message "No more handles [NS_InitEmbedding...error -2147221164]".</li>
-      <li>XULRunner 1.8.0.1 - 1.8.1.x can be used with Eclipse 3.3 and newer</li>
+      <li>XULRunner 1.8.x can be used with Eclipse 3.3 and newer</li>
+      <li>XULRunner 1.9.x can be used with Eclipse 3.4 and newer</li>
     </ul>
 
     <br>The version of Mozilla or Firefox installed on your system varies with your Linux distribution.
