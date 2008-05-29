@@ -1098,10 +1098,9 @@ Problem" at: <a href="http://www.cas.mcmaster.ca/~emil/publications/fragile/">ht
   to print files using lpr or some other printing utility. See <a href="#printOnX">here</a> for the steps to set this up.
   </dd>
   
-  <dt><strong><a name="printOnGTKHangs">Q: Why does Eclipse 3.3 freeze when I open an editor on GTK 2.10 (Linux, UNIX)?</a></strong></dt>
-  <dd>A: There is a bug in GTK that was fixed in GTK 2.10.12 that causes certain print backends to hang.
-  To determine what GTK+ version you are running, type: <tt>rpm -q gtk2</tt>.
-  <p>If you do not want to upgrade your GTK to the fixed version, you can make use of the org.eclipse.swt.internal.gtk.disablePrinting
+  <dt><strong><a name="printOnGTKHangs">Q: Why does Eclipse 3.3 freeze when I open an editor on GTK 2.10 and GTK 2.12 (Linux, UNIX)?</a></strong></dt>
+  <dd>A: There is a bug in some versions GTK that that causes certain print backends to hang.
+  <p>If you do not want to upgrade your GTK to a fixed version, you can make use of the org.eclipse.swt.internal.gtk.disablePrinting
    flag available in Eclipse 3.3.1 maintenance builds as well as 3.4 M1 and later. To use this, you must pass the flag to eclipse on startup: 
    <br>./eclipse -vmargs -Dorg.eclipse.swt.internal.gtk.disablePrinting
   </dd>
