@@ -39,7 +39,7 @@ Run by selecting the class and then selecting <i>Run &gt; Run As &gt; Java Appli
 
 <p>To contribute a new snippet, 
 <a href="https://bugs.eclipse.org/bugs/enter_bug.cgi?product=Platform&bug_severity=enhancement&component=SWT&short_desc=New%20Snippet%20Contribution%3A%20%5Bsummary%20here%5D&comment=Eclipse%20build%20id%20or%20SWT%20version%3A%20%5Bbuild%20id%20here%5D%0D%0A%0D%0APlatform%28s%29%20tested%20on%3A%20%5Blist%20platform%28s%29%20here%5D%0D%0A%0D%0ASnippet%20title%3A%20%5Bsnippet%20title%20or%20short%20description%20here%5D%0D%0A%0D%0ASnippet%20code%3A%20%5Bpaste%20snippet%20code%20here%5D">
-enter a bug report</a>. Thanks in advance for your contribution!</p>
+create a snippet contribution report in Bugzilla</a>. Thanks in advance for your contribution!</p>
 
   <ul>
     <li><b>"<a name=helloworld href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet1.java">Hello World</a>"</b>
@@ -118,6 +118,12 @@ enter a bug report</a>. Thanks in advance for your contribution!</p>
       </ul>
       <p></p>
 
+    <li><a name="color"><b>Color and RGB</b></a>
+      <ul>
+        <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet208.java">adjust hue, brightness and saturation of a color</a></li>
+     </ul>
+      <p></p>
+      
     <li><a name="combo"><b>Combo</b></a>
       <ul>
         <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet26.java">create a combo box (non-editable)</a></li>
@@ -139,12 +145,6 @@ enter a bug report</a>. Thanks in advance for your contribution!</p>
       </ul>
       <p></p>
 
-    <li><a name="color"><b>Color and RGB</b></a>
-      <ul>
-        <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet208.java">adjust hue, brightness and saturation of a color</a></li>
-     </ul>
-      <p></p>
-      
     <li><a name="control"><b>Control</b></a>
       <ul>
         <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet14.java">detect mouse enter, exit and hover events</a></li>
