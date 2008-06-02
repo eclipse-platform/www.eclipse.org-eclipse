@@ -24,6 +24,9 @@ Here are some useful links:</p>
 <h4><a href="https://bugs.eclipse.org/bugs/enter_bug.cgi?product=Platform&component=SWT&bug_severity=enhancement">
 	Request an SWT Feature</a></h4>
 
+<h4><a href="https://bugs.eclipse.org/bugs/enter_bug.cgi?product=Platform&bug_severity=enhancement&component=SWT&short_desc=New%20Snippet%20Contribution%3A%20%5Bsummary%20here%5D&comment=Eclipse%20build%20id%20or%20SWT%20version%3A%20%5Bbuild%20id%20here%5D%0D%0A%0D%0APlatform%28s%29%20tested%20on%3A%20%5Blist%20platform%28s%29%20here%5D%0D%0A%0D%0ASnippet%20title%3A%20%5Bsnippet%20title%20or%20short%20description%20here%5D%0D%0A%0D%0ASnippet%20code%3A%20%5Bpaste%20snippet%20code%20here%5D">
+	Contribute an SWT Snippet</a></h4>
+
 <h4>
 <form action="https://bugs.eclipse.org/bugs/buglist.cgi" method="get">
 Find open SWT bug reports containing: 
