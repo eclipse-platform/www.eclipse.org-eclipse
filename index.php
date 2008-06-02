@@ -21,7 +21,7 @@ Or maybe you want to request a <a href="http://www.eclipse.org/swt/bugs.php">fea
 Whatever the reason, you will find many resources here. Enjoy!</p>
 
 <table width="100%">
-<tr><th bgcolor="#0080c0" align="left" style="padding: 2px;"><font color="#ffffff">SWT</font>
+<tr><th bgcolor="#0080c0" align="left" style="padding: 2px;"><font color="#ffffff">What is SWT?</font>
 </table>
 
 <p>SWT is an <a href="http://www.eclipse.org/legal/">open source</a> widget toolkit for Java designed to provide efficient,
