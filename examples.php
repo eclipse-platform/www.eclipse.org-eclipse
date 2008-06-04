@@ -18,7 +18,9 @@
 <tr><th bgcolor="#0080c0" align="left" style="padding: 2px;"><font color="#ffffff">SWT Examples</font>
 </table>
 
-<p>The following SWT examples can be downloaded from the eclipse download page:
+<p>SWT Examples are useful little programs that are written in SWT.
+These are typically much larger and more comprehensive than SWT <a href="http://www.eclipse.org/swt/snippets/">Snippets</a>.
+</p><p>The following SWT Examples can be downloaded from the Eclipse download page:
 <ul>
 <img src="images/controlexample.png" width="400" height="275" align="right" alt="ControlExample on Vista">
 <li>ControlExample</li>
@@ -42,7 +44,7 @@
 </p>
 
 <p>ControlExample, CustomControlExample, LayoutExample, and PaintExample are also available as Eclipse plugins,
-and the following examples are only available as Eclipse plugins:
+and the following examples are <em>only</em> available as Eclipse plugins:
 <ul>
 <li>BrowserDemo in the org.eclipse.swt.examples.browser.demos project</li>
 <li>WebBrowser in the org.eclipse.swt.examples.browser project</li>
