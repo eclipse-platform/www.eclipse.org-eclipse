@@ -15,7 +15,8 @@
 
 <p>Snippets are minimal stand-alone programs that demonstrate specific
 techniques or functionality.  Often a small example is the easiest way to
-understand how to use a particular feature.</p>
+understand how to use a particular feature.
+(If you are looking for large examples, like <em>ControlExample</em>, see <a href="http://www.eclipse.org/swt/examples.php">Examples</a>).</p>
 
 <p>Snippets also help isolate problems.  The best way to report an SWT
 bug is to write your own snippet showing the problem and paste it into
