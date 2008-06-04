@@ -13,6 +13,14 @@
 <tr><?php include "sidebar.php"; ?>
 <td valign="top" style="padding: 10px"><h1 style="padding: 0; margin: 0; border-bottom: 1px solid #000000;">SWT: The Standard Widget Toolkit</h1>
 
+<p>SWT is an <a href="http://www.eclipse.org/legal/">open source</a> widget toolkit for Java designed to provide efficient,
+portable access to the user-interface facilities of the operating systems
+on which it is implemented.</p>
+
+<table width="100%">
+<tr><th bgcolor="#0080c0" align="left" style="padding: 2px;"><font color="#ffffff">Welcome</font>
+</table>
+
 <p>Welcome to SWT! You may have come to this page looking for <a href="http://www.eclipse.org/swt/snippets/">snippets</a> (little code examples)
 or <a href="http://www.eclipse.org/swt/examples.php">examples</a> (big code examples like <em>ControlExample</em>);
 <a href="http://www.eclipse.org/swt/widgets/">widget snapshots</a>
@@ -20,14 +28,6 @@ or <a href="http://www.eclipse.org/swt/docs.php">documentation</a>.
 Or maybe you want to request a <a href="http://www.eclipse.org/swt/bugs.php">feature</a>
 or ask a <a href="news://news.eclipse.org/eclipse.platform.swt">question</a>.
 Whatever the reason, you will find many resources here. Enjoy!</p>
-
-<table width="100%">
-<tr><th bgcolor="#0080c0" align="left" style="padding: 2px;"><font color="#ffffff">What is SWT?</font>
-</table>
-
-<p>SWT is an <a href="http://www.eclipse.org/legal/">open source</a> widget toolkit for Java designed to provide efficient,
-portable access to the user-interface facilities of the operating systems
-on which it is implemented.</p>
 
 <table width="100%">
 <tr><th bgcolor="#0080c0" align="left" style="padding: 2px;"><font color="#ffffff">Releases</font>
