@@ -20,6 +20,7 @@
 
 <p>The following SWT examples can be downloaded from the eclipse download page:
 <ul>
+<img src="images/controlexample.png" width="300" height="180" align="right" alt="ControlExample on Vista">
 <li>ControlExample</li>
 <li>CustomControlExample</li>
 <li>AddressBook</li>
@@ -38,7 +39,6 @@
 <li>OLEExample (win32 only, OLE)</li>
 <li>OleWebBrowser (win32 only, OLE)</li>
 </ul>
-<img src="images/controlexample.png" width="300" height="180" align="right" alt="ControlExample on Vista">
 </p>
 
 <p>ControlExample, CustomControlExample, LayoutExample, and PaintExample are also available as Eclipse plugins,
