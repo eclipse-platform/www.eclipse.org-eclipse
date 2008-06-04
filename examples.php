@@ -20,7 +20,7 @@
 
 <p>The following SWT examples can be downloaded from the eclipse download page:
 <ul>
-<img src="images/controlexample.png" width="300" height="180" align="right" alt="ControlExample on Vista">
+<img src="images/controlexample.png" width="466" height="280" align="right" alt="ControlExample on Vista">
 <li>ControlExample</li>
 <li>CustomControlExample</li>
 <li>AddressBook</li>
