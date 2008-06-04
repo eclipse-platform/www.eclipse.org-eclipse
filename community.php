@@ -148,11 +148,6 @@ toolkit.</p>
 
     <p>VirgoFTP is an FTP client, similar to CuteFTP, written in Java using SWT.</p>
     
-<li><b><a href="http://siahe.com/zekr">The Zekr Project</a></b>
-
-    <p>Zekr is an open platform for research and development on the Holy Quran.
-    It is written in Java and uses SWT as the widget toolkit.</p>
-
 </ul>
 
 <table width="100%">
