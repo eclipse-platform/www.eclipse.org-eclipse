@@ -16,7 +16,7 @@
 <h1 style="padding: 0; margin: 0; border-bottom: 1px solid #000000;">SWT Eclipse Bugzilla</h1>
 
 <p>SWT bug reports are stored in the <a href="http://bugs.eclipse.org/bugs/">Eclipse Bugzilla database</a>.
-Here are some useful links:</p>
+<br>Here are some useful links:</p>
 
 <h4><a href="https://bugs.eclipse.org/bugs/enter_bug.cgi?product=Platform&component=SWT">
 	Open a new SWT bug report</a></h4>
