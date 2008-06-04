@@ -17,7 +17,8 @@
 or <a href="http://www.eclipse.org/swt/examples.php">examples</a> (big code examples like <em>ControlExample</em>);
 <a href="http://www.eclipse.org/swt/widgets/">widget snapshots</a>
 or <a href="http://www.eclipse.org/swt/docs.php">documentation</a>.
-Or maybe you want to request a <a href="http://www.eclipse.org/swt/bugs.php">feature</a>.
+Or maybe you want to request a <a href="http://www.eclipse.org/swt/bugs.php">feature</a>
+or ask a <a href="news://news.eclipse.org/eclipse.platform.swt">question</a>.
 Whatever the reason, you will find many resources here. Enjoy!</p>
 
 <table width="100%">
