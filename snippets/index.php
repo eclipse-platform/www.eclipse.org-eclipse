@@ -617,7 +617,7 @@ create a snippet contribution report in Bugzilla</a>. Thanks in advance for your
       </ul>
       <p></p>
 
-    <li><a name="tree"><b>Tree</b></a>
+    <li><a name="tree"><b>Tree, TreeItem, TreeColumn</b></a>
       <ul>
         <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet15.java">create a tree</a></li>
         <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet8.java">create a tree (lazy)</a></li>
