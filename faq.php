@@ -197,8 +197,8 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
       <li>Run Ant on the target <strong>build.jars</strong>.  If you are using eclipse as your development environment, you can run 
         Ant by selecting the file in the Navigator or Packages view, then selecting <strong>Run Ant...</strong> from the context
         menu.
-      <li>This will create file <strong>swt.jar</strong> in the root directory of the <strong>org.eclipse.swt.</strong><em>WS.OS.ARCH</em>
-        project.  Refresh this project to bring this jar into your workspace. 
+      <li>The script will create file <strong>swt.jar</strong> in the root directory of the <strong>org.eclipse.swt.</strong><em>WS.OS.ARCH</em>
+        project.  When it has finished running you can Refresh this project to bring this jar into your eclipse workspace. 
     </ol>
   </dd>
 
@@ -215,8 +215,9 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
       <li>Select <strong>jar.plugin</strong> as the Ant target to be run.
       <li>On the <strong>JRE</strong> tab select <strong>Run in the same JRE as the workspace</strong>.
       <li>On the <strong>Classpath</strong> tab add the jars from your JRE's <strong>lib</strong> directory to the "User Entries" classpath item.
-      <li>Press the Run button, which will create file <strong>org.eclipse.swt.</strong><em>WS.OS.ARCH_&lt;version&gt;</em> in the root directory of the
-        <strong>org.eclipse.swt.</strong><em>WS.OS.ARCH</em> project.  Refresh this project to bring this jar into your workspace.
+      <li>Press the Run button to run the script, which will create file <strong>org.eclipse.swt.</strong><em>WS.OS.ARCH_&lt;version.suffix&gt;</em>
+        in the root directory of the <strong>org.eclipse.swt.</strong><em>WS.OS.ARCH</em> project.  When it has finished running you can Refresh
+        this project to bring this jar into your eclipse workspace.
     </ol>  
   </dd>
      
