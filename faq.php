@@ -25,6 +25,7 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
   <li><a href="#swtsource">Where do I find the SWT source?</a></li>
   <p></p>
   <li><a href="#howbuildjar">How do I build an SWT jar for my platform?</a></li>
+  <li><a href="#howbuildplugin">How do I build the SWT Eclipse plug-in for my platform?</a></li>
   <li><a href="#howbuilddll">How do I build the SWT JNI libraries for my platform?</a></li>
   <li><a href="#buildeclipseexe">How do I build the Eclipse executable for my platform?</a></li>
   <li><a href="#gtk64">How do I build the 64-bit version of SWT GTK?</a></li>
@@ -194,13 +195,31 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
         windowing system, operating system and architecture of interest, respectively.  For example, <strong>org.eclipse.swt.gtk.linux.x86</strong>.
       <li>In the project <strong>org.eclipse.swt.</strong><em>WS.OS.ARCH</em>, locate the file <strong>build.xml</strong>.  This is an Ant script.
       <li>Run Ant on the target <strong>build.jars</strong>.  If you are using eclipse as your development environment, you can run 
-        Ant by selecting the file in the <strong>Navigator</strong> or <strong>Packages</strong> view, then selecting <strong>Run Ant...</strong> from the context
+        Ant by selecting the file in the Navigator or Packages view, then selecting <strong>Run Ant...</strong> from the context
         menu.
-      <li>This will create a file called <strong>swt.jar</strong> in the root of the 
-        <strong>org.eclipse.swt.</strong><em>WS.OS.ARCH</em> project.
+      <li>This will create file <strong>swt.jar</strong> in the root directory of the <strong>org.eclipse.swt.</strong><em>WS.OS.ARCH</em>
+        project.  Refresh this project to bring this jar into your workspace. 
     </ol>
   </dd>
 
+  <dt><strong><a name="howbuildplugin">Q: How do I build the SWT Eclipse plug-in for my platform?</a></strong>
+  </dt>
+  <dd>A: The SWT eclipse plug-in can be built (excluding the signing of the jar) with the steps below.
+    Note that the Ant target used in step 5 became available as of eclipse 3.5.
+    <ol>
+      <li>In eclipse's CVS Repositories view create a connection to <strong>:pserver:anonymous@dev.eclipse.org:/cvsroot/eclipse</strong>.
+      <li>Check out the projects <strong>org.eclipse.swt</strong> and <strong>org.eclipse.swt.</strong><em>WS.OS.ARCH</em> where <em>WS.OS.ARCH</em> are the names of the
+        windowing system, operating system and architecture of interest, respectively.  For example, <strong>org.eclipse.swt.gtk.linux.x86</strong>.
+      <li>In the project <strong>org.eclipse.swt.</strong><em>WS.OS.ARCH</em>, locate the file <strong>build.xml</strong>.  This is an Ant script.
+      <li>Right-click the <strong>build.xml</strong> file and select <strong>Run As</strong> &gt; <strong>Ant Build...</strong>.
+      <li>Select <strong>jar.plugin</strong> as the Ant target to be run.
+      <li>On the <strong>JRE</strong> tab select <strong>Run in the same JRE as the workspace</strong>.
+      <li>On the <strong>Classpath</strong> tab add the jars from your JRE's <strong>lib</strong> directory to the "User Entries" classpath item.
+      <li>Press the Run button, which will create file <strong>org.eclipse.swt.</strong><em>WS.OS.ARCH_&lt;version&gt;</em> in the root directory of the
+        <strong>org.eclipse.swt.</strong><em>WS.OS.ARCH</em> project.  Refresh this project to bring this jar into your workspace.
+    </ol>  
+  </dd>
+     
   <dt><strong><a name="howbuilddll">Q: How do I build the SWT JNI libraries for my platform?</a></strong>
   </dt>
   <dd>A: SWT uses JNI to interact with the native widgets in the
