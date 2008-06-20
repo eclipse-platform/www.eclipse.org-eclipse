@@ -205,12 +205,25 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
   <dt><strong><a name="howbuildplugin">Q: How do I build the SWT Eclipse plug-in for my platform?</a></strong>
   </dt>
   <dd>A: The SWT eclipse plug-in can be built (excluding the signing of the jar) with the steps below.
-    Note that the Ant target used in step 5 became available as of eclipse 3.5.
     <ol>
       <li>In eclipse's CVS Repositories view create a connection to <strong>:pserver:anonymous@dev.eclipse.org:/cvsroot/eclipse</strong>.
       <li>Check out the projects <strong>org.eclipse.swt</strong> and <strong>org.eclipse.swt.</strong><em>WS.OS.ARCH</em> where <em>WS.OS.ARCH</em> are the names of the
         windowing system, operating system and architecture of interest, respectively.  For example, <strong>org.eclipse.swt.gtk.linux.x86</strong>.
       <li>In the project <strong>org.eclipse.swt.</strong><em>WS.OS.ARCH</em>, locate the file <strong>build.xml</strong>.  This is an Ant script.
+      <li>If your swt version is 3.4.x or earlier then open the <strong>build.xml</strong> file and add the target below anywhere within its
+        <strong>&lt;project&gt;</strong> tags (if your swt version is 3.5 or newer then this target will already be there).
+      <pre>
+&lt;target name="jar.plugin" depends="init"&gt;
+    &lt;delete dir="${temp.folder}"/&gt;
+    &lt;mkdir dir="${temp.folder}"/&gt;
+    &lt;antcall target="build.jars"/&gt;
+    &lt;antcall target="gather.bin.parts"&gt;
+        &lt;param name="destination.temp.folder" value="${temp.folder}/"/&gt;
+    &lt;/antcall&gt;
+    &lt;jar jarfile="${plugin.destination}/${full.name}.jar" basedir="${temp.folder}/${full.name}" filesonly="true"/&gt;
+    &lt;delete dir="${temp.folder}"/&gt;
+&lt;/target&gt;
+      </pre>
       <li>Right-click the <strong>build.xml</strong> file and select <strong>Run As</strong> &gt; <strong>Ant Build...</strong>.
       <li>Select <strong>jar.plugin</strong> as the Ant target to be run.
       <li>On the <strong>JRE</strong> tab select <strong>Run in the same JRE as the workspace</strong>.
