@@ -111,7 +111,7 @@ the eclipse SWT Examples:
 <a name="standaloneOutsideEclipse">Running standalone SWT Examples outside of eclipse</a></font>
 </table>
 
-<p>(Note that these instructions will only work for eclipse 3.1 and newer).  To run the ControlExample and CustomControlExample standalone:</p>
+<p>To run the ControlExample and CustomControlExample standalone: (NOTE: these instructions will only work for eclipse 3.1 and newer).  </p>
 <ol>
 <li>Go to the download page for the eclipse version you are running.
    For example, for eclipse 3.3 this is:<br>
