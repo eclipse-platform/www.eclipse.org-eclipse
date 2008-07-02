@@ -124,8 +124,9 @@ the eclipse SWT Examples:
    (answer Yes when it asks if you want to overwrite the license files).
    </li>
 
-<li>(If you are using eclipse 3.3 or newer then you can skip this step) Open the file d:\eclipse\plugins\org.eclipse.swt.win32.win32.x86_3.X.X.jar
+<li>Open the file d:\eclipse\plugins\org.eclipse.swt.win32.win32.x86_3.X.X.jar
    in winzip and extract the following 3 files into d:\eclipse\plugins
+   (NOTE: If you are using eclipse 3.3 or newer then you can skip this step) 
    <ul>
    <li>swt-awt-win32-XXXX.dll
    <li>swt-gdip-win32-XXXX.dll
@@ -136,7 +137,7 @@ the eclipse SWT Examples:
    <code>d:<br>
    cd d:\eclipse\plugins\org.eclipse.swt.examples_3.X.X</code></li>
 
-<li>Type the following line: (if you are using eclipse 3.3 or newer then the <code>-Djava.library.path</code> argument can be omitted)<br>
+<li>Type the following line: (NOTE: If you are using eclipse 3.3 or newer then the <code>-Djava.library.path</code> argument can be omitted)<br>
 
 <code><i>&lt;pathToYourJRE&gt;</i>\bin\java -classpath .;..\org.eclipse.swt_3.X.X.jar;..\org.eclipse.swt.win32.win32.x86_3.X.X.jar;.\swtexamples.jar -Djava.library.path=.. org.eclipse.swt.examples.controlexample.ControlExample</code>
 
