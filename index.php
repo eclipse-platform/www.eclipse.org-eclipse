@@ -54,12 +54,12 @@ Whatever the reason, you will find many resources here. Enjoy!</p>
   <table width="100%">
   <tr><td>
       <b><font size="+1">Development</font></b><br>
-      <a href="http://download.eclipse.org/eclipse/downloads/drops/S-3.4RC3-200805301730/download.php?dropFile=swt-3.4RC3-win32-win32-x86.zip">Windows</a>,
-      <a href="http://download.eclipse.org/eclipse/downloads/drops/S-3.4RC3-200805301730/download.php?dropFile=swt-3.4RC3-gtk-linux-x86.zip">Linux</a>,
+      <a href="http://download.eclipse.org/eclipse/downloads/drops/R-3.4-200806172000/download.php?dropFile=swt-3.4-win32-win32-x86.zip">Windows</a>,
+      <a href="http://download.eclipse.org/eclipse/downloads/drops/R-3.4-200806172000/download.php?dropFile=swt-3.4-gtk-linux-x86.zip">Linux</a>,
       <span style="white-space: nowrap;">
-      <a href="http://download.eclipse.org/eclipse/downloads/drops/S-3.4RC3-200805301730/download.php?dropFile=swt-3.4RC3-carbon-macosx.zip">OS X</a></span>,
-      <a href="http://download.eclipse.org/eclipse/downloads/drops/S-3.4RC3-200805301730/index.php#swt" target="_top">more...</a><br>
-      <small>3.4 RC3 - <span style="white-space: nowrap;">31 May 2008</span></small><br>
+      <a href="http://download.eclipse.org/eclipse/downloads/drops/R-3.4-200806172000/download.php?dropFile=swt-3.4-carbon-macosx.zip">OS X</a></span>,
+      <a href="http://download.eclipse.org/eclipse/downloads/drops/R-3.4-200806172000/index.php#swt" target="_top">more...</a><br>
+      <small>3.4 Final Release - <span style="white-space: nowrap;">19 June 2008</span></small><br>
   <ul>
   <li><a href="R3_4/plan.html">3.4 Development Plan</a></li>
   <li><a href="R3_4/new_and_noteworthy.html">New and Noteworthy</a></li>
