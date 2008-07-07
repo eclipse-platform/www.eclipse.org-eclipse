@@ -64,7 +64,7 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
   <p></p>
   <li><a href="#whatisbrowser">What is the SWT Browser widget?</a></li>
   <li><a href="#howusemozilla">How do I use Mozilla as the Browser's underlying renderer?</a></li>
-  <li><a href="#specifyxulrunner">Can I specify which XULRunner installation is used?</a></li>
+  <li><a href="#specifyxulrunner">Can I specify which XULRunner installation gets used?</a></li>
   <li><a href="#howdetectmozilla">How does the Browser detect a native Mozilla browser to use?</a></li>
   <li><a href="#printmozillapath">How can I determine which installed Mozilla browser is being used by my Browser to render its content?</a></li>
   <li><a href="#mozillaplugins">How can my Mozilla-based Browser find my Mozilla plug-ins?</a></li>
