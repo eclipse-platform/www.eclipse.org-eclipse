@@ -64,8 +64,10 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
   <p></p>
   <li><a href="#whatisbrowser">What is the SWT Browser widget?</a></li>
   <li><a href="#howusemozilla">How do I use Mozilla as the Browser's underlying renderer?</a></li>
-  <li><a href="#mozillaplugins">How can my Mozilla-based Browser find my Mozilla plug-ins?</a></li>
   <li><a href="#specifyxulrunner">Can I specify which XULRunner installation is used?</a></li>
+  <li><a href="#howdetectmozilla">How does the Browser detect a native Mozilla browser to use?</a></li>
+  <li><a href="#printmozillapath">How can I determine which installed Mozilla browser is being used by my Browser to render its content?</a></li>
+  <li><a href="#mozillaplugins">How can my Mozilla-based Browser find my Mozilla plug-ins?</a></li>
   <li><a href="#howusejavaxpcom">How do I use JavaXPCOM with the Browser?</a></li>
   <li><a href="#browserplatforms">Which platforms support the SWT Browser?</a></li>
   <li><a href="#browserlinux">What do I need to run the SWT Browser inside Eclipse on Linux/GTK or Linux/Motif?</a></li>
@@ -925,7 +927,7 @@ Problem" at: <a href="http://www.cas.mcmaster.ca/~emil/publications/fragile/">ht
   </dd>
 
   <dt><strong><a name="howusemozilla">Q: How do I use Mozilla as the Browser's underlying renderer?</a></strong></dt>
-    <dd>A: The Browser has been extended as of Eclipse 3.3 to facilitate the use of Mozilla's HTML renderer on all
+  <dd>A: The Browser has been extended as of Eclipse 3.3 to facilitate the use of Mozilla's HTML renderer on all
       supported browser platforms, provided that the following are satisfied:
     <ul>
 	  <li>The Browser instance is created with style <code>SWT.MOZILLA</code></li>
@@ -944,16 +946,66 @@ Problem" at: <a href="http://www.cas.mcmaster.ca/~emil/publications/fragile/">ht
     </ul>
   </dd>
 
-  <dt><strong><a name="mozillaplugins">Q: How can my Mozilla-based Browser find my Mozilla plug-ins?</a></strong></dt>
-    <dd>A: As of eclipse 3.3 the default set of Mozilla plug-in paths that are searched can be augmented by defining
-    environment variable <code>MOZ_PLUGIN_PATH</code>. For example: <code>export MOZ_PLUGIN_PATH=/usr/lib/browser-plugins</code>. 
-  </dd>
-
   <dt><strong><a name="specifyxulrunner">Q: Can I specify which XULRunner installation gets used?</a></strong></dt>
-    <dd>A: Typically a Mozilla-based Browser uses XULRunner's lookup mechanism to find a registered XULRunner at runtime.
+  <dd>A: Typically a Mozilla-based Browser uses XULRunner's lookup mechanism to find a registered XULRunner at runtime.
     If you wish to override this mechanism you can set the value of java system property
     <code>org.eclipse.swt.browser.XULRunnerPath</code> to point at the target XULRunner's path.  This property must be set
     before the <em>first</em> Browser instance is created.
+  </dd>
+
+  <dt><strong><a name="howdetectmozilla">Q: How does the Browser detect a native Mozilla browser to use?</a></strong></dt>
+  <dd>A: The first Mozilla-based Browser instance performs the steps below, in order, until a native browser is found.  All subsequent Mozilla-based Browser instances will use this same detected browser.
+    <ol>
+      <li>If Java property <code>org.eclipse.swt.browser.XULRunnerPath</code> is defined then use it (see <a href="#specifyxulrunner">Can I specify which XULRunner installation is used?</a>).
+      <li>Attempt to detect an OS-registered XULRunner with version 1.8.1.2 or newer (in order to enable JavaXPCOM use).
+      <li>Attempt to detect an OS-registered XULRunner with a version earlier than 1.8.1.2.
+      <li><em>(if running on Linux and the Browser's style is <code>SWT.NONE</code>)</em> Attempt to use the native browser pointed at by OS environment variable <code>MOZILLA_FIVE_HOME</code>, which may be any of
+        the browsers listed <a href="#browserlinux">here</a>.  Note that if this environment variable is not set when eclipse is run then on linux the eclipse launcher will try to set it by checking various
+        potential installation locations.
+      <li>At this point a native Mozilla browser could not be found, so an <code>SWTError</code> is thrown from the constructor, which should be caught and handled by the application.  Subsequent attempts to
+        create Mozilla-based Browsers will go through these detection steps again.
+    </ol>
+  </dd>
+
+  <dt><strong><a name="printmozillapath">Q: How can I determine which installed Mozilla browser is being used by my Browser to render its content?</a></strong></dt>
+  <dd>A: The first Mozilla-based Browser instance performs a series of <a href="#howdetectmozilla">steps</a> to detect a native browser to use.  The SWT snippet below can be used to print the location of the
+      Mozilla browser that was found.
+      <pre>
+import org.eclipse.swt.SWT;
+import org.eclipse.swt.browser.*;
+import org.eclipse.swt.graphics.*;
+import org.eclipse.swt.widgets.*;
+
+public class DisplayMozillaVersion {
+    public static void main(String[] args) {
+        Device.DEBUG = true;
+        Display display = new Display();
+        Shell shell = new Shell(display);
+        System.out.println(">>>Snippet creating SWT.MOZILLA-style Browser");
+        try {
+            new Browser(shell, SWT.MOZILLA);
+            System.out.println(">>>succeeded");
+        } catch (Error e) {
+            System.out.println(">>>This failed with the following error:");
+            e.printStackTrace();
+            System.out.println("\n\nSnippet creating SWT.NONE-style Browser");
+            try {
+                new Browser(shell, SWT.NONE);
+                System.out.println(">>>succeeded");
+            } catch (Error e2) {
+                System.out.println(">>>This failed too, with the following error:");
+                e.printStackTrace();
+            }
+        }
+        display.dispose();
+    }
+}
+      </pre>
+  </dd>
+
+  <dt><strong><a name="mozillaplugins">Q: How can my Mozilla-based Browser find my Mozilla plug-ins?</a></strong></dt>
+  <dd>A: As of eclipse 3.3 the default set of Mozilla plug-in paths that are searched can be augmented by defining
+    environment variable <code>MOZ_PLUGIN_PATH</code>. For example: <code>export MOZ_PLUGIN_PATH=/usr/lib/browser-plugins</code>. 
   </dd>
 
   <dt><strong><a name="howusejavaxpcom">Q: How do I use JavaXPCOM with the Browser?</a></strong></dt>  
