@@ -66,7 +66,7 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
   <li><a href="#howusemozilla">How do I use Mozilla as the Browser's underlying renderer?</a></li>
   <li><a href="#specifyxulrunner">Can I specify which XULRunner installation gets used?</a></li>
   <li><a href="#howdetectmozilla">How does the Browser detect a native Mozilla browser to use?</a></li>
-  <li><a href="#printmozillapath">How can I determine which installed Mozilla browser is being used by my Browser to render its content?</a></li>
+  <li><a href="#printmozillapath">How can I determine which installed Mozilla browser is being used to render Browser content?</a></li>
   <li><a href="#mozillaplugins">How can my Mozilla-based Browser find my Mozilla plug-ins?</a></li>
   <li><a href="#howusejavaxpcom">How do I use JavaXPCOM with the Browser?</a></li>
   <li><a href="#browserplatforms">Which platforms support the SWT Browser?</a></li>
@@ -967,7 +967,7 @@ Problem" at: <a href="http://www.cas.mcmaster.ca/~emil/publications/fragile/">ht
     </ol>
   </dd>
 
-  <dt><strong><a name="printmozillapath">Q: How can I determine which installed Mozilla browser is being used by my Browser to render its content?</a></strong></dt>
+  <dt><strong><a name="printmozillapath">Q: How can I determine which installed Mozilla browser is being used to render Browser content?</a></strong></dt>
   <dd>A: The first Mozilla-based Browser instance performs a series of <a href="#howdetectmozilla">steps</a> to detect a native browser to use.  The SWT snippet below can be used to print the location of the
       Mozilla browser that was found.
       <pre>
