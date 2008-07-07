@@ -994,7 +994,7 @@ public class DisplayMozillaVersion {
                 System.out.println(">>>succeeded");
             } catch (Error e2) {
                 System.out.println(">>>This failed too, with the following error:");
-                e.printStackTrace();
+                e2.printStackTrace();
             }
         }
         display.dispose();
