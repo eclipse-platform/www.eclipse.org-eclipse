@@ -96,7 +96,7 @@ toolkit.</p>
 </ul>
 
 <table width="100%">
-<tr><th bgcolor="#0080c0" align="left" style="padding: 2px;"><font color="#ffffff">Open Source SWT Applications</font>
+<tr><th bgcolor="#0080c0" align="left" style="padding: 2px;"><font color="#ffffff">Some Applications that use SWT</font>
 </table>
 
 <ul>
@@ -137,6 +137,10 @@ toolkit.</p>
     that use p2p applications usually choose one that has core/gui separation.
     sancho provides an easy to use, powerful, and configurable gui, currently
     supporting the gui protocol of the popular mldonkey core.</p>
+
+<li><b><a href="http://www.solaraccounts.co.uk">Solar Accounts</a></b>
+
+    <p>Solar Accounts is a simple accounting software package for self-employed people in the UK.</p>
 
 <li><b><a href="http://www.spotdev.net/spotmanager">SPOT Manager</a></b>
 
