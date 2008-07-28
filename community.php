@@ -51,6 +51,12 @@ toolkit.</p>
   <li>CVS: <a href="http://cvs.sourceforge.net/viewcvs.py/swtswing/">:pserver:anonymous@cvs.sourceforge.net:/cvsroot/swtswing</a></li>
 </ul>
 
+<p>A port exists for the <a href="http://digitalmars.com/d/index.html">D programming language</a>.  It currently runs on Windows (x86) and Linux GTK (x86), and a Mac Cocoa implementation has been started.
+
+<ul>
+  <li>Homepage: <a href="http://www.dsource.org/projects/dwt">http://www.dsource.org/projects/dwt</a></li>
+</ul>
+
 <table width="100%">
 <tr><th bgcolor="#0080c0" align="left" style="padding: 2px;"><font color="#ffffff">Additional Widgets</font>
 </table>
