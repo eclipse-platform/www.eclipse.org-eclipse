@@ -31,7 +31,7 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
   <li><a href="#gtk64">How do I build the 64-bit version of SWT GTK?</a></li>
   <p></p>
   <li><a href="#gtkstartup">What do I need to run SWT on Linux/GTK?</a></li>
-  <li><a href="#carbonapp">On carbon, how do I run an SWT application from the command line?</a></li>
+  <li><a href="#carbonapp">On Mac carbon, how do I run an SWT application from the command line?</a></li>
   <li><a href="#javawebstart">How can I deploy my standalone SWT application with Java Web Start?</a></li>
   <li><a href="#pocketpcstart">What do I need to do to run SWT on the PocketPC?</a></li>
   <li><a href="#pocketpclibrary">Where is the SWT library for the PocketPC?</a></li>
@@ -377,8 +377,8 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
     </p>
   </dd>
 
-  <dt><strong><a name="carbonapp">Q: On carbon, how do I run an SWT application from the command line?</a></strong></dt>
-  <dd>A: If you run a Java application that uses Carbon via JNI, the application is not registered with the OS as 
+  <dt><strong><a name="carbonapp">Q: On Mac carbon, how do I run an SWT application from the command line?</a></strong></dt>
+  <dd>A: If you run a Java application that uses carbon via JNI, the application is not registered with the OS as 
       a 'normal' UI application.  As a consequence, it has no entry in the dock and it cannot be activated. AWT 
       (or Swing) based applications don't have this problem because they seem to use undocumented SPI to register 
       themselves.
