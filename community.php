@@ -99,6 +99,12 @@ toolkit.</p>
     <p>SWTCalendar was designed to be a flexible component so a developer
     can embed a date picker in their application or create their own
     standalone date picker dialog.</p>
+
+<li><b><a href="http://swtgraph.sf.net">SWTGraph</a></b>
+
+	<p>A set of custom-draw graphing components.
+	There is currently a fully functional Cartesian Graph, and a Gantt Graph is being developed.</p>
+
 </ul>
 
 <table width="100%">
