@@ -101,6 +101,7 @@ toolkit.</p>
     standalone date picker dialog.</p>
 
 <li><b><a href="http://swtgraph.sf.net">SWTGraph</a></b>
+	<i>by Felipe Santos Andrade</i>
 
 	<p>A set of custom-draw graphing components.
 	There is currently a fully functional Cartesian Graph, and a Gantt Graph is being developed.</p>
