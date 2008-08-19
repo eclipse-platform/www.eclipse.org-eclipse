@@ -38,22 +38,6 @@ Whatever the reason, you will find many resources here. Enjoy!</p>
   <table width="100%">
   <tr><td>
       <b><font size="+1">Stable</font></b><br>
-      <a href="http://download.eclipse.org/eclipse/downloads/drops/R-3.3.2-200802211800/download.php?dropFile=swt-3.3.2-win32-win32-x86.zip">Windows</a>,
-      <a href="http://download.eclipse.org/eclipse/downloads/drops/R-3.3.2-200802211800/download.php?dropFile=swt-3.3.2-gtk-linux-x86.zip">Linux</a>,
-      <span style="white-space: nowrap;">
-      <a href="http://download.eclipse.org/eclipse/downloads/drops/R-3.3.2-200802211800/download.php?dropFile=swt-3.3.2-carbon-macosx.zip">OS X</a></span>,
-      <a href="http://download.eclipse.org/eclipse/downloads/drops/R-3.3.2-200802211800/index.php#swt" target="_top">more...</a><br>
-      <small>3.3.2 Final Release - <span style="white-space: nowrap;">22 February 2008</span></small><br>
-  <ul>
-  <li><a href="R3_3/plan.html">3.3 Development Plan</a></li>
-  <li><a href="R3_3/new_and_noteworthy.html">New and Noteworthy</a></li>
-  <li><a href="language.php">Language Pack</a></li>
-  </ul>
-  </table>
-<td width="50%" valign="top">
-  <table width="100%">
-  <tr><td>
-      <b><font size="+1">Development</font></b><br>
       <a href="http://download.eclipse.org/eclipse/downloads/drops/R-3.4-200806172000/download.php?dropFile=swt-3.4-win32-win32-x86.zip">Windows</a>,
       <a href="http://download.eclipse.org/eclipse/downloads/drops/R-3.4-200806172000/download.php?dropFile=swt-3.4-gtk-linux-x86.zip">Linux</a>,
       <span style="white-space: nowrap;">
@@ -63,6 +47,24 @@ Whatever the reason, you will find many resources here. Enjoy!</p>
   <ul>
   <li><a href="R3_4/plan.html">3.4 Development Plan</a></li>
   <li><a href="R3_4/new_and_noteworthy.html">New and Noteworthy</a></li>
+  <li><a href="language.php">Language Pack</a></li>
+  </ul>
+  </table>
+<td width="50%" valign="top">
+  <table width="100%">
+  <tr><td>
+      <b><font size="+1">Development</font></b><br>
+      <a href="http://download.eclipse.org/eclipse/downloads/drops/S-3.5M1-200808071402/download.php?dropFile=swt-3.5M1-win32-win32-x86.zip">Windows</a>,
+      <a href="http://download.eclipse.org/eclipse/downloads/drops/S-3.5M1-200808071402/download.php?dropFile=swt-3.5M1-gtk-linux-x86.zip">Linux</a>,
+      <span style="white-space: nowrap;">
+      <a href="http://download.eclipse.org/eclipse/downloads/drops/S-3.5M1-200808071402/download.php?dropFile=swt-3.5M1-carbon-macosx.zip">OS X</a></span>,
+      <a href="http://download.eclipse.org/eclipse/downloads/drops/S-3.5M1-200808071402/index.php#swt" target="_top">more...</a><br>
+      <small>3.5 Milestone 1 - <span style="white-space: nowrap;">8 August 2008</span></small><br>
+  <ul>
+<!--
+  <li><a href="R3_4/plan.html">3.4 Development Plan</a></li>
+  <li><a href="R3_4/new_and_noteworthy.html">New and Noteworthy</a></li>
+-->
   </ul>
   </table>
 </table>
