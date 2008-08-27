@@ -106,6 +106,12 @@ toolkit.</p>
 	<p>A set of custom-draw graphing components.
 	There is currently a fully functional Cartesian Graph, and a Gantt Graph is being developed.</p>
 
+<li><b><a href="http://libxine-java.sourceforge.net">libxine-java</a></b>
+	<i>by Matthias Ringwald</i>
+
+	<p>libxine-java is a Java interface that allows Java applications to play
+	all media types supported by the xine library.  Video playback can be
+	integrated into applications with SWT or AWT Canvas widgets.</p>
 </ul>
 
 <table width="100%">
