@@ -45,8 +45,7 @@ features to SWT.</p>
     <tt>Eclipse SWT PI/ws/library</tt> directory for your window system, and choose
 	"Run As -> Ant Build...". Select the JRE tab, and check "Run in the same JRE as the workspace".
     Select the Refresh tab, and check "Refresh resources upon completion" to refresh your workspace
-    after running the build to ensure Eclipse picks up the fresh binaries.
-    Now select the "Run" button to build.
+    after running the build to ensure Eclipse picks up the fresh binaries. Now select the "Run" button.
     <p></p>
     <center><img src="images/buildxml.png" alt="build.xml"></center>
     <p></p>
