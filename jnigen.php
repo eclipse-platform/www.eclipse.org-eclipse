@@ -41,10 +41,11 @@ features to SWT.</p>
     metadata changes.
     <p></p>
 <li>Compile the new C code and copy the new libraries to the appropriate
-    fragment.  To compile the code, use the <tt>build.xml</tt> file in the
-    <tt>Eclipse SWT PI/ws/library</tt> directory for your window system.
-    Refresh your workspace after running the build to ensure Eclipse
-    picks up the fresh binaries.
+    fragment.  To compile the code, right-click on the <tt>build.xml</tt> file in the
+    <tt>Eclipse SWT PI/ws/library</tt> directory for your window system, and choose
+	"Run As -> Ant Build...". Select the JRE tab, and check "Run in the same JRE as the workspace".
+    Select the Refresh tab, and check "Refresh resources upon completion" to refresh your workspace after running the build to ensure Eclipse
+    picks up the fresh binaries. Select the "Run" button to compile.
     <p></p>
     <center><img src="images/buildxml.png" alt="build.xml"></center>
     <p></p>
