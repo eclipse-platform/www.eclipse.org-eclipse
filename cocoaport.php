@@ -25,6 +25,7 @@ The projects you need are:
 <li>org.eclipse.swt</li>
 <li>org.eclipse.swt.cocoa.macosx</li>
 <li>org.eclipse.swt.examples (not required, but useful for testing)</li>
+<li>org.eclipse.swt.tools (not required, but useful for adding extra <a href="http://www.eclipse.org/swt/macgen.php">platform interface</a>)</li>
 </ul>
 <p>If you find a bug, <a href="https://bugs.eclipse.org/bugs/enter_bug.cgi?product=Platform&component=SWT&rep_platform=Macintosh&op_sys=Mac+OS+X+-+Cocoa">open an eclipse bug report</a>.
 Also, you can <a href="https://bugs.eclipse.org/bugs/buglist.cgi?classification=Eclipse&product=Platform&component=SWT&op_sys=Mac+OS+X+-+Cocoa&bug_status=UNCONFIRMED&bug_status=NEW&bug_status=ASSIGNED&bug_status=REOPENED">

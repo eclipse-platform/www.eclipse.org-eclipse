@@ -33,7 +33,7 @@ cocoa.</p>
 </ol>
 
     <p></p>
-<b>Note</b> the that the tool is under development. When it becomes stable a pre-build plugin will be available for download.
+<b>Note</b> that the tool is under development. When it becomes stable a pre-build plugin will be available for download.
     <p></p>
 
 
