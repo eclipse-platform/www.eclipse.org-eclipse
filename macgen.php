@@ -26,7 +26,7 @@ cocoa.</p>
     <p></p>
 <li>Export the plugin using <i>"Export -> Plugin Development -> Deployable plugins and framgments"</i>
     <p></p>
-<li>Put the exported plugins in your <b>&lt;eclipse&gt;/dropins</b> directory.
+<li>Put the exported plugin in your <b>&lt;eclipse&gt;/dropins</b> directory.
     <p></p>
 <li>Restart Eclipse and show the view <b>Mac Generator</b> from the <b>SWT Tools</b> category.
     <p></p>
