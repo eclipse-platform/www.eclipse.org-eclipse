@@ -80,6 +80,7 @@ Whatever the reason, you will find many resources here. Enjoy!</p>
 <li><a href="jws/">How to deploy SWT applications using Java Web Start</a></li>
 <li><a href="cvs.php">How to use SWT from CVS</a></li>
 <li><a href="jnigen.php">How to generate the SWT JNI Code</a></li>
+<li><a href="macgen.php">How to generate the SWT PI Code for Cocoa</a></li>
 <li><a href="opengl/">Using OpenGL in SWT Applications</a></li>
 <li><a href="cocoaport.php">How to help with the SWT Cocoa port</a></li>
 <li><a href="http://www.eclipse.org/articles/index.php?sort=date&category=SWT">Many more articles about SWT</a> on Eclipse Corner at eclipse.org</li>
