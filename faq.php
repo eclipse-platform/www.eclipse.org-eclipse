@@ -907,8 +907,8 @@ Problem" at: <a href="http://www.cas.mcmaster.ca/~emil/publications/fragile/">ht
       This is the typical approach that is used for implementing JUnit test cases.
       <p>There are also stand-alone applications available for automating SWT user interaction tests:
       <ul>
+        <li><a href="http://swtbot.sourceforge.net/index.html">SWTBot</a> (open source)</li>
         <li><a href="http://sourceforge.net/projects/abbot/">Abbot for SWT</a> (open source)</li>
-        <li><a href="http://swtbot.sourceforge.net/wiki/Main_Page">SWTBot</a> (open source)</li>
         <li><a href="http://www.instantiations.com/windowtester/">Instantiations Window Tester</a> (commercial)</li>
       </ul>
       </p>
