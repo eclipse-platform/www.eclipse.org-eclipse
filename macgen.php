@@ -24,7 +24,7 @@ cocoa.</p>
 <ol>
 	<li>Load <i>org.eclipse.swt.tools</i> project from Eclipse CVS
     <p></p>
-<li>Export the plugin using <i>"Export -> Plugin Development -> Deployable plugins and framgments"</i>
+<li>Export the plugin using <i>"Export -> Plugin Development -> Deployable plugins and fragments"</i>
     <p></p>
 <li>Put the exported plugin in your <b>&lt;eclipse&gt;/dropins</b> directory.
     <p></p>
@@ -33,7 +33,7 @@ cocoa.</p>
 </ol>
 
     <p></p>
-<b>Note</b> that the tool is under development. When it becomes stable a pre-build plugin will be available for download.
+<b>Note</b> that the tool is under development. When it becomes stable a pre-built plugin will be available for download.
     <p></p>
 
 
