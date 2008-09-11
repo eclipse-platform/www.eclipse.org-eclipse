@@ -47,9 +47,9 @@ cocoa.</p>
     <p></p>
 <li>Items from the list can be checked to be generated.
     <p></p>
-<li>Once the desired items are checked, press the generate tool bar button to generate all the necessary 
-	platform interface code. Which includes the java binding for Cocoa classes, 
-	the C Source for the JNI Natives and also supporting files for the tool. All files are under
+<li>Once the desired items are checked, press the generate tool bar button to generate
+	all the necessary JNI code. Which includes the java binding for Cocoa classes, 
+	the C source for the JNI Natives and also supporting files for the tool. All files are under
 	<tt>Eclipse SWT PI/cocoa</tt> directory and if appropriate should be released into CVS.
     <p></p>
 <li>Compile the new C code.  To compile the code, right-click on the <tt>build.xml</tt> file in the
