@@ -41,6 +41,8 @@ features to SWT.</p>
     <p></p>
     <center><img src="images/jnitemplates.png" alt="build.xml"></center>
     <p></p>
+<li>Save the file. This should build the appropriate C files.
+    <p></p>
 <b>Note</b> that the SWT tools plugins is under development. When it becomes stable a pre-built plugin will be available for download.
     <p></p>
 
