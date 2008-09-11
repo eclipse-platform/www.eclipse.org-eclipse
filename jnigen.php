@@ -39,6 +39,7 @@ features to SWT.</p>
     <p></p>
 <li>Use code assist templates like <b>jni*</b> (i.e. <i>jnifield</i> and <i>jnimethod</i>) to add javadoc tags that describe flags and casts for any primitive types.
     <p></p>
+    <center><img src="images/jnitemplates.png" alt="build.xml"></center>
     <p></p>
 <b>Note</b> that the SWT tools plugins is under development. When it becomes stable a pre-built plugin will be available for download.
     <p></p>
