@@ -62,9 +62,8 @@ Whatever the reason, you will find many resources here. Enjoy!</p>
       <small>3.5 Milestone 1 - <span style="white-space: nowrap;">8 August 2008</span></small><br>
   <ul>
   <li><a href="http://wiki.eclipse.org/SWT/Plan3.5">3.5 Development Plan (draft)</a></li>
-<!--
-  <li><a href="R3_4/new_and_noteworthy.html">New and Noteworthy</a></li>
--->
+  <li><a href="R3_5/new_and_noteworthy.html">New and Noteworthy</a></li>
+
   </ul>
   </table>
 </table>
