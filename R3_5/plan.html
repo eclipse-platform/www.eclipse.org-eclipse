@@ -16,21 +16,83 @@ M3 - October 31, 2008 (6 weeks) - DEV
 - link
 - all prototype etc. for BIDI done
 - image save (properties, conversion)
+- Mac cocoa graphics
+	- non UI thread
+	- textlayout boxes, objects, default foreground
+	- drawText flags 
+	- wait cursor and others
+- Mac cocoa drag and drop
+- Mac cocoa widgets
+	- custom draw in table/tree
+	- modality
+	- verify / modify
+	- keyboard
+		- key up/down, traversal
+		- menu accelerators (action and text), menu arm
+	- mouse
+		- events, wheel etc.
+		- SWT.DragDectect and API
+		- SWT.MenuDetect
+		- when disabled, event goes to parent
+		- cursor on grab
+	- Display
+		- application icon on the dock (Shell.setImage)
+		- -Xdoc:icon
+	- small font/focus ring
+	- preferred size
 
 M4 - December 12, 2008 (6 weeks) - DEV 
 - BIDI
 - Theme drawing go/no go
 - Header and HeaderItem go/no go
+- IA2
+- Mac cocoa graphics
+	- textlayout bidi
+	- GC.copyArea
+	- gradient patterns
+	- native image loading
+	- Image.setBackground()
+- Mac cocoa widgets
+	- painting and drawing
+		- setRedraw()
+		- scroll/paint/update
+		- region in control
+		- Display.update
+	- print()
+
+	- Dialogs
+
+	- widgets draw attributes
+		- font and foreground
+		- background/background image
+	
+	- default selection
+		- default button
+		- default selection and text/table/tree
+		
+	- Display
+		- SWT.Settings
+		
+	- preferred size
+	
+- Mac cocoa accessibility
 
 M5 - January 30, 2009 (7 weeks) - MAJOR FEATURE WORK COMPLETED 
 >>>  (3.4.2/Ganymede-SR2 +0 dates:  RC1-February 2, RC2-February 9, RC3-February 16) 
 - Theme drawing
 - Header and HeaderItem
-- IA2
+- printer API
+- Mac cocoa widgets
+	- preferred size
+	- individual widget test / fix pass
+- Mac cocoa internationalization (IME, BIDI, DBCS)
+- Mac cocoa OpenGL
+- Mac cocoa printing
+- Mac cocoa AWT/Swing interop
 
 M6 - March 13, 2009 (6 weeks) - API FREEZE, FEATURE TUNING, I18N & ACCESSIBILITY 
 >>>  (EclipseCon March 23-27) 
-- Cocoa
+- Cocoa done
 	- mirror or not?
 
 M7 - May 1st, 2009 (7 weeks) - PERFORMANCE & POLISH, BEST EFFORT ON DOC 
@@ -78,10 +140,10 @@ RC4 (1 week) - June 5, 2009
 		<td><b>Plan Items</b>
 		<ul>
 			<li><img src="../images/progress.gif" nosave="" height="5" width="14" border="0"> Port SWT to Mac cocoa
-			(<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=200081">XXXX</a>)</li>
+			(<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXX">XXXX</a>)</li>
 			
 			<li><img src="../images/progress.gif" nosave="" height="5" width="14" border="0"> Implement SWT Browser Edition
-			(<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=200095">XXXX</a>)</li>
+			(<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXX">XXXX</a>)</li>
 		
 			<li>( ) Complete SWT WPF port
 			(<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=200082">200082</a>)</li>		
@@ -94,19 +156,19 @@ RC4 (1 week) - June 5, 2009
 			<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=37706">37706</a>)</li>
 			
 			<li><img src="../images/glass.gif" nosave="" height="10" width="10" border="0"> Implement more native behavior
-			(<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=230854">XXXX</a>)</li>
+			(<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXX">XXXX</a>)</li>
 			
 			<li><img src="../images/glass.gif" nosave="" height="10" width="10" border="0"> Provide hooks for non-native assistive technologies
-			(<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=230854">XXXX</a>)</li>
+			(<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXX">XXXX</a>)</li>
 			
 			<li><img src="../images/glass.gif" nosave="" height="10" width="10" border="0"> Improve StyleText
-			(<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=230854">XXXX</a>)</li>
+			(<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXX">XXXX</a>)</li>
 			
 			<li><img src="../images/glass.gif" nosave="" height="10" width="10" border="0"> Investigate light weight performance tools
-			(<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=230854">XXXX</a>)</li>
+			(<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXX">XXXX</a>)</li>
 			
 			<li><img src="../images/glass.gif" nosave="" height="10" width="10" border="0"> Improve image support
-			(<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=230854">XXXX</a>)</li>
+			(<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXX">XXXX</a>)</li>
 			
 		</ul>
 		</td>
@@ -153,6 +215,7 @@ RC4 (1 week) - June 5, 2009
 			border="0" height="16" width="16"></td>
 		<td><ul>
 			<li>Reduce bug count</li>
+			<li>Support cairo on AIX</li>
 			<li>Write snippets and support newsgroup</li>
 		</ul>
 		</td>
@@ -172,6 +235,8 @@ RC4 (1 week) - June 5, 2009
 			border="0" height="16" width="16"></td>
 		<td><ul>
 			<li>Reduce bug count</li>
+			<li>Early access version of SWT for Mac cocoa</li>
+			<li>Make GDI and GDI+ string drawing be the same</li>
 			<li>Write snippets and support newsgroup</li>
 		</ul>
 		</td>
@@ -191,6 +256,11 @@ RC4 (1 week) - June 5, 2009
 			border="0" height="16" width="16"></td>
 		<td><ul>
 			<li>Reduce bug count</li>
+			<li>Implement drag and drop for Mac cocoa</li>
+			<li>Implement block selection for StyledText</li>
+			<li>Implement link style for StyledText</li>
+			<li>Final decision for implementation of "BIDI support for text input widgets"</li>
+			<li>Implement image save (properties, conversion, etc)</li>
 			<li>Write snippets and support newsgroup</li>
 		</ul>
 		</td>
@@ -210,6 +280,9 @@ RC4 (1 week) - June 5, 2009
 			border="0" height="16" width="16"></td>
 		<td><ul>
 			<li>Reduce bug count</li>
+			<li>Implement accessibility for Mac cocoa</li>
+			<li>BIDI support for text input widgets</li>
+			<li>Support non-native assistive technologies</li>
 			<li>Write snippets and support newsgroup</li>
 		</ul>
 		</td>
@@ -229,6 +302,9 @@ RC4 (1 week) - June 5, 2009
 			border="0" height="16" width="16"></td>
 		<td><ul>
 			<li>Reduce bug count</li>
+			<li>Implement Header and HeaderItem</li>
+			<li>Implement theme drawing API</li>
+			<li>Implement API to handle more printer options</li>
 			<li>Write snippets and support newsgroup</li>
 		</ul>
 		</td>
@@ -248,6 +324,7 @@ RC4 (1 week) - June 5, 2009
 			border="0" height="16" width="16"></td>
 		<td><ul>
 			<li>Reduce bug count</li>
+			<li>Port SWT to Mac cocoa</li>
 			<li>Write snippets and support newsgroup</li>
 		</ul>
 		</td>
