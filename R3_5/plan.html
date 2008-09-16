@@ -151,17 +151,17 @@ RC4 (1 week) - June 5, 2009
 			<li><img src="../images/glass.gif" nosave="" height="10" width="10" border="0"> BIDI support for text input widgets
 			(<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=230854">230854</a>)</li>
 			
-			<li><img src="../images/glass.gif" nosave="" height="10" width="10" border="0"> General API for drawing standard UI components
+			<li>( ) General API for drawing standard UI components
 			(<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=80554">80554</a>, 
 			<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=37706">37706</a>)</li>
 			
-			<li><img src="../images/glass.gif" nosave="" height="10" width="10" border="0"> Implement more native behavior
+			<li>( ) Implement more native behavior (Header control, Mac tool bar, ...)
 			(<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXX">XXXX</a>)</li>
 			
 			<li><img src="../images/glass.gif" nosave="" height="10" width="10" border="0"> Provide hooks for non-native assistive technologies
 			(<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXX">XXXX</a>)</li>
 			
-			<li><img src="../images/glass.gif" nosave="" height="10" width="10" border="0"> Improve StyleText
+			<li><img src="../images/glass.gif" nosave="" height="10" width="10" border="0"> Improve StyledText
 			(<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXX">XXXX</a>)</li>
 			
 			<li><img src="../images/glass.gif" nosave="" height="10" width="10" border="0"> Investigate light weight performance tools
@@ -237,8 +237,8 @@ RC4 (1 week) - June 5, 2009
 		<td><ul>
 			<li>Reduce bug count</li>
 			<li>Make GDI and GDI+ string drawing be the same</li>
-			<li>Rewrite the JNI generator as a plugin</li>
-			<li>Mac cocoa: provide early access version of Eclipse and SWT</li>
+			<li>Mac cocoa: Rewrite the JNI generator as a plugin</li>
+			<li>Mac cocoa: Provide early access version of Eclipse and SWT</li>
 			<li>Write snippets and support newsgroup</li>
 		</ul>
 		</td>
@@ -260,25 +260,25 @@ RC4 (1 week) - June 5, 2009
 			<li>Reduce bug count</li>
 			<li>Implement block selection for StyledText</li>
 			<li>Implement link style for StyledText</li>
-			<li>Final decision for implementation of "BIDI support for text input widgets"</li>
+			<li>Complete exploration for "BIDI support for text input widgets"</li>
 			<li>Implement image save (properties, conversion, etc)</li>
-			<li>Mac cocoa graphics: implement graphics in non-UI thread</li>
-			<li>Mac cocoa graphics: implement TextLayout (boxes, objects, default foreground ...)</li>
-			<li>Mac cocoa graphics: implement GC drawFlags</li>
-			<li>Mac cocoa graphics: implement wait cursor (and others)</li>
-			<li>Mac cocoa widgets: implement custom draw for table and tree</li>
-			<li>Mac cocoa widgets: implement shell modality</li>
-			<li>Mac cocoa widgets: implement traversal and key events</li>
-			<li>Mac cocoa widgets: implement mouse events and mouse wheel</li>
-			<li>Mac cocoa widgets: implement mouse cursor on grab</li>
-			<li>Mac cocoa widgets: implement menu accelerators (action, text drawing)</li>
-			<li>Mac cocoa widgets: implement modify / verify event</li>
-			<li>Mac cocoa widgets: implement SWT.MenuDetect and allow native text menu</li>
-			<li>Mac cocoa widgets: implement Shell.setImage() and -Xdoc:icon</li>
-			<li>Mac cocoa widgets: implement small fonts and focus ring for the Eclipse IDE</li>
-			<li>Mac cocoa widgets: implement preferred size for simple widgets (button, label ...)</li>
-			<li>Mac cocoa drag and drop: implement drag and drop</li>
-			<li>Mac cocoa drag and drop: implement SWT.DragDetect and Control.setDragDetect()</li>
+			<li>Mac cocoa graphics: Implement graphics in non-UI thread</li>
+			<li>Mac cocoa graphics: Implement TextLayout (boxes, objects, default foreground ...)</li>
+			<li>Mac cocoa graphics: Implement GC drawFlags</li>
+			<li>Mac cocoa graphics: Implement wait cursor (and others)</li>
+			<li>Mac cocoa widgets: Implement custom draw for table and tree</li>
+			<li>Mac cocoa widgets: Implement shell modality</li>
+			<li>Mac cocoa widgets: Implement traversal and key events</li>
+			<li>Mac cocoa widgets: Implement mouse events and mouse wheel</li>
+			<li>Mac cocoa widgets: Implement mouse cursor on grab</li>
+			<li>Mac cocoa widgets: Implement menu accelerators (action, text drawing)</li>
+			<li>Mac cocoa widgets: Implement modify / verify event</li>
+			<li>Mac cocoa widgets: Implement SWT.MenuDetect and allow native text menu</li>
+			<li>Mac cocoa widgets: Implement Shell.setImage() and -Xdoc:icon</li>
+			<li>Mac cocoa widgets: Implement small fonts and focus ring for the Eclipse IDE</li>
+			<li>Mac cocoa widgets: Implement preferred size for simple widgets (button, label ...)</li>
+			<li>Mac cocoa drag and drop: Implement drag and drop for Mac cocoa</li>
+			<li>Mac cocoa drag and drop: Implement SWT.DragDetect and Control.setDragDetect()</li>
 			<li>Write snippets and support newsgroup</li>
 		</ul>
 		</td>
@@ -300,6 +300,18 @@ RC4 (1 week) - June 5, 2009
 			<li>Reduce bug count</li>
 			<li>BIDI support for text input widgets</li>
 			<li>Support non-native assistive technologies</li>
+			<li>Mac cocoa graphics: Support BIDI in TextLayout</li>
+			<li>Mac cocoa graphics: Implement GC.copyArea()</li>
+			<li>Mac cocoa graphics: Implement gradient Patterns</li>
+			<li>Mac cocoa graphics: Support native image loading</li>
+			<li>Mac cocoa graphics: Implement Image.setBackground()</li>
+			<li>Mac cocoa widgets: Implement painting (setRedraw(), scroll/paint/update, setRegion(), Display.update() ...)</li>
+			<li>Mac cocoa widgets: Implement Control.print()</li>
+			<li>Mac cocoa widgets: Implement widget attributes (foreground, background, font, background image)</li>
+			<li>Mac cocoa widgets: Implement default button</li>
+			<li>Mac cocoa widgets: Implement default selection (text, tree, table ...)</li>
+			<li>Mac cocoa widgets: Implement SWT.Settings for Display</li>
+			<li>Mac cocoa widgets: Implement preferred size for scrolled widgets (text, tree, table ...)/li>
 			<li>Mac cocoa accessibility: Implement accessibility for Mac cocoa</li>
 			<li>Write snippets and support newsgroup</li>
 		</ul>
@@ -321,8 +333,15 @@ RC4 (1 week) - June 5, 2009
 		<td><ul>
 			<li>Reduce bug count</li>
 			<li>Implement Header and HeaderItem</li>
+			<li>Implement Mac tool bar</li>
 			<li>Implement theme drawing API</li>
 			<li>Implement API to handle more printer options</li>
+			<li>Mac cocoa graphics/widgets: Implemet internationalization (IME, BIDI, DBCS)/li>
+			<li>Mac cocoa widgets: Implement preferred size for remaing widgets/li>
+			<li>Mac cocoa OpenGL: Implement OpenGL/li>
+			<li>Mac cocoa printing: Implement printing/li>
+			<li>Mac cocoa AWT/Swing interop: Implement AWT/Swing interop/li>
+			<li>Mac cocoa: Fix bugs, implement missing features, test ...</li>
 			<li>Write snippets and support newsgroup</li>
 		</ul>
 		</td>
@@ -342,7 +361,8 @@ RC4 (1 week) - June 5, 2009
 			border="0" height="16" width="16"></td>
 		<td><ul>
 			<li>Reduce bug count</li>
-			<li>Port SWT to Mac cocoa</li>
+			<li>Mac cocoa: Fix bugs, implement missing features, test ...</li>
+			<li>Mac cocoa: Port SWT to Mac cocoa completed</li>
 			<li>Write snippets and support newsgroup</li>
 		</ul>
 		</td>
