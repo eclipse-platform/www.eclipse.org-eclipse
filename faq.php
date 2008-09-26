@@ -1300,7 +1300,8 @@ public class DisplayMozillaVersion {
 
   <dt><strong><a name="decorationHints"> Q:  Why doesn't my Shell have the trim decorations that I specified in its constructor?</a></strong></dt>
   <dd>A: The native window system is responsible for creating the decorations for all windows, and has the right to not fully honor the set of requested decorations.
-    For this reason, styles that are passed to a Shell's constructor are considered to be hints.  This is a constraint that all native applications are subject to.
+    For this reason, styles that are passed to a Shell's constructor are considered to be hints.  For example, on some window managers, creating
+    a shell with SWT.RESIZE, will also create a minimize and maximize button.  This is a constraint that all native applications are subject to.
   </dd>
 
   <dt><strong><a name="noevents"> Q:  Why doesn't a widget send events when I change it programmatically?</a></strong></dt>
