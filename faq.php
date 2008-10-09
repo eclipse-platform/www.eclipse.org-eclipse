@@ -27,11 +27,13 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
   <li><a href="#howbuildjar">How do I build an SWT jar for my platform?</a></li>
   <li><a href="#howbuildplugin">How do I build the SWT Eclipse plug-in for my platform?</a></li>
   <li><a href="#howbuilddll">How do I build the SWT JNI libraries for my platform?</a></li>
+  <li><a href="#howaddnatives">How do I add a new native to the SWT JNI libraries for my platform?</a></li>
+  <li><a href="#howaddnativescocoa">How do I add a new native to the SWT JNI libraries for Cocoa?</a></li>
   <li><a href="#buildeclipseexe">How do I build the Eclipse executable for my platform?</a></li>
   <li><a href="#gtk64">How do I build the 64-bit version of SWT GTK?</a></li>
   <p></p>
   <li><a href="#gtkstartup">What do I need to run SWT on Linux/GTK?</a></li>
-  <li><a href="#carbonapp">On Mac carbon, how do I run an SWT application from the command line?</a></li>
+  <li><a href="#carbonapp">On Mac Carbon, how do I run an SWT application from the command line?</a></li>
   <li><a href="#javawebstart">How can I deploy my standalone SWT application with Java Web Start?</a></li>
   <li><a href="#pocketpcstart">What do I need to do to run SWT on the PocketPC?</a></li>
   <li><a href="#pocketpclibrary">Where is the SWT library for the PocketPC?</a></li>
@@ -297,6 +299,18 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
   </ol>
   </dd>
 
+  <dt><strong><a name="howaddnatives">Q: How do I add a new native to the SWT JNI libraries for my platform?</a></strong>
+  </dt>
+  <dd>A: For the steps to add new natives to the SWT JNI libraries, see <a href="http://www.eclipse.org/swt/jnigen.php">
+  Generating the SWT JNI Code.</a> 
+  </dd>
+  
+  <dt><strong><a name="howaddnativescocoa">Q: How do I add a new native to the SWT JNI libraries for Cocoa?</a></strong>
+  </dt>
+  <dd>A: For the steps to add new natives to the SWT Cocoa JNI libraries, see <a href="http://www.eclipse.org/swt/macgen.php">
+  Generating the SWT PI Code for Cocoa.</a> 
+  </dd>
+  
   <dt><strong><a name="buildeclipseexe">Q: How do I build the Eclipse executable for my platform?</a></strong>
   </dt>
   <dd>A: Eclipse is launched by a binary executable which puts up a splash screen and launches a Java VM. 
@@ -377,14 +391,14 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
     </p>
   </dd>
 
-  <dt><strong><a name="carbonapp">Q: On Mac carbon, how do I run an SWT application from the command line?</a></strong></dt>
-  <dd>A: If you run a Java application that uses carbon via JNI, the application is not registered with the OS as 
+  <dt><strong><a name="carbonapp">Q: On Mac Carbon, how do I run an SWT application from the command line?</a></strong></dt>
+  <dd>A: If you run a Java application that uses Carbon via JNI, the application is not registered with the OS as 
       a 'normal' UI application.  As a consequence, it has no entry in the dock and it cannot be activated. AWT 
       (or Swing) based applications don't have this problem because they seem to use undocumented SPI to register 
       themselves.
 
       <p>To work around this problem you'll have to pass the -XstartOnFirstThread option to the
-      java executable as follow:</p>
+      java executable as follows:</p>
       <pre>
          java -XstartOnFirstThread -cp swt.jar:. ControlExample
       </pre>
