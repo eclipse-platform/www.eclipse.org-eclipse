@@ -66,7 +66,7 @@ toolkit.</p>
 
     <p>An Eclipse project that collects various custom SWT widgets and other UI components.</p>
 
-<li><b><a href="http://paperclips.sourceforge.net/">PaperClips</a></b>
+<li><b><a href="http://code.google.com/p/swt-paperclips/">PaperClips</a></b>
     <i>by Woodcraft Mill & Cabinet and Others</i>
 
     <p>Simplified printing support for SWT. PaperClips provides document building
