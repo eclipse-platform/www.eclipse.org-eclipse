@@ -58,6 +58,7 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
   <li><a href="#noeventfire">Why are some events like Selection not fired in response to programmatic widget changes?</a></li>
   <li><a href="#printstacktrace">Why don't SWTError and SWTException override all printStackTrace methods?</a></li>
   <li><a href="#printOnX">How do I print using my favorite Unix print program?</a></li>
+  <li><a href="#installedprinters">How can I tell whether or not there are any printers installed?</a></li>
   <li><a href="#noprintimage">How do I print a snapshot of a widget?</a></li>
   <li><a href="#smallprint">Why does everything I print seem so small?</a></li>
   <li><a href="#printertrim">What does computeTrim mean for a Printer?</a></li>
@@ -824,6 +825,13 @@ Problem" at: <a href="http://www.cas.mcmaster.ca/~emil/publications/fragile/">ht
     <li>Click Apply</li>
     <li>Click Run</li>
     </ol>
+  </dd>
+
+  <dt><strong><a name="installedprinters">Q: How can I tell whether or not there are any printers installed?</a></strong></dt>
+  <dd>A: The method <code>org.eclipse.swt.printing.Printer.getPrinterList()</code> can be used to determine
+      whether or not there are any printers installed on the system. If this method returns null, then there
+      are no printers available. If it returns an array of PrinterData objects, then the elements of this array
+      each represent an installed printer.
   </dd>
 
   <dt><strong><a name="noprintimage">Q: How do I print a snapshot of a widget?</a></strong></dt>
