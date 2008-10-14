@@ -830,8 +830,8 @@ Problem" at: <a href="http://www.cas.mcmaster.ca/~emil/publications/fragile/">ht
   <dt><strong><a name="installedprinters">Q: How can I tell whether or not there are any printers installed?</a></strong></dt>
   <dd>A: The method <code>org.eclipse.swt.printing.Printer.getPrinterList()</code> can be used to determine
       whether or not there are any printers installed on the system. If this method returns null, then there
-      are no printers available. If it returns an array of PrinterData objects, then the elements of this array
-      each represent an installed printer.
+      are no printers available. If it returns an array of <code>PrinterData</code> objects, then each of the
+      elements in this array represents an installed printer.
   </dd>
 
   <dt><strong><a name="noprintimage">Q: How do I print a snapshot of a widget?</a></strong></dt>
