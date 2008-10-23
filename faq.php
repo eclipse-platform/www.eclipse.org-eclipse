@@ -949,7 +949,7 @@ Problem" at: <a href="http://www.cas.mcmaster.ca/~emil/publications/fragile/">ht
 the same value as SWT.EMBEDDED, which is used to embed widgets from 
 other widget toolkits into SWT.  On some operating systems (GTK, Motif), this 
 may cause the children of this compostite to be obscured.  Do not use
-the SWT.CENTER style when creating a composite (it is not valid).
+the SWT.CENTER style when creating a composite.
   </dd>
 
   <dt><strong><a name="whatisbrowser">Q: What is the SWT Browser widget?</a></strong></dt>
