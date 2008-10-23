@@ -64,6 +64,7 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
   <li><a href="#printertrim">What does computeTrim mean for a Printer?</a></li>
   <li><a href="#autotest">How can I implement user interaction tests?</a></li>
   <li><a href="#gtkselectiongone">On gtk, why does my widget's selection disappear when it loses focus?</a></li>
+  <li><a href="#gtkwidgethidden">On gtk, why are some widgets hidden when they are visible on Windows or the Macintosh?</a></li>
   <p></p>
   <li><a href="#whatisbrowser">What is the SWT Browser widget?</a></li>
   <li><a href="#howusemozilla">How do I use Mozilla as the Browser's underlying renderer?</a></li>
@@ -941,6 +942,13 @@ Problem" at: <a href="http://www.cas.mcmaster.ca/~emil/publications/fragile/">ht
   <dd>A: This effect may be seen if KDE color settings are being
       utilized.  This can be fixed by unchecking the "Apply KDE colors to
       non-KDE apps" option in the KDE colors control panel.
+  </dd>
+  
+    <dt><strong><a name="gtkwidgethidden">Q: On gtk, why are some widgets hidden when they are visible on Windows or the Macintosh?</a></strong></dt>
+  <dd>A: The SWT.CENTER, although undefined for composites, has 
+the same value as SWT.EMBEDDED, which is used to embed widgets from 
+other widget toolkits into SWT.  On some operating systems (GTK, Motif), this 
+may cause the children of this compostite to be obscured.
   </dd>
 
   <dt><strong><a name="whatisbrowser">Q: What is the SWT Browser widget?</a></strong></dt>
