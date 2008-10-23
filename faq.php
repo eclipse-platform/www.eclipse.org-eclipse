@@ -946,7 +946,7 @@ Problem" at: <a href="http://www.cas.mcmaster.ca/~emil/publications/fragile/">ht
   
     <dt><strong><a name="gtkwidgethidden">Q: On gtk and motif, why are some widgets hidden when they are visible on Windows or the Macintosh?</a></strong></dt>
   <dd>A: The SWT.CENTER, although undefined for composites, has 
-the same value as SWT.EMBEDDED, which is used to embed widgets from 
+the same value as SWT.EMBEDDED which is used to embed widgets from 
 other widget toolkits into SWT.  On some operating systems (GTK, Motif), this 
 may cause the children of this compostite to be obscured.  Do not use
 the SWT.CENTER style when creating a composite.
