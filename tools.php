@@ -13,6 +13,10 @@
 <tr><?php include "sidebar.php"; ?>
 <td valign="top" style="padding: 10px"><h1 style="padding: 0; margin: 0; border-bottom: 1px solid #000000;">SWT Development Tools</h1>
 
+<p><b>JniGen</b> is a tool that generates JNI wrappers for creating
+the SWT Platform Interface. For more information on how to generate the JNI code,
+see <a href="jnigen.php">this tutorial</a>.</p>
+
 <p><b>Sleak</b> is a simple tool that monitors the creation and disposing of SWT graphics resources.
 (<a href="http://www.eclipse.org/articles/swt-design-2/sleak.htm">see tutorial</a>)</p>
 <ul>
@@ -51,9 +55,6 @@ style, layout and parent information.</p>
   <li>Move cursor over the control of interest and see data printed in Spy view.</li>
   <li>To start or stop data collection while over a control, toggle the monitor action using ALT+SHIFT+".".</li>
 </ul>
-
-<p><b>JniGen</b> is a tool that generates JNI wrappers for creating the SWT Platform Interface.
-For more information on how to generate the JNI code, see <a href="jnigen.php">this tutorial</a>.</p>
 
 </table>
 </body>
