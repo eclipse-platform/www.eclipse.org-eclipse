@@ -72,3 +72,4 @@ David Green - Bug 220836
 Calman Steynberg - Bug 210858
 Andrew Overholt - Bug 226356
 Mikhail Kalugin - Bugs 232686, 232685
+Ryan Wilhm - Bug 253065
