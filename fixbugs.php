@@ -15,7 +15,7 @@
 
 <p></p>
 <table width="100%">
-<tr><th bgcolor="#0080c0" align="left" style="padding: 2px;"><font color="#ffffff">Cocoa Port</font>
+<tr><th bgcolor="#0080c0" align="left" style="padding: 2px;"><font color="#ffffff"></font>
 </table>
 
 
