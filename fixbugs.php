@@ -1,7 +1,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-    <title>SWT Cocoa Port</title>
+    <title>Fixing a bug in SWT (Under Construction)</title>
     <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
     <link rel="stylesheet" href="http://dev.eclipse.org/default_style.css" type="text/css">
     <link rel="stylesheet" href="swt.css" type="text/css">
@@ -11,15 +11,14 @@
 <table width="635px" class="swtpage">
 <colgroup><col width="125px"><col width="510px"></colgroup>
 <tr><?php include "sidebar.php"; ?>
-<td valign="top" style="padding: 10px"><h1 style="padding: 0; margin: 0; border-bottom: 1px solid #000000;">SWT Cocoa Port</h1>
+<td valign="top" style="padding: 10px"><h1 style="padding: 0; margin: 0; border-bottom: 1px solid #000000;">Fixing a bug in SWT (Under Construction)</h1>
 
 <p></p>
 <table width="100%">
 <tr><th bgcolor="#0080c0" align="left" style="padding: 2px;"><font color="#ffffff">Cocoa Port</font>
 </table>
 
-<h1>Fixing a bug in SWT (Under Construction)<br>
-</h1>
+
 <h2>Set up your Java environment:</h2>
 <ol>
 <li>Download and install a Java JRE (SWT only requires a 1.4.x JRE to
@@ -66,7 +65,7 @@ href="https://bugs.eclipse.org/bugs/page.cgi?id=bug-writing.html">link</a>.<br>
 </li>
 </ul>
 </ul>
-<h2>Find the Operating System documentation:</h2>
+<h2>Find the Operating System doc:</h2>
 <ul>
 <li>Windows documentation is<a
 href="http://msdn.microsoft.com/en-ca/default.aspx"> found here</a>.</li>
