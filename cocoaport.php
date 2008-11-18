@@ -18,12 +18,19 @@
 <tr><th bgcolor="#0080c0" align="left" style="padding: 2px;"><font color="#ffffff">Cocoa Port</font>
 </table>
 
-<p>The Cocoa port of SWT is well underway. ControlExample and most of the SWT examples run, and
-we expect to have an Eclipse build of macosx.cocoa.x86 available for 3.4 M2.
-There are still areas that need work. Here is the port's status as of
-<a href="http://dev.eclipse.org/mhonarc/lists/platform-swt-dev/msg06076.html">August 27, 2008</a>.
-<p>If you want to help, here is what you can do.
-To get started, <a href="http://www.eclipse.org/swt/cvs.php">load SWT from CVS</a> into your eclipse workspace.
+<p>The Cocoa port of SWT will ship with Eclipse 3.5.</p>
+<p>Early adopters can try it now by downloading
+<a href="http://download.eclipse.org/eclipse/downloads/drops/S-3.5M3-200810301917/download.php?dropFile=eclipse-SDK-3.5M3-macosx-cocoa.tar.gz">
+Eclipse 3.5 Milestone 3 for Mac OSX Cocoa</a>.</p>
+<p>If you prefer to be bleeding edge, you can download the most recent
+<a href="http://download.eclipse.org/eclipse/downloads/">3.5 Stream Integration Build (weekly)</a> or the 
+<a href="http://download.eclipse.org/eclipse/downloads/">3.5 Stream Nightly Build</a> of Eclipse for Mac OSX Cocoa.
+</p>
+<p>There are still areas that need work. If you want to help, here is what you can do.
+<ol>
+<li>Read the <a href="http://www.eclipse.org/swt/R3_5/plan.html">SWT 3.5 Development Plan</a> to get a feel for the current status of the Cocoa port.</li>
+<li>Subscribe to the <a href="https://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT developers mailing list</a> for discussion and to keep track of current developments.</li>
+<li>Then <a href="http://www.eclipse.org/swt/cvs.php">load SWT from CVS</a> into your Eclipse workspace.
 The projects you need are:
 <ul>
 <li>org.eclipse.swt</li>
@@ -31,17 +38,15 @@ The projects you need are:
 <li>org.eclipse.swt.examples (not required, but useful for testing)</li>
 <li>org.eclipse.swt.tools (not required, unless you need to extend the <a href="http://www.eclipse.org/swt/macgen.php">JNI Code</a>)</li>
 </ul>
-</p><p>If you find a bug, <a href="https://bugs.eclipse.org/bugs/enter_bug.cgi?product=Platform&component=SWT&rep_platform=Macintosh&op_sys=Mac+OS+X+-+Cocoa">open an eclipse bug report</a>.
-Also, you can <a href="https://bugs.eclipse.org/bugs/buglist.cgi?classification=Eclipse&product=Platform&component=SWT&op_sys=Mac+OS+X+-+Cocoa&bug_status=UNCONFIRMED&bug_status=NEW&bug_status=ASSIGNED&bug_status=REOPENED">
-pick an interesting bug from here</a>, see if you can figure out how to fix the problem, and if so, attach a patch to the bug report.
-Subscribe to the <a href="news://news.eclipse.org/eclipse.platform.swt">SWT newsgroup</a> for discussion and to keep track of current developments.
-</p><p>For a history of the beginnings of the Cocoa port, see Steve Northover's blog:
-<ul>
-<li><a href="http://inside-swt.blogspot.com/2007/11/hacking-at-apple.html">Hacking at Apple</a></li>
-<li><a href="http://inside-swt.blogspot.com/2007/11/great-success.html">Great Success</a></li>
-<li><a href="http://inside-swt.blogspot.com/2007/11/ok-community-blow-your-brains-out.html">Call For Volunteers</a></li>
-</ul>
-</p><p>Thanks to those who have helped so far!
+</li>
+<li>Pick an interesting bug from the plan or <a href="https://bugs.eclipse.org/bugs/buglist.cgi?classification=Eclipse&product=Platform&component=SWT&op_sys=Mac+OS+X+-+Cocoa&bug_status=UNCONFIRMED&bug_status=NEW&bug_status=ASSIGNED&bug_status=REOPENED">
+from here</a>, cc yourself to the bug, signal your intent to look at the bug in the bug itself or on the SWT mailing list,
+and see if you can figure out how to fix the problem. If so, attach a patch to the bug report.</li>
+</ol>
+</p>
+<p>If you find a bug, <a href="https://bugs.eclipse.org/bugs/enter_bug.cgi?product=Platform&component=SWT&rep_platform=Macintosh&op_sys=Mac+OS+X+-+Cocoa">open an Eclipse bug report against SWT Mac OSX Cocoa</a>.
+</p>
+<p>Thanks to those who have helped so far!
 </p>
 
 </table>
