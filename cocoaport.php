@@ -46,7 +46,7 @@ and see if you can figure out how to fix the problem. If so, attach a patch to t
 </p>
 <p>If you find a bug, <a href="https://bugs.eclipse.org/bugs/enter_bug.cgi?product=Platform&component=SWT&rep_platform=Macintosh&op_sys=Mac+OS+X+-+Cocoa">open an Eclipse bug report against SWT Mac OSX Cocoa</a>.
 </p>
-<p>Thanks to those who have helped so far!
+<p>Thanks to all those who have helped so far!
 </p>
 
 </table>
