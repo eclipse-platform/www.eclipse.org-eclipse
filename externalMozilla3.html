@@ -7,6 +7,10 @@ prefs.js...
 -->
 <script language="JavaScript">
 function function1() {
+if (navigator.appName == "Netscape") {
+	netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
+}
+
 alert(window.connect);
 var asdf = new Array();
 asdf[0] = 3;
