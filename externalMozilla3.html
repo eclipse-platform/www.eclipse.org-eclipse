@@ -8,21 +8,21 @@ prefs.js...
 <script language="JavaScript">
 function function1() {
 alert(1);
-//if (navigator.appName == "Netscape") {
-//	netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
-//}
+if (navigator.appName == "Netscape") {
+	netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
+}
 alert(2);
 
-//alert(window.connect);
+alert(window.connect);
 
-//var asdf = new Array();
-//asdf[0] = 3;
-//asdf[1] = 17.6;
-//asdf[2] = 'hi';
-//var a = window.connect.callJava(asdf);
-//for (var i = 0; i < a.length; i++) {
-//	alert(a[i]);
-//}
+var asdf = new Array();
+asdf[0] = 3;
+asdf[1] = 17.6;
+asdf[2] = 'hi';
+var a = window.connect.callJava(asdf);
+for (var i = 0; i < a.length; i++) {
+	alert(a[i]);
+}
 };
 </script>
 </head>
