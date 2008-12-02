@@ -1,0 +1,28 @@
+<html>
+<head>
+<script language="JavaScript">
+function function1() {
+	var a;
+	try {
+		//a = doit(2, true, 'hi', 5);
+		a = doit([[[12], ['http://www.eclipse.org', 17], 19.5], 3], true);
+		//a = doit();
+	} catch (e) {
+		alert("an error occurred");
+		alert(e.message);
+	}
+	//a = window.java.callJava(['hi', 12, 13.6]);
+    //a = window.external.callJava([12, 'http://www.eclipse.org', 17, 19.5, 3, true]);
+    //a = window.external.callJava([]);
+    alert(a);
+   for (var i = 0; i < a.length; i++) {
+    alert(a[i]);
+    }
+}
+</script>
+</head>
+<body>
+<input id=myB type="button" value="Push" onclick="function1();">
+Go
+</body>
+</html>
