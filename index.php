@@ -156,7 +156,9 @@ bugzilla email preferences.</p>
 <p><img src="images/lin-example.png" alt="Linux" width="212" height="224"></p>
 <p><img src="images/mac-example.png" alt="Mac OS X" width="232" height="237"></p>
 <p><img src="images/mot-example.png" alt="Motif" width="232" height="210"></p>
-<p><img src="images/pho-example.png" alt="Photon" width="225" height="227"></p>
+<p><img src="images/pho-example.png" alt="Photon" width="225" height="227">
+<a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet266.java">source</a>
+</p>
 </center>
 </table>
 </body>
