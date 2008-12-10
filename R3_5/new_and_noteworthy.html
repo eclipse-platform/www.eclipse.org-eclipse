@@ -100,7 +100,7 @@ click <a href="http://www.eclipse.org/swt/jnigen.php">here</a>.
    <tr id="cocoa64">
     <td width="30%" valign="top" align="left"><b>SWT for 64-bit Cocoa</b></td>
     <td width="70%" valign="top">64-bit OSX Cocoa is now available.  As with the 32-bit implementation, 
-    this work is still under active development, but available as an early access release.  Everyone is 
+    this work is under active development, but available as an early access release.  Everyone is 
     encouraged to download and test these new builds, and to log bugs in 
     <a href="https://bugs.eclipse.org/bugs/enter_bug.cgi?product=Platform">bugzilla</a>.
     </td>
@@ -110,10 +110,9 @@ click <a href="http://www.eclipse.org/swt/jnigen.php">here</a>.
     </td>
   </tr>
    <tr id="jstojava">
-    <td width="30%" valign="top" align="left"><b>Javascript-to-Java invocations</b></td>
-    <td width="70%" valign="top">Javascript can now call out to a Java-side function that has been created on 
-    a Browser instance.  Values of type number, boolean, string, null, array and exception can be passed 
-    between the two sides (example 
+    <td width="30%" valign="top" align="left"><b>JavaScript-to-Java</b></td>
+    <td width="70%" valign="top">JavaScript can now call out to Java.
+    Supported types are numbers, booleans, strings, null's, and arrays (example 
     <a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet307.java?view=co">
     snippet</a>).
     </td>
@@ -123,9 +122,9 @@ click <a href="http://www.eclipse.org/swt/jnigen.php">here</a>.
     </td>
   </tr>
    <tr id="javatojs">
-    <td width="30%" valign="top" align="left"><b>Improved Java-to-Javascript invocations</b></td>
-    <td width="70%" valign="top">Java can now evaluate a Javascript string in the context of a Browser document and 
-    receive a return value of type number, boolean, string, null, array, or exception (example 
+    <td width="30%" valign="top" align="left"><b>Improved Java-to-JavaScript</b></td>
+    <td width="70%" valign="top">Java can now call into JavaScript.  An expression is evaluated in the context of a Browser document and 
+     a value is returned.  Supported types are numbers, booleans, strings, null's, and arrays (example 
     <a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet308.java?view=co">
     snippet</a>).
     </td>
@@ -147,9 +146,8 @@ click <a href="http://www.eclipse.org/swt/jnigen.php">here</a>.
   </tr>
    <tr id="texteditor">
     <td width="30%" valign="top" align="left"><b>New Text Editor Demo</b></td>
-    <td width="70%" valign="top">Eric Hung of the University of Waterloo has contributed a new Text Editor demo application. 
-    The application makes extensive use of StyledText API's to demonstrate how they can be used to create a full featured
-    text editor.
+    <td width="70%" valign="top">This new example makes extensive use of StyledText to demonstrate how it can be
+	used to create a multi-font rich text editor with bullets, links and embedded objects.
     	<p>
 	  		<img src="images/editor.png" alt="Text Editor"/>
 		</p>
