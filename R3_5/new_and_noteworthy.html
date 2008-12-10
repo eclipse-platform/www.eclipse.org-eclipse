@@ -16,6 +16,7 @@
 	<li><a href="#m1">Milestone M1</a></li>
 	<li><a href="#m2">Milestone M2</a></li>
 	<li><a href="#m3">Milestone M3</a></li>
+	<li><a href="#m4">Milestone M4</a></li>
 </ul>
 
 
@@ -89,5 +90,71 @@ click <a href="http://www.eclipse.org/swt/jnigen.php">here</a>.
 </table>
 
 
+
+<h2><font face="Verdana"><a name=m4>Milestone M4</a></font></h2>
+
+<table border="0" width="80%" cellpadding="10" cellspacing="0">
+  <tr> 
+    <td colspan="2"> <hr> </td>
+  </tr>
+   <tr id="cocoa64">
+    <td width="30%" valign="top" align="left"><b>SWT for 64-bit Cocoa</b></td>
+    <td width="70%" valign="top">64-bit OSX Cocoa is now available.  As with the 32-bit implementation, 
+    this work is still under active development, but available as an early access release.  Everyone is 
+    encouraged to download and test these new builds, and to log bugs in 
+    <a href="https://bugs.eclipse.org/bugs/enter_bug.cgi?product=Platform">bugzilla</a>.
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><hr />
+    </td>
+  </tr>
+   <tr id="jstojava">
+    <td width="30%" valign="top" align="left"><b>Javascript-to-Java invocations</b></td>
+    <td width="70%" valign="top">Javascript can now call out to a Java-side function that has been created on 
+    a Browser instance.  Values of type number, boolean, string, null, array and exception can be passed 
+    between the two sides (example 
+    <a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet307.java?view=co">
+    snippet</a>).
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><hr />
+    </td>
+  </tr>
+   <tr id="javatojs">
+    <td width="30%" valign="top" align="left"><b>Improved Java-to-Javascript invocations</b></td>
+    <td width="70%" valign="top">Java can now evaluate a Javascript string in the context of a Browser document and 
+    receive a return value of type number, boolean, string, null, array, or exception (example 
+    <a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet308.java?view=co">
+    snippet</a>).
+    </td>
+  </tr>  
+    <tr>
+    <td colspan="2"><hr />
+    </td>
+  </tr>
+   <tr id="caretListener">
+    <td width="30%" valign="top" align="left"><b>New Caret Listener</b></td>
+    <td width="70%" valign="top">New API has been added to StyledText to allow you to listen for changes in the caret offset.
+    See StyledText.addCaretListener() and StyledText.removeCaretListener() for more information.
+    </td>
+  </tr>  
+  </tr>  
+    <tr>
+    <td colspan="2"><hr />
+    </td>
+  </tr>
+   <tr id="texteditor">
+    <td width="30%" valign="top" align="left"><b>New Text Editor Demo</b></td>
+    <td width="70%" valign="top">Eric Hung of the University of Waterloo has contributed a new Text Editor demo application. 
+    The application makes extensive use of StyledText API's to demonstrate how they can be used to create a full featured
+    text editor.
+    	<p>
+	  		<img src="images/editor.png" alt="Text Editor"/>
+		</p>
+    </td>
+  </tr>    
+</table>
 </body>
 </html>
