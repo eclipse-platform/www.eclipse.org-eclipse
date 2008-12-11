@@ -34,6 +34,7 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
   <p></p>
   <li><a href="#gtkstartup">What do I need to run SWT on Linux/GTK?</a></li>
   <li><a href="#carbonapp">On Mac Carbon, how do I run an SWT application from the command line?</a></li>
+  <li><a href="#cocoa64launch">Why do I get an UnsatisfiedLinkError when launching from the 64-bit Cocoa port?</a></li>
   <li><a href="#javawebstart">How can I deploy my standalone SWT application with Java Web Start?</a></li>
   <li><a href="#pocketpcstart">What do I need to do to run SWT on the PocketPC?</a></li>
   <li><a href="#pocketpclibrary">Where is the SWT library for the PocketPC?</a></li>
@@ -407,6 +408,11 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
 	
       <p>If you want to run a bundled application, take a look at this
       <a href="http://www.eclipse.org/swt/macosx/">article</a>.</p>
+  </dd>
+
+  <dt><strong><a name="cocoa64launch">Q: Why do I get an UnsatisfiedLinkError when launching from the 64-bit Cocoa port?</a></strong></dt>
+  <dd>A: You need to be sure that you are forcing your launch to use a 64-bit VM. Apple ships most of their VMs with 32 and
+  	  64-bit binaries. To force the VM to run in 64-bit mode, use the -d64 option as VM argument in your launch configuration.
   </dd>
 
   <dt><strong><a name="javawebstart">Q: How can I deploy my standalone SWT application with Java Web Start?</a></strong></dt>
