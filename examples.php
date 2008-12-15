@@ -81,13 +81,13 @@ and the examples in org.eclipse.swt.examples.* packages are eclipse plug-ins.
 <p>Alternatively, you can use these (more detailed) steps from the eclipse ISV doc to download, install, and run
 the eclipse SWT Examples:
 <ol>
-<li><a href = "http://help.eclipse.org/help32/topic/org.eclipse.platform.doc.isv/samples/samples.html">
+<li><a href = "http://help.eclipse.org/stable/topic/org.eclipse.platform.doc.isv/samples/samples.html">
 	Installing the examples</a></li>
-<li><a href = "http://help.eclipse.org/help32/topic/org.eclipse.platform.doc.isv/samples/org.eclipse.swt.examples.launcher/doc-html/swt_launcher_ex.html">
+<li><a href = "http://help.eclipse.org/stable/topic/org.eclipse.platform.doc.isv/samples/org.eclipse.swt.examples.launcher/doc-html/swt_launcher_ex.html">
 	Running the SWT examples as views or with the SWT Example Launcher</a></li>
-<li><a href = "http://help.eclipse.org/help32/topic/org.eclipse.platform.doc.isv/samples/org.eclipse.swt.examples/doc-html/swt_manual_setup.html">
+<li><a href = "http://help.eclipse.org/stable/topic/org.eclipse.platform.doc.isv/samples/org.eclipse.swt.examples/doc-html/swt_manual_setup.html">
 	Running the SWT standalone examples</a></li>
-<li><a href = "http://help.eclipse.org/help32/topic/org.eclipse.platform.doc.isv/samples/org.eclipse.swt.examples/doc-html/swt_manual_setup.html#ExamplesOverview">
+<li><a href = "http://help.eclipse.org/stable/topic/org.eclipse.platform.doc.isv/samples/org.eclipse.swt.examples/doc-html/swt_manual_setup.html#ExamplesOverview">
 	SWT Examples Overview</a></li>
 </ol>
 </p>
