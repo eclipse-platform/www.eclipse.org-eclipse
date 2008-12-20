@@ -54,11 +54,11 @@ Whatever the reason, you will find many resources here. Enjoy!</p>
   <table width="100%">
   <tr><td>
       <b><font size="+1">Development</font></b><br>
-      <a href="http://download.eclipse.org/eclipse/downloads/drops/S-3.5M3-200810301917/download.php?dropFile=swt-3.5M3-win32-win32-x86.zip">Windows</a>,
-      <a href="http://download.eclipse.org/eclipse/downloads/drops/S-3.5M3-200810301917/download.php?dropFile=swt-3.5M3-gtk-linux-x86.zip">Linux</a>,
+      <a href="http://download.eclipse.org/eclipse/downloads/drops/S-3.5M4-200812111908/download.php?dropFile=swt-3.5M4-win32-win32-x86.zip">Windows</a>,
+      <a href="http://download.eclipse.org/eclipse/downloads/drops/S-3.5M4-200812111908/download.php?dropFile=swt-3.5M4-gtk-linux-x86.zip">Linux</a>,
       <span style="white-space: nowrap;">
-      <a href="http://download.eclipse.org/eclipse/downloads/drops/S-3.5M3-200810301917/download.php?dropFile=swt-3.5M3-carbon-macosx.zip">OS X</a></span>,
-      <a href="http://download.eclipse.org/eclipse/downloads/drops/S-3.5M3-200810301917/index.php#swt" target="_top">more...</a><br>
+      <a href="http://download.eclipse.org/eclipse/downloads/drops/S-3.5M4-200812111908/download.php?dropFile=swt-3.5M4-carbon-macosx.zip">OS X</a></span>,
+      <a href="http://download.eclipse.org/eclipse/downloads/drops/S-3.5M4-200812111908/index.php#swt" target="_top">more...</a><br>
       <small>3.5 Milestone 3 - <span style="white-space: nowrap;">31 October 2008</span></small><br>
   <ul>
   <li><a href="R3_5/plan.html">3.5 Development Plan</a></li>
