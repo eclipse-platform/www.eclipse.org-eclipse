@@ -31,7 +31,7 @@ Alexander Thomas - Bugs 67185, 67195
 Sergey Prigogin - Bug 68950
 Martin Berkemeier - Bug 71570
 Darin Fisher - Bugs 61384, 76963, 80033
-Max Stepanov - Bug 68267
+Max Stepanov - Bug 68267, 260076
 Javier Pedemonte - Bugs 76983, 80033, 178134
 Ivan Markov - Bug 77342 
 Artyom Kuanbekov - Bugs 78854, 79557
