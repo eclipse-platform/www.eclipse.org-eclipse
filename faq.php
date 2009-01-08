@@ -100,6 +100,7 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
   <li><a href="#relayout">Why doesn't my layout update when I create/dispose/move/resize a control?</a></li>
   <li><a href="#scrolledcomposite">How do I programmatically scroll a Composite?</a></li>
   <li><a href="#copypastewithKlipper">Why does Copy/Paste sometimes not work on Linux?</a></li>
+  <li><a href="#tableheaderswithJAWS">How do I get JAWS to read Table column headers?</a></li>
 </ul>
 
 <p></p>
@@ -1374,6 +1375,17 @@ public class DisplayMozillaVersion {
   		cause Eclipse clipboard operations to fail. For more information about this issue see 
   		<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=153809">Bug 153809</a> 
   		<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=226540">Bug 226540</a> 
+  </dd>
+
+  <dt><strong><a name="tableheaderswithJAWS"> Q:  How do I get JAWS to read Table column headers?</a></strong></dt>
+  <dd>A: JAWS does not read table column headers by default.
+  	To get JAWS to read table headers, you need to do the following steps with JAWS running:
+	<ol>
+		<li>Focus on the table</li>
+		<li>Press Insert+F2  (this opens the "Run JAWS Manager" dialog)</li>
+		<li>Select "Customize ListView" and OK   (this opens the "Customize ListView Headers" dialog)</li>
+		<li>Select OK</li>
+	</ol>
   </dd>
 </dl>
 </table>
