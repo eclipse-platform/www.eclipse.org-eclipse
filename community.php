@@ -140,6 +140,12 @@ toolkit.</p>
 
     <p>A collection of games that run as eclipse plug-ins.</p>
 
+<li><b><a href="http://fandev.org/doc/docLib/Fwt.html">Fan Widget Toolkit</a></b>
+
+    <p>The Fan programming language uses SWT as the underlying implementation for
+    the Fan Widget Toolkit.  The FWT leverages Fan's declarative programming model
+    and closures to make building up UIs simple.</p>
+
 <li><b><a href="http://fnr.sourceforge.net">Feed'n Read</a></b>
 
     <p>Feed'n Read is a Java-based open source newsfeed reader. It is powered by the
