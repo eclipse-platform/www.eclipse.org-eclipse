@@ -161,12 +161,6 @@ toolkit.</p>
 
     <p>Solar Accounts is a simple accounting software package for self-employed people in the UK.</p>
 
-<li><b><a href="http://www.spotdev.net/spotmanager">SPOT Manager</a></b>
-
-	<p>SPOT Manager is a program to forward email and RSS items to your MSNDirect-powered
-	Smart Watch (<a href="http://www.msndirect.com">http://www.msndirect.com</a>). It is
-	written in Java, uses SWT, and is supported on Windows, Linux, and Mac platforms.</p>
-       
 <li><b><a href="http://sourceforge.net/projects/qftp/">VirgoFTP</a></b>
 
     <p>VirgoFTP is an FTP client, similar to CuteFTP, written in Java using SWT.</p>
