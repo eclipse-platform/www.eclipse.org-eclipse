@@ -464,6 +464,7 @@ create a snippet contribution report in Bugzilla</a>. Thanks in advance for your
       <ul>
         <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet184.java">create and initialize a spinner widget</a></li>
         <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet190.java">use floats in a spinner widget</a></li>
+        <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet310.java">add visual hint when current input is invalid</a></li>
       </ul>
       <p></p>
       
