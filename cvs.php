@@ -38,13 +38,13 @@ to help you get set up.<p>
         <center><p><img src="images/swt-checkout.png" alt="checkout"></p></center>
 
         <p>Each platform has a module for the binaries categorized by
-        toolkit, OS, and CPU architecture.</p>
+        toolkit, OS, and CPU architecture.  Examples:</p>
 
         <table style="border-collapse: collapse; border: 1px solid #000000; margin-left: auto; margin-right: auto; padding: 0px;" width="80%">
         <tr><th style="background: #0080c0; color: #ffffff; border: solid 1px #000000; padding: 4px;">Windows
             <td style="border: 1px solid #000000; padding: 4px; text-align: center;">org.eclipse.swt.win32.win32.x86
         <tr><th style="background: #0080c0; color: #ffffff; border: solid 1px #000000; padding: 4px;">Mac OS X
-            <td style="border: 1px solid #000000; padding: 4px; text-align: center;">org.eclipse.swt.carbon.macosx
+            <td style="border: 1px solid #000000; padding: 4px; text-align: center;">org.eclipse.swt.cocoa.macosx
             <tr><th style="background: #0080c0; color: #ffffff; border: solid 1px #000000; padding: 4px;">Linux GTK
             <td style="border: 1px solid #000000; padding: 4px; text-align: center;">org.eclipse.swt.gtk.linux.x86
         <tr><th style="background: #0080c0; color: #ffffff; border: solid 1px #000000; padding: 4px;">Linux Motif
@@ -53,10 +53,10 @@ to help you get set up.<p>
 
     <li>SWT has a different Eclipse <b>.classpath</b> file for each
         platform, so we need to set up Eclipse to use the right one.
-        To do this we first switch over to the <b>Resource</b>
-        perspective.
+        To do this we first show the <b>Navigator</b> view
+        (<b>Window > Show View > Navigator</b>).
 
-        <center><p><img src="images/swt-resource-perspective.png" alt="perspective"></p></center>
+    <p></p>
 
     <li>Next, we expand <b>org.eclipse.swt</b> and find the
         <b>.classpath_<em>xxx</em></b> file for our platform and copy it to a file named
