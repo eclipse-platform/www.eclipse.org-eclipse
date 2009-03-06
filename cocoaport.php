@@ -20,8 +20,8 @@
 
 <p>The Cocoa port of SWT will ship with Eclipse 3.5.</p>
 <p>Early adopters can try it now by downloading
-<a href="http://download.eclipse.org/eclipse/downloads/drops/S-3.5M3-200810301917/download.php?dropFile=eclipse-SDK-3.5M3-macosx-cocoa.tar.gz">
-Eclipse 3.5 Milestone 3 for Mac OSX Cocoa</a>.</p>
+<a href="http://download.eclipse.org/eclipse/downloads/drops/S-3.5M5-200902021535/download.php?dropFile=eclipse-SDK-3.5M5-macosx-cocoa.tar.gz">
+Eclipse 3.5 Milestone 5 for Mac OSX Cocoa</a>.</p>
 <p>If you prefer to be bleeding edge, you can download the most recent
 <a href="http://download.eclipse.org/eclipse/downloads/">3.5 Stream Integration Build (weekly)</a> or the 
 <a href="http://download.eclipse.org/eclipse/downloads/">3.5 Stream Nightly Build</a> of Eclipse for Mac OSX Cocoa.
