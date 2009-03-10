@@ -228,7 +228,7 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
     &lt;antcall target="gather.bin.parts"&gt;
         &lt;param name="destination.temp.folder" value="${temp.folder}/"/&gt;
     &lt;/antcall&gt;
-    &lt;jar jarfile="${plugin.destination}/${full.name}.jar" basedir="${temp.folder}/${full.name}" filesonly="true"/&gt;
+    &lt;jar jarfile="${plugin.destination}/${full.name}.jar" basedir="${temp.folder}/${full.name}" filesonly="true" manifest="${basedir}/META-INF/MANIFEST.MF"/&gt;
     &lt;delete dir="${temp.folder}"/&gt;
 &lt;/target&gt;
       </pre>
