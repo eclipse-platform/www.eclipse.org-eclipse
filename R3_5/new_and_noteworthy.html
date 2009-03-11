@@ -18,6 +18,7 @@
 	<li><a href="#m3">Milestone M3</a></li>
 	<li><a href="#m4">Milestone M4</a></li>
 	<li><a href="#m5">Milestone M5</a></li>
+	<li><a href="#m6">Milestone M6</a></li>
 </ul>
 
 
@@ -217,6 +218,94 @@ click <a href="http://www.eclipse.org/swt/jnigen.php">here</a>.
   </tr>
   <tr> 
     <td colspan="2"> <hr /> </td>
+  </tr>
+</table>
+
+<h2><font face="Verdana"><a name=m6>Milestone M6</a></font></h2>
+
+<table border="0" width="80%" cellpadding="10" cellspacing="0">
+  <tr>
+    <td colspan="2"><hr />
+      <h2>SWT</h2>
+      <hr />
+	</td>
+  </tr>
+    <tr id="setMargins">
+    <td width="30%" valign="top" align="left"><b>StyledText setMargins</b></td>
+    <td width="70%" valign="top">
+		<p>New API has been added to StyledText to adjust margin and margin colors. 
+		See <a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet316.java?revision=1.1&amp;view=markup">Snippet316</a></p>
+		<p><img src="images/margins.png" alt="StyledText with margins" /></p>
+	</td>
+  </tr>
+  <tr>
+    <td colspan="2"><hr />
+    </td>
+  </tr>
+  
+  <tr id="disablescript">
+    <td width="30%" valign="top" align="left"><b>Disabling Javascript</b></td>
+    <td width="70%" valign="top">
+		<p>Javascript can be disabled from running in a Browser with new API Browser.setJavascriptEnabled().</p>
+	</td>
+  </tr>
+  <tr>
+    <td colspan="2"><hr />
+    </td>
+  </tr>
+  <tr id="cookies">
+    <td width="30%" valign="top" align="left"><b>Browser Cookies</b></td>
+    <td width="70%" valign="top">
+		<p>Cookies can be created and accessed in the Browser with new API Browser.setCookie() and Browser.getCookie().</p>
+	</td>
+  </tr>
+  <tr>
+    <td colspan="2"><hr />
+    </td>
+  </tr>
+    <tr id="authlistener">
+    <td width="30%" valign="top" align="left"><b>Authentication Listener</b></td>
+    <td width="70%" valign="top">
+		<p>Browser clients can now provide a listener that responds to basic authentication challenges.  This is 
+		useful for enabling users to access such sites without presenting them with a manual authentication prompter.</p>
+	</td>
+  </tr>
+  <tr>
+    <td colspan="2"><hr />
+    </td>
+  </tr>
+  <tr id="buttonorder">
+    <td width="30%" valign="top" align="left"><b>Alternate button order</b></td>
+    <td width="70%" valign="top">
+		<p>On GTK it is now possible to change the default button order by editing the gtkrc file. Note that the change is picked up by all Eclipse dialogs</p>
+		<p><img src="images/alternate.png" alt="Alternate button order" /></p>
+	</td>
+  </tr>
+  <tr>
+    <td colspan="2"><hr />
+    </td>
+  </tr>
+    <tr id="modifiedshell">
+    <td width="30%" valign="top" align="left"><b>Shell modified state hint</b></td>
+    <td width="70%" valign="top">
+		<p>New API has been added to shell to provide a hint to users that the window is in a "dirty" state and a save is required. 
+		Note that calling this API may have no affect on platforms with no native support.  
+		See <a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet314.java?revision=1.1&amp;view=markup">Snippet314</a></p>
+		<p><img src="images/modified.png" alt="Shell.setModified" /></p>
+	</td>
+  </tr>
+  <tr> 
+    <td colspan="2"> <hr /> </td>
+  </tr>
+  <tr id="datetimedropdown"> 
+    <td width="30%" valign="top" align="left"><b>DateTime DROP_DOWN</b></td>
+    <td width="70%" valign="top">DateTime widgets created with SWT.DATE style can now also have SWT.DROP_DOWN style.
+    Note that this style is not supported on all platforms.
+     <p><img src="images/datetime-dropdown.png" alt="DateTime with DROP_DOWN style"/></p></td>
+  </tr>
+  <tr>
+    <td colspan="2"><hr />
+    </td>
   </tr>
 </table>
 </body>
