@@ -5,7 +5,7 @@ function function1() {
 	var a;
 	try {
 		//a = doit(2, true, 'hi', 5);
-		a = doit([[[12], ['http://www.eclipse.org', 17], 19.5], 3], true);
+		a = doit([[[12], ['http://www.eclipse.org', alert('creating an undefined')], 19.5], 3], true);
 		//a = doit();
 	} catch (e) {
 		alert("an error occurred");
