@@ -233,8 +233,8 @@ click <a href="http://www.eclipse.org/swt/jnigen.php">here</a>.
     <tr id="setMargins">
     <td width="30%" valign="top" align="left"><b>StyledText setMargins</b></td>
     <td width="70%" valign="top">
-		<p>New API has been added to StyledText to adjust margin and margin colors. 
-		See <a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet316.java?revision=1.1&amp;view=markup">Snippet316</a></p>
+		<p>New API has been added to StyledText to set margin spacing and color. 
+		See <a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet316.java?revision=1.1&amp;view=markup">Snippet316</a>.</p>
 		<p><img src="images/margins.png" alt="StyledText with margins" /></p>
 	</td>
   </tr>
@@ -246,7 +246,7 @@ click <a href="http://www.eclipse.org/swt/jnigen.php">here</a>.
   <tr id="disablescript">
     <td width="30%" valign="top" align="left"><b>Disabling Javascript</b></td>
     <td width="70%" valign="top">
-		<p>Javascript can be disabled from running in a Browser with new API Browser.setJavascriptEnabled().</p>
+		<p>Javascript can be disabled from running in a Browser with the new API Browser.setJavascriptEnabled().</p>
 	</td>
   </tr>
   <tr>
@@ -267,7 +267,7 @@ click <a href="http://www.eclipse.org/swt/jnigen.php">here</a>.
     <td width="30%" valign="top" align="left"><b>Authentication Listener</b></td>
     <td width="70%" valign="top">
 		<p>Browser clients can now provide a listener that responds to basic authentication challenges.  This is 
-		useful for enabling users to access such sites without presenting them with a manual authentication prompter.</p>
+		useful for enabling users to access sites without presenting them with a manual authentication prompter.</p>
 	</td>
   </tr>
   <tr>
@@ -277,7 +277,8 @@ click <a href="http://www.eclipse.org/swt/jnigen.php">here</a>.
   <tr id="buttonorder">
     <td width="30%" valign="top" align="left"><b>Alternate button order</b></td>
     <td width="70%" valign="top">
-		<p>On GTK it is now possible to change the default button order by editing the gtkrc file. Note that the change is picked up by all Eclipse dialogs</p>
+		<p>On GTK, it is now possible to change the default button order for Eclipse.  To enable this feature,
+		edit .gktrc file and include the line "gtk-alternative-button-order=1".</p>
 		<p><img src="images/alternate.png" alt="Alternate button order" /></p>
 	</td>
   </tr>
@@ -288,9 +289,8 @@ click <a href="http://www.eclipse.org/swt/jnigen.php">here</a>.
     <tr id="modifiedshell">
     <td width="30%" valign="top" align="left"><b>Shell modified state hint</b></td>
     <td width="70%" valign="top">
-		<p>New API has been added to shell to provide a hint to users that the window is in a "dirty" state and a save is required. 
-		Note that calling this API may have no affect on platforms with no native support.  
-		See <a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet314.java?revision=1.1&amp;view=markup">Snippet314</a></p>
+		<p>New API has been added to shell to provide a hint to the user that the window is in a modified state.
+		See <a href="http://dev.eclipse.org/viewcvs/index.cgi/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet314.java?revision=1.1&amp;view=markup">Snippet314</a>.</p>
 		<p><img src="images/modified.png" alt="Shell.setModified" /></p>
 	</td>
   </tr>
@@ -300,7 +300,6 @@ click <a href="http://www.eclipse.org/swt/jnigen.php">here</a>.
   <tr id="datetimedropdown"> 
     <td width="30%" valign="top" align="left"><b>DateTime DROP_DOWN</b></td>
     <td width="70%" valign="top">DateTime widgets created with SWT.DATE style can now also have SWT.DROP_DOWN style.
-    Note that this style is not supported on all platforms.
      <p><img src="images/datetime-dropdown.png" alt="DateTime with DROP_DOWN style"/></p></td>
   </tr>
   <tr>
