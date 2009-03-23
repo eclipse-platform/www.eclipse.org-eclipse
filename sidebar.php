@@ -8,6 +8,7 @@
 <tr><td class="nav">&nbsp; <a class="nav" href="http://www.eclipse.org/swt/docs.php">Documentation</a>
 <tr><td class="nav">&nbsp; <a class="nav" href="http://www.eclipse.org/swt/community.php">Community</a>
 <tr><td class="nav">&nbsp; <a class="nav" href="http://www.eclipse.org/swt/bugs.php">Bugs</a>
+<tr><td class="nav">&nbsp; <a class="nav" href="http://www.eclipse.org/swt/#contact">Contact Us</a>
 <tr><td class="nav">&nbsp; <a class="nav" href="http://www.eclipse.org/swt/">SWT Home</a>
 </table><p></p><table class="nav" width="100%">
 <tr><td class="nav">&nbsp; <a class="nav" href="http://www.eclipse.org/platform/">Eclipse Platform</a>

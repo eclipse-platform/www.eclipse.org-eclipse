@@ -25,7 +25,8 @@ on which it is implemented.</p>
 or <a href="http://www.eclipse.org/swt/examples.php">examples</a> (big code examples like <em>ControlExample</em>);
 <a href="http://www.eclipse.org/swt/widgets/">widget snapshots</a>
 or <a href="http://www.eclipse.org/swt/docs.php">documentation</a>.
-Or maybe you want to request a <a href="http://www.eclipse.org/swt/bugs.php">feature</a>
+Or maybe you want to request a <a href="http://www.eclipse.org/swt/bugs.php">feature</a>,
+report a <a href="http://www.eclipse.org/swt/bugs.php">bug</a>,
 or ask a <a href="news://news.eclipse.org/eclipse.platform.swt">question</a>.
 Whatever the reason, you will find many resources here. Enjoy!</p>
 
@@ -54,12 +55,12 @@ Whatever the reason, you will find many resources here. Enjoy!</p>
   <table width="100%">
   <tr><td>
       <b><font size="+1">Development</font></b><br>
-      <a href="http://download.eclipse.org/eclipse/downloads/drops/S-3.5M5-200902021535/download.php?dropFile=swt-3.5M5-win32-win32-x86.zip">Windows</a>,
-      <a href="http://download.eclipse.org/eclipse/downloads/drops/S-3.5M5-200902021535/download.php?dropFile=swt-3.5M5-gtk-linux-x86.zip">Linux</a>,
+      <a href="http://download.eclipse.org/eclipse/downloads/drops/S-3.5M6-200903130100/download.php?dropFile=swt-3.5M6-win32-win32-x86.zip">Windows</a>,
+      <a href="http://download.eclipse.org/eclipse/downloads/drops/S-3.5M6-200903130100/download.php?dropFile=swt-3.5M6-gtk-linux-x86.zip">Linux</a>,
       <span style="white-space: nowrap;">
-      <a href="http://download.eclipse.org/eclipse/downloads/drops/S-3.5M5-200902021535/download.php?dropFile=swt-3.5M5-carbon-macosx.zip">OS X</a></span>,
-      <a href="http://download.eclipse.org/eclipse/downloads/drops/S-3.5M5-200902021535/index.php#swt" target="_top">more...</a><br>
-      <small>3.5 Milestone 5 - <span style="white-space: nowrap;">2 February 2009</span></small><br>
+      <a href="http://download.eclipse.org/eclipse/downloads/drops/S-3.5M6-200903130100/download.php?dropFile=swt-3.5M6-carbon-macosx.zip">OS X</a></span>,
+      <a href="http://download.eclipse.org/eclipse/downloads/drops/S-3.5M6-200903130100/index.php#swt" target="_top">more...</a><br>
+      <small>3.5 Milestone 6 - <span style="white-space: nowrap;">13 March 2009</span></small><br>
   <ul>
   <li><a href="R3_5/plan.html">3.5 Development Plan</a></li>
   <li><a href="R3_5/new_and_noteworthy.html">New and Noteworthy</a></li>
@@ -105,7 +106,7 @@ Whatever the reason, you will find many resources here. Enjoy!</p>
 </ul>
 
 <table width="100%">
-<tr><th bgcolor="#0080c0" align="left" style="padding: 2px;"><font color="#ffffff">Contact Us</font>
+<a name="contact"><tr><th bgcolor="#0080c0" align="left" style="padding: 2px;"><font color="#ffffff">Contact Us</font>
 </table>
 
 <p>The <a href="news://news.eclipse.org/eclipse.platform.swt">SWT newsgroup</a>

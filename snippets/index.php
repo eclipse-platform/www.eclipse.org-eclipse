@@ -16,7 +16,8 @@
 <p>Snippets are minimal stand-alone programs that demonstrate specific
 techniques or functionality.  Often a small example is the easiest way to
 understand how to use a particular feature.
-(If you are looking for large examples, like <em>ControlExample</em>, see <a href="http://www.eclipse.org/swt/examples.php">Examples</a>).</p>
+(If you are looking for large examples, like <em>ControlExample</em>, see the <a href="http://www.eclipse.org/swt/examples.php">SWT Examples</a>,
+and if you are programming with JFace, you may find these <a href="http://wiki.eclipse.org/index.php/JFaceSnippets">JFace Snippets</a> useful).</p>
 
 <p>Snippets also help isolate problems.  The best way to report an SWT
 bug is to write your own snippet showing the problem and paste it into
