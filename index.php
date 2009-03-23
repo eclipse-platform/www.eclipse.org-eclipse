@@ -101,6 +101,7 @@ Whatever the reason, you will find many resources here. Enjoy!</p>
 <li><a href="docs.php">Books and additional documentation</a></li>
 <li><a href="test_plan.html">Test Plan for SWT</a></li>
 <li><a href="community.php">SWT Community Page</a></li>
+<li><a href="http://www.eclipse.org/swtbot/">SWTBot</a>, UI/functional testing tool for SWT and Eclipse based applications.</li>
 </ul>
 
 <table width="100%">
