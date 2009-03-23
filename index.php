@@ -106,7 +106,7 @@ Whatever the reason, you will find many resources here. Enjoy!</p>
 </ul>
 
 <table width="100%">
-<a name="contact"><tr><th bgcolor="#0080c0" align="left" style="padding: 2px;"><font color="#ffffff">Contact Us</font></a>
+<tr><th bgcolor="#0080c0" align="left" style="padding: 2px;"><font color="#ffffff">Contact Us</font></a>
 </table>
 
 <p>The <a href="news://news.eclipse.org/eclipse.platform.swt">SWT newsgroup</a>
@@ -117,7 +117,7 @@ newsgroups page</a>
 [<a href="http://dev.eclipse.org/newslists/news.eclipse.platform.swt/maillist.html">archive</a>,
 <a href="http://www.eclipse.org/search/search.cgi">search</a>].</p>
 
-<p>SWT development is discussed and tracked in the
+<p><a name="contact">SWT development</a> is discussed and tracked in the
 <a href="http://bugs.eclipse.org/bugs/" target="_top">Eclipse bugzilla</a> under the
 Platform/SWT component.  You can subscribe to the new bug inbox by
 watching <i>platform-swt-inbox@eclipse.org</i> from your
