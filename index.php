@@ -106,7 +106,7 @@ Whatever the reason, you will find many resources here. Enjoy!</p>
 </ul>
 
 <table width="100%">
-<a name="contact"><tr><th bgcolor="#0080c0" align="left" style="padding: 2px;"><font color="#ffffff">Contact Us</font>
+<a name="contact"><tr><th bgcolor="#0080c0" align="left" style="padding: 2px;"><font color="#ffffff">Contact Us</font></a>
 </table>
 
 <p>The <a href="news://news.eclipse.org/eclipse.platform.swt">SWT newsgroup</a>
