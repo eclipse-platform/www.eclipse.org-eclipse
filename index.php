@@ -110,12 +110,12 @@ Whatever the reason, you will find many resources here. Enjoy!</p>
 </table>
 
 <p>The <a href="news://news.eclipse.org/eclipse.platform.swt">SWT newsgroup</a>
+[<a href="http://dev.eclipse.org/newslists/news.eclipse.platform.swt/maillist.html">archive</a>,
+<a href="http://www.eclipse.org/search/search.cgi">search</a>]
 is a very active user discussion and help forum.
 See the
-<a href="http://www.eclipse.org/newsgroups/index.html">Eclipse
-newsgroups page</a>
-[<a href="http://dev.eclipse.org/newslists/news.eclipse.platform.swt/maillist.html">archive</a>,
-<a href="http://www.eclipse.org/search/search.cgi">search</a>].</p>
+<a href="http://www.eclipse.org/newsgroups/index.php">Eclipse newsgroups page</a>
+for information on this and other newsgroups.</p>
 
 <p><a name="contact">SWT development</a> is discussed and tracked in the
 <a href="http://bugs.eclipse.org/bugs/" target="_top">Eclipse bugzilla</a> under the
