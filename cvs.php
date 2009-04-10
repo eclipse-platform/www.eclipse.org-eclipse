@@ -25,17 +25,17 @@
 to help you get set up.<p>
 
     <ol>
-    <li>First, set up the CVSROOT.  Use <i>File &gt; Import... &gt;
-        Checkout Projects from CVS</i> and add enter the information for the Eclipse
+    <li>First, set up the CVSROOT.  Use <i>File &gt; Import... &gt; CVS &gt;
+        Projects from CVS</i> and enter the information for the Eclipse
         CVS server.
 
-        <center><p><img src="images/swt-cvsroot.png" alt="cvsroot"></p></center>
+        <center><p><img src="images/swt-cvsroot.png" alt="Host: dev.eclipse.org, Repository Path: /cvsroot/eclipse, and User: anonymous"></p></center>
 
     <li>Next, check out the <b>org.eclipse.swt</b> project, where all
         the Java code lives, along with the correct binary package for
         the DLLs from your platform.
 
-        <center><p><img src="images/swt-checkout.png" alt="checkout"></p></center>
+        <center><p><img src="images/swt-checkout.png" alt="Specified modules: org.eclipse.swt, org.eclipse.swt.examples, org.eclipse.swt.gtk.linux.x86"></p></center>
 
         <p>Each platform has a module for the binaries categorized by
         toolkit, OS, and CPU architecture.  Examples:</p>
@@ -50,6 +50,8 @@ to help you get set up.<p>
         <tr><th style="background: #0080c0; color: #ffffff; border: solid 1px #000000; padding: 4px;">Linux Motif
             <td style="border: 1px solid #000000; padding: 4px; text-align: center;">org.eclipse.swt.motif.linux.x86
         </table><p></p>
+        
+        <p>You may also want to check out the <b>org.eclipse.swt.examples</b> and <b>org.eclipse.swt.snippets</b> projects.</p>
 
     <li>SWT has a different Eclipse <b>.classpath</b> file for each
         platform, so we need to set up Eclipse to use the right one.
@@ -62,7 +64,7 @@ to help you get set up.<p>
         <b>.classpath_<em>xxx</em></b> file for our platform and copy it to a file named
         <b>.classpath</b>.
 
-        <center><p><img src="images/swt-classpath.png" alt="classpath"></p></center>
+        <center><p><img src="images/swt-classpath.png" alt="Name Conflict dialog with .classpath in the New Name field"></p></center>
 
     <li>After changing a <b>.classpath</b> file, it's usually a good
         idea to clean the projects that depend on it to make sure
@@ -70,17 +72,17 @@ to help you get set up.<p>
         <br>(Note that if you are building for a 64-bit platform, there is an extra step needed.
         Please see <a href="http://www.eclipse.org/swt/faq.php#gtk64">this FAQ</a> for details).
 
-        <center><p><img src="images/swt-clean.png" alt="classpath"></p></center>
+        <center><p><img src="images/swt-clean.png" alt="Using Project &gt; Clean... to recompile"></p></center>
 
     <li>We're ready to go!  To test our checkout, let's find an SWT
         application to run.  How about the ControlExample.
 
-        <center><p><img src="images/swt-controlexample.png" alt="controlexample"></p></center>
+        <center><p><img src="images/swt-controlexample.png" alt="org.eclipse.swt.examples.controlexample.ControlExample in the Package Explorer view"></p></center>
 
     <li>After we've selected the ControlExample.java file, we can run
-        it using <b>Run &gt; Run As &gt; Java Application</b> from the menu.
+        it using <b>Run &gt; Run As &gt; Java Application</b>.
 
-        <center><p><img src="images/swt-runas.png" alt="runas"></p></center>
+        <center><p><img src="images/swt-runas.png" alt="Shift+Alt+X J will also run the selected Java application"></p></center>
 
     </ol>
     
