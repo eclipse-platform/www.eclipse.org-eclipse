@@ -40,7 +40,7 @@ cocoa.</p>
 <h3>Using the tool</h3>
 
 <ol>
-	<li>The tools shows a list of Mac frameworks on the right side.
+	<li>The tool shows a list of Mac frameworks on the left side.
     <p></p>
     <p></p>
     <center><img src="images/macgen.jpg" alt="MacGeneratorUI"></center>
