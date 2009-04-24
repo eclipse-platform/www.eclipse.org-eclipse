@@ -75,8 +75,9 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
   <li><a href="#mozillaplugins">How can my Mozilla-based Browser find my Mozilla plug-ins?</a></li>
   <li><a href="#howusejavaxpcom">How do I use JavaXPCOM with the Browser?</a></li>
   <li><a href="#browserplatforms">Which platforms support the SWT Browser?</a></li>
-  <li><a href="#browserlinux">What do I need to run the SWT Browser inside Eclipse on Linux/GTK or Linux/Motif?</a></li>
-  <li><a href="#browserlinuxrcp">What do I need to run the SWT Browser in a standalone application on Linux/GTK or Linux/Motif?</a></li>
+  <li><a href="#browserlinux">What do I need to run the SWT Browser inside Eclipse on Linux?</a></li>
+  <li><a href="#browsersolaris">What do I need to run the SWT Browser inside Eclipse on Solaris?</a></li>
+  <li><a href="#browserlinuxrcp">What do I need to run the SWT Browser in a standalone application on Linux or Solaris-x86?</a></li>
   <li><a href="#browserlinuxibm">How can I get the SWT Browser to work with the IBM 1.4 VM?</a></li>
   <li><a href="#browserplugins">Why can't I run Java applets in the SWT Browser?</a></li>
   <li><a href="#browserscrollbar">How do I hide the Browser's scrollbars?</a></li>
@@ -1085,8 +1086,8 @@ public class DisplayMozillaVersion {
     <li>Photon</li>
   </ol>
   </dd>
-  
-  <dt><strong><a name="browserlinux">Q: What do I need to run the SWT Browser inside Eclipse on Linux/GTK or Linux/Motif?</a></strong></dt>
+
+  <dt><strong><a name="browserlinux">Q: What do I need to run the SWT Browser inside Eclipse on Linux?</a></strong></dt>
   <dd>A: The mozilla versions that are supported by each Eclipse release are:
     <ul>
       <li>Eclipse 3.0: Mozilla 1.4 GTK2 - 1.6 GTK2.</li>
@@ -1130,14 +1131,28 @@ public class DisplayMozillaVersion {
   containing your GRE (e.g. <code>setenv MOZILLA_FIVE_HOME /usr/lib/mozilla</code>), and prepend this directory to your LD_LIBRARY_PATH environment variable</li>.
   </dd>
 
-  <dt><strong><a name="browserlinuxrcp">Q: What do I need to run the SWT Browser in a standalone application on Linux GTK or Linux Motif?</a></strong></dt>
+  <dt><strong><a name="browsersolaris">Q: What do I need to run the SWT Browser inside Eclipse on Solaris?</a></strong></dt>
+  <dd>A: The Browser is supported on Solaris-x86 but is not supported on Solaris-SPARC.  The mozilla versions that are supported by each Eclipse release are:
+    <ul>
+      <li>Eclipse 3.5: Mozilla 1.7.x GTK2 and XULRunner 1.8.x - 1.9.1.x.</li>
+      <li>Note that a Firefox release whose contained Gecko version correlates with the mozilla versions above can also be used.
+      Unlike other platforms, since Sun's compiler does not produce statically-linked libraries, Firefox builds downloaded from mozilla.org
+      <em>can</em> be used on Solaris. 
+    </ul>
+  </dd>
+  
+  <dt><strong><a name="browserlinuxrcp">Q: What do I need to run the SWT Browser in a standalone application on Linux or Solaris-x86?</a></strong></dt>
   <dd>A: Follow the steps below to use the SWT Browser widget in your standalone SWT application.
-    <ol>
-    	<li>A supported version of XULRunner, Firefox or Mozilla must be installed. (<a href="#browserlinux">instructions</a>)</li>
-    	<li>Set the environment variable MOZILLA_FIVE_HOME to your XULRunner/Firefox/Mozilla installation folder. e.g. <code>setenv MOZILLA_FIVE_HOME /usr/lib/mozilla</code></li>
-    	<li>Set the environmnent variable LD_LIBRARY_PATH to include MOZILLA_FIVE_HOME. e.g. <code>setenv LD_LIBRARY_PATH ${MOZILLA_FIVE_HOME}:${LD_LIBRARY_PATH}</code></li>
-    	<li>Your standalone SWT application can now use the Browser widget.
-    </ol>
+    <ul>
+      <li>A supported version of XULRunner, Firefox or Mozilla must be installed. (<a href="#browserlinux">linux instructions</a>) (<a href="#browsersolaris">solaris instructions</a>)</li>
+      <li>If XULRunner is <a href="http://developer.mozilla.org/en/docs/XULRunner_1.8.0.1_Release_Notes#Installing_XULRunner">installed</a> then it should be found automatically at runtime
+      with no additional steps required.  For other native browsers:</li>
+      <ol>
+        <li>Set the environment variable MOZILLA_FIVE_HOME to your Firefox/Mozilla installation folder. e.g. <code>setenv MOZILLA_FIVE_HOME /usr/lib/mozilla</code></li>
+        <li>Set the environmnent variable LD_LIBRARY_PATH to include MOZILLA_FIVE_HOME. e.g. <code>setenv LD_LIBRARY_PATH ${MOZILLA_FIVE_HOME}:${LD_LIBRARY_PATH}</code></li>
+        <li>Your standalone SWT application can now use the Browser widget.
+      </ol>
+    </ul>
     <br>If you use the IBM 1.4 VM <a href="#browserlinuxibm">check this.</a>
     <br>
   </dd>
