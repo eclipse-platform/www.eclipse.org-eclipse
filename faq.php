@@ -415,6 +415,16 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
   <dt><strong><a name="cocoa64launch">Q: Why do I get an UnsatisfiedLinkError when launching from the 64-bit Cocoa port?</a></strong></dt>
   <dd>A: You need to be sure that you are forcing your launch to use a 64-bit VM. Apple ships most of their VMs with 32 and
   	  64-bit binaries. To force the VM to run in 64-bit mode, use the -d64 option as VM argument in your launch configuration.
+  	  
+  	  <p>If you are launching with SWT from CVS in your workspace (see
+      <a href="http://www.eclipse.org/swt/cvs.php">How to use SWT from CVS</a>, use <code>.classpath_cocoa</code>
+      as the <code>.classpath</code> file in the <code>org.eclipse.swt</code> project and make sure you have the
+      org.eclipse.swt.cocoa.maxosx.x86_64 project in your workspace),
+      then you also need to modify the <code>.classpath</code> file as follows:
+  	  <pre>
+         attribute value="org.eclipse.swt.cocoa.macosx"</pre>change to:<pre>
+         attribute value="org.eclipse.swt.cocoa.macosx.x86_64"</pre>
+  	  </p>
   </dd>
 
   <dt><strong><a name="javawebstart">Q: How can I deploy my standalone SWT application with Java Web Start?</a></strong></dt>
