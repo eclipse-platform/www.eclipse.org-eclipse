@@ -1093,6 +1093,7 @@ public class DisplayMozillaVersion {
     	<li>SuSE 9</li>
     </ul>
     Older Linux distributions may require a supported version of Mozilla to be installed. (<a href="#browserlinux">instructions</a>)
+    <li>Solaris-x86 (Firefox 1.0 and above, Mozilla 1.7 GTK2 and above)</li>
     <li>Photon</li>
   </ol>
   </dd>
