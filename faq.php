@@ -33,6 +33,7 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
   <li><a href="#gtk64">How do I build the 64-bit version of SWT GTK?</a></li>
   <p></p>
   <li><a href="#gtkstartup">What do I need to run SWT on Linux/GTK?</a></li>
+  <li><a href="#osxvms">How can I decide which Eclipse/SWT port to use on OS X?</a></li>
   <li><a href="#carbonapp">On Mac Carbon, how do I run an SWT application from the command line?</a></li>
   <li><a href="#cocoa64launch">Why do I get an UnsatisfiedLinkError when launching from the 64-bit Cocoa port?</a></li>
   <li><a href="#javawebstart">How can I deploy my standalone SWT application with Java Web Start?</a></li>
@@ -394,6 +395,18 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
     <p>
     You can determine which version of GTK you are running using <tt>rpm -q gtk2</tt>.
     </p>
+  </dd>
+
+  <li><a href="#osxvms">How can I decide which VM to use on OS X?</a></li>
+
+  <dt><strong><a name="osxvms">Q: How can I decide which Eclipse/SWT port to use on OS X?</a></strong></dt>
+  <dd>A: It depends on the VM and OS version that you are using and your personal preference. The Eclipse downloads page lists
+  the following Eclipse platforms:
+  <ul>
+    <li><b>Mac OSX (Mac/Cocoa)</b> - This 32-bit port needs a Java 5 VM and runs on Leopard (OS X v10.5).</li>
+    <li><b>Mac OSX (Mac/Cocoa/x86_64)</b> - This 64-bit port needs a Java 6 VM and runs on Leopard.</li>
+    <li><b>Mac OSX (Mac/Carbon)</b> - This 32-bit port needs a Java 5 VM and runs on both Tiger (OS X v10.4) and Leopard.</li>
+  </ul>
   </dd>
 
   <dt><strong><a name="carbonapp">Q: On Mac Carbon, how do I run an SWT application from the command line?</a></strong></dt>
