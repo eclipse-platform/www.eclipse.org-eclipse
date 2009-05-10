@@ -397,15 +397,13 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
     </p>
   </dd>
 
-  <li><a href="#osxvms">How can I decide which VM to use on OS X?</a></li>
-
   <dt><strong><a name="osxvms">Q: How can I decide which Eclipse/SWT port to use on OS X?</a></strong></dt>
   <dd>A: It depends on the VM and OS version that you are using and your personal preference. The Eclipse downloads page lists
   the following Eclipse platforms:
   <ul>
     <li><b>Mac OSX (Mac/Cocoa)</b> - This 32-bit port needs a Java 5 VM and runs on Leopard (OS X v10.5).</li>
-    <li><b>Mac OSX (Mac/Cocoa/x86_64)</b> - This 64-bit port needs a Java 6 VM and runs on Leopard.</li>
-    <li><b>Mac OSX (Mac/Carbon)</b> - This 32-bit port needs a Java 5 VM and runs on both Tiger (OS X v10.4) and Leopard.</li>
+    <li><b>Mac OSX (Mac/Cocoa/x86_64)</b> - This 64-bit port needs a Java 5 or Java 6 VM and runs on Leopard.</li>
+    <li><b>Mac OSX (Mac/Carbon)</b> - This 32-bit port needs a Java 1.4 or Java 5 VM and runs on both Tiger (OS X v10.4) and Leopard.</li>
   </ul>
   </dd>
 
