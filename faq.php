@@ -80,7 +80,7 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
   <li><a href="#browsersolaris">What do I need to run the SWT Browser inside Eclipse on Solaris?</a></li>
   <li><a href="#browserlinuxrcp">What do I need to run the SWT Browser in a standalone application on Linux or Solaris-x86?</a></li>
   <li><a href="#browserlinuxibm">How can I get the SWT Browser to work with the IBM 1.4 VM?</a></li>
-  <li><a href="#browserplugins">Why can't I run Java applets in the SWT Browser?</a></li>
+  <li><a href="#browserapplets">Can I view Java applets in the SWT Browser?</a></li>
   <li><a href="#browserscrollbar">How do I hide the Browser's scrollbars?</a></li>
   <li><a href="#browserproxy">How do I set a proxy for the Browser to use?</a></li>
   <p></p>
@@ -1094,7 +1094,7 @@ public class DisplayMozillaVersion {
   <dt><strong><a name="browserplatforms">Q: Which platforms support the SWT Browser?</a></strong></dt>
   <dd>A: The SWT Browser is currently available on the following platforms:
   <br>
-  <ol>
+  <ul>
     <li>Windows (Internet Explorer 5 and above)</li>
     <li>Mac (Panther OS X 10.3 and above. Safari-based)</li>
     <li>Linux GTK and Linux Motif (XULRunner-1.8.0.1 and above, Firefox 1.0 and above, Mozilla 1.4 GTK2 and above)
@@ -1106,7 +1106,7 @@ public class DisplayMozillaVersion {
     Older Linux distributions may require a supported version of Mozilla to be installed. (<a href="#browserlinux">instructions</a>)
     <li>Solaris-x86 (Firefox 1.0 and above, Mozilla 1.7 GTK2 and above)</li>
     <li>Photon</li>
-  </ol>
+  </ul>
   </dd>
 
   <dt><strong><a name="browserlinux">Q: What do I need to run the SWT Browser inside Eclipse on Linux?</a></strong></dt>
@@ -1191,11 +1191,23 @@ public class DisplayMozillaVersion {
     </ol>
   </dd>
 
-  <dt><strong><a name="browserplugins">Q: Why can't I run Java applets in the SWT Browser?</a></strong></dt>
-  <dd>A: Applets usually don't show up in the SWT Browser. On Windows (Internet Explorer) and OSX (Safari), the Java
-  plugin fails to run a second Java virtual machine to execute the applet because two Java virtual machines cannot run
-  in the same process. On Linux (Mozilla), the Java plug-in has been reported to work because it executes in its own process.
-  <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=59506">See bug 59506</a> .
+  <dt><strong><a name="browserapplets">Q: Can I view Java applets in the SWT Browser?</a></strong></dt>
+  <dd>A: Browser support for applets varies by platform:
+    <ul>
+      <li>Windows (IE): As of Eclipse/SWT 3.5, applets can be viewed with IE-based Browsers if <em>all</em> of the following conditions are met:
+        <ol>
+          <li>The installed IE version is 7.0 or newer</li>
+          <li>The installed IE Java plug-in is Sun JRE 1.6u10 or newer, with the Next Generation Java Plug-in enabled (this plug-in is enabled by default when the JRE is installed)</li>
+          <li>The application is launched with the same JRE that provides the IE Java plug-in</li>
+          <li>The application adds the JRE's plugin.jar, deploy.jar and javaws.jar jars to the JRE's boot classpath.  For example, to launch eclipse:
+          <code>eclipse -vmargs -Xbootclasspath/a:"C:\Program Files\Java\jre6\lib\plugin.jar;C:\Program Files\Java\jre6\lib\deploy.jar;C:\Program Files\Java\jre6\lib\javaws.jar"</code></li>
+        </ol>
+      </li>
+      <li>Linux (Mozilla): Applets can be viewed with Mozilla-based Browsers as long as the Mozilla Java plug-in is found at runtime.
+      For info about adding directories to the Mozilla plug-in search path see <a href="#mozillaPlugins">How can my Mozilla-based Browser find my Mozilla plug-ins?</a></li>
+      <li>OS X (Safari): Applets cannot be viewed with Safari-based Browsers because the launching of a JRE to execute the applet collides with the
+      JRE that is running the application.</li>
+    </ul>      
   </dd>
 
   <dt><strong><a name="browserscrollbar">Q: How do I hide the Browser's scrollbars?</a></strong></dt>
