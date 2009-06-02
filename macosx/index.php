@@ -69,9 +69,10 @@
   exec java \
        -XstartOnFirstThread \
        -classpath $BASEDIR/swt/swt.jar:$BASEDIR \  
-       -Djava.library.path=$BASEDIR/swt \
        SWTHello</pre></td></tr></table>
 
+    <br>(NOTE: If you are using eclipse 3.2.2 or earlier, you also need <code>-Djava.library.path=..</code>)
+	
     <p>The shell script launches java with the required classpath and
     Java library path settings to use SWT.  The special VM option
     <tt>-XstartOnFirstThread</tt> is also required for SWT applications
