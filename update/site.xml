@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
-   <feature url="features/org.eclipse.swt.tools.feature_1.0.0.200906151650.jar" id="org.eclipse.swt.tools.feature" version="1.0.0.200906151650">
-      <category name="SWTTools"/>
+   <feature url="features/org.eclipse.swt.tools.feature_1.0.0.200906151659.jar" id="org.eclipse.swt.tools.feature" version="1.0.0.200906151659">
+      <category name="org.eclipse.swt.tools.category"/>
    </feature>
-   <category-def name="SWTTools" label="SWT Tools"/>
+   <category-def name="org.eclipse.swt.tools.category" label="SWT Tools"/>
 </site>
