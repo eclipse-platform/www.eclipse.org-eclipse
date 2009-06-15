@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
-   <feature url="features/org.eclipse.swt.tools.feature_1.0.0.200906151630.jar" id="org.eclipse.swt.tools.feature" version="1.0.0.200906151630">
+   <feature url="features/org.eclipse.swt.tools.feature_1.0.0.200906151650.jar" id="org.eclipse.swt.tools.feature" version="1.0.0.200906151650">
       <category name="SWTTools"/>
    </feature>
    <category-def name="SWTTools" label="SWT Tools"/>
