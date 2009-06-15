@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
-   <feature url="features/SWT_Tools_Feature_1.0.0.200906151559.jar" id="SWT_Tools_Feature" version="1.0.0.200906151559">
+   <feature url="features/SWT_Tools_Feature_1.0.0.200906151603.jar" id="SWT_Tools_Feature" version="1.0.0.200906151603">
       <category name="swt_tools"/>
    </feature>
    <category-def name="swt_tools" label="SWT Tools"/>
