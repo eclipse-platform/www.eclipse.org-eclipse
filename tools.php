@@ -13,6 +13,8 @@
 <tr><?php include "sidebar.php"; ?>
 <td valign="top" style="padding: 10px"><h1 style="padding: 0; margin: 0; border-bottom: 1px solid #000000;">SWT Development Tools</h1>
 
+<p>The SWT Development Tools are available from the <a href="updatesite.php">SWT Tools Update Sites</a></p>
+
 <p><b>JniGen</b> is a tool that generates JNI wrappers for creating
 the SWT Platform Interface. For more information on how to generate the JNI code,
 see <a href="jnigen.php">this tutorial</a>.</p>
@@ -24,8 +26,10 @@ see <a href="jnigen.php">this tutorial</a>.</p>
     <ul><li>Extract the zip file into the <code>eclipse/plugins/</code> folder.</li></ul></li>
   <li><b>Sleak plug-in for Eclipse 3.4 M1 - M5</b> <a href="tools/org.eclipse.swt.sleak_1.0.1.zip">(zip file)</a>
     <ul><li>Extract the zip file into the <code>eclipse/plugins/</code> folder.</li></ul></li>
-  <li><b>Sleak plug-in for Eclipse 3.4 M6 or later</b> <a href="tools/org.eclipse.swt.sleak_1.0.2.zip">(zip file)</a>
+  <li><b>Sleak plug-in for Eclipse 3.4 M6 - 3.5</b> <a href="tools/org.eclipse.swt.sleak_1.0.2.zip">(zip file)</a>
     <ul><li>Extract the zip file into the <code>eclipse/<b>dropins</b>/</code> folder.</li></ul></li>
+  <li><b>Sleak plug-in for Eclipse 3.5 or later</b> 
+    <ul><li>available from the <a href="updatesite.php">SWT Tools Update Sites</a></li></ul></li>
   <li><b>After extracting the Sleak plug-in (above):</b></li>
     <ul>
       <li>Extract the <code>.options</code> file from the <code>eclipse/plugins/org.eclipse.ui_&lt;version&gt;.jar/</code> archive to the <code>eclipse/</code> folder.</li>
@@ -46,6 +50,7 @@ information about the widget under the cursor.  Currently, this includes
 style, layout and parent information.</p>
 
 <ul>
+  <li>As of Eclipse 3.5, this is also available from the <a href="updatesite.php">SWT Tools Update Sites</a></li>
   <li>Requires Eclipse 3.0 or later.</li>
   <li>Save <a href="tools/org.eclipse.swt.spy_1.0.1.jar">org.eclipse.swt.spy_1.0.1.jar</a>
       into the <code>eclipse/plugins/</code> folder.</li>
