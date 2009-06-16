@@ -13,7 +13,8 @@
 <tr><?php include "sidebar.php"; ?>
 <td valign="top" style="padding: 10px"><h1 style="padding: 0; margin: 0; border-bottom: 1px solid #000000;">SWT Tools Update Sites</h1>
 
-<p>The SWT Development Tools are available from the following update sites. For everyday development please ensure that you are 
+<p>The SWT Development Tools are available from the following update sites.</p> 
+<p>For everyday development please ensure that you are 
 using the most recent tools available. Stable releases of the tools are provided for the purposes of creating patches against maintenance
 branches of SWT.</p>
 
