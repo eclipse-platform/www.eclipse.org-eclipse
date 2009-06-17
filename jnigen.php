@@ -35,7 +35,7 @@ features to SWT.</p>
     <p></p>
 <li>Restart Eclipse.
     <p></p>
-<li>Use code assist templates like <b>jni*</b> (i.e. <i>jnifield</i> and <i>jnimethod</i>) to add javadoc tags that describe flags and casts for any primitive types.
+<li>Use code assist templates like <b>jni*</b> (i.e. <i>jnifield</i> and <i>jnimethod</i>) to add javadoc tags that describe flags and casts for any primitive types. See <a href="http://www.eclipse.org/swt/jnigen_metadata.php">metadata</a> for more documentation.
     <p></p>
     <center><img src="images/jnitemplates.png" alt="build.xml"></center>
     <p></p>
