@@ -15,7 +15,7 @@
 
 <p>The SWT Development Tools are available from the following update sites.</p> 
 <p>For everyday development please ensure that you are 
-using the most recent tools available. Stable releases of the tools are provided for the purposes of creating patches against maintenance
+using the most recent tools available. Stable releases of the tools are provided for the purpose of creating patches against maintenance
 branches of SWT.</p>
 
 <table border="1" align="center" cellpadding="3" cellspacing="1">
