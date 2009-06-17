@@ -16,7 +16,7 @@
 <p>The SWT Development Tools are available from the <a href="updatesite.php">SWT Tools Update Sites</a></p>
 
 <p><b>JniGen</b> is a tool that generates JNI wrappers for creating the SWT Platform Interface (PI).
-<br>For more information on how to generate the JNI code, see <a href="jnigen.php">this tutorial</a>.</p>
+For more information on how to generate the JNI code, see <a href="jnigen.php">this tutorial</a>.</p>
 
 <p><b>Sleak</b> is a simple tool that monitors the creation and disposal of SWT graphics resources.
 (<a href="http://www.eclipse.org/articles/swt-design-2/sleak.htm">see tutorial</a>)</p>
