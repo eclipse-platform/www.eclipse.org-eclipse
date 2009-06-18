@@ -69,7 +69,7 @@ The key or value may not contain the comma character &lt;<b>,</b>&gt;. </p>
 
 <ol>
 <li> <b>no_gen</b></li>
-<p>Indicate that the item should not be generated. For example, custom natives are coded separately. Used in: <i>@jniclass</i>, <i>@method</i>, <i>@field</i></p>
+<p>Indicate that the item should not be generated. For example, custom natives are coded by hand. Used in: <i>@jniclass</i>, <i>@method</i>, <i>@field</i></p>
 <li> <b>no_in</b></li>
 <p>Indicate that a native method parameter is an out only variable. This only makes sense if the parameter is a structure or an array of primitives. It is an optimization to avoid copying the java memory to C memory on the way in. Used in: <i>@param</i></p>
 <li> <b>no_out</b></li>
@@ -84,7 +84,7 @@ The library name is specified in the *_custom.h file. Used in: <i>@method</i><p>
 <li> <b>struct</b></li>
 <p>Indicate that a structure parameter should be passed by value instead of by reference. This dereferences the parameter by prepending *. The parameter must not be NULL. Used in: <i>@param</i></p>
 <li> <b>unicode</b></li>
-<p>Indicates that <tt>GetStringChars()</tt>should be used instead of <tt>GetStringUTFChars()</tt> to get the characters of a java.lang.String passed as a parameter to native methods. Used in: <i>@param</i></p>
+<p>Indicate that <tt>GetStringChars()</tt>should be used instead of <tt>GetStringUTFChars()</tt> to get the characters of a java.lang.String passed as a parameter to native methods. Used in: <i>@param</i></p>
 <li> <b>sentinel</b></li>
 <p>Indicate that the parameter of a native method is the sentinel (last parameter of a variable argument C function). The generated code is always the literal <tt>NULL</tt>. Some compilers expect the sentinel to be the literal <tt>NULL</tt> and output a warning if otherwise. Used in: <i>@param</i></p>
 <li> <b>const</b></li>
