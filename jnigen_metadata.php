@@ -57,7 +57,7 @@ The key or value may not contain the comma character &lt;<b>,</b>&gt;. </p>
 <li> <b>cast</b></li>
 	<p>Provide the C cast of a structure field <i>@field</i> or native method parameter <i>@param</i>.</p>
 <li> <b>accessor</b></li>
-	<p>Provide the C name/identifier to be used instead of the java name. This can be used by structure fields <i>@field</i> or native methods <i>@method</i>.</p>
+	<p>Provide the C, C# or C++ name/identifier to be used instead of the java name. This can be used by structure fields <i>@field</i> or native methods <i>@method</i>.</p>
 <li> <b>flags</b></li>
 	<p>Provide switches to control how the C code is generated. Any tag may have this attribute. 
 	Multiple flags are separated by a space character. See below for a list of the known flags.</p>
@@ -75,7 +75,7 @@ The key or value may not contain the comma character &lt;<b>,</b>&gt;. </p>
 <li> <b>no_out</b></li>
 <p>Indicate that a native method parameter is an in only variable. This only makes sense if the parameter is a structure or an array of primitives. It is an optimization to avoid copying the C memory from java memory on the way out. Used in: <i>@param</i></p>
 <li> <b>critical</b></li>
-<p>Indicate that <tt>GetPrimitiveArrayCritical()</tt> should be used instead of <tt>Get&lt;PrimitiveType&gt;ArrayElements()</tt> when transfering array of primitives from/to C. This is an optimization to avoid copying memory and must be used carefully. It is ok to be used in <tt>MoveMemory()</tt> and <tt>memmove()</tt> natives. Used in: <i>@param</i><p>
+<p>Indicate that <tt>GetPrimitiveArrayCritical()</tt> should be used instead of <tt>Get&lt;PrimitiveType&gt;ArrayElements()</tt> when transferring array of primitives from/to C. This is an optimization to avoid copying memory and must be used carefully. It is ok to be used in <tt>MoveMemory()</tt> and <tt>memmove()</tt> natives. Used in: <i>@param</i><p>
 <li> <b>dynamic</b></li>
 <p>Indicate that a native method should be looked up dynamically. It is useful when having a dependence on a given library is not desirable. 
 The library name is specified in the *_custom.h file. Used in: <i>@method</i><p>
@@ -92,27 +92,27 @@ The library name is specified in the *_custom.h file. Used in: <i>@method</i><p>
 <li> <b>cast</b></li>
 <p>Indicate that the C function should be casted to a prototype generated from the parameters of the native method. Useful for variable argument C functions. Used in: <i>@method</i></p>
 <li> <b>jni</b></li>
-<p>Indicate that the native is part of the Java Native Interface. For exemple: <tt>NewGlobalRef()</tt>. Used in: <i>@method</i></p>
+<p>Indicate that the native is part of the Java Native Interface. For example: <tt>NewGlobalRef()</tt>. Used in: <i>@method</i></p>
 <li> <b>address</b></li>
 <p>Indicate that the native method represents a structure global variable and the address of it should be returned to Java. This is done by prepending &amp;. Used in: <i>@method</i></p>
 <li> <b>no_wince</b></li>
 <p>Indicate that the item should be #ifdef out in the Windows CE platform, but not in the regular win32 platform. </p>
 <li> <b>cpp</b></li>
-<p></p>
+<p>Indicate that the platform source is in C++. Used in: <i>@jniclass</i>, <i>@method</i></p>
 <li> <b>new</b></li>
-<p></p>
+<p>Indicate that the native method is a C++ constructor that allocates an object on the heap. Used in: <i>@method</i></p>
 <li> <b>delete</b></li>
-<p></p>
+<p>Indicate that the native method is a C++ destructor that deallocates an object from the heap. Used in: <i>@method</i></p>
 <li> <b>gcnew</b></li>
-<p></p>
+<p>Indicate that the native method is a C# constructor that allocates an object on the managed (i.e. garbage collected) heap. Used in: <i>@method</i></p>
 <li> <b>gcobject</b></li>
-<p></p>
+<p>Indicate that the native method's return value or parameter is a C# managed object. Used in: <i>@method</i>, <i>@param</i></p>
 <li> <b>setter</b></li>
-<p></p>
+<p>Indicate that the native method represents a setter for a field in an object or structure. Used in: <i>@method</i></p>
 <li> <b>getter</b></li>
-<p></p>
+<p>Indicate that the native method represents a getter for a field in an object or structure. Used in: <i>@method</i></p>
 <li> <b>adder</b></li>
-<p></p>
+<p>Indicate that the native method takes 2 arguments, a collection and an item, and the += operator is used to add the item to the collection. Used in: <i>@method</i></p>
 </ol>
 
 </table>
