@@ -64,7 +64,7 @@ style, layout and parent information.</p>
     <li>Open the SWT Spy view (Window &gt; Show View &gt; Other ... &gt; SWT Tools &gt; SWT Spy).</li>
     <li>Enable collection of info by clicking on the "Monitor" button in Spy view.</li>
     <li>Move cursor over the control of interest and see data printed in Spy view.</li>
-    <li>To start or stop data collection while over a control, toggle the monitor action using ALT+SHIFT+".".</li>
+    <li>To start or stop data collection while over a control, toggle the monitor action using CONTROL+ALT+SHIFT+".".</li>
   </ul>
 </ul>
 
