@@ -49,7 +49,7 @@ is provide in the form of tags in the java doc comment. </p>
 
  <p><b>cast=(HWND),flags=flag1 flag2,accessor=othername</b></p> 
  
-The key or value may not contain the comma character &lt;<b>,</b>&gt;. </p>
+The key or value must not contain the comma character &lt;<b>,</b>&gt;. </p>
 
 
 <h3> Attributes </h3>
