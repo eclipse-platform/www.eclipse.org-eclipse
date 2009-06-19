@@ -96,7 +96,7 @@ The library name is specified in the *_custom.h file. Used in: <i>@method</i><p>
 <li> <b>address</b></li>
 <p>Indicate that the native method represents a structure global variable and the address of it should be returned to Java. This is done by prepending &amp;. Used in: <i>@method</i></p>
 <li> <b>no_wince</b></li>
-<p>Indicate that the item should be #ifdef out in the Windows CE platform, but not in the regular win32 platform. </p>
+<p>Indicate that the item should be #ifdef out in the Windows CE platform, but not in the regular win32 platform. Used in: <i>@field</i></p>
 <li> <b>cpp</b></li>
 <p>Indicate that the platform source is in C++. Used in: <i>@jniclass</i>, <i>@method</i></p>
 <li> <b>new</b></li>
