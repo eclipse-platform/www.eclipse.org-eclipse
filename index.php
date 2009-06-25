@@ -55,12 +55,12 @@ Whatever the reason, you will find many resources here. Enjoy!</p>
   <table width="100%">
   <tr><td>
       <b><font size="+1">Development</font></b><br>
-      <a href="http://download.eclipse.org/eclipse/downloads/drops/S-3.5RC3-200905282000/download.php?dropFile=swt-3.5RC3-win32-win32-x86.zip">Windows</a>,
-      <a href="http://download.eclipse.org/eclipse/downloads/drops/S-3.5RC3-200905282000/download.php?dropFile=swt-3.5RC3-gtk-linux-x86.zip">Linux</a>,
+      <a href="http://download.eclipse.org/eclipse/downloads/drops/R-3.5-200906111540/download.php?dropFile=swt-3.5-win32-win32-x86.zip">Windows</a>,
+      <a href="http://download.eclipse.org/eclipse/downloads/drops/R-3.5-200906111540/download.php?dropFile=swt-3.5-gtk-linux-x86.zip">Linux</a>,
       <span style="white-space: nowrap;">
-      <a href="http://download.eclipse.org/eclipse/downloads/drops/S-3.5RC3-200905282000/download.php?dropFile=swt-3.5RC3-cocoa-macosx.zip">OS X</a></span>,
-      <a href="http://download.eclipse.org/eclipse/downloads/drops/S-3.5RC3-200905282000/index.php#swt" target="_top">more...</a><br>
-      <small>3.5 Release Candidate 3 - <span style="white-space: nowrap;">29 May 2009</span></small><br>
+      <a href="http://download.eclipse.org/eclipse/downloads/drops/R-3.5-200906111540/download.php?dropFile=swt-3.5-cocoa-macosx.zip">OS X</a></span>,
+      <a href="http://download.eclipse.org/eclipse/downloads/drops/R-3.5-200906111540/index.php#swt" target="_top">more...</a><br>
+      <small>3.5 Release Final Release - <span style="white-space: nowrap;">12 June 2009</span></small><br>
   <ul>
   <li><a href="R3_5/plan.html">3.5 Development Plan</a></li>
   <li><a href="R3_5/new_and_noteworthy.html">New and Noteworthy</a></li>
