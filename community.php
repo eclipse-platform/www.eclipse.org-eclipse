@@ -106,6 +106,11 @@ toolkit.</p>
 	<p>A set of custom-draw graphing components.
 	There is currently a fully functional Cartesian Graph, and a Gantt Graph is being developed.</p>
 
+<li><b><a href="http://swtlayeredgraph.sourceforge.net/">SWT Layered Graph</a></b>
+	<i>by James Davis</i>
+
+	<p>The purpose of SWT Layered Graph is to provide highly usable and customizable graph functionality.</p>
+
 <li><b><a href="http://libxine-java.sourceforge.net">libxine-java</a></b>
 	<i>by Matthias Ringwald</i>
 
