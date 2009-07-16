@@ -1011,7 +1011,8 @@ the SWT.CENTER style when creating a composite.
   <dd>A: Typically a Mozilla-based Browser uses XULRunner's lookup mechanism to find a registered XULRunner at runtime.
     If you wish to override this mechanism you can set the value of java system property
     <code>org.eclipse.swt.browser.XULRunnerPath</code> to point at the target XULRunner's path.  This property must be set
-    before the <em>first</em> Browser instance is created.
+    before the <em>first</em> Browser instance is created (for example, it can be set when launching the eclipse executable
+    by adding switch <code>-vmargs -Dorg.eclipse.swt.browser.XULRunnerPath=...</code>).
   </dd>
 
   <dt><strong><a name="howdetectmozilla">Q: How does the Browser detect a native Mozilla browser to use?</a></strong></dt>
