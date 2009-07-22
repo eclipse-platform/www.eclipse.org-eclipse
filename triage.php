@@ -55,23 +55,23 @@
 			<td>
 				<div id="component">
 				[
-				<a href="javascript:viewBugsWithSummary('[PI]')">Platform Interface (PI)</a>
+				<a href="javascript:viewBugsWithSummary('[Graphics]')">Graphics</a>
 				]
 				</div>
 			</td>
 			<td>
-				All bugs that concern native library issues.
+				All graphics issues.
 			</td>
 			<td>
 				<div class="owner">
 					<ul>
-						<li>GTK - SSQ, FH</li>
+						<li>GTK - SSQ, BG, FH</li>
 						<li>Carbon - SSQ, FH</li>
-						<li>Cocoa - SSQ, FH</li>
+						<li>Cocoa - KB, SSQ, FH</li>
 						<li>Motif - SSQ, FH</li>
-						<li>Photon - RD, SSQ, FH</li>
+						<li>Photon - RD, SSQ</li>
 						<li>Win32 - SSQ, FH</li>
-						<li>WPF - SSQ, FH</li>
+						<li>WPF - FH, SSQ, KB</li>
 					</ul> 
 				</div>
 			</td>
@@ -80,7 +80,7 @@
 			<td>
 				<div id="component">
 				[
-				<a href="javascript:viewBugsWithSummary('[PI]')">Platform Interface (PI)</a>
+				<a href="javascript:viewBugsWithSummary('[Theme]')">Theme</a>
 				]
 				</div>
 			</td>
@@ -90,13 +90,13 @@
 			<td>
 				<div class="owner">
 					<ul>
-						<li>GTK - SSQ, FH</li>
-						<li>Carbon - SSQ, FH</li>
-						<li>Cocoa - SSQ, FH</li>
-						<li>Motif - SSQ, FH</li>
-						<li>Photon - RD, SSQ, FH</li>
+						<li>GTK - SSQ, BG</li>
+						<li>Carbon - SSQ, KB</li>
+						<li>Cocoa - SSQ, KB</li>
+						<li>Motif - SSQ, BG</li>
+						<li>Photon - RD, SSQ</li>
 						<li>Win32 - SSQ, FH</li>
-						<li>WPF - SSQ, FH</li>
+						<li>WPF - SSQ, KB</li>
 					</ul> 
 				</div>
 			</td>
@@ -105,7 +105,7 @@
 			<td>
 				<div id="component">
 				[
-				<a href="javascript:viewBugsWithSummary('[PI]')">Platform Interface (PI)</a>
+				<a href="javascript:viewBugsWithSummary('[Accessibility]')">Accessibility</a>
 				]
 				</div>
 			</td>
@@ -115,13 +115,13 @@
 			<td>
 				<div class="owner">
 					<ul>
-						<li>GTK - SSQ, FH</li>
-						<li>Carbon - SSQ, FH</li>
-						<li>Cocoa - SSQ, FH</li>
-						<li>Motif - SSQ, FH</li>
-						<li>Photon - RD, SSQ, FH</li>
-						<li>Win32 - SSQ, FH</li>
-						<li>WPF - SSQ, FH</li>
+						<li>GTK - CM, GG</li>
+						<li>Carbon - CM, SSQ</li>
+						<li>Cocoa - SK, CM</li>
+						<li>Motif - CM, SSQ</li>
+						<li>Photon - RD, CM</li>
+						<li>Win32 - CM, GG</li>
+						<li>WPF - CM, KB</li>
 					</ul> 
 				</div>
 			</td>
@@ -130,7 +130,7 @@
 			<td>
 				<div id="component">
 				[
-				<a href="javascript:viewBugsWithSummary('[PI]')">Platform Interface (PI)</a>
+				<a href="javascript:viewBugsWithSummary('Printing')">Printing</a>
 				]
 				</div>
 			</td>
@@ -140,13 +140,13 @@
 			<td>
 				<div class="owner">
 					<ul>
-						<li>GTK - SSQ, FH</li>
-						<li>Carbon - SSQ, FH</li>
-						<li>Cocoa - SSQ, FH</li>
-						<li>Motif - SSQ, FH</li>
-						<li>Photon - RD, SSQ, FH</li>
-						<li>Win32 - SSQ, FH</li>
-						<li>WPF - SSQ, FH</li>
+						<li>GTK - CM, FH</li>
+						<li>Carbon - CM, SSQ</li>
+						<li>Cocoa - KB, SSQ</li>
+						<li>Motif - CM, SSQ</li>
+						<li>Photon - RD, CM</li>
+						<li>Win32 - CM, SSQ</li>
+						<li>WPF - CM, KB, FH</li>
 					</ul> 
 				</div>
 			</td>
@@ -155,7 +155,7 @@
 			<td>
 				<div id="component">
 				[
-				<a href="javascript:viewBugsWithSummary('[PI]')">Platform Interface (PI)</a>
+				<a href="javascript:viewBugsWithSummary('[DND]')">Drag and Drop</a>
 				]
 				</div>
 			</td>
@@ -165,13 +165,13 @@
 			<td>
 				<div class="owner">
 					<ul>
-						<li>GTK - SSQ, FH</li>
-						<li>Carbon - SSQ, FH</li>
-						<li>Cocoa - SSQ, FH</li>
-						<li>Motif - SSQ, FH</li>
-						<li>Photon - RD, SSQ, FH</li>
-						<li>Win32 - SSQ, FH</li>
-						<li>WPF - SSQ, FH</li>
+						<li>GTK - KB, BG</li>
+						<li>Carbon - KB, SSQ</li>
+						<li>Cocoa - SK, KB</li>
+						<li>Motif - KB, SSQ</li>
+						<li>Photon - RD, SSQ</li>
+						<li>Win32 - KB, FH</li>
+						<li>WPF - KB, FH</li>
 					</ul> 
 				</div>
 			</td>
@@ -180,7 +180,7 @@
 			<td>
 				<div id="component">
 				[
-				<a href="javascript:viewBugsWithSummary('[PI]')">Platform Interface (PI)</a>
+				<a href="javascript:viewBugsWithSummary('[Widgets]')">Widgets</a>
 				]
 				</div>
 			</td>
@@ -190,13 +190,13 @@
 			<td>
 				<div class="owner">
 					<ul>
-						<li>GTK - SSQ, FH</li>
+						<li>GTK - BG, SSQ</li>
 						<li>Carbon - SSQ, FH</li>
-						<li>Cocoa - SSQ, FH</li>
-						<li>Motif - SSQ, FH</li>
-						<li>Photon - RD, SSQ, FH</li>
-						<li>Win32 - SSQ, FH</li>
-						<li>WPF - SSQ, FH</li>
+						<li>Cocoa - GG, KB, SSQ</li>
+						<li>Motif - BG, SSQ, FH</li>
+						<li>Photon - RD, SSQ</li>
+						<li>Win32 - FH, SSQ</li>
+						<li>WPF - KB, FH, SSQ</li>
 					</ul> 
 				</div>
 			</td>
@@ -205,7 +205,7 @@
 			<td>
 				<div id="component">
 				[
-				<a href="javascript:viewBugsWithSummary('[PI]')">Platform Interface (PI)</a>
+				<a href="javascript:viewBugsWithSummary('[Custom]')">Custom Widgets</a>
 				]
 				</div>
 			</td>
@@ -215,13 +215,7 @@
 			<td>
 				<div class="owner">
 					<ul>
-						<li>GTK - SSQ, FH</li>
-						<li>Carbon - SSQ, FH</li>
-						<li>Cocoa - SSQ, FH</li>
-						<li>Motif - SSQ, FH</li>
-						<li>Photon - RD, SSQ, FH</li>
-						<li>Win32 - SSQ, FH</li>
-						<li>WPF - SSQ, FH</li>
+						<li>All - CM, SSQ</li>
 					</ul> 
 				</div>
 			</td>
@@ -230,7 +224,7 @@
 			<td>
 				<div id="component">
 				[
-				<a href="javascript:viewBugsWithSummary('[PI]')">Platform Interface (PI)</a>
+				<a href="javascript:viewBugsWithSummary('[WinCE]')">WinCE</a>
 				]
 				</div>
 			</td>
@@ -240,13 +234,7 @@
 			<td>
 				<div class="owner">
 					<ul>
-						<li>GTK - SSQ, FH</li>
-						<li>Carbon - SSQ, FH</li>
-						<li>Cocoa - SSQ, FH</li>
-						<li>Motif - SSQ, FH</li>
-						<li>Photon - RD, SSQ, FH</li>
-						<li>Win32 - SSQ, FH</li>
-						<li>WPF - SSQ, FH</li>
+						<li>Win32 - FH, SSQ</li>
 					</ul> 
 				</div>
 			</td>
@@ -255,7 +243,7 @@
 			<td>
 				<div id="component">
 				[
-				<a href="javascript:viewBugsWithSummary('[PI]')">Platform Interface (PI)</a>
+				<a href="javascript:viewBugsWithSummary('[OpenGL]')">OpenGL</a>
 				]
 				</div>
 			</td>
@@ -265,13 +253,13 @@
 			<td>
 				<div class="owner">
 					<ul>
-						<li>GTK - SSQ, FH</li>
-						<li>Carbon - SSQ, FH</li>
-						<li>Cocoa - SSQ, FH</li>
-						<li>Motif - SSQ, FH</li>
-						<li>Photon - RD, SSQ, FH</li>
-						<li>Win32 - SSQ, FH</li>
-						<li>WPF - SSQ, FH</li>
+						<li>GTK - BG, SSQ</li>
+						<li>Carbon - SSQ, KB</li>
+						<li>Cocoa - KB, SSQ</li>
+						<li>Motif - BG, SSQ</li>
+						<li>Photon - RD, SSQ</li>
+						<li>Win32 - FH, SSQ</li>
+						<li>WPF - KB, SSQ</li>
 					</ul> 
 				</div>
 			</td>
@@ -280,7 +268,7 @@
 			<td>
 				<div id="component">
 				[
-				<a href="javascript:viewBugsWithSummary('[PI]')">Platform Interface (PI)</a>
+				<a href="javascript:viewBugsWithSummary('[Program]')">Program</a>
 				]
 				</div>
 			</td>
@@ -290,13 +278,13 @@
 			<td>
 				<div class="owner">
 					<ul>
-						<li>GTK - SSQ, FH</li>
-						<li>Carbon - SSQ, FH</li>
-						<li>Cocoa - SSQ, FH</li>
-						<li>Motif - SSQ, FH</li>
-						<li>Photon - RD, SSQ, FH</li>
-						<li>Win32 - SSQ, FH</li>
-						<li>WPF - SSQ, FH</li>
+						<li>GTK - BG, SSQ</li>
+						<li>Carbon - SSQ, KB</li>
+						<li>Cocoa - GG, KB</li>
+						<li>Motif - BG, SSQ</li>
+						<li>Photon - RD, SSQ</li>
+						<li>Win32 - FH, SSQ</li>
+						<li>WPF - KB, SSQ</li>
 					</ul> 
 				</div>
 			</td>
@@ -305,7 +293,7 @@
 			<td>
 				<div id="component">
 				[
-				<a href="javascript:viewBugsWithSummary('[PI]')">Platform Interface (PI)</a>
+				<a href="javascript:viewBugsWithSummary('[OLE]')">OLE/Active X</a>
 				]
 				</div>
 			</td>
@@ -315,13 +303,7 @@
 			<td>
 				<div class="owner">
 					<ul>
-						<li>GTK - SSQ, FH</li>
-						<li>Carbon - SSQ, FH</li>
-						<li>Cocoa - SSQ, FH</li>
-						<li>Motif - SSQ, FH</li>
-						<li>Photon - RD, SSQ, FH</li>
-						<li>Win32 - SSQ, FH</li>
-						<li>WPF - SSQ, FH</li>
+						<li>Win32 - FH, SSQ</li>
 					</ul> 
 				</div>
 			</td>
@@ -330,7 +312,7 @@
 			<td>
 				<div id="component">
 				[
-				<a href="javascript:viewBugsWithSummary('[PI]')">Platform Interface (PI)</a>
+				<a href="javascript:viewBugsWithSummary('[Browser]')">Browser</a>
 				]
 				</div>
 			</td>
@@ -340,13 +322,13 @@
 			<td>
 				<div class="owner">
 					<ul>
-						<li>GTK - SSQ, FH</li>
-						<li>Carbon - SSQ, FH</li>
-						<li>Cocoa - SSQ, FH</li>
-						<li>Motif - SSQ, FH</li>
-						<li>Photon - RD, SSQ, FH</li>
-						<li>Win32 - SSQ, FH</li>
-						<li>WPF - SSQ, FH</li>
+						<li>GTK - GG, SSQ</li>
+						<li>Carbon - GG, SSQ</li>
+						<li>Cocoa - GG, SSQ</li>
+						<li>Motif - GG, SSQ</li>
+						<li>Photon - RD, GG, SSQ</li>
+						<li>Win32 - GG, SSQ</li>
+						<li>WPF - GG, FH</li>
 					</ul> 
 				</div>
 			</td>
@@ -355,7 +337,7 @@
 			<td>
 				<div id="component">
 				[
-				<a href="javascript:viewBugsWithSummary('[PI]')">Platform Interface (PI)</a>
+				<a href="javascript:viewBugsWithSummary('[AWT/Swing')">SWT/AWT - Swing</a>
 				]
 				</div>
 			</td>
@@ -366,12 +348,12 @@
 				<div class="owner">
 					<ul>
 						<li>GTK - SSQ, FH</li>
-						<li>Carbon - SSQ, FH</li>
-						<li>Cocoa - SSQ, FH</li>
+						<li>Carbon - SK, SSQ</li>
+						<li>Cocoa - SK, KB, SSQ</li>
 						<li>Motif - SSQ, FH</li>
-						<li>Photon - RD, SSQ, FH</li>
+						<li>Photon - RD, SSQ</li>
 						<li>Win32 - SSQ, FH</li>
-						<li>WPF - SSQ, FH</li>
+						<li>WPF - KB, SSQ, FH</li>
 					</ul> 
 				</div>
 			</td>
@@ -380,7 +362,7 @@
 			<td>
 				<div id="component">
 				[
-				<a href="javascript:viewBugsWithSummary('[PI]')">Platform Interface (PI)</a>
+				<a href="javascript:viewBugsWithSummary('[I18N]')">Internationalization</a>
 				]
 				</div>
 			</td>
@@ -390,13 +372,13 @@
 			<td>
 				<div class="owner">
 					<ul>
-						<li>GTK - SSQ, FH</li>
-						<li>Carbon - SSQ, FH</li>
-						<li>Cocoa - SSQ, FH</li>
-						<li>Motif - SSQ, FH</li>
-						<li>Photon - RD, SSQ, FH</li>
-						<li>Win32 - SSQ, FH</li>
-						<li>WPF - SSQ, FH</li>
+						<li>GTK - FH, SSQ</li>
+						<li>Carbon - FH, SSQ</li>
+						<li>Cocoa - FH, KB</li>
+						<li>Motif - FH, SSQ</li>
+						<li>Photon - RD, SSQ</li>
+						<li>Win32 - FH, SSQ</li>
+						<li>WPF - FH, KB</li>
 					</ul> 
 				</div>
 			</td>
@@ -405,7 +387,7 @@
 			<td>
 				<div id="component">
 				[
-				<a href="javascript:viewBugsWithSummary('[PI]')">Platform Interface (PI)</a>
+				<a href="javascript:viewBugsWithSummary('[StyledText]')">Styled Text</a>
 				]
 				</div>
 			</td>
@@ -415,17 +397,130 @@
 			<td>
 				<div class="owner">
 					<ul>
-						<li>GTK - SSQ, FH</li>
-						<li>Carbon - SSQ, FH</li>
-						<li>Cocoa - SSQ, FH</li>
-						<li>Motif - SSQ, FH</li>
-						<li>Photon - RD, SSQ, FH</li>
-						<li>Win32 - SSQ, FH</li>
-						<li>WPF - SSQ, FH</li>
+						<li>All - FH, SSQ</li>
+					</ul> 
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<div id="component">
+				[
+				<a href="javascript:viewBugsWithSummary('[Image]')">Image Loading</a>
+				]
+				</div>
+			</td>
+			<td>
+				All bugs that concern native library issues.
+			</td>
+			<td>
+				<div class="owner">
+					<ul>
+						<li>All - CM, SSQ</li>
 					</ul> 
 				</div>
 			</td>
 		</tr>	
+		<tr>
+			<td>
+				<div id="component">
+				[
+				<a href="javascript:viewBugsWithSummary('[Layout]')">Layout</a>
+				]
+				</div>
+			</td>
+			<td>
+				All bugs that concern native library issues.
+			</td>
+			<td>
+				<div class="owner">
+					<ul>
+						<li>All - CM, SSQ</li>
+					</ul> 
+				</div>
+			</td>
+		</tr>	
+		<tr>
+			<td>
+				<div id="component">
+				[
+				<a href="javascript:viewBugsWithSummary('[Examples]')">Examples</a>
+				]
+				</div>
+			</td>
+			<td>
+				All bugs that concern native library issues.
+			</td>
+			<td>
+				<div class="owner">
+					<ul>
+						<li>All - CM, FH</li>
+					</ul> 
+				</div>
+			</td>
+		</tr>	
+		<tr>
+			<td>
+				<div id="component">
+				[
+				<a href="javascript:viewBugsWithSummary('[Snippets]')">Snippets</a>
+				]
+				</div>
+			</td>
+			<td>
+				All bugs that concern native library issues.
+			</td>
+			<td>
+				<div class="owner">
+					<ul>
+						<li>All - CM, FH</li>
+					</ul> 
+				</div>
+			</td>
+		</tr>	
+		<tr>
+			<td>
+				<div id="component">
+				[
+				<a href="javascript:viewBugsWithSummary('[JUnit]')">JUnit</a>
+				]
+				</div>
+			</td>
+			<td>
+				All bugs that concern native library issues.
+			</td>
+			<td>
+				<div class="owner">
+					<ul>
+						<li>All - CM, GG</li>
+					</ul> 
+				</div>
+			</td>
+		</tr>	
+		<tr>
+			<td>
+				<div id="component">
+				[
+				<a href="javascript:viewBugsWithSummary('[64]')">64 bit</a>
+				]
+				</div>
+			</td>
+			<td>
+				All bugs that concern native library issues.
+			</td>
+			<td>
+				<div class="owner">
+					<ul>
+						<li>GTK - GG, SSQ, BG</li>
+						<li>Carbon - GG, SSQ, KB</li>
+						<li>Cocoa - GG, SSQ, KB</li>
+						<li>Win32 - GG, FH, SSQ</li>
+						<li>WPF - GG, KB, SSQ</li>
+					</ul> 
+				</div>
+			</td>
+		</tr>	
+			
 	</tbody>
 </table>
 </table>
