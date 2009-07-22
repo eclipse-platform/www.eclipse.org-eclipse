@@ -16,14 +16,39 @@
 <table id="swtComponents" border="1">
 	<tbody>
 		<tr>
-			<td>
+			<th>
 				<h3>Component</h3>
-			</td>
-			<td>
+			</th>
+			<th>
 				<h3>Description</h3>
+			</th>
+			<th>
+				<h3>Owner</h3>
+			</th>
+		</tr>
+		<tr>
+			<td>
+				<div id="component">
+				[
+				<a href="javascript:viewBugsWithSummary('[PI]')">Platform Interface (PI)</a>
+				]
+				</div>
 			</td>
 			<td>
-				<h3>Owner</h3>
+				All bugs that concern native library issues.
+			</td>
+			<td>
+				<div class="owner">
+					<ul>
+						<li>GTK - SSQ, FH</li>
+						<li>Carbon - SSQ, FH</li>
+						<li>Cocoa - SSQ, FH</li>
+						<li>Motif - SSQ, FH</li>
+						<li>Photon - RD, SSQ, FH</li>
+						<li>Win32 - SSQ, FH</li>
+						<li>WPF - SSQ, FH</li>
+					</ul> 
+				</div>
 			</td>
 		</tr>
 		<tr>
@@ -50,7 +75,7 @@
 					</ul> 
 				</div>
 			</td>
-		</tr>		
+		</tr>				
 	</tbody>
 </table>
 </table>
