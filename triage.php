@@ -23,10 +23,24 @@
 			<h3>Description</h3>
 			</td>
 			<td>
-			<h3>Windowing System</h3>
+			<h3>Owner</h3>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<div id="component">
+				[
+				<a href="javascript:viewBugsWithSummary('[PI]')">Platform Interface (PI)</a>
+				]
+				</div>
 			</td>
 			<td>
-			<h3>Owner</h3>
+				All bugs that concern native library issues.
+			</td>
+			<td>
+				<div class="owner">
+				SSQ
+				</div>
 			</td>
 		</tr>
 	</tbody>
