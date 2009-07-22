@@ -75,7 +75,357 @@
 					</ul> 
 				</div>
 			</td>
-		</tr>				
+		</tr>	
+		<tr>
+			<td>
+				<div id="component">
+				[
+				<a href="javascript:viewBugsWithSummary('[PI]')">Platform Interface (PI)</a>
+				]
+				</div>
+			</td>
+			<td>
+				All bugs that concern native library issues.
+			</td>
+			<td>
+				<div class="owner">
+					<ul>
+						<li>GTK - SSQ, FH</li>
+						<li>Carbon - SSQ, FH</li>
+						<li>Cocoa - SSQ, FH</li>
+						<li>Motif - SSQ, FH</li>
+						<li>Photon - RD, SSQ, FH</li>
+						<li>Win32 - SSQ, FH</li>
+						<li>WPF - SSQ, FH</li>
+					</ul> 
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<div id="component">
+				[
+				<a href="javascript:viewBugsWithSummary('[PI]')">Platform Interface (PI)</a>
+				]
+				</div>
+			</td>
+			<td>
+				All bugs that concern native library issues.
+			</td>
+			<td>
+				<div class="owner">
+					<ul>
+						<li>GTK - SSQ, FH</li>
+						<li>Carbon - SSQ, FH</li>
+						<li>Cocoa - SSQ, FH</li>
+						<li>Motif - SSQ, FH</li>
+						<li>Photon - RD, SSQ, FH</li>
+						<li>Win32 - SSQ, FH</li>
+						<li>WPF - SSQ, FH</li>
+					</ul> 
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<div id="component">
+				[
+				<a href="javascript:viewBugsWithSummary('[PI]')">Platform Interface (PI)</a>
+				]
+				</div>
+			</td>
+			<td>
+				All bugs that concern native library issues.
+			</td>
+			<td>
+				<div class="owner">
+					<ul>
+						<li>GTK - SSQ, FH</li>
+						<li>Carbon - SSQ, FH</li>
+						<li>Cocoa - SSQ, FH</li>
+						<li>Motif - SSQ, FH</li>
+						<li>Photon - RD, SSQ, FH</li>
+						<li>Win32 - SSQ, FH</li>
+						<li>WPF - SSQ, FH</li>
+					</ul> 
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<div id="component">
+				[
+				<a href="javascript:viewBugsWithSummary('[PI]')">Platform Interface (PI)</a>
+				]
+				</div>
+			</td>
+			<td>
+				All bugs that concern native library issues.
+			</td>
+			<td>
+				<div class="owner">
+					<ul>
+						<li>GTK - SSQ, FH</li>
+						<li>Carbon - SSQ, FH</li>
+						<li>Cocoa - SSQ, FH</li>
+						<li>Motif - SSQ, FH</li>
+						<li>Photon - RD, SSQ, FH</li>
+						<li>Win32 - SSQ, FH</li>
+						<li>WPF - SSQ, FH</li>
+					</ul> 
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<div id="component">
+				[
+				<a href="javascript:viewBugsWithSummary('[PI]')">Platform Interface (PI)</a>
+				]
+				</div>
+			</td>
+			<td>
+				All bugs that concern native library issues.
+			</td>
+			<td>
+				<div class="owner">
+					<ul>
+						<li>GTK - SSQ, FH</li>
+						<li>Carbon - SSQ, FH</li>
+						<li>Cocoa - SSQ, FH</li>
+						<li>Motif - SSQ, FH</li>
+						<li>Photon - RD, SSQ, FH</li>
+						<li>Win32 - SSQ, FH</li>
+						<li>WPF - SSQ, FH</li>
+					</ul> 
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<div id="component">
+				[
+				<a href="javascript:viewBugsWithSummary('[PI]')">Platform Interface (PI)</a>
+				]
+				</div>
+			</td>
+			<td>
+				All bugs that concern native library issues.
+			</td>
+			<td>
+				<div class="owner">
+					<ul>
+						<li>GTK - SSQ, FH</li>
+						<li>Carbon - SSQ, FH</li>
+						<li>Cocoa - SSQ, FH</li>
+						<li>Motif - SSQ, FH</li>
+						<li>Photon - RD, SSQ, FH</li>
+						<li>Win32 - SSQ, FH</li>
+						<li>WPF - SSQ, FH</li>
+					</ul> 
+				</div>
+			</td>
+		</tr>		
+		<tr>
+			<td>
+				<div id="component">
+				[
+				<a href="javascript:viewBugsWithSummary('[PI]')">Platform Interface (PI)</a>
+				]
+				</div>
+			</td>
+			<td>
+				All bugs that concern native library issues.
+			</td>
+			<td>
+				<div class="owner">
+					<ul>
+						<li>GTK - SSQ, FH</li>
+						<li>Carbon - SSQ, FH</li>
+						<li>Cocoa - SSQ, FH</li>
+						<li>Motif - SSQ, FH</li>
+						<li>Photon - RD, SSQ, FH</li>
+						<li>Win32 - SSQ, FH</li>
+						<li>WPF - SSQ, FH</li>
+					</ul> 
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<div id="component">
+				[
+				<a href="javascript:viewBugsWithSummary('[PI]')">Platform Interface (PI)</a>
+				]
+				</div>
+			</td>
+			<td>
+				All bugs that concern native library issues.
+			</td>
+			<td>
+				<div class="owner">
+					<ul>
+						<li>GTK - SSQ, FH</li>
+						<li>Carbon - SSQ, FH</li>
+						<li>Cocoa - SSQ, FH</li>
+						<li>Motif - SSQ, FH</li>
+						<li>Photon - RD, SSQ, FH</li>
+						<li>Win32 - SSQ, FH</li>
+						<li>WPF - SSQ, FH</li>
+					</ul> 
+				</div>
+			</td>
+		</tr>	
+		<tr>
+			<td>
+				<div id="component">
+				[
+				<a href="javascript:viewBugsWithSummary('[PI]')">Platform Interface (PI)</a>
+				]
+				</div>
+			</td>
+			<td>
+				All bugs that concern native library issues.
+			</td>
+			<td>
+				<div class="owner">
+					<ul>
+						<li>GTK - SSQ, FH</li>
+						<li>Carbon - SSQ, FH</li>
+						<li>Cocoa - SSQ, FH</li>
+						<li>Motif - SSQ, FH</li>
+						<li>Photon - RD, SSQ, FH</li>
+						<li>Win32 - SSQ, FH</li>
+						<li>WPF - SSQ, FH</li>
+					</ul> 
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<div id="component">
+				[
+				<a href="javascript:viewBugsWithSummary('[PI]')">Platform Interface (PI)</a>
+				]
+				</div>
+			</td>
+			<td>
+				All bugs that concern native library issues.
+			</td>
+			<td>
+				<div class="owner">
+					<ul>
+						<li>GTK - SSQ, FH</li>
+						<li>Carbon - SSQ, FH</li>
+						<li>Cocoa - SSQ, FH</li>
+						<li>Motif - SSQ, FH</li>
+						<li>Photon - RD, SSQ, FH</li>
+						<li>Win32 - SSQ, FH</li>
+						<li>WPF - SSQ, FH</li>
+					</ul> 
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<div id="component">
+				[
+				<a href="javascript:viewBugsWithSummary('[PI]')">Platform Interface (PI)</a>
+				]
+				</div>
+			</td>
+			<td>
+				All bugs that concern native library issues.
+			</td>
+			<td>
+				<div class="owner">
+					<ul>
+						<li>GTK - SSQ, FH</li>
+						<li>Carbon - SSQ, FH</li>
+						<li>Cocoa - SSQ, FH</li>
+						<li>Motif - SSQ, FH</li>
+						<li>Photon - RD, SSQ, FH</li>
+						<li>Win32 - SSQ, FH</li>
+						<li>WPF - SSQ, FH</li>
+					</ul> 
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<div id="component">
+				[
+				<a href="javascript:viewBugsWithSummary('[PI]')">Platform Interface (PI)</a>
+				]
+				</div>
+			</td>
+			<td>
+				All bugs that concern native library issues.
+			</td>
+			<td>
+				<div class="owner">
+					<ul>
+						<li>GTK - SSQ, FH</li>
+						<li>Carbon - SSQ, FH</li>
+						<li>Cocoa - SSQ, FH</li>
+						<li>Motif - SSQ, FH</li>
+						<li>Photon - RD, SSQ, FH</li>
+						<li>Win32 - SSQ, FH</li>
+						<li>WPF - SSQ, FH</li>
+					</ul> 
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<div id="component">
+				[
+				<a href="javascript:viewBugsWithSummary('[PI]')">Platform Interface (PI)</a>
+				]
+				</div>
+			</td>
+			<td>
+				All bugs that concern native library issues.
+			</td>
+			<td>
+				<div class="owner">
+					<ul>
+						<li>GTK - SSQ, FH</li>
+						<li>Carbon - SSQ, FH</li>
+						<li>Cocoa - SSQ, FH</li>
+						<li>Motif - SSQ, FH</li>
+						<li>Photon - RD, SSQ, FH</li>
+						<li>Win32 - SSQ, FH</li>
+						<li>WPF - SSQ, FH</li>
+					</ul> 
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<div id="component">
+				[
+				<a href="javascript:viewBugsWithSummary('[PI]')">Platform Interface (PI)</a>
+				]
+				</div>
+			</td>
+			<td>
+				All bugs that concern native library issues.
+			</td>
+			<td>
+				<div class="owner">
+					<ul>
+						<li>GTK - SSQ, FH</li>
+						<li>Carbon - SSQ, FH</li>
+						<li>Cocoa - SSQ, FH</li>
+						<li>Motif - SSQ, FH</li>
+						<li>Photon - RD, SSQ, FH</li>
+						<li>Win32 - SSQ, FH</li>
+						<li>WPF - SSQ, FH</li>
+					</ul> 
+				</div>
+			</td>
+		</tr>	
 	</tbody>
 </table>
 </table>
