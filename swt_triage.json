@@ -1,0 +1,65 @@
+{ "components" : [ { "OS" : [ { "name" : "GTK",
+              "owner" : "SSQ",
+              "second" : "FH"
+            },
+            { "name" : "Carbon",
+              "owner" : "SSQ",
+              "second" : "FH"
+            },
+            { "name" : "Cocoa",
+              "owner" : "SSQ",
+              "second" : "FH"
+            },
+            { "name" : "Motif",
+              "owner" : "SSQ",
+              "second" : "FH"
+            },
+            { "name" : "Photon",
+              "owner" : "RD",
+              "second" : "SSQ"
+            },
+            { "name" : "Win32",
+              "owner" : "SSQ",
+              "second" : "FH"
+            },
+            { "name" : "WPF",
+              "owner" : "SSQ",
+              "second" : "FH"
+            }
+          ],
+        "component" : "Platform Interface",
+        "description" : "All bugs dealing with the native library interfaces"
+      },
+      { "OS" : [ { "name" : "GTK",
+              "owner" : "SSQ",
+              "second" : "BG"
+            },
+            { "name" : "Carbon",
+              "owner" : "SSQ",
+              "second" : "FH"
+            },
+            { "name" : "Cocoa",
+              "owner" : "KB",
+              "second" : "SSQ"
+            },
+            { "name" : "Motif",
+              "owner" : "SSQ",
+              "second" : "FH"
+            },
+            { "name" : "Photon",
+              "owner" : "RD",
+              "second" : "SSQ"
+            },
+            { "name" : "Win32",
+              "owner" : "SSQ",
+              "second" : "FH"
+            },
+            { "name" : "WPF",
+              "owner" : "FH",
+              "second" : "SSQ"
+            }
+          ],
+        "component" : "Graphics",
+        "description" : "All bugs dealing with graphics"
+      }
+    ] }
