@@ -1,7 +1,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-    <title>Generating the SWT JNI Code</title>
+    <title>SWT Bug Triage</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta http-equiv="Content-Style-Type" content="text/css">
     <link rel="stylesheet" href="http://dev.eclipse.org/default_style.css" type="text/css">
@@ -17,13 +17,13 @@
 	<tbody>
 		<tr>
 			<td>
-			<h3>Component</h3>
+				<h3>Component</h3>
 			</td>
 			<td>
-			<h3>Description</h3>
+				<h3>Description</h3>
 			</td>
 			<td>
-			<h3>Owner</h3>
+				<h3>Owner</h3>
 			</td>
 		</tr>
 		<tr>
@@ -39,10 +39,18 @@
 			</td>
 			<td>
 				<div class="owner">
-				SSQ
+					<ul>
+						<li>GTK - SSQ, FH</li>
+						<li>Carbon - SSQ, FH</li>
+						<li>Cocoa - SSQ, FH</li>
+						<li>Motif - SSQ, FH</li>
+						<li>Photon - RD, SSQ, FH</li>
+						<li>Win32 - SSQ, FH</li>
+						<li>WPF - SSQ, FH</li>
+					</ul> 
 				</div>
 			</td>
-		</tr>
+		</tr>		
 	</tbody>
 </table>
 </table>
