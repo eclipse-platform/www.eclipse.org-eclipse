@@ -1,4 +1,37 @@
-{ "components" : [ { "OS" : [ { "name" : "GTK",
+{ "commiters" : [ { "email" : "Silenio_Quarti@ca.ibm.com",
+        "id" : "SSQ",
+        "name" : "Silenio"
+      },
+      { "email" : "Carolyn_MacLeod@ca.ibm.com",
+        "id" : "CM",
+        "name" : "Carolyn"
+      },
+      { "email" : "grant_gayed@ca.ibm.com",
+        "id" : "GG",
+        "name" : "Grant"
+      },
+      { "email" : "gheorghe@ca.ibm.com",
+        "id" : "BG",
+        "name" : "Bogdan"
+      },
+      { "email" : "krbarnes@ca.ibm.com",
+        "id" : "KB",
+        "name" : "Kevin"
+      },
+      { "email" : "felipe_heidrich@ca.ibm.com",
+        "id" : "FH",
+        "name" : "Felipe"
+      },
+      { "email" : "skovatch@adobe.com ",
+        "id" : "SK",
+        "name" : "Scott"
+      },
+      { "email" : "rdowdall@qnx.com",
+        "id" : "RD",
+        "name" : "Silenio"
+      }
+    ],
+  "components" : [ { "OS" : [ { "name" : "GTK",
               "owner" : "SSQ",
               "second" : "FH"
             },
@@ -62,7 +95,7 @@
         "component" : "Graphics",
         "description" : "All bugs dealing with graphics"
       },
-  	{ "OS" : [ { "name" : "GTK",
+      { "OS" : [ { "name" : "GTK",
               "owner" : "SSQ",
               "second" : "BG"
             },
@@ -225,16 +258,14 @@
       { "OS" : [ { "name" : "All",
               "owner" : "CM",
               "second" : "GG"
-            }
-          ],
+            } ],
         "component" : "Custom Widgets",
         "description" : "Bugs concerning custom widget appearance, behavior etc."
       },
       { "OS" : [ { "name" : "All",
               "owner" : "FH",
               "second" : "SSQ"
-            }
-          ],
+            } ],
         "component" : "WinCE",
         "description" : "Bugs concerning the WinCE platform"
       },
@@ -305,8 +336,7 @@
       { "OS" : [ { "name" : "All",
               "owner" : "FH",
               "second" : "SSQ"
-            }
-          ],
+            } ],
         "component" : "OLE/Active X",
         "description" : "OLE/Active X issues"
       },
@@ -433,49 +463,44 @@
       { "OS" : [ { "name" : "All",
               "owner" : "FH",
               "second" : "SSQ"
-            }
-          ],
+            } ],
         "component" : "Styled Text",
         "description" : "All Styled Text issues"
       },
       { "OS" : [ { "name" : "All",
               "owner" : "CM",
               "second" : "SSQ"
-            }
-          ],
+            } ],
         "component" : "Image Loading",
         "description" : "All Image Loading issues"
       },
       { "OS" : [ { "name" : "All",
               "owner" : "CM",
               "second" : "SSQ"
-            }
-          ],
+            } ],
         "component" : "Layout",
         "description" : "All Layout issues"
       },
       { "OS" : [ { "name" : "All",
               "owner" : "CM",
               "second" : "FH"
-            }
-          ],
+            } ],
         "component" : "Examples",
         "description" : "All bugs related to the SWT Examples"
       },
       { "OS" : [ { "name" : "All",
               "owner" : "FH",
               "second" : "SSQ"
-            }
-          ],
+            } ],
         "component" : "Snippets",
         "description" : "All bugs dealing with the SWT snippets"
       },
       { "OS" : [ { "name" : "All",
               "owner" : "CM",
               "second" : "GG"
-            }
-          ],
+            } ],
         "component" : "JUnit",
         "description" : "All bugs that deal with the JUnit tests"
       }
-    ] }
+    ]
+}
