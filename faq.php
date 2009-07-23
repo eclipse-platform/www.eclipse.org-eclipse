@@ -219,9 +219,9 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
       <li>In eclipse's CVS Repositories view create a connection to <strong>:pserver:anonymous@dev.eclipse.org:/cvsroot/eclipse</strong>.
       <li>Check out the projects <strong>org.eclipse.swt</strong> and <strong>org.eclipse.swt.</strong><em>WS.OS.ARCH</em> where <em>WS.OS.ARCH</em> are the names of the
         windowing system, operating system and architecture of interest, respectively.  For example, <strong>org.eclipse.swt.gtk.linux.x86</strong>.
-      <li>In the project <strong>org.eclipse.swt.</strong><em>WS.OS.ARCH</em>, locate the file <strong>build.xml</strong>.  This is an Ant script.
-      <li>If your swt version is 3.4.x or earlier then open the <strong>build.xml</strong> file and add the target below anywhere within its
-        <strong>&lt;project&gt;</strong> tags (if your swt version is 3.5 or newer then this target will already be there).
+      <li>In the project <strong>org.eclipse.swt.</strong><em>WS.OS.ARCH</em>, open the file <strong>build.xml</strong>.  This is an Ant script.
+      <li>If your swt version is 3.4.x or earlier then add the target below anywhere within the <strong>build.xml</strong> file's
+        <strong>&lt;project&gt;</strong> tags.  If your swt version is 3.5 or newer then this target will already be there.
       <pre>
 &lt;target name="jar.plugin" depends="init"&gt;
     &lt;delete dir="${temp.folder}"/&gt;
@@ -234,6 +234,14 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
     &lt;delete dir="${temp.folder}"/&gt;
 &lt;/target&gt;
       </pre>
+      <li>To ensure that your plug-in will be used when eclipse starts up, its filename and bundle version must match the plug-in that is to be replaced:
+      <ul>
+        <li>To change the filename, update the value of the <strong>build.xml</strong> file's <strong>version.suffix</strong> property (eg.- for the eclipse 3.5 release
+        this value would change from "3.5.0" to "3.5.0.v3550b")</li>
+        <li>To change the bundle version, in the <strong>org.eclipse.swt.</strong><em>WS.OS.ARCH</em> project, open file <strong>META-INF/MANIFEST.MF</strong>
+        and update the value of its <strong>Bundle-Version</strong> property (eg.- for the eclipse 3.5 release this value would change from "3.5.0.qualifier" to
+        "3.5.0.v3550b"</li>
+      </ul>      
       <li>Right-click the <strong>build.xml</strong> file and select <strong>Run As</strong> &gt; <strong>Ant Build...</strong>.
       <li>Select <strong>jar.plugin</strong> as the Ant target to be run.
       <li>On the <strong>JRE</strong> tab select <strong>Run in the same JRE as the workspace</strong>.
