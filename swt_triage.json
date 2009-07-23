@@ -502,5 +502,59 @@
         "component" : "JUnit",
         "description" : "All bugs that deal with the JUnit tests"
       }
+    ],
+  "platforms" : [ { "alias" : [ { "name" : "Windows All" },
+            { "name" : "Windows 95" },
+            { "name" : "Windows 98" },
+            { "name" : "Windows 2000" },
+            { "name" : "Windows Server 2003" },
+            { "name" : "Windows Server 2008" },
+            { "name" : "Windows 7" },
+            { "name" : "Windows CE" },
+            { "name" : "Windows ME" },
+            { "name" : "Windows Mobile 2003" },
+            { "name" : "Windows Mobile 5.0" },
+            { "name" : "Windows NT" },
+            { "name" : "Windows XP" },
+            { "name" : "Windows Vista" }
+          ],
+        "name" : "Win32"
+      },
+      { "alias" : [ { "name" : "AIX Motif" },
+            { "name" : "HP-UX" },
+            { "name" : "Linux-Motif" },
+            { "name" : "Solaris-Motif" }
+          ],
+        "name" : "Motif"
+      },
+      { "alias" : [ { "name" : "Linux" },
+            { "name" : "Linux-GTK" },
+            { "name" : "Solaris" },
+            { "name" : "Solaris-GTK" },
+            { "name" : "Unix All" }
+          ],
+        "name" : "GTK"
+      },
+      { "alias" : [ { "name" : "Mac OS X" } ],
+        "name" : "Carbon"
+      },
+      { "alias" : [ { "name" : "Mac OS X - Cocoa" } ],
+        "name" : "Cocoa"
+      },
+      { "alias" : [ { "name" : "QNX-Photon" },
+            { "name" : "Neutrino" }
+          ],
+        "name" : "Photon"
+      },
+      { "alias" : [ { "name" : "Windows Vista-WPF" } ],
+        "name" : "WPF"
+      },
+      { "alias" : [ { "name" : "All" },
+            { "name" : "other" },
+            { "name" : "SymbianOS-Series 80" },
+            { "name" : "SymbianOS S60" }
+          ],
+        "name" : "Win32"
+      }
     ]
 }
