@@ -489,7 +489,7 @@
         "description" : "All bugs related to the SWT Examples"
       },
       { "OS" : [ { "name" : "All",
-              "owner" : "FH",
+              "owner" : "CM",
               "second" : "SSQ"
             } ],
         "component" : "Snippets",
