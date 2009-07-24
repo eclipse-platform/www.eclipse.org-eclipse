@@ -61,7 +61,7 @@ function buildTable(loadedJSON){
 	 component = row.insertCell(0);
 	 description = row.insertCell(1);
 	 owner = row.insertCell(2);
-	 component.innerHTML = components[i].component;//'<div id="component">[<a href="javascript:viewBugsWithSummary(\'[' + components[i].component + ']\')">' + components[i].component + '</a>]</div>';
+	 component.innerHTML = '<div id="component">[<a href="javascript:viewBugsWithSummary(\'[' + components[i].component + ']\')">' + components[i].component + '</a>]</div>';
 	 description.innerHTML = components[i].description;
 	 var osList = "";
 	 for (j = 0; j < components[i].OS.length; j++) {
@@ -69,6 +69,11 @@ function buildTable(loadedJSON){
 	 }
 	 owner.innerHTML = '<div id="owner"><ul>' + osList + '</ul></div>';
  }
+}
+
+function viewBugsWithSummary(desc) {
+ //window.location = "https://bugs.eclipse.org/bugs/buglist.cgi?short_desc_type=anywordssubstr&short_desc=" + encodeURI(desc) + "&product=Platform&component=IDE&component=UI&long_desc_type=allwordssubstr&long_desc=&bug_file_loc_type=allwordssubstr&bug_file_loc=&keywords_type=allwords&keywords=&bug_status=NEW&bug_status=ASSIGNED&bug_status=REOPENED&emailtype1=substring&email1=&emailtype2=substring&email2=&bugidtype=include&bug_id=&votes=&changedin=&chfieldfrom=&chfieldto=Now&chfieldvalue=&cmdtype=doit&newqueryname=&order=Reuse+same+sort+as+last+time&field0-0-0=noop&type0-0-0=noop&value0-0-0=";
+ window.location = "https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&short_desc_type=allwordssubstr&short_desc=" + encodeURI(desc) + "&product=Platform&component=SWT&long_desc_type=allwordssubstr&long_desc=&bug_file_loc_type=allwordssubstr&bug_file_loc=&status_whiteboard_type=allwordssubstr&status_whiteboard=&keywords_type=allwords&keywords=&bug_status=NEW&bug_status=ASSIGNED&bug_status=REOPENED&emailtype1=substring&email1=&emailtype2=substring&email2=&bugidtype=include&bug_id=&votes=&chfieldfrom=&chfieldto=Now&chfieldvalue=&cmdtype=doit&order=Reuse+same+sort+as+last+time&field0-0-0=noop&type0-0-0=noop&value0-0-0=";
 }
 </script>
 <h2>SWT Bug Triage Procedure</h2>
@@ -80,7 +85,7 @@ triage process earlier in the year and we have decided to adopt their process.</
 <p>The new SWT triage process is as follows:
 <ul>
 <li>Bugs come in to platform-swt-inbox@eclipse.org</li>
-<li>If the bug has sufficient information in it to proceed, the persone performing the triage:
+<li>If the bug has sufficient information in it to proceed, the person performing the triage:
 <ul>
 <li>Prepends the component area of the bug in the Summary field.</li>
 <li>Adds the primary component owner as the main QA contact.</li>
