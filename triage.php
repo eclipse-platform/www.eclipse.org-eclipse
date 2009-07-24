@@ -12,6 +12,7 @@
 <table width="875px" class="swtpage">
 <colgroup><col width="125px"><col width="750px"></colgroup>
 <tr><?php include "sidebar.php"; ?>
+<td valign="top" style="padding: 10px"><h1 style="padding: 0; margin: 0; border-bottom: 1px solid #000000;">SWT Bug Triage</h1>
 <h2>SWT Bug Triage Procedure</h2>
 <p>Early in the 3.6 planning cycle, we have decided to revamp the SWT bug triage system. Up until now, our triage
 consisted of directly assigning bugs to the component owners. Over time this led to each committer owning a huge number
@@ -32,8 +33,7 @@ triage process earlier in the year and we have decided to adopt their process.</
 <li>Committers assign the bugs that they are actively working on to themselves.</li>
 </ul>
 </p> 
-<h2>SWT Componenet Areas</h2>
-<td valign="top" style="padding: 10px"><h1 style="padding: 0; margin: 0; border-bottom: 1px solid #000000;">SWT Bug Triage</h1>
+<h2>SWT Component Areas</h2>
 <table id="swtComponents" border="1">
 	<tbody>
 		<tr>
