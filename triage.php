@@ -12,6 +12,27 @@
 <table width="875px" class="swtpage">
 <colgroup><col width="125px"><col width="750px"></colgroup>
 <tr><?php include "sidebar.php"; ?>
+<h2>SWT Bug Triage Procedure</h2>
+<p>Early in the 3.6 planning cycle, we have decided to revamp the SWT bug triage system. Up until now, our triage
+consisted of directly assigning bugs to the component owners. Over time this led to each committer owning a huge number
+of bugs which not only gives the mistaken impression that they are actively working on solving all of those bugs but also makes it
+difficult for members of the community to identify which bugs are available for contribution. The Platform UI team has changed their 
+triage process earlier in the year and we have decided to adopt their process.</p>
+<p>The new SWT triage process is as follows:
+<ul>
+<li>Bugs come in to platform-swt-inbox@eclipse.org</li>
+<li>If the bug has sufficient information in it to proceed, the persone performing the triage:
+<ul>
+<li>Prepends the component area of the bug in the Summary field.</li>
+<li>Adds the primary component owner as the main QA contact.</li>
+<li>Adds the secondary owner to the CC field.</li>
+<li>Reassigns the bug to the swt-triaged@eclipse.org box.</li>
+</ul>
+</li>
+<li>Committers assign the bugs that they are actively working on to themselves.</li>
+</ul>
+</p> 
+<h2>SWT Componenet Areas</h2>
 <td valign="top" style="padding: 10px"><h1 style="padding: 0; margin: 0; border-bottom: 1px solid #000000;">SWT Bug Triage</h1>
 <table id="swtComponents" border="1">
 	<tbody>
