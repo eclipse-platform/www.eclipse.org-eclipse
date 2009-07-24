@@ -15,72 +15,9 @@
 <td valign="top" style="padding: 10px"><h1 style="padding: 0; margin: 0; border-bottom: 1px solid #000000;">SWT Bug Triage</h1>
 
 <script type="text/javascript">
-
-function viewBugsWithSummary(desc) {
- window.location = "https://bugs.eclipse.org/bugs/buglist.cgi?short_desc_type=anywordssubstr&short_desc=" + encodeURI(desc) + "&product=Platform&component=IDE&component=UI&long_desc_type=allwordssubstr&long_desc=&bug_file_loc_type=allwordssubstr&bug_file_loc=&keywords_type=allwords&keywords=&bug_status=NEW&bug_status=ASSIGNED&bug_status=REOPENED&emailtype1=substring&email1=&emailtype2=substring&email2=&bugidtype=include&bug_id=&votes=&changedin=&chfieldfrom=&chfieldto=Now&chfieldvalue=&cmdtype=doit&newqueryname=&order=Reuse+same+sort+as+last+time&field0-0-0=noop&type0-0-0=noop&value0-0-0=";
-}
-
-function viewBugsByUser(email) {
- window.location = "https://bugs.eclipse.org/bugs/buglist.cgi?short_desc_type=allwordssubstr&short_desc=&product=Platform&component=UI&component=IDE&long_desc_type=allwordssubstr&long_desc=&bug_file_loc_type=allwordssubstr&bug_file_loc=&keywords_type=allwords&keywords=&bug_status=NEW&bug_status=ASSIGNED&bug_status=REOPENED&emailassigned_to1=1&emailtype1=substring&email1=" + email + "&emailtype2=substring&email2=&bugidtype=include&bug_id=&votes=&changedin=&chfieldfrom=&chfieldto=Now&chfieldvalue=&cmdtype=doit&newqueryname=&order=Reuse+same+sort+as+last+time&field0-0-0=noop&type0-0-0=noop&value0-0-0=";
-}
-
 window.onload = function() {
- var xmlHttp=null; 
- {
- // Firefox, Opera 8.0+, Safari, IE7+
- xmlHttp = new XMLHttpRequest();
-} catch (e) {
- // Internet Explorer
- try {
- xmlHttp=new ActiveXObject("Msxml2.XMLHTTP");
- } catch (e) {
- xmlHttp=new ActiveXObject("Microsoft.XMLHTTP");
- }
- }
- xmlHttp.onreadystatechange = function() {
- if (xmlHttp.readyState == 4){
-
- if (xmlHttp.status == 200) {
- alert("hi! " + xmlHttp.responseText);
- buildTable(xmlHttp.responseText);
- //document.getElementById("ajax_output").innerHTML = xmlHttp.responseText;
- }else{
- alert(xmlHttp.status);
- }
- }
- }
- xmlHttp.open("get","swt_triage.json");
- xmlHttp.send(null);
+	alert("hi!");
 }
-
-function buildTable(loadedJSON){
- var container = eval('(' + loadedJSON + ')');
- var assignments = container.assignments;
- var users = container.users;
-
- table = document.getElementById('componentAreas');
- var row = table.insertRow(0);
- var component = row.insertCell(0);
- var description = row.insertCell(1);
- component.innerHTML = '<h3>Component</h3>';
- description.innerHTML = "<h3>Description</h3>";
-
- for (i = 0; i < assignments.length; i++){
- row = table.insertRow(i+1);
- component = row.insertCell(0);
- description = row.insertCell(1);
- component.innerHTML = '<div id="component">[<a href="javascript:viewBugsWithSummary(\'[' + assignments[i].component + ']\')">' + assignments[i].component + '</a>]</div>';
- description.innerHTML = assignments[i].description;
-
- for (j = 0; j < users.length; j++){
- if (users[j].user == assignments[i].assignee){
- description.innerHTML += '<div class="owner">' + users[j].name + ' <a class="bugs" href="javascript:viewBugsByUser(\''+users[j].email+'\')">[bugs]</a></div>';
- }
- }
- }
-
-}
-<!-- 'directories=0,height=480,location=0,resizable=1,scrollbars=1,toolbar=0,width=515' -->
 </script>
 <h2>SWT Bug Triage Procedure</h2>
 <p>Early in the 3.6 planning cycle, we have decided to revamp the SWT bug triage system. Up until now, our triage
