@@ -41,6 +41,7 @@ window.onload = function() {
  if (xmlHttp.readyState == 4){
 
  if (xmlHttp.status == 200) {
+ alert("hi! " + xmlHttp.responseText);
  buildTable(xmlHttp.responseText);
  //document.getElementById("ajax_output").innerHTML = xmlHttp.responseText;
  }else{
@@ -48,7 +49,7 @@ window.onload = function() {
  }
  }
  }
- xmlHttp.open("get","componentAreas.json");
+ xmlHttp.open("get","http://www.eclipse.org/swt/swt_triage.json");
  xmlHttp.send(null);
 }
 
