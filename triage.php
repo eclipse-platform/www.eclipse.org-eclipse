@@ -14,8 +14,8 @@
 <tr><?php include "sidebar.php"; ?>
 <td valign="top" style="padding: 10px"><h1 style="padding: 0; margin: 0; border-bottom: 1px solid #000000;">SWT Bug Triage</h1>
 
-<script language="javascript">
-<!--
+<script type="text/javascript">
+
 function viewBugsWithSummary(desc) {
  window.location = "https://bugs.eclipse.org/bugs/buglist.cgi?short_desc_type=anywordssubstr&short_desc=" + encodeURI(desc) + "&product=Platform&component=IDE&component=UI&long_desc_type=allwordssubstr&long_desc=&bug_file_loc_type=allwordssubstr&bug_file_loc=&keywords_type=allwords&keywords=&bug_status=NEW&bug_status=ASSIGNED&bug_status=REOPENED&emailtype1=substring&email1=&emailtype2=substring&email2=&bugidtype=include&bug_id=&votes=&changedin=&chfieldfrom=&chfieldto=Now&chfieldvalue=&cmdtype=doit&newqueryname=&order=Reuse+same+sort+as+last+time&field0-0-0=noop&type0-0-0=noop&value0-0-0=";
 }
@@ -49,7 +49,7 @@ window.onload = function() {
  }
  }
  }
- xmlHttp.open("get","http://www.eclipse.org/swt/swt_triage.json");
+ xmlHttp.open("get","swt_triage.json");
  xmlHttp.send(null);
 }
 
@@ -80,7 +80,6 @@ function buildTable(loadedJSON){
  }
 
 }
-//-->
 <!-- 'directories=0,height=480,location=0,resizable=1,scrollbars=1,toolbar=0,width=515' -->
 </script>
 <h2>SWT Bug Triage Procedure</h2>
