@@ -1119,14 +1119,15 @@ public class DisplayMozillaVersion {
   </dd>
 
   <dt><strong><a name="browserlinux">Q: What do I need to run the SWT Browser inside Eclipse on Linux?</a></strong></dt>
-  <dd>A: The mozilla versions that are supported by each Eclipse release are:
+  <dd>A: The mozilla versions that are supported by each Eclipse release are listed below.  Note that mozilla versions that are not
+    final releases (eg.- betas, alphas, nightlies) are <em>not</em> supported, even if their version technically satisfies a listed version range.
     <ul>
-      <li>Eclipse 3.0: Mozilla 1.4 GTK2 - 1.6 GTK2.</li>
-      <li>Eclipse 3.1: Mozilla 1.4 GTK2 - 1.7.8 GTK2.</li>
-      <li>Eclipse 3.2: Mozilla 1.4 GTK2 - 1.7.x GTK2.</li>
-      <li>Eclipse 3.3: Mozilla 1.4 GTK2 - 1.7.x GTK2 and XULRunner 1.8.x.</li>
-      <li>Eclipse 3.4: Mozilla 1.4 GTK2 - 1.7.x GTK2 and XULRunner 1.8.x - 1.9.0.x.</li>
-      <li>Eclipse 3.5: Mozilla 1.4 GTK2 - 1.7.x GTK2 and XULRunner 1.8.x - 1.9.1.x.</li>
+      <li>Eclipse 3.0.x: Mozilla 1.4 GTK2 - 1.6 GTK2.</li>
+      <li>Eclipse 3.1.x: Mozilla 1.4 GTK2 - 1.7.8 GTK2.</li>
+      <li>Eclipse 3.2.x: Mozilla 1.4 GTK2 - 1.7.x GTK2.</li>
+      <li>Eclipse 3.3.x: Mozilla 1.4 GTK2 - 1.7.x GTK2 and XULRunner 1.8.x.</li>
+      <li>Eclipse 3.4.x: Mozilla 1.4 GTK2 - 1.7.x GTK2 and XULRunner 1.8.x - 1.9.0.x.</li>
+      <li>Eclipse 3.5.x: Mozilla 1.4 GTK2 - 1.7.x GTK2 and XULRunner 1.8.x - 1.9.1.x.</li>
       <li>Also note that a Firefox release whose contained Gecko version correlates with the mozilla versions above can also be used
       with Eclipse 3.1 and newer (Linux only), provided that it has been compiled with linkable Gecko libraries.  It is important to  
       note that Firefox downloads from mozilla.org do <em>not</em> satisfy this criteria, but Firefox installations that are
