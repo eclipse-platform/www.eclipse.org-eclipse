@@ -220,7 +220,7 @@
               "second" : "FH"
             }
           ],
-        "component" : "Drag and Drop",
+        "component" : "DND",
         "description" : "Drag and Drop issues"
       },
       { "OS" : [ { "name" : "GTK",
