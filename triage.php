@@ -76,18 +76,20 @@ function viewBugsWithSummary(desc) {
  window.location = "https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced&short_desc_type=allwordssubstr&short_desc=" + encodeURI(desc) + "&product=Platform&component=SWT&long_desc_type=allwordssubstr&long_desc=&bug_file_loc_type=allwordssubstr&bug_file_loc=&status_whiteboard_type=allwordssubstr&status_whiteboard=&keywords_type=allwords&keywords=&bug_status=NEW&bug_status=ASSIGNED&bug_status=REOPENED&emailtype1=substring&email1=&emailtype2=substring&email2=&bugidtype=include&bug_id=&votes=&chfieldfrom=&chfieldto=Now&chfieldvalue=&cmdtype=doit&order=Reuse+same+sort+as+last+time&field0-0-0=noop&type0-0-0=noop&value0-0-0=";
 }
 </script>
-<h2>SWT Bug Triage Procedure</h2>
+<h2>Background</h2>
 <p>Early in the 3.6 planning cycle, we have decided to revamp the SWT bug triage system. Up until now, our triage
 consisted of directly assigning bugs to the component owners. Over time this led to each committer owning a huge number
 of bugs which not only gives the mistaken impression that they are actively working on solving all of those bugs but also makes it
 difficult for members of the community to identify which bugs are available for contribution. The Platform UI team has changed their 
 triage process earlier in the year and we have decided to adopt their process.</p>
+<h2>Triage</h2>
 <p>The new SWT triage process is as follows:
 <ul>
 <li>Bugs come in to platform-swt-inbox@eclipse.org</li>
 <li>If the bug has sufficient information in it to proceed, the person performing the triage:
 <ul>
 <li>Prepends the component area of the bug in the Summary field.</li>
+<li>Ensures that the severity level is appropriate - enhancement requests should be marked appropriately as should blocker/critical bugs.</li>
 <li>Adds the primary component owner as the main QA contact.</li>
 <li>Adds the secondary owner to the CC field.</li>
 <li>Reassigns the bug to the swt-triaged@eclipse.org box.</li>
@@ -95,7 +97,20 @@ triage process earlier in the year and we have decided to adopt their process.</
 </li>
 <li>Committers assign the bugs that they are actively working on to themselves.</li>
 </ul>
+<h2>Bug owners</h2>
+When a person is placed as the main QA contact on a bug:
+<ul>
+<li>Verify that there is enough information to proceed on the bug and that the severity is accurate.</li>
+<li>Blocker/critical bugs need to be fixed ASAP.</li>
+<li>Regressions need to be addressed during the current development cycle (on both main and maintenance branches).</li>
+</ul>
+When a comment is made on a bug you are watching:
+<ul>
+<li>Respond on the bug if necessary.</li>
+<li>Adjust bug priority if necessary.</li>
+</ul>
 </p> 
+
 <h2>SWT Component Areas</h2>
 <table id="swtComponents" border="1">
 	
