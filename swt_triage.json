@@ -60,7 +60,7 @@
               "second" : "FH"
             }
           ],
-        "component" : "Platform Interface",
+        "component" : "PI",
         "description" : "All bugs dealing with the native library interfaces"
       },
       { "OS" : [ { "name" : "GTK",
@@ -337,8 +337,8 @@
               "owner" : "FH",
               "second" : "SSQ"
             } ],
-        "component" : "OLE/Active X",
-        "description" : "OLE/Active X issues"
+        "component" : "OLE",
+        "description" : "OLE issues"
       },
       { "OS" : [ { "name" : "GTK",
               "owner" : "GG",
@@ -401,7 +401,7 @@
               "second" : "SSQ"
             }
           ],
-        "component" : "SWT/AWT - Swing",
+        "component" : "SWT/AWT",
         "description" : "Any bug that deals with the SWT/AWT class or Swing issues"
       },
       { "OS" : [ { "name" : "GTK",
@@ -433,7 +433,7 @@
               "second" : "KB"
             }
           ],
-        "component" : "Internationalization",
+        "component" : "I18N",
         "description" : "Any internationalization issues"
       },
       { "OS" : [ { "name" : "GTK",

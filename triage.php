@@ -52,7 +52,7 @@ function buildTable(loadedJSON){
  var component = row.insertCell(0);
  var description = row.insertCell(1);
  var owner = row.insertCell(2);
- component.innerHTML = '<h3>Component</h3>';
+ component.innerHTML = '<div text-align="center"><h3>Component</h3></div>';
  description.innerHTML = "<h3>Description</h3>";
  owner.innerHTML = "<h3>Owner</h3>";
 
@@ -113,7 +113,7 @@ When a comment is made on a bug you are watching:
 </p> 
 
 <h2>SWT Component Areas</h2>
-<table id="swtComponents" border="1" align="center">
+<table id="swtComponents" border="1">
 	
 </table>
 </table>
