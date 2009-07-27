@@ -113,7 +113,7 @@ When a comment is made on a bug you are watching:
 </p> 
 
 <h2>SWT Component Areas</h2>
-<table id="swtComponents" border="1">
+<table id="swtComponents" border="1" align="center">
 	
 </table>
 </table>
