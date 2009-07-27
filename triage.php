@@ -67,7 +67,7 @@ function buildTable(loadedJSON){
 	 for (j = 0; j < components[i].OS.length; j++) {
 	 	osList += '<li>' + components[i].OS[j].name + ' - ' + components[i].OS[j].owner + ','+ components[i].OS[j].second + '</li>'; 
 	 }
-	 owner.innerHTML = '<div style="text-align: center;" id="owner"><ul>' + osList + '</ul></div>';
+	 owner.innerHTML = '<div id="owner"><ul>' + osList + '</ul></div>';
  }
 }
 
