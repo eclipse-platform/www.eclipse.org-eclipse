@@ -96,9 +96,10 @@ triage process earlier in the year and we have decided to adopt their process.</
 </ul>
 </li>
 <li>Committers assign the bugs that they are actively working on to themselves.</li>
+<li>All other bugs in the triaged inbox are considered active but are not currently being worked on. These bugs are available for anyone in the community to work on.</li>
 </ul>
 <h2>Bug owners</h2>
-When a person is placed as the main QA contact on a bug:
+If you are the main QA contact on a bug:
 <ul>
 <li>Verify that there is enough information to proceed on the bug and that the severity is accurate.</li>
 <li>Blocker/critical bugs need to be fixed ASAP.</li>
