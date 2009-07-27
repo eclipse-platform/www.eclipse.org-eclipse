@@ -61,13 +61,13 @@ function buildTable(loadedJSON){
 	 component = row.insertCell(0);
 	 description = row.insertCell(1);
 	 owner = row.insertCell(2);
-	 component.innerHTML = '<div id="component">[<a href="javascript:viewBugsWithSummary(\'[' + components[i].component + ']\')">' + components[i].component + '</a>]</div>';
+	 component.innerHTML = '<div style="text-align: center;" id="component">[<a href="javascript:viewBugsWithSummary(\'[' + components[i].component + ']\')">' + components[i].component + '</a>]</div>';
 	 description.innerHTML = components[i].description;
 	 var osList = "";
 	 for (j = 0; j < components[i].OS.length; j++) {
 	 	osList += '<li>' + components[i].OS[j].name + ' - ' + components[i].OS[j].owner + ','+ components[i].OS[j].second + '</li>'; 
 	 }
-	 owner.innerHTML = '<div id="owner"><ul>' + osList + '</ul></div>';
+	 owner.innerHTML = '<div style="text-align: center;" id="owner"><ul>' + osList + '</ul></div>';
  }
 }
 
