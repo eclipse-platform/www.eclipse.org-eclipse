@@ -15,7 +15,7 @@
 <td valign="top" style="padding: 10px">
 <h1 style="padding: 0; margin: 0; border-bottom: 1px solid #000000;">SWT Eclipse Bugzilla</h1>
 
-<p>SWT <a href="http://www.eclipse.org/swt/triage.php">bug triage</a> process.</p>
+<p>The SWT <a href="http://www.eclipse.org/swt/triage.php">bug triage</a> process.</p>
 <p>SWT bug reports are stored in the <a href="http://bugs.eclipse.org/bugs/">Eclipse Bugzilla database</a>.
 <br>Here are some useful links:</p>
 
