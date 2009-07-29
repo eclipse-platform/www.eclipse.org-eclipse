@@ -39,6 +39,18 @@ window.addEventListener("load", function() {
 		if (els[i].name == "newcc") newcc = i;
 	}
 	
+	var tdEls = document.getElementsByTagName("td");
+	var isClosed="";
+	for (var j = 0; j < tdEls.length; j++) {
+		if (tdEls[j].innerHTML == "RESOLVED" || tdEls[j].innerHTML == "VERIFIED" || tdEls[j].innerHTML == "CLOSED" ) {
+			isClosed = "true";
+			break;
+		}
+	}
+	if (isClosed == "true") return;
+	var isSWT = document.forms[1].elements[component].value;
+	if (isSWT != "SWT") return;
+
 	var addToCC = document.getElementById('addselfcc');
 	if (addToCC != null) addToCC.checked = false;
 	document.forms[1].elements[component].addEventListener('change', function() {
