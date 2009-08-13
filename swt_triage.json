@@ -223,6 +223,38 @@
         "component" : "DND",
         "description" : "Drag and Drop issues"
       },
+       { "OS" : [ { "name" : "GTK",
+              "owner" : "KB",
+              "second" : "BG"
+            },
+            { "name" : "Carbon",
+              "owner" : "KB",
+              "second" : "SSQ"
+            },
+            { "name" : "Cocoa",
+              "owner" : "KB",
+              "second" : "SSQ"
+            },
+            { "name" : "Motif",
+              "owner" : "KB",
+              "second" : "SSQ"
+            },
+            { "name" : "Photon",
+              "owner" : "RD",
+              "second" : "SSQ"
+            },
+            { "name" : "Win32",
+              "owner" : "KB",
+              "second" : "FH"
+            },
+            { "name" : "WPF",
+              "owner" : "KB",
+              "second" : "FH"
+            }
+          ],
+        "component" : "Clipboard",
+        "description" : "Clipboard issues"
+      },
       { "OS" : [ { "name" : "GTK",
               "owner" : "BG",
               "second" : "SSQ"
