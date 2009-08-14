@@ -372,6 +372,13 @@
         "component" : "OLE",
         "description" : "OLE issues"
       },
+       { "OS" : [ { "name" : "All",
+              "owner" : "FH",
+              "second" : "SSQ"
+            } ],
+        "component" : "Bidi",
+        "description" : "Bidi issues"
+      },
       { "OS" : [ { "name" : "GTK",
               "owner" : "GG",
               "second" : "SSQ"
@@ -496,7 +503,7 @@
               "owner" : "FH",
               "second" : "SSQ"
             } ],
-        "component" : "Styled Text",
+        "component" : "StyledText",
         "description" : "All Styled Text issues"
       },
       { "OS" : [ { "name" : "All",
