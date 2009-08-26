@@ -264,8 +264,8 @@
               "second" : "FH"
             },
             { "name" : "Cocoa",
-              "owner" : "GG",
-              "second" : "KB"
+              "owner" : "KB",
+              "second" : "GG"
             },
             { "name" : "Motif",
               "owner" : "BG",
