@@ -42,7 +42,18 @@ describes how to use this tool when fixing bugs or adding features to SWT for co
 	the C source for the JNI Natives and also supporting files for the tool. All files are under
 	<tt>Eclipse SWT PI/cocoa</tt> directory and if appropriate should be released into CVS.
     <p></p>
-<li>Compile the new C code.  To compile the code, right-click on the <tt>build.xml</tt> file in the
+<li>Compile the new C code.
+    <p><b> On Eclipse 3.5.1 and newer releases:</b></p>
+    To compile the code, right-click on the <tt>build.xml</tt> file in the
+    <tt>tasks</tt> directory, and choose
+	<i>"Run As -> Ant Build..."</i>. Select the JRE tab, and check "Run in the same JRE as the workspace".
+	Select the Targets tab, and check <b>build_cocoa_x86_and_ppc</b> or <b>build_cocoa_x86_64</b> according to 
+	platform you wish to target. See the instructions at the beginning of the build.xml file for more
+	information.
+	<center><img src="images/buildxml2.png" alt="build.xml"></center>
+    <p></p>
+	<p><b> On Eclipse 3.5 and older releases:</b></p> 
+	To compile the code, right-click on the <tt>build.xml</tt> file in the
     <tt>Eclipse SWT PI/cocoa/library</tt> directory, and choose
 	<i>"Run As -> Ant Build..."</i>. Select the JRE tab, and check "Run in the same JRE as the workspace".
     Select the Refresh tab, and check "Refresh resources upon completion" to refresh your workspace
