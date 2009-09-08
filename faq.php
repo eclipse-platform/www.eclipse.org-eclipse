@@ -35,6 +35,7 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
   <li><a href="#gtkstartup">What do I need to run SWT on Linux/GTK?</a></li>
   <li><a href="#osxvms">How can I decide which Eclipse/SWT port to use on OS X?</a></li>
   <li><a href="#carbonapp">On Mac Carbon, how do I run an SWT application from the command line?</a></li>
+  <li><a href="#cocoa32launch">Why do I get an UnsatisfiedLinkError when launching from the 32-bit Cocoa or Carbon port?</a></li>
   <li><a href="#cocoa64launch">Why do I get an UnsatisfiedLinkError when launching from the 64-bit Cocoa port?</a></li>
   <li><a href="#javawebstart">How can I deploy my standalone SWT application with Java Web Start?</a></li>
   <li><a href="#pocketpcstart">What do I need to do to run SWT on the PocketPC?</a></li>
@@ -429,6 +430,12 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
 	
       <p>If you want to run a bundled application, take a look at this
       <a href="http://www.eclipse.org/swt/macosx/">article</a>.</p>
+  </dd>
+
+  <dt><strong><a name="cocoa32launch">Q: Why do I get an UnsatisfiedLinkError when launching from the 32-bit Cocoa or Carbon port?</a></strong></dt>
+  <dd>A: You need to be sure that you are forcing your launch to use a 32-bit VM. Apple ships most of their VMs with 32 and
+  	  64-bit binaries. To force the VM to run in 32-bit mode, use the -d32 option as VM argument in your launch configuration.
+  	  Note that as of Snow Leopard (OS X v10.6) the default VM is 64-bit.
   </dd>
 
   <dt><strong><a name="cocoa64launch">Q: Why do I get an UnsatisfiedLinkError when launching from the 64-bit Cocoa port?</a></strong></dt>
