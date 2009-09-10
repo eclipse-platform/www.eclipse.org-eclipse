@@ -496,6 +496,7 @@ create a snippet contribution report in Bugzilla</a>. Thanks in advance for your
         <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet217.java">embed controls in StyledText</a></li>        
         <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet222.java">use bulleted lists in StyledText</a></li>        
         <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet218.java">use gradient background in StyledText</a></li>        
+        <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet325.java">variable tab stops in StyledText</a></li>
       </ul>
       <p></p>
 
