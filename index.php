@@ -64,8 +64,8 @@ Whatever the reason, you will find many resources here. Enjoy!</p>
   <ul>
 <!--
   <li><a href="R3_5/plan.html">3.5 Development Plan</a></li>
-  <li><a href="R3_5/new_and_noteworthy.html">New and Noteworthy</a></li>
 -->
+  <li><a href="R3_6/new_and_noteworthy.html">New and Noteworthy</a></li>
 
   </ul>
   </table>
