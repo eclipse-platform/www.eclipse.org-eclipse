@@ -1023,11 +1023,49 @@ the SWT.CENTER style when creating a composite.
   </dd>
 
   <dt><strong><a name="specifyxulrunner">Q: Can I specify which XULRunner installation gets used?</a></strong></dt>
-  <dd>A: Typically a Mozilla-based Browser uses XULRunner's lookup mechanism to find a registered XULRunner at runtime.
-    If you wish to override this mechanism you can set the value of java system property
-    <code>org.eclipse.swt.browser.XULRunnerPath</code> to point at the target XULRunner's path.  This property must be set
-    before the <em>first</em> Browser instance is created (for example, it can be set when launching the eclipse executable
-    by adding switch <code>-vmargs -Dorg.eclipse.swt.browser.XULRunnerPath=...</code>).
+  <dd>A: Typically a Mozilla-based Browser uses XULRunner's lookup mechanism to find a registered XULRunner at runtime,
+    in which case a XULRunner location does not need to be specified.  However if you wish to override this mechanism you
+    can set the value of java system property <code>org.eclipse.swt.browser.XULRunnerPath</code> to point at an alternate
+    XULRunner's path.  This property must be set before the <em>first</em> Browser instance is created.
+    <p>The best opportunity for a user to set this property is by launching the eclipse executable with a <code>-D</code>
+    switch (eg.- <code>./eclipse -vmargs -Dorg.eclipse.swt.browser.XULRunnerPath=...</code>).
+    <p>An alternate approach that an eclipse application may use is to provide a <code>XULRunnerInitializer</code>
+    implementation that sets this property.  This implementation will be invoked when the first Mozilla-based Browser
+    is about to be created.  The steps to do this are:
+    <ul>
+      <li>Create a fragment with host plug-in <code>org.eclipse.swt</code>.</li>
+      <li>In this fragment create class <code>org.eclipse.swt.browser.XULRunnerInitializer</code>.</li>
+      <li>Implement a static initializer in this class that sets the <code>org.eclipse.swt.browser.XULRunnerPath</code> property.
+      As an example, the class below will set the property to the win32 xulrunner plug-in if it is present.
+      <pre>
+package org.eclipse.swt.browser;
+
+import java.io.*;
+import java.net.*;
+import org.eclipse.core.runtime.*;
+import org.osgi.framework.Bundle;
+
+public class XULRunnerInitializer {
+    static {
+        Bundle bundle = Platform.getBundle("org.mozilla.xulrunner.win32.win32.x86"); //$NON-NLS-1$
+        if (bundle != null) {
+            URL resourceUrl = bundle.getResource("xulrunner"); //$NON-NLS-1$
+            if (resourceUrl != null) {
+                try {
+                    URL fileUrl = FileLocator.toFileURL(resourceUrl);
+                    File file = new File(fileUrl.toURI());
+                    System.setProperty("org.eclipse.swt.browser.XULRunnerPath",file.getAbsolutePath()); //$NON-NLS-1$
+                } catch (IOException e) {
+                    // log the exception
+                } catch (URISyntaxException e) {
+                    // log the exception
+                }
+            }
+        }
+    }
+}
+      </pre></li>
+    </ul> 
   </dd>
 
   <dt><strong><a name="howdetectmozilla">Q: How does the Browser detect a native Mozilla browser to use?</a></strong></dt>
@@ -1036,7 +1074,7 @@ the SWT.CENTER style when creating a composite.
       <li>If Java property <code>org.eclipse.swt.browser.XULRunnerPath</code> is defined then use it (see <a href="#specifyxulrunner">Can I specify which XULRunner installation is used?</a>).
       <li>Attempt to detect an OS-registered XULRunner with version 1.8.1.2 or newer (in order to enable JavaXPCOM use).
       <li>Attempt to detect an OS-registered XULRunner with a version earlier than 1.8.1.2.
-      <li><em>(if running on Linux and the Browser's style is <code>SWT.NONE</code>)</em> Attempt to use the native browser pointed at by OS environment variable <code>MOZILLA_FIVE_HOME</code>, which may be any of
+      <li><em>(if running on Linux or Solaris, and the Browser's style is <code>SWT.NONE</code>)</em> Attempt to use the native browser pointed at by OS environment variable <code>MOZILLA_FIVE_HOME</code>, which may be any of
         the browsers listed <a href="#browserlinux">here</a>.  Note that if this environment variable is not set when eclipse is run then on linux the eclipse launcher will try to set it by checking various
         potential installation locations.
       <li>At this point a native Mozilla browser could not be found, so an <code>SWTError</code> is thrown from the constructor, which should be caught and handled by the application.  Subsequent attempts to
@@ -1112,7 +1150,7 @@ public class DisplayMozillaVersion {
   <br>
   <ul>
     <li>Windows (Internet Explorer 5 and above)</li>
-    <li>Mac (Panther OS X 10.3 and above. Safari-based)</li>
+    <li>Mac (OS X 10.4 and above. Safari-based)</li>
     <li>Linux GTK and Linux Motif (XULRunner-1.8.0.1 and above, Firefox 1.0 and above, Mozilla 1.4 GTK2 and above)
     <br>The following Linux distributions meet the Mozilla/Firefox requirements for using the Browser widget:
     <ul>
@@ -1120,7 +1158,8 @@ public class DisplayMozillaVersion {
     	<li>SuSE 9</li>
     </ul>
     Older Linux distributions may require a supported version of Mozilla to be installed. (<a href="#browserlinux">instructions</a>)
-    <li>Solaris-x86 (Firefox 1.0 and above, Mozilla 1.7 GTK2 and above)</li>
+    <li>Solaris-x86 (as of Eclipse/SWT 3.5.1) (Firefox 1.0 and above, Mozilla 1.7 GTK2 and above)</li>
+    <li>Solaris 10 SPARC (as of Eclipse/SWT 3.6)</li>
     <li>Photon</li>
   </ul>
   </dd>
@@ -1148,16 +1187,10 @@ public class DisplayMozillaVersion {
     	<li>RedHat Enterprise Linux 3</li>
     	<li>Suse 9</li>
     </ul>
-    <br>The following Linux distributions meet the Firefox requirements for using the Browser widget.
-    <ul>
-    	<li>RedHat Enterprise Linux 4
-  		<br>Note that you may need to set the environment variable MOZILLA_FIVE_HOME to the folder containing your Firefox install. e.g.
-  			<code>setenv MOZILLA_FIVE_HOME /usr/lib/firefox-1.0.4</code></li>
-    </ul>
     <br>If you use the IBM 1.4 VM <a href="#browserlinuxibm">check this.</a>
     <br>
-	<br>If you are running with eclipse 3.2.1 or newer then you can just run eclipse and it will attempt to detect a browser on your system to use.
-		If it fails to find one then you will need to download and install a GRE such as Mozilla, as outlined below:
+	<br>As of Eclipse 3.2.1 the eclipse launcher attempts to detect a browser on your system to use.  If it fails to find one then you
+	will need to download and install a GRE such as Mozilla, as outlined below:
   <ol>
   	<li>If you are using Eclipse 3.0, download the Mozilla 1.6 Xft and GTK2 build from <a href="http://www.mozilla.org/releases/#1.6">Mozilla.org</a>. If you are using Eclipse 3.1 or newer, you can choose to use a more recent
   	Mozilla 1.7.x GTK2 from <a href="http://www.mozilla.org/releases/">Mozilla.org</a>.</li>
