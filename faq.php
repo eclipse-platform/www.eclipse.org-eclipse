@@ -68,6 +68,7 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
   <li><a href="#autotest">How can I implement user interaction tests?</a></li>
   <li><a href="#gtkselectiongone">On gtk, why does my widget's selection disappear when it loses focus?</a></li>
   <li><a href="#gtkwidgethidden">On gtk and motif, why are some widgets hidden when they are visible on Windows or the Macintosh?</a></li>
+  <li><a href="#advancedgraphics">Which platforms have advanced graphics support?</a></li>
   <p></p>
   <li><a href="#whatisbrowser">What is the SWT Browser widget?</a></li>
   <li><a href="#howusemozilla">How do I use Mozilla as the Browser's underlying renderer?</a></li>
@@ -384,25 +385,14 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
   </dd>
   
   <dt><strong><a name="gtkstartup">Q: What do I need to run SWT on Linux/GTK?</a></strong></dt>
-  <dd>A: SWT requires the following libraries with the specified versions or later:
-    <p>For Eclipse 3.0 and newer:</p>
+  <dd>A: SWT requires the following GTK+ versions (or newer) to be installed:
     <ul>
-      <li>GTK 2.2.1</li>
-      <li>ATK 1.2.0</li>
-      <li>glib 2.2.1</li>
-      <li>Pango 1.2.1</li>
-      <li>Freetype 2.1.3</li>
-    </ul>
-    <p>For Eclipse 2.1:</p>
-    <ul>
-      <li>GTK 2.0.6</li>
-      <li>ATK 1.0.1</li>
-      <li>glib 2.0.4</li>
-      <li>Pango 1.0.3</li>
-      <li>Freetype 2.1.2</li>
+      <li>Eclipse/SWT 3.6.x and newer: GTK+ 2.4.1 and its dependencies</li>
+      <li>Eclipse/SWT 3.0.x - 3.5.x: GTK+ 2.2.1 and its dependencies</li>
+      <li>Eclipse/SWT 2.1.x: GTK+ 2.0.6 and its dependencies</li>
     </ul>
     <p>
-    You can determine which version of GTK you are running using <tt>rpm -q gtk2</tt>.
+    You can determine which version of GTK you are running with <tt>rpm -q gtk2</tt>.
     </p>
   </dd>
 
@@ -994,6 +984,17 @@ the same value as SWT.EMBEDDED which is used to embed widgets from
 other widget toolkits into SWT.  On some operating systems (GTK, Motif), this 
 may cause the children of this compostite to be obscured.  Do not use
 the SWT.CENTER style when creating a composite.
+  </dd>
+
+    <dt><strong><a name="advancedgraphics">Q: Which platforms have advanced graphics support?</a></strong></dt>
+  <dd>A:
+  <ul>
+    <li>SWT for Windows uses GDI+ for advanced graphics, which is installed on Windows XP and newer.
+    Windows 2000 users can download and install a Microsoft package containing GDI+.</li>
+    <li>SWT for GTK+ and Motif use Cairo for advanced graphics, which is installed on systems with GTK+ 2.8 or newer
+    (for example RHEL 5).</li>
+    <li>SWT for OS X uses Quartz for advanced graphics, which is installed on all supported OS X versions.</li>
+  </ul>
   </dd>
 
   <dt><strong><a name="whatisbrowser">Q: What is the SWT Browser widget?</a></strong></dt>
