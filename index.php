@@ -62,9 +62,7 @@ Whatever the reason, you will find many resources here. Enjoy!</p>
       <a href="http://download.eclipse.org/eclipse/downloads/drops/S-3.6M1-200908061400/index.php#swt" target="_top">more...</a><br>
       <small>3.6 Milestone 1 Release - <span style="white-space: nowrap;">6 August 2009</span></small><br>
   <ul>
-<!--
-  <li><a href="R3_5/plan.html">3.5 Development Plan</a></li>
--->
+  <li><a href="R3_6/plan.html">3.6 Development Plan</a></li>
   <li><a href="R3_6/new_and_noteworthy.html">New and Noteworthy</a></li>
 
   </ul>
