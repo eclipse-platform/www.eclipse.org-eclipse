@@ -46,7 +46,6 @@ Whatever the reason, you will find many resources here. Enjoy!</p>
       <a href="http://download.eclipse.org/eclipse/downloads/drops/R-3.5-200906111540/index.php#swt" target="_top">more...</a><br>
       <small>3.5 Final Release - <span style="white-space: nowrap;">12 June 2009</span></small><br>
   <ul>
-  <li><a href="R3_5/plan.html">3.5 Development Plan</a></li>
   <li><a href="R3_5/new_and_noteworthy.html">New and Noteworthy</a></li>
   <li><a href="language.php">Language Pack</a></li>
   </ul>
@@ -133,6 +132,10 @@ bugzilla email preferences.</p>
 </table>
 
 <ul>
+<li><a href="http://download.eclipse.org/eclipse/downloads/drops/R-3.4.2-200902111700/index.php#swt" target="_top">SWT 3.4.2</a>, 13 February 2009.</li>
+    <ul>
+    <li><a href="R3_4/new_and_noteworthy.html">New and Noteworthy</a> items for each milestone</li>
+    </ul>
 <li><a href="http://archive.eclipse.org/eclipse/downloads/drops/R-3.3.2-200802211800/index.php#swt" target="_top">SWT 3.3.2</a>, 22 February 2008.</li>
     <ul>
     <li><a href="R3_3/new_and_noteworthy.html">New and Noteworthy</a> items for each milestone</li>
