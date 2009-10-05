@@ -28,6 +28,11 @@
 		<jar href="swt-win32-windows-x86_64.jar" />
 	</resources>
 
+	<resources os="Windows" arch="amd64">
+		<j2se version="1.4+" />
+		<jar href="swt-win32-windows-x86_64.jar" />
+	</resources>
+
 	<resources os="Linux" arch="ppc">
 		<j2se version="1.4+" />
 		<jar href="swt-gtk-linux-ppc.jar" />
