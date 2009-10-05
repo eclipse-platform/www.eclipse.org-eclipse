@@ -66,8 +66,18 @@ The example .jnlp file below demonstrates how to specify the SWT jars based on t
 	&lt;/resources&gt;
 
 	&lt;resources os="Windows" arch="x86"&gt;
-		&lt;nativelib href="swt-native-win32-win32.jar" /&gt;
-		&lt;jar href="swt-win32-win32.jar" /&gt;
+		&lt;nativelib href="swt-native-win32-windows-x86.jar" /&gt;
+		&lt;jar href="swt-win32-windows-x86.jar" /&gt;
+	&lt;/resources&gt;
+
+	&lt;resources os="Windows" arch="x86_64"&gt;
+		&lt;nativelib href="swt-native-win32-windows-x86_64.jar" /&gt;
+		&lt;jar href="swt-win32-windows-x86_64.jar" /&gt;
+	&lt;/resources&gt;
+
+	&lt;resources os="Windows" arch="amd64"&gt;
+		&lt;nativelib href="swt-native-win32-windows-amd64.jar" /&gt;
+		&lt;jar href="swt-win32-windows-x86_64.jar" /&gt;
 	&lt;/resources&gt;
 
 	&lt;resources os="Linux" arch="ppc"&gt;
@@ -85,9 +95,19 @@ The example .jnlp file below demonstrates how to specify the SWT jars based on t
 		&lt;jar href="swt-gtk-linux-x86_64.jar" /&gt;
 	&lt;/resources&gt;
 
+	&lt;resources os="Linux"&gt;
+		&lt;nativelib href="swt-native-gtk-linux-x86.jar" /&gt;
+		&lt;jar href="swt-gtk-linux-x86.jar" /&gt;
+	&lt;/resources&gt;
+
 	&lt;resources os="SunOS" arch="sparc"&gt;
 		&lt;nativelib href="swt-native-gtk-solaris-sparc.jar" /&gt;
 		&lt;jar href="swt-gtk-solaris-sparc.jar" /&gt;
+	&lt;/resources&gt;
+
+	&lt;resources os="SunOS" arch="x86"&gt;
+		&lt;nativelib href="swt-native-gtk-solaris-x86.jar" /&gt;
+		&lt;jar href="swt-gtk-solaris-x86.jar" /&gt;
 	&lt;/resources&gt;
 
 	&lt;application-desc main-class="org.eclipse.swt.examples.controlexample.ControlExample" /&gt;
