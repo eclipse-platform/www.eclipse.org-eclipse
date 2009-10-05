@@ -20,7 +20,7 @@
 
 	<resources os="Windows" arch="x86">
 		<j2se version="1.4+" />
-		<jar href="swt-win32-win32.jar" />
+		<jar href="swt-win32-windows.jar" />
 	</resources>
 
 	<resources os="Linux" arch="ppc">
