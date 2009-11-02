@@ -15,6 +15,7 @@
 <ul>
 	<li><a href="#m1">Milestone M1</a></li>
 	<li><a href="#m2">Milestone M2</a></li>
+	<li><a href="#m3">Milestone M3</a></li>
 </ul>
 
 
@@ -108,6 +109,104 @@
     <td colspan="2"> <hr /> </td>
   </tr>
 </table>
+
+<h2><font face="Verdana"><a name=m3>Milestone M3</a></font></h2>
+
+<table border="0" width="80%" cellpadding="10" cellspacing="0">
+  <tr> 
+    <td colspan="2"> <hr> </td>
+  </tr>
+  <tr> 
+    <td width="30%" valign="top" align="left">
+      <b>StyledText: per line variable tab stops</b>
+    </td>
+    <td width="70%" valign="top">
+      Improved current support to allow each line to have its own sequence of tab stops.
+      <p><img src="images/variable-tab-stops.png" alt="Icon support"></p>
+    </td> 
+  </tr>
+  <tr>
+    <td colspan="2"><hr />
+    </td>
+  </tr>
+
+  <tr> 
+    <td width="30%" valign="top" align="left"><b>CLabel set/get margins</b></td>
+    <td width="70%" valign="top">New API has been added to CLabel to set and get the left, top, right and bottom margin spacing.
+    </td> 
+  </tr>
+  <tr>
+    <td colspan="2"><hr />
+    </td>
+  </tr>
+
+  <tr> 
+    <td width="30%" valign="top" align="left">
+      <b>Key location</b>
+    </td>
+    <td width="70%" valign="top">
+      A new field has been added to key event to allow the application to identify which key originated the event.
+      See <code>Event.keyLocation</code>.
+    </td> 
+  </tr>
+  <tr>
+    <td colspan="2"><hr />
+    </td>
+  </tr>
+
+  <tr> 
+    <td width="30%" valign="top" align="left">
+      <b>New API in Scrollbar</b>
+    </td>
+    <td width="70%" valign="top">
+      New methods have been added to Scrollbar to return the bounds for the thumb and its track.
+      See <code>ScrollBar.getThumbBounds()</code> and <code>ScrollBar.getThumbTrackBounds()</code>.
+    </td> 
+  </tr>
+  <tr>
+    <td colspan="2"><hr />
+    </td>
+  </tr>
+
+  <tr> 
+    <td width="30%" valign="top" align="left">
+      <b>State mask for Selection events</b>
+    </td>
+    <td width="70%" valign="top">
+	The stateMask is now set in Selection and DefaultSelection events for all native controls.
+    </td> 
+  </tr>
+  <tr>
+    <td colspan="2"><hr />
+    </td>
+  </tr>
+
+  <tr> 
+    <td width="30%" valign="top" align="left">
+      <b>Orientation event</b>
+    </td>
+    <td width="70%" valign="top">
+	A new event has been added to Text, Combo, and StyledText. It is sent when the writing direction is changed via keyboard shortcut.
+        See <code>SWT.OrientationChanged</code>
+    </td> 
+  </tr>
+  <tr>
+    <td colspan="2"><hr />
+    </td>
+  </tr>
+  
+  <tr> 
+    <td width="30%" valign="top" align="left"><b>Browser.setUrl() can specify post data and headers</b></td>
+    <td width="70%" valign="top">New Browser API <code>setUrl(String url, String postData, String[] headers)</code> allows clients
+      to include post data and add/override header values when initiating HTTP requests.  See
+      <a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet330.java">Snippet 330</a>.
+    </td> 
+  </tr>
+  <tr> 
+    <td colspan="2"> <hr /> </td>
+  </tr>
+</table>
+
 
 </body>
 </html>
