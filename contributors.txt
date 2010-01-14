@@ -74,3 +74,4 @@ Andrew Overholt - Bug 226356
 Mikhail Kalugin - Bugs 232686, 232685
 Ryan Wilhm - Bug 253065
 M. Heinzmann - Bug 245278
+Semyon Koptelov - Bug 286040
