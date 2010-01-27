@@ -1174,7 +1174,8 @@ public class DisplayMozillaVersion {
       <li>Eclipse 3.2.x: Mozilla 1.4 GTK2 - 1.7.x GTK2.</li>
       <li>Eclipse 3.3.x: Mozilla 1.4 GTK2 - 1.7.x GTK2 and XULRunner 1.8.x.</li>
       <li>Eclipse 3.4.x: Mozilla 1.4 GTK2 - 1.7.x GTK2 and XULRunner 1.8.x - 1.9.0.x.</li>
-      <li>Eclipse 3.5.x: Mozilla 1.4 GTK2 - 1.7.x GTK2 and XULRunner 1.8.x - 1.9.1.x.</li>
+      <li>Eclipse 3.5.0: Mozilla 1.4 GTK2 - 1.7.x GTK2 and XULRunner 1.8.x - 1.9.1.x.</li>
+      <li>Eclipse 3.5.2: Mozilla 1.4 GTK2 - 1.7.x GTK2 and XULRunner 1.8.x - 1.9.2.x.</li>
       <li>Also note that a Firefox release whose contained Gecko version correlates with the Mozilla versions above can also be used
       with Eclipse 3.1 and newer (Linux only), provided that it has been compiled with linkable Gecko libraries.  It is important to  
       note that Firefox downloads from mozilla.org do <em>not</em> satisfy this criteria, but Firefox installations that are
