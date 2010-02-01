@@ -16,6 +16,8 @@
 	<li><a href="#m1">Milestone M1</a></li>
 	<li><a href="#m2">Milestone M2</a></li>
 	<li><a href="#m3">Milestone M3</a></li>
+	<li><a href="#m4">Milestone M4</a></li>
+	<li><a href="#m5">Milestone M5</a></li>
 </ul>
 
 
@@ -205,6 +207,175 @@
   <tr> 
     <td colspan="2"> <hr /> </td>
   </tr>
+</table>
+
+
+<h2><font face="Verdana"><a name=m4>Milestone M4</a></font></h2>
+
+<table border="0" width="80%" cellpadding="10" cellspacing="0">
+  <tr> 
+    <td colspan="2"> <hr> </td>
+  </tr>
+ <tr> 
+    <td width="30%" valign="top" align="left">
+      <b>SWT for PowerPC 64</b>
+    </td>
+    <td width="70%" valign="top">
+     PowerPC 64 has joined the lineup of supported configurations for which SWT and Eclipse are routinely built.
+    </td> 
+  </tr>
+  <tr>
+    <td colspan="2"><hr />
+    </td>
+  </tr>
+
+  <tr> 
+    <td width="30%" valign="top" align="left">
+      <b>Wrap indent in StyledText</b>
+    </td>
+    <td width="70%" valign="top">
+      StyledText and TextLayout now offer API to allow the application to control the amount of indent space for wrapped lines.
+      See <a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet331.java">Snippet 331</a>.
+      <p><img src="images/wrapindent.PNG" alt="Wrap Indent"></p>
+    </td> 
+  </tr>
+  <tr>
+    <td colspan="2"><hr />
+    </td>
+  </tr>
+
+  <tr> 
+    <td width="30%" valign="top" align="left">
+      <b>Improved bidi segments support</b>
+    </td>
+    <td width="70%" valign="top">
+      The bidi segments support in StyledText and TextLayout was changed to allow the application to specify which Unicode Control Characters to use in the segments boundaries.
+      See <a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet332.java">Snippet 332</a>.
+      <p><img src="images/segmentsChars.PNG" alt="Improved Bidi Segments support"></p>
+    </td> 
+
+  </tr>
+  <tr>
+    <td colspan="2"><hr />
+    </td>
+  </tr>
+
+  <tr> 
+    <td width="30%" valign="top" align="left">
+      <b>Right-to-Left text support on Cocoa</b>
+    </td>
+    <td width="70%" valign="top">
+      On Cocoa, setting the <code>SWT.RIGHT_TO_LEFT</code> flag changes the default text reading direction to right to left. 
+      <p><img src="images/cocoartl.PNG" alt="Right-to-Left text support on Cocoa"></p>
+    </td> 
+  </tr>
+  <tr>
+    <td colspan="2"><hr />
+    </td>
+  </tr>
+
+  <tr> 
+    <td width="30%" valign="top" align="left">
+      <b>Skin engine support</b>
+    </td>
+    <td width="70%" valign="top">
+      New API added to allow CSS engines to skin widgets at the appropriate time (See <code>SWT.Skin</code> and <code>Widget#reskin(int)</code>). For more info see <a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet333.java">Snippet 333</a>. 
+
+    </td> 
+  </tr>
+  <tr>
+    <td colspan="2"><hr />
+    </td>
+  </tr>
+
+  <tr> 
+    <td width="30%" valign="top" align="left">
+      <b>New layout API</b>
+    </td>
+    <td width="70%" valign="top">
+	New API added to <code>Composite</code> to support automatic deferred layout.
+        See <code>Composite#layout(Control[], int)</code>.
+    </td> 
+  </tr>
+  <tr>
+    <td colspan="2"><hr />
+    </td>
+  </tr>
+  
+  <tr> 
+    <td width="30%" valign="top" align="left">
+      <b>Browser.setText() can restrict content permissions</b>
+    </td>
+    <td width="70%" valign="top">
+        New Browser API <code>setText(String html, boolean trusted)</code> allows clients to restrict the permissions
+        that are given to Browser content that is set from a String.  Restricting permissions is suggested when the
+        source of the content is not trusted.
+    </td> 
+  </tr>
+  <tr>
+    <td colspan="2"><hr />
+    </td>
+  </tr>
+</table>
+
+<h2><font face="Verdana"><a name=m5>Milestone M5</a></font></h2>
+
+<table border="0" width="80%" cellpadding="10" cellspacing="0">
+  <tr> 
+    <td colspan="2"> <hr> </td>
+  </tr>
+ <tr> 
+    <td width="30%" valign="top" align="left">
+      <b>Accessibility upgrade (preview)</b>
+    </td>
+    <td width="70%" valign="top">
+    <p>SWT Accessibility has new API for making applications more accessible to Assistive Technology products such as screen readers. Note that this API is still early access. <a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet334.java">Snippet 334</a> shows a simple custom text control with enhanced text accessibility.</p>
+</td> 
+  </tr>
+  <tr>
+    <td colspan="2"><hr />
+    </td>
+  </tr>
+
+  <tr> 
+    <td width="30%" valign="top" align="left">
+      <b>SWT.OpenDoc Event</b>
+    </td>
+    <td width="70%" valign="top">
+    <p>A new event type has been added to SWT to notify applications that a document should be opened. Listeners for OpenDoc events can be added to a &nbsp;Display.</p>
+    <p>Support has also been added to the Equinox launcher, and the Eclipse workbench. Users are now able to associate file types to Eclipse and have Eclipse launched when they open a file of an associated type.</p> 
+    </td> 
+  </tr>
+  <tr>
+    <td colspan="2"><hr />
+    </td>
+  </tr>
+
+ <tr> 
+    <td width="30%" valign="top" align="left">
+      <b>Program working directory</b>
+    </td>
+    <td width="70%" valign="top">
+    <p>New API has been added to Program to allow the working directory to be specified when launching an executable. See <code>Program.launch(String fileName, String workingDir)</code> for more details.</p> 
+    </td> 
+  </tr>
+  <tr>
+    <td colspan="2"><hr />
+    </td>
+  </tr>
+ 
+ <tr> 
+    <td width="30%" valign="top" align="left">
+      <b>XULRunner 1.9.2 support</b>
+    </td>
+    <td width="70%" valign="top">
+    <p>The Browser now has full support for the recent release of XULRunner 1.9.2.</p>
+    </td> 
+  </tr>
+  <tr>
+    <td colspan="2"><hr />
+    </td>
+  </tr> 
 </table>
 
 
