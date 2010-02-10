@@ -579,6 +579,12 @@ create a snippet contribution report in Bugzilla</a>. Thanks in advance for your
         <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet149.java">place a progress bar in a table</a></li>
       </ul>
       <p></p>
+      
+    <li><a name="tray"><b>TaskBar, TaskBarItem</b></a>
+      <ul>
+        <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet336.java">customize the taskbar item with progress indicator, overlay image, and overlay text</a></li>
+      </ul>
+      <p></p>
 
     <li><a name="text"><b>Text</b></a>
       <ul>
