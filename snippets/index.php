@@ -580,7 +580,7 @@ create a snippet contribution report in Bugzilla</a>. Thanks in advance for your
       </ul>
       <p></p>
       
-    <li><a name="tray"><b>TaskBar, TaskBarItem</b></a>
+    <li><a name="taskbar"><b>TaskBar, TaskBarItem</b></a>
       <ul>
         <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet336.java">customize the taskbar item with progress indicator, overlay image, and overlay text</a></li>
       </ul>
