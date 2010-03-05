@@ -156,7 +156,7 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
   <dd>A: SWT itself does not provide a GUI Builder (also known as "GUI Designer", "GUI Editor",
   "Visual Builder", "Visual Designer", "Visual Editor", or "Visual Composition Editor").
   There are, however, several mature 'third-party' products listed at
-  <a href="http://marketplace.eclipse.org/">http://marketplace.eclipse.org/</a> Search for "GUI Builder".
+  <a href="http://marketplace.eclipse.org/">http://marketplace.eclipse.org/</a>. Search for "GUI Builder".
   Or you can follow the progress on the <a href="http://www.eclipse.org/vep/">Eclipse Visual Editor Project</a>.
   </dd>
 
