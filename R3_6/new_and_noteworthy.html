@@ -18,6 +18,7 @@
 	<li><a href="#m3">Milestone M3</a></li>
 	<li><a href="#m4">Milestone M4</a></li>
 	<li><a href="#m5">Milestone M5</a></li>
+	<li><a href="#m6">Milestone M6</a></li>
 </ul>
 
 
@@ -378,6 +379,156 @@
   </tr> 
 </table>
 
+<h2><font face="Verdana"><a name=m6>Milestone M6</a></font></h2>
+
+<table border="0" width="80%" cellpadding="10" cellspacing="0">
+  <tr> 
+    <td colspan="2"> <hr> </td>
+  </tr>
+
+  <tr> 
+    <td width="30%" valign="top" align="left">
+      <b>TaskItem Overlay Image</b>
+    </td>
+    <td width="70%" valign="top">
+      <p>The new API <code>TaskItem#setOverlayImage(Image)</code> allows clients to set an image to be displayed on top of application button in the taskbar.
+      See <a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet336.java">Snippet 336</a> for an example.
+      </p>
+      <p><img src="images/overlayimage.png" alt="Overlay Image"></p>
+    </td> 
+  </tr>
+  <tr>
+    <td colspan="2"><hr />
+    </td>
+  </tr>
+
+
+
+  <tr> 
+    <td width="30%" valign="top" align="left">
+      <b>TaskItem Overlay Text</b>
+    </td>
+    <td width="70%" valign="top">
+      <p>The new API <code>TaskItem#setOverlayText(String)</code> allows clients to set a short text to be displayed on top of application button in the taskbar.
+      See <a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet336.java">Snippet 336</a> for an example. 
+      </p>
+      <p><img src="images/overlaytext.png" alt="Overlay Text"></p>
+    </td> 
+  </tr>
+  <tr>
+    <td colspan="2"><hr />
+    </td>
+  </tr>
+
+  <tr> 
+    <td width="30%" valign="top" align="left">
+      <b>TaskItem Progress</b>
+    </td>
+    <td width="70%" valign="top">
+      <p>The new APIs <code>TaskItem#setProgress(int)</code> and <code>TaskItem#setProgressState(int)</code> allows clients to show progress indication in the application button in the taskbar.
+      See <a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet336.java">Snippet 336</a> for an example.
+      </p>
+      <p><img src="images/progress.png" alt="Progress"></p>
+    </td> 
+  </tr>
+  <tr>
+    <td colspan="2"><hr />
+    </td>
+  </tr>
+
+  <tr> 
+    <td width="30%" valign="top" align="left">
+      <b>TaskItem Menu</b>
+    </td>
+    <td width="70%" valign="top">
+      <p>The new API <code>TaskItem#setMenu(Menu)</code> allows clients to specify a menu for the application button in the taskbar.
+      </p>
+      Running on Windows 7:<br> 
+     <p><img src="images/menu-win32.png" alt="Menu on Windows"></p>
+      Running on Mac OS X:<br> 
+     <p><img src="images/menu-mac.png" alt="Menu on Mac"></p>
+    </td> 
+  </tr>
+  <tr>
+    <td colspan="2"><hr />
+    </td>
+  </tr>
+
+  <tr> 
+    <td width="30%" valign="top" align="left">
+      <b>CTabFolder Renderer</b>
+    </td>
+    <td width="70%" valign="top">
+      <p>CTabFolder has been improved and now allows clients to change its look by implementing their own renderers.
+      </p>
+	<p><img src="images/newctab.png" alt="New CTabFolder"></p>
+    </td> 
+  </tr>
+  <tr>
+    <td colspan="2"><hr />
+    </td>
+  </tr>
+
+  <tr> 
+    <td width="30%" valign="top" align="left">
+      <b>Gradients on CTabFolder unselected tabs</b>
+    </td>
+    <td width="70%" valign="top">
+      <p>New API has been added to CTabFolder to allow a gradient background on unselected tabs. See 
+<a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet339.java">Snippet 339</a> for more info.
+      </p>
+	<p><img src="images/gradient.png" alt="Gradient on CTabFolder"></p>
+    </td> 
+  </tr>
+  <tr>
+    <td colspan="2"><hr />
+    </td>
+  </tr>
+
+ <tr> 
+    <td width="30%" valign="top" align="left">
+      <b>Accessibility</b>
+    </td>
+    <td width="70%" valign="top">
+      <p>The enhanced Accessibility API on all platforms has been finalized and released.
+      </p>
+    </td> 
+  </tr>
+  <tr>
+    <td colspan="2"><hr />
+    </td>
+  </tr>
+
+  <tr> 	
+    <td width="30%" valign="top" align="left">
+      <b>Custom Traversals</b>
+    </td>
+    <td width="70%" valign="top">
+      <p>New API <code>Control.traverse(int, event)</code> enables clients to request that a customized traversal be performed.  For an example of this see
+        <a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet338.java">Snippet 338</a>.
+      </p>
+    </td> 
+  </tr>
+  <tr>
+    <td colspan="2"><hr />
+    </td>
+  </tr>
+
+  <tr> 
+    <td width="30%" valign="top" align="left">
+      <b>DrawBackground at an offset</b>
+    </td>
+    <td width="70%" valign="top">
+      <p>New API was added in <code>Composite.drawBackground</code> that allows for drawing of a parent background at an offset specified by the child. This
+	is useful for aligning patterns between the parent and child when dealing with non-rectangular shapes. 
+      </p>
+    </td> 
+  </tr>
+  <tr>
+    <td colspan="2"><hr />
+    </td>
+  </tr>
+</table>
 
 </body>
 </html>
