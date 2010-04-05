@@ -14,17 +14,21 @@
         "id" : "BG",
         "name" : "Bogdan"
       },
-      { "email" : "krbarnes@ca.ibm.com",
-        "id" : "KB",
-        "name" : "Kevin"
+      { "email" : "pinnamur@in.ibm.com",
+        "id" : "PV",
+        "name" : "Praveen"
       },
       { "email" : "felipe_heidrich@ca.ibm.com",
         "id" : "FH",
         "name" : "Felipe"
       },
-      { "email" : "skovatch@adobe.com",
+      { "email" : "s.kovatch@us.ibm.com",
         "id" : "SK",
         "name" : "Scott"
+      },
+      { "email" : "lshanmug@in.ibm.com",
+        "id" : "LS",
+        "name" : "Lakshmi"
       },
       { "email" : "rdowdall@qnx.com",
         "id" : "RD",
@@ -72,7 +76,7 @@
               "second" : "FH"
             },
             { "name" : "Cocoa",
-              "owner" : "KB",
+              "owner" : "SK",
               "second" : "SSQ"
             },
             { "name" : "Motif",
@@ -101,11 +105,11 @@
             },
             { "name" : "Carbon",
               "owner" : "SSQ",
-              "second" : "KB"
+              "second" : "SK"
             },
             { "name" : "Cocoa",
               "owner" : "SSQ",
-              "second" : "KB"
+              "second" : "SK"
             },
             { "name" : "Motif",
               "owner" : "SSQ",
@@ -121,7 +125,7 @@
             },
             { "name" : "WPF",
               "owner" : "SSQ",
-              "second" : "KB"
+              "second" : "FH"
             }
           ],
         "component" : "Theme",
@@ -153,7 +157,7 @@
             },
             { "name" : "WPF",
               "owner" : "CM",
-              "second" : "KB"
+              "second" : "FH"
             }
           ],
         "component" : "Accessibility",
@@ -168,7 +172,7 @@
               "second" : "SSQ"
             },
             { "name" : "Cocoa",
-              "owner" : "KB",
+              "owner" : "SK",
               "second" : "SSQ"
             },
             { "name" : "Motif",
@@ -185,26 +189,26 @@
             },
             { "name" : "WPF",
               "owner" : "CM",
-              "second" : "KB"
+              "second" : "FH"
             }
           ],
         "component" : "Printing",
         "description" : "Printing issues"
       },
       { "OS" : [ { "name" : "GTK",
-              "owner" : "KB",
+              "owner" : "PV",
               "second" : "BG"
             },
             { "name" : "Carbon",
-              "owner" : "KB",
+              "owner" : "LS",
               "second" : "SSQ"
             },
             { "name" : "Cocoa",
-              "owner" : "SK",
-              "second" : "KB"
+              "owner" : "LS",
+              "second" : "SK"
             },
             { "name" : "Motif",
-              "owner" : "KB",
+              "owner" : "PV",
               "second" : "SSQ"
             },
             { "name" : "Photon",
@@ -212,11 +216,11 @@
               "second" : "SSQ"
             },
             { "name" : "Win32",
-              "owner" : "KB",
+              "owner" : "PV",
               "second" : "FH"
             },
             { "name" : "WPF",
-              "owner" : "KB",
+              "owner" : "PV",
               "second" : "FH"
             }
           ],
@@ -224,19 +228,19 @@
         "description" : "Drag and Drop issues"
       },
        { "OS" : [ { "name" : "GTK",
-              "owner" : "KB",
+              "owner" : "PV",
               "second" : "BG"
             },
             { "name" : "Carbon",
-              "owner" : "KB",
+              "owner" : "LS",
               "second" : "SSQ"
             },
             { "name" : "Cocoa",
-              "owner" : "KB",
-              "second" : "SSQ"
+              "owner" : "LS",
+              "second" : "SK"
             },
             { "name" : "Motif",
-              "owner" : "KB",
+              "owner" : "PV",
               "second" : "SSQ"
             },
             { "name" : "Photon",
@@ -244,11 +248,11 @@
               "second" : "SSQ"
             },
             { "name" : "Win32",
-              "owner" : "KB",
+              "owner" : "PV",
               "second" : "FH"
             },
             { "name" : "WPF",
-              "owner" : "KB",
+              "owner" : "PV",
               "second" : "FH"
             }
           ],
@@ -257,15 +261,15 @@
       },
       { "OS" : [ { "name" : "GTK",
               "owner" : "BG",
-              "second" : "SSQ"
+              "second" : "PV"
             },
             { "name" : "Carbon",
               "owner" : "SSQ",
-              "second" : "FH"
+              "second" : "LS"
             },
             { "name" : "Cocoa",
-              "owner" : "KB",
-              "second" : "GG"
+              "owner" : "SK",
+              "second" : "SSQ"
             },
             { "name" : "Motif",
               "owner" : "BG",
@@ -280,16 +284,16 @@
               "second" : "SSQ"
             },
             { "name" : "WPF",
-              "owner" : "KB",
-              "second" : "FH"
+              "owner" : "FH",
+              "second" : "SSQ"
             }
           ],
         "component" : "Widgets",
         "description" : "Bugs concerning widget appearance, behavior etc."
       },
       { "OS" : [ { "name" : "All",
-              "owner" : "CM",
-              "second" : "GG"
+              "owner" : "LS",
+              "second" : "CM"
             } ],
         "component" : "Custom Widgets",
         "description" : "Bugs concerning custom widget appearance, behavior etc."
@@ -307,7 +311,7 @@
             },
             { "name" : "Carbon",
               "owner" : "SSQ",
-              "second" : "KB"
+              "second" : "SK"
             },
             { "name" : "Cocoa",
               "owner" : "SK",
@@ -326,7 +330,7 @@
               "second" : "SSQ"
             },
             { "name" : "WPF",
-              "owner" : "KB",
+              "owner" : "FH",
               "second" : "SSQ"
             }
           ],
@@ -334,31 +338,31 @@
         "description" : "OpenGL issues"
       },
       { "OS" : [ { "name" : "GTK",
-              "owner" : "BG",
-              "second" : "SSQ"
+              "owner" : "PV",
+              "second" : "BG"
             },
             { "name" : "Carbon",
-              "owner" : "SSQ",
-              "second" : "KB"
+              "owner" : "LS",
+              "second" : "SSQ"
             },
             { "name" : "Cocoa",
-              "owner" : "GG",
-              "second" : "KB"
+              "owner" : "LS",
+              "second" : "SK"
             },
             { "name" : "Motif",
-              "owner" : "BG",
-              "second" : "SSQ"
+              "owner" : "PV",
+              "second" : "BG"
             },
             { "name" : "Photon",
               "owner" : "RD",
               "second" : "SSQ"
             },
             { "name" : "Win32",
-              "owner" : "FH",
-              "second" : "SSQ"
+              "owner" : "PV",
+              "second" : "FH"
             },
             { "name" : "WPF",
-              "owner" : "KB",
+              "owner" : "FH",
               "second" : "SSQ"
             }
           ],
@@ -366,8 +370,8 @@
         "description" : "Any bug that has to do with the Program class"
       },
       { "OS" : [ { "name" : "All",
-              "owner" : "FH",
-              "second" : "SSQ"
+              "owner" : "PV",
+              "second" : "FH"
             } ],
         "component" : "OLE",
         "description" : "OLE issues"
@@ -421,7 +425,7 @@
             },
             { "name" : "Cocoa",
               "owner" : "SK",
-              "second" : "KB"
+              "second" : "SSQ"
             },
             { "name" : "Motif",
               "owner" : "SSQ",
@@ -436,7 +440,7 @@
               "second" : "FH"
             },
             { "name" : "WPF",
-              "owner" : "KB",
+              "owner" : "FH",
               "second" : "SSQ"
             }
           ],
@@ -453,7 +457,7 @@
             },
             { "name" : "Cocoa",
               "owner" : "FH",
-              "second" : "KB"
+              "second" : "SK"
             },
             { "name" : "Motif",
               "owner" : "FH",
@@ -469,7 +473,7 @@
             },
             { "name" : "WPF",
               "owner" : "FH",
-              "second" : "KB"
+              "second" : "SSQ"
             }
           ],
         "component" : "I18N",
@@ -493,7 +497,7 @@
             },
             { "name" : "WPF",
               "owner" : "GG",
-              "second" : "KB"
+              "second" : "SSQ"
             }
           ],
         "component" : "64",
