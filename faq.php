@@ -1040,25 +1040,17 @@ the SWT.CENTER style when creating a composite.
     </ul>
 
     <br>The version of Mozilla or Firefox installed on your system varies with your Linux distribution.
-    <br>The following Linux distributions meet the Mozilla requirements for using the Browser widget.
+    <br>The following Linux distributions meet the minimum Mozilla requirements for using the Browser widget.
     <ul>
     	<li>RedHat Enterprise Linux 3</li>
     	<li>Suse 9</li>
     </ul>
     <br>If you use the IBM 1.4 VM <a href="#browserlinuxibm">check this.</a>
     <br>
-	<br>As of Eclipse 3.2.1 the eclipse launcher attempts to detect a browser on your system to use.  If it fails to find one then you
-	will need to download and install a GRE such as Mozilla, as outlined below:
-  <ol>
-  	<li>If you are using Eclipse 3.0, download the Mozilla 1.6 Xft and GTK2 build from <a href="http://www.mozilla.org/releases/#1.6">Mozilla.org</a>. If you are using Eclipse 3.1 or newer, you can choose to use a more recent
-  	Mozilla 1.7.x GTK2 from <a href="http://www.mozilla.org/releases/">Mozilla.org</a>.</li>
-  	<li>Uninstall any prior Mozilla version.</li>
-  	<li>Extract and install the Mozilla download.</li>
-  	<li>Run Mozilla once. Verify that the application runs correctly and check the version number in the Mozilla About dialog.</li>
-  </ol>
-  <br>
-  If you are using an eclipse prior to version 3.2.1, or if you want the Browser to use a GRE (such as Mozilla) that you have installed yourself, then you must set the MOZILLA_FIVE_HOME environment variable to the folder
-  containing your GRE (e.g. <code>setenv MOZILLA_FIVE_HOME /usr/lib/mozilla</code>), and prepend this directory to your LD_LIBRARY_PATH environment variable</li>.
+	<br>As of Eclipse 3.2.1 the eclipse launcher attempts to detect a browser on your system to use.  If you are using an eclipse prior to
+	version 3.2.1, or if you want the Browser to use a specific GRE (such as Mozilla) that you have installed yourself, then you must set
+	the MOZILLA_FIVE_HOME environment variable to the folder containing your GRE (e.g. <code>setenv MOZILLA_FIVE_HOME /usr/lib/mozilla</code>),
+	and prepend this directory to your LD_LIBRARY_PATH environment variable</li>.
   </dd>
 
   <dt><strong><a name="browsersolaris">Q: What do I need to run the SWT Browser inside Eclipse on Solaris?</a></strong></dt>
@@ -1171,7 +1163,6 @@ the SWT.CENTER style when creating a composite.
 	  <li><a href="http://developer.mozilla.org/en/docs/XULRunner">XULRunner</a> is properly
 	    <a href="http://developer.mozilla.org/en/docs/XULRunner_1.8.0.1_Release_Notes#Installing_XULRunner">installed</a></li>
 	  <li>The installed XULRunner version is 1.8.1.2 or newer if any of the following are true:
-	    (<a href="http://releases.mozilla.org/pub/mozilla.org/xulrunner/releases/1.8.1.3/contrib/">download XULRunner 1.8.1.3</a>)
 	    <ul>
 	      <li>Running on OS X</li>
 	      <li><code>Browser.getWebBrowser()</code> is used</li>
@@ -1291,15 +1282,20 @@ public class DisplayMozillaVersion {
     <p><ul>
       <li>If your application runs as an Eclipse plug-in:
       <ul>
-        <li>download the org.mozilla.xpcom Eclipse plug-in
-          (<a href="http://releases.mozilla.org/pub/mozilla.org/xulrunner/releases/1.8.1.3/contrib/eclipse/plugins/org.mozilla.xpcom_1.8.1.3-20080312.jar">download XULRunner 1.8.1.3 Eclipse plug-in</a>)</li>
-        <li>import it into your Eclipse workspace</li>
-        <li>add it to your plug-in's list of Required Plug-ins (specified in your plug-in's META-INF/MANIFEST.MF file)</li>
+		<li>download the platform-appropriate <a href="http://releases.mozilla.org/pub/mozilla.org/xulrunner/releases/">XULRunner SDK</a> for the XULRunner version that you will be embedding</li>
+		<li>add its lib/MozillaInterfaces.jar and (if present) lib/MozillaGlue.jar files to your plugin root
+        <li>open your plug-in's META-INF/MANIFEST.MF file in the Plug-in Manifest editor</li>
+          <ul>
+            <li>switch to its "Runtime" tab</li>
+            <li>add the jar(s) in the "Classpath" section</li>
+            <li>add all of the org.mozilla.* packages in the "Exported Packages" section</li>
+            <li>save these changes</li>
+          </ul>
       </ul>
       <li>If your application runs as a stand-alone application:
       <ul>
-        <li>download the XULRunner SDK for your platform (<a href="http://releases.mozilla.org/pub/mozilla.org/xulrunner/releases/1.8.1.3/contrib/sdk/">download XULRunner 1.8.1.3 SDK</a>)</li>
-        <li>add its lib/MozillaInterfaces.jar file to your application's java build path</li>
+        <li>download the platform-appropriate <a href="http://releases.mozilla.org/pub/mozilla.org/xulrunner/releases/">XULRunner SDK</a> for the XULRunner version that you will be embedding</li>
+        <li>add its lib/MozillaInterfaces.jar and (if present) lib/MozillaGlue.jar files to your application's java build path</li>
       </ul>
     </ul>
     <p>You can use <code>Browser.getWebBrowser()</code> to access the JavaXPCOM <code>nsIWebBrowser</code> that represents the Browser instance.  For an example of using JavaXPCOM see
