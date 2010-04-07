@@ -1282,7 +1282,7 @@ public class DisplayMozillaVersion {
     <p><ul>
       <li>If your application runs as an Eclipse plug-in:
       <ul>
-		<li>download the platform-appropriate <a href="http://releases.mozilla.org/pub/mozilla.org/xulrunner/releases/">XULRunner SDK</a> for the XULRunner version that you will be embedding</li>
+		<li>download the <a href="http://releases.mozilla.org/pub/mozilla.org/xulrunner/releases/">XULRunner SDK</a> for the XULRunner version that you will be embedding</li>
 		<li>add its lib/MozillaInterfaces.jar and (if present) lib/MozillaGlue.jar files to your plugin root
         <li>open your plug-in's META-INF/MANIFEST.MF file in the Plug-in Manifest editor</li>
           <ul>
@@ -1294,7 +1294,7 @@ public class DisplayMozillaVersion {
       </ul>
       <li>If your application runs as a stand-alone application:
       <ul>
-        <li>download the platform-appropriate <a href="http://releases.mozilla.org/pub/mozilla.org/xulrunner/releases/">XULRunner SDK</a> for the XULRunner version that you will be embedding</li>
+        <li>download the <a href="http://releases.mozilla.org/pub/mozilla.org/xulrunner/releases/">XULRunner SDK</a> for the XULRunner version that you will be embedding</li>
         <li>add its lib/MozillaInterfaces.jar and (if present) lib/MozillaGlue.jar files to your application's java build path</li>
       </ul>
     </ul>
