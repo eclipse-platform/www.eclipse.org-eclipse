@@ -71,12 +71,6 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
   <li><a href="#advancedgraphics">Which platforms have advanced graphics support?</a></li>
   <p></p>
   <li><a href="#whatisbrowser">What is the SWT Browser widget?</a></li>
-  <li><a href="#howusemozilla">How do I use Mozilla as the Browser's underlying renderer?</a></li>
-  <li><a href="#specifyxulrunner">Can I specify which XULRunner installation gets used?</a></li>
-  <li><a href="#howdetectmozilla">How does the Browser detect a native Mozilla browser to use?</a></li>
-  <li><a href="#printmozillapath">How can I determine which installed Mozilla browser is being used to render Browser content?</a></li>
-  <li><a href="#mozillaplugins">How can my Mozilla-based Browser find my Mozilla plug-ins?</a></li>
-  <li><a href="#howusejavaxpcom">How do I use JavaXPCOM with the Browser?</a></li>
   <li><a href="#browserplatforms">Which platforms support the SWT Browser?</a></li>
   <li><a href="#browserlinux">What do I need to run the SWT Browser inside Eclipse on Linux?</a></li>
   <li><a href="#browsersolaris">What do I need to run the SWT Browser inside Eclipse on Solaris?</a></li>
@@ -85,6 +79,12 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
   <li><a href="#browserapplets">Can I view Java applets in the SWT Browser?</a></li>
   <li><a href="#browserscrollbar">How do I hide the Browser's scrollbars?</a></li>
   <li><a href="#browserproxy">How do I set a proxy for the Browser to use?</a></li>
+  <li><a href="#howusemozilla">How do I use Mozilla as the Browser's underlying renderer?</a></li>
+  <li><a href="#specifyxulrunner">Can I specify which XULRunner installation gets used?</a></li>
+  <li><a href="#howdetectmozilla">How does the Browser detect a native Mozilla browser to use?</a></li>
+  <li><a href="#printmozillapath">How can I determine which installed Mozilla browser is being used to render Browser content?</a></li>
+  <li><a href="#mozillaplugins">How can my Mozilla-based Browser find my Mozilla plug-ins?</a></li>
+  <li><a href="#howusejavaxpcom">How do I use JavaXPCOM with the Browser?</a></li>
   <p></p>
   <li><a href="#swtawtosx">Why does the SWT_AWT bridge not work for me on OS X?</a></li>
   <li><a href="#swtawtsolaris">Why does the SWT_AWT bridge not work for me on AIX or Solaris?</a></li>
@@ -1002,149 +1002,6 @@ the SWT.CENTER style when creating a composite.
       HTML browsing and rendering on the platforms on which it is implemented.
   </dd>
 
-  <dt><strong><a name="howusemozilla">Q: How do I use Mozilla as the Browser's underlying renderer?</a></strong></dt>
-  <dd>A: The Browser has been extended as of Eclipse 3.3 to facilitate the use of Mozilla's HTML renderer on all
-      supported browser platforms, provided that the following are satisfied:
-    <ul>
-	  <li>The Browser instance is created with style <code>SWT.MOZILLA</code></li>
-	  <li><a href="http://developer.mozilla.org/en/docs/XULRunner">XULRunner</a> is properly
-	    <a href="http://developer.mozilla.org/en/docs/XULRunner_1.8.0.1_Release_Notes#Installing_XULRunner">installed</a></li>
-	  <li>The installed XULRunner version is 1.8.1.2 or newer if any of the following are true:
-	    (<a href="http://releases.mozilla.org/pub/mozilla.org/xulrunner/releases/1.8.1.3/contrib/">download XULRunner 1.8.1.3</a>)
-	    <ul>
-	      <li>Running on OS X</li>
-	      <li><code>Browser.getWebBrowser()</code> is used</li>
-	      <li>JavaXPCOM is referenced</li>
-	    </ul>
-	    If none of these cases apply then any XULRunner version can be used.
-	  </li>
-	  <li><b>OSX only:</b> The JRE must be "Java for Mac OS X 10.4, Release 5" or newer</li>
-    </ul>
-  </dd>
-
-  <dt><strong><a name="specifyxulrunner">Q: Can I specify which XULRunner installation gets used?</a></strong></dt>
-  <dd>A: Typically a Mozilla-based Browser uses XULRunner's lookup mechanism to find a registered XULRunner at runtime,
-    in which case a XULRunner location does not need to be specified.  However if you wish to override this mechanism you
-    can set the value of java system property <code>org.eclipse.swt.browser.XULRunnerPath</code> to point at an alternate
-    XULRunner's path.  This property must be set before the <em>first</em> Browser instance is created.
-    <p>The best opportunity for a user to set this property is by launching the eclipse executable with a <code>-D</code>
-    switch (eg.- <code>./eclipse -vmargs -Dorg.eclipse.swt.browser.XULRunnerPath=...</code>).
-    <p>An alternate approach that an eclipse application may use is to provide a <code>XULRunnerInitializer</code>
-    implementation that sets this property.  This implementation will be invoked when the first Mozilla-based Browser
-    is about to be created.  The steps to do this are:
-    <ul>
-      <li>Create a fragment with host plug-in <code>org.eclipse.swt</code>.</li>
-      <li>In this fragment create class <code>org.eclipse.swt.browser.XULRunnerInitializer</code>.</li>
-      <li>Implement a static initializer in this class that sets the <code>org.eclipse.swt.browser.XULRunnerPath</code> property.
-      As an example, the class below will set the property to the win32 xulrunner plug-in if it is present.
-      <pre>
-package org.eclipse.swt.browser;
-
-import java.io.*;
-import java.net.*;
-import org.eclipse.core.runtime.*;
-import org.osgi.framework.Bundle;
-
-public class XULRunnerInitializer {
-    static {
-        Bundle bundle = Platform.getBundle("org.mozilla.xulrunner.win32.win32.x86"); //$NON-NLS-1$
-        if (bundle != null) {
-            URL resourceUrl = bundle.getResource("xulrunner"); //$NON-NLS-1$
-            if (resourceUrl != null) {
-                try {
-                    URL fileUrl = FileLocator.toFileURL(resourceUrl);
-                    File file = new File(fileUrl.toURI());
-                    System.setProperty("org.eclipse.swt.browser.XULRunnerPath",file.getAbsolutePath()); //$NON-NLS-1$
-                } catch (IOException e) {
-                    // log the exception
-                } catch (URISyntaxException e) {
-                    // log the exception
-                }
-            }
-        }
-    }
-}
-      </pre></li>
-    </ul> 
-  </dd>
-
-  <dt><strong><a name="howdetectmozilla">Q: How does the Browser detect a native Mozilla browser to use?</a></strong></dt>
-  <dd>A: The first Mozilla-based Browser instance performs the steps below, in order, until a native browser is found.  All subsequent Mozilla-based Browser instances will use this same detected browser.
-    <ol>
-      <li>If Java property <code>org.eclipse.swt.browser.XULRunnerPath</code> is defined then use it (see <a href="#specifyxulrunner">Can I specify which XULRunner installation is used?</a>).
-      <li>Attempt to detect an OS-registered XULRunner with version 1.8.1.2 or newer (in order to enable JavaXPCOM use).
-      <li>Attempt to detect an OS-registered XULRunner with a version earlier than 1.8.1.2.
-      <li><em>(if running on Linux or Solaris, and the Browser's style is <code>SWT.NONE</code>)</em> Attempt to use the native browser pointed at by OS environment variable <code>MOZILLA_FIVE_HOME</code>, which may be any of
-        the browsers listed <a href="#browserlinux">here</a>.  Note that if this environment variable is not set when eclipse is run then on linux the eclipse launcher will try to set it by checking various
-        potential installation locations.
-      <li>At this point a native Mozilla browser could not be found, so an <code>SWTError</code> is thrown from the constructor, which should be caught and handled by the application.  Subsequent attempts to
-        create Mozilla-based Browsers will go through these detection steps again.
-    </ol>
-  </dd>
-
-  <dt><strong><a name="printmozillapath">Q: How can I determine which installed Mozilla browser is being used to render Browser content?</a></strong></dt>
-  <dd>A: The first Mozilla-based Browser instance performs a series of <a href="#howdetectmozilla">steps</a> to detect a native browser to use.  The SWT snippet below can be used to print the location of the
-      Mozilla browser that was found.
-      <pre>
-import org.eclipse.swt.SWT;
-import org.eclipse.swt.browser.*;
-import org.eclipse.swt.graphics.*;
-import org.eclipse.swt.widgets.*;
-
-public class DisplayMozillaVersion {
-    public static void main(String[] args) {
-        Device.DEBUG = true;
-        Display display = new Display();
-        Shell shell = new Shell(display);
-        System.out.println(">>>Snippet creating SWT.MOZILLA-style Browser");
-        try {
-            new Browser(shell, SWT.MOZILLA);
-            System.out.println(">>>succeeded");
-        } catch (Error e) {
-            System.out.println(">>>This failed with the following error:");
-            e.printStackTrace();
-            System.out.println("\n\nSnippet creating SWT.NONE-style Browser");
-            try {
-                new Browser(shell, SWT.NONE);
-                System.out.println(">>>succeeded");
-            } catch (Error e2) {
-                System.out.println(">>>This failed too, with the following error:");
-                e2.printStackTrace();
-            }
-        }
-        display.dispose();
-    }
-}
-      </pre>
-  </dd>
-
-  <dt><strong><a name="mozillaplugins">Q: How can my Mozilla-based Browser find my Mozilla plug-ins?</a></strong></dt>
-  <dd>A: As of eclipse 3.3 the default set of Mozilla plug-in paths that are searched can be augmented by defining
-    environment variable <code>MOZ_PLUGIN_PATH</code>. For example: <code>export MOZ_PLUGIN_PATH=/usr/lib/browser-plugins</code>. 
-  </dd>
-
-  <dt><strong><a name="howusejavaxpcom">Q: How do I use JavaXPCOM with the Browser?</a></strong></dt>  
-  <dd>A: First, ensure that you have all of the requirements listed in
-    <a href="http://www.eclipse.org/swt/faq.php#howusemozilla">How do I use Mozilla as the Browser's underlying renderer?</a>.
-    Once these are in place then you can reference JavaXPCOM as follows:
-    <p><ul>
-      <li>If your application runs as an Eclipse plug-in:
-      <ul>
-        <li>download the org.mozilla.xpcom Eclipse plug-in
-          (<a href="http://releases.mozilla.org/pub/mozilla.org/xulrunner/releases/1.8.1.3/contrib/eclipse/plugins/org.mozilla.xpcom_1.8.1.3-20080312.jar">download XULRunner 1.8.1.3 Eclipse plug-in</a>)</li>
-        <li>import it into your Eclipse workspace</li>
-        <li>add it to your plug-in's list of Required Plug-ins (specified in your plug-in's META-INF/MANIFEST.MF file)</li>
-      </ul>
-      <li>If your application runs as a stand-alone application:
-      <ul>
-        <li>download the XULRunner SDK for your platform (<a href="http://releases.mozilla.org/pub/mozilla.org/xulrunner/releases/1.8.1.3/contrib/sdk/">download XULRunner 1.8.1.3 SDK</a>)</li>
-        <li>add its lib/MozillaInterfaces.jar file to your application's java build path</li>
-      </ul>
-    </ul>
-    <p>You can use <code>Browser.getWebBrowser()</code> to access the JavaXPCOM <code>nsIWebBrowser</code> that represents the Browser instance.  For an example of using JavaXPCOM see
-      <a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet267.java">Snippet 267</a>.
-  </dd>
-
   <dt><strong><a name="browserplatforms">Q: Which platforms support the SWT Browser?</a></strong></dt>
   <dd>A: The SWT Browser is currently available on the following platforms:
   <br>
@@ -1304,6 +1161,149 @@ public class DisplayMozillaVersion {
   	        <a href="#howusejavaxpcom">How do I use JavaXPCOM with the Browser?</a></li>.
   	    </ul> 
     </ul>
+  </dd>
+
+  <dt><strong><a name="howusemozilla">Q: How do I use Mozilla as the Browser's underlying renderer?</a></strong></dt>
+  <dd>A: The Browser has been extended as of Eclipse 3.3 to facilitate the use of Mozilla's HTML renderer on all
+      supported browser platforms, provided that the following are satisfied:
+    <ul>
+	  <li>The Browser instance is created with style <code>SWT.MOZILLA</code></li>
+	  <li><a href="http://developer.mozilla.org/en/docs/XULRunner">XULRunner</a> is properly
+	    <a href="http://developer.mozilla.org/en/docs/XULRunner_1.8.0.1_Release_Notes#Installing_XULRunner">installed</a></li>
+	  <li>The installed XULRunner version is 1.8.1.2 or newer if any of the following are true:
+	    (<a href="http://releases.mozilla.org/pub/mozilla.org/xulrunner/releases/1.8.1.3/contrib/">download XULRunner 1.8.1.3</a>)
+	    <ul>
+	      <li>Running on OS X</li>
+	      <li><code>Browser.getWebBrowser()</code> is used</li>
+	      <li>JavaXPCOM is referenced</li>
+	    </ul>
+	    If none of these cases apply then any XULRunner version can be used.
+	  </li>
+	  <li><b>OSX only:</b> The JRE must be "Java for Mac OS X 10.4, Release 5" or newer</li>
+    </ul>
+  </dd>
+
+  <dt><strong><a name="specifyxulrunner">Q: Can I specify which XULRunner installation gets used?</a></strong></dt>
+  <dd>A: Typically a Mozilla-based Browser uses XULRunner's lookup mechanism to find a registered XULRunner at runtime,
+    in which case a XULRunner location does not need to be specified.  However if you wish to override this mechanism you
+    can set the value of java system property <code>org.eclipse.swt.browser.XULRunnerPath</code> to point at an alternate
+    XULRunner's path.  This property must be set before the <em>first</em> Browser instance is created.
+    <p>The best opportunity for a user to set this property is by launching the eclipse executable with a <code>-D</code>
+    switch (eg.- <code>./eclipse -vmargs -Dorg.eclipse.swt.browser.XULRunnerPath=...</code>).
+    <p>An alternate approach that an eclipse application may use is to provide a <code>XULRunnerInitializer</code>
+    implementation that sets this property.  This implementation will be invoked when the first Mozilla-based Browser
+    is about to be created.  The steps to do this are:
+    <ul>
+      <li>Create a fragment with host plug-in <code>org.eclipse.swt</code>.</li>
+      <li>In this fragment create class <code>org.eclipse.swt.browser.XULRunnerInitializer</code>.</li>
+      <li>Implement a static initializer in this class that sets the <code>org.eclipse.swt.browser.XULRunnerPath</code> property.
+      As an example, the class below will set the property to the win32 xulrunner plug-in if it is present.
+      <pre>
+package org.eclipse.swt.browser;
+
+import java.io.*;
+import java.net.*;
+import org.eclipse.core.runtime.*;
+import org.osgi.framework.Bundle;
+
+public class XULRunnerInitializer {
+    static {
+        Bundle bundle = Platform.getBundle("org.mozilla.xulrunner.win32.win32.x86"); //$NON-NLS-1$
+        if (bundle != null) {
+            URL resourceUrl = bundle.getResource("xulrunner"); //$NON-NLS-1$
+            if (resourceUrl != null) {
+                try {
+                    URL fileUrl = FileLocator.toFileURL(resourceUrl);
+                    File file = new File(fileUrl.toURI());
+                    System.setProperty("org.eclipse.swt.browser.XULRunnerPath",file.getAbsolutePath()); //$NON-NLS-1$
+                } catch (IOException e) {
+                    // log the exception
+                } catch (URISyntaxException e) {
+                    // log the exception
+                }
+            }
+        }
+    }
+}
+      </pre></li>
+    </ul> 
+  </dd>
+
+  <dt><strong><a name="howdetectmozilla">Q: How does the Browser detect a native Mozilla browser to use?</a></strong></dt>
+  <dd>A: The first Mozilla-based Browser instance performs the steps below, in order, until a native browser is found.  All subsequent Mozilla-based Browser instances will use this same detected browser.
+    <ol>
+      <li>If Java property <code>org.eclipse.swt.browser.XULRunnerPath</code> is defined then use it (see <a href="#specifyxulrunner">Can I specify which XULRunner installation is used?</a>).
+      <li>Attempt to detect an OS-registered XULRunner with version 1.8.1.2 or newer (in order to enable JavaXPCOM use).
+      <li>Attempt to detect an OS-registered XULRunner with a version earlier than 1.8.1.2.
+      <li><em>(if running on Linux or Solaris, and the Browser's style is <code>SWT.NONE</code>)</em> Attempt to use the native browser pointed at by OS environment variable <code>MOZILLA_FIVE_HOME</code>, which may be any of
+        the browsers listed <a href="#browserlinux">here</a>.  Note that if this environment variable is not set when eclipse is run then on linux the eclipse launcher will try to set it by checking various
+        potential installation locations.
+      <li>At this point a native Mozilla browser could not be found, so an <code>SWTError</code> is thrown from the constructor, which should be caught and handled by the application.  Subsequent attempts to
+        create Mozilla-based Browsers will go through these detection steps again.
+    </ol>
+  </dd>
+
+  <dt><strong><a name="printmozillapath">Q: How can I determine which installed Mozilla browser is being used to render Browser content?</a></strong></dt>
+  <dd>A: The first Mozilla-based Browser instance performs a series of <a href="#howdetectmozilla">steps</a> to detect a native browser to use.  The SWT snippet below can be used to print the location of the
+      Mozilla browser that was found.
+      <pre>
+import org.eclipse.swt.SWT;
+import org.eclipse.swt.browser.*;
+import org.eclipse.swt.graphics.*;
+import org.eclipse.swt.widgets.*;
+
+public class DisplayMozillaVersion {
+    public static void main(String[] args) {
+        Device.DEBUG = true;
+        Display display = new Display();
+        Shell shell = new Shell(display);
+        System.out.println(">>>Snippet creating SWT.MOZILLA-style Browser");
+        try {
+            new Browser(shell, SWT.MOZILLA);
+            System.out.println(">>>succeeded");
+        } catch (Error e) {
+            System.out.println(">>>This failed with the following error:");
+            e.printStackTrace();
+            System.out.println("\n\nSnippet creating SWT.NONE-style Browser");
+            try {
+                new Browser(shell, SWT.NONE);
+                System.out.println(">>>succeeded");
+            } catch (Error e2) {
+                System.out.println(">>>This failed too, with the following error:");
+                e2.printStackTrace();
+            }
+        }
+        display.dispose();
+    }
+}
+      </pre>
+  </dd>
+
+  <dt><strong><a name="mozillaplugins">Q: How can my Mozilla-based Browser find my Mozilla plug-ins?</a></strong></dt>
+  <dd>A: As of eclipse 3.3 the default set of Mozilla plug-in paths that are searched can be augmented by defining
+    environment variable <code>MOZ_PLUGIN_PATH</code>. For example: <code>export MOZ_PLUGIN_PATH=/usr/lib/browser-plugins</code>. 
+  </dd>
+
+  <dt><strong><a name="howusejavaxpcom">Q: How do I use JavaXPCOM with the Browser?</a></strong></dt>  
+  <dd>A: First, ensure that you have all of the requirements listed in
+    <a href="http://www.eclipse.org/swt/faq.php#howusemozilla">How do I use Mozilla as the Browser's underlying renderer?</a>.
+    Once these are in place then you can reference JavaXPCOM as follows:
+    <p><ul>
+      <li>If your application runs as an Eclipse plug-in:
+      <ul>
+        <li>download the org.mozilla.xpcom Eclipse plug-in
+          (<a href="http://releases.mozilla.org/pub/mozilla.org/xulrunner/releases/1.8.1.3/contrib/eclipse/plugins/org.mozilla.xpcom_1.8.1.3-20080312.jar">download XULRunner 1.8.1.3 Eclipse plug-in</a>)</li>
+        <li>import it into your Eclipse workspace</li>
+        <li>add it to your plug-in's list of Required Plug-ins (specified in your plug-in's META-INF/MANIFEST.MF file)</li>
+      </ul>
+      <li>If your application runs as a stand-alone application:
+      <ul>
+        <li>download the XULRunner SDK for your platform (<a href="http://releases.mozilla.org/pub/mozilla.org/xulrunner/releases/1.8.1.3/contrib/sdk/">download XULRunner 1.8.1.3 SDK</a>)</li>
+        <li>add its lib/MozillaInterfaces.jar file to your application's java build path</li>
+      </ul>
+    </ul>
+    <p>You can use <code>Browser.getWebBrowser()</code> to access the JavaXPCOM <code>nsIWebBrowser</code> that represents the Browser instance.  For an example of using JavaXPCOM see
+      <a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet267.java">Snippet 267</a>.
   </dd>
 
   <dt><strong><a name="swtawtosx">Q: Why does the SWT_AWT bridge not work for me on OS X?</a></strong></dt>
