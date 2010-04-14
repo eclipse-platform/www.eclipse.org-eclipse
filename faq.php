@@ -75,6 +75,7 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
   <li><a href="#browserlinux">What do I need to run the SWT Browser inside Eclipse on Linux?</a></li>
   <li><a href="#browsersolaris">What do I need to run the SWT Browser inside Eclipse on Solaris?</a></li>
   <li><a href="#browserlinuxrcp">What do I need to run the SWT Browser in a standalone application on Linux or Solaris-x86?</a></li>
+  <li><a href="#browserwebkitgtk">Can the Browser use the WebKit renderer on GTK?</a></li>
   <li><a href="#browserlinuxibm">How can I get the SWT Browser to work with the IBM 1.4 VM?</a></li>
   <li><a href="#browserapplets">Can I view Java applets in the SWT Browser?</a></li>
   <li><a href="#browserscrollbar">How do I hide the Browser's scrollbars?</a></li>
@@ -1007,16 +1008,9 @@ the SWT.CENTER style when creating a composite.
   <br>
   <ul>
     <li>Windows (Internet Explorer 5 and above)</li>
-    <li>Mac (OS X 10.4 and above. Safari-based)</li>
-    <li>Linux GTK and Linux Motif (XULRunner-1.8.0.1 and above, Firefox 1.0 and above, Mozilla 1.4 GTK2 and above)
-    <br>The following Linux distributions meet the Mozilla/Firefox requirements for using the Browser widget:
-    <ul>
-    	<li>RedHat Enterprise Linux 3</li>
-    	<li>SuSE 9</li>
-    </ul>
-    Older Linux distributions may require a supported version of Mozilla to be installed. (<a href="#browserlinux">instructions</a>)
-    <li>Solaris-x86 (as of Eclipse/SWT 3.5.1) (Firefox 1.0 and above, Mozilla 1.7 GTK2 and above)</li>
-    <li>Solaris 10 SPARC (as of Eclipse/SWT 3.6)</li>
+    <li>Mac (OS X 10.4 and above, Safari-based)</li>
+    <li>Linux GTK and Linux Motif (<a href="#browserlinux">details</a>)
+    <li>Solaris-x86 and Solaris 10 SPARC (<a href="#browsersolaris">details</a>)
     <li>Photon</li>
   </ul>
   </dd>
@@ -1032,6 +1026,7 @@ the SWT.CENTER style when creating a composite.
       <li>Eclipse 3.4.x: Mozilla 1.4 GTK2 - 1.7.x GTK2 and XULRunner 1.8.x - 1.9.0.x.</li>
       <li>Eclipse 3.5.0: Mozilla 1.4 GTK2 - 1.7.x GTK2 and XULRunner 1.8.x - 1.9.1.x.</li>
       <li>Eclipse 3.5.2: Mozilla 1.4 GTK2 - 1.7.x GTK2 and XULRunner 1.8.x - 1.9.2.x.</li>
+      <li>Eclipse 3.6.0: Mozilla 1.4 GTK2 - 1.7.x GTK2 and XULRunner 1.8.x - 1.9.2.x, and WebKitGTK+ 1.1.90 and above (see <a href="#browserwebkitgtk">Can the Browser use the WebKit renderer on GTK?</a>)</li>
       <li>Also note that a Firefox release whose contained Gecko version correlates with the Mozilla versions above can also be used
       with Eclipse 3.1 and newer (Linux only), provided that it has been compiled with linkable Gecko libraries.  It is important to  
       note that Firefox downloads from mozilla.org do <em>not</em> satisfy this criteria, but Firefox installations that are
@@ -1040,7 +1035,7 @@ the SWT.CENTER style when creating a composite.
     </ul>
 
     <br>The version of Mozilla or Firefox installed on your system varies with your Linux distribution.
-    <br>The following Linux distributions meet the minimum Mozilla requirements for using the Browser widget.
+    The following Linux distributions meet the minimum Mozilla requirements for using the Browser widget.
     <ul>
     	<li>RedHat Enterprise Linux 3</li>
     	<li>Suse 9</li>
@@ -1058,7 +1053,8 @@ the SWT.CENTER style when creating a composite.
     <ul>
       <li>OpenSolaris (x86)</li>
       <ul>
-        <li>Eclipse 3.5.x: Mozilla 1.7.x GTK2 and XULRunner 1.8.x - 1.9.1.x</li>
+        <li>Eclipse 3.5.0: Mozilla 1.7.x GTK2 and XULRunner 1.8.x - 1.9.1.x</li>
+        <li>Eclipse 3.5.2: Mozilla 1.7.x GTK2 and XULRunner 1.8.x - 1.9.2.x</li>
         <li>Note that a Firefox release whose contained Gecko version correlates with the Mozilla versions above can also be used.
         Unlike other platforms, since Sun's compiler does not produce statically-linked libraries, Firefox builds downloaded from mozilla.org
         <em>can</em> be used on Solaris. 
@@ -1084,6 +1080,24 @@ the SWT.CENTER style when creating a composite.
     </ul>
     <br>If you use the IBM 1.4 VM <a href="#browserlinuxibm">check this.</a>
     <br>
+  </dd>
+
+  <dt><strong><a name="webkitgtk">Q: Can the Browser use the WebKit renderer on GTK?</a></strong></dt>
+  <dd>A: As of Eclipse/SWT 3.6 the Browser can use WebKitGTK+ (the GTK+ port of WebKit) as its native renderer.  To use it
+      the following must be true:
+      <ul>
+        <li>WebKitGTK 1.1.90 or newer is in the library path
+        <ul>
+          <li>Ubuntu 10.04 ships with this WebKitGTK+ version, so this requirement is automatically satisfied on this Linux distro
+          <li>On Linux distros that do not ship a WebKitGTK+ with this version or newer you will need to compile WebKitGTK+ from <a href="http://webkitgtk.org/?page=download">source</a>, and
+          add its resulting <code>.libs</code> directory to your <code>LD_LIBRARY_PATH</code> environment variable.
+        </ul>
+        <li>Set java property "org.eclipse.swt.browser.UseWebKitGTK" to "true"
+        <li>(optional) Add line "Device.DEBUG=true;" to your app so that the native renderer version being used will be written to stdout
+        <li>Create your Browser instance with the usual <code>SWT.NONE</code> style
+      </ul>
+      Note that as of Eclipse/SWT 3.7 it is planned for WebKitGTK+ to become the default Browser renderer on Linux, assuming it is detected at runtime.  If it is not detected at runtime
+      then the Browser will revert to its Mozilla-based implementation.
   </dd>
 
   <dt><strong><a name="browserlinuxibm">Q: How can I get the SWT Browser to work with the IBM 1.4 VM?</a></strong></dt>
