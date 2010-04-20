@@ -72,7 +72,7 @@ the <em>Platform Plug-in Developer Guide</em>. To get there in Eclipse, select
 
 <h4>Articles at eclipse.org:</h4>
 
-	<p>There are lots of <a href="http://www.eclipse.org/articles/index.php?sort=date&category=SWT">articles about SWT</a> on Eclipse Corner at eclipse.org (20 at last count):</p>
+	<p>There are lots of <a href="http://www.eclipse.org/articles/index.php?sort=date&category=SWT">articles about SWT</a> on Eclipse Corner at eclipse.org (20 at last count).</p>
 
 <h4>Articles at eclipse.org/swt:</h4>
 
