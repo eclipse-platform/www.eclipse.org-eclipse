@@ -23,9 +23,9 @@
 
 <ul>
    <li><a href="http://www.amazon.com/exec/obidos/tg/detail/-/0321256638/qid=1088631104/sr=8-3/ref=sr_8_xs_ap_i3_xgl14/104-7716812-0314361?v=glance&amp;s=books&amp;n=507846">
-       <em>"SWT: The Standard Widget Toolkit, Volume 1"</em></a> by Steve Northover and Mike Wilson</li>
+       <em>"SWT: The Standard Widget Toolkit, Volume 1"</em></a> by Steve Northover and Mike Wilson
        <br>This book can be read online at the
-       <a href="http://safari.informit.com/9780321256638">publisher's web site</a>.
+       <a href="http://safari.informit.com/9780321256638">publisher's web site</a>.</li>
    <li><a href="http://www.amazon.com/exec/obidos/tg/detail/-/1590593251/qid=1088631104/sr=8-1/ref=pd_ka_1/104-7716812-0314361?v=glance&amp;s=books&amp;n=507846">
        <em>"The Definitive Guide to SWT and JFace"</em></a> by Rob Warner and Robert Harris</li>
    <li><a href="http://www.amazon.com/exec/obidos/ASIN/0321305027">
@@ -67,20 +67,25 @@ the <em>Platform Plug-in Developer Guide</em>. To get there in Eclipse, select
 
 
 <table width="100%">
-<tr><th bgcolor="#0080c0" align="left" style="padding: 2px;"><font color="#ffffff">SWT Articles at eclipse.org</font>
+<tr><th bgcolor="#0080c0" align="left" style="padding: 2px;"><font color="#ffffff">SWT Articles at eclipse.org and eclipse.org/swt</font>
 </table>
 
-<p>There are all sorts of articles here:</p>
+<h3>Articles at eclipse.org:</h3>
+
+	<p>There are <em>many</em> <a href="http://www.eclipse.org/articles/index.php?sort=date&category=SWT">articles about SWT</a> on Eclipse Corner at eclipse.org (20 at last count):</p>
+
+<h3>Articles at eclipse.org/swt:</h3>
 
   <ul>
-	<li><a href="http://www.eclipse.org/articles/index.php?sort=date&category=SWT">Articles about SWT</a> on Eclipse Corner at eclipse.org</li>
 	<li><a href="eclipse.php">How to develop SWT applications in Eclipse</a></li>
 	<li><a href="examples.php">How to run the ControlExample and other SWT examples</a></li>
 	<li><a href="macosx/">How to deploy SWT applications on Mac OS X</a></li>
+	<li><a href="macgen.php">How to generate the SWT JNI Code for Cocoa</a></li>
 	<li><a href="jws/">How to deploy SWT applications using Java Web Start</a></li>
 	<li><a href="cvs.php">How to use SWT from CVS</a></li>
 	<li><a href="jnigen.php">How to generate the SWT JNI Code</a></li>
 	<li><a href="opengl/">Using OpenGL with SWT 3.2</a></li>
+	<li><a href="fixbugs.php">How to fix a bug in SWT</a></li>
   </ul>
 
 <table width="100%">
