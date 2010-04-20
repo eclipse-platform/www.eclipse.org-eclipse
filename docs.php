@@ -70,11 +70,11 @@ the <em>Platform Plug-in Developer Guide</em>. To get there in Eclipse, select
 <tr><th bgcolor="#0080c0" align="left" style="padding: 2px;"><font color="#ffffff">SWT Articles at eclipse.org and eclipse.org/swt</font>
 </table>
 
-<h3>Articles at eclipse.org:</h3>
+<h4>Articles at eclipse.org:</h4>
 
 	<p>There are lots of <a href="http://www.eclipse.org/articles/index.php?sort=date&category=SWT">articles about SWT</a> on Eclipse Corner at eclipse.org (20 at last count):</p>
 
-<h3>Articles at eclipse.org/swt:</h3>
+<h4>Articles at eclipse.org/swt:</h4>
 
   <ul>
 	<li><a href="eclipse.php">How to develop SWT applications in Eclipse</a></li>
