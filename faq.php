@@ -1082,7 +1082,7 @@ the SWT.CENTER style when creating a composite.
     <br>
   </dd>
 
-  <dt><strong><a name="webkitgtk">Q: Can the Browser use the WebKit renderer on GTK?</a></strong></dt>
+  <dt><strong><a name="browserwebkitgtk">Q: Can the Browser use the WebKit renderer on GTK?</a></strong></dt>
   <dd>A: As of Eclipse/SWT 3.6 the Browser can use WebKitGTK+ (the GTK+ port of WebKit) as its native renderer.  To use it
       the following must be true:
       <ul>
