@@ -1093,10 +1093,10 @@ the SWT.CENTER style when creating a composite.
           add its resulting <code>.libs</code> directory to your <code>LD_LIBRARY_PATH</code> environment variable.
         </ul>
         <li>Set java property "org.eclipse.swt.browser.UseWebKitGTK" to "true"
-        <li>(optional) Add line "Device.DEBUG=true;" to your app so that the native renderer version being used will be written to stdout
         <li>Create your Browser instance with the usual <code>SWT.NONE</code> style
+        <li>Invoke <code>Browser.getBrowserType()</code> to verify that WebKit is being used
       </ul>
-      Note that as of Eclipse/SWT 3.7 it is planned for WebKitGTK+ to become the default Browser renderer on Linux, assuming it is detected at runtime.  If it is not detected at runtime
+      Note that as of Eclipse/SWT 3.7 it is planned for WebKitGTK+ to become the default Browser renderer on Linux, if it is detected at runtime.  If it is not detected at runtime
       then the Browser will revert to its Mozilla-based implementation.
   </dd>
 
