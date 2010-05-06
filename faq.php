@@ -1026,7 +1026,7 @@ the SWT.CENTER style when creating a composite.
       <li>Eclipse 3.4.x: Mozilla 1.4 GTK2 - 1.7.x GTK2 and XULRunner 1.8.x - 1.9.0.x.</li>
       <li>Eclipse 3.5.0: Mozilla 1.4 GTK2 - 1.7.x GTK2 and XULRunner 1.8.x - 1.9.1.x.</li>
       <li>Eclipse 3.5.2: Mozilla 1.4 GTK2 - 1.7.x GTK2 and XULRunner 1.8.x - 1.9.2.x.</li>
-      <li>Eclipse 3.6.0: Mozilla 1.4 GTK2 - 1.7.x GTK2 and XULRunner 1.8.x - 1.9.2.x, and WebKitGTK+ 1.1.90 and above (see <a href="#browserwebkitgtk">Can the Browser use the WebKit renderer on GTK?</a>)</li>
+      <li>Eclipse 3.6.0: Mozilla 1.4 GTK2 - 1.7.x GTK2 and XULRunner 1.8.x - 1.9.2.x, and WebKitGTK+ 1.2.0 and above (see <a href="#browserwebkitgtk">Can the Browser use the WebKit renderer on GTK?</a>)</li>
       <li>Also note that a Firefox release whose contained Gecko version correlates with the Mozilla versions above can also be used
       with Eclipse 3.1 and newer (Linux only), provided that it has been compiled with linkable Gecko libraries.  It is important to  
       note that Firefox downloads from mozilla.org do <em>not</em> satisfy this criteria, but Firefox installations that are
@@ -1086,7 +1086,7 @@ the SWT.CENTER style when creating a composite.
   <dd>A: As of Eclipse/SWT 3.6 the Browser can use WebKitGTK+ (the GTK+ port of WebKit) as its native renderer.  To use it
       the following must be true:
       <ul>
-        <li>WebKitGTK 1.1.90 or newer is in the library path
+        <li>WebKitGTK 1.2.0 or newer is in the library path
         <ul>
           <li>Ubuntu 10.04 ships with this WebKitGTK+ version, so this requirement is automatically satisfied on this Linux distro
           <li>On Linux distros that do not ship a WebKitGTK+ with this version or newer you will need to compile WebKitGTK+ from <a href="http://webkitgtk.org/?page=download">source</a>, and
