@@ -117,6 +117,12 @@ toolkit.</p>
 	<p>libxine-java is a Java interface that allows Java applications to play
 	all media types supported by the xine library.  Video playback can be
 	integrated into applications with SWT or AWT Canvas widgets.</p>
+
+<li><b><a href="http://metawidget.org/">Metawidget</a></b>
+	<i>by Richard Kennard and others</i>
+
+	<p>Metawidget is a 'smart User Interface widget' that populates itself, at runtime, with UI components to match
+	the properties of your business objects.  SWT is a supported Metawidget front end.</p>
 </ul>
 
 <table width="100%">
