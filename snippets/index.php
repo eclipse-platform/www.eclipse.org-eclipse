@@ -381,6 +381,7 @@ create a snippet contribution report in Bugzilla</a>. Thanks in advance for your
         <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet195.java">draw a rotating torus using the LWJGL OpenGL binding</a></li>
         <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet209.java">draw a rotating torus using the JOGL OpenGL binding</a></li>
         <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet174.java">draw a rectangle using the org.eclipse.opengl OpenGL binding</a></li>
+        <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet341.java">capture a LWJGL drawing to an SWT Image</a></li>
       </ul>
       <p></p>
     <li><a name="path"><b>Path, Pattern</b></a>
