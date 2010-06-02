@@ -1492,9 +1492,9 @@ public class DisplayMozillaVersion {
 
   <dt><strong><a name="copypastewithKlipper"> Q:  Why does Copy/Paste sometimes not work on Linux?</a></strong></dt>
   <dd>A: There's a known Copy/Paste problem for people who run Klipper Clipboard applet which 
-  		cause Eclipse clipboard operations to fail. For more information about this issue see 
+  		causes Eclipse clipboard operations to fail. For more information about this issue see 
   		<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=153809">Bug 153809</a> 
-  		<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=226540">Bug 226540</a> 
+  		<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=226540">Bug 226540</a>.
   </dd>
 
   <dt><strong><a name="tableheaderswithJAWS"> Q:  How do I get JAWS to read Table column headers?</a></strong></dt>
@@ -1511,10 +1511,12 @@ public class DisplayMozillaVersion {
   <dt><strong><a name="oldScreenReaderNotWorking"> Q:  Why doesn't my old Windows screen reader work with Eclipse 3.6?</a></strong></dt>
   <dd>A: JAWS version 8 and 9 and Window-Eyes version 6 no longer work well with Eclipse and other SWT applications.
 	Window-Eyes 6 will cause Eclipse to crash, and JAWS 8 and 9 can cause SWT applications to crash.
-	The reason is that Eclipse 3.6 added support for IAccessible2, and these older screen reader versions contain
-	a partial implementation of IAccessible2 that does not follow the current IAccessible2 specification.
-	The workaround is to launch eclipse or your SWT application using the <code>-Dorg.eclipse.swt.accessibility.UseIA2=false</code> VM argument.
-	(bug <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=313182">313182</a>)
+	The reason is that Eclipse 3.6 added support for IAccessible2, and these older screen reader versions
+	contain a partial implementation of IAccessible2 that does not follow the current IAccessible2 specification.
+	The workaround is to launch eclipse or your SWT application using the
+	<br><code>-Dorg.eclipse.swt.accessibility.UseIA2=false</code>
+	<br>VM argument. For more information about this issue see
+	<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=313182">Bug 313182</a>.
   </dd>
   
 </dl>
