@@ -54,12 +54,12 @@ Whatever the reason, you will find many resources here. Enjoy!</p>
   <table width="100%">
   <tr><td>
       <b><font size="+1">Development</font></b><br>
-      <a href="http://download.eclipse.org/eclipse/downloads/drops/S-3.6M6-201003121448/download.php?dropFile=swt-3.6M6-win32-win32-x86.zip">Windows</a>,
-      <a href="http://download.eclipse.org/eclipse/downloads/drops/S-3.6M6-201003121448/download.php?dropFile=swt-3.6M6-gtk-linux-x86.zip">Linux</a>,
+      <a href="http://download.eclipse.org/eclipse/downloads/drops/S-3.6RC4-201006031500/download.php?dropFile=swt-3.6RC4-win32-win32-x86.zip">Windows</a>,
+      <a href="http://download.eclipse.org/eclipse/downloads/drops/S-3.6RC4-201006031500/download.php?dropFile=swt-3.6RC4-gtk-linux-x86.zip">Linux</a>,
       <span style="white-space: nowrap;">
-      <a href="http://download.eclipse.org/eclipse/downloads/drops/S-3.6M6-201003121448/download.php?dropFile=swt-3.6M6-cocoa-macosx.zip">OS X</a></span>,
-      <a href="http://download.eclipse.org/eclipse/downloads/drops/S-3.6M6-201003121448/index.php#swt" target="_top">more...</a><br>
-      <small>3.6 Milestone 6 Release - <span style="white-space: nowrap;">12 March 2010</span></small><br>
+      <a href="http://download.eclipse.org/eclipse/downloads/drops/S-3.6RC4-201006031500/download.php?dropFile=swt-3.6RC4-cocoa-macosx.zip">OS X</a></span>,
+      <a href="http://download.eclipse.org/eclipse/downloads/drops/S-3.6RC4-201006031500/index.php#swt" target="_top">more...</a><br>
+      <small>3.6 Release Candidate 4 - <span style="white-space: nowrap;">4 June 2010</span></small><br>
   <ul>
   <li><a href="R3_6/plan.html">3.6 Development Plan</a></li>
   <li><a href="R3_6/new_and_noteworthy.html">New and Noteworthy</a></li>
