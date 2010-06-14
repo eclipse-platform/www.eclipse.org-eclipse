@@ -1009,7 +1009,7 @@ the SWT.CENTER style when creating a composite.
   <br>
   <ul>
     <li>Windows (Internet Explorer 5 and above)</li>
-    <li>Mac (OS X 10.4 and above, Safari-based)</li>
+    <li>Mac (OS X 10.4 and above, WebKit-based)</li>
     <li>Linux GTK and Linux Motif (<a href="#browserlinux">details</a>)
     <li>Solaris-x86 and Solaris 10 SPARC (<a href="#browsersolaris">details</a>)
     <li>Photon</li>
@@ -1127,7 +1127,7 @@ the SWT.CENTER style when creating a composite.
       </li>
       <li>Linux (Mozilla): Applets can be viewed with Mozilla-based Browsers as long as the Mozilla Java plug-in is found at runtime.
       For info about adding directories to the Mozilla plug-in search path see <a href="#mozillaPlugins">How can my Mozilla-based Browser find my Mozilla plug-ins?</a></li>
-      <li>OS X (Safari): Applets cannot be viewed with Safari-based Browsers because the launching of a JRE to execute the applet collides with the
+      <li>OS X (WebKit): Applets cannot be viewed with WebKit-based Browsers on OS X because the launching of a JRE to execute the applet collides with the
       JRE that is running the application.</li>
     </ul>      
   </dd>
@@ -1150,8 +1150,8 @@ the SWT.CENTER style when creating a composite.
   	  	SWT Browser embeds the IE renderer by default (ie.- if the Browser is created with style <code>SWT.NONE</code>),
   	  	the Browser automatically inheirits these proxy settings.  These settings can be changed at any time in the Internet
   	  	Options of a running IE instance and the Browser will automatically use the new values.</li>
-  	  <li>Similarly, on OSX all instances of Safari use a shared set of global proxy settings.  Since on OSX the
-  	  	SWT Browser embeds the Safari renderer by default (ie.- if the Browser is created with style <code>SWT.NONE</code>),
+  	  <li>Similarly, on OSX all instances of WebKit use a shared set of global proxy settings.  Since on OSX the
+  	  	SWT Browser embeds the WebKit renderer by default (ie.- if the Browser is created with style <code>SWT.NONE</code>),
   	  	the Browser automatically inheirits these proxy settings.  These settings can be changed at any time in the OSX
   	  	System Preferences and the Browser will automatically use the new values.</li>
   	  <li>Mozilla-based Browser instances (ie.- those that are either running on Linux or are created with style
