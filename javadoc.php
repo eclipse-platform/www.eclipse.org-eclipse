@@ -11,11 +11,11 @@
 <table width="635px" class="swtpage">
 <colgroup><col width="125px"><col width="510px"></colgroup>
 <tr><?php include "sidebar.php"; ?>
-<h1 style="padding: 0; margin: 0; border-bottom: 1px solid #000000;">SWT Javadoc</h1>
+<td valign="top" style="padding: 10px"><h1 style="padding: 0; margin: 0; border-bottom: 1px solid #000000;">SWT Javadoc</h1>
 
 <p>Online javadoc for the SWT project.</p>
 
-<tbody><tr class="TableHeadingColor" bgcolor="#ccccff">
+<tr class="TableHeadingColor" bgcolor="#ccccff">
 <th colspan="2" align="left"><font size="+1">
 <b>Packages</b></font></th>
 </tr>
@@ -81,7 +81,6 @@
 <td width="30%"><b><a href="http://help.eclipse.org/helios/topic/org.eclipse.platform.doc.isv/reference/api/org/eclipse/swt/widgets/package-summary.html">org.eclipse.swt.widgets</a></b></td>
 <td>SWT widget public API classes.</td>
 </tr>
-</tbody>
 
 </table>
 </body>
