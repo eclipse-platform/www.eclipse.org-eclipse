@@ -15,9 +15,10 @@
 
 <p>Online javadoc for the SWT project.</p>
 
+<table width="100%">
 <tr class="TableHeadingColor" bgcolor="#ccccff">
 <th colspan="2" align="left"><font size="+1">
-<b>Packages</b></font></th>
+<b>SWT Packages</b></font></th>
 </tr>
 
 <tr class="TableRowColor" bgcolor="white">
@@ -82,6 +83,7 @@
 <td>SWT widget public API classes.</td>
 </tr>
 
+</table>
 </table>
 </body>
 </html>
