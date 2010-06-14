@@ -54,8 +54,6 @@ the <em>Platform Plug-in Developer Guide</em>. To get there in Eclipse, select
 <br><strong>Help</strong> &gt; <strong>Help Contents</strong> &gt;
 <strong>Platform Plug-in Developer Guide</strong>.</p>
 
-<p>You can also get this document <a href="http://www.eclipse.org/documentation/">in PDF format</a>.</p>
-
 <p>SWT documentation appears in the following sections of the
 <em>Platform Plug-in Developer Guide</em>:</p>
 <ul>
@@ -64,7 +62,17 @@ the <em>Platform Plug-in Developer Guide</em>. To get there in Eclipse, select
   <li>Examples Guide: Standard Widget Toolkit</li>
 </ul>
 
+<table width="100%">
+<tr><th bgcolor="#0080c0" align="left" style="padding: 2px;"><font color="#ffffff">SWT Online Javadoc</font>
+</table>
 
+<p>In addition to reading the SWT Javadoc inside Eclipse, you can read it online here:</p>
+  <ul>
+	<li><a href="http://help.eclipse.org/helios/index.jsp?topic=/org.eclipse.platform.doc.isv/reference/api/overview-summary.html">Online javadoc</a>
+		(scroll down to the <code>org.eclipse.swt.*</code> packages)</li>
+	<li><a href="javadoc.php">Online javadoc package links</a></li>
+	<li><a href="http://www.eclipse.org/documentation/">Older versions</a></li>
+  </ul>
 
 <table width="100%">
 <tr><th bgcolor="#0080c0" align="left" style="padding: 2px;"><font color="#ffffff">SWT Articles at eclipse.org and eclipse.org/swt</font>
@@ -115,16 +123,6 @@ the <em>Platform Plug-in Developer Guide</em>. To get there in Eclipse, select
     <li><a href="http://www.ibm.com/developerworks/views/opensource/libraryview.jsp?search_by=eclipse+game+plug-in&ca=dgr-eclipse-1">Create an Eclipse Game Plug-in</a> (4 parts)</li>
   </ul>
 </ul>
-
-<table width="100%">
-<tr><th bgcolor="#0080c0" align="left" style="padding: 2px;"><font color="#ffffff">SWT Online Javadoc</font>
-</table>
-
-<p>In addition to reading the Javadoc inside Eclipse, you can read it online here:</p>
- 
-  <ul>
-	<li><a href="http://help.eclipse.org/stable/nftopic/org.eclipse.platform.doc.isv/reference/api/overview-summary.html">Online Javadoc</a></li>
-  </ul>
 
 <table width="100%">
 <tr><th bgcolor="#0080c0" align="left" style="padding: 2px;"><font color="#ffffff">SWT Online Tutorials</font>
