@@ -58,20 +58,22 @@ the <em>Platform Plug-in Developer Guide</em>. To get there in Eclipse, select
 <em>Platform Plug-in Developer Guide</em>:</p>
 <ul>
   <li>Programmer's Guide: Standard Widget Toolkit</li>
-  <li>Reference: API Reference: org.eclipse.swt</li>
+  <li>Reference: API Reference: org.eclipse.swt.* (javadoc for each package)</li>
   <li>Examples Guide: Standard Widget Toolkit</li>
 </ul>
 
 <table width="100%">
-<tr><th bgcolor="#0080c0" align="left" style="padding: 2px;"><font color="#ffffff">SWT Online Javadoc</font>
+<tr><th bgcolor="#0080c0" align="left" style="padding: 2px;"><font color="#ffffff">SWT Online Documentation</font>
 </table>
 
-<p>In addition to reading the SWT Javadoc inside Eclipse, you can read it online here:</p>
+<p>In addition to reading SWT documentation inside Eclipse, you can read it online here:</p>
   <ul>
-	<li><a href="http://help.eclipse.org/helios/index.jsp?topic=/org.eclipse.platform.doc.isv/reference/api/overview-summary.html">Online javadoc</a>
-		(scroll down to the <code>org.eclipse.swt.*</code> packages)</li>
-	<li><a href="javadoc.php">Online javadoc package links</a></li>
-	<li><a href="http://www.eclipse.org/documentation/">Older versions</a></li>
+    <li><a href="http://help.eclipse.org/helios/topic/org.eclipse.platform.doc.isv/guide/swt.htm">Programmer's Guide</a></li>
+    <li><a href="http://help.eclipse.org/helios/index.jsp?topic=/org.eclipse.platform.doc.isv/reference/api/overview-summary.html">API Reference</a>
+    (scroll down to see the javadoc for the <code>org.eclipse.swt.*</code> packages)</li>
+    <li><a href="http://help.eclipse.org/helios/topic/org.eclipse.platform.doc.isv/samples/samples.html">Examples Guide</a></li>
+	<li><a href="javadoc.php">Online javadoc</a></li>
+	<li><a href="http://www.eclipse.org/documentation/">Older versions of the Eclipse documentation</a></li>
   </ul>
 
 <table width="100%">

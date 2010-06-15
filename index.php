@@ -97,7 +97,7 @@ Whatever the reason, you will find many resources here. Enjoy!</p>
 <li><a href="examples.php">Examples</a>, helpful big code examples</li>
 <li><a href="faq.php">The SWT FAQ</a> answers many common questions</li>
 <li><a href="tools.php">Tools and Plug-ins</a> for SWT developers</li>
-<li><a href="http://help.eclipse.org/helios/index.jsp?topic=/org.eclipse.platform.doc.isv/reference/api/overview-summary.html">Online Javadoc</a></li>
+<li><a href="javadoc.php">Online Javadoc</a></li>
 <li><a href="docs.php">Books and additional documentation</a></li>
 <li><a href="test_plan.html">Test Plan for SWT</a></li>
 <li><a href="community.php">SWT Community Page</a></li>
