@@ -139,15 +139,15 @@ bugzilla email preferences.</p>
     <ul>
     <li><a href="R3_3/new_and_noteworthy.html">New and Noteworthy</a> items for each milestone</li>
     </ul>
-<li><a href="http://archive.eclipse.org/eclipse/downloads/drops/R-3.2.2-200702121330/index.php#SWT" target="_top">SWT 3.2.2</a>, 12 February 2007.</li>
+<li><a href="http://archive.eclipse.org/eclipse/downloads/drops/R-3.2.2-200702121330/index.php#swt" target="_top">SWT 3.2.2</a>, 12 February 2007.</li>
     <ul>
     <li><a href="R3_2/new_and_noteworthy.html">New and Noteworthy</a> items for each milestone</li>
     </ul>
-<li><a href="http://archive.eclipse.org/eclipse/downloads/drops/R-3.1.2-200601181600/index.php#SWT" target="_top">SWT 3.1.2</a>, 19 January 2006.
+<li><a href="http://archive.eclipse.org/eclipse/downloads/drops/R-3.1.2-200601181600/index.php#swt" target="_top">SWT 3.1.2</a>, 19 January 2006.
     <ul>
     <li><a href="R3_1/new_and_noteworthy.html">New and Noteworthy</a> items for each milestone</li>
     </ul>
-<li><a href="http://archive.eclipse.org/eclipse/downloads/drops/R-3.0.2-200503110845/index.php#SWT" target="_top">SWT 3.0.2</a>, 11 March 2005.</li>
+<li><a href="http://archive.eclipse.org/eclipse/downloads/drops/R-3.0.2-200503110845/index.php#swt" target="_top">SWT 3.0.2</a>, 11 March 2005.</li>
     <ul>
     <li><a href="R3_0/new_and_noteworthy.html">New and Noteworthy</a> items for each milestone</li>
     </ul></li>
