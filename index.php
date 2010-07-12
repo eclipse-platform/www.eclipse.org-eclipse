@@ -43,7 +43,7 @@ Whatever the reason, you will find many resources here. Enjoy!</p>
       <a href="http://download.eclipse.org/eclipse/downloads/drops/R-3.5.2-201002111343/download.php?dropFile=swt-3.5.2-gtk-linux-x86.zip">Linux</a>,
       <span style="white-space: nowrap;">
       <a href="http://download.eclipse.org/eclipse/downloads/drops/R-3.5.2-201002111343/download.php?dropFile=swt-3.5.2-cocoa-macosx.zip">OS X</a></span>,
-      <a href="http://download.eclipse.org/eclipse/downloads/drops/R-3.5.2-201002111343/index.php#swt" target="_top">more...</a><br>
+      <a href="http://download.eclipse.org/eclipse/downloads/drops/R-3.5.2-201002111343/index.php#SWT" target="_top">more...</a><br>
       <small>3.5.2 Final Release - <span style="white-space: nowrap;">26 February 2010</span></small><br>
   <ul>
   <li><a href="R3_5/new_and_noteworthy.html">New and Noteworthy</a></li>
@@ -58,7 +58,7 @@ Whatever the reason, you will find many resources here. Enjoy!</p>
       <a href="http://download.eclipse.org/eclipse/downloads/drops/R-3.6-201006080911/download.php?dropFile=swt-3.6-gtk-linux-x86.zip">Linux</a>,
       <span style="white-space: nowrap;">
       <a href="http://download.eclipse.org/eclipse/downloads/drops/R-3.6-201006080911/download.php?dropFile=swt-3.6-cocoa-macosx.zip">OS X</a></span>,
-      <a href="http://download.eclipse.org/eclipse/downloads/drops/R-3.6-201006080911/index.php#swt" target="_top">more...</a><br>
+      <a href="http://download.eclipse.org/eclipse/downloads/drops/R-3.6-201006080911/index.php#SWT" target="_top">more...</a><br>
       <small>3.6 Final Release - <span style="white-space: nowrap;">23 June 2010</span></small><br>
   <ul>
   <li><a href="R3_6/plan.html">3.6 Development Plan</a></li>
