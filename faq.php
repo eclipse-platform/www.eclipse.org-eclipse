@@ -276,10 +276,8 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
      <li>Unzip the distribution.  This will create a directory called <tt>eclipse</tt>.
        This directory is subsequently referred to as <em>&lt;eclipseRoot&gt;</em>.
 
-     <li>In the directory <tt><em>&lt;eclipseRoot&gt;</em>/plugins/org.eclipse.rcp.source.platform_X.X.X</tt>,
-         find the source zip in the SWT subdirectory.
-
-     <li>Unzip contained file <tt>src.zip</tt>.
+     <li>Copy file <tt><em>&lt;eclipseRoot&gt;</em>/plugins/org.eclipse.swt.<em>&lt;ws&gt;</em>.<em>&lt;os&gt;</em>.<em>&lt;arch&gt;</em>.source_X.X.X.<em>&lt;versionString&gt;</em>.zip</tt>
+         to another directory and unzip it.
 
      <li>Edit the file <strong>build.sh</strong> (or <strong>build.bat</strong> on Windows)
          in the current directory. Set the environment variables defined in that file to
