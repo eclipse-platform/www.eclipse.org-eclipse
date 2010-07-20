@@ -69,8 +69,7 @@ the <em>Platform Plug-in Developer Guide</em>. To get there in Eclipse, select
 <p>In addition to reading SWT documentation inside Eclipse, you can read it online here:</p>
   <ul>
     <li><a href="http://help.eclipse.org/helios/topic/org.eclipse.platform.doc.isv/guide/swt.htm">Programmer's Guide</a></li>
-    <li><a href="http://help.eclipse.org/helios/index.jsp?topic=/org.eclipse.platform.doc.isv/reference/api/overview-summary.html">API Reference</a>
-    (scroll down to see the javadoc for the <code>org.eclipse.swt.*</code> packages)</li>
+    <li><a href="http://help.eclipse.org/helios/index.jsp?topic=/org.eclipse.platform.doc.isv/reference/api/org/eclipse/swt/widgets/package-summary.html">API Reference</a></li>
     <li><a href="http://help.eclipse.org/helios/topic/org.eclipse.platform.doc.isv/samples/samples.html">Examples Guide</a></li>
 	<li><a href="javadoc.php">Online javadoc</a></li>
 	<li><a href="http://www.eclipse.org/documentation/">Older versions of the Eclipse documentation</a></li>
