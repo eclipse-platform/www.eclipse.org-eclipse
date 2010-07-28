@@ -250,6 +250,7 @@ create a snippet contribution report in Bugzilla</a>. Thanks in advance for your
     <li><a name="expandbar"><b>ExpandBar</b></a>
       <ul>
         <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet223.java">create an expand bar</a></li>
+        <li> <a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet343.java">change an ExpandItem's height in response to a change in a contained Control</a></li>
       </ul>
       <p></p>
       
