@@ -1316,15 +1316,24 @@ public class DisplayMozillaVersion {
   </dd>
 
   <dt><strong><a name="swtawtosx">Q: Why does the SWT_AWT bridge not work for me on OS X?</a></strong></dt>
-  <dd>A: This was an SWT-AWT incompatibility that existed prior to eclipse 3.2.
-      This problem has since been fixed in SWT, but requires that an OS X jre with
-      support for this fix be used as well.  Specifically, the jre must be version 1.5.0
-      Release 4 (or greater), and the additional "SWT Compatibility Libraries" must
-      be installed.  These libraries can be downloaded from the Downloads section
-      of <a href="http://connect.apple.com">Apple Developer Connection</a>.  It's
-      free to create an account at Apple Developer Connection to access the download,
-      which is approximately 180K.  For more information about this issue see
+  <dd>A: This was an SWT-AWT incompatibility that existed prior to Eclipse 3.2 and Java 5 on Mac OS X 10.4.
+	  This problem has since been fixed in SWT. On Mac OS X 10.4, you must install Java 1.5.0 Release 5 or later.
+	  On Mac OS X 10.5 and later, no additional updates are needed. (In the past a separate download called
+	  the "SWT Compatibility Library" was required. Starting with "Java for Mac OS X 10.4 Release 5", this library
+	  is now a part of the JRE. It is no longer available as a separate download from Apple.)
+	  For more information about this issue see
       <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=67384">bug 67384</a>.
+  </dd>
+
+  <dt><strong><a name="swtawtosx">Q: I have the required Java and Mac OS X versions, but I'm still having problems with the SWT_AWT bridge.</a></strong></dt>
+  <dd>A: Prior to Eclipse 3.6, both the Carbon and Cocoa versions of the SWT only supported embedding the SWT in an AWT Frame.
+	In Cocoa SWT 3.6 and later, embedding works in either direction. If you have the right environment, next,
+	make sure you are starting your application with the argument '-XstartOnFirstThread'. This is necessary even
+	if you will be using Swing or the AWT. Next, make sure your code is calling each toolkit on the correct thread. Code
+	that calls into the SWT	must be running on the main thread, and code that calls the AWT or Swing must be called from 
+	a thread other than the SWT thread, using either java.awt.EventQueue.invokeLater() or javax.swing.SwingUtilities.invokeLater(). 
+	<strong>NOTE:</strong> This is true on ALL PLATFORMS, not just Mac OS X, but your application is almost guaranteed to hang or
+	be very unstable if you don't follow this rule on the Mac.
   </dd>
 
   <dt><strong><a name="swtawtsolaris">Q: Why does the SWT_AWT bridge not work for me on AIX or Solaris?</a></strong></dt>
