@@ -1,0 +1,396 @@
+<html>
+<head>
+<title>Platform SWT 3.6</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="http://dev.eclipse.org/default_style.css" type="text/css">
+</head>
+
+<!--
+M1 - August 7, 2009 (6 weeks) 
+>>>  (3.5.1/Galileo-SR1 +0 dates: RC4-September 11) 
+
+- Reduce bug count
+- Windows 7 initial testing
+- Cocoa
+- Arabic Numbers
+- Write snippets and support newsgroup
+
+M2 - September 18, 2009 (6 weeks) - PLANNING 
+
+- Reduce bug count
+- IA2
+- Browser MultiZone security
+- Browser unload
+- finish Cocoa
+- Arabic Numbers
+- Improve tab stops support in StyledText (4866)
+- Write snippets and support newsgroup
+
+M3 - October 30, 2009 (6 weeks) - DEV 
+
+- Reduce bug count
+- IA2
+- finish Cocoa
+- Ubuntu
+- Program improvements
+- Windows 7 3.4/3.6 support
+- BIDI Cocoa
+- Browser password
+- PPC 64 support
+- Investigate AIX 6
+- CSS  support
+- StyledText: non-uniform tabstops on different lines (279356)
+- Write snippets and support newsgroup
+
+M4 - December 11, 2009 (6 weeks) - DEV 
+
+- Reduce bug count
+- IA2
+- finish Cocoa
+- Ubuntu 
+- Cocoa SWT_AWT
+- BIDI Cocoa
+- Browser e4 support
+- CSS support
+- Write snippets and support newsgroup
+
+M5 - January 29, 2010 (7 weeks) - MAJOR FEATURE WORK COMPLETED 
+>>>  (3.5.2/Ganymede-SR2 +0 dates:  February ???) 
+
+- Reduce bug count
+- IA2
+- finish Cocoa
+- Bidi dynamic segment support
+- Browser e4 support
+- CSS support
+- Write snippets and support newsgroup
+
+M6 - March 12, 2010 (6 weeks) - API Freeze
+>>>  (EclipseCon March 22-25) 
+
+- Reduce bug count
+- IA2
+- finish Cocoa
+- Browser e4 support
+- CSS support
+- Write snippets and support newsgroup
+
+M7 - April 30, 2010 (7 weeks) -  Feature Freeze 
+
+- Reduce bug count
+- IA2
+- finish Cocoa
+- Write snippets and support newsgroup
+-->
+
+<body bgcolor="#FFFFFF" text="#000000">
+<table border=0 cellspacing=5 cellpadding=2 width="100%" >
+  <tr> 
+    <td align=left width="72%"> <font class=indextop>Platform SWT R3.6</font> <br>
+      <font class=indexsub> Platform SWT</font></td>
+    <td width="28%">
+    	<img src="http://dev.eclipse.org/images/Idea.jpg" height=86 width=120
+    	alt="Eclipse documentation banner"
+    	></td>
+  </tr>
+</table>
+<table border=0 cellspacing=5 cellpadding=2 width="100%" >
+  <tr> 
+    <a NAME="Overall_Planning">
+    <td align=LEFT valign=TOP colspan="2" bgcolor="#0080C0"><b><font color="#FFFFFF" face="Arial,Helvetica">
+      Overall 3.6 Plan
+    </font></b></td>
+    </a>
+  </tr>
+  
+    <tr>
+		<td colspan="2">
+		<br>
+		Last revised: June 24, 2010.
+		<p></td>
+	</tr>
+	
+	<tr>
+		<td valign="top" width="2%"><img src="http://dev.eclipse.org/images/Adarrow.gif"
+			nosave="" border="0" height="16" width="16"></td>
+		<td><b>Overall Platform Themes</b>
+		<ul>
+			<li>Accessibility</li>
+			<li>BIDI</li>
+			<li>Platforms</li>
+			<li>e4</li>
+		</ul>
+		</td>
+	</tr>
+	<tr>
+		<td valign="top" width="2%"><img src="http://dev.eclipse.org/images/Adarrow.gif"
+			nosave="" border="0" height="16" width="16"></td>
+		<td><b>Plan Items</b>
+		<ul>
+			<li><img src="../images/ok.gif" nosave="" height="10" width="10" border="0"> Focus on Accessibility
+			(<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=252646">252646</a>)</li>
+			
+			<li><font class="indexsub" color="#8080ff">[&gt;3.6]</font> Improvements to BIDI support 	
+			(<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=288554">288554</a>, 
+			<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=230854">230854</a>)
+			</li>
+		
+			<li><img src="../images/ok.gif" nosave="" height="10" width="10" border="0"> Browser Improvements
+			(<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=279408">279408</a>, <a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=277072">277072</a>, <a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=278299">278299</a>, <a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=77217">77217</a>)</li>		
+			
+			<li><img src="../images/ok.gif" nosave="" height="10" width="10" border="0"> Complete SWT Cocoa port</li>		
+				
+			<li><img src="../images/ok.gif" nosave="" height="10" width="10" border="0"> Provide support for Windows 7
+			(<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=288550">288550</a>)</li>
+			
+			<li><img src="../images/ok.gif" nosave="" height="10" width="10" border="0"> Provide support for Ubuntu
+			(<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=288552">288552)</a></li>
+			
+			<li><img src="../images/ok.gif" nosave="" height="10" width="10" border="0"> Provide support for Mac OS X Snow Leopard
+			(<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=290818">290818)</a></li>
+			
+			<li><img src="../images/ok.gif" nosave="" height="10" width="10" border="0"> Provide full skinning capabilities for the Eclipse Workbench</li>
+			
+			<li><img src="../images/ok.gif" nosave="" height="10" width="10" border="0"> Improve Program API
+			(<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=279772">279772</a>)</li>
+			
+			<li>Implement more native behavior:
+				<br><br><b>Windows 7</b>
+				<ul>
+					<li><font class="indexsub" color="#8080ff">[&gt;3.6]</font>Direct2D</li>
+					<li><font class="indexsub" color="#8080ff">[&gt;3.6]</font>System menu support</li>
+					<li><img src="../images/ok.gif" nosave="" height="10" width="10" border="0">Task bar integration</li>
+					<li><font class="indexsub" color="#8080ff">[&gt;3.6]</font>Toolbar theme</li>
+				</ul>
+				<br><b>Mac OS X</b>
+				<ul>
+					<li><font class="indexsub" color="#8080ff">[&gt;3.6]</font>Toolbar</li>
+					<li><font class="indexsub" color="#8080ff">[&gt;3.6]</font>System menu support</li>
+				</ul>
+			</li>		
+			<br>
+			<li><img src="../images/ok.gif" nosave="" height="10" width="10" border="0"> Investigate WebKit on GTK+</li>
+			
+			<li><font class="indexsub" color="#8080ff">[&gt;3.6]</font> Investigate Qt</li>	
+			
+			<li><font class="indexsub" color="#8080ff">[&gt;3.6]</font> General API for drawing standard UI components
+			(<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=80554">80554</a>, 
+			<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=37706">37706</a>)</li>
+			
+			
+			<li><font class="indexsub" color="#8080ff">[&gt;3.6]</font> Investigate GTK2 support for AIX and HPUX</li>
+		</ul>
+		</td>
+	</tr>
+</table>
+
+<table border="0" cellspacing="5" cellpadding="2" width="100%">
+	<tbody>
+		<tr>
+			<td align="left" valign="top" colspan="4" bgcolor="#0080c0"
+				width="100%"><b><font face="Arial,Helvetica"><font color="#ffffff">
+			Legend</font></font></b></td>
+		</tr>
+		<tr>
+			<td valign="top"><img src="../images/progress.gif" nosave="" height="5" width="14" border="0"></td>
+			<td width="50%">item is under development</td>
+			<td valign="top"><img src="../images/glass.gif" nosave="" height="10" width="10" border="0"></td>
+			<td width="50%">item is under investigation</td>
+		</tr>
+		<tr>
+			<td valign="top"><img src="../images/ok.gif" nosave="" height="10" width="10" border="0"></td>
+			<td width="50%">item is finished</td>
+			<td valign="top">( )</td>
+			<td width="50%">item is time permitting</td>
+		</tr>
+		<tr>
+			<td valign="top"><font class="indexsub" color="#8080ff">[&gt;3.6]</font></td>
+			<td width="50%">item is deferred</td>
+			<td valign="top"><font class="indexsub"><img src="../images/new.gif" alt="" border="0"></font></td>
+			<td width="50%">new</td>
+		</tr>
+	</tbody>
+</table>
+
+<table border="0" cellspacing="5" cellpadding="2" width="100%">
+	<tbody>
+	<tr>
+		<td align="left" valign="top" colspan="2" bgcolor="#0080c0"
+			width="100%"><b><font face="Arial,Helvetica"><font color="#ffffff">
+			Milestone Plan 3.6 M1 - August 7, 2009</font></font></b></td>
+	</tr>
+	<tr>
+		<td valign="top" width="2%"><img src="http://dev.eclipse.org/images/Adarrow.gif" nosave=""
+			border="0" height="16" width="16"></td>
+		<td><ul>
+			<li>Reduce bug count <img src="../images/ok.gif" nosave="" height="10" width="10" border="0"></li>
+			<li>Windows 7 initial testing <img src="../images/ok.gif" nosave="" height="10" width="10" border="0"></li>
+			<li>Icon support for GTK Text widgets (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=281352">281352</a>) <img src="../images/ok.gif" nosave="" height="10" width="10" border="0"></li>
+			<li>BIDI : Arabic numbers substitution (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=133133">133133</a>) <img src="../images/ok.gif" nosave="" height="10" width="10" border="0"></li>
+			<li>Complete Cocoa port (<a href="https://bugs.eclipse.org/bugs/buglist.cgi?bug_file_loc=&bug_file_loc_type=allwordssubstr&bug_id=&bug_status=RESOLVED&bugidtype=include&chfieldfrom=&chfieldto=Now&chfieldvalue=&classification=Eclipse&component=SWT&email1=&email2=&emailtype1=substring&emailtype2=substring&field0-0-0=noop&keywords=&keywords_type=allwords&longdesc=&longdesc_type=allwordssubstr&op_sys=Mac%20OS%20X%20-%20Cocoa&product=Platform&query_format=advanced&resolution=FIXED&short_desc=&short_desc_type=allwordssubstr&status_whiteboard=&status_whiteboard_type=allwordssubstr&target_milestone=3.6%20M1&title=Bug%20List&title=Bug%20List&type0-0-0=noop&value0-0-0=&votes=">bug list</a>) <img src="../images/ok.gif" nosave="" height="10" width="10" border="0"></li>
+			<li>3.6 planning <img src="../images/ok.gif" nosave="" height="10" width="10" border="0"></li>
+			<li>3.5.1 maintenance work <img src="../images/ok.gif" nosave="" height="10" width="10" border="0"></li>
+			<li>Write snippets and support newsgroup <img src="../images/ok.gif" nosave="" height="10" width="10" border="0"></li>
+		</ul>
+		</td>
+	</tr>
+	</tbody>
+</table>
+ 
+<table border="0" cellspacing="5" cellpadding="2" width="100%">
+	<tbody>
+	<tr>
+		<td align="left" valign="top" colspan="2" bgcolor="#0080c0"
+			width="100%"><b><font face="Arial,Helvetica"><font color="#ffffff">
+			Milestone Plan 3.6 M2 - September 18, 2009</font></font></b></td>
+	</tr>
+	<tr>
+		<td valign="top" width="2%"><img src="http://dev.eclipse.org/images/Adarrow.gif" nosave=""
+			border="0" height="16" width="16"></td>
+		<td><ul>
+			<li>Reduce bug count <img src="../images/ok.gif" nosave="" height="10" width="10" border="0"></li>
+			<li>Accessibility support - investigate UIA and IA2 <img src="../images/ok.gif" nosave="" height="10" width="10" border="0"></li>
+			<li>Browser improvements : support multiple zones (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=278299">278299</a>) <img src="../images/ok.gif" nosave="" height="10" width="10" border="0"></li>
+			<li>Browser improvements : send onbeforeunload (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=277072">277072</a>) <img src="../images/ok.gif" nosave="" height="10" width="10" border="0"></li>
+			<li>Browser improvements : Mozilla browser on Solaris SPARC (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=77217">77217</a>) <img src="../images/ok.gif" nosave="" height="10" width="10" border="0"></li>
+			<li>Complete Cocoa port (<a href="https://bugs.eclipse.org/bugs/buglist.cgi?bug_file_loc=&bug_file_loc_type=allwordssubstr&bug_id=&bug_status=RESOLVED&bugidtype=include&chfieldfrom=&chfieldto=Now&chfieldvalue=&classification=Eclipse&component=SWT&email1=&email2=&emailtype1=substring&emailtype2=substring&field0-0-0=noop&keywords=&keywords_type=allwords&longdesc=&longdesc_type=allwordssubstr&op_sys=Mac%20OS%20X%20-%20Cocoa&product=Platform&query_format=advanced&resolution=FIXED&short_desc=&short_desc_type=allwordssubstr&status_whiteboard=&status_whiteboard_type=allwordssubstr&target_milestone=3.6%20M2&title=Bug%20List&title=Bug%20List&type0-0-0=noop&value0-0-0=&votes=">bug list</a>) <img src="../images/ok.gif" nosave="" height="10" width="10" border="0"></li>
+			<li>BIDI : Arabic numbers substitution (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=133133">133133</a>) <img src="../images/ok.gif" nosave="" height="10" width="10" border="0"></li>
+			<li>Improve tab stops support in StyledText (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=4866">4866</a>) <img src="../images/ok.gif" nosave="" height="10" width="10" border="0"></li>
+			<li>3.6 planning <img src="../images/ok.gif" nosave="" height="10" width="10" border="0"></li>
+			<li>3.5.1 maintenance work <img src="../images/ok.gif" nosave="" height="10" width="10" border="0"></li>
+			<li>Write snippets and support newsgroup <img src="../images/ok.gif" nosave="" height="10" width="10" border="0"></li>
+		</ul>
+		</td>
+	</tr>
+	</tbody>
+</table>
+ 
+<table border="0" cellspacing="5" cellpadding="2" width="100%">
+	<tbody>
+	<tr>
+		<td align="left" valign="top" colspan="2" bgcolor="#0080c0"
+			width="100%"><b><font face="Arial,Helvetica"><font color="#ffffff">
+			Milestone Plan 3.6 M3 - October 30, 2009</font></font></b></td>
+	</tr>
+	<tr>
+		<td valign="top" width="2%"><img src="http://dev.eclipse.org/images/Adarrow.gif" nosave=""
+			border="0" height="16" width="16"></td>
+		<td><ul>
+			<li>Reduce bug count <img src="../images/ok.gif" nosave="" height="10" width="10" border="0"></li>
+			<li>Accessibility support <img src="../images/ok.gif" nosave="" height="10" width="10" border="0"></li>
+			<li>Windows 7 support for Eclipse/SWT 3.4<img src="../images/ok.gif" nosave="" height="10" width="10" border="0"></li>
+			<li>Ubuntu support <img src="../images/ok.gif" nosave="" height="10" width="10" border="0"></li>
+			<li>Snow Leopard support <img src="../images/ok.gif" nosave="" height="10" width="10" border="0"></li>
+			<li>Program improvements <img src="../images/ok.gif" nosave="" height="10" width="10" border="0"></li>
+			<li>BIDI : base writing direction on Cocoa <img src="../images/ok.gif" nosave="" height="10" width="10" border="0"></li>
+			<li>Browser improvements : show password dialog (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=279408">279408</a>) <img src="../images/ok.gif" nosave="" height="10" width="10" border="0"></li>
+			<li>Linux GTK PPC 64 support <img src="../images/ok.gif" nosave="" height="10" width="10" border="0"></li>
+			<li>CSS support <img src="../images/ok.gif" nosave="" height="10" width="10" border="0"></li>
+			<li>StyledText: non-uniform tabstops on different lines (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=279356">279356)</a> <img src="../images/ok.gif" nosave="" height="10" width="10" border="0"></li>
+			<li>Complete Cocoa port (<a href="https://bugs.eclipse.org/bugs/buglist.cgi?bug_file_loc=&bug_file_loc_type=allwordssubstr&bug_id=&bug_status=RESOLVED&bugidtype=include&chfieldfrom=&chfieldto=Now&chfieldvalue=&classification=Eclipse&component=SWT&email1=&email2=&emailtype1=substring&emailtype2=substring&field0-0-0=noop&keywords=&keywords_type=allwords&longdesc=&longdesc_type=allwordssubstr&op_sys=Mac%20OS%20X%20-%20Cocoa&product=Platform&query_format=advanced&resolution=FIXED&short_desc=&short_desc_type=allwordssubstr&status_whiteboard=&status_whiteboard_type=allwordssubstr&target_milestone=3.6%20M3&title=Bug%20List&title=Bug%20List&type0-0-0=noop&value0-0-0=&votes=">bug list</a>) <img src="../images/ok.gif" nosave="" height="10" width="10" border="0"></li>
+			<li>3.5.2 maintenance work <img src="../images/ok.gif" nosave="" height="10" width="10" border="0"></li>
+			<li>Write snippets and support newsgroup <img src="../images/ok.gif" nosave="" height="10" width="10" border="0"></li>
+		</ul>
+		</td>
+	</tr>
+	</tbody>
+</table>
+
+<table border="0" cellspacing="5" cellpadding="2" width="100%">
+	<tbody>
+	<tr>
+		<td align="left" valign="top" colspan="2" bgcolor="#0080c0"
+			width="100%"><b><font face="Arial,Helvetica"><font color="#ffffff">
+			Milestone Plan 3.6 M4 - December 11, 2009</font></font></b></td>
+	</tr>
+	<tr>
+		<td valign="top" width="2%"><img src="http://dev.eclipse.org/images/Adarrow.gif" nosave=""
+			border="0" height="16" width="16"></td>
+		<td><ul>
+			<li>Reduce bug count <img src="../images/ok.gif" nosave="" height="10" width="10" border="0"></li>
+			<li>Accessibility support <img src="../images/ok.gif" nosave="" height="10" width="10" border="0"></li>
+			<li>Ubuntu support <img src="../images/ok.gif" nosave="" height="10" width="10" border="0"></li>
+			<li>Snow Leopard support <img src="../images/ok.gif" nosave="" height="10" width="10" border="0"></li>
+			<li>Windows 7 support for Eclipse/SWT 3.6 <img src="../images/ok.gif" nosave="" height="10" width="10" border="0"></li>
+			<li>BIDI : base writing direction on Cocoa <img src="../images/ok.gif" nosave="" height="10" width="10" border="0"></li>
+			<li>Program improvements <img src="../images/ok.gif" nosave="" height="10" width="10" border="0"></li>
+			<li>Investigate support for AIX 6.1 <font class="indexsub" color="#8080ff">[&gt;3.6]</font></li>
+			<li>Linux GTK PPC 64 support <img src="../images/ok.gif" nosave="" height="10" width="10" border="0"></li>
+			<li>Browser improvements : e4 support <img src="../images/ok.gif" nosave="" height="10" width="10" border="0"></li>
+			<li>CSS support <img src="../images/ok.gif" nosave="" height="10" width="10" border="0"></li>
+			<li>Complete Cocoa port (<a href="https://bugs.eclipse.org/bugs/buglist.cgi?bug_file_loc=&bug_file_loc_type=allwordssubstr&bug_id=&bug_status=RESOLVED&bugidtype=include&chfieldfrom=&chfieldto=Now&chfieldvalue=&classification=Eclipse&component=SWT&email1=&email2=&emailtype1=substring&emailtype2=substring&field0-0-0=noop&keywords=&keywords_type=allwords&longdesc=&longdesc_type=allwordssubstr&op_sys=Mac%20OS%20X%20-%20Cocoa&product=Platform&query_format=advanced&resolution=FIXED&short_desc=&short_desc_type=allwordssubstr&status_whiteboard=&status_whiteboard_type=allwordssubstr&target_milestone=3.6%20M4&title=Bug%20List&title=Bug%20List&type0-0-0=noop&value0-0-0=&votes=">bug list</a>) <img src="../images/ok.gif" nosave="" height="10" width="10" border="0"></li>			
+			<li>3.5.2 maintenance work <img src="../images/ok.gif" nosave="" height="10" width="10" border="0"></li>
+			<li>Write snippets and support newsgroup <img src="../images/ok.gif" nosave="" height="10" width="10" border="0"></li>
+		</ul>
+		</td>
+	</tr>
+	</tbody>
+</table>
+
+<table border="0" cellspacing="5" cellpadding="2" width="100%">
+	<tbody>
+	<tr>
+		<td align="left" valign="top" colspan="2" bgcolor="#0080c0"
+			width="100%"><b><font face="Arial,Helvetica"><font color="#ffffff">
+			Milestone Plan 3.6 M5 - January 29, 2010</font></font></b></td>
+	</tr>
+	<tr>
+		<td valign="top" width="2%"><img src="http://dev.eclipse.org/images/Adarrow.gif" nosave=""
+			border="0" height="16" width="16"></td>
+		<td><ul>
+			<li>Reduce bug count <img src="../images/ok.gif" nosave="" height="10" width="10" border="0"></li>
+			<li>Accessibility support <img src="../images/ok.gif" nosave="" height="10" width="10" border="0"></li>
+			<li>BIDI support for text input widgets (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=230854">230854</a>) <font class="indexsub" color="#8080ff">[&gt;3.6]</font></li>
+			<li>Browser improvements : e4 support <img src="../images/ok.gif" nosave="" height="10" width="10" border="0"></li>
+			<li>Complete Cocoa port (<a href="https://bugs.eclipse.org/bugs/buglist.cgi?bug_file_loc=&bug_file_loc_type=allwordssubstr&bug_id=&bug_status=RESOLVED&bugidtype=include&chfieldfrom=&chfieldto=Now&chfieldvalue=&classification=Eclipse&component=SWT&email1=&email2=&emailtype1=substring&emailtype2=substring&field0-0-0=noop&keywords=&keywords_type=allwords&longdesc=&longdesc_type=allwordssubstr&op_sys=Mac%20OS%20X%20-%20Cocoa&product=Platform&query_format=advanced&resolution=FIXED&short_desc=&short_desc_type=allwordssubstr&status_whiteboard=&status_whiteboard_type=allwordssubstr&target_milestone=3.6%20M5&title=Bug%20List&title=Bug%20List&type0-0-0=noop&value0-0-0=&votes=">bug list</a>) <img src="../images/ok.gif" nosave="" height="10" width="10" border="0"></li>
+			<li>3.5.2 maintenance work <img src="../images/ok.gif" nosave="" height="10" width="10" border="0"></li>
+			<li>Write snippets and support newsgroup <img src="../images/ok.gif" nosave="" height="10" width="10" border="0"></li>
+		</ul>
+		</td>
+	</tr>
+	</tbody>
+</table>
+
+<table border="0" cellspacing="5" cellpadding="2" width="100%">
+	<tbody>
+	<tr>
+		<td align="left" valign="top" colspan="2" bgcolor="#0080c0"
+			width="100%"><b><font face="Arial,Helvetica"><font color="#ffffff">
+			Milestone Plan 3.6 M6 - March 12, 2010</font></font></b></td>
+	</tr>
+	<tr>
+		<td valign="top" width="2%"><img src="http://dev.eclipse.org/images/Adarrow.gif" nosave=""
+			border="0" height="16" width="16"></td>
+		<td><ul>
+			<li>Reduce bug count <img src="../images/ok.gif" nosave="" height="10" width="10" border="0"></li>
+			<li>Accessibility support - All API completed <img src="../images/ok.gif" nosave="" height="10" width="10" border="0"></li>
+			<li>Browser improvements : e4 support <img src="../images/ok.gif" nosave="" height="10" width="10" border="0"></li>
+			<li>Write snippets and support newsgroup <img src="../images/ok.gif" nosave="" height="10" width="10" border="0"></li>
+		</ul>
+		</td>
+	</tr>
+	</tbody>
+</table>
+
+<table border="0" cellspacing="5" cellpadding="2" width="100%">
+	<tbody>
+	<tr>
+		<td align="left" valign="top" colspan="2" bgcolor="#0080c0"
+			width="100%"><b><font face="Arial,Helvetica"><font color="#ffffff">
+			Milestone Plan 3.6 M7 - April 30, 2010</font></font></b></td>
+	</tr>
+	<tr>
+		<td valign="top" width="2%"><img src="http://dev.eclipse.org/images/Adarrow.gif" nosave=""
+			border="0" height="16" width="16"></td>
+		<td><ul>
+			<li>Reduce bug count <img src="../images/ok.gif" nosave="" height="10" width="10" border="0"></li>
+			<li>Accessibility support <img src="../images/ok.gif" nosave="" height="10" width="10" border="0"></li>
+			<li>Write snippets and support newsgroup <img src="../images/ok.gif" nosave="" height="10" width="10" border="0"></li>
+		</ul>
+		</td>
+	</tr>
+	</tbody>
+</table>
+
+</body>
+</html>
