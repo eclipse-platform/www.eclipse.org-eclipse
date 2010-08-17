@@ -61,7 +61,6 @@ Whatever the reason, you will find many resources here. Enjoy!</p>
       <a href="http://download.eclipse.org/eclipse/downloads/drops/S-3.7M1-201008051700/index.php#SWT" target="_top">more...</a><br>
       <small>3.7 Milestone 1 - <span style="white-space: nowrap;">6 August 2010</span></small><br>
   <ul>
-<!--  <li><a href="R3_7/plan.html">3.7 Development Plan</a></li> -->
   <li><a href="R3_7/new_and_noteworthy.html">New and Noteworthy</a></li>
 
   </ul>
