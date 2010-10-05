@@ -39,12 +39,12 @@ Whatever the reason, you will find many resources here. Enjoy!</p>
   <table width="100%">
   <tr><td>
       <b><font size="+1">Stable</font></b><br>
-      <a href="http://download.eclipse.org/eclipse/downloads/drops/R-3.6-201006080911/download.php?dropFile=swt-3.6-win32-win32-x86.zip">Windows</a>,
-      <a href="http://download.eclipse.org/eclipse/downloads/drops/R-3.6-201006080911/download.php?dropFile=swt-3.6-gtk-linux-x86.zip">Linux</a>,
+      <a href="http://download.eclipse.org/eclipse/downloads/drops/R-3.6.1-201009090800/download.php?dropFile=swt-3.6.1-win32-win32-x86.zip">Windows</a>,
+      <a href="http://download.eclipse.org/eclipse/downloads/drops/R-3.6.1-201009090800/download.php?dropFile=swt-3.6.1-gtk-linux-x86.zip">Linux</a>,
       <span style="white-space: nowrap;">
-      <a href="http://download.eclipse.org/eclipse/downloads/drops/R-3.6-201006080911/download.php?dropFile=swt-3.6-cocoa-macosx.zip">OS X</a></span>,
-      <a href="http://download.eclipse.org/eclipse/downloads/drops/R-3.6-201006080911/index.php#SWT" target="_top">more...</a><br>
-      <small>3.6 Final Release - <span style="white-space: nowrap;">23 June 2010</span></small><br>
+      <a href="http://download.eclipse.org/eclipse/downloads/drops/R-3.6.1-201009090800/download.php?dropFile=swt-3.6.1-cocoa-macosx.zip">OS X</a></span>,
+      <a href="http://download.eclipse.org/eclipse/downloads/drops/R-3.6.1-201009090800/index.php#SWT" target="_top">more...</a><br>
+      <small>3.6.1 Final Release - <span style="white-space: nowrap;">09 September 2010</span></small><br>
   <ul>
   <li><a href="R3_6/new_and_noteworthy.html">New and Noteworthy</a></li>
   <li><a href="language.php">Language Pack</a></li>
