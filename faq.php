@@ -401,9 +401,9 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
   <dd>A: It depends on the VM and OS version that you are using and your personal preference. The Eclipse downloads page lists
   the following Eclipse platforms:
   <ul>
-    <li><b>Mac OSX (Mac/Cocoa)</b> - This 32-bit port needs a Java 5 VM and runs on Leopard (OS X v10.5).</li>
-    <li><b>Mac OSX (Mac/Cocoa/x86_64)</b> - This 64-bit port needs a Java 5 or Java 6 VM and runs on Leopard.</li>
-    <li><b>Mac OSX (Mac/Carbon)</b> - This 32-bit port needs a Java 1.4 or Java 5 VM and runs on both Tiger (OS X v10.4) and Leopard.</li>
+    <li><b>Mac OS X (Mac/Cocoa)</b> - This 32-bit port needs a Java 5 VM and runs on Leopard (OS X v10.5).</li>
+    <li><b>Mac OS X (Mac/Cocoa/x86_64)</b> - This 64-bit port needs a Java 5 or Java 6 VM and runs on Leopard.</li>
+    <li><b>Mac OS X (Mac/Carbon)</b> - This 32-bit port needs a Java 1.4 or Java 5 VM and runs on both Tiger (OS X v10.4) and Leopard.</li>
   </ul>
   </dd>
 
@@ -1149,9 +1149,9 @@ the SWT.CENTER style when creating a composite.
   	  	SWT Browser embeds the IE renderer by default (ie.- if the Browser is created with style <code>SWT.NONE</code>),
   	  	the Browser automatically inheirits these proxy settings.  These settings can be changed at any time in the Internet
   	  	Options of a running IE instance and the Browser will automatically use the new values.</li>
-  	  <li>Similarly, on OSX all instances of WebKit use a shared set of global proxy settings.  Since on OSX the
+  	  <li>Similarly, on OS X all instances of WebKit use a shared set of global proxy settings.  Since on OS X the
   	  	SWT Browser embeds the WebKit renderer by default (ie.- if the Browser is created with style <code>SWT.NONE</code>),
-  	  	the Browser automatically inheirits these proxy settings.  These settings can be changed at any time in the OSX
+  	  	the Browser automatically inheirits these proxy settings.  These settings can be changed at any time in the OS X
   	  	System Preferences and the Browser will automatically use the new values.</li>
   	  <li>Mozilla-based Browser instances (ie.- those that are either running on Linux or are created with style
   	    <code>SWT.MOZILLA</code>) do not access any global proxy settings, so proxy information must be explicitly specified
@@ -1164,8 +1164,11 @@ the SWT.CENTER style when creating a composite.
   	      <li>As of Eclipse 3.3, an application can do this at any time by using JavaXPCOM to update the values in the shared
   	        preferences.  An example of this is shown in <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=82295#c18">bug 82295 comment 18</a>.
   	        For more general information about using JavaXPCOM with a Browser see
-  	        <a href="#howusejavaxpcom">How do I use JavaXPCOM with the Browser?</a></li>.
+  	        <a href="#howusejavaxpcom">How do I use JavaXPCOM with the Browser?</a>.</li>
   	    </ul> 
+  	  <li>WebKit-based Browser instances running on platforms other than OS X use the same mechanism as Mozilla-based Browsers for
+  	    determining whether a proxy should be used (the <code>network.proxy_host</code> and <code>network.proxy_port</code> java
+  	    properties are checked).
     </ul>
   </dd>
 
@@ -1184,7 +1187,7 @@ the SWT.CENTER style when creating a composite.
 	    </ul>
 	    If none of these cases apply then any XULRunner version can be used.
 	  </li>
-	  <li><b>OSX only:</b> The JRE must be "Java for Mac OS X 10.4, Release 5" or newer</li>
+	  <li><b>OS X only:</b> The JRE must be "Java for Mac OS X 10.4, Release 5" or newer</li>
     </ul>
   </dd>
 
