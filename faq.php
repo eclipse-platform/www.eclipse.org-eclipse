@@ -38,6 +38,7 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
   <li><a href="#cocoa32launch">Why do I get an UnsatisfiedLinkError when launching from the 32-bit Cocoa or Carbon port?</a></li>
   <li><a href="#cocoa64launch">Why do I get an UnsatisfiedLinkError when launching from the 64-bit Cocoa port?</a></li>
   <li><a href="#javawebstart">How can I deploy my standalone SWT application with Java Web Start?</a></li>
+  <li><a href="#ubuntupowerpc">How do I run SWT on Ubuntu PowerPC?</a></li>
   <li><a href="#pocketpcstart">What do I need to do to run SWT on the PocketPC?</a></li>
   <li><a href="#pocketpclibrary">Where is the SWT library for the PocketPC?</a></li>
   <p></p>
@@ -449,6 +450,15 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
     <a href="http://www.eclipse.org/swt/jws/">How to deploy SWT Applications with Java Web Start</a>.  A related article
     that describes the deployment of SWT applications with JWS (but does not outline the process of packaging SWT) can be found at
     <a href="http://www-106.ibm.com/developerworks/opensource/library/os-jws/">http://www-106.ibm.com/developerworks/opensource/library/os-jws/</a>.
+  </dd>
+
+  <dt><strong><a name="ubuntupowerpc">Q: How do I run SWT on Ubuntu PowerPC?</a></strong>
+  </dt>
+  <dd>A: As of Eclipse 3.7 builds of Eclipse/SWT are no longer produced for 32-bit PowerPC.  Builds are still produced
+    and supported for 64-bit PowerPC.  However Ubuntu's 64-bit PowerPC distribution (10.04 LTS) is missing 64-bit compilations
+    of many libraries required by SWT, so Eclipse/SWT will not run here.  To use Eclipse/SWT on Ubuntu PowerPC you either must
+    use a 32-bit PowerPC release (available for Eclipse versions prior to 3.7), or for 64-bit PowerPC users wishing to use
+    Eclipse/SWT 3.7 or newer, manually build 64-bit compilations of swt's dependencies.
   </dd>
 
   <dt><strong><a name="pocketpcstart">Q: What do I need to do to run SWT on the PocketPC?</a></strong>
