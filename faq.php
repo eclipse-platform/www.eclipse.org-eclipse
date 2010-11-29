@@ -227,7 +227,7 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
         windowing system, operating system and architecture of interest, respectively.  For example, <strong>org.eclipse.swt.gtk.linux.x86</strong>.
       <li>In the project <strong>org.eclipse.swt.</strong><em>WS.OS.ARCH</em>, open the file <strong>build.xml</strong>.  This is an Ant script.
       <li>If your swt version is 3.4.x or earlier then add the target below anywhere within the <strong>build.xml</strong> file's
-        <strong>&lt;project&gt;</strong> tags.  If your swt version is 3.5 or newer then this target will already be there.
+        <strong>&lt;project&gt;</strong> tags.  If your swt version is 3.5 or newer then this target does not need to be added.
       <pre>
 &lt;target name="jar.plugin" depends="init"&gt;
     &lt;delete dir="${temp.folder}"/&gt;
