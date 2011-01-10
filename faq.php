@@ -72,16 +72,17 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
   <li><a href="#advancedgraphics">Which platforms have advanced graphics support?</a></li>
   <p></p>
   <li><a href="#whatisbrowser">What is the SWT Browser widget?</a></li>
-  <li><a href="#browserplatforms">Which platforms support the SWT Browser?</a></li>
+  <li><a href="#browserplatforms">Which platforms support the SWT Browser, and which native renderers to they use?</a></li>
   <li><a href="#browserlinux">What do I need to run the SWT Browser inside Eclipse on Linux?</a></li>
   <li><a href="#browsersolaris">What do I need to run the SWT Browser inside Eclipse on Solaris?</a></li>
-  <li><a href="#browserlinuxrcp">What do I need to run the SWT Browser in a standalone application on Linux or Solaris-x86?</a></li>
-  <li><a href="#browserwebkitgtk">Can the Browser use the WebKit renderer on GTK?</a></li>
+  <li><a href="#browserlinuxrcp">What do I need to run the SWT Browser in a standalone application on Linux or Solaris?</a></li>
+  <li><a href="#howusewebkit">How do I explicitly use WebKit as the Browser's underlying renderer?</a></li>
+  <li><a href="#howusemozilla">How do I explicitly use Mozilla as the Browser's underlying renderer?</a></li>
+  <li><a href="#browserwebkitgtk">How do I use the WebKit renderer on GTK?</a></li>
   <li><a href="#browserlinuxibm">How can I get the SWT Browser to work with the IBM 1.4 VM?</a></li>
   <li><a href="#browserapplets">Can I view Java applets in the SWT Browser?</a></li>
   <li><a href="#browserscrollbar">How do I hide the Browser's scrollbars?</a></li>
   <li><a href="#browserproxy">How do I set a proxy for the Browser to use?</a></li>
-  <li><a href="#howusemozilla">How do I use Mozilla as the Browser's underlying renderer?</a></li>
   <li><a href="#specifyxulrunner">Can I specify which XULRunner installation gets used?</a></li>
   <li><a href="#howdetectmozilla">How does the Browser detect a native Mozilla browser to use?</a></li>
   <li><a href="#printmozillapath">How can I determine which installed Mozilla browser is being used to render Browser content?</a></li>
@@ -1013,16 +1014,20 @@ the SWT.CENTER style when creating a composite.
       HTML browsing and rendering on the platforms on which it is implemented.
   </dd>
 
-  <dt><strong><a name="browserplatforms">Q: Which platforms support the SWT Browser?</a></strong></dt>
-  <dd>A: The SWT Browser is currently available on the following platforms:
-  <br>
-  <ul>
-    <li>Windows (Internet Explorer 5 and above)</li>
-    <li>Mac (OS X 10.4 and above, WebKit-based)</li>
-    <li>Linux GTK and Linux Motif (<a href="#browserlinux">details</a>)
-    <li>Solaris-x86 and Solaris 10 SPARC (<a href="#browsersolaris">details</a>)
-    <li>Photon</li>
-  </ul>
+  <dt><strong><a name="browserplatforms">Q: Which platforms support the SWT Browser, and which native renderers to they use?</a></strong></dt>
+  <dd>A: The SWT Browser is currently available on the platforms listed below.  Browser instances created with style <code>SWT.NONE</code>
+      use the native renderer listed beside the platform.
+      <ul>
+        <li>Windows 2000 and newer (Internet Explorer 5.5 and newer)</li>
+        <li>Mac OS X 10.5 and newer (WebKit)</li>
+        <li>Linux GTK (<a href="#browserlinux">details</a>)
+        <li>Solaris-x86 and Solaris 10 SPARC (<a href="#browsersolaris">details</a>)
+      </ul>
+      <br>
+      Browsers should typically be created with style <code>SWT.NONE</code> since
+      this will attempt to use a natively-provided renderer that does not require additional installation.  However, for clients with specific
+      native browser requirements, the type of native renderer to use can be specified, see <a href="#howusewebkit">How do I explicity use WebKit as
+      the Browser's underlying renderer?</a> and <a href="#howusemozilla">How do I explicitly use Mozilla as the Browser's underlying renderer?</a>.  
   </dd>
 
   <dt><strong><a name="browserlinux">Q: What do I need to run the SWT Browser inside Eclipse on Linux?</a></strong></dt>
@@ -1036,7 +1041,7 @@ the SWT.CENTER style when creating a composite.
       <li>Eclipse 3.4.x: Mozilla 1.4 GTK2 - 1.7.x GTK2 and XULRunner 1.8.x - 1.9.0.x.</li>
       <li>Eclipse 3.5.0: Mozilla 1.4 GTK2 - 1.7.x GTK2 and XULRunner 1.8.x - 1.9.1.x.</li>
       <li>Eclipse 3.5.2: Mozilla 1.4 GTK2 - 1.7.x GTK2 and XULRunner 1.8.x - 1.9.2.x.</li>
-      <li>Eclipse 3.6.0: Mozilla 1.4 GTK2 - 1.7.x GTK2 and XULRunner 1.8.x - 1.9.2.x, and WebKitGTK+ 1.2.0 and above (see <a href="#browserwebkitgtk">Can the Browser use the WebKit renderer on GTK?</a>)</li>
+      <li>Eclipse 3.6.x and newer: Mozilla 1.4 GTK2 - 1.7.x GTK2 and XULRunner 1.8.x - 1.9.2.x, and WebKitGTK+ 1.2.0 and newer (see <a href="#browserwebkitgtk">How do I use the WebKit renderer on GTK?</a>)</li>
       <li>Also note that a Firefox release whose contained Gecko version correlates with the Mozilla versions above can also be used
       with Eclipse 3.1 and newer (Linux only), provided that it has been compiled with linkable Gecko libraries.  It is important to  
       note that Firefox downloads from mozilla.org do <em>not</em> satisfy this criteria, but Firefox installations that are
@@ -1076,14 +1081,13 @@ the SWT.CENTER style when creating a composite.
     </ul>
   </dd>
   
-  <dt><strong><a name="browserlinuxrcp">Q: What do I need to run the SWT Browser in a standalone application on Linux or Solaris-x86?</a></strong></dt>
+  <dt><strong><a name="browserlinuxrcp">Q: What do I need to run the SWT Browser in a standalone application on Linux or Solaris?</a></strong></dt>
   <dd>A: Follow the steps below to use the SWT Browser widget in your standalone SWT application.
     <ul>
-      <li>A supported version of XULRunner, Firefox or Mozilla must be installed. (<a href="#browserlinux">linux instructions</a>) (<a href="#browsersolaris">solaris instructions</a>)</li>
-      <li>If XULRunner is <a href="http://developer.mozilla.org/en/docs/XULRunner_1.8.0.1_Release_Notes#Installing_XULRunner">installed</a> then it should be found automatically at runtime
-      with no additional steps required.  For other native browsers:</li>
+      <li>A supported native browser must be installed (<a href="#browserlinux">linux requirements</a>) (<a href="#browsersolaris">solaris requirements</a>).</li>
+      <li>If a supported WebKitGTK and/or XULRunner is installed then it should be found automatically at runtime with no additional effort.  For other native Mozilla-based browsers:</li>
       <ol>
-        <li>Set the environment variable MOZILLA_FIVE_HOME to your Firefox/Mozilla installation folder. e.g. <code>setenv MOZILLA_FIVE_HOME /usr/lib/mozilla</code></li>
+        <li>Set the environment variable MOZILLA_FIVE_HOME to the native browser's installation folder. e.g. <code>setenv MOZILLA_FIVE_HOME /usr/lib/mozilla</code></li>
         <li>Set the environmnent variable LD_LIBRARY_PATH to include MOZILLA_FIVE_HOME. e.g. <code>setenv LD_LIBRARY_PATH ${MOZILLA_FIVE_HOME}:${LD_LIBRARY_PATH}</code></li>
         <li>Your standalone SWT application can now use the Browser widget.
       </ol>
@@ -1092,22 +1096,49 @@ the SWT.CENTER style when creating a composite.
     <br>
   </dd>
 
-  <dt><strong><a name="browserwebkitgtk">Q: Can the Browser use the WebKit renderer on GTK?</a></strong></dt>
-  <dd>A: As of Eclipse/SWT 3.6 the Browser can use WebKitGTK+ (the GTK+ port of WebKit) as its native renderer.  To use it
-      the following must be true:
-      <ul>
-        <li>WebKitGTK 1.2.0 or newer is in the library path
-        <ul>
-          <li>Ubuntu 10.04 ships with this WebKitGTK+ version, so this requirement is automatically satisfied on this Linux distro
-          <li>On Linux distros that do not ship a WebKitGTK+ with this version or newer you will need to compile WebKitGTK+ from <a href="http://webkitgtk.org/?page=download">source</a>, and
-          add its resulting <code>.libs</code> directory to your <code>LD_LIBRARY_PATH</code> environment variable.
-        </ul>
-        <li>Set java property "org.eclipse.swt.browser.UseWebKitGTK" to "true"
-        <li>Create your Browser instance with the usual <code>SWT.NONE</code> style
-        <li>Invoke <code>Browser.getBrowserType()</code> to verify that WebKit is being used
-      </ul>
-      Note that as of Eclipse/SWT 3.7 it is planned for WebKitGTK+ to become the default Browser renderer on Linux, if it is detected at runtime.  If it is not detected at runtime
-      then the Browser will revert to its Mozilla-based implementation.
+  <dt><strong><a name="howusewebkit">Q: How do I explicitly use WebKit as the Browser's underlying renderer?</a></strong></dt>
+  <dd>A: To specify that a WebKit renderer be used by a Browser instance, create it with style <code>SWT.WEBKIT</code> (<em>@since 3.7</em>).  The runtime requirements for
+      using WebKit-based Browsers are listed below.  Note that failure to meet these runtime requirements will cause the Browser instantiation to fail.
+    <ul>
+	  <li>Windows:
+	  <ul>
+	    <li>32-bit SWT</li>
+	    <li>Safari must be installed</li>
+	  	<li>For OSs older than XP+SP1, the path to the Apple Application Support installation must be prepended to Windows' "Path" environment variable
+	  	before running eclipse.  This installation will be in a location like "<code>C:\Program Files\Common Files\Apple\Apple Application Support</code>".</li>
+	  </ul>
+	  <li>Linux: WebKitGTK 1.2.0 or newer must be in the library path (LD_LIBRARY_PATH).  Examples of Linux distros that meet this requirement by default
+	      include Red Hat Enterprise Linux 6 and Ubuntu 10.04.</li>
+	  <li>OS X: No additional runtime requirements, the default renderer is WebKit-based.</li>
+    </ul>
+  </dd>
+
+  <dt><strong><a name="howusemozilla">Q: How do I explicitly use Mozilla as the Browser's underlying renderer?</a></strong></dt>
+  <dd>A: To specify that a Mozilla renderer be used by a Browser instance, create it with style <code>SWT.MOZILLA</code> (<em>@since 3.3</em>)  The runtime requirements for
+      using Mozilla-based Browsers are listed below.  Note that failure to meet these runtime requirements will cause the Browser instantiation to fail.
+    <ul>
+	  <li><a href="http://developer.mozilla.org/en/docs/XULRunner">XULRunner</a> must be properly
+	    <a href="http://developer.mozilla.org/en/docs/XULRunner_1.8.0.1_Release_Notes#Installing_XULRunner">installed</a></li>
+	  <li>The installed XULRunner version must be 1.8.1.2 or newer if any of the following are true:
+	    <ul>
+	      <li>Running on OS X</li>
+	      <li><code>Browser.getWebBrowser()</code> is used</li>
+	      <li>JavaXPCOM is referenced</li>
+	    </ul>
+	    If none of these cases apply then any XULRunner version can be used.
+	  </li>
+	  <li>Windows only: 32-bit SWT</li>
+	  <li>OS X only: The JRE must be "Java for Mac OS X 10.4, Release 5" or newer</li>
+    </ul>
+  </dd>
+
+  <dt><strong><a name="browserwebkitgtk">Q: How do I use the WebKit renderer on GTK?</a></strong></dt>
+  <dd>A: In Eclipse/SWT 3.7 and newer the Browser attempts to use WebKitGTK for all SWT.NONE-style Browsers created on GTK.  For this to succeed, WebKitGTK
+      1.2.0 or newer must be in the library path (LD_LIBRARY_PATH).  Examples of Linux distros that meet this requirement by default include Red Hat
+      Enterprise Linux 6 and Ubuntu 10.04.  Linux installations that do not meet this requirement will fall back to using Mozilla for SWT.NONE-style Browsers.
+      <p>
+      Eclipse/SWT 3.6.x can also use WebKitGTK for SWT.NONE-style Browsers created on GTK, but the user must explicitly request this by setting java property
+      "<code>org.eclipse.swt.browser.UseWebKitGTK</code>" to "<code>true</code>".  In the absence of this property being set, Mozilla is used for all SWT.NONE-style Browsers.
   </dd>
 
   <dt><strong><a name="browserlinuxibm">Q: How can I get the SWT Browser to work with the IBM 1.4 VM?</a></strong></dt>
@@ -1153,51 +1184,16 @@ the SWT.CENTER style when creating a composite.
   </dd>
 
   <dt><strong><a name="browserproxy">Q: How do I set a proxy for the Browser to use?</a></strong></dt>
-  <dd>A: This is dependent on the platform and native renderer being used:
+  <dd>A:
   	<ul>
-  	  <li>On Windows all instances of Internet Explorer use a shared set of global proxy settings.  Since on Windows the
-  	  	SWT Browser embeds the IE renderer by default (ie.- if the Browser is created with style <code>SWT.NONE</code>),
-  	  	the Browser automatically inheirits these proxy settings.  These settings can be changed at any time in the Internet
-  	  	Options of a running IE instance and the Browser will automatically use the new values.</li>
-  	  <li>Similarly, on OS X all instances of WebKit use a shared set of global proxy settings.  Since on OS X the
-  	  	SWT Browser embeds the WebKit renderer by default (ie.- if the Browser is created with style <code>SWT.NONE</code>),
-  	  	the Browser automatically inheirits these proxy settings.  These settings can be changed at any time in the OS X
-  	  	System Preferences and the Browser will automatically use the new values.</li>
-  	  <li>Mozilla-based Browser instances (ie.- those that are either running on Linux or are created with style
-  	    <code>SWT.MOZILLA</code>) do not access any global proxy settings, so proxy information must be explicitly specified
-  	    for them.  There are two ways to do this:
-  	    <ul>
-  	      <li>As of Eclipse 3.4, a user can do this by setting values for java properties <code>network.proxy_host</code> and
-  	        <code>network.proxy_port</code>.  These properties are checked the first time a Mozilla-based Browser is created, and
-  	        if set, will be used for all non-local HTTP, HTTPS and FTP requests in all Mozilla-based Browser instances.  A user
-  	        wishing to set these values should do so by passing <code>-D...</code> VM arguments to the JRE at startup.</li>
-  	      <li>As of Eclipse 3.3, an application can do this at any time by using JavaXPCOM to update the values in the shared
-  	        preferences.  An example of this is shown in <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=82295#c18">bug 82295 comment 18</a>.
-  	        For more general information about using JavaXPCOM with a Browser see
-  	        <a href="#howusejavaxpcom">How do I use JavaXPCOM with the Browser?</a>.</li>
-  	    </ul> 
-  	  <li>WebKit-based Browser instances running on platforms other than OS X use the same mechanism as Mozilla-based Browsers for
-  	    determining whether a proxy should be used (the <code>network.proxy_host</code> and <code>network.proxy_port</code> java
-  	    properties are checked).
-    </ul>
-  </dd>
-
-  <dt><strong><a name="howusemozilla">Q: How do I use Mozilla as the Browser's underlying renderer?</a></strong></dt>
-  <dd>A: The Browser has been extended as of Eclipse 3.3 to facilitate the use of Mozilla's HTML renderer on all
-      supported browser platforms, provided that the following are satisfied:
-    <ul>
-	  <li>The Browser instance is created with style <code>SWT.MOZILLA</code></li>
-	  <li><a href="http://developer.mozilla.org/en/docs/XULRunner">XULRunner</a> is properly
-	    <a href="http://developer.mozilla.org/en/docs/XULRunner_1.8.0.1_Release_Notes#Installing_XULRunner">installed</a></li>
-	  <li>The installed XULRunner version is 1.8.1.2 or newer if any of the following are true:
-	    <ul>
-	      <li>Running on OS X</li>
-	      <li><code>Browser.getWebBrowser()</code> is used</li>
-	      <li>JavaXPCOM is referenced</li>
-	    </ul>
-	    If none of these cases apply then any XULRunner version can be used.
-	  </li>
-	  <li><b>OS X only:</b> The JRE must be "Java for Mac OS X 10.4, Release 5" or newer</li>
+  	  <li>Windows: All Browser instances, regardless of native renderer, automatically use Windows' global proxy settings.
+  	    These settings can be changed at any time in the Windows Control Panel.
+  	  <li>OS X: All Browser instances, regardless of native renderer, automatically use OS X's global proxy settings.
+  	    These settings can be changed at any time in the OS X System Preferences.</li>
+  	  <li>Linux/Solaris: Proxy information must be explicitly specified by setting values for java properties
+  	    <code>network.proxy_host</code> and <code>network.proxy_port</code> (<em>@since 3.4</em>).  These properties are checked
+  	    the first time a Browser is created, and if set, will be used for all non-local HTTP, HTTPS and FTP requests in all Browser
+  	    instances.  A user wishing to set these values should do so by passing <code>-D...</code> VM arguments to the JRE at startup.</li>
     </ul>
   </dd>
 
@@ -1304,7 +1300,7 @@ public class DisplayMozillaVersion {
 
   <dt><strong><a name="howusejavaxpcom">Q: How do I use JavaXPCOM with the Browser?</a></strong></dt>  
   <dd>A: First, ensure that you have all of the requirements listed in
-    <a href="http://www.eclipse.org/swt/faq.php#howusemozilla">How do I use Mozilla as the Browser's underlying renderer?</a>.
+    <a href="http://www.eclipse.org/swt/faq.php#howusemozilla">How do I explicitly use Mozilla as the Browser's underlying renderer?</a>.
     Once these are in place then you can reference JavaXPCOM as follows:
     <p><ul>
       <li>If your application runs as an Eclipse plug-in:
