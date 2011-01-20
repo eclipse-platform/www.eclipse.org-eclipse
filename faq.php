@@ -221,16 +221,18 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
 
   <dt><strong><a name="howbuildplugin">Q: How do I build the SWT Eclipse plug-in for my platform?</a></strong>
   </dt>
-  <dd>A: The SWT eclipse plug-in can be built (excluding the signing of the jar) with the steps below.
+  <dd>A: The SWT Eclipse plug-in can be built (excluding the signing of the jar) with the steps below.
     <ol>
-      <li>In eclipse's CVS Repositories view create a connection to <strong>:pserver:anonymous@dev.eclipse.org:/cvsroot/eclipse</strong>.
+      <li>In Eclipse's CVS Repositories view create a connection to <strong>:pserver:anonymous@dev.eclipse.org:/cvsroot/eclipse</strong>.
       <li>Check out the projects <strong>org.eclipse.swt</strong> and <strong>org.eclipse.swt.</strong><em>WS.OS.ARCH</em> where <em>WS.OS.ARCH</em> are the names of the
         windowing system, operating system and architecture of interest, respectively.  For example, <strong>org.eclipse.swt.gtk.linux.x86</strong>.
+      <li>(optional) If you wish to compile SWT in your workspace, in the Navigator view rename the <strong>org.eclipse.swt</strong> project's <strong>.classpath_</strong>WS
+        file to <strong>.classpath</strong>.  This is useful if, for instance, you have a patch to apply to the SWT codebase before building the plug-in.
       <li>Invoke the File > Export... menu item, then select the "Plug-in Development" - "Deployable Plug-ins and Fragments" wizard, and press Next.
       <li>In the resulting wizard's plug-ins list, select the <strong>org.eclipse.swt.</strong><em>WS.OS.ARCH</em> fragment.
       <li>Specify a destination for the output.
       <li>On the Options tab set the qualifier to the plug-in's desired qualifier string.  This will be something like <strong>v3655</strong> and must match the
-        qualifier of eclipse's swt plug-in that is being replaced.
+        qualifier of Eclipse's SWT plug-in that is being replaced.
       <li>Press Finish to export the plug-in.
     </ol>
     <p>
