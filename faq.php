@@ -226,37 +226,19 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
       <li>In eclipse's CVS Repositories view create a connection to <strong>:pserver:anonymous@dev.eclipse.org:/cvsroot/eclipse</strong>.
       <li>Check out the projects <strong>org.eclipse.swt</strong> and <strong>org.eclipse.swt.</strong><em>WS.OS.ARCH</em> where <em>WS.OS.ARCH</em> are the names of the
         windowing system, operating system and architecture of interest, respectively.  For example, <strong>org.eclipse.swt.gtk.linux.x86</strong>.
-      <li>In the project <strong>org.eclipse.swt.</strong><em>WS.OS.ARCH</em>, open the file <strong>build.xml</strong>.  This is an Ant script.
-      <li>If your swt version is 3.4.x or earlier then add the target below anywhere within the <strong>build.xml</strong> file's
-        <strong>&lt;project&gt;</strong> tags.  If your swt version is 3.5 or newer then this target does not need to be added.
-      <pre>
-&lt;target name="jar.plugin" depends="init"&gt;
-    &lt;delete dir="${temp.folder}"/&gt;
-    &lt;mkdir dir="${temp.folder}"/&gt;
-    &lt;antcall target="build.jars"/&gt;
-    &lt;antcall target="gather.bin.parts"&gt;
-        &lt;param name="destination.temp.folder" value="${temp.folder}/"/&gt;
-    &lt;/antcall&gt;
-    &lt;jar jarfile="${plugin.destination}/${full.name}.jar" basedir="${temp.folder}/${full.name}" filesonly="true" manifest="${basedir}/META-INF/MANIFEST.MF"/&gt;
-    &lt;delete dir="${temp.folder}"/&gt;
-&lt;/target&gt;
-      </pre>
-      <li>To ensure that your plug-in will be used when eclipse starts up, its filename and bundle version must match the plug-in that is to be replaced:
-      <ul>
-        <li>To change the filename, update the value of the <strong>build.xml</strong> file's <strong>version.suffix</strong> property (eg.- for the eclipse 3.5 release
-        this value would change from "3.5.0" to "3.5.0.v3550b")</li>
-        <li>To change the bundle version, in the <strong>org.eclipse.swt.</strong><em>WS.OS.ARCH</em> project, open file <strong>META-INF/MANIFEST.MF</strong>
-        and update the value of its <strong>Bundle-Version</strong> property (eg.- for the eclipse 3.5 release this value would change from "3.5.0.qualifier" to
-        "3.5.0.v3550b"</li>
-      </ul>      
-      <li>Right-click the <strong>build.xml</strong> file and select <strong>Run As</strong> &gt; <strong>Ant Build...</strong>.
-      <li>Select <strong>jar.plugin</strong> as the Ant target to be run.
-      <li>On the <strong>JRE</strong> tab select <strong>Run in the same JRE as the workspace</strong>.
-      <li>On the <strong>Classpath</strong> tab add the jars from your JRE's <strong>lib</strong> directory to the "User Entries" classpath item.
-      <li>Press the Run button to run the script, which will create file <strong>org.eclipse.swt.</strong><em>WS.OS.ARCH_&lt;version.suffix&gt;</em>
-        in the root directory of the <strong>org.eclipse.swt.</strong><em>WS.OS.ARCH</em> project.  When it has finished running you can Refresh
-        this project to bring this jar into your eclipse workspace.
-    </ol>  
+      <li>Invoke the File > Export... menu item, then select the "Plug-in Development" - "Deployable Plug-ins and Fragments" wizard, and press Next.
+      <li>In the resulting wizard's plug-ins list, select the <strong>org.eclipse.swt.</strong><em>WS.OS.ARCH</em> fragment.
+      <li>Specify a destination for the output.
+      <li>On the Options tab set the qualifier to the plug-in's desired qualifier string.  This will be something like <strong>v3655</strong> and must match the
+        qualifier of eclipse's swt plug-in that is being replaced.
+      <li>Press Finish to export the plug-in.
+    </ol>
+    <p>
+    <em>Important note</em>: Once the plug-in has been exported, the intermediate files that were created in order to make the plug-in jar are not deleted.
+    As a result, subsequent exports of the same plug-in will <em>NOT</em> recompile the workspace contents, and therefore will not contain any changes that have
+    been made in the interim.  For such changes to be included in a re-export of the plug-in, these intermediate files must be deleted in order to force
+    their recompilation.  The easiest way to do this is to select the <strong>org.eclipse.swt.</strong><em>WS.OS.ARCH</em> project, press F5 to refresh it, and
+    then replace its content with that from CVS.    
   </dd>
      
   <dt><strong><a name="howbuilddll">Q: How do I build the SWT JNI libraries for my platform?</a></strong>
