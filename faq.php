@@ -1091,7 +1091,7 @@ the SWT.CENTER style when creating a composite.
 	  	<li>For OSs older than XP+SP1, the path to the Apple Application Support installation must be prepended to Windows' "Path" environment variable
 	  	before running eclipse.  This installation will be in a location like "<code>C:\Program Files\Common Files\Apple\Apple Application Support</code>".</li>
 	  </ul>
-	  <li>Linux: WebKitGTK 1.2.0 or newer must be in the library path (LD_LIBRARY_PATH).  Examples of Linux distros that meet this requirement by default
+	  <li>Linux: WebKitGTK 1.2.0 or newer must be in the library load path.  Examples of Linux distros that meet this requirement by default
 	      include Red Hat Enterprise Linux 6 and Ubuntu 10.04.</li>
 	  <li>OS X: No additional runtime requirements, the default renderer is WebKit-based.</li>
     </ul>
@@ -1118,7 +1118,7 @@ the SWT.CENTER style when creating a composite.
 
   <dt><strong><a name="browserwebkitgtk">Q: How do I use the WebKit renderer on Linux-GTK?</a></strong></dt>
   <dd>A: In Eclipse/SWT 3.7 and newer the Browser attempts to use WebKitGTK for all SWT.NONE-style Browsers created on GTK.  For this to succeed, WebKitGTK
-      1.2.0 or newer must be in the library path (LD_LIBRARY_PATH).  Examples of Linux distros that meet this requirement by default include Red Hat
+      1.2.0 or newer must be in the library load path.  Examples of Linux distros that meet this requirement by default include Red Hat
       Enterprise Linux 6 and Ubuntu 10.04.  Linux installations that do not meet this requirement will fall back to using Mozilla for SWT.NONE-style Browsers.
       <p>
       Eclipse/SWT 3.6.x can also use WebKitGTK for SWT.NONE-style Browsers created on GTK, but the user must explicitly request this by setting java property
