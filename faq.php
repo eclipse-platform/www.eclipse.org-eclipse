@@ -809,6 +809,10 @@ Problem" at: <a href="http://www.cas.mcmaster.ca/~emil/publications/fragile/">ht
   before overriding it.</p>
   </dd>
 
+  <dt><strong><a name="noeventfire">Q: Why are some events like Selection not fired in response to programmatic widget changes?</a></strong></dt>
+  <dd>A: See <a href="#noevents">Why doesn't a widget send events when I change it programmatically?</a>.
+  </dd>
+
   <dt><strong><a name="printstacktrace">Q: Why don't SWTError and SWTException override all printStackTrace methods?</a></strong></dt>
   <dd>A: SWTError and SWTException each contain a slot which records the original
     exception (if it is known) that caused the SWTError or SWTException to be thrown.
