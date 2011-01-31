@@ -59,7 +59,6 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
   <p></p>
   <li><a href="#swinginswt">Can I use Swing or AWT inside Eclipse?</a></li>
   <li><a href="#subclassing">Why can't I subclass SWT widgets like Button and Table?</a></li>
-  <li><a href="#noeventfire">Why are some events like Selection not fired in response to programmatic widget changes?</a></li>
   <li><a href="#printstacktrace">Why don't SWTError and SWTException override all printStackTrace methods?</a></li>
   <li><a href="#printOnX">How do I print using my favorite Unix print program?</a></li>
   <li><a href="#installedprinters">How can I tell whether or not there are any printers installed?</a></li>
@@ -810,21 +809,6 @@ Problem" at: <a href="http://www.cas.mcmaster.ca/~emil/publications/fragile/">ht
   before overriding it.</p>
   </dd>
 
-  <dt><strong><a name="noeventfire">Q: Why are some events like Selection not fired in response to programmatic widget changes?</a></strong></dt>
-  <dd>A: This is a design decision that was made in order to minimize
-      notification of potentially unwanted events.  For example, when the
-      selection of a control is changed programmatically, SWT does not issue a
-      selection event.  If this were not the case then changing the selection
-      multiple times would send multiple notifications and run application
-      listener code multiple times, thereby leading to a potential performance
-      problem.  Clients that wish to notify widget listeners of changes made
-      programatically can do so by creating an <code>Event</code> object and
-      invoking <code>Widget.notifyListeners(int, Event)</code> on the widget.
-      Note that some programmatically-triggered events are sent, typically in
-      response to low-level widget operations such as focus, move and resize
-      changes.
-  </dd>
-
   <dt><strong><a name="printstacktrace">Q: Why don't SWTError and SWTException override all printStackTrace methods?</a></strong></dt>
   <dd>A: SWTError and SWTException each contain a slot which records the original
     exception (if it is known) that caused the SWTError or SWTException to be thrown.
@@ -1466,7 +1450,7 @@ public class DisplayMozillaVersion {
 
   <dt><strong><a name="noevents"> Q:  Why doesn't a widget send events when I change it programmatically?</a></strong></dt>
   <dd>A: This is a design decision that is applied throughout SWT.  Events are usually not sent in response to programmatic changes (as opposed to user actions)
-    in order to reduce redundant events that listeners must handle.  As a result, patterns like the following are <em>not</em> needed:
+    in order to minimize notification of potentially unwanted events.  As a result, patterns like the following are <em>not</em> needed:
     <pre>
     ignoreNextSelectionEvent = true;
     myTable.select(2);
@@ -1474,7 +1458,8 @@ public class DisplayMozillaVersion {
     </pre>
     Since a programmatic change implies that the application is already aware of the change being made, it can trigger the appropriate action directly.  If firing
     an event is still desired (for instance, to preserve object de-coupling) then the application can create the event and send it to the widget's listeners
-    with <code>Widget.notifyListeners(int,Event)</code>. 
+    with <code>Widget.notifyListeners(int,Event)</code>.  Note that some specific programmatically-triggered events are sent, typically in response to low-level
+    widget operations such as focus, move and resize changes. 
   </dd>
   
   <dt><strong><a name="relayout"> Q:  Why doesn't my layout update when I create/dispose/move/resize a control?</a></strong></dt>
