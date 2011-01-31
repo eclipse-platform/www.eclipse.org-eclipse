@@ -1462,7 +1462,8 @@ public class DisplayMozillaVersion {
     </pre>
     Since a programmatic change implies that the application is already aware of the change being made, it can trigger the appropriate action directly.  If firing
     an event is still desired (for instance, to preserve object de-coupling) then the application can create the event and send it to the widget's listeners
-    with <code>Widget.notifyListeners(int,Event)</code>.  Note that some specific programmatically-triggered events are sent, typically in response to low-level
+    with <code>Widget.notifyListeners(int,Event)</code>.
+    <p>Note that some specific programmatically-triggered events are sent, typically in response to low-level
     widget operations such as focus, move and resize changes. 
   </dd>
   
