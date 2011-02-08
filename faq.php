@@ -109,6 +109,7 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
   <li><a href="#copypastewithKlipper">Why does Copy/Paste sometimes not work on Linux?</a></li>
   <li><a href="#tableheaderswithJAWS">How do I get JAWS to read Table column headers?</a></li>
   <li><a href="#oldScreenReaderNotWorking">Why doesn't my old Windows screen reader work with Eclipse 3.6?</a></li>
+  <li><a href="#jumplist">Can I use the TaskItem menu's without the launcher?</a></li>
 </ul>
 
 <p></p>
@@ -1508,6 +1509,19 @@ public class DisplayMozillaVersion {
 	<br><code>-Dorg.eclipse.swt.accessibility.UseIA2=false</code>
 	<br>VM argument. For more information about this issue see
 	<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=313182">Bug 313182</a>.
+  </dd>
+
+  <dt><strong><a name="jumplist"> Q: Can I use the TaskItem menu's without the launcher?</a></strong></dt>
+  <dd>A: The TaskItem menu's (also known as Jump List on Windows 7) was designed to be used  in conjunction with
+  the eclipse launcher. That said, it is possible on Windows 7 to overwrite the default values for the items in the 
+  jump list calling <code>setData()</code> on the respective menu item using the following keys:  
+  <ol>
+    <li><strong>org.eclipse.swt.win32.taskbar.executable:</strong> path to the executable</li>
+    <li><strong>org.eclipse.swt.win32.taskbar.arguments:</strong> arguments to be passed to the executable</li>
+    <li><strong>org.eclipse.swt.win32.taskbar.icon:</strong> path to the icon file</li>
+    <li><strong>org.eclipse.swt.win32.taskbar.icon.index:</strong> the index of the icon, when the icon file is a dll or an exe</li>
+  </ol>
+  For more information about this issue see	<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=306039">Bug 306039</a>.
   </dd>
   
 </dl>
