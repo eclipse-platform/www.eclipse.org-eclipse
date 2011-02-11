@@ -1129,11 +1129,12 @@ the SWT.CENTER style when creating a composite.
   <dt><strong><a name="browserapplets">Q: Can I view Java applets in the SWT Browser?</a></strong></dt>
   <dd>A: Browser support for applets varies by platform:
     <ul>
-      <li>Windows (IE): As of Eclipse/SWT 3.5, applets can be viewed with IE-based Browsers if <em>all</em> of the following conditions are met:
+      <li>Windows: As of Eclipse/SWT 3.5, applets can be viewed in a Browser if <em>all</em> of the following conditions are met:
         <ol>
-          <li>The installed IE version is 7.0 or newer</li>
-          <li>The installed IE Java plug-in is Sun JRE 1.6u10 or newer, with the Next Generation Java Plug-in enabled (this plug-in is enabled by default when the JRE is installed)</li>
-          <li>The application is launched with the same JRE that provides the IE Java plug-in</li>
+          <li>For Browsers created with style SWT.NONE, the installed IE version is 7.0 or newer</li>
+          <li>For Browsers created with style SWT.MOZILLA, the installed XULRunner version is 1.9.2.x</li>
+          <li>The installed Java plug-in is Sun JRE 1.6u10 or newer, with the Next Generation Java Plug-in enabled (this plug-in is enabled by default when the JRE is installed)</li>
+          <li>The application is launched with the same JRE that provides the installed Java plug-in</li>
           <li>The application adds the JRE's plugin.jar, deploy.jar and javaws.jar jars to the JRE's boot classpath.  For example, to launch eclipse:
           <code>eclipse -vmargs -Xbootclasspath/a:"C:\Program Files\Java\jre6\lib\plugin.jar;C:\Program Files\Java\jre6\lib\deploy.jar;C:\Program Files\Java\jre6\lib\javaws.jar"</code></li>
         </ol>
