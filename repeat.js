@@ -1,5 +1,8 @@
 function theFunctionTwo(z) {
    var c = function() {return 2;};
+
+   function square(x) {return x*x;}
+
    var d = 2;
    var e = 'asdf';
    var f = null;
