@@ -11,6 +11,7 @@ function theFunctionTwo(z) {
    var i = 3.567;
    var j = 'jkl;';
    var k = '';
+   window.onafterprint=function() {return 4;};
    var l = window;
    var m = [3];
    var n = document;
