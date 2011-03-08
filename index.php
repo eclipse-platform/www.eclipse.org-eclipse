@@ -39,12 +39,12 @@ Whatever the reason, you will find many resources here. Enjoy!</p>
   <table width="100%">
   <tr><td>
       <b><font size="+1">Stable</font></b><br>
-      <a href="http://download.eclipse.org/eclipse/downloads/drops/R-3.6.1-201009090800/download.php?dropFile=swt-3.6.1-win32-win32-x86.zip">Windows</a>,
-      <a href="http://download.eclipse.org/eclipse/downloads/drops/R-3.6.1-201009090800/download.php?dropFile=swt-3.6.1-gtk-linux-x86.zip">Linux</a>,
+      <a href="http://download.eclipse.org/eclipse/downloads/drops/R-3.6.2-201102101200/download.php?dropFile=swt-3.6.2-win32-win32-x86.zip">Windows</a>,
+      <a href="http://download.eclipse.org/eclipse/downloads/drops/R-3.6.2-201102101200/download.php?dropFile=swt-3.6.2-gtk-linux-x86.zip">Linux</a>,
       <span style="white-space: nowrap;">
-      <a href="http://download.eclipse.org/eclipse/downloads/drops/R-3.6.1-201009090800/download.php?dropFile=swt-3.6.1-cocoa-macosx.zip">OS X</a></span>,
-      <a href="http://download.eclipse.org/eclipse/downloads/drops/R-3.6.1-201009090800/index.php#SWT" target="_top">more...</a><br>
-      <small>3.6.1 Final Release - <span style="white-space: nowrap;">09 September 2010</span></small><br>
+      <a href="http://download.eclipse.org/eclipse/downloads/drops/R-3.6.2-201102101200/download.php?dropFile=swt-3.6.2-cocoa-macosx.zip">OS X</a></span>,
+      <a href="http://download.eclipse.org/eclipse/downloads/drops/R-3.6.2-201102101200/index.php#SWT" target="_top">more...</a><br>
+      <small>3.6.2 Final Release - <span style="white-space: nowrap;">11 February 2011</span></small><br>
   <ul>
   <li><a href="R3_6/new_and_noteworthy.html">New and Noteworthy</a></li>
   <li><a href="language.php">Language Pack</a></li>
@@ -59,7 +59,7 @@ Whatever the reason, you will find many resources here. Enjoy!</p>
       <span style="white-space: nowrap;">
       <a href="http://download.eclipse.org/eclipse/downloads/drops/S-3.7M5-201101272034/download.php?dropFile=swt-3.7M5-cocoa-macosx.zip">OS X</a></span>,
       <a href="http://download.eclipse.org/eclipse/downloads/drops/S-3.7M5-201101272034/index.php#SWT" target="_top">more...</a><br>
-      <small>3.7 Milestone 3 - <span style="white-space: nowrap;">28 October 2010</span></small><br>
+      <small>3.7 Milestone 5 - <span style="white-space: nowrap;">28 January 2011</span></small><br>
   <ul>
   <li><a href="R3_7/plan.html">3.7 Development Plan</a></li>
   <li><a href="R3_7/new_and_noteworthy.html">New and Noteworthy</a></li>
@@ -131,6 +131,10 @@ bugzilla email preferences.</p>
 </table>
 
 <ul>
+<li><a href="http://archive.eclipse.org/eclipse/downloads/drops/R-3.5.2-201002111343/index.php#SWT" target="_top">SWT 3.5.2</a>, 12 February 2010.</li>
+    <ul>
+    <li><a href="R3_5/new_and_noteworthy.html">New and Noteworthy</a> items for each milestone</li>
+    </ul>
 <li><a href="http://archive.eclipse.org/eclipse/downloads/drops/R-3.4.2-200902111700/index.php#SWT" target="_top">SWT 3.4.2</a>, 13 February 2009.</li>
     <ul>
     <li><a href="R3_4/new_and_noteworthy.html">New and Noteworthy</a> items for each milestone</li>
