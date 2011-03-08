@@ -16,9 +16,9 @@
 	<li><a href="#m1">Milestone M1</a></li>
 	<li><a href="#m2">Milestone M2</a></li>
 	<li><a href="#m3">Milestone M3</a></li>
-	<!--
 	<li><a href="#m4">Milestone M4</a></li>
 	<li><a href="#m5">Milestone M5</a></li>
+	<!--
 	<li><a href="#m6">Milestone M6</a></li>
 	<li><a href="#m7">Milestone M7</a></li>
 	-->
@@ -139,7 +139,31 @@ Please note that this API is a work in progress, and is currently Cocoa-only. Pl
   <tr> 
     <td colspan="2"> <hr> </td>
   </tr>
-  
+  <tr id="HPUX">
+    <td class="title">HPUX for GTK</td>
+    <td class="content">
+      A new GTK port for HPUX (32 bit) has joined the lineup of supported configurations for which SWT and Eclipse are routinely built.
+      <p><img src="images/hpux.png" alt="hpux"></p>
+  </tr>
+ 
+  <tr id="duplex">
+    <td class="title">Duplex printing</td>
+    <td class="content">
+      New API has been added to <tt>PrinterData</tt> to enable duplex (double-sided) printing without using the <tt>PrintDialog</tt>.
+      This can also be used to seed the <tt>PrintDialog</tt>'s duplex setting before presenting it to the user.
+      <p><img src="images/duplex-printing-pl.png" alt="PrintDialog showing double-sided portrait printing that can be bound on the long edge"></p>
+      <p><img src="images/duplex-printing-ps.png" alt="PrintDialog showing double-sided portrait printing that can be bound on the short edge"></p>
+      <p><img src="images/duplex-printing-ll.png" alt="PrintDialog showing double-sided landscape printing that can be bound on the long edge"></p>
+      <p><img src="images/duplex-printing-ls.png" alt="PrintDialog showing double-sided landscape printing that can be bound on the short edge"></p>
+  </tr>
+ 
+ <tr id="CocoaDateTime">
+    <td class="title">Improved Cocoa DateTime support</td>
+    <td class="content">
+      On Cocoa, the <tt>DateTime</tt> control now supports the <tt>SWT.DROP_DOWN</tt> option bit.
+      <p><img src="images/cocoadatetime.png" alt="cocoadatetime"></p>
+  </tr>
+ 
   <tr> 
     <td colspan="2"> <hr /> </td>
   </tr>
@@ -150,6 +174,42 @@ Please note that this API is a work in progress, and is currently Cocoa-only. Pl
 <table border="0" width="80%" cellpadding="10" cellspacing="0">
   <tr> 
     <td colspan="2"> <hr> </td>
+  </tr>
+  <tr id="touch-support">
+    <td class="title">Touch and gesture support</td>
+    <td class="content">If your hardware supports it, you can now listen for touches or 
+    gestures on SWT controls. Four standard gestures are supported: two-finger panning, 
+    rotation, magnification, and swipe (three fingers on Mac OS X, flicks on Windows). 
+    You can also listen for 'raw' touches on a MacBook touchpad, Magic Trackpad or 
+    Magic Mouse, or a touch-sensitive display that is supported by Windows Touch.
+	For examples of how to use the touch and gesture support see 
+	<a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet352.java">Snippet 352</a> 
+	and <a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet353.java">Snippet 353</a>.
+	<p><img src="images/gesture.png" alt="Gesture" title="A gesture from our fearless leader"/></p>
+    </td>
+  </tr>
+ 
+  <tr id="WebKit_Everywhere">
+    <td class="title">WebKit everywhere</td>
+    <td class="content">The SWT browser now supports using WebKit as its native renderer 
+    on Windows.  Consequently, browsers created with new style <code>SWT.WEBKIT</code> 
+    will use WebKit on Windows, Linux and OS X, provided that the user's machine satisfies the 
+    <a href="http://www.eclipse.org/swt/faq.php#howusewebkit">runtime requirements</a>.  
+    For an example of using WebKit see <a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet351.java">Snippet 351</a>.
+	<p><img src="images/webkitWindows.png" alt="Webkit"/></p>
+    </td>
+  </tr>
+ 
+   <tr id="Change_Orientation">
+    <td class="title">Change orientation</td>
+    <td class="content">
+      New methods have been added to <tt>Control</tt> and <tt>Menu</tt> to 
+      allow the application to change the orientation of these interface elements. Prior to 
+      the introduction of these methods, the application was required to recreate the 
+      element to achieve the same result. 
+      Note: these methods are only relevant on platforms where BIDI mirroring is supported.
+	  See <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=29779">Bug 29779</a> for more information.
+    </td>
   </tr>
   
   <tr> 
