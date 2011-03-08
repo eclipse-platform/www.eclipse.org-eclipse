@@ -89,9 +89,10 @@ wrap any text when resized. For more info, please see <a href="http://dev.eclips
   </tr>
 
   <tr id="appmenu">
-    <td width="30%" valign="top" align="left"><b>Cocoa getAppMenuBar</b></td>
+    <td width="30%" valign="top" align="left"><b>Cocoa Display.getMenuBar</b></td>
     <td width="70%" valign="top">
-      <p>Display.getAppMenuBar() is a new API that returns a Menu that is displayed when no Shell is visible or when the active Shell doesn't have a menu bar of its own.Right now, this API is only available in the Mac OS X Cocoa port. It will return null on all other platforms.  See <a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet347.java">this snippet</a> for an example of how you can use this API in a cross-platform application.
+      <p>Display.getMenuBar() is a new API that returns a Menu that is displayed when no Shell is visible or when the active Shell doesn't have a menu bar of its own. Right now, this API is only available in the Mac OS X Cocoa port. It will return null on all other platforms.  See <a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet347.java">this snippet</a> for an example of how you can use this API in a cross-platform application.
+      <br>Note: This new API was originally called Display.getAppMenuBar().
       </p>
       <p><img src="images/AppMenuBar.png" alt="appMenuBar"></p>
   </tr>
@@ -100,7 +101,7 @@ wrap any text when resized. For more info, please see <a href="http://dev.eclips
     </td>
   </tr>
 <tr id="toolbar">
-    <td width="30%" valign="top" align="left"><b>Cocoa getToolbar</b></td>
+    <td width="30%" valign="top" align="left"><b>Cocoa Shell.getToolbar</b></td>
     <td width="70%" valign="top">
       <p>Shell.getToolBar() returns a ToolBar that appears in the title area of the Shell. ToolItems added to that ToolBar will have the look and feel of the platform. You can also add special separator items that provide a fixed-width spacer or a flexible-width spacer that pushes the ToolItems on either side of it out to the next fixed item, or the edge of the Shell.
 Please note that this API is a work in progress, and is currently Cocoa-only. Please follow bug 222859 or watch future N&N announcements for more info.
