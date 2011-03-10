@@ -2,7 +2,18 @@ function theFunctionTwo(z) {
    var c = function() {return 2;};
 
    function square(x) {return x*x;}
+   
+   function Complex(real, imaginary) {
+	   this.x = real;
+	   this.y = imaginary;
+   }
+   Complex.prototype.sum = function() {
+	   return this.x + this.y;
+   }
 
+   var z = new Complex(0,0);
+   z.sum();
+   
    var d = 2;
    var e = 'asdf';
    var f = null;
