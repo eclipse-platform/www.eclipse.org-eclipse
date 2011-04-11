@@ -42,14 +42,16 @@ features to SWT.</p>
 <li>Save the file. This should build the appropriate C files.
     <p></p>
 
-<li>Compile the new C code and copy the new libraries to the appropriate
-    fragment.  To compile the code, right-click on the <tt>build.xml</tt> file in the
-    <tt>Eclipse SWT PI/ws/library</tt> directory for your window system, and choose
-	"Run As -> Ant Build...". Select the JRE tab, and check "Run in the same JRE as the workspace".
-    Select the Refresh tab, and check "Refresh resources upon completion" to refresh your workspace
-    after running the build to ensure Eclipse picks up the fresh binaries. Now select the "Run" button.
-    <p></p>
-    <center><img src="images/buildxml.png" alt="build.xml"></center>
+<li>Compile the new C code and copy the new libraries to the appropriate fragment.  Steps:
+    <ul>
+      <li>right-click on the <tt>org.eclipse.swt</tt> project's <tt>tasks/build.xml</tt> file
+      	and select "Run As -> Ant Build..."</li>
+      <li>on the Targets tab check the <tt>build_&lt;ws&gt;_&lt;os&gt;_&lt;arch&gt;</tt> target
+      	corresponding to the configuration to be built (eg.- <tt>build_gtk_linux_x86</tt>)</li>
+	  <li>on the JRE tab select "Run in the same JRE as the workspace"</li>
+      <li>on the Refresh tab check "Refresh resources upon completion" to refresh your workspace
+    	after running the build; this ensures that Eclipse will pick up the fresh binaries</li>
+   	  <li>press the "Run" button to begin</li>
     <p></p>
 </ol>
 
