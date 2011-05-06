@@ -110,6 +110,8 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
   <li><a href="#tableheaderswithJAWS">How do I get JAWS to read Table column headers?</a></li>
   <li><a href="#oldScreenReaderNotWorking">Why doesn't my old Windows screen reader work with Eclipse 3.6?</a></li>
   <li><a href="#jumplist">Can I use the TaskItem's menu without the launcher?</a></li>
+  <li><a href="#multiplatformjar">How do I produce a single jar file that contains all of the various SWT platform jars?</a></li>
+  
 </ul>
 
 <p></p>
@@ -1524,6 +1526,12 @@ public class DisplayMozillaVersion {
   </ol>
   For more information about this issue see	<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=306039">Bug 306039</a>.
   </dd>
+  
+   <dt><strong><a name="multiplatformjar"> Q:  How do I produce a single jar file that contains all of the various SWT platform jars?</a></strong></dt>
+  <dd>A: Please see <a href="http://stackoverflow.com/questions/2706222/create-cross-platform-java-swt-application/5784073#5784073">this post</a> for a complete overview
+  of how to package the jars.
+  </dd>
+  
   
 </dl>
 </table>
