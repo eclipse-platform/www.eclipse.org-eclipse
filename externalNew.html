@@ -1,0 +1,20 @@
+<html>
+<head>
+<script language="JavaScript">
+function function1() {
+	var a;
+	try {
+		a = doit('hi');
+	} catch (e) {
+		alert("an error occurred");
+		alert(e.message);
+	}
+    alert(a);
+}
+</script>
+</head>
+<body>
+<input id=myB type="button" value="Push" onclick="function1();">
+Stop!!!
+</body>
+</html>
