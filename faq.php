@@ -1016,7 +1016,8 @@ the SWT.CENTER style when creating a composite.
       <li>Eclipse 3.4.x: Mozilla 1.4 GTK2 - 1.7.x GTK2 and XULRunner 1.8.x - 1.9.0.x.</li>
       <li>Eclipse 3.5.0: Mozilla 1.4 GTK2 - 1.7.x GTK2 and XULRunner 1.8.x - 1.9.1.x.</li>
       <li>Eclipse 3.5.2: Mozilla 1.4 GTK2 - 1.7.x GTK2 and XULRunner 1.8.x - 1.9.2.x.</li>
-      <li>Eclipse 3.6.x and newer: Mozilla 1.4 GTK2 - 1.7.x GTK2 and XULRunner 1.8.x - 1.9.2.x, and WebKitGTK+ 1.2.0 and newer (see <a href="#browserwebkitgtk">How do I use the WebKit renderer on Linux-GTK?</a>)</li>
+      <li>Eclipse 3.6.x: Mozilla 1.4 GTK2 - 1.7.x GTK2 and XULRunner 1.8.x - 1.9.2.x, and WebKitGTK+ 1.2.x (see <a href="#browserwebkitgtk">How do I use the WebKit renderer on Linux-GTK?</a>)</li>
+      <li>Eclipse 3.7.x: Mozilla 1.4 GTK2 - 1.7.x GTK2 and XULRunner 1.8.x - 1.9.2.x, and WebKitGTK+ 1.2.x and newer</li>
       <li>Also note that a Firefox release whose contained Gecko version correlates with the Mozilla versions above can also be used
       with Eclipse 3.1 and newer (Linux only), provided that it has been compiled with linkable Gecko libraries.  It is important to  
       note that Firefox downloads from mozilla.org do <em>not</em> satisfy this criteria, but Firefox installations that are
@@ -1113,7 +1114,8 @@ the SWT.CENTER style when creating a composite.
       Enterprise Linux 6 and Ubuntu 10.04.  Linux installations that do not meet this requirement will fall back to using Mozilla for SWT.NONE-style Browsers.
       <p>
       Eclipse/SWT 3.6.x can also use WebKitGTK for SWT.NONE-style Browsers created on GTK, but the user must explicitly request this by setting java property
-      "<code>org.eclipse.swt.browser.UseWebKitGTK</code>" to "<code>true</code>".  In the absence of this property being set, Mozilla is used for all SWT.NONE-style Browsers.
+      "<code>org.eclipse.swt.browser.UseWebKitGTK</code>" to "<code>true</code>".  In the absence of this property being set, Mozilla is used for all SWT.NONE-style
+      Browsers.  (Note that Eclipse/SWT 3.6.x is only able to use WebKitGTK 1.2.x; it will fail if a newer WebKitGTK release is found.)
   </dd>
 
   <dt><strong><a name="browserlinuxibm">Q: How can I get the SWT Browser to work with the IBM 1.4 VM?</a></strong></dt>
