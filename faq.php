@@ -72,6 +72,7 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
   <p></p>
   <li><a href="#whatisbrowser">What is the SWT Browser widget?</a></li>
   <li><a href="#browserplatforms">Which platforms support the SWT Browser, and which native renderers to they use?</a></li>
+  <li><a href="#browsernativeie">Which Internet Explorer version do Browsers on Windows use?</a></li>
   <li><a href="#browserlinux">What do I need to run the SWT Browser inside Eclipse on Linux?</a></li>
   <li><a href="#browsersolaris">What do I need to run the SWT Browser inside Eclipse on Solaris?</a></li>
   <li><a href="#browserlinuxrcp">What do I need to run the SWT Browser in a standalone application on Linux or Solaris?</a></li>
@@ -1003,6 +1004,27 @@ the SWT.CENTER style when creating a composite.
       this will attempt to use a natively-provided renderer that does not require additional installation.  However, for clients with specific
       native browser requirements, the type of native renderer to use can be specified, see <a href="#howusewebkit">How do I explicity use WebKit as
       the Browser's underlying renderer?</a> and <a href="#howusemozilla">How do I explicitly use Mozilla as the Browser's underlying renderer?</a>.  
+  </dd>
+
+  <dt><strong><a name="browsernativeie">Q: Which Internet Explorer version do Browsers on Windows use?</a></strong></dt>
+  <dd>A: Windows machines typically only have one production release of Internet Explorer (IE) installed at a time, so the Browser control
+    embeds the same native WebBrowser that is used by stand-alone IE.  However it's important to note that for Eclipse/SWT releases prior
+    to 3.7, the <em>default</em> compatibility mode of the Browser control is capped at IE7.  This means, for instance, that HTML documents
+    containing HTML5 <code>canvas</code> tags will not be shown properly, even if IE9 is installed on the machine.  An HTML document can override
+    this behavior by including a <code>X-UA-Compatible</code> meta tag as described in <a href="http://msdn.microsoft.com/en-us/library/cc288325%28v=vs.85%29.aspx">
+    Defining Document Compatibility</a>, which enables the Browser to use a more modern compatibility mode if an IE version newer than IE7 is installed.
+    <p>
+    As of Eclipse/SWT 3.7 the Browser control defaults to using the compatibility mode that matches the installed IE version.  This behavior will
+    be overridden in the following two cases:
+    <ol>
+      <li>If an HTML document contains a <code>X-UA-Compatible</code> meta tag that specifies an older IE version then the Browser will honor
+      this request.  This will only affect the compatibility mode that is used for showing the document containing the meta tag, it will not
+      affect the compatibility mode for other documents.</li>
+      <li>The Browser's default compatibility mode can be overridden by setting java property <code>org.eclipse.swt.browser.IEVersion</code> to a value
+      from <a href="http://msdn.microsoft.com/en-us/library/ee330730%28v=vs.85%29.aspx#browser_emulation">Browser Emulation</a> before the first
+      Browser instance is created.  For example, adding the line <code>-Dorg.eclipse.swt.browser.IEVersion=7000</code> to the end of
+      eclipse's <code>eclipse.ini</code> file will revert all IE-based Browsers to use IE7 compatibility mode by default.</li>
+    </ol>
   </dd>
 
   <dt><strong><a name="browserlinux">Q: What do I need to run the SWT Browser inside Eclipse on Linux?</a></strong></dt>
