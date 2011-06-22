@@ -39,32 +39,33 @@ Whatever the reason, you will find many resources here. Enjoy!</p>
   <table width="100%">
   <tr><td>
       <b><font size="+1">Stable</font></b><br>
-      <a href="http://download.eclipse.org/eclipse/downloads/drops/R-3.6.2-201102101200/download.php?dropFile=swt-3.6.2-win32-win32-x86.zip">Windows</a>,
-      <a href="http://download.eclipse.org/eclipse/downloads/drops/R-3.6.2-201102101200/download.php?dropFile=swt-3.6.2-gtk-linux-x86.zip">Linux</a>,
+      <a href="http://download.eclipse.org/eclipse/downloads/drops/R-3.7-201106131736/download.php?dropFile=swt-3.7-win32-win32-x86.zip">Windows</a>,
+      <a href="http://download.eclipse.org/eclipse/downloads/drops/R-3.7-201106131736/download.php?dropFile=swt-3.7-gtk-linux-x86.zip">Linux</a>,
       <span style="white-space: nowrap;">
-      <a href="http://download.eclipse.org/eclipse/downloads/drops/R-3.6.2-201102101200/download.php?dropFile=swt-3.6.2-cocoa-macosx.zip">OS X</a></span>,
-      <a href="http://download.eclipse.org/eclipse/downloads/drops/R-3.6.2-201102101200/index.php#SWT" target="_top">more...</a><br>
-      <small>3.6.2 Final Release - <span style="white-space: nowrap;">11 February 2011</span></small><br>
+      <a href="http://download.eclipse.org/eclipse/downloads/drops/R-3.7-201106131736/download.php?dropFile=swt-3.7-cocoa-macosx.zip">OS X</a></span>,
+      <a href="http://download.eclipse.org/eclipse/downloads/drops/R-3.7-201106131736/index.php#SWT" target="_top">more...</a><br>
+      <small>3.7 Final Release - <span style="white-space: nowrap;">13 June 2011</span></small><br>
   <ul>
-  <li><a href="R3_6/new_and_noteworthy.html">New and Noteworthy</a></li>
+  <li><a href="R3_7/new_and_noteworthy.html">New and Noteworthy</a></li>
   <li><a href="language.php">Language Pack</a></li>
   </ul>
   </table>
 <td width="50%" valign="top">
   <table width="100%">
   <tr><td>
+<!-- (commented out until 3.8M1)
       <b><font size="+1">Development</font></b><br>
-      <a href="http://download.eclipse.org/eclipse/downloads/drops/S-3.7M7-201104280848/download.php?dropFile=swt-3.7M7-win32-win32-x86.zip">Windows</a>,
-      <a href="http://download.eclipse.org/eclipse/downloads/drops/S-3.7M7-201104280848/download.php?dropFile=swt-3.7M7-gtk-linux-x86.zip">Linux</a>,
+      <a href="http://download.eclipse.org/eclipse/downloads/drops/R-3.7-201106131736/download.php?dropFile=swt-3.7-win32-win32-x86.zip">Windows</a>,
+      <a href="http://download.eclipse.org/eclipse/downloads/drops/R-3.7-201106131736/download.php?dropFile=swt-3.7-gtk-linux-x86.zip">Linux</a>,
       <span style="white-space: nowrap;">
-      <a href="http://download.eclipse.org/eclipse/downloads/drops/S-3.7M7-201104280848/download.php?dropFile=swt-3.7M7-cocoa-macosx.zip">OS X</a></span>,
-      <a href="http://download.eclipse.org/eclipse/downloads/drops/S-3.7M7-201104280848/index.php#SWT" target="_top">more...</a><br>
-      <small>3.7 Milestone 7 - <span style="white-space: nowrap;">28 April 2011</span></small><br>
+      <a href="http://download.eclipse.org/eclipse/downloads/drops/R-3.7-201106131736/download.php?dropFile=swt-3.7-cocoa-macosx.zip">OS X</a></span>,
+      <a href="http://download.eclipse.org/eclipse/downloads/drops/R-3.7-201106131736/index.php#SWT" target="_top">more...</a><br>
+      <small>3.7 Final Release - <span style="white-space: nowrap;">13 June 2011</span></small><br>
   <ul>
   <li><a href="R3_7/plan.html">3.7 Development Plan</a></li>
   <li><a href="R3_7/new_and_noteworthy.html">New and Noteworthy</a></li>
-
   </ul>
+-->
   </table>
 </table>
 
