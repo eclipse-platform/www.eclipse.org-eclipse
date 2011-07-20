@@ -33,6 +33,21 @@ Anonymous git access to the SWT repositories can be obtained through either http
 <p>While it is possible to use git only from the command line to develop SWT, it is recommended to use EGit to allow you to perform all git operations from within Eclipse. Here is a quick guide to help you 
 get set up (see also <a href="http://wiki.eclipse.org/Platform-releng/Git_Workflows#Clone_a_repo">Platform-releng/Git Workflows page</a>).<p>
 
+<h4>Installing EGit</h4>
+<p>
+You can install EGit 1.0.0 from <a href="http://download.eclipse.org/releases/indigo">Indigo</a>, it's already available. From within Eclipse, you can select Help>Install New Software... and then select the 
+Indigo site from the combo box. Select Eclipse EGit from underneath the collaboration section and install.
+</p>
+<h4>Configuring EGit</h4>
+<p>
+
+</p>
+<h4>Getting the Source</h4>
+<p>
+
+</p>
+<h4></h4>
+
     <ol>
     <li>First, set up the CVSROOT.  Use <i>File &gt; Import... &gt; CVS &gt;
         Projects from CVS</i> and enter the information for the Eclipse
