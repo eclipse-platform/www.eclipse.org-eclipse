@@ -21,15 +21,12 @@ run but you can also use more recent ones).<br>
 </li>
 <li><a href="http://www.eclipse.org/downloads/">Download and install the current Eclipse build.</a>
 (Select the "Eclipse Classic" download.)</li>
-<li><a href="http://www.eclipse.org/swt/cvs.php">Setup SWT from CVS.</a>
-Make sure to check out <code>org.eclipse.swt</code> plus any swt fragment you need
+<li><a href="http://www.eclipse.org/swt/git.php">Setup SWT from GIT.</a>
+Make sure to load <code>org.eclipse.swt</code> plus any swt fragment you need
 (for example, <code>org.eclipse.swt.gtk.linux.x86</code>),
 <code>org.eclipse.swt.snippets</code>,
 and <code>org.eclipse.swt.examples</code>.
 <br>
-</li>
-<li>Create a private CVS project for your test code. This is
-important to keep track of bugs that are fixed.<br>
 </li>
 <li>Click on any Snippet or example, and select Run As&gt;Java
 Application.<br>
