@@ -44,10 +44,9 @@ features to SWT.</p>
 
 <li>Compile the new C code and copy the new libraries to the appropriate fragment.  Steps:
     <ul>
-      <li>right-click on the <tt>org.eclipse.swt</tt> project's <tt>tasks/build.xml</tt> file
-      	and select "Run As -> Ant Build..."</li>
-      <li>on the Targets tab check the <tt>build_&lt;ws&gt;_&lt;os&gt;_&lt;arch&gt;</tt> target
-      	corresponding to the configuration to be built (eg.- <tt>build_gtk_linux_x86</tt>)</li>
+      <li>right-click on the <tt>build.xml</tt> file of the appropriate fragment (i. e. org.eclipse.swt.&lt;ws&gt;.&lt;os&gt;.&lt;arch&gt;) depending on the os, platform and architecture being built</li>
+      <li>select "Run As -> Ant Build..."</li>
+      <li>on the Targets tab check the <tt>build_libraries</tt> target</li>
 	  <li>on the JRE tab select "Run in the same JRE as the workspace"</li>
       <li>on the Refresh tab check "Refresh resources upon completion" to refresh your workspace
     	after running the build; this ensures that Eclipse will pick up the fresh binaries</li>
