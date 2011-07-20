@@ -26,6 +26,11 @@ Anonymous git access to the SWT repositories can be obtained through either http
 <li><tt>git clone http://git.eclipse.org/gitroot/platform/eclipse.platform.swt.git</tt></li>
 <li><tt>git clone http://git.eclipse.org/gitroot/platform/eclipse.platform.swt.binaries.git</tt></li>
 </ul>
+For committers, use the ssh protocol:
+<ul>
+<li><tt>git clone ssh://userid@git.eclipse.org/gitroot/platform/eclipse.platform.swt.git</tt></li>
+<li><tt>git clone ssh://userid@git.eclipse.org/gitroot/platform/eclipse.platform.swt.binaries.git</tt></li>
+</ul>
 </p>
 
 
@@ -41,7 +46,8 @@ Indigo site from the 'Work With' combo box. Select Eclipse EGit from underneath 
 <h4>Getting the Source</h4>
 <p>
 Getting the source is a two step process. First you clone the repository to the location specified in the Git preferences pages, and then you
-must import the repos into your workspace.
+must import the repos into your workspace. Note it is also possible to clone the repositiories via the command line tools and then just import
+them into your workspace.
 </p>
 <h5>Cloning the SWT repos</h5>
 <p>
@@ -65,7 +71,9 @@ For committer access (substitute in proper userid):
 </ul>
 <center><p><img src="images/egit.clone.repo.png" alt="Clone repo"></p></center>
 </li>
-<li></li>
+<li>Select master and any other branches that you are interested in.  
+<center><p><img src="images/egit.branches.png" alt="Get branches"></p></center>
+</li>
 <li></li>
 <li></li>
 <li></li>
