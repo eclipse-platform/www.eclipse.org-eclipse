@@ -36,7 +36,7 @@ For committers, use the ssh protocol:
 
 <h3>Using EGit</h3>
 <p>While it is possible to use git only from the command line to develop SWT, it is recommended to use EGit to allow you to perform all git operations from within Eclipse. Here is a quick guide to help you 
-get set up (see also <a href="http://wiki.eclipse.org/Platform-releng/Git_Workflows#Clone_a_repo">Platform-releng/Git Workflows page</a>).<p>
+get set up (<b>see also <a href="http://wiki.eclipse.org/Platform-releng/Git_Workflows#Clone_a_repo">Platform-releng/Git Workflows page</a> for more workflow hints.</b>).<p>
 
 <h4>Installing EGit</h4>
 <p>
