@@ -79,22 +79,24 @@ For committer access (substitute in proper userid):
 </p>
 <h5>Adding an externally cloned SWT repo</h5>
 <p>
+<ol>
 <li>In the Git Repositories perspective, select the Add Git Repositories button</li>
 <li>Browse to the directory that contains the repo and click search.</li>
 <li>Select the found repos and click OK.</li>
+</ol>
 </p>
 <h5>Importing the SWT repos</h5>
 <p>
-<ul>
+<ol>
 <li>Once you have a repo cloned, right click on it and select Import Projects...</li>
 <li>Choose Import existing projects and click Next.
 <center><p><img src="images/egit.import.png" alt="Clone repo"></p></center>
 </li>
-<li>Select which projects you want to import
+<li>Select which projects you want to import and click Finish.
 <center><p><img src="images/egit.import2.png" alt="Clone repo"></p></center>
 </li>
 <li></li>
-</ul>
+</ol>
 </p>
 <h4>Configuring EGit </h4>
 <p>
