@@ -40,7 +40,7 @@ describes how to use this tool when fixing bugs or adding features to SWT for co
 <li>Once the desired items are checked, press the generate tool bar button to generate
 	all the necessary JNI code. This includes the java binding for Cocoa classes, 
 	the C source for the JNI Natives and also supporting files for the tool. All files are under
-	<tt>Eclipse SWT PI/cocoa</tt> directory and if appropriate should be released into CVS.
+	<tt>Eclipse SWT PI/cocoa</tt> directory and if appropriate should be released.
     <p></p>
 <li>Compile the new C code.
     <p><b> On Eclipse 3.5.1 and newer releases:</b></p>

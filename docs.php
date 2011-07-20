@@ -93,7 +93,7 @@ the <em>Platform Plug-in Developer Guide</em>. To get there in Eclipse, select
 	<li><a href="macosx/">How to deploy SWT applications on Mac OS X</a></li>
 	<li><a href="macgen.php">How to generate the SWT JNI Code for Cocoa</a></li>
 	<li><a href="jws/">How to deploy SWT applications using Java Web Start</a></li>
-	<li><a href="cvs.php">How to use SWT from CVS</a></li>
+	<li><a href="git.php">How to use SWT from GIT</a></li>
 	<li><a href="jnigen.php">How to generate the SWT JNI Code</a></li>
 	<li><a href="opengl/">Using OpenGL with SWT 3.2</a></li>
 	<li><a href="fixbugs.php">How to fix a bug in SWT</a></li>

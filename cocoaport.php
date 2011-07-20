@@ -30,7 +30,7 @@ Eclipse 3.5 Milestone 5 for Mac OSX Cocoa</a>.</p>
 <ol>
 <li>Read the <a href="http://www.eclipse.org/swt/R3_5/plan.html">SWT 3.5 Development Plan</a> to get a feel for the current status of the Cocoa port.</li>
 <li>Subscribe to the <a href="https://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT developers mailing list</a> for discussion and to keep track of current developments.</li>
-<li>Then <a href="http://www.eclipse.org/swt/cvs.php">load SWT from CVS</a> into your Eclipse workspace.
+<li>Then <a href="http://www.eclipse.org/swt/git.php">load SWT from GIT</a> into your Eclipse workspace.
 The projects you need are:
 <ul>
 <li>org.eclipse.swt</li>
