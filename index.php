@@ -78,7 +78,7 @@ Whatever the reason, you will find many resources here. Enjoy!</p>
 <li><a href="examples.php">How to run the ControlExample and other SWT examples</a></li>
 <li><a href="macosx/">How to deploy SWT applications on Mac OS X</a></li>
 <li><a href="jws/">How to deploy SWT applications using Java Web Start</a></li>
-<li><a href="cvs.php">How to use SWT from CVS</a></li>
+<li><a href="git.php">How to use SWT from Git</a></li>
 <li><a href="jnigen.php">How to generate the SWT JNI Code</a></li>
 <li><a href="macgen.php">How to generate the SWT JNI Code for Cocoa</a></li>
 <li><a href="opengl/">Using OpenGL in SWT Applications</a></li>

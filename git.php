@@ -12,14 +12,17 @@
 <table width="875px" class="swtpage">
 <colgroup><col width="125px"><col width="750px"></colgroup>
 <tr><?php include "sidebar.php"; ?>
-<td valign="top" style="padding: 10px"><h1 style="padding: 0; margin: 0; border-bottom: 1px solid #000000;">Using SWT from CVS</h1>
+<td valign="top" style="padding: 10px"><h1 style="padding: 0; margin: 0; border-bottom: 1px solid #000000;">Using SWT from Git</h1>
 
-<p>SWT lives on git.eclipse.org in 2 repos - one for source and one for binaries. The source repo is called <a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/">eclipse.platform.swt.git</a> and
-the binary repo is called <a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.binaries.git/">eclipse.platform.swt.binaries.git</a>.</p>
+<p>SWT lives on git.eclipse.org in 2 repos - one for source and one for binaries. Both repos can be viewed online at:
+<ul>
+<li><a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/">eclipse.platform.swt.git</a></li> 
+<li><a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.binaries.git/">eclipse.platform.swt.binaries.git</a></li>
+</ul>
+</p>
 
 <ul>
 <li>Anonymous CVS access: <tt>:pserver:anonymous@dev.eclipse.org:/cvsroot/eclipse</tt></li>
-<li><a href="http://dev.eclipse.org/viewcvs/">Browse the CVS repository</a> on the web
 </ul>
 
 <p>Running with SWT from CVS takes a bit of work to set up for your platform.  Here is a quick guide
