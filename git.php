@@ -14,8 +14,7 @@
 <tr><?php include "sidebar.php"; ?>
 <td valign="top" style="padding: 10px"><h1 style="padding: 0; margin: 0; border-bottom: 1px solid #000000;">Using SWT from Git</h1>
 <h3>Intro</h3>
-<p>As part of the Eclipse Git migration, SWT has moved all of its CVS projects into 2 Git repos - one for sources and one for binaries. Git 
-will be used for all future SWT development.
+<p>As part of the Eclipse Git migration, SWT has moved all of its CVS projects into 2 Git repos - one for sources and one for binaries.
 <br>For those new to the Git world, there are many resources available online that can provide an intro to Git. The online 
 <a href="http://progit.org/book/">Pro Git</a> book is highly recommended.
 </p>
