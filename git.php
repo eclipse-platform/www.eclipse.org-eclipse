@@ -148,12 +148,12 @@ Next switch to the Repository Settings tab. Under the branch tree, select the br
         <br>(Note that if you are building for a 64-bit platform, there is an extra step needed.
         Please see <a href="http://www.eclipse.org/swt/faq.php#gtk64">this FAQ</a> for details).
 
-        <center><p><img src="images/swt-clean.png" alt="Using Project &gt; Clean... to recompile"></p></center>
+        <center><p><img src="images/egit.clean.png" alt="Using Project &gt; Clean... to recompile"></p></center>
 
     <li>We're ready to go!  To test our checkout, let's find an SWT
         application to run.  How about the ControlExample.
 
-        <center><p><img src="images/swt-controlexample.png" alt="org.eclipse.swt.examples.controlexample.ControlExample in the Package Explorer view"></p></center>
+        <center><p><img src="images/egit.controlexample.png" alt="org.eclipse.swt.examples.controlexample.ControlExample in the Package Explorer view"></p></center>
 
     <li>After we've selected the ControlExample.java file, we can run
         it using <b>Run &gt; Run As &gt; Java Application</b>.
