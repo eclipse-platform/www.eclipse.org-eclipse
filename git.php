@@ -13,28 +13,25 @@
 <colgroup><col width="125px"><col width="750px"></colgroup>
 <tr><?php include "sidebar.php"; ?>
 <td valign="top" style="padding: 10px"><h1 style="padding: 0; margin: 0; border-bottom: 1px solid #000000;">Using SWT from Git</h1>
-
+<h3>Git Web View</h3>
 <p>SWT lives on git.eclipse.org in 2 repos - one for source and one for binaries. Both repos can be viewed online at:
 <ul>
 <li><a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/">eclipse.platform.swt.git</a></li> 
 <li><a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.binaries.git/">eclipse.platform.swt.binaries.git</a></li>
 </ul>
-Anonymous git access to the SWT repositories can be obtained through either http or git protocols. To clone the SWT repos you can use one of the following command lines (both are equivalent but the git 
-protocol requires certain ports to be open which might be closed on firewalls). 
+
+<h3>Cloning the SWT repos</h3>
+Anonymous git access to the SWT repositories can be obtained through either http or git protocols. To clone the SWT repos from the command line:
 <ul>
 <li><tt>git clone http://git.eclipse.org/gitroot/platform/eclipse.platform.swt.git</tt></li>
-<li><tt>git clone git://git.eclipse.org/gitroot/platform/eclipse.platform.swt.git</tt></li>
-</ul>
-<ul>
 <li><tt>git clone http://git.eclipse.org/gitroot/platform/eclipse.platform.swt.binaries.git</tt></li>
-<li><tt>git clone git://git.eclipse.org/gitroot/platform/eclipse.platform.swt.binaries.git</tt></li>
 </ul>
 </p>
 
 
-
-<p>Running with SWT from CVS takes a bit of work to set up for your platform.  Here is a quick guide
-to help you get set up.<p>
+<h3>Using EGit</h3>
+<p>While it is possible to use git only from the command line to develop SWT, it is recommended to use EGit to allow you to perform all git operations from within Eclipse. Here is a quick guide to help you 
+get set up (see also <a href="http://wiki.eclipse.org/Platform-releng/Git_Workflows#Clone_a_repo">Platform-releng/Git Workflows page</a>).<p>
 
     <ol>
     <li>First, set up the CVSROOT.  Use <i>File &gt; Import... &gt; CVS &gt;
