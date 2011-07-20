@@ -38,17 +38,21 @@ get set up (see also <a href="http://wiki.eclipse.org/Platform-releng/Git_Workfl
 You can install EGit 1.0.0 from <a href="http://download.eclipse.org/releases/indigo">Indigo</a>, it's already available. From within Eclipse, you can select Help>Install New Software... and then select the 
 Indigo site from the 'Work With' combo box. Select Eclipse EGit from underneath the 'Collaboration' section and install.
 </p>
-<h4>Configuring EGit (general options)</h4>
-<p>
-Open Eclipse Preferences..., and expand the Team item in the tree. Under the Git item, select Configuration. 
-
- <center><p><img src="images/egit.prefs.name.png" alt="Adding user name and email"></p></center>
-
-</p>
 <h4>Getting the Source</h4>
 <p>
-
+Getting the source is a two step process. First you clone the repository to the location specified in the Git preferences pages, and then you
+must import the repos into your workspace.
 </p>
+<h5>Cloning the SWT repos</h5>
+<h5>Importing the SWT repos</h5>
+<h4>Configuring EGit </h4>
+<p>
+Open Eclipse Preferences..., and expand the Team item in the tree. Under the Git item, select Configuration. Add a name and 
+an email - this will be used on all commits.
+
+ <center><p><img src="images/egit.prefs.name.png" alt="Adding user name and email"></p></center>
+</p>
+
 <h4></h4>
 
     <ol>
