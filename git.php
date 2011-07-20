@@ -44,13 +44,21 @@ Getting the source is a two step process. First you clone the repository to the 
 must import the repos into your workspace.
 </p>
 <h5>Cloning the SWT repos</h5>
+<p>
+<ol>
+<li>Switch to the Git Repository Exploring perspective.</li>
+<li>Click on Clone a Git repository
+<center><p><img src="images/egit.prefs.name.png" alt="Adding user name and email"></p></center>
+</li>
+</ol>
+</p>
 <h5>Importing the SWT repos</h5>
 <h4>Configuring EGit </h4>
 <p>
 Open Eclipse Preferences..., and expand the Team item in the tree. Under the Git item, select Configuration. Add a name and 
 an email - this will be used on all commits.
 
- <center><p><img src="images/egit.prefs.name.png" alt="Adding user name and email"></p></center>
+ <center><p><img src="images/egit.clone.png" alt="Clone egit"></p></center>
 </p>
 
 <h4></h4>
