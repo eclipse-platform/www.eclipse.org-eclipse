@@ -14,7 +14,7 @@
 <tr><?php include "sidebar.php"; ?>
 <td valign="top" style="padding: 10px"><h1 style="padding: 0; margin: 0; border-bottom: 1px solid #000000;">Using SWT from Git</h1>
 <h3>Git Web View</h3>
-<p>SWT lives on git.eclipse.org in 2 repos - one for source and one for binaries. Both repos can be viewed online at:
+<p>As of Eclipse 3.8, SWT lives on git.eclipse.org in 2 repos - one for source and one for binaries. Both repos can be viewed online at:
 <ul>
 <li><a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/">eclipse.platform.swt.git</a></li> 
 <li><a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.binaries.git/">eclipse.platform.swt.binaries.git</a></li>
@@ -49,7 +49,7 @@ Getting the source is a two step process. First you clone the repository to the 
 must import the repos into your workspace. Note it is also possible to clone the repositiories via the command line tools and then just import
 them into your workspace.
 </p>
-<h5>Cloning the SWT repos</h5>
+<h4>Cloning the SWT repos</h4>
 <p>
 <ol>
 <li>Switch to the Git Repository Exploring perspective.</li>
@@ -77,7 +77,7 @@ For committer access (substitute in proper userid):
 <li>Confirm the destination directory. Click Finish</li>
 </ol>
 </p>
-<h5>Adding an externally cloned SWT repo</h5>
+<h4>Adding an externally cloned SWT repo</h4>
 <p>
 <ol>
 <li>In the Git Repositories perspective, select the Add Git Repositories button</li>
@@ -85,7 +85,7 @@ For committer access (substitute in proper userid):
 <li>Select the found repos and click OK.</li>
 </ol>
 </p>
-<h5>Importing the SWT bundles into your workspace</h5>
+<h4>Importing the SWT bundles into your workspace</h4>
 <p>
 <ol>
 <li>Once you have a repo cloned, right click on it and select Import Projects...</li>
@@ -111,20 +111,10 @@ Next switch to the Repository Settings tab. Under the branch tree, select the br
  
  <center><p><img src="images/egite.rebase.png" alt="Rebase"></p></center>
 </p>
-<h4></h4>
-
+<h4>Setting Up SWT</h4>
     <ol>
-    <li>First, set up the CVSROOT.  Use <i>File &gt; Import... &gt; CVS &gt;
-        Projects from CVS</i> and enter the information for the Eclipse
-        CVS server.
-
-        <center><p><img src="images/swt-cvsroot.png" alt="Host: dev.eclipse.org, Repository Path: /cvsroot/eclipse, and User: anonymous"></p></center>
-
-    <li>Next, check out the <b>org.eclipse.swt</b> project, where all
-        the Java code lives, along with the correct binary package for
-        the DLLs from your platform.
-
-        <center><p><img src="images/swt-checkout.png" alt="Specified modules: org.eclipse.swt, org.eclipse.swt.examples, org.eclipse.swt.gtk.linux.x86"></p></center>
+    <li>Once you have imported the projects from both eclipse.platform.swt and eclipse.platform.swt.binaries into your workspace, you are ready
+    to switch the classpath to match whatever platform you are runnning with.
 
         <p>Each platform has a module for the binaries categorized by
         toolkit, OS, and CPU architecture.  Examples:</p>
@@ -136,11 +126,8 @@ Next switch to the Repository Settings tab. Under the branch tree, select the br
             <td style="border: 1px solid #000000; padding: 4px; text-align: center;">org.eclipse.swt.cocoa.macosx
             <tr><th style="background: #0080c0; color: #ffffff; border: solid 1px #000000; padding: 4px;">Linux GTK
             <td style="border: 1px solid #000000; padding: 4px; text-align: center;">org.eclipse.swt.gtk.linux.x86
-        <tr><th style="background: #0080c0; color: #ffffff; border: solid 1px #000000; padding: 4px;">Linux Motif
-            <td style="border: 1px solid #000000; padding: 4px; text-align: center;">org.eclipse.swt.motif.linux.x86
         </table><p></p>
         
-        <p>You may also want to check out the <b>org.eclipse.swt.examples</b> and <b>org.eclipse.swt.snippets</b> projects.</p>
 
     <li>SWT has a different Eclipse <b>.classpath</b> file for each
         platform, so we need to set up Eclipse to use the right one.
