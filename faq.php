@@ -198,7 +198,7 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
   </dd>
 
   <dt><strong><a name="swtsource">Q: Where do I find the SWT source?</a></strong>
-  <dd>A: SWT's source can be retrieved directly from CVS as described in <a href="http://www.eclipse.org/swt/cvs.php">Using SWT from CVS</a>.  It's also included
+  <dd>A: SWT's source can be retrieved directly from GIT as described in <a href="http://www.eclipse.org/swt/git.php">Using SWT from GIT</a>.  It's also included
       in eclipse as follows:
       <ul>
         <li>eclipse 3.4 and newer: <code>plugins/org.eclipse.swt.<em>&lt;ws&gt;</em>.<em>&lt;os&gt;</em>.<em>&lt;arch&gt;</em>.source_<em>X.X.X.&lt;version&gt;</em>.jar</code></li>
@@ -208,10 +208,10 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
 
   <dt><strong><a name="howbuildjar">Q: How do I build an SWT jar for my platform?</a></strong>
   </dt>
-  <dd>A: The SWT jar can be built from the eclipse CVS repository using an Ant task:
+  <dd>A: The SWT jar can be built from the eclipse GIT repository using an Ant task:
     <ol>
-      <li>Connect a CVS client (such as eclipse) to <strong>:pserver:anonymous@dev.eclipse.org:/cvsroot/eclipse</strong>.
-      <li>Check out the projects <strong>org.eclipse.swt</strong> and <strong>org.eclipse.swt.</strong><em>WS.OS.ARCH</em> where <em>WS.OS.ARCH</em> are the names of the
+      <li> Retrieve SWT directly from GIT as described in <a href="http://www.eclipse.org/swt/git.php">Using SWT from GIT</a>
+      <li>Load the projects <strong>org.eclipse.swt</strong> and <strong>org.eclipse.swt.</strong><em>WS.OS.ARCH</em> where <em>WS.OS.ARCH</em> are the names of the
         windowing system, operating system and architecture of interest, respectively.  For example, <strong>org.eclipse.swt.gtk.linux.x86</strong>.
       <li>In the project <strong>org.eclipse.swt.</strong><em>WS.OS.ARCH</em>, locate the file <strong>build.xml</strong>.  This is an Ant script.
       <li>Run Ant on the target <strong>build.jars</strong>.  If you are using eclipse as your development environment, you can run 
@@ -226,9 +226,8 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
   </dt>
   <dd>A: The SWT Eclipse plug-in can be built (excluding the signing of the jar) with the steps below.
     <ol>
-      <li>In Eclipse's CVS Repositories view create a connection to <strong>:pserver:anonymous@dev.eclipse.org:/cvsroot/eclipse</strong>.
-      <li>Check out the projects <strong>org.eclipse.swt</strong> and <strong>org.eclipse.swt.</strong><em>WS.OS.ARCH</em> where <em>WS.OS.ARCH</em> are the names of the
-        windowing system, operating system and architecture of interest, respectively.  For example, <strong>org.eclipse.swt.gtk.linux.x86</strong>.
+      <li> Retrieve SWT directly from GIT as described in <a href="http://www.eclipse.org/swt/git.php">Using SWT from GIT</a>
+      <li> Load the projects org.eclipse.swt and org.eclipse.swt.WS.OS.ARCH where WS.OS.ARCH are the names of the windowing system, operating system and architecture of interest, respectively. For example, org.eclipse.swt.gtk.linux.x86. 
       <li>(optional) If you wish to compile SWT in your workspace, in the Navigator view rename the <strong>org.eclipse.swt</strong> project's <strong>.classpath_</strong>WS
         file to <strong>.classpath</strong>.  This is useful if, for instance, you have a patch to apply to the SWT codebase before building the plug-in.
       <li>Invoke the File > Export... menu item, then select the "Plug-in Development" - "Deployable Plug-ins and Fragments" wizard, and press Next.
@@ -243,7 +242,7 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
     As a result, subsequent exports of the same plug-in will <em>NOT</em> recompile the workspace contents, and therefore will not contain any changes that have
     been made in the interim.  For such changes to be included in a re-export of the plug-in, these intermediate files must be deleted in order to force
     their recompilation.  The easiest way to do this is to select the <strong>org.eclipse.swt.</strong><em>WS.OS.ARCH</em> project, press F5 to refresh it, and
-    then replace its content with that from CVS.    
+    then replace its content with the released content.    
   </dd>
      
   <dt><strong><a name="howbuilddll">Q: How do I build the SWT JNI libraries for my platform?</a></strong>
@@ -251,7 +250,7 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
   <dd>A: SWT uses JNI to interact with the native widgets in the
    operating system.  The SWT JNI libraries must be compiled for the
    windowing system, operating system and hardware architecture of
-   interest.  The libraries can be built either from the code in the CVS
+   interest.  The libraries can be built either from the code in the GIT
    repository or from an eclipse SDK download.
   
    <p>In order to build the required libraries and run Eclipse, you
@@ -283,11 +282,11 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
    <p>This description was originally contributed by Colin R Devilbiss.</p>
 
     
-   <p><strong>Building the SWT JNI libraries from the eclipse CVS repository:</strong><br>
+   <p><strong>Building the SWT JNI libraries from the eclipse GIT repository:</strong><br>
    <strong>NOTE</strong>: These instructions require you to use Eclipse
 
    <ol>
-     <li>Follow <a href="cvs.php">these instructions</a> to checkout SWT from CVS.
+     <li>Follow <a href="git.php">these instructions</a> to get SWT from GIT.
 
      <li>Compile the project.  This will create a folder called bin under the org.eclipse.swt project.
 
@@ -321,7 +320,7 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
   </dt>
   <dd>A: Eclipse is launched by a binary executable which puts up a splash screen and launches a Java VM. 
     The executable must be compiled for the windowing system, operating system and hardware architecture of interest.
-    The libraries can be built either from the code in the CVS repository or from an eclipse SDK download. 
+    The libraries can be built from an eclipse SDK download. 
     
     <p><strong>Building the Eclipse executable from the eclipse SDK download:</strong>
     <ol>
@@ -355,18 +354,18 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
   </dd>
 
   <dt><strong><a name="gtk64">Q: How do I build the 64-bit version of SWT GTK?</a></strong></dt>
-  <dd>A: Follow these steps to extract the 64-bit SWT GTK source code from CVS and produce your own build:
+  <dd>A: Follow these steps to extract the 64-bit SWT GTK source code from GIT and produce your own build:
   <ol>
     <li>Start Eclipse and retrieve the <code>org.eclipse.swt</code>, <code>org.eclipse.swt.gtk.linux.x86_64</code> and
       <code>org.eclipse.swt.tools</code> projects from dev.eclipse.org (see
-      <a href="http://www.eclipse.org/swt/cvs.php">How to use SWT from CVS</a>, use <code>.classpath_gtk</code>
+      <a href="http://www.eclipse.org/swt/git.php">How to use SWT from GIT</a>, use <code>.classpath_gtk</code>
       as the <code>.classpath</code> file in the <code>org.eclipse.swt</code> project).</li>
-    <li>Convert SWT's Java and C code from its 32-bit form to 64-bit:</li>
+    <li>Convert SWT's Java from its 32-bit form to 64-bit:</li>
     <ul>
       <li>To convert the Java code in-place, go to the <code>build.xml</code> ant script in the <code>org.eclipse.swt.gtk.linux.x86_64</code>
         project and run its "replace.32.to.64" target.  Once this target has completed you must refresh (F5)
         the <code>org.eclipse.swt</code> project in order to pick up the changes.</li>
-      <li>To convert and build the C code, run the "buildNatives" target in the same <code>build.xml</code> file.  Refresh (F5)
+      <li>Run the "build_libraries" target in the same <code>build.xml</code> file.  Refresh (F5)
         the <code>org.eclipse.swt.gtk.linux.x86_64</code> project when this target has completed, to pick up the new libraries.</li>
     </ul>
     <li>You're done!  The <code>org.eclipse.swt.gtk.linux.x86_64</code> project will now contain the 64-bit native libraries, and if you're
@@ -422,8 +421,8 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
   <dd>A: You need to be sure that you are forcing your launch to use a 64-bit VM. Apple ships most of their VMs with 32 and
   	  64-bit binaries. To force the VM to run in 64-bit mode, use the -d64 option as VM argument in your launch configuration.
   	  
-  	  <p>If you are launching with SWT from CVS in your workspace (see
-      <a href="http://www.eclipse.org/swt/cvs.php">How to use SWT from CVS</a>, use <code>.classpath_cocoa</code>
+  	  <p>If you are launching with SWT from GIT in your workspace (see
+      <a href="http://www.eclipse.org/swt/git.php">How to use SWT from GIT</a>, use <code>.classpath_cocoa</code>
       as the <code>.classpath</code> file in the <code>org.eclipse.swt</code> project and make sure you have the
       org.eclipse.swt.cocoa.maxosx.x86_64 project in your workspace),
       then you also need to modify the <code>.classpath</code> file as follows:
@@ -750,7 +749,7 @@ Eclipse*fontList:-misc-fixed-medium-r-normal-*-10-100-75-75-c-60-iso8859-1
   Additionally, AIX and Solaris users must ensure that AWT is using XToolkit, as described in
   <a href="#swtawtsolaris">Why does the SWT_AWT bridge not work for me on AIX or Solaris?</a>
   
-  <p>See this <a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet135.java">snippet</a> for an example of how to use the API.
+  <p>See this <a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet135.java">snippet</a> for an example of how to use the API.
   </dd>
 
   <dt><strong><a name="subclassing">Q: Why can't I subclass SWT widgets like Button and Table?</a></strong></dt>
@@ -1322,7 +1321,7 @@ public class DisplayMozillaVersion {
       </ul>
     </ul>
     <p>You can use <code>Browser.getWebBrowser()</code> to access the JavaXPCOM <code>nsIWebBrowser</code> that represents the Browser instance.  For an example of using JavaXPCOM see
-      <a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet267.java">Snippet 267</a>.
+      <a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet267.java">Snippet 267</a>.
   </dd>
 
   <dt><strong><a name="swtawtosx">Q: Why does the SWT_AWT bridge not work for me on OS X?</a></strong></dt>
@@ -1500,13 +1499,13 @@ public class DisplayMozillaVersion {
       is resized, including when it is initially shown.  To make a Composite lay out its
       children under any other circumstances, such as when children are created or disposed,
       its <em>layout()</em> method must be called.  For an example of this see SWT snippet
-      <a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet98.java">create and dispose children of a composite</a>.
+      <a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet98.java">create and dispose children of a composite</a>.
   </dd>
   
   <dt><strong><a name="scrolledcomposite"> Q:  How do I programmatically scroll a Composite?</a></strong></dt>
   <dd>A: This is done by using a ScrolledComposite instead of a Composite, and invoking
       <code>ScrolledComposite.setOrigin(...)</code> to scroll it.  For an example of this see SWT snippet
-      <a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet296.java">use a ScrolledComposite to scroll a Tree vertically</a>. 
+      <a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet296.java">use a ScrolledComposite to scroll a Tree vertically</a>. 
   </dd>
 
   <dt><strong><a name="copypastewithKlipper"> Q:  Why does Copy/Paste sometimes not work on Linux?</a></strong></dt>
