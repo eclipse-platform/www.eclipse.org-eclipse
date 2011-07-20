@@ -71,18 +71,31 @@ For committer access (substitute in proper userid):
 </ul>
 <center><p><img src="images/egit.clone.repo.png" alt="Clone repo"></p></center>
 </li>
-<li>Select master and any other branches that you are interested in.  
+<li>Select master and any other branches that you are interested in. Click Next.  
 <center><p><img src="images/egit.branches.png" alt="Get branches"></p></center>
 </li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
+<li>Confirm the destination directory. Click Finish</li>
 </ol>
 </p>
+<h5>Adding an externally cloned SWT repo</h5>
+<p>
+<li>In the Git Repositories perspective, select the Add Git Repositories button</li>
+<li>Browse to the directory that contains the repo and click search.</li>
+<li>Select the found repos and click OK.</li>
+</p>
 <h5>Importing the SWT repos</h5>
+<p>
+<ul>
+<li>Once you have a repo cloned, right click on it and select Import Projects...</li>
+<li>Choose Import existing projects and click Next.
+<center><p><img src="images/egit.import.png" alt="Clone repo"></p></center>
+</li>
+<li>Select which projects you want to import
+<center><p><img src="images/egit.import2.png" alt="Clone repo"></p></center>
+</li>
+<li></li>
+</ul>
+</p>
 <h4>Configuring EGit </h4>
 <p>
 Open Eclipse Preferences..., and expand the Team item in the tree. Under the Git item, select Configuration. Add a name and 
