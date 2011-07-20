@@ -13,8 +13,14 @@
 <colgroup><col width="125px"><col width="750px"></colgroup>
 <tr><?php include "sidebar.php"; ?>
 <td valign="top" style="padding: 10px"><h1 style="padding: 0; margin: 0; border-bottom: 1px solid #000000;">Using SWT from Git</h1>
+<h3>Intro</h3>
+<p>As part of the Eclipse Git migration, SWT has moved all of its CVS projects into 2 Git repos - one for sources and one for binaries. Git 
+will be used for all future SWT development.
+<br>For those new to the Git world, there are many resources available online that can provide an intro to Git. The online 
+<a href="http://progit.org/book/">Pro Git</a> book is highly recommended.
+</p>
 <h3>Git Web View</h3>
-<p>As of Eclipse 3.8, SWT lives on git.eclipse.org in 2 repos - one for source and one for binaries. Both repos can be viewed online at:
+<p>As of Eclipse 3.8, SWT lives at git.eclipse.org. Both SWT repos can be viewed online at:
 <ul>
 <li><a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/">eclipse.platform.swt.git</a></li> 
 <li><a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.binaries.git/">eclipse.platform.swt.binaries.git</a></li>
@@ -37,7 +43,9 @@ For committers, use the ssh protocol:
 <h3>Using EGit</h3>
 <p>While it is possible to use git only from the command line to develop SWT, it is recommended to use EGit to allow you to perform all git operations from within Eclipse. Here is a quick guide to help you 
 get set up (<b>see also <a href="http://wiki.eclipse.org/Platform-releng/Git_Workflows#Clone_a_repo">Platform-releng/Git Workflows page</a> for more workflow hints.</b>).<p>
-
+<p>
+The EGit User guide can be found <a href="http://wiki.eclipse.org/EGit/User_Guide">here</a>.
+</p>
 <h4>Installing EGit</h4>
 <p>
 You can install EGit 1.0.0 from <a href="http://download.eclipse.org/releases/indigo">Indigo</a>, it's already available. From within Eclipse, you can select Help>Install New Software... and then select the 
