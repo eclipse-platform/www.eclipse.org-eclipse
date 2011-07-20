@@ -140,7 +140,7 @@ Next switch to the Repository Settings tab. Under the branch tree, select the br
         <b>.classpath_<em>xxx</em></b> file for our platform and copy it to a file named
         <b>.classpath</b>.
 
-        <center><p><img src="images/swt-classpath.png" alt="Name Conflict dialog with .classpath in the New Name field"></p></center>
+        <center><p><img src="images/egit.classpath.png" alt="Name Conflict dialog with .classpath in the New Name field"></p></center>
 
     <li>After changing a <b>.classpath</b> file, it's usually a good
         idea to clean the projects that depend on it to make sure
@@ -158,7 +158,7 @@ Next switch to the Repository Settings tab. Under the branch tree, select the br
     <li>After we've selected the ControlExample.java file, we can run
         it using <b>Run &gt; Run As &gt; Java Application</b>.
 
-        <center><p><img src="images/swt-runas.png" alt="Shift+Alt+X J will also run the selected Java application"></p></center>
+        <center><p><img src="images/egit.runas.png" alt="Shift+Alt+X J will also run the selected Java application"></p></center>
 
     </ol>
     
