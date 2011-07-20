@@ -19,11 +19,19 @@
 <li><a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/">eclipse.platform.swt.git</a></li> 
 <li><a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.binaries.git/">eclipse.platform.swt.binaries.git</a></li>
 </ul>
+Anonymous git access to the SWT repositories can be obtained through either http or git protocols. To clone the SWT repos you can use one of the following command lines (both are equivalent but the git 
+protocol requires certain ports to be open which might be closed on firewalls). 
+<ul>
+<li><tt>git clone http://git.eclipse.org/gitroot/platform/eclipse.platform.swt.git</tt></li>
+<li><tt>git clone git://git.eclipse.org/gitroot/platform/eclipse.platform.swt.git</tt></li>
+</ul>
+<ul>
+<li><tt>git clone http://git.eclipse.org/gitroot/platform/eclipse.platform.swt.binaries.git</tt></li>
+<li><tt>git clone git://git.eclipse.org/gitroot/platform/eclipse.platform.swt.binaries.git</tt></li>
+</ul>
 </p>
 
-<ul>
-<li>Anonymous CVS access: <tt>:pserver:anonymous@dev.eclipse.org:/cvsroot/eclipse</tt></li>
-</ul>
+
 
 <p>Running with SWT from CVS takes a bit of work to set up for your platform.  Here is a quick guide
 to help you get set up.<p>
