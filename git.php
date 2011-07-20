@@ -50,13 +50,20 @@ must import the repos into your workspace.
 <li>Click on Clone a Git repository
 <center><p><img src="images/egit.clone.png" alt="Clone egit"></p></center>
 </li>
-<li>Paste one of the following URIs into the URI field, and EGit will fill in the rest for you
-
+<li>Paste one of the following URIs into the URI field, and EGit will fill in the rest for you. When finished, click Next.
+<br>
+For anonymous access:
+<ul>
+<li>http://git.eclipse.org/gitroot/platform/eclipse.platform.swt.git</li>
+<li>http://git.eclipse.org/gitroot/platform/eclipse.platform.swt.binaries.git</li>
+</ul>
+<br>
 For committer access (substitute in proper userid):
 <ul>
 <li>ssh://userid@git.eclipse.org/gitroot/platform/eclipse.platform.swt.git</li>
 <li>ssh://userid@git.eclipse.org/gitroot/platform/eclipse.platform.swt.binaries.git</li>
 </ul>
+<center><p><img src="images/egit.clone.repo.png" alt="Clone repo"></p></center>
 </li>
 <li></li>
 <li></li>
