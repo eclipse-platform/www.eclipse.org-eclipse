@@ -48,10 +48,23 @@ must import the repos into your workspace.
 <ol>
 <li>Switch to the Git Repository Exploring perspective.</li>
 <li>Click on Clone a Git repository
-
 <center><p><img src="images/egit.clone.png" alt="Clone egit"></p></center>
-
 </li>
+<li>Paste one of the following URIs into the URI field, and EGit will fill in the rest for you
+
+For committer access (substitute in proper userid):
+<ul>
+<li>ssh://userid@git.eclipse.org/gitroot/platform/eclipse.platform.swt.git</li>
+<li>ssh://userid@git.eclipse.org/gitroot/platform/eclipse.platform.swt.binaries.git</li>
+</ul>
+</li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
 </ol>
 </p>
 <h5>Importing the SWT repos</h5>
