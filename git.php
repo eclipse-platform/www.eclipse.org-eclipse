@@ -85,7 +85,7 @@ For committer access (substitute in proper userid):
 <li>Select the found repos and click OK.</li>
 </ol>
 </p>
-<h5>Importing the SWT repos</h5>
+<h5>Importing the SWT bundles into your workspace</h5>
 <p>
 <ol>
 <li>Once you have a repo cloned, right click on it and select Import Projects...</li>
@@ -95,17 +95,22 @@ For committer access (substitute in proper userid):
 <li>Select which projects you want to import and click Finish.
 <center><p><img src="images/egit.import2.png" alt="Clone repo"></p></center>
 </li>
-<li></li>
 </ol>
 </p>
 <h4>Configuring EGit </h4>
 <p>
-Open Eclipse Preferences..., and expand the Team item in the tree. Under the Git item, select Configuration. Add a name and 
-an email - this will be used on all commits.
+Open Eclipse Preferences..., and expand the Team item in the tree. Under the Git item, select Configuration. Check the user name and 
+and email - this will be used on all commits.
 
 <center><p><img src="images/egit.prefs.name.png" alt="Adding user name and email"></p></center>
 </p>
-
+<p>
+Next switch to the Repository Settings tab. Under the branch tree, select the branch you are working on (most likely master) and
+ create a new key with a name branch.[branchname].rebase and a value of true. This will ensure that the history will stay
+ linear when merging in changes from the remote repository.
+ 
+ <center><p><img src="images/egite.rebase.png" alt="Rebase"></p></center>
+</p>
 <h4></h4>
 
     <ol>
