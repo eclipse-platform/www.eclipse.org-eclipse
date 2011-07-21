@@ -87,8 +87,10 @@ For committer access (substitute in proper userid):
 <li>Confirm the destination directory. Click Finish</li>
 </ol>
 </p>
-<h4>Adding an externally cloned SWT repo</h4>
+<h4>Alternative - Adding an externally cloned SWT repo</h4>
 <p>
+<b>Note: If you have cloned the repository with EGit you can skip this step. This step is just for people who
+have cloned a repo from the command line and want to import it. </b>
 <ol>
 <li>In the Git Repositories perspective, select the Add Git Repositories button</li>
 <li>Browse to the directory that contains the repo and click search.</li>
@@ -102,7 +104,10 @@ For committer access (substitute in proper userid):
 <li>Choose Import existing projects and click Next.
 <center><p><img src="images/egit.import.png" alt="Clone repo"></p></center>
 </li>
-<li>Select which projects you want to import and click Finish.
+<li>Select which projects you want to import and click Finish. Although you can import all projects from
+both repos, it might be better to select only the minimum set of projects you are interested in to keep
+your workspace small (for example, org.eclipse.swt and org.eclipse.swt.cocoa.macosx if you are doing Cocoa
+development).
 <center><p><img src="images/egit.import2.png" alt="Clone repo"></p></center>
 </li>
 </ol>
