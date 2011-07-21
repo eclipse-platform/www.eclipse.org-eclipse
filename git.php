@@ -100,7 +100,8 @@ have cloned a repo from the command line and want to import it. </b>
 <h4>Importing the SWT bundles into your workspace</h4>
 <p>
 <ol>
-<li>Once you have a repo cloned, right click on it and select Import Projects...</li>
+<li>Once you have a repo cloned, right click on it and select Import Projects... (These screenshots show importing the source repo 
+first).</li>
 <li>Choose Import existing projects and click Next.
 <center><p><img src="images/egit.import.png" alt="Clone repo"></p></center>
 </li>
@@ -110,6 +111,7 @@ your workspace small (for example, org.eclipse.swt and org.eclipse.swt.cocoa.mac
 development).
 <center><p><img src="images/egit.import2.png" alt="Clone repo"></p></center>
 </li>
+<li>Now repeat the same steps to import the other repository into the workspace.</li>
 </ol>
 </p>
 <h4>Configuring EGit </h4>
