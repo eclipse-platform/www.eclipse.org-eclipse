@@ -15,10 +15,10 @@
 <td valign="top" style="padding: 10px"><h1 style="padding: 0; margin: 0; border-bottom: 1px solid #000000;">Using SWT from Git</h1>
 <h3>Intro</h3>
 <p>As part of the Eclipse Git migration, SWT has moved all of its CVS projects into 2 Git repos - one for sources and one for binaries.
-<br>For those new to the Git world, there are many resources available online that can provide an intro to Git. Here are some recommended ones:
+<br>For those new to the Git world, there are many resources available online that can provide an intro to Git. Some recommended ones:
 <ul>
-<li>The <a href="http://git-scm.com/">git homepage</a> has a <a href="http://git-scm.com/documentation">documentation section</a> with good links.</li>
-<li>The online <a href="http://progit.org/book/">Pro Git</a> book is highly recommended.</li>
+<li>The <a href="http://git-scm.com/">git homepage</a> has a <a href="http://git-scm.com/documentation">documentation section</a> with good links to tutorials.</li>
+<li>The online <a href="http://progit.org/book/">Pro Git</a> book provdes a more comprehensive overview of Git.</li>
 </ul>
 </p>
 <h3>Git Web View</h3>
