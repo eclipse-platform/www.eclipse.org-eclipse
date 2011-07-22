@@ -14,6 +14,8 @@
 <tr><?php include "sidebar.php"; ?>
 <td valign="top" style="padding: 10px"><h1 style="padding: 0; margin: 0; border-bottom: 1px solid #000000;">Using SWT from CVS</h1>
 
+<h1>*** NOTE: SWT has migrated its source to <a href="http://www.eclipse.org/swt/git.php">GIT</a>. ***</h1>
+
 <p>SWT lives in Eclipse CVS at <a href="http://dev.eclipse.org/viewcvs/">dev.eclipse.org</a>.</p>
 
 <ul>
