@@ -62,7 +62,6 @@ Whatever the reason, you will find many resources here. Enjoy!</p>
       <small>3.8 Milestone 2 - <span style="white-space: nowrap;">16 September 2011</span></small><br>
   <ul>
   <li><a href="R3_8/plan.html">3.8 Development Plan</a></li>
-  <!--<li><a href="R3_7/new_and_noteworthy.html">New and Noteworthy</a></li>-->
   </ul>
 
   </table>
