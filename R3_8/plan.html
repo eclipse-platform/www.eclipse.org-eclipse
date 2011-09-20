@@ -1,0 +1,360 @@
+<html>
+<head>
+<title>Platform SWT 4.2</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="http://dev.eclipse.org/default_style.css" type="text/css">
+</head>
+
+<!--
+M1 - August 5, 2011 (6 weeks) 
+
+- Reduce bug count
+- Git migration
+- 4.2 planning
+- 3.7.1 maintenace work
+- Write snippets and support newsgroup
+
+M2 - September 16, 2011 (6 weeks) - PLANNING 
+>>>  (3.7.1/Indigo-SR1 +0 dates: RC4-September 8) 
+
+- Reduce bug count
+- Git migration
+- 4.2 planning
+
+- 3.7.1 maintenance work
+- Write snippets and support newsgroup
+
+M3 - October 28, 2011 (6 weeks) - DEV 
+
+- Reduce bug count
+- Accessibility bug fixes
+- Move e4 copy of CTabFolder into SWT
+- XULRunner >= 2.x 
+- BIDI improvements .
+- GTK Cairo Graphics Work (Bug 354978)
+- Tray Item highlight image (Bug 304001)
+- 3.7.2 maintenance work
+- Write snippets and support newsgroup
+
+M4 - December 09, 2011 (6 weeks) - DEV 
+
+- Reduce bug count
+- Accessibility bug fixes
+- XULRunner >= 2.x 
+- GTK Cairo Graphics Work (Bug 354978)
+- BIDI improvements
+- 3.7.2 maintenance work 
+- Write snippets and support newsgroup
+
+M5 - January 27, 2012 (7 weeks) - MAJOR FEATURE WORK COMPLETED 
+>>>  (3.7.2/Indigo-SR2 +0 dates:  February ???) 
+
+- Reduce bug count
+- Accessibility bug fixes
+- XULRunner >= 2.x 
+- BIDI improvements 
+- GTK Cairo Graphics Work (Bug 354978)
+- 3.7.2 maintenance work 
+- Write snippets and support newsgroup
+
+M6 - March 16, 2012 (6 weeks) - API Freeze
+>>>  (EclipseCon March 26-29) 
+
+- Reduce bug count
+- BIDI improvements 
+- GTK Cairo Graphics Work (Bug 354978)
+- Write snippets and support newsgroup
+
+M7 - May 04, 2012 (7 weeks) -  Feature Freeze 
+
+- Reduce bug count
+- Write snippets and support newsgroup
+-->
+
+<body bgcolor="#FFFFFF" text="#000000">
+<table border=0 cellspacing=5 cellpadding=2 width="100%" >
+  <tr> 
+    <td align=left width="72%"> <font class=indextop>Platform SWT R4.2</font> <br>
+      <font class=indexsub> Platform SWT</font></td>
+    <td width="28%">
+    	<img src="http://dev.eclipse.org/images/Idea.jpg" height=86 width=120
+    	alt="Eclipse documentation banner"
+    	></td>
+  </tr>
+</table>
+<table border=0 cellspacing=5 cellpadding=2 width="100%" >
+  <tr> 
+    <a NAME="Overall_Planning">
+    <td align=LEFT valign=TOP colspan="2" bgcolor="#0080C0"><b><font color="#FFFFFF" face="Arial,Helvetica">
+      Overall 4.2 Plan
+    </font></b></td>
+    </a>
+  </tr>
+  
+    <tr>
+		<td colspan="2">
+		<br>
+		Last revised: September 06, 2011.
+		<p></td>
+	</tr>
+	
+	<tr>
+		<td valign="top" width="2%"><img src="http://dev.eclipse.org/images/Adarrow.gif"
+			nosave="" border="0" height="16" width="16"></td>
+		<td><b>Overall Platform Themes</b>
+		<ul>
+			<li>Eclipse 4.2</li>
+			<li>Platforms</li>
+			<li>BIDI</li>
+			<li>Accessibility</li>
+		</ul>
+		</td>
+	</tr>
+	<tr>
+		<td valign="top" width="2%"><img src="http://dev.eclipse.org/images/Adarrow.gif"
+			nosave="" border="0" height="16" width="16"></td>
+		<td><b>Plan Items</b>
+		<ul>
+			<li>Migrate all SWT repositories to GIT</li>
+			<li>GTK Cairo Graphics work
+			(<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=354978">354978</a>)</li>
+			
+			<li>Windows 7 Aero support 
+			(<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=325795">325795</a>)</li>
+					
+			<li>Ongoing Accessibility
+			(<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id="></a>)</li>
+			
+			<li>Improvements to BIDI support 	
+			(<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=273198">273198</a>,
+			<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=230854">230854</a>,
+			<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=29779">29779</a>)
+			</li>
+		
+			<li>XulRunner > 2.x support
+			(<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=327696">327696</a>)</li>		
+			
+			<li>Eclipse 4.2 support</li>		
+				
+			<li>Embedding web components</li>
+			
+			<li>General items:
+				<ul>
+					<li>Tray item highlight image (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=304001">304001</a>)</li>
+					<li>Printing support (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=96394">96394</a>) </li>
+					<li>( ) Radial gradients support (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=293643">293643</a>) </li>
+				</ul>
+			</li>
+			
+			<li>( ) Implement more native behavior:
+				<br><br><b>Windows 7</b>
+				<ul>
+					<li>Direct2D</li>
+					<li>Menubar customization</li>
+				</ul>
+			</li>		
+			<br>
+			
+			<li><img src="../images/glass.gif" nosave="" height="10" width="10" border="0"> e4: support for setting Menu background color</li>
+			
+			<li>( ) General API for drawing standard UI components
+			(<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=80554">80554</a>, 
+			<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=37706">37706</a>)</li>
+			
+		</ul>
+		</td>
+	</tr>
+</table>
+
+<table border="0" cellspacing="5" cellpadding="2" width="100%">
+	<tbody>
+		<tr>
+			<td align="left" valign="top" colspan="4" bgcolor="#0080c0"
+				width="100%"><b><font face="Arial,Helvetica"><font color="#ffffff">
+			Legend</font></font></b></td>
+		</tr>
+		<tr>
+			<td valign="top"><img src="../images/progress.gif" nosave="" height="5" width="14" border="0"></td>
+			<td width="50%">item is under development</td>
+			<td valign="top"><img src="../images/glass.gif" nosave="" height="10" width="10" border="0"></td>
+			<td width="50%">item is under investigation</td>
+		</tr>
+		<tr>
+			<td valign="top"><img src="../images/ok.gif" nosave="" height="10" width="10" border="0"></td>
+			<td width="50%">item is finished</td>
+			<td valign="top">( )</td>
+			<td width="50%">item is time permitting</td>
+		</tr>
+		<tr>
+			<td valign="top"><font class="indexsub" color="#8080ff">[&gt;3.7]</font></td>
+			<td width="50%">item is deferred</td>
+			<td valign="top"><font class="indexsub"><img src="../images/new.gif" alt="" border="0"></font></td>
+			<td width="50%">new</td>
+		</tr>
+	</tbody>
+</table>
+
+<table border="0" cellspacing="5" cellpadding="2" width="100%">
+	<tbody>
+	<tr>
+		<td align="left" valign="top" colspan="2" bgcolor="#0080c0"
+			width="100%"><b><font face="Arial,Helvetica"><font color="#ffffff">
+			Milestone Plan 4.2 M1 - August 5, 2011</font></font></b></td>
+	</tr>
+	<tr>
+		<td valign="top" width="2%"><img src="http://dev.eclipse.org/images/Adarrow.gif" nosave=""
+			border="0" height="16" width="16"></td>
+		<td><ul>
+			<li>Reduce bug count</li>
+			<li>Git migration <img src="../images/ok.gif" nosave="" height="10" width="10" border="0"></li>
+			<li>4.2 planning <img src="../images/ok.gif" nosave="" height="10" width="10" border="0"></li>
+			<li>3.7.1 maintenance work <img src="../images/ok.gif" nosave="" height="10" width="10" border="0"></li>
+			<li>Write snippets and support newsgroup</li>
+		</ul>
+		</td>
+	</tr>
+	</tbody>
+</table>
+
+<table border="0" cellspacing="5" cellpadding="2" width="100%">
+	<tbody>
+	<tr>
+		<td align="left" valign="top" colspan="2" bgcolor="#0080c0"
+			width="100%"><b><font face="Arial,Helvetica"><font color="#ffffff">
+			Milestone Plan 4.2 M2 - September 16, 2011</font></font></b></td>
+	</tr>
+	<tr>
+		<td valign="top" width="2%"><img src="http://dev.eclipse.org/images/Adarrow.gif" nosave=""
+			border="0" height="16" width="16"></td>
+		<td><ul>
+			<li>Reduce bug count </li>
+			<li>3.8/4.2 planning <img src="../images/ok.gif" nosave="" height="10" width="10" border="0"></li>
+			<li>BIDI improvements <img src="../images/progress.gif" nosave="" height="5" width="14" border="0"></li>
+			<li>e4 4.2 support</li>
+			<li>Aero work <img src="../images/progress.gif" nosave="" height="5" width="14" border="0"></li>
+			<li>3.7.1 maintenance work <img src="../images/ok.gif" nosave="" height="10" width="10" border="0"></li>
+			<li>Write snippets and support newsgroup </li>
+		</ul>
+		</td>
+	</tr>
+	</tbody>
+</table>
+ 
+
+<table border="0" cellspacing="5" cellpadding="2" width="100%">
+	<tbody>
+	<tr>
+		<td align="left" valign="top" colspan="2" bgcolor="#0080c0"
+			width="100%"><b><font face="Arial,Helvetica"><font color="#ffffff">
+			Milestone Plan 4.2 M3 - October 28, 2011</font></font></b></td>
+	</tr>
+	<tr>
+		<td valign="top" width="2%"><img src="http://dev.eclipse.org/images/Adarrow.gif" nosave=""
+			border="0" height="16" width="16"></td>
+		<td><ul>
+			<li>Reduce bug count</li>
+			<li>Accessibility bug fixes</li>
+			<li>Move e4 copy of CTabFolder into SWT</li>
+			<li>XULRunner >= 2.x</li>
+			<li>BIDI improvements</li>
+			<li>GTK Cairo Graphics Work (Bug 354978)</li>
+			<li>Tray Item highlight image (Bug 304001)</li>
+			<li>3.7.2 maintenance work</li>
+			<li>Write snippets and support newsgroup </li>
+		</ul>
+		</td>
+	</tr>
+	</tbody>
+</table>
+
+<table border="0" cellspacing="5" cellpadding="2" width="100%">
+	<tbody>
+	<tr>
+		<td align="left" valign="top" colspan="2" bgcolor="#0080c0"
+			width="100%"><b><font face="Arial,Helvetica"><font color="#ffffff">
+			Milestone Plan 4.2 M4 - December 09, 2011</font></font></b></td>
+	</tr>
+	<tr>
+		<td valign="top" width="2%"><img src="http://dev.eclipse.org/images/Adarrow.gif" nosave=""
+			border="0" height="16" width="16"></td>
+		<td><ul>
+			<li>Reduce bug count </li>
+			<li>Accessibility bug fixes</li>
+			<li>XULRunner >= 2.x</li>
+			<li>GTK Cairo Graphics Work (Bug 354978)</li>
+			<li>BIDI improvements</li>
+			<li>3.7.2 maintenance work </li>
+			<li>Write snippets and support newsgroup </li>
+		</ul>
+		</td>
+	</tr>
+	</tbody>
+</table>
+
+<table border="0" cellspacing="5" cellpadding="2" width="100%">
+	<tbody>		
+	<tr>
+		<td align="left" valign="top" colspan="2" bgcolor="#0080c0"
+			width="100%"><b><font face="Arial,Helvetica"><font color="#ffffff">
+			Milestone Plan 4.2 M5 - January 27, 2012</font></font></b></td>
+	</tr>
+	<tr>
+		<td valign="top" width="2%"><img src="http://dev.eclipse.org/images/Adarrow.gif" nosave=""
+			border="0" height="16" width="16"></td>
+		<td><ul>
+			<li>Reduce bug count </li>
+			<li>Accessibility bug fixes</li>
+			<li>XULRunner >= 2.x</li>
+			<li>BIDI improvements</li> 
+			<li>GTK Cairo Graphics Work (Bug 354978)</li>
+			<li>3.7.2 maintenance work</li> 
+			<li>Write snippets and support newsgroup </li>
+		</ul>
+		</td>
+	</tr>
+	</tbody>
+</table>
+
+
+<table border="0" cellspacing="5" cellpadding="2" width="100%">
+	<tbody>
+	<tr>
+		<td align="left" valign="top" colspan="2" bgcolor="#0080c0"
+			width="100%"><b><font face="Arial,Helvetica"><font color="#ffffff">
+			Milestone Plan 4.2 M6 - March 16, 2012</font></font></b></td>
+	</tr>
+	<tr>
+		<td valign="top" width="2%"><img src="http://dev.eclipse.org/images/Adarrow.gif" nosave=""
+			border="0" height="16" width="16"></td>
+		<td><ul>
+			<li>Reduce bug count </li>
+			<li>BIDI improvements</li> 
+			<li>GTK Cairo Graphics Work (Bug 354978)</li>
+			<li>Write snippets and support newsgroup </li>
+		</ul>
+		</td>
+	</tr>
+	</tbody>
+</table>
+
+<table border="0" cellspacing="5" cellpadding="2" width="100%">
+	<tbody>
+	<tr>
+		<td align="left" valign="top" colspan="2" bgcolor="#0080c0"
+			width="100%"><b><font face="Arial,Helvetica"><font color="#ffffff">
+			Milestone Plan 4.2 M7 - May 04, 2012</font></font></b></td>
+	</tr>
+	<tr>
+		<td valign="top" width="2%"><img src="http://dev.eclipse.org/images/Adarrow.gif" nosave=""
+			border="0" height="16" width="16"></td>
+		<td><ul>
+			<li>Reduce bug count </li>
+			<li>Write snippets and support newsgroup </li>
+		</ul>
+		</td>
+	</tr>
+	</tbody>
+</table>
+
+</body>
+</html>
