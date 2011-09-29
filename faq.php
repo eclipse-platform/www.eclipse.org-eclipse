@@ -112,6 +112,7 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
   <li><a href="#oldScreenReaderNotWorking">Why doesn't my old Windows screen reader work with Eclipse 3.6?</a></li>
   <li><a href="#jumplist">Can I use the TaskItem's menu without the launcher?</a></li>
   <li><a href="#multiplatformjar">How do I produce a single jar file that contains all of the various SWT platform jars?</a></li>
+  <li><a href="#twistieanimation">How do I enable the fade annimation for expando buttons in Trees (Windows Vista and up) ?</a></li>
   
 </ul>
 
@@ -1554,7 +1555,18 @@ public class DisplayMozillaVersion {
   <dd>A: Please see <a href="http://stackoverflow.com/questions/2706222/create-cross-platform-java-swt-application/5784073#5784073">this post</a> for a complete overview
   of how to package the jars.
   </dd>
-  
+
+
+  <dt><strong><a name="twistieanimation"> Q:  How do I enable the fade animation for expando buttons in Trees (Windows Vista and up) ?</a></strong></dt>
+  <dd>A: The fade in/fade out animation for expando buttons on Trees that can be seen in some applications, like Windows Explorer and older version
+  of Eclipse, has been disabled. See <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=342282">Bug 342282</a> for details.
+  <br>
+  The animation can be enabled by passing the -Dorg.eclipse.swt.internal.win32.enableFadeInOutExpandos argument to the JVM. For example:<p>
+  <code>eclipse -vmargs -Dorg.eclipse.swt.internal.win32.enableFadeInOutExpandos</code></p> will bring the animation back to Eclipse.
+  <p>Alternatively, the flag <code>-Dorg.eclipse.swt.internal.win32.enableFadeInOutExpandos</code> can be added to the end of eclipse's 
+  <code>eclipse.ini</code> for the same result.</p>
+  </dd>
+    
   
 </dl>
 </table>
