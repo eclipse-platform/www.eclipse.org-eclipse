@@ -1066,9 +1066,9 @@ the SWT.CENTER style when creating a composite.
       <li>Eclipse 3.3.x: Mozilla 1.4 GTK2 - 1.7.x GTK2, XULRunner 1.8.x.</li>
       <li>Eclipse 3.4.x: Mozilla 1.4 GTK2 - 1.7.x GTK2, XULRunner 1.8.x - 1.9.0.x.</li>
       <li>Eclipse 3.5.0: Mozilla 1.4 GTK2 - 1.7.x GTK2, XULRunner 1.8.x - 1.9.1.x.</li>
-      <li>Eclipse 3.5.2: Mozilla 1.4 GTK2 - 1.7.x GTK2, XULRunner 1.8.x - 1.9.2.x.</li>
-      <li>Eclipse 3.6.x: Mozilla 1.4 GTK2 - 1.7.x GTK2, XULRunner 1.8.x - 1.9.2.x, WebKitGTK+ 1.2.x (see <a href="#browserwebkitgtk">How do I use the WebKit renderer on Linux-GTK?</a>)</li>
-      <li>Eclipse 3.7.x: Mozilla 1.4 GTK2 - 1.7.x GTK2, XULRunner 1.8.x - 1.9.2.x, WebKitGTK+ 1.2.x and newer</li>
+      <li>Eclipse 3.5.2: Mozilla 1.4 GTK2 - 1.7.x GTK2, XULRunner 1.8.x - 1.9.2.x and 3.6.x.</li>
+      <li>Eclipse 3.6.x: Mozilla 1.4 GTK2 - 1.7.x GTK2, XULRunner 1.8.x - 1.9.2.x and 3.6.x, WebKitGTK+ 1.2.x (see <a href="#browserwebkitgtk">How do I use the WebKit renderer on Linux-GTK?</a>)</li>
+      <li>Eclipse 3.7.x: Mozilla 1.4 GTK2 - 1.7.x GTK2, XULRunner 1.8.x - 1.9.2.x and 3.6.x, WebKitGTK+ 1.2.x and newer</li>
       <li>Also note that a Firefox release whose contained Gecko version correlates with the Mozilla versions above can also be used
       with Eclipse 3.1 and newer (Linux only), provided that it has been compiled with linkable Gecko libraries.  It is important to  
       note that Firefox downloads from mozilla.org do <em>not</em> satisfy this criteria, but Firefox installations that are
@@ -1096,7 +1096,7 @@ the SWT.CENTER style when creating a composite.
       <li>OpenSolaris (x86)</li>
       <ul>
         <li>Eclipse 3.5.0: Mozilla 1.7.x GTK2, XULRunner 1.8.x - 1.9.1.x</li>
-        <li>Eclipse 3.5.2 and newer: Mozilla 1.7.x GTK2, XULRunner 1.8.x - 1.9.2.x</li>
+        <li>Eclipse 3.5.2 and newer: Mozilla 1.7.x GTK2, XULRunner 1.8.x - 1.9.2.x and 3.6.x</li>
         <li>Note that a Firefox release whose contained Gecko version correlates with the Mozilla versions above can also be used.
         Unlike other platforms, since Sun's compiler does not produce statically-linked libraries, Firefox builds downloaded from mozilla.org
         <em>can</em> be used on Solaris. 
@@ -1199,7 +1199,7 @@ the SWT.CENTER style when creating a composite.
       <li>Windows: As of Eclipse/SWT 3.5, applets can be viewed in a Browser if <em>all</em> of the following conditions are met:
         <ol>
           <li>For Browsers created with style SWT.NONE, the installed IE version is 7.0 or newer</li>
-          <li>For Browsers created with style SWT.MOZILLA, the installed XULRunner version is 1.9.2.x</li>
+          <li>For Browsers created with style SWT.MOZILLA, the installed XULRunner version is 1.9.2.x or 3.6.x</li>
           <li>The installed Java plug-in is Sun JRE 1.6u10 or newer, with the Next Generation Java Plug-in enabled (this plug-in is enabled by default when the JRE is installed)</li>
           <li>The application is launched with the same JRE that provides the installed Java plug-in</li>
           <li>The application adds the JRE's plugin.jar, deploy.jar and javaws.jar jars to the JRE's boot classpath.  For example, to launch eclipse:
