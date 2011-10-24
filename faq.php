@@ -1084,10 +1084,9 @@ the SWT.CENTER style when creating a composite.
     </ul>
     <br>If you use the IBM 1.4 VM <a href="#browserlinuxibm">check this.</a>
     <br>
-	<br>As of Eclipse 3.2.1 the eclipse launcher attempts to detect a browser on your system to use.  If you are using an eclipse prior to
-	version 3.2.1, or if you want the Browser to use a specific GRE (such as Mozilla) that you have installed yourself, then you must set
-	the MOZILLA_FIVE_HOME environment variable to the folder containing your GRE (e.g. <code>setenv MOZILLA_FIVE_HOME /usr/lib/mozilla</code>),
-	and prepend this directory to your LD_LIBRARY_PATH environment variable</li>.
+	<br>In general the Browser control will automatically detect an appropriate native browser to use.  However if you wish to point at a specific
+	XULRunner or Mozilla install to use then this can be specified as described in <a href="#specifyxulrunner">Can I specify which XULRunner installation
+	gets used?</a> or <a href="#browserlinuxrcp">What do I need to run the SWT Browser in a standalone application on Linux or Solaris?</a>.
   </dd>
 
   <dt><strong><a name="browsersolaris">Q: What do I need to run the SWT Browser inside Eclipse on Solaris?</a></strong></dt>
