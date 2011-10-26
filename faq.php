@@ -1017,7 +1017,7 @@ the SWT.CENTER style when creating a composite.
   additional software installation.  However there are situations, such as the potential mixing of Mozilla and WebKit Browsers, where specifying
   the default type of native renderer to use can avoid crashes caused by conflicting dependent libraries.
   <p>
-  As of Eclipse/SWT 3.7 a user can set a property to specify the type of native renderer to use for <code>SWT.NONE</code>-style Browsers.
+  As of Eclipse/SWT 3.7.1 a user can set a property to specify the type of native renderer to use for <code>SWT.NONE</code>-style Browsers.
   Setting this property does not affect Browsers that are created with styles such as <code>SWT.MOZILLA</code> or <code>SWT.WEBKIT</code>.
   The property name is <code>org.eclipse.swt.browser.DefaultType</code> and valid values for it currently include "<code>mozilla</code>" and
   "<code>webkit</code>".  This property must be set before the <em>first</em> Browser instance is created.
