@@ -583,7 +583,7 @@ create a snippet contribution report in Bugzilla</a>. Thanks in advance for your
 
     <li><a name="tablecursor"><b>TableCursor</b></a>
       <ul>
-        <li> <a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet96.java">navigate a table cells with arrow keys</a></li>
+        <li> <a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet96.java">navigate a Table's cells with the arrow keys</a></li>
       </ul>
       <p></p>
 
@@ -695,6 +695,12 @@ create a snippet contribution report in Bugzilla</a>. Thanks in advance for your
         <li> <a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet312.java">show a menu in a tree header</a></li>
         <li> <a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet358.java">determine which TreeItems are visible in a Tree's viewport</a></li>
         <!-- <li> <a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet240.java">text that spans multiple columns</a></li> -->
+      </ul>
+      <p></p>
+
+    <li><a name="treecursor"><b>TreeCursor</b></a>
+      <ul>
+        <li> <a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet360.java">navigate a Tree's cells with the arrow keys</a></li>
       </ul>
       <p></p>
 
