@@ -3,15 +3,16 @@
 <script>
 function connect() {
 	var field = document.getElementById('portText');
-	var url = "http://eclipse.org/swt/frames.html";//"localhost:" + field.value + "/json";
+	var url = "http://www.eclipse.org/swt/frames.html";//"localhost:" + field.value + "/json";
 	var xhr = XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject("Microsoft.XMLHTTP"); 
 	if (xhr) {
+alert(url);
 		xhr.onreadystatechange=function() {
 			if (xhr.readyState == 4) {
 				alert(xhr.readyState + ":" + xhr.responseText);
 			}
 		}
-		xhr.onerror = function () { 
+		xhr.onerror = function() { 
 			alert("onerror: " + xhr.status); 
 		};
 		xhr.open("GET", url, true);
