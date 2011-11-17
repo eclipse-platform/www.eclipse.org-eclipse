@@ -45,7 +45,6 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
   <li><a href="#xpthemes">How do I make SWT use the Windows XP themes?</a></li>
   <li><a href="#gtkfontsandcolors">On gtk, how do I change the default fonts and colors of widgets?</a></li>
   <li><a href="#motiffontsandcolors">On motif, how do I change the default fonts and colors of widgets?</a></li>
-  <li><a href="#keyboardshortcuts">What are the standard keyboard shortcuts on Windows, Mac OS X, GTK?</a></li>
   <p></p>
   <li><a href="#missingjar">Why do I get the error "java.lang.NoClassDefFoundError: org/eclipse/swt/internal/XXX/OS."?</a></li>
   <li><a href="#missingdll">Why do I get the error "java.lang.UnsatisfiedLinkError: no swt-win32-3232 in java.library.path."?</a></li>
@@ -109,12 +108,14 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
   <li><a href="#relayout">Why doesn't my layout update when I create/dispose/move/resize a control?</a></li>
   <li><a href="#scrolledcomposite">How do I programmatically scroll a Composite?</a></li>
   <li><a href="#copypastewithKlipper">Why does Copy/Paste sometimes not work on Linux?</a></li>
-  <li><a href="#tableheaderswithJAWS">How do I get JAWS to read Table column headers?</a></li>
-  <li><a href="#oldScreenReaderNotWorking">Why doesn't my old Windows screen reader work with Eclipse 3.6?</a></li>
   <li><a href="#jumplist">Can I use the TaskItem's menu without the launcher?</a></li>
   <li><a href="#multiplatformjar">How do I produce a single jar file that contains all of the various SWT platform jars?</a></li>
   <li><a href="#twistieanimation">How do I enable the fade annimation for expando buttons in Trees (Windows Vista and up) ?</a></li>
-  
+  <p></p>
+  <li><a href="#keyboardshortcuts" name="accessibility">What are the standard keyboard shortcuts on Windows, Mac OS X, Linux?</a></li>
+  <li><a href="#screenreaders">Can I use a screen reader with Eclipse?</a></li>
+  <li><a href="#oldScreenReaderNotWorking">Why doesn't my old Windows screen reader work with Eclipse 3.6?</a></li>
+  <li><a href="#tableheaderswithJAWS">How do I get JAWS to read Table column headers?</a></li>
 </ul>
 
 <p></p>
@@ -628,14 +629,6 @@ Eclipse*fontList:-misc-fixed-medium-r-normal-*-10-100-75-75-c-60-iso8859-1
 </pre>
     
     After creating/modifying this file, you must run "xrdb ~/.Xdefaults" or restart X to make the changes take effect.
-  </dd>
-
-  <dt><strong><a name="keyboardshortcuts">Q: What are the standard keyboard shortcuts on Windows, Mac OS X, GTK?</a></strong></dt>
-  <dd>A: Since SWT uses native controls, standard keyboard shortcuts can be used in SWT applications.
-  Here is a useful <a href="http://en.wikipedia.org/wiki/Table_of_keyboard_shortcuts">Table of Keyboard Shortcuts</a>.
-  <br>On Mac OS X, the OS screen reader, VoiceOver, can also be used to navigate through controls using the keyboard.
-  Here is the <a href="http://www.apple.com/accessibility/voiceover/manual.html">VoiceOver User's Manual</a>.
-  <br>Eclipse has additional keyboard shortcuts. For a list, type Ctrl + Shift + L.
   </dd>
 
   <dt><strong><a name="missingjar">Q: Why do I get the error "java.lang.NoClassDefFoundError: org/eclipse/swt/internal/XXX/OS."?</a></strong></dt>
@@ -1558,28 +1551,6 @@ public class DisplayMozillaVersion {
   		<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=226540">Bug 226540</a>.
   </dd>
 
-  <dt><strong><a name="tableheaderswithJAWS"> Q:  How do I get JAWS to read Table column headers?</a></strong></dt>
-  <dd>A: JAWS does not read table column headers by default.
-  	To get JAWS to read table headers, you need to do the following steps with JAWS running:
-	<ol>
-		<li>Focus on the table</li>
-		<li>Press Insert+F2  (this opens the "Run JAWS Manager" dialog)</li>
-		<li>Select "Customize ListView" and OK   (this opens the "Customize ListView Headers" dialog)</li>
-		<li>Select OK</li>
-	</ol>
-  </dd>
-  
-  <dt><strong><a name="oldScreenReaderNotWorking"> Q:  Why doesn't my old Windows screen reader work with Eclipse 3.6?</a></strong></dt>
-  <dd>A: JAWS version 8 and 9 and Window-Eyes version 6 no longer work well with Eclipse and other SWT applications.
-	Window-Eyes 6 will cause Eclipse to crash, and JAWS 8 and 9 can cause SWT applications to crash.
-	The reason is that Eclipse 3.6 added support for IAccessible2, and these older screen reader versions
-	contain a partial implementation of IAccessible2 that does not follow the current IAccessible2 specification.
-	The workaround is to launch eclipse or your SWT application using the
-	<br><code>-Dorg.eclipse.swt.accessibility.UseIA2=false</code>
-	<br>VM argument. For more information about this issue see
-	<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=313182">Bug 313182</a>.
-  </dd>
-
   <dt><strong><a name="jumplist"> Q: Can I use the TaskItem's menu without the launcher?</a></strong></dt>
   <dd>A: The TaskItem's menu (also known as Jump List on Windows 7) was designed to be used  in conjunction with
   the eclipse launcher. That said, it is possible on Windows 7 to overwrite the default values for the items in the 
@@ -1609,6 +1580,41 @@ public class DisplayMozillaVersion {
   <code>eclipse.ini</code> for the same result.</p>
   </dd>
     
+  <dt><strong><a name="keyboardshortcuts">Q: What are the standard keyboard shortcuts on Windows, Mac OS X, Linux?</a></strong></dt>
+  <dd>A: Since SWT uses native controls, standard keyboard shortcuts can be used in SWT applications.
+  Here is a useful <a href="http://en.wikipedia.org/wiki/Table_of_keyboard_shortcuts">Table of Keyboard Shortcuts</a>.
+  <br>Eclipse has additional keyboard shortcuts. For a list, type Ctrl + Shift + L.
+  <br>On Mac OS X, the OS screen reader, VoiceOver, can also be used to navigate through controls using the keyboard.
+  Here is the <a href="http://www.apple.com/accessibility/voiceover/manual.html">VoiceOver User's Manual</a>.
+  </dd>
+
+  <dt><strong><a name="screenreaders"> Q:  Can I use a screen reader with Eclipse?</a></strong></dt>
+  <dd>A: Yes. Eclipse works with JAWS and NVDA on Windows, VoiceOver on the Mac, and Orca on Linux.
+  Window-Eyes and Hal/SuperNova on Windows have not been tested recently, however they both worked the last time they were tested.
+  </dd>
+  
+  <dt><strong><a name="oldScreenReaderNotWorking"> Q:  Why doesn't my old Windows screen reader work with Eclipse 3.6?</a></strong></dt>
+  <dd>A: JAWS version 8 and 9 and Window-Eyes version 6 no longer work well with Eclipse and other SWT applications.
+	Window-Eyes 6 will cause Eclipse to crash, and JAWS 8 and 9 can cause SWT applications to crash.
+	The reason is that Eclipse 3.6 added support for IAccessible2, and these older screen reader versions
+	contain a partial implementation of IAccessible2 that does not follow the current IAccessible2 specification.
+	The workaround is to launch eclipse or your SWT application using the
+	<br><code>-Dorg.eclipse.swt.accessibility.UseIA2=false</code>
+	<br>VM argument. For more information about this issue see
+	<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=313182">Bug 313182</a>.
+  </dd>
+
+  <dt><strong><a name="tableheaderswithJAWS"> Q:  How do I get JAWS to read Table column headers?</a></strong></dt>
+  <dd>A: JAWS does not read table column headers by default.
+  	To get JAWS to read table headers, you need to do the following steps with JAWS running:
+	<ol>
+		<li>Focus on the table</li>
+		<li>Press Insert+F2  (this opens the "Run JAWS Manager" dialog)</li>
+		<li>Select "Customize ListView" and OK   (this opens the "Customize ListView Headers" dialog)</li>
+		<li>Select OK</li>
+	</ol>
+  </dd>
+  
   
 </dl>
 </table>
