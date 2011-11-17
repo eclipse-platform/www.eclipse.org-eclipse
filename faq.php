@@ -116,6 +116,7 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
   <li><a href="#screenreaders">Can I use a screen reader with Eclipse?</a></li>
   <li><a href="#oldScreenReaderNotWorking">Why doesn't my old Windows screen reader work with Eclipse 3.6?</a></li>
   <li><a href="#tableheaderswithJAWS">How do I get JAWS to read Table column headers?</a></li>
+  <li><a href="#moreAccessibilityInfo">Where can I get more info on Accessibility in Eclipse/SWT?</a></li>
 </ul>
 
 <p></p>
@@ -1615,7 +1616,12 @@ public class DisplayMozillaVersion {
 	</ol>
   </dd>
   
+  <dt><strong><a name="moreAccessibilityInfo"> Q:  Where can I get more info on Accessibility in Eclipse/SWT?</a></strong></dt>
+  <dd>A: You can get more information on the Accessibility Features in Eclipse, and the Eclipse/SWT Accessibility API on the
+  <a href="http://wiki.eclipse.org/Accessibility">Eclipse/SWT Accessibility wiki</a>.
+  </dd>
   
+    
 </dl>
 </table>
 </body>
