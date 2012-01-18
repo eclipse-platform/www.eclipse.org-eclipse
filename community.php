@@ -147,6 +147,10 @@ toolkit.</p>
     <p>Deinonychus is an email client written in Java featuring a GUI built
     with SWT. Supports MIME, IMAP, POP, and SMTP.</p>
 
+<li><b><a href="http://members.quicknet.nl/blankendaalr/dbgl/">DOSBox Game Launcher</a></b>
+
+    <p>DOSBox Game Launcher serves as a front-end GUI to <a href="http://www.dosbox.com/">DOSBox</a>.
+
 <li><b><a href="http://eclipse-games.sourceforge.net/">eclipse-games</a></b>
 
     <p>A collection of games that run as eclipse plug-ins.</p>
