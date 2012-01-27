@@ -529,6 +529,8 @@ create a snippet contribution report in Bugzilla</a>. Thanks in advance for your
         <li> <a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet155.java">draw an X using AWT Graphics</a></li>
         <li> <a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet156.java">convert between SWT Image and AWT BufferedImage</a></li>
         <li> <a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet337.java">launch SWT from AWT and keep both active</a></li>
+        <li> <a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet319.java">drag and drop an object with a custom data transfer type from SWT to AWT/Swing</a></li>
+        <li> <a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet361.java">use Java2D to modify an image being displayed in an SWT GUI</a></li>
       </ul>
       <p></p>
 
