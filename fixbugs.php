@@ -64,7 +64,7 @@ understand the Eclipse development process</a>.<br>
 <h2>Find the Operating System doc:</h2>
 <ul>
 <li><a href="http://msdn.microsoft.com/en-ca/default.aspx"><a href="http://msdn.microsoft.com/en-ca/default.aspx">Windows documentation</a>.</li>
-<li><a href="http://www.gtk.org/documentation.html">GTK documentation</a>.</li>
+<li><a href="http://www.gtk.org/documentation.php">GTK documentation</a>.</li>
 <li><a href="http://developer.apple.com/mac/library/navigation/index.html#section=Frameworks&topic=Cocoa%20Layer">Cocoa documentation</a>.</li>
 <li><a href="http://www.opengroup.org/openmotif/docs/">Motif documentation</a>.</li>
 </ul>
