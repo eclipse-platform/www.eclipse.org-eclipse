@@ -1053,16 +1053,18 @@ the SWT.CENTER style when creating a composite.
   <dt><strong><a name="browserlinux">Q: What do I need to run the SWT Browser inside Eclipse on Linux?</a></strong></dt>
   <dd>A: The browser versions that are supported by each Eclipse release are listed below.  Note that Mozilla/XULRunner versions that are not
     final releases (eg.- betas, alphas, nightlies) are <em>not</em> supported, even if their version technically satisfies a listed version range.
+    Also note that the Mozilla/XULRunner must be compiled for the same architecture as the SWT jar that is being used.
     <ul>
       <li>Eclipse 3.0.x: Mozilla 1.4 GTK2 - 1.6 GTK2.</li>
       <li>Eclipse 3.1.x: Mozilla 1.4 GTK2 - 1.7.8 GTK2.</li>
       <li>Eclipse 3.2.x: Mozilla 1.4 GTK2 - 1.7.x GTK2.</li>
       <li>Eclipse 3.3.x: Mozilla 1.4 GTK2 - 1.7.x GTK2, XULRunner 1.8.x.</li>
       <li>Eclipse 3.4.x: Mozilla 1.4 GTK2 - 1.7.x GTK2, XULRunner 1.8.x - 1.9.0.x.</li>
-      <li>Eclipse 3.5.0: Mozilla 1.4 GTK2 - 1.7.x GTK2, XULRunner 1.8.x - 1.9.1.x.</li>
-      <li>Eclipse 3.5.2: Mozilla 1.4 GTK2 - 1.7.x GTK2, XULRunner 1.8.x - 1.9.2.x and 3.6.x.</li>
-      <li>Eclipse 3.6.x: Mozilla 1.4 GTK2 - 1.7.x GTK2, XULRunner 1.8.x - 1.9.2.x and 3.6.x, WebKitGTK+ 1.2.x (see <a href="#browserwebkitgtk">How do I use the WebKit renderer on Linux-GTK?</a>)</li>
-      <li>Eclipse 3.7.x: Mozilla 1.4 GTK2 - 1.7.x GTK2, XULRunner 1.8.x - 1.9.2.x and 3.6.x, WebKitGTK+ 1.2.x and newer</li>
+      <li>Eclipse 3.5.0 and 3.5.1: Mozilla 1.4 GTK2 - 1.7.x GTK2, XULRunner 1.8.x - 1.9.1.x.</li>
+      <li>Eclipse 3.5.2: Mozilla 1.4 GTK2 - 1.7.x GTK2, XULRunner 1.8.x - 3.6.x.</li>
+      <li>Eclipse 3.6.x: Mozilla 1.4 GTK2 - 1.7.x GTK2, XULRunner 1.8.x - 3.6.x, WebKitGTK+ 1.2.x (see <a href="#browserwebkitgtk">How do I use the WebKit renderer on Linux-GTK?</a>)</li>
+      <li>Eclipse 3.7.x/4.1.x: Mozilla 1.4 GTK2 - 1.7.x GTK2, XULRunner 1.8.x - 3.6.x, WebKitGTK+ 1.2.x and newer</li>
+      <li>Eclipse 3.8.x/4.2.x: Mozilla 1.4 GTK2 - 1.7.x GTK2, XULRunner 1.8.x - 3.6.x and 10.x (but <em>not</em> versions 4.x - 9.x), WebKitGTK+ 1.2.x and newer</li>
       <li>Also note that a Firefox release whose contained Gecko version correlates with the Mozilla versions above can also be used
       with Eclipse 3.1 and newer (Linux only), provided that it has been compiled with linkable Gecko libraries.  It is important to  
       note that Firefox downloads from mozilla.org do <em>not</em> satisfy this criteria, but Firefox installations that are
@@ -1283,8 +1285,9 @@ public class XULRunnerInitializer {
   <dd>A: The first Mozilla-based Browser instance performs the steps below, in order, until a native browser is found.  All subsequent Mozilla-based Browser instances will use this same detected browser.
     <ol>
       <li>If Java property <code>org.eclipse.swt.browser.XULRunnerPath</code> is defined then use it (see <a href="#specifyxulrunner">Can I specify which XULRunner installation is used?</a>).
-      <li>Attempt to detect an OS-registered XULRunner with version 1.8.1.2 or newer (in order to enable JavaXPCOM use).
-      <li>Attempt to detect an OS-registered XULRunner with a version earlier than 1.8.1.2.
+      <li>Attempt to detect an OS-registered XULRunner with version 1.8.1.2 or newer (in order to enable JavaXPCOM use).  Note that only XULRunner installations that are compiled for the
+        same architecture as the running SWT will be considered.
+      <li>Attempt to detect an OS-registered XULRunner with a version earlier than 1.8.1.2 (again, the architecture must match that of SWT).
       <li><em>(if running on Linux or Solaris, and the Browser's style is <code>SWT.NONE</code>)</em> Attempt to use the native browser pointed at by OS environment variable <code>MOZILLA_FIVE_HOME</code>, which may be any of
         the browsers listed <a href="#browserlinux">here</a>.  Note that if this environment variable is not set when eclipse is run then on linux the eclipse launcher will try to set it by checking various
         potential installation locations.
