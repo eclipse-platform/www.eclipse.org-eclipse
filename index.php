@@ -54,14 +54,15 @@ Whatever the reason, you will find many resources here. Enjoy!</p>
   <table width="100%">
   <tr><td>
       <b><font size="+1">Development</font></b><br>
-      <a href="http://download.eclipse.org/eclipse/downloads/drops/S-3.8M5-201201251800/download.php?dropFile=swt-3.8M5-win32-win32-x86.zip">Windows</a>,
-      <a href="http://download.eclipse.org/eclipse/downloads/drops/S-3.8M5-201201251800/download.php?dropFile=swt-3.8M5-gtk-linux-x86.zip">Linux</a>,
+      <a href="http://www.eclipse.org/downloads/download.php?file=/eclipse/downloads/drops4/S-4.2M7-201205031800/swt-S-4.2M7-201205031800-win32-win32-x86.zip">Windows</a>,
+      <a href="http://www.eclipse.org/downloads/download.php?file=/eclipse/downloads/drops4/S-4.2M7-201205031800/swt-S-4.2M7-201205031800-gtk-linux-x86.zip">Linux</a>,
       <span style="white-space: nowrap;">
-      <a href="http://download.eclipse.org/eclipse/downloads/drops/S-3.8M5-201201251800/download.php?dropFile=swt-3.8M5-cocoa-macosx.zip">OS X</a></span>,
-      <a href="http://download.eclipse.org/eclipse/downloads/drops/S-3.8M5-201201251800/index.php#SWT" target="_top">more...</a><br>
-      <small>3.8 Milestone 5 - <span style="white-space: nowrap;">27 January 2012</span></small><br>
+      <a href="http://www.eclipse.org/downloads/download.php?file=/eclipse/downloads/drops4/S-4.2M7-201205031800/swt-S-4.2M7-201205031800-cocoa-macosx.zip">OS X (32-bit)</a>,
+      <a href="http://www.eclipse.org/downloads/download.php?file=/eclipse/downloads/drops4/S-4.2M7-201205031800/swt-S-4.2M7-201205031800-cocoa-macosx-x86_64.zip">OS X (64-bit)</a></span>,
+      <a href="http://download.eclipse.org/eclipse/downloads/drops4/S-4.2M7-201205031800/index.php#SWT" target="_top">more...</a><br>
+      <small>4.2 Milestone 7 - <span style="white-space: nowrap;">4 May 2012</span></small><br>
   <ul>
-  <li><a href="R3_8/plan.html">3.8 Development Plan</a></li>
+  <li><a href="R3_8/plan.html">3.8/4.2 Development Plan</a></li>
   </ul>
 
   </table>
