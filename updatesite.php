@@ -24,10 +24,13 @@ branches of SWT.</p>
 </th><th> Update Site URL
 </th></tr>
 <tr>
-<td> <strong>Most recent development build</strong> </td><td>http://www.eclipse.org/swt/updates/3.8</td>
+<td> <strong>Most recent development build</strong> </td><td>http://www.eclipse.org/swt/updates/4.3</td>
 </tr>
 <tr>
-<td> <strong>3.6.x releases</strong> </td><td> http://www.eclipse.org/swt/updates/3.6 </td>
+<td> <strong>3.8.x - 4.2.x releases</strong> </td><td> http://www.eclipse.org/swt/updates/3.8 </td>
+</tr>
+<tr>
+<td> <strong>3.6.x - 3.7.x releases</strong> </td><td> http://www.eclipse.org/swt/updates/3.6 </td>
 </tr>
 <tr>
 <td> <strong>3.5.x releases</strong> </td><td> http://www.eclipse.org/swt/updates/3.5 </td>
