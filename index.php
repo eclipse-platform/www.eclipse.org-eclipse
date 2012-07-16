@@ -39,14 +39,14 @@ Whatever the reason, you will find many resources here. Enjoy!</p>
   <table width="100%">
   <tr><td>
       <b><font size="+1">Stable</font></b><br>
-      <a href="http://download.eclipse.org/eclipse/downloads/drops/R-3.7.2-201202080800/download.php?dropFile=swt-3.7.2-win32-win32-x86.zip">Windows</a>,
-      <a href="http://download.eclipse.org/eclipse/downloads/drops/R-3.7.2-201202080800/download.php?dropFile=swt-3.7.2-gtk-linux-x86.zip">Linux</a>,
       <span style="white-space: nowrap;">
-      <a href="http://download.eclipse.org/eclipse/downloads/drops/R-3.7.2-201202080800/download.php?dropFile=swt-3.7.2-cocoa-macosx.zip">OS X</a></span>,
-      <a href="http://download.eclipse.org/eclipse/downloads/drops/R-3.7.2-201202080800/index.php#SWT" target="_top">more...</a><br>
-      <small>3.7.2 Final Release - <span style="white-space: nowrap;">24 February 2012</span></small><br>
+      <a href="http://download.eclipse.org/eclipse/downloads/drops4/R-4.2-201206081400/download.php?dropFile=eclipse-SDK-4.2-win32.zip">Windows</a>,
+      <a href="http://download.eclipse.org/eclipse/downloads/drops4/R-4.2-201206081400/download.php?dropFile=eclipse-SDK-4.2-linux-gtk.tar.gz">Linux</a>,
+      <a href="http://download.eclipse.org/eclipse/downloads/drops4/R-4.2-201206081400/download.php?dropFile=eclipse-SDK-4.2-macosx-cocoa.tar.gz">OS X</a>,</span>
+      <a href="http://download.eclipse.org/eclipse/downloads/drops4/R-4.2-201206081400/#SWT" target="_top">more...</a><br>
+      <small>4.2 Final Release - <span style="white-space: nowrap;">8 June 2012</span></small><br>
   <ul>
-  <li><a href="R3_7/new_and_noteworthy.html">New and Noteworthy</a></li>
+  <li><a href="R4_2/new_and_noteworthy.html">New and Noteworthy</a></li>
   <li><a href="language.php">Language Pack</a></li>
   </ul>
   </table>
@@ -54,13 +54,9 @@ Whatever the reason, you will find many resources here. Enjoy!</p>
   <table width="100%">
   <tr><td>
       <b><font size="+1">Development</font></b><br>
-      <a href="http://www.eclipse.org/downloads/download.php?file=/eclipse/downloads/drops4/S-4.2M7-201205031800/swt-S-4.2M7-201205031800-win32-win32-x86.zip">Windows</a>,
-      <a href="http://www.eclipse.org/downloads/download.php?file=/eclipse/downloads/drops4/S-4.2M7-201205031800/swt-S-4.2M7-201205031800-gtk-linux-x86.zip">Linux</a>,
+      <a href="http://download.eclipse.org/eclipse/downloads/">4.3 Integration Builds</a>
       <span style="white-space: nowrap;">
-      <a href="http://www.eclipse.org/downloads/download.php?file=/eclipse/downloads/drops4/S-4.2M7-201205031800/swt-S-4.2M7-201205031800-cocoa-macosx.zip">OS X (32-bit)</a>,
-      <a href="http://www.eclipse.org/downloads/download.php?file=/eclipse/downloads/drops4/S-4.2M7-201205031800/swt-S-4.2M7-201205031800-cocoa-macosx-x86_64.zip">OS X (64-bit)</a></span>,
-      <a href="http://download.eclipse.org/eclipse/downloads/drops4/S-4.2M7-201205031800/index.php#SWT" target="_top">more...</a><br>
-      <small>4.2 Milestone 7 - <span style="white-space: nowrap;">4 May 2012</span></small><br>
+      <small>For links to SWT Binary and Source for all platforms,<br>select current 4.3 Integration Build then scroll to bottom of page.<br></small></span>
   <ul>
   <li><a href="R3_8/plan.html">3.8/4.2 Development Plan</a></li>
   </ul>
@@ -132,6 +128,10 @@ bugzilla email preferences.</p>
 </table>
 
 <ul>
+<li><a href="http://download.eclipse.org/eclipse/downloads/drops/R-3.7.2-201202080800/index.php#SWT" target="_top">SWT 3.7.2</a>, 11 February 2011.</li>
+    <ul>
+    <li><a href="R3_7/new_and_noteworthy.html">New and Noteworthy</a> items for each milestone</li>
+    </ul>
 <li><a href="http://download.eclipse.org/eclipse/downloads/drops/R-3.6.2-201102101200/index.php#SWT" target="_top">SWT 3.6.2</a>, 11 February 2011.</li>
     <ul>
     <li><a href="R3_6/new_and_noteworthy.html">New and Noteworthy</a> items for each milestone</li>
