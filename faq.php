@@ -1236,8 +1236,8 @@ the SWT.CENTER style when creating a composite.
   <dt><strong><a name="specifyxulrunner">Q: Can I specify which XULRunner installation gets used?</a></strong></dt>
   <dd>A: Typically a Mozilla-based Browser uses XULRunner's lookup mechanism to find a registered XULRunner at runtime,
     in which case a XULRunner location does not need to be specified.  However if you wish to override this mechanism you
-    can set the value of java system property <code>org.eclipse.swt.browser.XULRunnerPath</code> to point at an alternate
-    XULRunner's path.  This property must be set before the <em>first</em> Browser instance is created.
+    can set the value of java system property <code>org.eclipse.swt.browser.XULRunnerPath</code> to the full path of a
+    specific XULRunner to use.  This property must be set before the <em>first</em> Browser instance is created.
     <p>
     The best opportunity for a user to set this property is by launching their application with a <code>-D</code>
     VM switch (eg.- add to the end of the eclipse.ini file: <code>-Dorg.eclipse.swt.browser.XULRunnerPath=...</code>).
