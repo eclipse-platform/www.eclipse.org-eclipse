@@ -128,7 +128,7 @@ bugzilla email preferences.</p>
 </table>
 
 <ul>
-<li><a href="http://download.eclipse.org/eclipse/downloads/drops/R-3.7.2-201202080800/index.php#SWT" target="_top">SWT 3.7.2</a>, 11 February 2011.</li>
+<li><a href="http://download.eclipse.org/eclipse/downloads/drops/R-3.7.2-201202080800/index.php#SWT" target="_top">SWT 3.7.2</a>, 8 February 2012.</li>
     <ul>
     <li><a href="R3_7/new_and_noteworthy.html">New and Noteworthy</a> items for each milestone</li>
     </ul>
