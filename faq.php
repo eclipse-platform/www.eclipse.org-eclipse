@@ -949,7 +949,7 @@ Problem" at: <a href="http://www.cas.mcmaster.ca/~emil/publications/fragile/">ht
       <ul>
         <li><a href="http://swtbot.sourceforge.net/index.html">SWTBot</a> (open source)</li>
         <li><a href="http://sourceforge.net/projects/abbot/">Abbot for SWT</a> (open source)</li>
-        <li><a href="https://code.google.com/p/windowtester/">Google Window Tester</a> (open source)</li>
+        <li><a href="https://code.google.com/p/windowtester/">Window Tester</a> (open source)</li>
       </ul>
       </p>
   </dd>
