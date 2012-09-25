@@ -365,7 +365,7 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
       <code>org.eclipse.swt.tools</code> projects from dev.eclipse.org (see
       <a href="http://www.eclipse.org/swt/git.php">How to use SWT from GIT</a>, use <code>.classpath_gtk</code>
       as the <code>.classpath</code> file in the <code>org.eclipse.swt</code> project).</li>
-    <li><i>Note this is not needed for builds after 4.3 M3 as the code was changed to 64-bit</i>Convert SWT's Java from its 32-bit form to 64-bit:</li>
+    <li><i>Note this is not needed for builds after 4.3 M3 as the code was changed to 64-bit.</i> Convert SWT's Java from its 32-bit form to 64-bit:</li>
     <ul>
       <li>To convert the Java code in-place, go to the <code>build.xml</code> ant script in the <code>org.eclipse.swt.gtk.linux.x86_64</code>
         project and run its "replace.32.to.64" target.  Once this target has completed you must refresh (F5)
