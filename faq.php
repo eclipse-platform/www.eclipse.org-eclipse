@@ -31,6 +31,7 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
   <li><a href="#howaddnativescocoa">How do I add a new native to the SWT JNI libraries for Cocoa?</a></li>
   <li><a href="#buildeclipseexe">How do I build the Eclipse executable for my platform?</a></li>
   <li><a href="#gtk64">How do I build the 64-bit version of SWT GTK?</a></li>
+  <li><a href="#gtk32">How do I build the 32-bit version of SWT GTK?</a></li>
   <p></p>
   <li><a href="#gtkstartup">What GTK version do I need to run SWT?</a></li>
   <li><a href="#osxvms">How can I decide which Eclipse/SWT port to use on OS X?</a></li>
@@ -364,7 +365,7 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
       <code>org.eclipse.swt.tools</code> projects from dev.eclipse.org (see
       <a href="http://www.eclipse.org/swt/git.php">How to use SWT from GIT</a>, use <code>.classpath_gtk</code>
       as the <code>.classpath</code> file in the <code>org.eclipse.swt</code> project).</li>
-    <li>Convert SWT's Java from its 32-bit form to 64-bit:</li>
+    <li><i>Note this is not needed for builds after 4.3 M3 as the code was changed to 64-bit</i>Convert SWT's Java from its 32-bit form to 64-bit:</li>
     <ul>
       <li>To convert the Java code in-place, go to the <code>build.xml</code> ant script in the <code>org.eclipse.swt.gtk.linux.x86_64</code>
         project and run its "replace.32.to.64" target.  Once this target has completed you must refresh (F5)
@@ -374,6 +375,26 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
     </ul>
     <li>You're done!  The <code>org.eclipse.swt.gtk.linux.x86_64</code> project will now contain the 64-bit native libraries, and if you're
       interested, the 64-bit source code will now be available in the <code>org.eclipse.swt.gtk.linux.x86_64/src</code> folder.  
+  </ol>
+  </dd>
+  
+  <dt><strong><a name="gtk32">Q: How do I build the 32-bit version of SWT GTK?</a></strong></dt>
+  <dd>A: Follow these steps to extract the 32-bit SWT GTK source code from GIT and produce your own build:
+  <ol>
+    <li>Start Eclipse and retrieve the <code>org.eclipse.swt</code>, <code>org.eclipse.swt.gtk.linux.x86</code> and
+      <code>org.eclipse.swt.tools</code> projects from dev.eclipse.org (see
+      <a href="http://www.eclipse.org/swt/git.php">How to use SWT from GIT</a>, use <code>.classpath_gtk</code>
+      as the <code>.classpath</code> file in the <code>org.eclipse.swt</code> project).</li>
+    <li>Convert SWT's Java from its 64-bit form to 32-bit:</li>
+    <ul>
+      <li>To convert the Java code in-place, go to the <code>build.xml</code> ant script in the <code>org.eclipse.swt.gtk.linux.x86</code>
+        project and run its "replace.64.to.32" target.  Once this target has completed you must refresh (F5)
+        the <code>org.eclipse.swt</code> project in order to pick up the changes.</li>
+      <li>Run the "build_libraries" target in the same <code>build.xml</code> file.  Refresh (F5)
+        the <code>org.eclipse.swt.gtk.linux.x86</code> project when this target has completed, to pick up the new libraries.</li>
+    </ul>
+    <li>You're done!  The <code>org.eclipse.swt.gtk.linux.x86</code> project will now contain the 32-bit native libraries, and if you're
+      interested, the 32-bit source code will now be available in the <code>org.eclipse.swt.gtk.linux.x86/src</code> folder.  
   </ol>
   </dd>
   
