@@ -39,12 +39,12 @@ Whatever the reason, you will find many resources here. Enjoy!</p>
   <table width="100%">
   <tr><td>
       <b><font size="+1">Stable</font></b><br>
-      <a href="http://download.eclipse.org/eclipse/downloads/drops4/R-4.2-201206081400/download.php?dropFile=eclipse-SDK-4.2-win32.zip">Windows</a>,
-      <a href="http://download.eclipse.org/eclipse/downloads/drops4/R-4.2-201206081400/download.php?dropFile=eclipse-SDK-4.2-linux-gtk.tar.gz">Linux</a>,
+      <a href="http://download.eclipse.org/eclipse/downloads/drops4/R-4.2.1-201209141800/download.php?dropFile=swt-4.2.1-win32-win32-x86.zip">Windows</a>,
+      <a href="http://download.eclipse.org/eclipse/downloads/drops4/R-4.2.1-201209141800/download.php?dropFile=swt-4.2.1-gtk-linux-x86.zip">Linux</a>,
       <span style="white-space: nowrap;">
-      <a href="http://download.eclipse.org/eclipse/downloads/drops4/R-4.2-201206081400/download.php?dropFile=eclipse-SDK-4.2-macosx-cocoa.tar.gz">OS X</a>,</span>
-      <a href="http://download.eclipse.org/eclipse/downloads/drops4/R-4.2-201206081400/#SWT" target="_top">more...</a><br>
-      <small>4.2 Final Release - <span style="white-space: nowrap;">8 June 2012</span></small><br>
+      <a href="http://download.eclipse.org/eclipse/downloads/drops4/R-4.2.1-201209141800/download.php?dropFile=swt-4.2.1-cocoa-macosx.zip">OS X</a>,</span>
+      <a href="http://download.eclipse.org/eclipse/downloads/drops4/R-4.2.1-201209141800/#SWT" target="_top">more...</a><br>
+      <small>4.2.1 Final Release - <span style="white-space: nowrap;">14 September 2012</span></small><br>
   <ul>
   <li><a href="R4_2/new_and_noteworthy.html">New and Noteworthy</a></li>
   <li><a href="language.php">Language Pack</a></li>
