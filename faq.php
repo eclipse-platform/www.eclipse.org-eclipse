@@ -1038,6 +1038,13 @@ the SWT.CENTER style when creating a composite.
   The property name is <code>org.eclipse.swt.browser.DefaultType</code> and valid values for it currently include "<code>mozilla</code>" and
   "<code>webkit</code>".  This property must be set before the <em>first</em> Browser instance is created.
   <p>
+  <em>Note:</em> As of Eclipse/SWT 4.3 a user can specify a comma-separated list of native renderers, in order of preference, for the
+  <code>org.eclipse.swt.browser.DefaultType</code> value.  Additionally, "<code>ie</code>" is now a valid native renderer value.  The purpose of these
+  changes is to enable applications to specify the default use of either Mozilla or WebKit on non-Windows platforms (where conflicting dependent library
+  problems can occur) without affecting the default renderer that is used on Windows (IE).  An application wishing to do this should set this property's
+  value to either "<code>ie,webkit</code>" or "<code>ie,mozilla</code>".  On Windows this will leave <code>SWT.NONE</code>-style Browsers to use IE, and
+  on other platforms where IE is not available the second specified renderer in the list will be used for <code>SWT.NONE</code>-style Browsers.
+  <p>
   The best opportunity for a user to set this property is by launching their application with a <code>-D</code>
   VM switch (eg.- add to the end of the eclipse.ini file: <code>-Dorg.eclipse.swt.browser.DefaultType=webkit</code>).
   <p>
