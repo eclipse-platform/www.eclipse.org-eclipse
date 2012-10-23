@@ -1156,7 +1156,9 @@ the SWT.CENTER style when creating a composite.
 	    <li>32-bit SWT</li>
 	    <li>Safari must be installed</li>
 	  	<li>For OSs older than XP+SP1, the path to the Apple Application Support installation must be prepended to Windows' "Path" environment variable
-	  	before running eclipse.  This installation will be in a location like "<code>C:\Program Files\Common Files\Apple\Apple Application Support</code>".</li>
+	        before running eclipse.  This installation will be in a location like "<code>C:\Program Files\Safari\Apple Application Support</code>" or
+	        "<code>C:\Program Files\Common Files\Apple\Apple Application Support</code>".  If more than one of these directories are found then choose
+	        the one with "Safari" in its directory ancestry.</li>
 	  </ul>
 	  <li>Linux: WebKitGTK 1.2.0 or newer must be in the library load path.  Examples of Linux distros that meet this requirement by default
 	      include Red Hat Enterprise Linux 6 and Ubuntu 10.04.</li>
