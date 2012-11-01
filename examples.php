@@ -66,7 +66,7 @@ and the following examples are <em>only</em> available as Eclipse plugins:
 
 <ol>
   <li>To get the examples, go to the Eclipse downloads page at <a href="http://download.eclipse.org/eclipse/downloads/index.php">
-      http://download.eclipse.org/eclipse/downloads/index.php</a>.</li>
+      http://download.eclipse.org/eclipse/downloads</a>.</li>
   <li>Click on the Eclipse build that you would like examples for
       (i.e. the Eclipse build that you are running; typically the latest Stable Build).</li>
   <li>Scroll down until you see "Example Plug-ins". Read the paragraph on installing them, and select the download for your platform.</li>
