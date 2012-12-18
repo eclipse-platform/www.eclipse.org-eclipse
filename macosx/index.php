@@ -67,7 +67,7 @@
 <tr><td><pre>  #!/bin/sh
   BASEDIR=`dirname $0`
   exec java \
-       -d32 <em>&lt;or&gt;</em> -d64 \ 
+       -d64 \ 
        -XstartOnFirstThread \
        -classpath $BASEDIR/swt/swt.jar:$BASEDIR \
        SWTHello</pre></td></tr></table>
@@ -75,11 +75,10 @@
     <br>(NOTE: If you are using eclipse 3.2.2 or earlier, you also need <code>-Djava.library.path=..</code>)
 	
     <p>The shell script launches java with the required classpath and Java
-    library path settings to use SWT.  The <code>-d</code> switch ensures
-    that the correct JVM is used; if swt.jar contains either the Carbon or
-    32-bit Cocoa port of SWT then <code>-d32</code> should be specified,
-    otherwise <code>-d64</code> is needed (implying that swt.jar contains
-    SWT's 64-bit Cocoa port).  The special VM option <code>-XstartOnFirstThread</code>
+    library path settings to use SWT.  The <code>-d64</code> switch ensures
+    that the 64-bit JVM is used; if swt.jar contains either the Carbon or
+    32-bit Cocoa port of SWT then <code>-d32</code> should be specified instead.
+    The special VM option <code>-XstartOnFirstThread</code>
     is also required for SWT applications to run properly on the Mac.</p>
 
     <h3>Creating a disk image</h3>
