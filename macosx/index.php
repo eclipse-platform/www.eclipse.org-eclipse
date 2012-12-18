@@ -67,7 +67,7 @@
 <tr><td><pre>  #!/bin/sh
   BASEDIR=`dirname $0`
   exec java \
-       -d64 \ 
+       -d64 \
        -XstartOnFirstThread \
        -classpath $BASEDIR/swt/swt.jar:$BASEDIR \
        SWTHello</pre></td></tr></table>
