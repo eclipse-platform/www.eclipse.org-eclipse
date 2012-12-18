@@ -64,7 +64,7 @@
     any required options.</p>
 
 <table style="border: solid 1px #000000; margin-left: auto; margin-right: auto; padding: 10px;" bgcolor="#eeeeff">
-<tr><td><pre>#!/bin/sh
+<tr><td><pre style="margin: auto;">#!/bin/sh
 BASEDIR=`dirname $0`
 exec java \
      -d64 \
