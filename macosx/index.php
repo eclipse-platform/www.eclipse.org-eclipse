@@ -63,7 +63,7 @@
     executable to run.  This allows us to easily launch Java with
     any required options.</p>
 
-<table style="border: solid 1px #000000; margin-left: auto; margin-right: auto;" bgcolor="#eeeeff">
+<table style="border: solid 1px #000000; margin-left: auto; margin-right: auto; padding: 10px;" bgcolor="#eeeeff">
 <tr><td><pre>#!/bin/sh
 BASEDIR=`dirname $0`
 exec java \
