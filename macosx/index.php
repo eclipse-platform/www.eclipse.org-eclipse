@@ -64,13 +64,13 @@
     any required options.</p>
 
 <table style="border: solid 1px #000000; margin-left: auto; margin-right: auto;" bgcolor="#eeeeff">
-<tr><td><pre>  #!/bin/sh
-  BASEDIR=`dirname $0`
-  exec java \
-       -d64 \
-       -XstartOnFirstThread \
-       -classpath $BASEDIR/swt/swt.jar:$BASEDIR \
-       SWTHello</pre></td></tr></table>
+<tr><td><pre>#!/bin/sh
+BASEDIR=`dirname $0`
+exec java \
+     -d64 \
+     -XstartOnFirstThread \
+     -classpath $BASEDIR/swt/swt.jar:$BASEDIR \
+     SWTHello</pre></td></tr></table>
 
     <br>(NOTE: If you are using eclipse 3.2.2 or earlier, you also need <code>-Djava.library.path=..</code>)
 	
