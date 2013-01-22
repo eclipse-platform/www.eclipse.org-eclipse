@@ -1,15 +1,15 @@
 <html>
 <script>
+	function OnMessage (event) {
+		alert('received a message');
+	}
 	window.loaded = function() {
+		window.addEventListener ("message", OnMessage, false);
 		alert("loaded");
-		frame.fnToInvoke = function() {
-			alert("did it");
-		}
-		window.fnToinvoke = frame.fnToInvoke;
+//		window.fnToinvoke = frame.fnToInvoke;
 	};
-	frame.loaded = window.loaded;
 </script>
 <body onload="loaded()">
-hi
+hi added onmessage
 </body>
 </html>
