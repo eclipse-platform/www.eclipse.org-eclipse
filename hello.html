@@ -5,7 +5,9 @@
 		frame.fnToInvoke = function() {
 			alert("did it");
 		}
+		window.fnToinvoke = frame.fnToInvoke;
 	};
+	frame.loaded = window.loaded;
 </script>
 <body onload="loaded()">
 hi
