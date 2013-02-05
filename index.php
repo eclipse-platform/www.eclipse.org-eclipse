@@ -57,10 +57,6 @@ Whatever the reason, you will find many resources here. Enjoy!</p>
       <a href="http://download.eclipse.org/eclipse/downloads/">4.3 Integration Builds</a>
       <span style="white-space: nowrap;">
       <small>For links to SWT Binary and Source for all platforms,<br>select current 4.3 Integration Build then scroll to bottom of page.<br></small></span>
-  <ul>
-  <li><a href="R3_8/plan.html">3.8/4.2 Development Plan</a></li>
-  </ul>
-
   </table>
 </table>
 
