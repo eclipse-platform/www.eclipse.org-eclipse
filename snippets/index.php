@@ -56,6 +56,7 @@ create a snippet contribution report in Bugzilla</a>. Thanks in advance for your
 		<li> <a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet340.java">tell a screen reader about updates to a non-focused descriptive area</a></li>
 		<li> <a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet350.java">use accessible relations to provide additional information to an AT</a></li>
 		<li> <a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet357.java">provide a way for an AT to set text attributes in a StyledText</a></li>
+		<li> <a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet363.java">declare a message area to be a "live region"</a></li>
       </ul>
       <p></p>
 
