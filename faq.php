@@ -1184,17 +1184,16 @@ the SWT.CENTER style when creating a composite.
   <dd>A: To specify that a Mozilla renderer be used by a Browser instance, create it with style <code>SWT.MOZILLA</code> (<em>@since 3.3</em>)  The runtime requirements for
       using Mozilla-based Browsers are listed below.  Note that failure to meet these runtime requirements will cause the Browser instantiation to fail.
     <ul>
-	  <li><a href="http://developer.mozilla.org/en/docs/XULRunner">XULRunner</a> must be properly
-	    <a href="http://developer.mozilla.org/en/docs/XULRunner_1.8.0.1_Release_Notes#Installing_XULRunner">installed</a></li>
-	  <li>The installed XULRunner version must be 1.8.1.2 or newer if any of the following are true:
+	  <li><a href="http://developer.mozilla.org/en/docs/XULRunner">XULRunner</a> must either be properly
+	    <a href="http://developer.mozilla.org/en/docs/XULRunner_1.8.0.1_Release_Notes#Installing_XULRunner">installed</a> or <a href="#specifyxulrunner">explicitly specified</a></li>
+	  <li>The installed/specified XULRunner version must be 1.8.1.2 or newer if any of the following are true:
 	    <ul>
 	      <li>Running on OS X</li>
 	      <li><code>Browser.getWebBrowser()</code> is used</li>
 	      <li>JavaXPCOM is referenced</li>
 	    </ul>
-	    If none of these cases apply then any XULRunner version can be used.
 	  </li>
-	  <li>Windows only: 32-bit SWT</li>
+	  <li>(<em>@since 4.3</em>) The specified XULRunner version must be 10.0 or newer for the Windows x86_64 implementation of Eclipse/SWT</li>
 	  <li>OS X only: The JRE must be "Java for Mac OS X 10.4, Release 5" or newer</li>
     </ul>
     <p>
@@ -1324,7 +1323,7 @@ public class XULRunnerInitializer {
   <dd>A: The first Mozilla-based Browser instance performs the steps below, in order, until a native browser is found.  All subsequent Mozilla-based Browser instances will use this same detected browser.
     <ol>
       <li>If Java property <code>org.eclipse.swt.browser.XULRunnerPath</code> is defined then use it (see <a href="#specifyxulrunner">Can I specify which XULRunner installation is used?</a>).
-      <li>Attempt to detect an OS-registered XULRunner with version 1.8.1.2 or newer (in order to enable JavaXPCOM use).  Note that only XULRunner installations that are compiled for the
+      <li>Attempt to detect an OS-registered XULRunner in the version range 1.8.1.2 <= version < 4.0 (in order to enable JavaXPCOM use).  Note that only XULRunner installations that are compiled for the
         same architecture as the running SWT will be considered.
       <li>Attempt to detect an OS-registered XULRunner with a version earlier than 1.8.1.2 (again, the architecture must match that of SWT).
       <li><em>(if running on Linux or Solaris, and the Browser's style is <code>SWT.NONE</code>)</em> Attempt to use the native browser pointed at by OS environment variable <code>MOZILLA_FIVE_HOME</code>, which may be any of
