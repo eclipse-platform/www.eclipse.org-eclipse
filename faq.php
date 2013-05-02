@@ -1193,7 +1193,7 @@ the SWT.CENTER style when creating a composite.
 	      <li>JavaXPCOM is referenced</li>
 	    </ul>
 	  </li>
-	  <li>(<em>@since 4.3</em>) The specified XULRunner version must be 10.0 or newer for the Windows x86_64 implementation of Eclipse/SWT</li>
+	  <li>(<em>@since 4.3</em>) The specified XULRunner version must be 1.9.2.x or newer for the Windows x86_64 implementation of Eclipse/SWT</li>
 	  <li>OS X only: The JRE must be "Java for Mac OS X 10.4, Release 5" or newer</li>
     </ul>
     <p>
