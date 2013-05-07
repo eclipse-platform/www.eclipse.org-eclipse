@@ -1181,20 +1181,22 @@ the SWT.CENTER style when creating a composite.
   </dd>
 
   <dt><strong><a name="howusemozilla">Q: How do I explicitly use Mozilla as the Browser's underlying renderer?</a></strong></dt>
-  <dd>A: To specify that a Mozilla renderer be used by a Browser instance, create it with style <code>SWT.MOZILLA</code> (<em>@since 3.3</em>)  The runtime requirements for
+  <dd>A: A Browser can be created with style <code>SWT.MOZILLA</code> to specify that its renderer must be Mozilla-based (<em>@since 3.3</em>).  The runtime requirements for
       using Mozilla-based Browsers are listed below.  Note that failure to meet these runtime requirements will cause the Browser instantiation to fail.
     <ul>
-	  <li><a href="http://developer.mozilla.org/en/docs/XULRunner">XULRunner</a> must either be properly
-	    <a href="http://developer.mozilla.org/en/docs/XULRunner_1.8.0.1_Release_Notes#Installing_XULRunner">installed</a> or <a href="#specifyxulrunner">explicitly specified</a></li>
-	  <li>The installed/specified XULRunner version must be 1.8.1.2 or newer if any of the following are true:
-	    <ul>
-	      <li>Running on OS X</li>
-	      <li><code>Browser.getWebBrowser()</code> is used</li>
-	      <li>JavaXPCOM is referenced</li>
-	    </ul>
-	  </li>
-	  <li>(<em>@since 4.3</em>) The specified XULRunner version must be 1.9.2.x or newer for the Windows x86_64 implementation of Eclipse/SWT</li>
-	  <li>OS X only: The JRE must be "Java for Mac OS X 10.4, Release 5" or newer</li>
+      <li>Runtime Platform:
+        <ul>
+          <li>Windows (x86): Any XULRunner release with version 1.8.0.x - 3.6.x or 10.x
+          <li>Windows (x86_64): (@since 4.3) Any XULRunner release with version 1.9.2.x - 3.6.x or 10.x, and the <a href="http://www.microsoft.com/en-us/download/details.aspx?id=13523">Visual C++ 2010 runtime</a> must be installed
+          <li>OS X (32-bit): Any XULRunner release with version 1.8.1.2 - 3.6.x or 10.x, and the JRE must be "Java for Mac OS X 10.4, Release 5" or newer
+          <li>OS X (x86_64): (@since 3.6) Any XULRunner release with version 1.8.1.2 - 3.6.x or 10.x
+          <li>Linux and Solaris: See <a href="#browserlinux">What do I need to run the SWT Browser inside Eclipse on Linux?</a>
+        </ul>
+      </li>
+      <li>To use <a href="http://developer.mozilla.org/en/docs/XULRunner">XULRunner</a> it must be detectable by the Browser.  For XULRunner versions 1.8.0.x - 3.6.x
+        this is facilitated by either <a href="http://developer.mozilla.org/en/docs/XULRunner_1.8.0.1_Release_Notes#Installing_XULRunner">installing</a> it or by
+        <a href="#specifyxulrunner">explicitly specifying its location.</a>  For XULRunner versions newer than 3.6.x the only way to do this is by explicitly specifying its location.</li>
+	  <li>The installed/specified XULRunner version must be 1.8.1.2 - 3.6.x to make use of JavaXPCOM
     </ul>
     <p>
     It is important to note that conflicts have been reported between the dependent libraries of WebKit and Mozilla.  As a result it is advised that Browser
