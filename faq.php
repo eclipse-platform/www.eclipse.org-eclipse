@@ -33,7 +33,7 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
   <li><a href="#gtk64">How do I build the 64-bit version of SWT GTK?</a></li>
   <li><a href="#gtk32">How do I build the 32-bit version of SWT GTK?</a></li>
   <p></p>
-  <li><a href="#gtkstartup">What GTK version do I need to run SWT?</a></li>
+  <li><a href="#gtkstartup">Which GTK version do I need to run SWT?</a></li>
   <li><a href="#osxvms">How can I decide which Eclipse/SWT port to use on OS X?</a></li>
   <li><a href="#carbonapp">On Mac Carbon, how do I run an SWT application from the command line?</a></li>
   <li><a href="#cocoa32launch">Why do I get an UnsatisfiedLinkError when launching from the 32-bit Cocoa or Carbon port?</a></li>
@@ -399,7 +399,7 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
   </ol>
   </dd>
   
-  <dt><strong><a name="gtkstartup">Q: What GTK version do I need to run SWT?</a></strong></dt>
+  <dt><strong><a name="gtkstartup">Q: Which GTK version do I need to run SWT?</a></strong></dt>
   <dd>A: SWT requires the following GTK+ versions (or newer) to be installed:
     <ul>
       <li>Eclipse/SWT 3.8.x and newer: GTK+ 2.6.0 and its dependencies</li>
@@ -407,8 +407,10 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
       <li>Eclipse/SWT 3.0.x - 3.5.x: GTK+ 2.2.1 and its dependencies</li>
       <li>Eclipse/SWT 2.1.x: GTK+ 2.0.6 and its dependencies</li>
     </ul>
+    Note that Eclipse/SWT 4.3.x includes early access support for GTK+ 3.x.  To use it on a Linux distro with GTK+ 3.x
+    libraries installed, set Linux environment varable SWT_GTK3=1 before launching your application.
     <p>
-    You can determine which version of GTK you are running with <tt>rpm -q gtk2</tt>.
+    You can determine which version(s) of GTK you have installed with <tt>rpm -q gtk2</tt> or <tt>rpm -q gtk3</tt>.
     </p>
   </dd>
 
