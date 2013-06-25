@@ -86,6 +86,7 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
   <li><a href="#browserscrollbar">How do I hide the Browser's scrollbars?</a></li>
   <li><a href="#browserproxy">How do I set a proxy for the Browser to use?</a></li>
   <li><a href="#specifyxulrunner">Can I specify which XULRunner installation gets used?</a></li>
+  <li><a href="#specifyprofile">Can I specify which Mozilla profile gets used?</a></li>
   <li><a href="#howdetectmozilla">How does the Browser detect a native Mozilla browser to use?</a></li>
   <li><a href="#printmozillapath">How can I determine which installed Mozilla browser is being used to render Browser content?</a></li>
   <li><a href="#mozillaplugins">How can my Mozilla-based Browser find my Mozilla plug-ins?</a></li>
@@ -1321,6 +1322,12 @@ public class XULRunnerInitializer {
 }
       </pre></li>
     </ul> 
+  </dd>
+
+  <dt><strong><a name="specifyprofile">Q: Can I specify which Mozilla profile gets used?</a></strong></dt>
+  <dd>A: (<em>@since 4.4</em>) A profile can be specified for use by all Mozilla-based Browser instances by setting Java property <code>org.eclipse.swt.browser.MOZ_PROFILE_PATH</code> to the
+    path of the profile before the first instance of a Mozilla-based Browser is created.  The best opportunity for a user to set this property is by launching their application with a <code>-D</code>
+    VM switch (eg.- add to the end of the eclipse.ini file: <code>-Dorg.eclipse.swt.browser.MOZ_PROFILE_PATH=...</code>).  
   </dd>
 
   <dt><strong><a name="howdetectmozilla">Q: How does the Browser detect a native Mozilla browser to use?</a></strong></dt>
