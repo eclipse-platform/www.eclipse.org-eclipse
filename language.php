@@ -39,11 +39,11 @@ the appropriate language pack and place it on the classpath of your
 application.</p>
 
 <ul>
-  <li><a href="org.eclipse.swt.nl1_3.2.0.v200606220026.jar">NLpack1</a>– German, Spanish, French, Italian, Japanese, Korean, Portuguese (Brazil), Traditional Chinese and Simplified Chinese.</a>
-  <li><a href="org.eclipse.swt.nl2_3.2.0.v200606220026.jar">NLpack2</a> – Czech, Hungarian, Polish and Russian.</a>
-  <li><a href="org.eclipse.swt.nl2a_3.2.0.v200606220026.jar">NLpack2a</a> – Danish, Dutch, Finnish, Greek, Norwegian, Portuguese, Swedish and Turkish.</a>
-  <li><a href="org.eclipse.swt.nlBidi_3.2.0.v200606220026.jar">NLpackBidi</a> – Arabic and Hebrew.</a>
-</ul
+  <li><a href="org.eclipse.swt.nl1_3.2.0.v200606220026.jar">NLpack1</a>ï¿½ German, Spanish, French, Italian, Japanese, Korean, Portuguese (Brazil), Traditional Chinese and Simplified Chinese.</a>
+  <li><a href="org.eclipse.swt.nl2_3.2.0.v200606220026.jar">NLpack2</a> ï¿½ Czech, Hungarian, Polish and Russian.</a>
+  <li><a href="org.eclipse.swt.nl2a_3.2.0.v200606220026.jar">NLpack2a</a> ï¿½ Danish, Dutch, Finnish, Greek, Norwegian, Portuguese, Swedish and Turkish.</a>
+  <li><a href="org.eclipse.swt.nlBidi_3.2.0.v200606220026.jar">NLpackBidi</a> ï¿½ Arabic and Hebrew.</a>
+</ul>
 </table>
 </body>
 </html>
