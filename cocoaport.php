@@ -1,22 +1,14 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
-    <title>SWT Cocoa Port</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-    <link rel="stylesheet" href="http://dev.eclipse.org/default_style.css" type="text/css">
-    <link rel="stylesheet" href="swt.css" type="text/css">
-    <link rel="shortcut icon" href="http://www.eclipse.org/images/eclipse.ico" type="image/x-icon">
-</head>
-<body bgcolor="#ffffff" text="#000000">
-<table width="635px" class="swtpage">
-<colgroup><col width="125px"><col width="510px"></colgroup>
-<tr><?php include "sidebar.php"; ?>
-<td valign="top" style="padding: 10px"><h1 style="padding: 0; margin: 0; border-bottom: 1px solid #000000;">SWT Cocoa Port</h1>
+<?php require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/app.class.php");	require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/nav.class.php"); 	require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/menu.class.php"); 	$App 	= new App();	$Nav	= new Nav();	$Menu 	= new Menu();		include($App->getProjectCommon());
 
-<p></p>
-<table width="100%">
-<tr><th bgcolor="#0080c0" align="left" style="padding: 2px;"><font color="#ffffff">Cocoa Port</font>
-</table>
+$pageTitle = "SWT Cocoa Port";
+
+ob_start();
+?>
+<div id="midcolumn">
+<h1>SWT Cocoa Port</h1>
+
+<div class="homeitem">
+<h2>Cocoa Port</h2>
 
 <p>The Cocoa port of SWT will ship with Eclipse 3.5.</p>
 <p>Early adopters can try it now by downloading
@@ -28,15 +20,15 @@ Eclipse 3.5 Milestone 5 for Mac OSX Cocoa</a>.</p>
 </p>
 <p>There are still areas that need work. If you want to help, here is what you can do.
 <ol>
-<li>Read the <a href="http://www.eclipse.org/swt/R3_5/plan.html">SWT 3.5 Development Plan</a> to get a feel for the current status of the Cocoa port.</li>
+<li>Read the <a href="R3_5/plan.html">SWT 3.5 Development Plan</a> to get a feel for the current status of the Cocoa port.</li>
 <li>Subscribe to the <a href="https://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT developers mailing list</a> for discussion and to keep track of current developments.</li>
-<li>Then <a href="http://www.eclipse.org/swt/git.php">load SWT from GIT</a> into your Eclipse workspace.
+<li>Then <a href="git.php">load SWT from GIT</a> into your Eclipse workspace.
 The projects you need are:
 <ul>
 <li>org.eclipse.swt</li>
 <li>org.eclipse.swt.cocoa.macosx</li>
 <li>org.eclipse.swt.examples (not required, but useful for testing)</li>
-<li>org.eclipse.swt.tools (not required, unless you need to extend the <a href="http://www.eclipse.org/swt/macgen.php">JNI Code</a>)</li>
+<li>org.eclipse.swt.tools (not required, unless you need to extend the <a href="macgen.php">JNI Code</a>)</li>
 </ul>
 </li>
 <li>Pick an interesting bug from the plan or <a href="https://bugs.eclipse.org/bugs/buglist.cgi?classification=Eclipse&product=Platform&component=SWT&op_sys=Mac+OS+X+-+Cocoa&bug_status=UNCONFIRMED&bug_status=NEW&bug_status=ASSIGNED&bug_status=REOPENED">
@@ -48,7 +40,11 @@ and see if you can figure out how to fix the problem. If so, attach a patch to t
 </p>
 <p>Thanks to all those who have helped so far!
 </p>
+</div>
+</div>
+<?php 
+$html = ob_get_clean();
 
-</table>
-</body>
-</html>
+# Generate the web page
+$App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, $html);
+?>

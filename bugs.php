@@ -1,21 +1,13 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html>
-<head>
-    <title>SWT Eclipse Bugzilla</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-    <link rel="stylesheet" href="http://dev.eclipse.org/default_style.css" type="text/css">
-    <link rel="stylesheet" href="swt.css" type="text/css">
-    <link rel="shortcut icon" href="http://www.eclipse.org/images/eclipse.ico" type="image/x-icon">
-    <style type="text/css"> dt { padding-top: 20px; padding-bottom: 5px; } </style>
-</head>
-<body bgcolor="#ffffff" text="#000000">
-<table width="825px" class="swtpage">
-<colgroup><col width="125px"><col width="700px"></colgroup>
-<tr><?php include "sidebar.php"; ?>
-<td valign="top" style="padding: 10px">
-<h1 style="padding: 0; margin: 0; border-bottom: 1px solid #000000;">SWT Eclipse Bugzilla</h1>
+<?php require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/app.class.php");	require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/nav.class.php"); 	require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/menu.class.php"); 	$App 	= new App();	$Nav	= new Nav();	$Menu 	= new Menu();		include($App->getProjectCommon());
 
-<p>The SWT <a href="http://www.eclipse.org/swt/triage.php">bug triage</a> process.</p>
+$pageTitle = "SWT Eclipse Bugzilla";
+
+ob_start();
+?>
+<div id="midcolumn">
+<h1>SWT Eclipse Bugzilla</h1>
+
+<p>The SWT <a href="triage.php">bug triage</a> process.</p>
 <p>SWT bug reports are stored in the <a href="http://bugs.eclipse.org/bugs/">Eclipse Bugzilla database</a>.
 <br>Here are some useful links:</p>
 
@@ -55,6 +47,10 @@ Find any SWT bug reports containing:
 </form>
 </h4>
 
-</table>
-</body>
-</html>
+</div>
+<?php 
+$html = ob_get_clean();
+
+# Generate the web page
+$App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, $html);
+?>

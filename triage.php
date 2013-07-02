@@ -1,18 +1,11 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
-    <title>SWT Bug Triage</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta http-equiv="Content-Style-Type" content="text/css">
-    <link rel="stylesheet" href="http://dev.eclipse.org/default_style.css" type="text/css">
-    <link rel="stylesheet" href="swt.css" type="text/css">
-    <link rel="shortcut icon" href="http://www.eclipse.org/images/eclipse.ico" type="image/x-icon">
-</head>
-<body bgcolor="#ffffff" text="#000000">
-<table width="875px" class="swtpage">
-<colgroup><col width="125px"><col width="750px"></colgroup>
-<tr><?php include "sidebar.php"; ?>
-<td valign="top" style="padding: 10px"><h1 style="padding: 0; margin: 0; border-bottom: 1px solid #000000;">SWT Bug Triage</h1>
+<?php require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/app.class.php");	require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/nav.class.php"); 	require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/menu.class.php"); 	$App 	= new App();	$Nav	= new Nav();	$Menu 	= new Menu();		include($App->getProjectCommon());
+
+$pageTitle = "SWT Bug Triage";
+
+ob_start();
+?>
+<div id="midcolumn">
+<h1>SWT Bug Triage</h1>
 <script type="text/javascript">
 window.onload = function() {
 	if (window.XMLHttpRequest)
@@ -116,6 +109,10 @@ When a comment is made on a bug you are watching:
 <table id="swtComponents" border="1">
 	
 </table>
-</table>
-</body>
-</html>
+</div>
+<?php 
+$html = ob_get_clean();
+
+# Generate the web page
+$App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, $html);
+?>

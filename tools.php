@@ -1,17 +1,11 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
-    <title>SWT Development Tools</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-    <link rel="stylesheet" href="http://dev.eclipse.org/default_style.css" type="text/css">
-    <link rel="stylesheet" href="swt.css" type="text/css">
-    <link rel="shortcut icon" href="http://www.eclipse.org/images/eclipse.ico" type="image/x-icon">
-</head>
-<body bgcolor="#ffffff" text="#000000">
-<table width="635px" class="swtpage">
-<colgroup><col width="125px"><col width="510px"></colgroup>
-<tr><?php include "sidebar.php"; ?>
-<td valign="top" style="padding: 10px"><h1 style="padding: 0; margin: 0; border-bottom: 1px solid #000000;">SWT Development Tools</h1>
+<?php require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/app.class.php");	require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/nav.class.php"); 	require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/menu.class.php"); 	$App 	= new App();	$Nav	= new Nav();	$Menu 	= new Menu();		include($App->getProjectCommon());
+
+$pageTitle = "SWT Development Tools";
+
+ob_start();
+?>
+<div id="midcolumn">
+<h1>SWT Development Tools</h1>
 
 <p>The SWT Development Tools are available from the <a href="updatesite.php">SWT Tools Update Sites</a></p>
 
@@ -29,7 +23,8 @@ For more information on how to generate the JNI code, see <a href="jnigen.php">t
     <ul><li>Extract the zip file into the <code>eclipse/dropins/</code> folder.</li></ul></li>
   <li><b>Sleak plug-in for Eclipse 3.5 or later</b> 
     <ul><li>Available from the <a href="updatesite.php">SWT Tools Update Sites</a>.</li></ul></li>
-</ul><ul>
+</ul>
+<ul>
   <li><b>After installing the Sleak plug-in (above):</b></li>
     <ul>
       <li>Extract the <code>.options</code> file from the <code>eclipse/plugins/org.eclipse.ui_&lt;version&gt;.jar</code> archive to the <code>eclipse/</code> folder.</li>
@@ -68,6 +63,10 @@ style, layout and parent information.</p>
   </ul>
 </ul>
 
-</table>
-</body>
-</html>
+</div>
+<?php 
+$html = ob_get_clean();
+
+# Generate the web page
+$App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, $html);
+?>

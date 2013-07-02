@@ -1,23 +1,16 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
-    <title>SWT Documentation</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-    <link rel="stylesheet" href="http://dev.eclipse.org/default_style.css" type="text/css">
-    <link rel="stylesheet" href="swt.css" type="text/css">
-    <link rel="shortcut icon" href="http://www.eclipse.org/images/eclipse.ico" type="image/x-icon">
-</head>
-<body bgcolor="#ffffff" text="#000000">
-<table width="635px" class="swtpage">
-<colgroup><col width="125px"><col width="510px"></colgroup>
-<tr><?php include "sidebar.php"; ?>
-<td valign="top" style="padding: 10px"><h1 style="padding: 0; margin: 0; border-bottom: 1px solid #000000;">SWT Documentation</h1>
+<?php require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/app.class.php");	require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/nav.class.php"); 	require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/menu.class.php"); 	$App 	= new App();	$Nav	= new Nav();	$Menu 	= new Menu();		include($App->getProjectCommon());
+
+$pageTitle = "SWT Documentation";
+
+ob_start();
+?>
+<div id="midcolumn">
+<h1>SWT Documentation</h1>
 
 <p>This page contains links to books, tutorials, and articles about SWT.</p>
 
-<table width="100%">
-<tr><th bgcolor="#0080c0" align="left" style="padding: 2px;"><font color="#ffffff">SWT in Books</font>
-</table>
+<div class="homeitem">
+<h2>SWT in Books</h2>
 
 <p>SWT is in print in the following books.</p>
 
@@ -44,10 +37,10 @@
        <em>"Eclipe"</em></a> and <a href="http://safari.informit.com/0596007108">
        <em>"Eclipse Cookbook"</em></a> by Steve Holzner</li>
 </ul>
+</div>
 
-<table width="100%">
-<tr><th bgcolor="#0080c0" align="left" style="padding: 2px;"><font color="#ffffff">SWT Documentation Inside Eclipse</font>
-</table>
+<div class="homeitem">
+<h2>SWT Documentation Inside Eclipse</h2>
 
 <p>The Eclipse Help system contains good solid documentation for SWT in
 the <em>Platform Plug-in Developer Guide</em>. To get there in Eclipse, select
@@ -61,10 +54,10 @@ the <em>Platform Plug-in Developer Guide</em>. To get there in Eclipse, select
   <li>Reference: API Reference: org.eclipse.swt.* (javadoc for each package)</li>
   <li>Examples Guide: Standard Widget Toolkit</li>
 </ul>
+</div>
 
-<table width="100%">
-<tr><th bgcolor="#0080c0" align="left" style="padding: 2px;"><font color="#ffffff">SWT Online Documentation</font>
-</table>
+<div class="homeitem">
+<h2>SWT Online Documentation</h2>
 
 <p>In addition to reading SWT documentation inside Eclipse, you can read it online here:</p>
   <ul>
@@ -74,10 +67,10 @@ the <em>Platform Plug-in Developer Guide</em>. To get there in Eclipse, select
 	<li><a href="javadoc.php">Online javadoc</a></li>
 	<li><a href="http://www.eclipse.org/documentation/">Older versions of the Eclipse documentation</a></li>
   </ul>
+</div>
 
-<table width="100%">
-<tr><th bgcolor="#0080c0" align="left" style="padding: 2px;"><font color="#ffffff">SWT Articles at eclipse.org and eclipse.org/swt</font>
-</table>
+<div class="homeitem">
+<h2>SWT Articles at eclipse.org and eclipse.org/swt</h2>
 
 <h4>Articles at eclipse.org:</h4>
 
@@ -98,10 +91,10 @@ the <em>Platform Plug-in Developer Guide</em>. To get there in Eclipse, select
 	<li><a href="opengl/">Using OpenGL with SWT 3.2</a></li>
 	<li><a href="fixbugs.php">How to fix a bug in SWT</a></li>
   </ul>
+</div>
 
-<table width="100%">
-<tr><th bgcolor="#0080c0" align="left" style="padding: 2px;"><font color="#ffffff">More Articles about SWT</font>
-</table>
+<div class="homeitem">
+<h2>More Articles about SWT</h2>
 
 <p>External articles, interviews in online journals:</p>
 
@@ -124,10 +117,10 @@ the <em>Platform Plug-in Developer Guide</em>. To get there in Eclipse, select
     <li><a href="http://www.ibm.com/developerworks/views/opensource/libraryview.jsp?search_by=eclipse+game+plug-in&ca=dgr-eclipse-1">Create an Eclipse Game Plug-in</a> (4 parts)</li>
   </ul>
 </ul>
+</div>
 
-<table width="100%">
-<tr><th bgcolor="#0080c0" align="left" style="padding: 2px;"><font color="#ffffff">SWT Online Tutorials</font>
-</table>
+<div class="homeitem">
+<h2>SWT Online Tutorials</h2>
 
 <p>There have been a few tutorials posted about SWT that you may find useful:</p>
 
@@ -146,7 +139,12 @@ the <em>Platform Plug-in Developer Guide</em>. To get there in Eclipse, select
 	
 		<p>Adapted from "SWT and JFace", a No Fluff Just Stuff 2004 presentation.</p>
 </ul>
+</div>
 
-</table>
-</body>
-</html>
+</div>
+<?php 
+$html = ob_get_clean();
+
+# Generate the web page
+$App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, $html);
+?>

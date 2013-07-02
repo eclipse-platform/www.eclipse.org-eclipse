@@ -1,18 +1,11 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html>
-<head>
-    <title>The SWT FAQ</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-    <link rel="stylesheet" href="http://dev.eclipse.org/default_style.css" type="text/css">
-    <link rel="stylesheet" href="swt.css" type="text/css">
-    <link rel="shortcut icon" href="http://www.eclipse.org/images/eclipse.ico" type="image/x-icon">
-    <style type="text/css"> dt { padding-top: 20px; padding-bottom: 5px; } </style>
-</head>
-<body bgcolor="#ffffff" text="#000000">
-<table width="825px" class="swtpage">
-<colgroup><col width="125px"><col width="700px"></colgroup>
-<tr><?php include "sidebar.php"; ?>
-<td valign="top" style="padding: 10px"><h1 style="padding: 0; margin: 0; border-bottom: 1px solid #000000;">The SWT FAQ</h1>
+<?php require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/app.class.php");	require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/nav.class.php"); 	require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/menu.class.php"); 	$App 	= new App();	$Nav	= new Nav();	$Menu 	= new Menu();		include($App->getProjectCommon());
+
+$pageTitle = "The SWT FAQ";
+
+ob_start();
+?>
+<div id="midcolumn">
+<h1>The SWT FAQ</h1>
 
 <p>If you have questions you believe should go in here, please let us know on
 the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT developer mailing list</a>.</p>
@@ -205,7 +198,7 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
   </dd>
 
   <dt><strong><a name="swtsource">Q: Where do I find the SWT source?</a></strong>
-  <dd>A: SWT's source can be retrieved directly from GIT as described in <a href="http://www.eclipse.org/swt/git.php">Using SWT from GIT</a>.  It's also included
+  <dd>A: SWT's source can be retrieved directly from GIT as described in <a href="/swt/git.php">Using SWT from GIT</a>.  It's also included
       in eclipse as follows:
       <ul>
         <li>eclipse 3.4 and newer: <code>plugins/org.eclipse.swt.<em>&lt;ws&gt;</em>.<em>&lt;os&gt;</em>.<em>&lt;arch&gt;</em>.source_<em>X.X.X.&lt;version&gt;</em>.jar</code></li>
@@ -217,7 +210,7 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
   </dt>
   <dd>A: The SWT jar can be built from the eclipse GIT repository using an Ant task:
     <ol>
-      <li> Retrieve SWT directly from GIT as described in <a href="http://www.eclipse.org/swt/git.php">Using SWT from GIT</a>
+      <li> Retrieve SWT directly from GIT as described in <a href="/swt/git.php">Using SWT from GIT</a>
       <li>Load the projects <strong>org.eclipse.swt</strong> and <strong>org.eclipse.swt.</strong><em>WS.OS.ARCH</em> where <em>WS.OS.ARCH</em> are the names of the
         windowing system, operating system and architecture of interest, respectively.  For example, <strong>org.eclipse.swt.gtk.linux.x86</strong>.
       <li>In the project <strong>org.eclipse.swt.</strong><em>WS.OS.ARCH</em>, locate the file <strong>build.xml</strong>.  This is an Ant script.
@@ -233,7 +226,7 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
   </dt>
   <dd>A: The SWT Eclipse plug-in can be built (excluding the signing of the jar) with the steps below.
     <ol>
-      <li> Retrieve SWT directly from GIT as described in <a href="http://www.eclipse.org/swt/git.php">Using SWT from GIT</a>
+      <li> Retrieve SWT directly from GIT as described in <a href="/swt/git.php">Using SWT from GIT</a>
       <li> Load the projects org.eclipse.swt and org.eclipse.swt.WS.OS.ARCH where WS.OS.ARCH are the names of the windowing system, operating system and architecture of interest, respectively. For example, org.eclipse.swt.gtk.linux.x86. 
       <li>(optional) If you wish to compile SWT in your workspace, in the Navigator view rename the <strong>org.eclipse.swt</strong> project's <strong>.classpath_</strong>WS
         file to <strong>.classpath</strong>.  This is useful if, for instance, you have a patch to apply to the SWT codebase before building the plug-in.
@@ -293,7 +286,7 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
    <strong>NOTE</strong>: These instructions require you to use Eclipse
 
    <ol>
-     <li>Follow <a href="git.php">these instructions</a> to get SWT from GIT.
+     <li>Follow <a href="/swt/git.php">these instructions</a> to get SWT from GIT.
 
      <li>Compile the project.  This will create a folder called bin under the org.eclipse.swt project.
 
@@ -313,13 +306,13 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
 
   <dt><strong><a name="howaddnatives">Q: How do I add a new native to the SWT JNI libraries for my platform?</a></strong>
   </dt>
-  <dd>A: For the steps to add new natives to the SWT JNI libraries, see <a href="http://www.eclipse.org/swt/jnigen.php">
+  <dd>A: For the steps to add new natives to the SWT JNI libraries, see <a href="/swt/jnigen.php">
   Generating the SWT JNI Code.</a> 
   </dd>
   
   <dt><strong><a name="howaddnativescocoa">Q: How do I add a new native to the SWT JNI libraries for Cocoa?</a></strong>
   </dt>
-  <dd>A: For the steps to add new natives to the SWT Cocoa JNI libraries, see <a href="http://www.eclipse.org/swt/macgen.php">
+  <dd>A: For the steps to add new natives to the SWT Cocoa JNI libraries, see <a href="/swt/macgen.php">
   Generating the SWT PI Code for Cocoa.</a> 
   </dd>
   
@@ -365,7 +358,7 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
   <ol>
     <li>Start Eclipse and retrieve the <code>org.eclipse.swt</code>, <code>org.eclipse.swt.gtk.linux.x86_64</code> and
       <code>org.eclipse.swt.tools</code> projects from dev.eclipse.org (see
-      <a href="http://www.eclipse.org/swt/git.php">How to use SWT from GIT</a>, use <code>.classpath_gtk</code>
+      <a href="/swt/git.php">How to use SWT from GIT</a>, use <code>.classpath_gtk</code>
       as the <code>.classpath</code> file in the <code>org.eclipse.swt</code> project).</li>
     <li><i>Note this is not needed for builds after 4.3 M3 as the code was changed to 64-bit.</i> Convert SWT's Java from its 32-bit form to 64-bit:</li>
     <ul>
@@ -385,7 +378,7 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
   <ol>
     <li>Start Eclipse and retrieve the <code>org.eclipse.swt</code>, <code>org.eclipse.swt.gtk.linux.x86</code> and
       <code>org.eclipse.swt.tools</code> projects from dev.eclipse.org (see
-      <a href="http://www.eclipse.org/swt/git.php">How to use SWT from GIT</a>, use <code>.classpath_gtk</code>
+      <a href="/swt/git.php">How to use SWT from GIT</a>, use <code>.classpath_gtk</code>
       as the <code>.classpath</code> file in the <code>org.eclipse.swt</code> project).</li>
     <li>Convert SWT's Java from its 64-bit form to 32-bit:</li>
     <ul>
@@ -438,7 +431,7 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
       </pre>
 	
       <p>If you want to run a bundled application, take a look at this
-      <a href="http://www.eclipse.org/swt/macosx/">article</a>.</p>
+      <a href="/swt/macosx/">article</a>.</p>
   </dd>
 
   <dt><strong><a name="cocoa32launch">Q: Why do I get an UnsatisfiedLinkError when launching from the 32-bit Cocoa or Carbon port?</a></strong></dt>
@@ -452,7 +445,7 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
   	  64-bit binaries. To force the VM to run in 64-bit mode, use the -d64 option as VM argument in your launch configuration.
   	  
   	  <p>If you are launching with SWT from GIT in your workspace (see
-      <a href="http://www.eclipse.org/swt/git.php">How to use SWT from GIT</a>, use <code>.classpath_cocoa</code>
+      <a href="/swt/git.php">How to use SWT from GIT</a>, use <code>.classpath_cocoa</code>
       as the <code>.classpath</code> file in the <code>org.eclipse.swt</code> project and make sure you have the
       org.eclipse.swt.cocoa.maxosx.x86_64 project in your workspace),
       then you also need to modify the <code>.classpath</code> file as follows:
@@ -464,7 +457,7 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
 
   <dt><strong><a name="javawebstart">Q: How can I deploy my standalone SWT application with Java Web Start?</a></strong></dt>
   <dd>A: For steps that can be used to package and deploy an SWT application with Java Web Start (JWS) see
-    <a href="http://www.eclipse.org/swt/jws/">How to deploy SWT Applications with Java Web Start</a>.  A related article
+    <a href="/swt/jws/">How to deploy SWT Applications with Java Web Start</a>.  A related article
     that describes the deployment of SWT applications with JWS (but does not outline the process of packaging SWT) can be found at
     <a href="http://www-106.ibm.com/developerworks/opensource/library/os-jws/">http://www-106.ibm.com/developerworks/opensource/library/os-jws/</a>.
   </dd>
@@ -1388,7 +1381,7 @@ public class DisplayMozillaVersion {
 
   <dt><strong><a name="howusejavaxpcom">Q: How do I use JavaXPCOM with the Browser?</a></strong></dt>  
   <dd>A: First, ensure that you have all of the requirements listed in
-    <a href="http://www.eclipse.org/swt/faq.php#howusemozilla">How do I explicitly use Mozilla as the Browser's underlying renderer?</a>.
+    <a href="/swt/faq.php#howusemozilla">How do I explicitly use Mozilla as the Browser's underlying renderer?</a>.
     Once these are in place then you can reference JavaXPCOM as follows:
     <p><ul>
       <li>If your application runs as an Eclipse plug-in:
@@ -1675,6 +1668,10 @@ public class DisplayMozillaVersion {
   
     
 </dl>
-</table>
-</body>
-</html>
+</div>
+<?php 
+$html = ob_get_clean();
+
+# Generate the web page
+$App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, $html);
+?>

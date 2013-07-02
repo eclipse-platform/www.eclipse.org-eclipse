@@ -1,39 +1,32 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
-    <title>The SWT Community Page</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-    <link rel="stylesheet" href="http://dev.eclipse.org/default_style.css" type="text/css">
-    <link rel="stylesheet" href="swt.css" type="text/css">
-    <link rel="shortcut icon" href="http://www.eclipse.org/images/eclipse.ico" type="image/x-icon">
-</head>
-<body bgcolor="#ffffff" text="#000000">
-<table width="635px" class="swtpage">
-<colgroup><col width="125px"><col width="510px"></colgroup>
-<tr><?php include "sidebar.php"; ?>
-<td valign="top" style="padding: 10px"><h1 style="padding: 0; margin: 0; border-bottom: 1px solid #000000;">The SWT Community Page</h1>
+<?php require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/app.class.php");	require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/nav.class.php"); 	require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/menu.class.php"); 	$App 	= new App();	$Nav	= new Nav();	$Menu 	= new Menu();		include($App->getProjectCommon());
+
+$pageTitle = "The SWT Community Page";
+
+ob_start();
+?>
+<div id="midcolumn">
+<h1>The SWT Community Page</h1>
 
 <p>This page provides links to additional SWT ports, widgets, applications, and information
 maintained elsewhere in the community.  If you have a project and would like to
 see it listed here, please let us know on the
 <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT developer mailing list</a>.</p>
 
-<table width="100%">
-<tr><th bgcolor="#0080c0" align="left" style="padding: 2px;"><font color="#ffffff">Code and Bug Fixes</font>
-</table>
+<div class="homeitem">
+<h2>Code and Bug Fixes</h2>
 
 <p>Many thanks to the <a href="contributors.txt">people</a> who have
 contributed code and bug fixes to SWT.</p>
+</div>
 
-<table width="100%">
-<tr><th bgcolor="#0080c0" align="left" style="padding: 2px;"><font color="#ffffff">SWT Wiki</font>
-</table>
+<div class="homeitem">
+<h2>SWT Wiki</h2>
 
 <p>The community is welcome to use and contribute to the <a href="http://wiki.eclipse.org/SWT">SWT wiki</a>.</p>
+</div>
 
-<table width="100%">
-<tr><th bgcolor="#0080c0" align="left" style="padding: 2px;"><font color="#ffffff">Ports</font>
-</table>
+<div class="homeitem">
+<h2>Ports</h2>
 
 <p>Ivan Markov is working on a port of SWT to the
 <a href="http://www.fox-toolkit.org/">Fox Widget Toolkit</a>.</p>
@@ -56,10 +49,10 @@ toolkit.</p>
 <ul>
   <li>Homepage: <a href="http://www.dsource.org/projects/dwt">http://www.dsource.org/projects/dwt</a></li>
 </ul>
+</div>
 
-<table width="100%">
-<tr><th bgcolor="#0080c0" align="left" style="padding: 2px;"><font color="#ffffff">Additional Widgets</font>
-</table>
+<div class="homeitem">
+<h2>Additional Widgets</h2>
 
 <ul>
 <li><b><a href="http://www.eclipse.org/nebula/">The Nebula Project</a></b>
@@ -124,10 +117,10 @@ toolkit.</p>
 	<p>Metawidget is a 'smart User Interface widget' that populates itself, at runtime, with UI components to match
 	the properties of your business objects.  SWT is a supported Metawidget front end.</p>
 </ul>
+</div>
 
-<table width="100%">
-<tr><th bgcolor="#0080c0" align="left" style="padding: 2px;"><font color="#ffffff">Some Applications that use SWT</font>
-</table>
+<div class="homeitem">
+<h2>Some Applications that use SWT</h2>
 
 <ul>
 <li><b><a href="http://azureus.sourceforge.net/">Azureus</a></b>
@@ -192,10 +185,10 @@ toolkit.</p>
     It is written in Java and uses SWT as the widget toolkit.</p>
 
 </ul>
+</div>
 
-<table width="100%">
-<tr><th bgcolor="#0080c0" align="left" style="padding: 2px;"><font color="#ffffff">Tutorials</font>
-</table>
+<div class="homeitem">
+<h2>Tutorials</h2>
 
 <ul>	
 <li><b><a href="http://www.cs.umanitoba.ca/~eclipse/">Getting Started with Eclipse and SWT</a></b></li>
@@ -213,7 +206,12 @@ toolkit.</p>
 
 	<p>Adapted from "SWT and JFace", a No Fluff Just Stuff 2004 presentation.</p>
 </ul>
+</div>
 
-</table>
-</body>
-</html>
+</div>
+<?php 
+$html = ob_get_clean();
+
+# Generate the web page
+$App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, $html);
+?>

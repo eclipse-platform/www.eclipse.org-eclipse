@@ -1,20 +1,13 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
-    <title>Using SWT from CVS</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta http-equiv="Content-Style-Type" content="text/css">
-    <link rel="stylesheet" href="http://dev.eclipse.org/default_style.css" type="text/css">
-    <link rel="stylesheet" href="swt.css" type="text/css">
-    <link rel="shortcut icon" href="http://www.eclipse.org/images/eclipse.ico" type="image/x-icon">
-</head>
-<body bgcolor="#ffffff" text="#000000">
-<table width="875px" class="swtpage">
-<colgroup><col width="125px"><col width="750px"></colgroup>
-<tr><?php include "sidebar.php"; ?>
-<td valign="top" style="padding: 10px"><h1 style="padding: 0; margin: 0; border-bottom: 1px solid #000000;">Using SWT from CVS</h1>
+<?php require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/app.class.php");	require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/nav.class.php"); 	require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/menu.class.php"); 	$App 	= new App();	$Nav	= new Nav();	$Menu 	= new Menu();		include($App->getProjectCommon());
 
-<h1>*** NOTE: SWT has migrated its source to <a href="http://www.eclipse.org/swt/git.php">GIT</a>. ***</h1>
+$pageTitle = "Using SWT from CVS";
+
+ob_start();
+?>
+<div id="midcolumn">
+<h1>Using SWT from CVS</h1>
+
+<h1>*** NOTE: SWT has migrated its source to <a href="git.php">GIT</a>. ***</h1>
 
 <p>SWT lives in Eclipse CVS at <a href="http://dev.eclipse.org/viewcvs/">dev.eclipse.org</a>.</p>
 
@@ -72,7 +65,7 @@ to help you get set up.<p>
         idea to clean the projects that depend on it to make sure
         everyone is cool.
         <br>(Note that if you are building for a 64-bit platform, there is an extra step needed.
-        Please see <a href="http://www.eclipse.org/swt/faq.php#gtk64">this FAQ</a> for details).
+        Please see <a href="faq.php#gtk64">this FAQ</a> for details).
 
         <center><p><img src="images/swt-clean.png" alt="Using Project &gt; Clean... to recompile"></p></center>
 
@@ -90,6 +83,10 @@ to help you get set up.<p>
     
 <p>And there you go!</p>
 
-</table>
-</body>
-</html>
+</div>
+<?php 
+$html = ob_get_clean();
+
+# Generate the web page
+$App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, $html);
+?>
