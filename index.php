@@ -29,14 +29,14 @@ on which it is implemented.</p>
 			<table width="100%">
 			<tr><td>
 			<b><font size="+1">Stable</font></b><br>
-			<a href="http://download.eclipse.org/eclipse/downloads/drops4/R-4.2.2-201302041200/download.php?dropFile=swt-4.2.2-win32-win32-x86.zip">Windows</a>,
-			<a href="http://download.eclipse.org/eclipse/downloads/drops4/R-4.2.2-201302041200/download.php?dropFile=swt-4.2.2-gtk-linux-x86.zip">Linux</a>,
+			<a href="http://download.eclipse.org/eclipse/downloads/drops4/R-4.3-201306052000/download.php?dropFile=swt-4.3-win32-win32-x86.zip">Windows</a>,
+			<a href="http://download.eclipse.org/eclipse/downloads/drops4/R-4.3-201306052000/download.php?dropFile=swt-4.3-gtk-linux-x86.zip">Linux</a>,
 			<span style="white-space: nowrap;">
-			<a href="http://download.eclipse.org/eclipse/downloads/drops4/R-4.2.2-201302041200/download.php?dropFile=swt-4.2.2-cocoa-macosx.zip">OS X</a>,</span>
-			<a href="http://download.eclipse.org/eclipse/downloads/drops4/R-4.2.2-201302041200/#SWT" target="_top">more...</a><br>
-			<small>4.2.2 Final Release - <span style="white-space: nowrap;">6 February 2013</span></small><br>
+			<a href="http://download.eclipse.org/eclipse/downloads/drops4/R-4.3-201306052000/download.php?dropFile=swt-4.3-cocoa-macosx.zip">OS X</a>,</span>
+			<a href="http://download.eclipse.org/eclipse/downloads/drops4/R-4.3-201306052000/#SWT" target="_top">more...</a><br>
+			<small>4.3 Final Release - <span style="white-space: nowrap;">5 June 2013</span></small><br>
 			<ul>
-				<li><a href="R4_2/new_and_noteworthy.html">New and Noteworthy</a></li>
+				<li><a href="R4_3/new_and_noteworthy.html">New and Noteworthy</a></li>
 				<li><a href="language.php">Language Pack</a></li>
 			</ul>
 			</table>
