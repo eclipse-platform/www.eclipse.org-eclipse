@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Language" content="en-us" />
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <style type="text/css">
+p, table, td, th {  font-family: verdana, arial, helvetica, geneva; font-size: 10pt}
+pre {  font-family: "Courier New", Courier, mono; font-size: 10pt}
+h2 { font-family: verdana, arial, helvetica, geneva; font-size: 18pt; font-weight: bold ; line-height: 14px}
+code {  font-family: "Courier New", Courier, mono; font-size: 10pt}
+sup {  font-family: verdana, arial, helvetica, geneva; font-size: 10px}
+h3 {  font-family: verdana, arial, helvetica, geneva; font-size: 14pt; font-weight: bold}
+li {  font-family: verdana, arial, helvetica, geneva; font-size: 10pt}
+h1 {  font-family: verdana, arial, helvetica, geneva; font-size: 24pt; font-weight: bold}
+body {  font-family: verdana, arial, helvetica, geneva; font-size: 10pt; margin-top: 5mm; margin-left: 3mm}
+.indextop { font-size: x-large; font-family: verdana, arial, helvetica, sans-serif; font-weight: bold}
+.indexsub { font-size: xx-small; font-family: verdana, arial, helvetica, sans-serif; color: #8080FF}
+a.bar:link {  text-decoration: none; color: #FFFFFF}
+a.bar:visited {  color: #FFFFFF; text-decoration: none}
+a.bar:hover {  color: #FFFFFF; text-decoration: underline}
+a.bar {  color: #FFFFFF}
+
+.section {font-size: 20px; font-weight: bold;}
+table.news td {border-top: solid thin black;}
+table.news tr {vertical-align: top;}
+table.news tr td.title {vertical-align: top; width: 30%; font-weight: bold;}
+table.news tr td.content {vertical-align: top; width: 70%;}
+  </style>
+<title>Eclipse &quot;New and Noteworthy&quot; Template</title>
+</head>
+
+<body>
+<h1><font face="Verdana">Eclipse 4.3 (Kepler) - New and Noteworthy in SWT</font></h1>
+
+
+<table class="news" border="0" cellpadding="10" cellspacing="0" width="80%" summary="news entries">
+
+  <tr id="gtk3">
+    <td class="title">SWT for GTK3</td>
+    <td class="content">
+      32-bit and 64-bit GTK3 have joined the lineup of supported configurations for which SWT and Eclipse are routinely built. This implementation is currently early access. Everyone is encouraged to download and test these new builds, and to log bugs in <a href="https://bugs.eclipse.org/bugs/enter_bug.cgi?product=Platform">bugzilla</a>.
+      <p>Note to load the SWT GTK3 libraries, you must set an environment variable SWT_GTK3 prior to starting Eclipse. (ex. export SWT_GTK3=1)</p>
+      <p><img src="images/gtk3.png" alt="GTK3 Control Example"></p>  
+  </td>
+  </tr>
+  
+  
+ <tr id="xulrunner64"><td class="title">XULRunner on 64-bit Windows</td><td class="content">The browser widget now supports the embedding of XULRunner on Windows x86_64.</td></tr> 
+
+  <tr id="linkColor">
+    <td class="title">BIDI Text Direction</td>
+    <td class="content">
+     New API has been added to allow text direction to be set independent of the widget orientation. For more info see <a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet364.java">Snippet 364</a>.
+     <p><img src="images/bidi.png" alt=""/></p>
+    </td>
+  </tr>
+
+  <tr id="bidi">
+    <td class="title">New SWT color constant for hyperlinks</td>
+    <td class="content">
+     A new constant (SWT_COLOR_LINK_FOREGROUND) has been added that will return the native color of hyperlinks on all platforms.
+     <p><img src="images/linkColor.png" alt=""/></p>
+    </td>
+
+  <tr>
+    <td colspan="2"/>
+  </tr>
+  
+</table>
+</body>
+</html>
