@@ -45,9 +45,9 @@ on which it is implemented.</p>
 			<table width="100%">
 				<tr><td>
 				<b><font size="+1">Development</font></b><br>
-				<a href="http://download.eclipse.org/eclipse/downloads/">4.3 Integration Builds</a>
+				<a href="http://download.eclipse.org/eclipse/downloads/">4.4 Integration Builds</a>
 				<span style="white-space: nowrap;">
-				<small>For links to SWT Binary and Source for all platforms,<br>select current 4.3 Integration Build then scroll to bottom of page.<br></small></span>
+				<small>For links to SWT Binary and Source for all platforms,<br>select current 4.4 Integration Build then scroll to bottom of page.<br></small></span>
 				</td></tr>
 			</table>
 		</td>
