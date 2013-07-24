@@ -95,8 +95,8 @@ ob_start();
 
 	<p>(NOTE: these instructions will only work for Eclipse 3.3 and newer) To run the ControlExample or CustomControlExample standalone:</p>
 	<ol>
-		<li>Go to the Eclipse downloads page at <a href="http://download.eclipse.org/eclipse/downloads/index.php">
-			http://download.eclipse.org/eclipse/downloads/index.php</a>.</li>
+		<li>Go to the Eclipse downloads page at <a href="http://download.eclipse.org/eclipse/downloads/">
+			http://download.eclipse.org/eclipse/downloads/</a>.</li>
 		<li>Click on the Eclipse build that you would like examples for
 			(i.e. the Eclipse/SWT build that you are running; typically the latest Stable Build).</li>
 		<li>Scroll down until you see "Example Plug-ins", download the .zip for your platform, and extract it to your local machine.</li>
