@@ -48,6 +48,9 @@ on which it is implemented.</p>
 				<a href="http://download.eclipse.org/eclipse/downloads/">4.4 Integration Builds</a>
 				<span style="white-space: nowrap;">
 				<small>For links to SWT Binary and Source for all platforms,<br>select current 4.4 Integration Build then scroll to bottom of page.<br></small></span>
+				<ul>
+					<li><a href="R4_4/new_and_noteworthy.html">4.4 New and Noteworthy</a></li>
+				</ul>
 				</td></tr>
 			</table>
 		</td>
