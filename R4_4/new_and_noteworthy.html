@@ -36,6 +36,7 @@ table.news tr td.content {vertical-align: top; width: 70%;}
 
 <ul>
 	<li><a href="#m2">Milestone M2</a></li>
+	<li><a href="#m3">Milestone M3</a></li>
 </ul>
 
 
@@ -55,6 +56,29 @@ table.news tr td.content {vertical-align: top; width: 70%;}
 	  <a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.examples.watchdog">
       Watchdog</a> plugin in SWT examples.
    	</td>
+  </tr>
+  
+  <tr>
+    <td id="m3" class="section" colspan="2"><h2>Milestone M3</h2></td>
+  </tr>
+
+  <tr id="gtk3-as-default"> 
+    <td class="title">GTK+ 3 used by default instead of GTK+ 2</td>
+    <td class="content">
+      SWT and Eclipse will use the GTK+ 3 libraries by default on all Linux/Unix platforms,
+      whenever GTK+ 3 is installed and available. 
+      <p>The GTK+ 3 port of SWT is still early access and you can force Eclipse to use the 
+      more stable GTK+2 port by setting the environment variable SWT_GTK3 to 0, if needed.
+      (For example: export SWT_GTK3=0) </p>
+    </td>
+  </tr>
+  
+  <tr id="styled-text-api"> 
+    <td class="title">Added new API in StyledText to get text selection state</td>
+    <td class="content">
+      <code>StyledText.isTextSelected()</code> can be used to quickly determine whether any text
+      in the widget is selected or not.
+    </td>
   </tr>
 
   <tr>
