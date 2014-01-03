@@ -1098,6 +1098,7 @@ the SWT.CENTER style when creating a composite.
       <li>Eclipse 3.8.x: Mozilla 1.4 GTK2 - 1.7.x GTK2, XULRunner 1.8.x - 1.9.x, 3.6.x and 10.x (but <em>not</em> 2.x nor 4.x - 9.x), WebKitGTK+ 1.2.x and newer</li>
       <li>Eclipse 4.2: Mozilla 1.4 GTK2 - 1.7.x GTK2, XULRunner 1.8.x - 1.9.x, 3.6.x and 10.x (but <em>not</em> 2.x nor 4.x - 9.x), WebKitGTK+ 1.2.x - 1.8.x</li>
       <li>Eclipse 4.2.2 and newer: Mozilla 1.4 GTK2 - 1.7.x GTK2, XULRunner 1.8.x - 1.9.x, 3.6.x and 10.x (but <em>not</em> 2.x nor 4.x - 9.x), WebKitGTK+ 1.2.x and newer</li>
+      <li>Eclipse 4.4 and newer: Mozilla 1.4 GTK2 - 1.7.x GTK2, XULRunner 1.8.x - 1.9.x, 3.6.x, 10.x and 24.x (but <em>not</em> 2.x nor other unlisted versions), WebKitGTK+ 1.2.x and newer</li>
       <li>Also note that a Firefox release whose contained Gecko version correlates with the Mozilla versions above can also be used
       with Eclipse 3.1 and newer (Linux only), provided that it has been compiled with linkable Gecko libraries.  It is important to  
       note that Firefox downloads from mozilla.org do <em>not</em> satisfy this criteria, but Firefox installations that are
@@ -1178,14 +1179,14 @@ the SWT.CENTER style when creating a composite.
 
   <dt><strong><a name="howusemozilla">Q: How do I explicitly use Mozilla as the Browser's underlying renderer?</a></strong></dt>
   <dd>A: A Browser can be created with style <code>SWT.MOZILLA</code> to specify that its renderer must be Mozilla-based (<em>@since 3.3</em>).  The runtime requirements for
-      using Mozilla-based Browsers are listed below.  Note that failure to meet these runtime requirements will cause the Browser instantiation to fail.
+      using Mozilla-based Browsers in Eclipse/SWT 4.4 and newer are listed below.  Note that failure to meet these runtime requirements will cause the Browser instantiation to fail.
     <ul>
       <li>Runtime Platform:
         <ul>
-          <li>Windows (x86): Any XULRunner release with version 1.8.0.x - 3.6.x or 10.x
-          <li>Windows (x86_64): (@since 4.3) Any XULRunner release with version 1.9.2.x - 3.6.x or 10.x, and the <a href="http://www.microsoft.com/en-us/download/details.aspx?id=13523">Visual C++ 2010 runtime</a> must be installed
-          <li>OS X (32-bit): Any XULRunner release with version 1.8.1.2 - 3.6.x or 10.x, and the JRE must be "Java for Mac OS X 10.4, Release 5" or newer
-          <li>OS X (x86_64): (@since 3.6) Any XULRunner release with version 1.8.1.2 - 3.6.x or 10.x
+          <li>Windows (x86): Any XULRunner release with version 1.8.0.x - 3.6.x, 10.x or 24.x
+          <li>Windows (x86_64): (@since 4.3) Any XULRunner release with version 1.9.2.x - 3.6.x, 10.x or 24.x, and the <a href="http://www.microsoft.com/en-us/download/details.aspx?id=13523">Visual C++ 2010 runtime</a> must be installed
+          <li>OS X (32-bit): Any XULRunner release with version 1.8.1.2 - 3.6.x, 10.x or 24.x, and the JRE must be "Java for Mac OS X 10.4, Release 5" or newer
+          <li>OS X (x86_64): (@since 3.6) Any XULRunner release with version 1.8.1.2 - 3.6.x, 10.x or 24.x
           <li>Linux and Solaris: See <a href="#browserlinux">What do I need to run the SWT Browser inside Eclipse on Linux?</a>
         </ul>
       </li>
