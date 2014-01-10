@@ -396,13 +396,14 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
   <dt><strong><a name="gtkstartup">Q: Which GTK version do I need to run SWT?</a></strong></dt>
   <dd>A: SWT requires the following GTK+ versions (or newer) to be installed:
     <ul>
+      <li>Eclipse/SWT 4.3.x and newer: GTK+ 2.10.0 and its dependencies</li>
       <li>Eclipse/SWT 3.8.x and newer: GTK+ 2.6.0 and its dependencies</li>
       <li>Eclipse/SWT 3.6.x - 3.7.x: GTK+ 2.4.1 and its dependencies</li>
       <li>Eclipse/SWT 3.0.x - 3.5.x: GTK+ 2.2.1 and its dependencies</li>
       <li>Eclipse/SWT 2.1.x: GTK+ 2.0.6 and its dependencies</li>
     </ul>
     Note that Eclipse/SWT 4.3.x includes early access support for GTK+ 3.x.  To use it on a Linux distro with GTK+ 3.x
-    libraries installed, set Linux environment varable SWT_GTK3=1 before launching your application.
+    libraries installed, set Linux environment variable SWT_GTK3=1 before launching your application.
     <p>
     You can determine which version(s) of GTK you have installed with <tt>rpm -q gtk2</tt> or <tt>rpm -q gtk3</tt>.
     </p>
@@ -1098,7 +1099,8 @@ the SWT.CENTER style when creating a composite.
       <li>Eclipse 3.8.x: Mozilla 1.4 GTK2 - 1.7.x GTK2, XULRunner 1.8.x - 1.9.x, 3.6.x and 10.x (but <em>not</em> 2.x nor 4.x - 9.x), WebKitGTK+ 1.2.x and newer</li>
       <li>Eclipse 4.2: Mozilla 1.4 GTK2 - 1.7.x GTK2, XULRunner 1.8.x - 1.9.x, 3.6.x and 10.x (but <em>not</em> 2.x nor 4.x - 9.x), WebKitGTK+ 1.2.x - 1.8.x</li>
       <li>Eclipse 4.2.2 and newer: Mozilla 1.4 GTK2 - 1.7.x GTK2, XULRunner 1.8.x - 1.9.x, 3.6.x and 10.x (but <em>not</em> 2.x nor 4.x - 9.x), WebKitGTK+ 1.2.x and newer</li>
-      <li>Eclipse 4.4 and newer: Mozilla 1.4 GTK2 - 1.7.x GTK2, XULRunner 1.8.x - 1.9.x, 3.6.x, 10.x and 24.x (but <em>not</em> 2.x nor other unlisted versions), WebKitGTK+ 1.2.x and newer</li>
+      <li>Eclipse 4.4 and newer: Mozilla 1.4 GTK2 - 1.7.x GTK2, XULRunner 1.8.x - 1.9.x, 3.6.x, 10.x and 24.x (but <em>not</em> 2.x nor other unlisted versions), WebKitGTK+ 1.2.x and newer 
+      (Eclipse 4.4 and newer uses GTK 3 by default and XULRunner cannot be used in this case as it is not ported to GTK 3 yet)</li>
       <li>Also note that a Firefox release whose contained Gecko version correlates with the Mozilla versions above can also be used
       with Eclipse 3.1 and newer (Linux only), provided that it has been compiled with linkable Gecko libraries.  It is important to  
       note that Firefox downloads from mozilla.org do <em>not</em> satisfy this criteria, but Firefox installations that are
