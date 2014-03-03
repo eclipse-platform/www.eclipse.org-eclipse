@@ -1186,9 +1186,9 @@ the SWT.CENTER style when creating a composite.
       <li>Runtime Platform:
         <ul>
           <li>Windows (x86): Any XULRunner release with version 1.8.0.x - 3.6.x, 10.x or 24.x
-          <li>Windows (x86_64): (@since 4.3) Any XULRunner release with version 1.9.2.x - 3.6.x, 10.x or 24.x, and the <a href="http://www.microsoft.com/en-us/download/details.aspx?id=13523">Visual C++ 2010 runtime</a> must be installed
+          <li>Windows (x86_64): Any XULRunner release with version 1.9.2.x - 3.6.x, 10.x or 24.x, and the <a href="http://www.microsoft.com/en-us/download/details.aspx?id=13523">Visual C++ 2010 runtime</a> must be installed
           <li>OS X (32-bit): Any XULRunner release with version 1.8.1.2 - 3.6.x, 10.x or 24.x, and the JRE must be "Java for Mac OS X 10.4, Release 5" or newer
-          <li>OS X (x86_64): (@since 3.6) Any XULRunner release with version 1.8.1.2 - 3.6.x, 10.x or 24.x
+          <li>OS X (x86_64): Any XULRunner release with version 1.8.1.2 - 3.6.x, 10.x or 24.x
           <li>Linux and Solaris: See <a href="#browserlinux">What do I need to run the SWT Browser inside Eclipse on Linux?</a>
         </ul>
       </li>
