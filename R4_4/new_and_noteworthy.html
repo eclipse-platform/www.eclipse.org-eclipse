@@ -38,6 +38,8 @@ table.news tr td.content {vertical-align: top; width: 70%;}
 	<li><a href="#m2">Milestone M2</a></li>
 	<li><a href="#m3">Milestone M3</a></li>
 	<li><a href="#m4">Milestone M4</a></li>
+	<li><a href="#m5">Milestone M5</a></li>
+	<li><a href="#m6">Milestone M5</a></li>
 </ul>
 
 
@@ -50,10 +52,10 @@ table.news tr td.content {vertical-align: top; width: 70%;}
   <tr id="timing-api">
   	<td class="title">Added UI Timing API</td>
     <td class="content">
-      Added 2 new events: SWT.PreEvent and SWT.PostEvent which are sent before and after 
-      all events and async runnables. It is possible to use these two events to measure 
-      the time spent on processing any events. This can be useful for detecting slow 
-      event listeners. For an example of how this can be used, take a look at the 
+      SWT has added two new events: <code>SWT.PreEvent</code> and <code>SWT.PostEvent</code> which are sent before and after 
+      all events and async runnables. These events can be used to measure the time spent on processing any events. This can be 
+      useful for detecting slow event listeners. Because of its pervasive effect on all events, this listener should be used 
+      with extreme caution. For an example of how this can be used, take a look at the 
 	  <a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.examples.watchdog">
       Watchdog</a> plugin in SWT examples.
    	</td>
@@ -89,7 +91,56 @@ table.news tr td.content {vertical-align: top; width: 70%;}
   <tr id="swt-needs-1.5"> 
     <td class="title">SWT requires JRE 1.5</td>
     <td class="content">
-      SWT project has moved to Java 1.5 compliance level. SWT applications will now require JRE 1.5 or higher to run.
+      The SWT project has moved to Java 1.5 compliance level. SWT applications will now require JRE 1.5 or higher to run.
+    </td>
+  </tr>
+
+  <tr>
+    <td id="m5" class="section" colspan="2"><h2>Milestone M5</h2></td>
+  </tr>
+
+  <tr id="swt-xulrunner24"> 
+    <td class="title">SWT Browser now supports XULRunner 24.x</td>
+    <td class="content">
+        An SWT Browser created with style <code>SWT.MOZILLA</code> can now be used with the XULRunner 24.x runtime.
+    </td>
+  </tr>
+  
+  <tr id="sleep-monitor-api"> 
+    <td class="title">Added API for sleep monitoring</td>
+    <td class="content">
+        SWT has added two new events, <code>SWT.Sleep</code> and <code>SWT.Wakeup</code>,
+        which are sent before the <code>Display</code> event loop goes into sleep and after
+        it wakes up from sleep respectively. These events can e.g. be used to monitor the duration
+        of sleep time in SWT applications.
+    </td>
+  </tr>
+
+  <tr>
+    <td id="m6" class="section" colspan="2"><h2>Milestone M6</h2></td>
+  </tr>
+  
+  <tr id="swt-webkit">
+    <td class="title">Experimental support for WebKit2 added to the SWT Browser</td>
+    <td class="content">
+      The SWT Browser now has preliminary support for WebKit2. To try it out, create a browser
+      widget with style <code>SWT.WEBKIT</code>, and set the environment variable SWT_WEBKIT2
+      to 1. This is only supported with GTK+ 3.x; if GTK+ 3 is disabled the browser will 
+      fallback to WebKit1.
+    </td>
+  </tr>
+
+  <tr id="bidi-segments">
+    <td class="title">BIDI segments support for Combo on Windows</td>
+    <td class="content">
+      The <code>Combo</code> widget now supports the same <code>SegmentListener</code> API as <code>Text</code>.
+      This allows an application to specify segment boundaries and Unicode Control Characters to use in the segment boundaries.
+      <p>
+      <a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet332.java"> 
+      Snippet332</a> shows how to accomplish RTL override in a Combo.
+      </p>
+      <p><img src="images/combo-bidi-segments.png" alt=""/></p>
+      <p>JFace clients can use <code>BidiUtils#applyBidiProcessing(...)</code> to set pre-defined text types.</p>
     </td>
   </tr>
 
