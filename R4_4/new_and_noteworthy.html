@@ -40,6 +40,7 @@ table.news tr td.content {vertical-align: top; width: 70%;}
 	<li><a href="#m4">Milestone M4</a></li>
 	<li><a href="#m5">Milestone M5</a></li>
 	<li><a href="#m6">Milestone M6</a></li>
+	<li><a href="#m7">Milestone M7</a></li>
 </ul>
 
 
@@ -141,6 +142,34 @@ table.news tr td.content {vertical-align: top; width: 70%;}
       </p>
       <p><img src="images/combo-bidi-segments.png" alt=""/></p>
       <p>JFace clients can use <code>BidiUtils#applyBidiProcessing(...)</code> to set pre-defined text types.</p>
+    </td>
+  </tr>
+
+  <tr>
+    <td id="m7" class="section" colspan="2"><h2>Milestone M7</h2></td>
+  </tr>
+  
+  <tr id="styledtext-bidi">
+    <td class="title">Set text direction for the <code>StyledText</code> widget on Windows</td>
+    <td class="content">
+      The <code>StyledText</code> widget now supports setting the text direction via the
+      <code>setTextDirection(int)</code> API on the Windows platform. The <code>setTextDirection
+      (int)</code> and <code>getTextDirection ()</code> APIs are also added to <code>TextLayout</code>
+      (implemented only on Windows currently).
+    </td>
+  </tr>
+  
+  <tr id="windows-taskbar-grouping">
+    <td class="title">SWT applications will not be grouped together in the Windows taskbar by default</td>
+    <td class="content">
+      SWT does not initialize the <b>AppUserModelID</b> (which is used by Windows for taskbar grouping)
+      to "SWT" by default anymore. SWT applications which desire to be grouped together in the
+      Windows taskbar should set an appropriate application name before creating the
+      <code>Display</code> object as shown below:
+      <p>
+      <code>Display.setAppName("APP_NAME"); // APP_NAME will used as AppUserModelID</code><br>
+      <code>Display display = new Display ();</code>
+      </p>
     </td>
   </tr>
 
