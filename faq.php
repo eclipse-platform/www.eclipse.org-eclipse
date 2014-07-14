@@ -396,7 +396,7 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
   <dt><strong><a name="gtkstartup">Q: Which GTK version do I need to run SWT?</a></strong></dt>
   <dd>A: SWT requires the following GTK+ versions (or newer) to be installed:
     <ul>
-      <li>Eclipse/SWT 4.4.x and newer: GTK+ 2.10.0 and its dependencies (GTK+ 2) OR GTK+ 3.0.0 and its dependencies (GTK+ 3)</li>
+      <li>Eclipse/SWT 4.4.x and newer: GTK+ 2.10.0 and its dependencies (for GTK+ 2) OR GTK+ 3.0.0 and its dependencies (for GTK+ 3)</li>
       <li>Eclipse/SWT 4.3.x and newer: GTK+ 2.10.0 and its dependencies</li>
       <li>Eclipse/SWT 3.8.x and newer: GTK+ 2.6.0 and its dependencies</li>
       <li>Eclipse/SWT 3.6.x - 3.7.x: GTK+ 2.4.1 and its dependencies</li>
@@ -405,6 +405,10 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
     </ul>
     Note that Eclipse/SWT 4.3.x includes early access support for GTK+ 3.x.  To use it on a Linux distro with GTK+ 3.x
     libraries installed, set Linux environment variable SWT_GTK3=1 before launching your application.
+    <p>
+    Starting from Eclipse/SWT 4.4.x, Linux builds come with GTK+ 3 support enabled by default (on GTK+ 3 versions prior to 3.10).
+    You can force Eclipse/SWT to use GTK+ 2 by setting the environment variable SWT_GTK3 to 0, if needed. 
+    </p>
     <p>
     You can determine which version(s) of GTK you have installed with <tt>rpm -q gtk2</tt> or <tt>rpm -q gtk3</tt>.
     </p>
