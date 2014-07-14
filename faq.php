@@ -396,6 +396,7 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
   <dt><strong><a name="gtkstartup">Q: Which GTK version do I need to run SWT?</a></strong></dt>
   <dd>A: SWT requires the following GTK+ versions (or newer) to be installed:
     <ul>
+      <li>Eclipse/SWT 4.4.x and newer: GTK+ 2.10.0 and its dependencies (GTK+ 2) OR GTK+ 3.0.0 and its dependencies (GTK+ 3)</li>
       <li>Eclipse/SWT 4.3.x and newer: GTK+ 2.10.0 and its dependencies</li>
       <li>Eclipse/SWT 3.8.x and newer: GTK+ 2.6.0 and its dependencies</li>
       <li>Eclipse/SWT 3.6.x - 3.7.x: GTK+ 2.4.1 and its dependencies</li>
