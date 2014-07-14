@@ -29,14 +29,14 @@ on which it is implemented.</p>
 			<table width="100%">
 			<tr><td>
 			<b><font size="+1">Stable</font></b><br>
-			<a href="http://download.eclipse.org/eclipse/downloads/drops4/R-4.3.2-201402211700/download.php?dropFile=swt-4.3-win32-win32-x86.zip">Windows</a>,
-			<a href="http://download.eclipse.org/eclipse/downloads/drops4/R-4.3.2-201402211700/download.php?dropFile=swt-4.3-gtk-linux-x86.zip">Linux</a>,
+			<a href="http://download.eclipse.org/eclipse/downloads/drops4/R-4.4-201406061215/download.php?dropFile=swt-4.4-win32-win32-x86.zip">Windows</a>,
+			<a href="http://download.eclipse.org/eclipse/downloads/drops4/R-4.4-201406061215/download.php?dropFile=swt-4.4-gtk-linux-x86.zip">Linux</a>,
 			<span style="white-space: nowrap;">
-			<a href="http://download.eclipse.org/eclipse/downloads/drops4/R-4.3.2-201402211700/download.php?dropFile=swt-4.3.2-cocoa-macosx-x86_64.zip">OS X</a>,</span>
-			<a href="http://download.eclipse.org/eclipse/downloads/drops4/R-4.3.2-201402211700/#SWT" target="_top">more...</a><br>
-			<small>4.3.2 Final Release - <span style="white-space: nowrap;">February 21, 2014</span></small><br>
+			<a href="http://download.eclipse.org/eclipse/downloads/drops4/R-4.4-201406061215/download.php?dropFile=swt-4.4-cocoa-macosx-x86_64.zip">OS X</a>,</span>
+			<a href="http://download.eclipse.org/eclipse/downloads/drops4/R-4.4-201406061215/#SWT" target="_top">more...</a><br>
+			<small>4.4 Final Release - <span style="white-space: nowrap;">June 6, 2014</span></small><br>
 			<ul>
-				<li><a href="R4_3/new_and_noteworthy.html">New and Noteworthy</a></li>
+				<li><a href="R4_4/new_and_noteworthy.html">New and Noteworthy</a></li>
 				<li><a href="language.php">Language Pack</a></li>
 			</ul>
 			</table>
@@ -45,11 +45,11 @@ on which it is implemented.</p>
 			<table width="100%">
 				<tr><td>
 				<b><font size="+1">Development</font></b><br>
-				<a href="http://download.eclipse.org/eclipse/downloads/">4.4 Integration Builds</a>
+				<a href="http://download.eclipse.org/eclipse/downloads/">4.5 Integration Builds</a>
 				<span style="white-space: nowrap;">
-				<small>For links to SWT Binary and Source for all platforms,<br>select current 4.4 Integration Build then scroll to bottom of page.<br></small></span>
+				<small>For links to SWT Binary and Source for all platforms,<br>select current 4.5 Integration Build and then scroll to bottom of page.<br></small></span>
 				<ul>
-					<li><a href="R4_4/new_and_noteworthy.html">4.4 New and Noteworthy</a></li>
+					<li><a href="R4_5/new_and_noteworthy.html">4.5 New and Noteworthy</a></li>
 				</ul>
 				</td></tr>
 			</table>
