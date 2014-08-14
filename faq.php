@@ -1139,7 +1139,12 @@ the SWT.CENTER style when creating a composite.
       </ul>
       <li>Solaris 10 (SPARC)</li>
       <ul>
-        <li>Eclipse 3.5.1 and newer: the Mozilla version that is shipped with the OS in <code>/usr/sfx/lib/</code></li>
+        <li>Eclipse 3.5.1 and newer: the Mozilla version that is shipped with the OS in <code>/usr/sfw/lib/</code></li>
+      </ul>
+      <li>Solaris 11 (SPARC)</li>
+      <ul>
+        <li>Eclipse 4.2 and newer: the Mozilla version 1.7.x GTK2 in <code>/usr/sfw/lib/</code></li>
+        <li>Note that the above version is not installed by default. User needs to either install it using Solaris 10 packages or copy from solaris 10 installation</li>
       </ul>
     </ul>
   </dd>
