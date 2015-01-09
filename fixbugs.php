@@ -10,8 +10,8 @@ ob_start();
 
 <h2>Set up your Java environment:</h2>
 <ol>
-<li>Download and install a Java JRE (SWT only requires a 1.4.x JRE to
-run but you can also use more recent ones).<br>
+<li>Download and install a Java JRE (SWT only requires a 1.5.x JRE to
+run but we suggest using Java 7 to run eclipse).<br>
 </li>
 <li><a href="http://www.eclipse.org/downloads/">Download and install the current Eclipse build.</a>
 (Select the "Eclipse Classic" download.)</li>
