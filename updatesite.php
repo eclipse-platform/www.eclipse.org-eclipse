@@ -18,7 +18,10 @@ branches of SWT.</p>
 </th><th> Update Site URL
 </th></tr>
 <tr>
-<td> <strong>Most recent development build</strong> </td><td>http://www.eclipse.org/swt/updates/4.4</td>
+<td> <strong>4.5 M5 and newer</strong> </td><td>Part of the main Platform P2 repository e.g http://download.eclipse.org/eclipse/updates/4.5 (or newer version)</td>
+</tr>
+<tr>
+<td> <strong>4.4.x releases</strong> </td><td>http://www.eclipse.org/swt/updates/4.4</td>
 </tr>
 <tr>
 <td> <strong>4.3.x releases</strong> </td><td>http://www.eclipse.org/swt/updates/4.3</td>
