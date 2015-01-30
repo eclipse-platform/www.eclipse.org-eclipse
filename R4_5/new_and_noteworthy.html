@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Language" content="en-us" />
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <style type="text/css">
+p, table, td, th {  font-family: verdana, arial, helvetica, geneva; font-size: 10pt}
+pre {  font-family: "Courier New", Courier, mono; font-size: 10pt}
+h2 { font-family: verdana, arial, helvetica, geneva; font-size: 18pt; font-weight: bold ; line-height: 14px}
+code {  font-family: "Courier New", Courier, mono; font-size: 10pt}
+sup {  font-family: verdana, arial, helvetica, geneva; font-size: 10px}
+h3 {  font-family: verdana, arial, helvetica, geneva; font-size: 14pt; font-weight: bold}
+li {  font-family: verdana, arial, helvetica, geneva; font-size: 10pt}
+h1 {  font-family: verdana, arial, helvetica, geneva; font-size: 24pt; font-weight: bold}
+body {  font-family: verdana, arial, helvetica, geneva; font-size: 10pt; margin-top: 5mm; margin-left: 3mm}
+.indextop { font-size: x-large; font-family: verdana, arial, helvetica, sans-serif; font-weight: bold}
+.indexsub { font-size: xx-small; font-family: verdana, arial, helvetica, sans-serif; color: #8080FF}
+a.bar:link {  text-decoration: none; color: #FFFFFF}
+a.bar:visited {  color: #FFFFFF; text-decoration: none}
+a.bar:hover {  color: #FFFFFF; text-decoration: underline}
+a.bar {  color: #FFFFFF}
+
+.section {font-size: 20px; font-weight: bold;}
+table.news td {border-top: solid thin black;}
+table.news tr {vertical-align: top;}
+table.news tr td.title {vertical-align: top; width: 30%; font-weight: bold;}
+table.news tr td.content {vertical-align: top; width: 70%;}
+  </style>
+<title>Eclipse &quot;New and Noteworthy&quot; Template</title>
+</head>
+
+<body>
+<h1><font face="Verdana">Eclipse 4.5 (Mars) - New and Noteworthy in SWT</font></h1>
+
+<ul>
+	<li><a href="#m5">Milestone M5</a></li>
+</ul>
+
+
+<table class="news" border="0" cellpadding="10" cellspacing="0" width="80%" summary="news entries">
+
+  <tr>
+    <td id="m5" class="section" colspan="2"><h2>Milestone M5</h2></td>
+  </tr>
+
+   <tr id="transparent-bg">
+  <td class="title">Transparent background for Control</td>
+    <td class="content">
+    	<p>SWT has added support to set a <code>Control</code>'s background as transparent. The <code>Color</code> class now supports specifying a alpha value (integer: 0 to 255) for transparency.
+    	Calling <code>Control#setBackground(Color color)</code> with a transparent color (color with alpha value '0'), sets the control's background as transparent.</p>
+		<p><b>List of New Classes and APIs:</b></p>
+		<ul>
+			<li>Class: <code>org.eclipse.swt.graphics.RGBA</code></li>
+			<li>Constant: <code>SWT.COLOR_TRANSPARENT</code> - This is a default transparent color</li>
+			<li>Methods added in <code>org.eclipse.swt.graphics.Color</code></li>
+			<ul>
+				<li><code>public Color (Device device, int red, int green, int blue, int alpha)</code></li>
+				<li><code>public Color (Device device, RGB rgb, int alpha)</code></li>
+				<li><code>public Color (Device device, RGBA rgba)</code></li>
+				<li><code>public RGBA getRGBA </code>()</li>
+				<li><code>public int getAlpha ()</code></li>
+			</ul>
+		</ul>
+		<p><b>Note:</b></p>
+    	<ul>
+    		<li>Currently, SWT honors only extreme values for alpha i.e, '0'(transparent) or '255'(opaque).</li>
+    		<li>Setting transparent background color fails for some controls on all platforms, they show the default background color instead. For e.g. Text, Combo.</li>
+    		<li>Setting transparent background color for some controls works on GTK3 only, it fails on other platforms. For e.g. Table, Tree.</li>
+    	</ul>
+		For an example on using the new APIs, see <a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet365.java">Snippet365</a>.
+		<p>
+			<b>Snippet365 in action</b> (Controls with <code>SWT.COLOR_TRANSPARENT</code> background and Shell with gradient background image)
+		</p>
+		<p>
+        	<img src="images/transparent_control_background.png" alt="Transparent Background on Control widgets" />
+      	</p>
+    </td>
+  </tr>
+
+  <tr id="swt-tools">
+    <td class="title">SWT Tools</td>
+    <td class="content">
+		<a href="https://www.eclipse.org/swt/tools.php">SWT Tools</a> are now available in the Eclipse Platform P2 repository.
+		SWT Tools provides tools for developing SWT itself (JNIGen) but also general purpose tools Sleak 
+		(monitors the creation and disposal of SWT graphics resources) and SWT Spy (prints out information like style, layout and parent 
+		about the widget under the cursor).
+    </td>
+  </tr>
+
+  <tr>
+    <td colspan="2"/>
+  </tr>  
+</table>
+</body>
+</html>
