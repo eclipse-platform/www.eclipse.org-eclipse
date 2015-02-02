@@ -35,6 +35,8 @@ table.news tr td.content {vertical-align: top; width: 70%;}
 <h1><font face="Verdana">Eclipse 4.5 (Mars) - New and Noteworthy in SWT</font></h1>
 
 <ul>
+	<li><a href="#m3">Milestone M3</a></li>
+	<li><a href="#m4">Milestone M4</a></li>
 	<li><a href="#m5">Milestone M5</a></li>
 </ul>
 
@@ -42,10 +44,67 @@ table.news tr td.content {vertical-align: top; width: 70%;}
 <table class="news" border="0" cellpadding="10" cellspacing="0" width="80%" summary="news entries">
 
   <tr>
+    <td id="m3" class="section" colspan="2"><h2>Milestone M3</h2></td>
+  </tr>
+  <tr id="date-time-on-gtk-spin-button">
+	<td class="title">The DateTime widget now uses GtkSpinButton on UNIX/Linux platforms</td>
+    <td class="content">
+      The DateTime widget has been re-implemented to use the GtkSpinButton widget for
+      <code>SWT.DATE</code> and <code>SWT.TIME</code> styles. The new look and feel is as illustrated below:
+      <p><b>GTK+ 2:</b></p>
+          <p>
+            <img src="images/gtk2-date-time.png" alt="" />
+          </p>
+      <p><b>GTK+ 3:</b></p>
+          <p>
+            <img src="images/gtk3-date-time.png" alt="" />
+          </p>
+    </td>    
+  </tr>
+
+  <tr id="sleep-wakeup-deprecated-replaced">
+    <td class="title">New monitoring events added in place of SWT.Sleep and SWT.Wakeup</td>
+    <td class="content">
+        The <code>SWT.Sleep</code> and <code>SWT.Wakeup</code> events have been deprecated
+        in favor of the more generic events <code>SWT.PreExternalEventDispatch</code> and 
+        <code>SWT.PostExternalEventDispatch</code>, respectively. Clients that were written
+        using the old event names should be updated to refer to the new events.
+    </td>
+  </tr>
+
+  <tr id="gtk-supported-versions-update">
+  	<td class="title">Dropped support for GTK+ 2 versions older than 2.18</td>
+  	<td class="content">
+  		GTK+ 2.18.0 or later (and its dependencies) will be the pre-requisites necessary to 
+  		run Eclipse successfully on all Linux/UNIX platforms as opposed to GTK+ 2.10.0 earlier.
+  		Support for all versions older than 2.18 has been dropped effective Mars M3 milestone release.
+  		<p>
+  		Note: As of now, Eclipse logs a warning and continues to run when a GTK+ version older than 2.18.0
+  		is detected, but that behavior will soon be changed to not run Eclipse with unsupported versions.
+  		</p>
+  	</td>
+  </tr>
+  
+  <tr>
+    <td id="m4" class="section" colspan="2"><h2>Milestone M4</h2></td>
+  </tr>
+  <tr id="menuitem-tooltip">
+    <td class="title">Added API to set tooltip for MenuItem</td>
+    <td class="content">
+		SWT now supports setting a tooltip on menu items via <code>MenuItem.setToolTipText()</code>. 
+		<p>
+		For an example, see the <b>Menu</b> tab in the <a href="https://www.eclipse.org/swt/examples.php">ControlExample</a>.</p>
+		<p>
+          <img src="images/tooltip.png" alt="" />
+        </p>
+    </td>
+  </tr>
+    
+  <tr>
     <td id="m5" class="section" colspan="2"><h2>Milestone M5</h2></td>
   </tr>
 
-   <tr id="transparent-bg">
+  <tr id="transparent-bg">
   <td class="title">Transparent background for Control</td>
     <td class="content">
     	<p>SWT has added support to set a <code>Control</code>'s background as transparent. The <code>Color</code> class now supports specifying a alpha value (integer: 0 to 255) for transparency.
