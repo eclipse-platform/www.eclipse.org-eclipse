@@ -82,6 +82,7 @@ triage process earlier in the year and we have decided to adopt their process.</
 <li>If the bug has sufficient information in it to proceed, the person performing the triage:
 <ul>
 <li>Prepends the component area of the bug in the Summary field.</li>
+<li>Prepends [GTK], [GTK3], [Win32], [Cocoa] or [Common] into the Summary field, depending on which architectures are affected by the bug.</li>
 <li>Ensures that the severity level is appropriate - enhancement requests should be marked appropriately as should blocker/critical bugs.</li>
 <li>Adds the primary component owner as the main QA contact.</li>
 <li>Adds the secondary owner to the CC field.</li>
