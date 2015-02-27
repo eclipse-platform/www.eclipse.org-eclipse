@@ -29,12 +29,13 @@ on which it is implemented.</p>
 			<table width="100%">
 			<tr><td>
 			<b><font size="+1">Stable</font></b><br>
-			<a href="http://download.eclipse.org/eclipse/downloads/drops4/R-4.4-201406061215/download.php?dropFile=swt-4.4-win32-win32-x86.zip">Windows</a>,
-			<a href="http://download.eclipse.org/eclipse/downloads/drops4/R-4.4-201406061215/download.php?dropFile=swt-4.4-gtk-linux-x86.zip">Linux</a>,
-			<span style="white-space: nowrap;">
-			<a href="http://download.eclipse.org/eclipse/downloads/drops4/R-4.4-201406061215/download.php?dropFile=swt-4.4-cocoa-macosx-x86_64.zip">OS X</a>,</span>
-			<a href="http://download.eclipse.org/eclipse/downloads/drops4/R-4.4-201406061215/#SWT" target="_top">more...</a><br>
-			<small>4.4 Final Release - <span style="white-space: nowrap;">June 6, 2014</span></small><br>
+			<!-- Important: Use links like the following that don't break when the build is moved to the archive:
+					"https://www.eclipse.org/downloads/download.php?file=/eclipse/downloads/drops4/R-4.4.2-201502041700/swt-4.4.2-win32-win32-x86.zip" -->
+			<a href="https://www.eclipse.org/downloads/download.php?file=/eclipse/downloads/drops4/R-4.4.2-201502041700/swt-4.4.2-win32-win32-x86.zip">Windows</a>,
+			<a href="https://www.eclipse.org/downloads/download.php?file=/eclipse/downloads/drops4/R-4.4.2-201502041700/swt-4.4.2-gtk-linux-x86.zip">Linux</a>,
+			<a href="https://www.eclipse.org/downloads/download.php?file=/eclipse/downloads/drops4/R-4.4.2-201502041700/swt-4.4.2-cocoa-macosx-x86_64.zip">OS&nbsp;X</a>,
+			<a href="http://download.eclipse.org/eclipse/downloads/drops4/R-4.4.2-201502041700/#SWT" target="_top">more...</a><br>
+			<small>4.4.2 Final Release - <span style="white-space: nowrap;">February 4, 2015</span></small><br>
 			<ul>
 				<li><a href="R4_4/new_and_noteworthy.html">New and Noteworthy</a></li>
 				<li><a href="language.php">Language Pack</a></li>
