@@ -122,19 +122,25 @@ on which it is implemented.</p>
 
 	<ul>
 		<li>
-			<a href="http://download.eclipse.org/eclipse/downloads/drops4/R-4.2.2-201302041200/index.php#SWT" target="_top">SWT 3.8.2/4.2.2</a>, 6 February 2013.
+			<a href="http://archive.eclipse.org/eclipse/downloads/drops4/R-4.3.2-201402211700/index.php#SWT" target="_top">SWT 4.3.2</a>, 21 February 2014.
+			<ul>
+				<li><a href="R4_3/new_and_noteworthy.html">New and Noteworthy</a> items for each milestone</li>
+			</ul>
+		</li>
+		<li>
+			<a href="http://archive.eclipse.org/eclipse/downloads/drops4/R-4.2.2-201302041200/index.php#SWT" target="_top">SWT 3.8.2/4.2.2</a>, 6 February 2013.
 			<ul>
 				<li><a href="R4_2/new_and_noteworthy.html">New and Noteworthy</a> items for each milestone</li>
 			</ul>
 		</li>
 		<li>
-			<a href="http://download.eclipse.org/eclipse/downloads/drops/R-3.7.2-201202080800/index.php#SWT" target="_top">SWT 3.7.2</a>, 8 February 2012.
+			<a href="http://archive.eclipse.org/eclipse/downloads/drops/R-3.7.2-201202080800/index.php#SWT" target="_top">SWT 3.7.2</a>, 8 February 2012.
 			<ul>
 				<li><a href="R3_7/new_and_noteworthy.html">New and Noteworthy</a> items for each milestone</li>
 			</ul>
 		</li>
 		<li>
-			<a href="http://download.eclipse.org/eclipse/downloads/drops/R-3.6.2-201102101200/index.php#SWT" target="_top">SWT 3.6.2</a>, 11 February 2011.
+			<a href="http://archive.eclipse.org/eclipse/downloads/drops/R-3.6.2-201102101200/index.php#SWT" target="_top">SWT 3.6.2</a>, 11 February 2011.
 			<ul>
 				<li><a href="R3_6/new_and_noteworthy.html">New and Noteworthy</a> items for each milestone</li>
 			</ul>
