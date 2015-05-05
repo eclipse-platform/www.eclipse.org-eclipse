@@ -130,6 +130,10 @@ the <em>Platform Plug-in Developer Guide</em>. To get there in Eclipse, select
 		<p>This site contains some tutorials and example programs that will help programmers who are 
 		new to Eclipse and the Standard Widget Toolkit (SWT) install Eclipse correctly and run some 
 		simple Java/SWT programs.</p>
+
+	<li><a href="http://leoufimtsev.github.io./org/swt-dev.html">Detailed getting started guide with SWT on GTK</a></li>
+
+		<p>A detailed guide for SWT developers on GTK.</p>
 		
 	<li><a href="http://www.cs.umanitoba.ca/~eclipse/6-Compiling.pdf">Compiling Eclipse Applications for Windows With GCJ/MinGW</a></li>
 	
