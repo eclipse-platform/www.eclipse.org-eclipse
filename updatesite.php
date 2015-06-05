@@ -21,6 +21,9 @@ branches of SWT.</p>
 <td> <strong>4.5 M5 and newer</strong> </td><td>Part of the main Platform P2 repository e.g http://download.eclipse.org/eclipse/updates/4.5 (or newer version)</td>
 </tr>
 <tr>
+<td> <strong>4.5 M1 - 4.5 M4 releases</strong> </td><td>http://www.eclipse.org/swt/updates/4.4</td>
+</tr>
+<tr>
 <td> <strong>4.4.x releases</strong> </td><td>http://www.eclipse.org/swt/updates/4.4</td>
 </tr>
 <tr>

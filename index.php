@@ -17,7 +17,7 @@ on which it is implemented.</p>
 	or <a href="docs.php">documentation</a>.
 	Or maybe you want to request a <a href="bugs.php">feature</a>,
 	report a <a href="bugs.php">bug</a>,
-	or ask a <a href="news://news.eclipse.org/eclipse.platform.swt">question</a>.
+	or ask a <a href="https://www.eclipse.org/forums/index.php/f/100/">question</a>.
 	Whatever the reason, you will find many resources here. Enjoy!</p>
 </div>
 

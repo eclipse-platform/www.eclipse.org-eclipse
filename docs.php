@@ -34,7 +34,7 @@ ob_start();
    <li><a href="http://www.amazon.com/SWT-JFace-Action-Design-Eclipse/dp/1932394273/ref=pd_sim_b_title_4">
        <em>"SWT/JFace in Action: GUI Design with Eclipse 3.0"</em></a> by Matthew Scarpino, Stephen Holder, Stanford Ng and Laurent Mihalkovic</li>
    <li><a href="http://safari.informit.com/0596006411">
-       <em>"Eclipe"</em></a> and <a href="http://safari.informit.com/0596007108">
+       <em>"Eclipse"</em></a> and <a href="http://safari.informit.com/0596007108">
        <em>"Eclipse Cookbook"</em></a> by Steve Holzner</li>
 </ul>
 </div>
@@ -61,9 +61,9 @@ the <em>Platform Plug-in Developer Guide</em>. To get there in Eclipse, select
 
 <p>In addition to reading SWT documentation inside Eclipse, you can read it online here:</p>
   <ul>
-    <li><a href="http://help.eclipse.org/indigo/topic/org.eclipse.platform.doc.isv/guide/swt.htm">Programmer's Guide</a></li>
-    <li><a href="http://help.eclipse.org/indigo/index.jsp?topic=/org.eclipse.platform.doc.isv/reference/api/org/eclipse/swt/package-summary.html">API Reference</a></li>
-    <li><a href="http://help.eclipse.org/indigo/topic/org.eclipse.platform.doc.isv/samples/samples.html">Examples Guide</a></li>
+    <li><a href="http://help.eclipse.org/luna/topic/org.eclipse.platform.doc.isv/guide/swt.htm">Programmer's Guide</a></li>
+    <li><a href="http://help.eclipse.org/luna/index.jsp?topic=/org.eclipse.platform.doc.isv/reference/api/org/eclipse/swt/package-summary.html">API Reference</a></li>
+    <li><a href="http://help.eclipse.org/luna/topic/org.eclipse.platform.doc.isv/samples/samples.html">Examples Guide</a></li>
 	<li><a href="javadoc.php">Online javadoc</a></li>
 	<li><a href="http://www.eclipse.org/documentation/">Older versions of the Eclipse documentation</a></li>
   </ul>
@@ -112,7 +112,7 @@ the <em>Platform Plug-in Developer Guide</em>. To get there in Eclipse, select
   <ul>
     <li><a href="http://www-106.ibm.com/developerworks/opensource/library/os-ecgui1/?ca=dgr-eclipse-1">Using the Eclipse GUI outside the Eclipse Workbench</a></li>
     <li><a href="http://www-106.ibm.com/developerworks/opensource/library/os-activex/?ca=dgr-eclipse-1">Integrate ActiveX controls into SWT applications</a></li>
-    <li><a href="http://www-106.ibm.com/developerworks/opensource/library/os-ecca/?ca=dgr-eclipse-1">Equipping SWT applications with content assistants</a></li>
+    <li><a href="http://www.ibm.com/developerworks/opensource/library/os-ecca/index.html">Equipping SWT applications with content assistants</a></li>
     <li><a href="http://www.ibm.com/developerworks/views/opensource/libraryview.jsp?search_by=gentle+introduction+SWT+JFace&ca=dgr-eclipse-1">A Gentle Introduction to SWT and JFace</a> (4 parts)</li>
     <li><a href="http://www.ibm.com/developerworks/views/opensource/libraryview.jsp?search_by=eclipse+game+plug-in&ca=dgr-eclipse-1">Create an Eclipse Game Plug-in</a> (4 parts)</li>
   </ul>
