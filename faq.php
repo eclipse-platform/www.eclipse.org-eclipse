@@ -368,9 +368,9 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
 
   <dt><strong><a name="gtkversion">Q: Which GTK version is being used by SWT?</a></strong></dt>
   <dd>A: SWT sets the org.eclipse.swt.internal.gtk.version system property to the version being used.
-      To display this value in Eclipse, go to Help -> About -> Installation Details -> Configuration Tab.
+      To display this value in Eclipse, go to<br>Help -> About -> Installation Details -> Configuration Tab.<br>
       Look for the line: org.eclipse.swt.internal.gtk.version=3.14.12<br>
-      Where 3.14.12 corresponds to the gtk version currently used by eclipse. You can copy the text and search for it in your text editor.<br>
+      Where 3.14.12 corresponds to the gtk version currently used by eclipse. You can copy the text and search for it in your text editor.<p></p>
   </dd>
 
   <dt><strong><a name="cocoa64launch">Q: Why do I get an UnsatisfiedLinkError when launching from the 64-bit Cocoa port?</a></strong></dt>
