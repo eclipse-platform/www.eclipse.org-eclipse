@@ -367,10 +367,10 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
   </dd>
 
   <dt><strong><a name="gtkversion">Q: Which GTK version is being used by SWT?</a></strong></dt>
-  <dd>A: SWT sets the org.eclipse.swt.internal.gtk.version system property to the version being used.
-      To display this value in Eclipse, go to<br>Help -> About -> Installation Details -> Configuration Tab.<br>
-      Look for the line: org.eclipse.swt.internal.gtk.version=3.14.12<br>
-      Where 3.14.12 corresponds to the gtk version currently used by eclipse. You can copy the text and search for it in your text editor.<p></p>
+  <dd>A: Since Mars (4.5), SWT sets the <code>org.eclipse.swt.internal.gtk.version</code> system property to the version being used.
+      To display this value in Eclipse, go to <b>Help &gt; Installation Details &gt; Configuration</b>.<br>
+      Look for the line: <code>org.eclipse.swt.internal.gtk.version=3.14.12</code>,
+      where 3.14.12 corresponds to the GTK version currently used by Eclipse.
   </dd>
 
   <dt><strong><a name="cocoa64launch">Q: Why do I get an UnsatisfiedLinkError when launching from the 64-bit Cocoa port?</a></strong></dt>
@@ -1412,6 +1412,8 @@ public class DisplayMozillaVersion {
 </div>
 <?php 
 $html = ob_get_clean();
+
+$App->AddExtraHtmlHeader('<style type="text/css">dt { margin-top: 10px; }</style>');
 
 # Generate the web page
 $App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, $html);
