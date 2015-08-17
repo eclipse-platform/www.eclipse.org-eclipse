@@ -38,6 +38,9 @@ table.news tr td.content {vertical-align: top; width: 70%;}
 	<li><a href="#m3">Milestone M3</a></li>
 	<li><a href="#m4">Milestone M4</a></li>
 	<li><a href="#m5">Milestone M5</a></li>
+	<li><a href="#m6">Milestone M6</a></li>
+	<li><a href="#m7">Milestone M7</a></li>
+	<li><a href="#rc1">Release Candidate 1</a></li>
 </ul>
 
 
@@ -146,6 +149,101 @@ table.news tr td.content {vertical-align: top; width: 70%;}
 		(monitors the creation and disposal of SWT graphics resources) and SWT Spy (prints out information like style, layout and parent 
 		about the widget under the cursor).
     </td>
+  </tr>
+  
+	<tr>
+	 <td id="m6" class="section" colspan="2"><h2>Milestone M6</h2></td>
+	</tr>
+  
+	<tr id="high-dpi">
+	 <td class="title">APIs for high-DPI monitor support</td>
+	<td class="content">
+	  New APIs have been added to provide support for rendering high-resolution images on high-DPI monitors.
+	  <p>
+	  Two constructors have been added to the <code>Image</code> class. They accept
+	  image-provider callbacks that allow clients to supply resolution-dependent versions
+	  of images:
+	  </p>
+	  <pre>public interface ImageDataProvider {
+			public ImageData getImageData (int zoom);
+		}
+		public interface ImageFileNameProvider {
+			public String getImagePath (int zoom);
+		}</pre>
+	  
+	  <p>
+	  Depending on the user's monitor configuration, SWT will request images with the
+	  corresponding zoom level. Here's an example that displays 3 original images,
+	  followed by variants whose resolution changes depending your monitor's resolution:
+	  <a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/plain/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet367.java">Snippet367.java</a>.
+	  </p>
+	  
+	  <p>
+	  Note that this is just the first step to support high-resolution images in
+	  SWT and Eclipse-based applications. Work is underway to adopt the new APIs in
+	  the platform. Futhermore, more work in SWT is required to properly
+	  support drawing into high-resolution images via <code>GC</code>.
+	  </p>
+	</td>
+  </tr>
+  
+ 	<tr id="evaluate">
+ 	 <td class="title">API to choose security context in Browser#evaluate()</td>
+ 	 <td class="content">
+		A new API <code>Browser#evaluate(String script, boolean trusted)</code> has been added that allows the client to run
+		Javascript code in the Chrome security context or in the normal security context for <code>SWT.MOZILLA</code>
+		style browsers.
+	 </td>
+ 	</tr>
+  
+ 	<tr>
+	 <td id="m7" class="section" colspan="2"><h2>Milestone M7</h2></td>
+	</tr>
+	
+	<tr id="xulr-31-support">
+	 <td class="title">SWT Browser now supports XULRunner 31.x</td>
+	 <td class="content">
+		An SWT Browser created with style <code>SWT.MOZILLA</code> can now be used with the XULRunner 31.x 
+		runtime on Windows and Mac OSX.
+      <p>
+       Note: XULRunner 31 support is not available on Linux for Mars release. 
+       For details, please see <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=467646">Bug 467646</a>.
+      </p>
+	 </td>
+	</tr>
+	
+	<tr>
+	 <td id="rc1" class="section" colspan="2"><h2>Release Candidate 1</h2></td>
+	</tr>
+	
+   <tr id="auto-text-direction">
+    <td class="title">BIDI: SWT Controls now support AUTO text direction</td>
+    <td class="content">
+      The auto (a.k.a. "contextual") text direction implies that the base text direction is derived from the direction
+      of the first strong (either LTR or RTL) bidi character. Auto text direction is the most appropriate choice when
+      the text content is not known in advance and, hence, it is not yet possible to decide which base direction value,
+      LTR or RTL, would be most suitable at run time.
+      <br />
+      Support for auto text direction has been introduced at the SWT Control level. Auto text direction can be applied
+      through the existing <code>Control#setTextDirection</code> API. The new value for auto direction is expressed as
+      the bitwise disjunction of (<code>SWT#LEFT_TO_RIGHT</code> | <code>SWT#RIGHT_TO_LEFT</code>) bit fields. When 
+      applied onto a Composite control, the auto base direction (similarly to LTR and RTL ones) is inherited by the
+      child components.
+      <br />
+      For example:
+      <ul>
+        <li><code>org.eclipse.swt.widgets.Table.setTextDirection(SWT.LEFT_TO_RIGHT | SWT.RIGHT_TO_LEFT);</code></li>
+	  </ul>
+      Result:
+      <p>
+        <img src="images/auto-text-direction.png" alt=""/>
+      </p>
+      <b>Note:</b> Auto text direction is not yet supported:
+      <ul>
+         <li>in StyledText</li>
+         <li>upon Control creation (but only through <code>Control#setTextDirection</code> call once the Control has been created)</li>      
+      </ul>
+	</td>
   </tr>
 
   <tr>

@@ -38,7 +38,6 @@ on which it is implemented.</p>
 			<small>4.5 Release - <span style="white-space: nowrap;">June 3, 2015</span></small><br>
 			<ul>
 				<li><a href="R4_5/new_and_noteworthy.html">New and Noteworthy</a></li>
-				<li><a href="language.php">Language Pack</a></li>
 			</ul>
 			</table>
 		</td>
@@ -124,7 +123,7 @@ on which it is implemented.</p>
 		<li>
 			<a href="http://archive.eclipse.org/eclipse/downloads/drops4/R-4.4.2-201502041700/index.php#SWT" target="_top">SWT 4.4.2</a>, 4 February 2015.
 			<ul>
-				<li><a href="R4_4/new_and_noteworthy.html">New and Noteworthy</a>items for each milestone</li>
+				<li><a href="R4_4/new_and_noteworthy.html">New and Noteworthy</a> items for each milestone</li>
 			</ul>
 		<li>
 			<a href="http://archive.eclipse.org/eclipse/downloads/drops4/R-4.3.2-201402211700/index.php#SWT" target="_top">SWT 4.3.2</a>, 21 February 2014.
