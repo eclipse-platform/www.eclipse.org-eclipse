@@ -877,6 +877,11 @@ the SWT.CENTER style when creating a composite.
       <li>Eclipse 4.2.2 and newer: Mozilla 1.4 GTK2 - 1.7.x GTK2, XULRunner 1.8.x - 1.9.x, 3.6.x and 10.x (but <em>not</em> 2.x nor 4.x - 9.x), WebKitGTK+ 1.2.x and newer</li>
       <li>Eclipse 4.4 and newer: Mozilla 1.4 GTK2 - 1.7.x GTK2, XULRunner 1.8.x - 1.9.x, 3.6.x, 10.x and 24.x (but <em>not</em> 2.x nor other unlisted versions), WebKitGTK+ 1.2.x and newer 
       (Eclipse 4.4 and newer uses GTK 3 by default and XULRunner cannot be used in this case as it is not ported to GTK 3 yet)</li>
+      <li>Eclipse 4.5 and newer: Mozilla 1.4 GTK2 - 1.7.x GTK2, XULRunner 1.8.x - 1.9.x, 3.6.x, 10.x, 24.x and 31.x (but <em>not</em> 2.x nor other unlisted versions), WebKitGTK+ 1.2.x and newer 
+      (Note:<ul>
+      			<li>1. Eclipse 4.5 and newer uses GTK 3 by default and XULRunner cannot be used in this case as it is not ported to GTK 3 yet.</li>
+      			<li>2. Eclipse 4.5 support for XULRunner 31.x is not available on Linux due to <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=467646">Bug 467646.</a></li>
+      		</ul>)
       <li>Also note that a Firefox release whose contained Gecko version correlates with the Mozilla versions above can also be used
       with Eclipse 3.1 and newer (Linux only), provided that it has been compiled with linkable Gecko libraries.  It is important to  
       note that Firefox downloads from mozilla.org do <em>not</em> satisfy this criteria, but Firefox installations that are
