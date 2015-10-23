@@ -70,7 +70,7 @@ on which it is implemented.</p>
 		<li><a href="macgen.php">How to generate the SWT JNI Code for Cocoa</a></li>
 		<li><a href="opengl/">Using OpenGL in SWT Applications</a></li>
 		<li><a href="cocoaport.php">How to help with the SWT Cocoa port</a></li>
-		<li><a href="fixbugs.php">How to fix a bug in SWT</a></li>
+		<li><a href="fixbugs.php">How to contribute a bug fix to SWT</a></li>
 		<li><a href="http://www.eclipse.org/articles/index.php?sort=date&category=SWT">Many more articles about SWT</a> on Eclipse Corner at eclipse.org</li>
 		<li><a href="docs.php">Full list of articles and documentation</a></li>
 	</ul>

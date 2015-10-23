@@ -5,7 +5,7 @@ $pageTitle = "Fixing a bug in SWT";
 ob_start();
 ?>
 <div id="midcolumn">
-<h1>Fixing a bug in SWT</h1>
+<h1>How to contribute a bug fix to SWT</h1>
 <p></p>
 
 <h2>Set up your Java environment:</h2>
@@ -23,8 +23,12 @@ and <code>org.eclipse.swt.examples</code>.
 <br>
 </li>
 <li>Click on any Snippet or example, and select Run As&gt;Java
-Application.<br>
+Application. You can modify any of the existing snippets or make your own in order to try to reproduce the issue.<br>
 </li>
+<li> Once the issue is reproducible, inspect the SWT source code to see if you can locate/fix the issue.
+(Debugging Tip: In gtk, you can switch between GTK2 and GTK3, by setting SWT_GTK3=0 or =1 in your launch configuration)</li>
+<li> When you have a patch that is ready for review, you should submit the patch to gerrit for review. You have to configure your git repo to push to gerrit.
+For more information and steps, please see -- https://wiki.eclipse.org/Gerrit.
 </ol>
 
 <h2>Understand SWT:</h2>
