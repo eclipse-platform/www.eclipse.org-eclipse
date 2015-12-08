@@ -296,6 +296,13 @@ create a snippet contribution report in Bugzilla</a>. Thanks in advance for your
       </ul>
       <p></p>
 
+    <li><a name="gesture"><b>Gesture and Touch support</b></a>
+      <ul>
+        <li> <a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet352.java">create a shell and listen for TouchEvents</a></li>
+        <li> <a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet353.java">Gesture example</a></li>
+      </ul>
+      <p></p>
+
     <li><a name="gridlayout"><b>GridLayout</b></a>
       <ul>
         <li> <a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet172.java">align widgets in rows and columns</a></li>
@@ -634,6 +641,8 @@ create a snippet contribution report in Bugzilla</a>. Thanks in advance for your
         <li> <a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet256.java">underline and strike through text</a></li>
        </ul>
       <p></p>
+
+
 
     <li><a name="toolbar"><b>ToolBar, ToolItem</b></a>
       <ul>
