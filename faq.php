@@ -285,6 +285,31 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
          <tt>swt-XXXX.dll</tt> files on windows, or <tt>libswt-XXXX.so</tt> files on Linux
          and Solaris.
   </ol>
+
+  <p><strong>Build natives on Ubuntu 12.04, 14.04, etc. (without XULRunner support)</strong><br>
+  <ol>
+     <li>Install dependencies with:<br>
+         <tt>$ sudo apt-get install libgnomeui-dev libxtst-dev freeglut3-dev libgtk-3-dev libgtk2.0-dev</tt>
+
+     <li>Follow <a href="/swt/git.php">these instructions</a> to get SWT from GIT.
+
+     <li>Make sure the org.eclipse.swt project is compiled.
+
+     <li>Edit /org.eclipse.swt.gtk.linux.x86/build.xml like this to enable GTK3 and account for a missing XULRunner installation:
+     <pre>
+<property name="targets" value="install" />
+	<property name="machine_gtk3" value="localmachine" />
+&lt;!--
+	<property name="targets" value="make_mozilla make_xulrunner make_xpcominit install"/>
+--&gt;
+</pre>
+
+     <li>Context menu &gt; Run As &gt; Ant Build...
+     <li>On Targets tab, select "build_libraries" (14th from end of list)
+     <li>On JRE tab, select Execution Environment JavaSE-1.8
+     <li>If the JAVA_HOME environment variable is not yet set, go to Environment tab and set it to the root directory of the JDK.
+     <li>Run the External Tools launch configuration. From now on, this is the only step you have to do to build natives.
+  </ol>
   </dd>
 
   <dt><strong><a name="howaddnatives">Q: How do I add a new native to the SWT JNI libraries for my platform?</a></strong>
