@@ -297,15 +297,20 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
 
      <li>Edit /org.eclipse.swt.gtk.linux.x86/build.xml like this to enable GTK3 and account for a missing XULRunner installation:
      <pre>
-<property name="targets" value="install" />
-	<property name="machine_gtk3" value="localmachine" />
+&lt;property name="targets" value="install" /&gt;
+	&lt;property name="machine_gtk3" value="localmachine" /&gt;
 &lt;!--
-	<property name="targets" value="make_mozilla make_xulrunner make_xpcominit install"/>
+	&lt;property name="targets" value="make_mozilla make_xulrunner make_xpcominit install"/&gt;
 --&gt;
 </pre>
 
      <li>Context menu &gt; Run As &gt; Ant Build...
      <li>On Targets tab, select "build_libraries" (14th from end of list)
+     <li>On Properties tab, add these two properties:
+       <ul>
+         <li>to make the build succeed even without a XULRunner installation: targets = install
+         <li>to enable GTK3 support: machine_gtk3 = localmachine
+       </ul>
      <li>On JRE tab, select Execution Environment JavaSE-1.8
      <li>If the JAVA_HOME environment variable is not yet set, go to Environment tab and set it to the root directory of the JDK.
      <li>Run the External Tools launch configuration. From now on, this is the only step you have to do to build natives.
