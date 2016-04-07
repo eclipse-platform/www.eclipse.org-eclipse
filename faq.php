@@ -16,7 +16,7 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
   <li><a href="#guibuilder">Is there a GUI Builder for SWT?</a></li>
   <li><a href="#whatisasnippet">What is a snippet and why do I care?</a></li>
   <li><a href="#swtsource">Where do I find the SWT source?</a></li>
-  <p></p>
+</ul><ul>
   <li><a href="#howbuildjar">How do I build an SWT jar for my platform?</a></li>
   <li><a href="#howbuildplugin">How do I build the SWT Eclipse plug-in for my platform?</a></li>
   <li><a href="#howbuilddll">How do I build the SWT JNI libraries for my platform?</a></li>
@@ -24,15 +24,15 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
   <li><a href="#howaddnativescocoa">How do I add a new native to the SWT JNI libraries for Cocoa?</a></li>
   <li><a href="#gtk64">How do I build the 64-bit version of SWT GTK?</a></li>
   <li><a href="#gtk32">How do I build the 32-bit version of SWT GTK?</a></li>
-  <p></p>
+</ul><ul>
   <li><a href="#gtkstartup">Which GTK version do I need to run SWT?</a></li>
   <li><a href="#gtkversion">Which GTK version is being used by SWT?</a></li>
   <li><a href="#cocoa64launch">Why do I get an UnsatisfiedLinkError when launching from the 64-bit Cocoa port?</a></li>
   <li><a href="#javawebstart">How can I deploy my standalone SWT application with Java Web Start?</a></li>
-  <p></p>
+</ul><ul>
   <li><a href="#xpthemes">How do I make SWT use the Windows XP themes?</a></li>
   <li><a href="#gtkfontsandcolors">On gtk, how do I change the default fonts and colors of widgets?</a></li>
-  <p></p>
+</ul><ul>
   <li><a href="#missingjar">Why do I get the error "java.lang.NoClassDefFoundError: org/eclipse/swt/internal/XXX/OS."?</a></li>
   <li><a href="#missingdll">Why do I get the error "java.lang.UnsatisfiedLinkError: no swt-win32-3232 in java.library.path."?</a></li>
   <li><a href="#konquerorUnzip">Why do I get an error beginning with "...SWTException: Unsupported or unrecognized format" on startup?</a></li>
@@ -42,7 +42,7 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
   <li><a href="#notenoughheap">Why do I get the error "java.lang.OutOfMemoryError: Java heap space" when I try to create a very large Image?</a></li>
   <li><a href="#debugmode">How do I enable debug mode in Eclipse for SWT?</a></li>
   <li><a href="#cairoRemoved">Why does Eclipse (4.2 and greater) on GTK crash with a call to org.eclipse.swt.internal.C.memmove originating from some graphics call?</a></li>
-  <p></p>
+</ul><ul>
   <li><a href="#swinginswt">Can I use Swing or AWT inside Eclipse?</a></li>
   <li><a href="#subclassing">Why can't I subclass SWT widgets like Button and Table?</a></li>
   <li><a href="#printstacktrace">Why don't SWTError and SWTException override all printStackTrace methods?</a></li>
@@ -55,7 +55,7 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
   <li><a href="#gtkselectiongone">On gtk, why does my widget's selection disappear when it loses focus?</a></li>
   <li><a href="#gtkwidgethidden">On gtk and motif, why are some widgets hidden when they are visible on Windows or the Macintosh?</a></li>
   <li><a href="#advancedgraphics">Which platforms have advanced graphics support?</a></li>
-  <p></p>
+</ul><ul>
   <li><a href="#whatisbrowser">What is the SWT Browser widget?</a></li>
   <li><a href="#browserplatforms">Which platforms support the SWT Browser, and which native renderers do they use?</a></li>
   <li><a href="#browserspecifydefault">How do I specify the default type of native renderer that is used by the Browser?</a></li>
@@ -75,7 +75,7 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
   <li><a href="#printmozillapath">How can I determine which installed Mozilla browser is being used to render Browser content?</a></li>
   <li><a href="#mozillaplugins">How can my Mozilla-based Browser find my Mozilla plug-ins?</a></li>
   <li><a href="#howusejavaxpcom">How do I use JavaXPCOM with the Browser?</a></li>
-  <p></p>
+</ul><ul>
   <li><a href="#swtawtosxmore">Why does the SWT_AWT bridge not work for me on OS X, even after updating Java or the OS?</a></li>
   <li><a href="#swtawtsolaris">Why does the SWT_AWT bridge not work for me on AIX or Solaris?</a></li>
   <li><a href="#printOnGTK">Why is the Print menu item disabled in Eclipse on GTK (Linux, UNIX)?</a></li>
@@ -93,7 +93,7 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
   <li><a href="#jumplist">Can I use the TaskItem's menu without the launcher?</a></li>
   <li><a href="#multiplatformjar">How do I produce a single jar file that contains all of the various SWT platform jars?</a></li>
   <li><a href="#twistieanimation">How do I enable the fade annimation for expando buttons in Trees (Windows Vista and up) ?</a></li>
-  <p></p>
+</ul><ul>
   <li><a href="#keyboardshortcuts" name="accessibility">What are the standard keyboard shortcuts on Windows, Mac OS X, Linux?</a></li>
   <li><a href="#screenreaders">Can I use a screen reader with Eclipse?</a></li>
   <li><a href="#oldScreenReaderNotWorking">Why doesn't my old Windows screen reader work with Eclipse 3.6?</a></li>
@@ -286,7 +286,7 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
          and Solaris.
   </ol>
 
-  <p><strong>Build natives on Ubuntu 12.04, 14.04, etc. (without XULRunner support)</strong><br>
+  <p><strong>Building the SWT natives on Ubuntu 12.04, 14.04, etc. (without XULRunner support)</strong><br>
   <ol>
      <li>Install dependencies with:<br>
          <tt>$ sudo apt-get install libgnomeui-dev libxtst-dev freeglut3-dev libgtk-3-dev libgtk2.0-dev</tt>
@@ -295,23 +295,14 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
 
      <li>Make sure the org.eclipse.swt project is compiled.
 
-     <li>Edit /org.eclipse.swt.gtk.linux.x86/build.xml like this to enable GTK3 and account for a missing XULRunner installation:
-     <pre>
-&lt;property name="targets" value="install" /&gt;
-	&lt;property name="machine_gtk3" value="localmachine" /&gt;
-&lt;!--
-	&lt;property name="targets" value="make_mozilla make_xulrunner make_xpcominit install"/&gt;
---&gt;
-</pre>
-
      <li>Context menu &gt; Run As &gt; Ant Build...
-     <li>On Targets tab, select "build_libraries" (14th from end of list)
+     <li>On Targets tab, select "build_libraries" (14th from end of list).
      <li>On Properties tab, add these two properties:
        <ul>
          <li>to make the build succeed even without a XULRunner installation: targets = install
          <li>to enable GTK3 support: machine_gtk3 = localmachine
        </ul>
-     <li>On JRE tab, select Execution Environment JavaSE-1.8
+     <li>On JRE tab, select Execution Environment JavaSE-1.8.
      <li>If the JAVA_HOME environment variable is not yet set, go to Environment tab and set it to the root directory of the JDK.
      <li>Run the External Tools launch configuration. From now on, this is the only step you have to do to build natives.
   </ol>
@@ -932,7 +923,7 @@ the SWT.CENTER style when creating a composite.
   <dt><strong><a name="browsersolaris">Q: What do I need to run the SWT Browser inside Eclipse on Solaris?</a></strong></dt>
   <dd>A: The Browser is supported on OpenSolaris (x86) and Solaris 10 (SPARC).  The Mozilla versions that are supported by each Eclipse release are:
     <ul>
-      <li>OpenSolaris (x86)</li>
+      <li>OpenSolaris (x86)
       <ul>
         <li>Eclipse 3.5.0: Mozilla 1.7.x GTK2, XULRunner 1.8.x - 1.9.1.x</li>
         <li>Eclipse 3.5.2 and newer: Mozilla 1.7.x GTK2, XULRunner 1.8.x - 1.9.2.x and 3.6.x</li>
@@ -940,11 +931,11 @@ the SWT.CENTER style when creating a composite.
         Unlike other platforms, since Sun's compiler does not produce statically-linked libraries, Firefox builds downloaded from mozilla.org
         <em>can</em> be used on Solaris. 
       </ul>
-      <li>Solaris 10 (SPARC)</li>
+      <li>Solaris 10 (SPARC)
       <ul>
         <li>Eclipse 3.5.1 and newer: the Mozilla version that is shipped with the OS in <code>/usr/sfw/lib/</code></li>
       </ul>
-      <li>Solaris 11 (SPARC)</li>
+      <li>Solaris 11 (SPARC)
       <ul>
         <li>Eclipse 4.2 and newer: the Mozilla version 1.7.x GTK2 in <code>/usr/sfw/lib/</code></li>
         <li>Note that the above version is not installed by default. User needs to either install it using Solaris 10 packages or copy from solaris 10 installation</li>
