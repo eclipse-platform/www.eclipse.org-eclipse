@@ -51,6 +51,14 @@ on which it is implemented.</p>
 </div>
 
 <div class="homeitem">
+	<h2>How to contribute</h2>
+
+	<ul>
+		<li><a href="fixbugs.php">How to contribute a feature or bug fix to SWT</a></li>
+		<li><a href="git.php">How to get the SWT source code via Git</a></li>
+	</ul>
+</div>
+<div class="homeitem">
 	<h2>Articles</h2>
 
 	<ul>
@@ -58,12 +66,10 @@ on which it is implemented.</p>
 		<li><a href="examples.php">How to run the ControlExample and other SWT examples</a></li>
 		<li><a href="macosx/">How to deploy SWT applications on Mac OS X</a></li>
 		<li><a href="jws/">How to deploy SWT applications using Java Web Start</a></li>
-		<li><a href="git.php">How to use SWT from Git</a></li>
 		<li><a href="jnigen.php">How to generate the SWT JNI Code</a></li>
 		<li><a href="macgen.php">How to generate the SWT JNI Code for Cocoa</a></li>
 		<li><a href="opengl/">Using OpenGL in SWT Applications</a></li>
 		<li><a href="cocoaport.php">How to help with the SWT Cocoa port</a></li>
-		<li><a href="fixbugs.php">How to contribute a bug fix to SWT</a></li>
 		<li><a href="http://www.eclipse.org/articles/index.php?sort=date&category=SWT">Many more articles about SWT</a> on Eclipse Corner at eclipse.org</li>
 		<li><a href="docs.php">Full list of articles and documentation</a></li>
 	</ul>
