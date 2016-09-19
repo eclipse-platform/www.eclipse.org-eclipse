@@ -29,28 +29,21 @@ on which it is implemented.</p>
 			<table width="100%">
 			<tr><td>
 			<b><font size="+1">Stable</font></b><br>
-			<!-- Important: Use links like the following that don't break when the build is moved to the archive:
-					"https://www.eclipse.org/downloads/download.php?file=/eclipse/downloads/drops4/R-4.4.2-201502041700/swt-4.4.2-win32-win32-x86.zip" -->
-			<a href="https://www.eclipse.org/downloads/download.php?file=/eclipse/downloads/drops4/R-4.5-201506032000/swt-4.5-win32-win32-x86_64.zip">Windows</a>,
-			<a href="https://www.eclipse.org/downloads/download.php?file=/eclipse/downloads/drops4/R-4.5-201506032000/swt-4.5-gtk-linux-x86_64.zip">Linux</a>,
-			<a href="https://www.eclipse.org/downloads/download.php?file=/eclipse/downloads/drops4/R-4.5-201506032000/swt-4.5-cocoa-macosx-x86_64.zip">OS&nbsp;X</a>,
-			<a href="http://download.eclipse.org/eclipse/downloads/drops4/R-4.5-201506032000/#SWT" target="_top">more...</a><br>
-			<small>4.5 Release - <span style="white-space: nowrap;">June 3, 2015</span></small><br>
-			<ul>
-				<li><a href="R4_5/new_and_noteworthy.html">New and Noteworthy</a></li>
-			</ul>
+			<a href="http://download.eclipse.org/eclipse/downloads/">Eclipse download page</a>
+				<span style="white-space: nowrap;">
+				<small>For links to the stable SWT Binary and Source for all platforms,<br>select the entry for the latest official release 
+                                       and then scroll to bottom of page.<br></small></span>
+				</td></tr>
 			</table>
 		</td>
 		<td width="50%" valign="top">
 			<table width="100%">
 				<tr><td>
 				<b><font size="+1">Development</font></b><br>
-				<a href="http://download.eclipse.org/eclipse/downloads/">4.6 Integration Builds</a>
+				<a href="http://download.eclipse.org/eclipse/downloads/">Eclipse download page</a>
 				<span style="white-space: nowrap;">
-				<small>For links to SWT Binary and Source for all platforms,<br>select current 4.6 Integration Build and then scroll to bottom of page.<br></small></span>
-				<!-- Remove comment once we have the N&N page for 4.6<ul>
-					<li><a href="R4_5/new_and_noteworthy.html">4.6 New and Noteworthy</a></li>
-				</ul> -->
+				<small>For links to SWT Binary and Source for all platforms,<br>select current integration build (select entry starting with I in the
+	                               Latest Downloads) and then scroll to bottom of page.<br></small></span>
 				</td></tr>
 			</table>
 		</td>
