@@ -194,11 +194,6 @@ on which it is implemented.</p>
 	<p><img src="images/win-example.png" alt="Windows" width="216" height="204"></p>
 	<p><img src="images/lin-example.png" alt="Linux" width="212" height="224"></p>
 	<p><img src="images/mac-example.png" alt="Mac OS X" width="232" height="237"></p>
-	<p><img src="images/mot-example.png" alt="Motif" width="232" height="210"></p>
-	<p style="text-align: center">
-		<img src="images/pho-example.png" alt="Photon" width="225" height="227">
-		<a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet266.java">source</a>
-	</p>
 </div>
 <?php 
 $html = ob_get_clean();
