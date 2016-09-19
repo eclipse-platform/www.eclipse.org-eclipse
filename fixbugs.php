@@ -1,20 +1,18 @@
 <?php require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/app.class.php");	require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/nav.class.php"); 	require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/menu.class.php"); 	$App 	= new App();	$Nav	= new Nav();	$Menu 	= new Menu();		include($App->getProjectCommon());
 
-$pageTitle = "Fixing a bug in SWT";
+$pageTitle = "Contributing a feature or a bug fix in SWT";
 
 ob_start();
 ?>
 <div id="midcolumn">
-<h1>How to contribute a bug fix to SWT</h1>
+<h1>How to contribute a feature or a bug fix to SWT</h1>
 <p></p>
 
 <h2>Set up your Java environment:</h2>
 <ol>
-<li>Download and install a Java JRE (SWT only requires a 1.5.x JRE to
-run but we suggest using Java 7 to run eclipse).<br>
+<li>Download and install a Java JRE (SWT requires a 1.8.x JRE).<br>
 </li>
-<li><a href="http://www.eclipse.org/downloads/">Download and install the current Eclipse build.</a>
-(Select the "Eclipse Classic" download.)</li>
+<li><a href="download.eclipse.org/eclipse/downloads/">Download and install the latest I* or N* build.</a></li>
 <li><a href="/swt/git.php">Setup SWT from GIT.</a>
 Make sure to load <code>org.eclipse.swt</code> plus any swt fragment you need
 (for example, <code>org.eclipse.swt.gtk.linux.x86</code>),
