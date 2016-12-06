@@ -718,18 +718,6 @@ create a snippet contribution report in Bugzilla</a>. Thanks in advance for your
 
     <li>... and lots more still to come. Keep checking back.
   </ul>
-  
-<h3><a name="pocketpc">Snippets for Pocket PC</a></h3>
-<ul>
-    <li><b>"<a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet85.java">Hello World</a>"</b>
-      <p></p>
-
-    <li><b>Shell</b>
-        <ul>
-            <li> <a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet86.java">'Ok' button</a></li>
-            <li> <a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet87.java">resize automatically as SIP is on or off</a></li>
-        </ul>
-</ul>
 </div>
 <?php 
 $html = ob_get_clean();
