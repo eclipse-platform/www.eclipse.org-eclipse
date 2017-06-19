@@ -7,8 +7,8 @@ ob_start();
 <div id="midcolumn">
 <h1>SWT Eclipse Bugzilla</h1>
 
-<p>The SWT <a href="triage.php">bug triage</a> process.</p>
 <p>SWT bug reports are stored in the <a href="http://bugs.eclipse.org/bugs/">Eclipse Bugzilla database</a>.
+<p>The SWT developers follow a <a href="https://wiki.eclipse.org/SWT/Devel/Triage">bug triage</a> process.</p>
 <br>Here are some useful links:</p>
 
 <h4><a href="https://bugs.eclipse.org/bugs/enter_bug.cgi?product=Platform&component=SWT">
