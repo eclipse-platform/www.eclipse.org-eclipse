@@ -74,13 +74,13 @@ create a snippet contribution report in Bugzilla</a>. Thanks in advance for your
         <li> <a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet326.java">close a Browser such that it can be cancelled by an onbeforeunload handler</a></li>
         <li> <a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet330.java">send custom headers and post data with HTTP requests</a></li>
         <li> <a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet351.java">WebKit in a browser</a></li>
-        <li> <a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet260.java">Mozilla in a browser</a></li>
-        <li> <a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet267.java">toggle a Mozilla Browser between Design mode and View mode</a></li>
-        <li> <a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet277.java">implement a custom download handler for a Mozilla Browser</a></li>
-        <li> <a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet306.java">show an HTML element-specific context menu in a Mozilla Browser</a></li>
-        <li> <a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet321.java">examine request and response headers in a Mozilla Browser</a></li>
-        <li> <a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet323.java">view DOM tree and edit node values in a Mozilla Browser</a></li>
-        <li> <a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet329.java">zoom HTML page content in a Mozilla Browser</a></li>
+        <li> <a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet260.java?h=R4_7_maintenance">Mozilla in a browser</a></li>
+        <li> <a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet267.java?h=R4_7_maintenance">toggle a Mozilla Browser between Design mode and View mode</a></li>
+        <li> <a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet277.java?h=R4_7_maintenance">implement a custom download handler for a Mozilla Browser</a></li>
+        <li> <a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet306.java?h=R4_7_maintenance">show an HTML element-specific context menu in a Mozilla Browser</a></li>
+        <li> <a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet321.java?h=R4_7_maintenance">examine request and response headers in a Mozilla Browser</a></li>
+        <li> <a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet323.java?h=R4_7_maintenance">view DOM tree and edit node values in a Mozilla Browser</a></li>
+        <li> <a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet329.java?h=R4_7_maintenance">zoom HTML page content in a Mozilla Browser</a></li>
       </ul>
       <p></p>
 
