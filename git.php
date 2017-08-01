@@ -168,7 +168,12 @@ Next switch to the Repository Settings tab. Under the branch tree, select the br
     <li>After we've selected the ControlExample.java file, we can run
         it using <b>Run &gt; Run As &gt; Java Application</b>.
 
-
+    <li>Optionally you can setup SWT native build setup
+    <ul>
+    <li> <a href="swt_win_native.php">Windows native build setup page</a>
+    <li> Linux native build setup page
+    <li> MAC native build setup page
+    </ul>
     </ol>
     
 <p>And there you go!</p>
