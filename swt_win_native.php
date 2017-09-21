@@ -12,7 +12,7 @@ ob_start();
 <ol>
 <li><p> Microsoft 'Visual Studio 2008'</p>
 <li><p> Microsoft 'Windows Server 2003 SP1 SDK'</p>
-<li><p> JDK5 64bit and 32bit (IBM JDK preferred, also work in-progress to upgrade to JDK8 via <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=520296">bug 520296</a>)</p>
+<li><p> JDK8 64bit and 32bit (IBM JDK preferred)</p>
 <li><p> Webkit SDK version 'r72896' and WebKitSupportLibrary</p>
 <li> Cygwin</p>
 <p>Note: <b>MSDN developer license</b> is a pre-requisite for Microsoft softwares.</b></p>
@@ -42,10 +42,8 @@ ob_start();
 <li><p> Install Windows Server 2003 SPI SDK in 'C:\BUILD\swt-builddir\MSSDKs\Windows Server 2003 SP1 SDK'</p>
 <li><p> Install MS VS2008 in 'C:\BUILD\swt-builddir\MSVCs\Microsoft Visual Studio 8'</p>
 <li><p> Install/Unzip Webkit SDK version 'r72896' and WebKitSupportLibrary</p>
-<li><p> Install/Unzip IBM(preferred) JDK5 64bit in 'C:\BUILD\swt-builddir\ibm-sdk50-x86_64'</p>
-<li><p> Install/Unzip IBM(preferred) JDK5 32bit in 'C:\BUILD\swt-builddir\ibm-java2-sdk-50-win-i386'</p>
-<li><p> When using a new version of JDK say Java8, you might need to copy the file 'jawt.lib' from the lib sub-folder to jre\bin.
-Note: This step will be optional once we have a fix for <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=520296">bug 520296</a></p>
+<li><p> Install/Unzip IBM(preferred) JDK8 64bit in 'C:\BUILD\swt-builddir\ibm-java-sdk-80-win-x86_64\sdk'</p>
+<li><p> Install/Unzip IBM(preferred) JDK8 32bit in 'C:\BUILD\swt-builddir\ibm-java-sdk-80-win-i386\sdk'</p>
 </ul>
 
 <li> <p> For local testing, Run as Ant build below file with 'build_libraries' as target(assuming <a href="git.php">SWT setup</a> is in place):</p>
