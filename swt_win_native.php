@@ -11,12 +11,22 @@ ob_start();
 <h3>Software needed for setting up windows native build</h3>
 <ol>
 <li><p> Microsoft 'Visual Studio 2008'</p>
-<li><p> Microsoft 'Windows Server 2003 SP1 SDK'</p>
-<li><p> JDK8 64bit and 32bit (IBM JDK preferred)</p>
-<li><p> Webkit SDK version 'r72896' and WebKitSupportLibrary</p>
-<li> Cygwin</p>
-<p>Note: <b>MSDN developer license</b> is a pre-requisite for Microsoft softwares.</b></p>
+<li><p> Microsoft 'Windows Server 2003 SP1 SDK', link to <a href="https://www.microsoft.com/en-us/download/details.aspx?id=12261">download page</a></p>
+<li><p> JDK8 64bit and 32bit (IBM JDK preferred), link to <a href="https://developer.ibm.com/javasdk/downloads/">download page</a></p>
+<li><p> Webkit SDKs:</p>
+ <ol>
+	<li><p><a href="http://build.eclipse.org/eclipse/swt/WebKit-r72896.zip">WebKit-r72896</a></p>
+	<li><p><a href="http://build.eclipse.org/eclipse/swt/WebKitSupportLibrary.zip">WebKitSupportLibrary</a></p>
+ </ol>
+<p><b>Disclaimer:</b></p>
+<p><b>Note these Webkit SDKs are an older version being consumed by SWT native build process and
+ Webkit build binaries are no more available for download in public <a href="https://webkit.org/downloads/">Webkit download page</a>.</b></p>
+<p><b>But WebKit-r72896 sources are still avilable for download in public <a href="https://builds-nightly.webkit.org/files/trunk/src/WebKit-r72896.tar.bz2">main link</a>
+and also on <a href="http://build.eclipse.org/eclipse/swt/WebKit-r72896.tar.bz2">backup link</a>.</b></p>
+<li> Cygwin [Optional for local setup]</p>
 </ol>
+<p>Note: <b>MSDN developer license</b> is a pre-requisite for Microsoft softwares.
+[Also work in-progress to move to "Visual Studio C++ Express 2008" which doesn't require MSDN license via bugzilla <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=521927">bug 521927</a>]</b></p>
 
 <h3>Steps to set up Windows native build:</h3>
 <ol>
@@ -41,7 +51,12 @@ ob_start();
 <li><p> Create directory 'C:\BUILD\swt-builddir'</p>
 <li><p> Install Windows Server 2003 SPI SDK in 'C:\BUILD\swt-builddir\MSSDKs\Windows Server 2003 SP1 SDK'</p>
 <li><p> Install MS VS2008 in 'C:\BUILD\swt-builddir\MSVCs\Microsoft Visual Studio 8'</p>
-<li><p> Install/Unzip Webkit SDK version 'r72896' and WebKitSupportLibrary</p>
+<li><p> Unzip the two Webkit SDKs into 'C:\BUILD\swt-builddir\webkit' as below directories:</p>
+	<ol>
+	<li><p>'C:\BUILD\swt-builddir\webkit\WebKit-r72896'</p>
+	<li><p>'C:\BUILD\swt-builddir\webkit\WebKitSupportLibrary'</p>
+	</ol>
+	<p>Note: SWT's Webkit support exists for SWT 32bit on Windows, so Webkit SDKs are consumed only by the SWT 32bit build process.</p>
 <li><p> Install/Unzip IBM(preferred) JDK8 64bit in 'C:\BUILD\swt-builddir\ibm-java-sdk-80-win-x86_64\sdk'</p>
 <li><p> Install/Unzip IBM(preferred) JDK8 32bit in 'C:\BUILD\swt-builddir\ibm-java-sdk-80-win-i386\sdk'</p>
 </ul>
