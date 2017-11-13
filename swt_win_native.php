@@ -10,7 +10,7 @@ ob_start();
 
 <h3>Software needed for setting up windows native build</h3>
 <ol>
-<li><p> Microsoft 'Visual Studio 2008'</p>
+<li><p> Microsoft 'Visual Studio C++ Express 2008', link to <a href="https://go.microsoft.com/?linkid=7729279">download page</a></p>
 <li><p> Microsoft 'Windows Server 2003 SP1 SDK', link to <a href="https://www.microsoft.com/en-us/download/details.aspx?id=12261">download page</a></p>
 <li><p> JDK8 64bit and 32bit (IBM JDK preferred), link to <a href="https://developer.ibm.com/javasdk/downloads/">download page</a></p>
 <li><p> Webkit SDKs:</p>
@@ -25,8 +25,8 @@ ob_start();
 and also on <a href="http://build.eclipse.org/eclipse/swt/WebKit-r72896.tar.bz2">backup link</a>.</b></p>
 <li> Cygwin [Optional for local setup]</p>
 </ol>
-<p>Note: <b>MSDN developer license</b> is a pre-requisite for Microsoft softwares.
-[Also work in-progress to move to "Visual Studio C++ Express 2008" which doesn't require MSDN license via bugzilla <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=521927">bug 521927</a>]</b></p>
+<p>Note: [Also work in-progress to move to latest "Win10 SDK" and "Visual Studio 2017 community edition" 
+via bugzilla <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=526802">bug 526802</a>]</b></p>
 
 <h3>Steps to set up Windows native build:</h3>
 <ol>
