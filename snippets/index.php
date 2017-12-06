@@ -523,6 +523,8 @@ create a snippet contribution report in Bugzilla</a>. Thanks in advance for your
         <li> <a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet331.java">different types of indent and combining wrap indent and bulleted lists</a></li>
         <li> <a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet332.java">using BidiSegmentEvent#segmentsChars to implement custom bidi segments</a></li>
         <li> <a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet356.java">embed an inline link in StyledText</a></li>
+        <li> <a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet368.java">line spacing provider in StyledText</a></li>
+        <li> <a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet369.java">dynamically customize line spacing provider in StyledText</a></li>
       </ul>
       <p></p>
 
