@@ -10,9 +10,8 @@ ob_start();
 
 <h3>Software needed for setting up windows native build</h3>
 <ol>
-<li><p> Microsoft 'Visual Studio C++ Express 2008', link to <a href="https://go.microsoft.com/?linkid=7729279">download page</a></p>
-<li><p> Microsoft 'Windows Server 2003 SP1 SDK', link to <a href="https://www.microsoft.com/en-us/download/details.aspx?id=12261">download page</a></p>
-<li><p> JDK8 64bit and 32bit (IBM JDK preferred), link to <a href="https://developer.ibm.com/javasdk/downloads/">download page</a></p>
+<li><p> Microsoft 'Visual Studio - Community 2017' and 'Windows 10 SDK', link to <a href="https://www.visualstudio.com/thank-you-downloading-visual-studio/?sku=Community&rel=15">download page</a></p>
+<li><p> JDK8 64bit and 32bit, link to <a href="http://www.oracle.com/technetwork/java/javase/overview/java8-2100321.html">Oracle JDK</a> or <a href="https://developer.ibm.com/javasdk/downloads/">IBM JDK</a></p>
 <li><p> Webkit SDKs:</p>
  <ol>
 	<li><p><a href="http://build.eclipse.org/eclipse/swt/WebKit-r72896.zip">WebKit-r72896</a></p>
@@ -25,7 +24,7 @@ ob_start();
 and also on <a href="http://build.eclipse.org/eclipse/swt/WebKit-r72896.tar.bz2">backup link</a>.</b></p>
 <li> Cygwin [Optional for local setup]</p>
 </ol>
-<p>Note: [Also work in-progress to move to latest "Win10 SDK" and "Visual Studio 2017 community edition" 
+<p>Note: [Moved to latest "Win10 SDK" and "Visual Studio 2017 community edition" 
 via bugzilla <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=526802">bug 526802</a>]</b></p>
 
 <h3>Steps to set up Windows native build:</h3>
@@ -43,22 +42,19 @@ via bugzilla <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=526802">bug 
 <li><p> Copy the public keys and register then on the Hudson machine.. this should enable password-less authentication.</p>
 </ul>
 
-<li><p> "swt-builddir" can be copied from one of the existing windows build machine, recommended path is C:\BUILD\swt-builddir<p>
-<p> This directory contains various libraries like Windows SDKs, Visual Studio libraries, JDK and libraries for compiling Webkit etc.. </p>
-<p>or</p>
-<p> Create your on 'swt-builddir' with below like directory structure:</p>
+<li><p> 'SWT_BUILDDIR' root directory contains various libraries like Visual Studio libraries, JDK and libraries for compiling Webkit etc.. </p>
+<p> Setup your own 'SWT_BUILDDIR' with below like directory structure:</p>
 <ul>
-<li><p> Create directory 'C:\BUILD\swt-builddir'</p>
-<li><p> Install Windows Server 2003 SPI SDK in 'C:\BUILD\swt-builddir\MSSDKs\Windows Server 2003 SP1 SDK'</p>
-<li><p> Install MS VS2008 in 'C:\BUILD\swt-builddir\MSVCs\Microsoft Visual Studio 8'</p>
-<li><p> Unzip the two Webkit SDKs into 'C:\BUILD\swt-builddir\webkit' as below directories:</p>
+<li><p> Install Visual Studio Community 2017 libraries in default location or in: 'SWT_BUILDDIR\Microsoft Visual Studio\2017'</p>
+<li><p> Windows10 SDK gets installed in "Program Files (x86)" directory by default like: 'C:\Program Files (x86)\Windows Kits\10'</p>
+<li><p> Unzip the two Webkit SDKs into 'SWT_BUILDDIR\Webkit' as below directories:</p>
 	<ol>
-	<li><p>'C:\BUILD\swt-builddir\webkit\WebKit-r72896'</p>
-	<li><p>'C:\BUILD\swt-builddir\webkit\WebKitSupportLibrary'</p>
+	<li><p>'SWT_BUILDDIR\Webkit\r72896'</p>
+	<li><p>'SWT_BUILDDIR\Webkit\SupportLibrary'</p>
 	</ol>
 	<p>Note: SWT's Webkit support exists for SWT 32bit on Windows, so Webkit SDKs are consumed only by the SWT 32bit build process.</p>
-<li><p> Install/Unzip IBM(preferred) JDK8 64bit in 'C:\BUILD\swt-builddir\ibm-java-sdk-80-win-x86_64\sdk'</p>
-<li><p> Install/Unzip IBM(preferred) JDK8 32bit in 'C:\BUILD\swt-builddir\ibm-java-sdk-80-win-i386\sdk'</p>
+<li><p> Install/Unzip JDK8 64bit in 'SWT_BUILDDIR\Java\Oracle\jdk1.8.0-latest\x64'</p>
+<li><p> Install/Unzip JDK8 32bit in 'SWT_BUILDDIR\Java\Oracle\jdk1.8.0-latest\x86'</p>
 </ul>
 
 <li> <p> For local testing, Run as Ant build below file with 'build_libraries' as target(assuming <a href="git.php">SWT setup</a> is in place):</p>
