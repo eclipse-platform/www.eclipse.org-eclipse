@@ -42,10 +42,10 @@ via bugzilla <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=526802">bug 
 <li><p> Copy the public keys and register then on the Hudson machine.. this should enable password-less authentication.</p>
 </ul>
 
-<li><p> 'SWT_BUILDDIR' root directory contains various libraries like Visual Studio libraries, JDK and libraries for compiling Webkit etc.. </p>
+<li><p> 'SWT_BUILDDIR' root directory contain various libraries like Visual Studio libraries, JDK and libraries for compiling Webkit etc.. </p>
 <p> Setup your own 'SWT_BUILDDIR' with below like directory structure:</p>
 <ul>
-<li><p> Install Visual Studio Community 2017 libraries in default location or in: 'SWT_BUILDDIR\Microsoft Visual Studio\2017'</p>
+<li><p> Install Visual Studio Community 2017 libraries in default location or in: 'SWT_BUILDDIR\Microsoft\Visual Studio\2017'</p>
 <li><p> Windows10 SDK gets installed in "Program Files (x86)" directory by default like: 'C:\Program Files (x86)\Windows Kits\10'</p>
 <li><p> Unzip the two Webkit SDKs into 'SWT_BUILDDIR\Webkit' as below directories:</p>
 	<ol>
