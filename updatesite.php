@@ -26,22 +26,7 @@ branches of SWT.</p>
 </td>
 </tr>
 <tr>
-<td> <strong>4.5 M1 - 4.5 M4 releases</strong> </td><td>http://www.eclipse.org/swt/updates/4.4</td>
-</tr>
-<tr>
-<td> <strong>4.4.x releases</strong> </td><td>http://www.eclipse.org/swt/updates/4.4</td>
-</tr>
-<tr>
-<td> <strong>4.3.x releases</strong> </td><td>http://www.eclipse.org/swt/updates/4.3</td>
-</tr>
-<tr>
-<td> <strong>3.8.x - 4.2.x releases</strong> </td><td> http://www.eclipse.org/swt/updates/3.8 </td>
-</tr>
-<tr>
-<td> <strong>3.6.x - 3.7.x releases</strong> </td><td> http://www.eclipse.org/swt/updates/3.6 </td>
-</tr>
-<tr>
-<td> <strong>3.5.x releases</strong> </td><td> http://www.eclipse.org/swt/updates/3.5 </td>
+<td> <strong>pre 4.5 M5 releases</strong> </td><td>SWT Tools have to be build manualy from the respective tag/branch for the release needed.</td>
 </tr>
 </table>
 
