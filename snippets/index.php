@@ -204,7 +204,8 @@ create a snippet contribution report in Bugzilla</a>. Thanks in advance for your
       <ul>
         <li> <a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet250.java">create a DateTime calendar and a DateTime time</a></li>
         <li> <a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet251.java">create a DateTime calendar and a DateTime time in a dialog</a></li>
-       </ul>
+       <li> <a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet370.java">DateTime with localization support></li>
+	</ul>
       <p></p>
 
     <li><a name="directorydialog"><b>DirectoryDialog</b></a>
