@@ -187,6 +187,7 @@ create a snippet contribution report in Bugzilla</a>. Thanks in advance for your
       <ul>
         <li> <a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet82.java">prevent an item from closing</a></li>
         <li> <a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet165.java">min and max buttons, close button and image only on selected tab</a></li>
+        <li> <a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet371.java">demonstration of a multi line CTabFolder</a></li>
       </ul>
       <p></p>
 
