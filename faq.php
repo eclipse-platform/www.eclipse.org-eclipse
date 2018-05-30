@@ -822,7 +822,9 @@ the SWT.CENTER style when creating a composite.
       on a per-instance basis, see <a href="#howusewebkit">How do I explicity use WebKit as the Browser's underlying renderer?</a> and
       <a href="#howusemozilla">How do I explicitly use Mozilla as the Browser's underlying renderer?</a>.
       <p>
-      Also note that as of Eclipse/SWT 3.7 it is possible to override the default native renderer that is used for <code>SWT.NONE</code>-style Browsers,
+      Note that as of Eclipse/SWT 4.8, the SWT.MOZILLA style is deprecated and XULRunner is not a supported native renderer on any of the supported platforms.
+      <p>
+      Note that as of Eclipse/SWT 3.7 it is possible to override the default native renderer that is used for <code>SWT.NONE</code>-style Browsers,
       see <a href="#browserspecifydefault">How do I specify the default type of native renderer that is used by the Browser?</a>.
   </dd>
 
@@ -880,26 +882,28 @@ the SWT.CENTER style when creating a composite.
   </dd>
 
   <dt><strong><a name="browserlinux">Q: What do I need to run the SWT Browser inside Eclipse on Linux?</a></strong></dt>
-  <dd>A: The browser versions that are supported by each Eclipse release are listed below.  Note that Mozilla/XULRunner versions that are not
+  <dd>A: The browser versions that are supported by each Eclipse release are listed below. Note that Mozilla/XULRunner versions that are not
     final releases (eg.- betas, alphas, nightlies) are <em>not</em> supported, even if their version technically satisfies a listed version range.
     Also note that the Mozilla/XULRunner must be compiled for the same architecture as the SWT jar that is being used.
     <ul>
-      <li>Eclipse 3.0.x: Mozilla 1.4 GTK2 - 1.6 GTK2.</li>
-      <li>Eclipse 3.1.x: Mozilla 1.4 GTK2 - 1.7.8 GTK2.</li>
-      <li>Eclipse 3.2.x: Mozilla 1.4 GTK2 - 1.7.x GTK2.</li>
-      <li>Eclipse 3.3.x: Mozilla 1.4 GTK2 - 1.7.x GTK2, XULRunner 1.8.x.</li>
-      <li>Eclipse 3.4.x: Mozilla 1.4 GTK2 - 1.7.x GTK2, XULRunner 1.8.x - 1.9.0.x.</li>
-      <li>Eclipse 3.5.0 and 3.5.1: Mozilla 1.4 GTK2 - 1.7.x GTK2, XULRunner 1.8.x - 1.9.1.x.</li>
-      <li>Eclipse 3.5.2: Mozilla 1.4 GTK2 - 1.7.x GTK2, XULRunner 1.8.x - 1.9.x and 3.6.x (but <em>not</em> 2.x).</li>
-      <li>Eclipse 3.6.x: Mozilla 1.4 GTK2 - 1.7.x GTK2, XULRunner 1.8.x - 1.9.x and 3.6.x (but <em>not</em> 2.x), WebKitGTK+ 1.2.x (see <a href="#browserwebkitgtk">How do I use the WebKit renderer on Linux-GTK?</a>)</li>
-      <li>Eclipse 3.7.x: Mozilla 1.4 GTK2 - 1.7.x GTK2, XULRunner 1.8.x - 1.9.x and 3.6.x (but <em>not</em> 2.x), WebKitGTK+ 1.2.x and newer</li>
-      <li>Eclipse 3.8.x: Mozilla 1.4 GTK2 - 1.7.x GTK2, XULRunner 1.8.x - 1.9.x, 3.6.x and 10.x (but <em>not</em> 2.x nor 4.x - 9.x), WebKitGTK+ 1.2.x and newer</li>
-      <li>Eclipse 4.2: Mozilla 1.4 GTK2 - 1.7.x GTK2, XULRunner 1.8.x - 1.9.x, 3.6.x and 10.x (but <em>not</em> 2.x nor 4.x - 9.x), WebKitGTK+ 1.2.x - 1.8.x</li>
-      <li>Eclipse 4.2.2: Mozilla 1.4 GTK2 - 1.7.x GTK2, XULRunner 1.8.x - 1.9.x, 3.6.x and 10.x (but <em>not</em> 2.x nor 4.x - 9.x), WebKitGTK+ 1.2.x and newer</li>
+      <li>Eclipse 4.8 and newer: XULRunner is no longer supported.</li>
+      <li>Eclipse 4.5 to 4.7: Mozilla 1.4 GTK2 - 1.7.x GTK2, XULRunner 1.8.x - 1.9.x, 3.6.x, 10.x, 24.x and 31.x (but <em>not</em> 2.x nor other unlisted versions), WebKitGTK+ 1.2.x and newer 
+      (Note:Eclipse 4.5 support for XULRunner 31.x is not available on Linux due to <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=467646">Bug 467646.</a>)
       <li>Eclipse 4.4: Mozilla 1.4 GTK2 - 1.7.x GTK2, XULRunner 1.8.x - 1.9.x, 3.6.x, 10.x and 24.x (but <em>not</em> 2.x nor other unlisted versions), WebKitGTK+ 1.2.x and newer 
       (Note:Eclipse 4.4 and newer uses GTK 3 by default and XULRunner cannot be used in this case as it is not ported to GTK 3 yet)</li>
-      <li>Eclipse 4.5 and newer: Mozilla 1.4 GTK2 - 1.7.x GTK2, XULRunner 1.8.x - 1.9.x, 3.6.x, 10.x, 24.x and 31.x (but <em>not</em> 2.x nor other unlisted versions), WebKitGTK+ 1.2.x and newer 
-      (Note:Eclipse 4.5 support for XULRunner 31.x is not available on Linux due to <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=467646">Bug 467646.</a>)
+      <li>Eclipse 4.2.2: Mozilla 1.4 GTK2 - 1.7.x GTK2, XULRunner 1.8.x - 1.9.x, 3.6.x and 10.x (but <em>not</em> 2.x nor 4.x - 9.x), WebKitGTK+ 1.2.x and newer</li>
+      <li>Eclipse 4.2: Mozilla 1.4 GTK2 - 1.7.x GTK2, XULRunner 1.8.x - 1.9.x, 3.6.x and 10.x (but <em>not</em> 2.x nor 4.x - 9.x), WebKitGTK+ 1.2.x - 1.8.x</li>
+      <li>Eclipse 3.8.x: Mozilla 1.4 GTK2 - 1.7.x GTK2, XULRunner 1.8.x - 1.9.x, 3.6.x and 10.x (but <em>not</em> 2.x nor 4.x - 9.x), WebKitGTK+ 1.2.x and newer</li>
+      <li>Eclipse 3.7.x: Mozilla 1.4 GTK2 - 1.7.x GTK2, XULRunner 1.8.x - 1.9.x and 3.6.x (but <em>not</em> 2.x), WebKitGTK+ 1.2.x and newer</li>
+      <li>Eclipse 3.6.x: Mozilla 1.4 GTK2 - 1.7.x GTK2, XULRunner 1.8.x - 1.9.x and 3.6.x (but <em>not</em> 2.x), WebKitGTK+ 1.2.x (see <a href="#browserwebkitgtk">How do I use the WebKit renderer on Linux-GTK?</a>)</li>
+      <li>Eclipse 3.5.2: Mozilla 1.4 GTK2 - 1.7.x GTK2, XULRunner 1.8.x - 1.9.x and 3.6.x (but <em>not</em> 2.x).</li>
+      <li>Eclipse 3.5.0 and 3.5.1: Mozilla 1.4 GTK2 - 1.7.x GTK2, XULRunner 1.8.x - 1.9.1.x.</li>
+      <li>Eclipse 3.4.x: Mozilla 1.4 GTK2 - 1.7.x GTK2, XULRunner 1.8.x - 1.9.0.x.</li>
+      <li>Eclipse 3.3.x: Mozilla 1.4 GTK2 - 1.7.x GTK2, XULRunner 1.8.x.</li>
+      <li>Eclipse 3.2.x: Mozilla 1.4 GTK2 - 1.7.x GTK2.</li>
+      <li>Eclipse 3.1.x: Mozilla 1.4 GTK2 - 1.7.8 GTK2.</li>
+      <li>Eclipse 3.0.x: Mozilla 1.4 GTK2 - 1.6 GTK2.</li>
+      
       <li>Also note that a Firefox release whose contained Gecko version correlates with the Mozilla versions above can also be used
       with Eclipse 3.1 and newer (Linux only), provided that it has been compiled with linkable Gecko libraries.  It is important to  
       note that Firefox downloads from mozilla.org do <em>not</em> satisfy this criteria, but Firefox installations that are
@@ -984,8 +988,10 @@ the SWT.CENTER style when creating a composite.
   </dd>
 
   <dt><strong><a name="howusemozilla">Q: How do I explicitly use Mozilla as the Browser's underlying renderer?</a></strong></dt>
-  <dd>A: A Browser can be created with style <code>SWT.MOZILLA</code> to specify that its renderer must be Mozilla-based (<em>@since 3.3</em>).  The runtime requirements for
-      using Mozilla-based Browsers in Eclipse/SWT 4.4 and newer are listed below.  Note that failure to meet these runtime requirements will cause the Browser instantiation to fail.
+  <dd>A: A Browser can be created with style <code>SWT.MOZILLA</code> to specify that its renderer must be Mozilla-based (<em>@since 3.3</em>). 
+      Note that <code>SWT.MOZILLA</code> style is deprecated in <em>4.8</em> and XULRunner is not supported in Eclipse 4.8 and newer versions.
+      <p>
+      The runtime requirements for using Mozilla-based Browsers in Eclipse/SWT 4.4 to 4.7 are listed below. Note that failure to meet these runtime requirements will cause the Browser instantiation to fail.
     <ul>
       <li>Runtime Platform:
         <ul>
