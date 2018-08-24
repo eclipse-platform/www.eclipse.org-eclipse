@@ -30,6 +30,8 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
   <li><a href="#cocoa64launch">Why do I get an UnsatisfiedLinkError when launching from the 64-bit Cocoa port?</a></li>
   <li><a href="#javawebstart">How can I deploy my standalone SWT application with Java Web Start?</a></li>
 </ul><ul>
+  <li><a href="#winexternalmanifestfile">How to enable external manifest file on Windows?</a></li>
+  <li><a href="#win10dpiawareness">How to enable 'dpiAwareness' setting on Windows 10?</a></li>
   <li><a href="#xpthemes">How do I make SWT use the Windows XP themes?</a></li>
   <li><a href="#gtkfontsandcolors">On gtk, how do I change the default fonts and colors of widgets?</a></li>
 </ul><ul>
@@ -411,10 +413,19 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
     <a href="http://www-106.ibm.com/developerworks/opensource/library/os-jws/">http://www-106.ibm.com/developerworks/opensource/library/os-jws/</a>.
   </dd>
 
-  <dt><strong><a name="xpthemes">Q: How do I make SWT use the Windows XP themes?</a></strong></dt>
-  <dd> A: In order for an application to use Windows XP themes, there must be a manifest file 
-    located in the same place as the executable that launches the application.
-    Here is a <a href="javaw.exe.manifest">sample manifest file</a> to download.
+  <dt><strong><a name="winexternalmanifestfile">Q: How to enable external manifest file on Windows?</a></strong></dt>
+  <dd> A: Follow below steps(ref. <a href="https://blogs.msdn.microsoft.com/chrisforster/2007/12/11/a-solution-and-workaround-to-the-change-in-manifest-preference-behaviour-in-windows-2003-sp1-and-windows-vista/">MSDN blog</a>)
+   on Windows to enable external manifest file:
+    <br><ul>
+      <li>Open Windows Registry Editor.</li>
+      <li>Locate and then click the following registry subkey:
+		HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\SideBySide</li>
+      <li>On the Edit menu, point to New, and then click DWORD Value.</li>
+      <li>Type PreferExternalManifest, and then press ENTER.</li>
+      <li>Right-click PreferExternalManifest, and then click Modify.</li>
+      <li>In the Edit DWORD Value dialog box, click Decimal under Base.</li>
+      <li>In the Value data box, type 1, and then click OK.</li>
+      <li>On the File menu, click Exit to close Registry Editor.</li>
     
     <p>The name of the manifest file must match the name of the executable.  
     In the case of eclipse, the executable is <tt>javaw.exe</tt> and the manifest file 
@@ -422,6 +433,19 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
     <tt>jre\bin</tt> folder for the VM you use to launch Eclipse.  Note: the 
     <tt>eclipse.exe</tt> executable does not launch Eclipse; <tt>eclipse.exe</tt>
     displays a splash screen and then invokes the Java VM.</p>
+    <p>Here is a <a href="javaw.exe.manifest">sample manifest file</a> to download.</p>
+  </dd>
+
+  <dt><strong><a name="win10dpiawareness">Q: How to enable 'dpiAwareness' setting on Windows 10?</a></strong></dt>
+  <dd> A: In order to enable dpiawareness on Windows10, there must be a manifest file 
+    located in the same place as the executable that launches the application.
+    <br>Here is a <a href="javaw.exe.manifest">sample manifest file</a> to download, for more details on <a href="https://www.eclipse.org/swt/faq.php#winexternalmanifestfile">how to enable external manifest file on Windows</a> 
+  </dd>
+
+  <dt><strong><a name="xpthemes">Q: How do I make SWT use the Windows XP themes?</a></strong></dt>
+  <dd> A: In order for an application to use Windows XP themes, there must be a manifest file 
+    located in the same place as the executable that launches the application.
+    <br>Here is a <a href="javaw.exe.manifest">sample manifest file</a> to download, for more details on <a href="https://www.eclipse.org/swt/faq.php#winexternalmanifestfile">how to enable external manifest file on Windows</a> 
     
     <p>Note: As of SWT 3.2, the manifest file is no longer needed.</p>
   </dd>
