@@ -123,6 +123,7 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
       <li>For patches across multiple platform, the patch should have been tested on all affected platforms.
       <li>Also if you expect some behavior change in Eclipse, always launch Eclipse in self-hosted mode to verify the behavior.
       </ul>
+      <p><strong>Note: Patches satisfying all the items on the list may/will be reviewed with priority.</strong>
   </dd>
 
   <dt><strong><a name="whatpackagesinSWT"> Q: What packages make up SWT?</a></strong></dt>
