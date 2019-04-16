@@ -11,6 +11,7 @@ ob_start();
 the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT developer mailing list</a>.</p>
 
 <ul>
+  <li><a href="#swtpatchtestingdetails">Testing details that should be accompanied with any SWT patches up for review?</a></li>
   <li><a href="#whatpackagesinSWT">What packages make up SWT?</a></li>
   <li><a href="#supportJavaBeans">Does SWT support JavaBeans?</a></li>
   <li><a href="#guibuilder">Is there a GUI Builder for SWT?</a></li>
@@ -108,6 +109,22 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
 <p></p>
 
 <dl>
+  <dt><strong><a name="swtpatchtestingdetails"> Q: Testing details that should be accompanied with any SWT patches up for review?</a></strong></dt>
+  <dd>A:  Details of the kind of testing done for any specified SWT patch up for review.<br>
+      <p>Here is the complete list:</p>
+      <ul>
+      <li>Results of the test snippet (if any) associated with that specified bug.
+      <li>Results of the Widget's new behavior(if applicable) as tested with various SWT examples: ControlExample.java, CustomControlExample.java and BrowserExample.java
+      <li>For changes done to any specific widget, which all related SWT snippets are covered from the list of: <a href="https://www.eclipse.org/swt/snippets/">SWT Snippets</a>.
+      <li>When adding a new API always recommend to add JUnits test as separate gerrit patch(as gerrit validation will only succeed when the new API is in master and an IBuild exists)
+      <li>For Windows only patch, which all operating systems are covered like Windows7, Windows10(at times specific version of Win10 if applicable)
+      <li>For MAC only patch, which all operating systems are covered (Mac10.14, Mac10.13 etc...)
+      <li>For Linux only patch, which all GTK versions are covered (GTK3, GTK4 or both) and also which all windowing systems are covered.
+      <li>For patches across multiple platform try to come up with at-least two platform coverage if possible.
+      <li>Also if you expect some behavior change in Eclipse always, recommended to launch Eclipse in self-hosted mode to verify the behavior.
+      </ul>
+  </dd>
+
   <dt><strong><a name="whatpackagesinSWT"> Q: What packages make up SWT?</a></strong></dt>
   <dd>A:  Package names in SWT begin with the prefix <strong>org.eclipse.swt</strong>.<br>
       <p>Here is the complete list:</p>
