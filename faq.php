@@ -11,7 +11,7 @@ ob_start();
 the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT developer mailing list</a>.</p>
 
 <ul>
-  <li><a href="#swtpatchtestingdetails">What are the testing details that need to be accompanied with an SWT patch submitted for review?</a></li>
+  <li><a href="#swtpatchtestingdetails">What are the testing details that should be accompanied with an SWT patch submitted for review?</a></li>
   <li><a href="#whatpackagesinSWT">What packages make up SWT?</a></li>
   <li><a href="#supportJavaBeans">Does SWT support JavaBeans?</a></li>
   <li><a href="#guibuilder">Is there a GUI Builder for SWT?</a></li>
@@ -109,21 +109,22 @@ the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT devel
 <p></p>
 
 <dl>
-  <dt><strong><a name="swtpatchtestingdetails"> Q: What are the testing details that need to be accompanied with an SWT patch submitted for review?</a></strong></dt>
+  <dt><strong><a name="swtpatchtestingdetails"> Q: What are the testing details that should be accompanied with an SWT patch submitted for review?</a></strong></dt>
   <dd>A:  Testing details that are needed to be accompanied with an SWT patch submitted for review.<br>
-      <p>Here is the complete list that needs to be associated with the bugzilla bug report:</p>
+      <p>The SWT team is happy to receive patches and understand that providing patches is a challenging task for new contributors.</p>
+      <p>The following is a list that could be associated with the bugzilla bug report:</p>
       <ul>
       <li>Results of the test snippet (if any) associated with that specified bug.
-      <li>Results of the Widget's new behavior(if applicable) as tested with various SWT examples: ControlExample.java, CustomControlExample.java and BrowserExample.java
-      <li>For changes done to any specific widget, which all related SWT snippets are covered from the list of: <a href="https://www.eclipse.org/swt/snippets/">SWT Snippets</a>.
-      <li>When adding a new API always add new JUnit tests as separate gerrit patch(as gerrit validation will only succeed when the new API is in master and an IBuild exists)
-      <li>For Windows only patch, which all operating systems are covered like Windows7, Windows10(at times specific version of Win10 if applicable)
+      <li>Results of the Widget's new behavior(if applicable) should be tested with various SWT examples: ControlExample.java, CustomControlExample.java and BrowserExample.java
+      <li>For changes done to any specific widget, the  widget specific SWT snippets from the list of: <a href="https://www.eclipse.org/swt/snippets/">SWT Snippets</a> should be used for testing.
+      <li>When adding a new API try to add new JUnit tests as separate gerrit patch(as gerrit validation will only succeed when the new API is in master and an IBuild exists)
+      <li>For Windows only patch, which all operating systems are covered like Windows7, Windows10 (at times specific version of Win10 if applicable)
       <li>For MAC only patch, patch should be tested on latest OS version.
       <li>For Linux only patch, which all GTK versions are covered (GTK3, GTK4 or both) and also if applicable what all desktop managers(gnome, wayland etc..) are covered.
-      <li>For patches across multiple platform, the patch should have been tested on all affected platforms.
+      <li>For patches across multiple platform, the patch should have been tested on all affected platforms, if possible for the contributor
       <li>Also if you expect some behavior change in Eclipse, always launch Eclipse in self-hosted mode to verify the behavior.
       </ul>
-      <p><strong>Note: Patches satisfying all the items on the list may/will be reviewed with priority.</strong>
+      <p><strong>Note: Patches satisfying all the items on the list will be reviewed with priority.</strong>
   </dd>
 
   <dt><strong><a name="whatpackagesinSWT"> Q: What packages make up SWT?</a></strong></dt>
