@@ -61,9 +61,9 @@ the <em>Platform Plug-in Developer Guide</em>. To get there in Eclipse, select
 
 <p>In addition to reading SWT documentation inside Eclipse, you can read it online here:</p>
   <ul>
-    <li><a href="http://help.eclipse.org/luna/topic/org.eclipse.platform.doc.isv/guide/swt.htm">Programmer's Guide</a></li>
-    <li><a href="http://help.eclipse.org/luna/index.jsp?topic=/org.eclipse.platform.doc.isv/reference/api/org/eclipse/swt/package-summary.html">API Reference</a></li>
-    <li><a href="http://help.eclipse.org/luna/topic/org.eclipse.platform.doc.isv/samples/samples.html">Examples Guide</a></li>
+    <li><a href="https://help.eclipse.org/topic/org.eclipse.platform.doc.isv/guide/swt.htm">Programmer's Guide</a></li>
+    <li><a href="https://help.eclipse.org/index.jsp?topic=/org.eclipse.platform.doc.isv/reference/api/org/eclipse/swt/package-summary.html">API Reference</a></li>
+    <li><a href="https://help.eclipse.org/topic/org.eclipse.platform.doc.isv/samples/samples.html">Examples Guide</a></li>
 	<li><a href="javadoc.php">Online javadoc</a></li>
 	<li><a href="http://www.eclipse.org/documentation/">Older versions of the Eclipse documentation</a></li>
   </ul>
