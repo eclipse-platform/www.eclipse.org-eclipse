@@ -117,8 +117,7 @@ on which it is implemented.</p>
 </div>
 
 <div id="rightcolumn">
-	<p><img src="images/vis-example.png" alt="Vista" width="225" height="225"></p>
-	<p><img src="images/win-example.png" alt="Windows" width="216" height="204"></p>
+	<p><img src="images/win-example.png" alt="Windows" width="229" height="222"></p>
 	<p><img src="images/lin-example.png" alt="Linux" width="212" height="224"></p>
 	<p><img src="images/mac-example.png" alt="Mac OS X" width="232" height="237"></p>
 </div>
