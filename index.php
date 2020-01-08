@@ -25,28 +25,21 @@ on which it is implemented.</p>
 	<h2>Releases</h2>
 
 	<table width="100%">
-		<tr><td width="50%" valign="top">
-			<table width="100%">
-			<tr><td>
-			<b><font size="+1">Stable</font></b><br>
-			<a href="http://download.eclipse.org/eclipse/downloads/">Eclipse download page</a>
-				<span style="white-space: nowrap;">
-				<small>For links to the stable SWT Binary and Source for all platforms,<br>select the entry for the latest official release 
-                                       and then scroll to bottom of page.<br></small></span>
-				</td></tr>
-			</table>
-		</td>
-		<td width="50%" valign="top">
-			<table width="100%">
-				<tr><td>
+		<tr><td width="100%" valign="top">
+			<p>
+				<b><font size="+1">Stable</font></b><br>
+				<a href="http://download.eclipse.org/eclipse/downloads/">Eclipse download page</a><br>
+				For links to the stable SWT Binary and Source for all platforms, select the entry for the latest official release and then scroll to bottom of page.
+			</p>
+		</td></tr>
+		<tr><td width="100%" valign="top">
+			<p>
 				<b><font size="+1">Development</font></b><br>
-				<a href="http://download.eclipse.org/eclipse/downloads/">Eclipse download page</a>
-				<span style="white-space: nowrap;">
-				<small>For links to SWT Binary and Source for all platforms,<br>select current integration build (select entry starting with I in the
-	                               Latest Downloads) and then scroll to bottom of page.<br></small></span>
-				</td></tr>
-			</table>
-		</td>
+				<a href="http://download.eclipse.org/eclipse/downloads/">Eclipse download page</a><br>
+				For links to SWT Binary and Source for all platforms, select current integration build 
+				(select entry starting with I in theLatest Downloads) and then scroll to bottom of page.
+			</p>
+		</td></tr>
 	</table>
 </div>
 
