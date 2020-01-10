@@ -111,8 +111,8 @@ on which it is implemented.</p>
 
 <div id="rightcolumn">
 	<p><img src="images/win-example.png" alt="Windows" width="212" height="217"></p>
-	<p><img src="images/lin-example.png" alt="Linux" width="212" height="224"></p>
-	<p><img src="images/mac-example.png" alt="Mac OS X" width="232" height="237"></p>
+	<p><img src="images/lin-example.png" alt="Linux" width="212" height="283"></p>
+	<p><img src="images/mac-example.png" alt="Mac OS X" width="212" height="217"></p>
 </div>
 <?php 
 $html = ob_get_clean();
