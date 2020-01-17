@@ -27,24 +27,38 @@ on which it is implemented.</p>
 	<table width="100%">
 		<tr><td width="100%" valign="top">
 			<p>
-				<b><font size="+1">Release</font></b><br>
-				<a href="https://download.eclipse.org/eclipse/downloads/index.html#Latest_Release">Eclipse download page Latest Releases</a><br>
-				For links to the stable SWT Binary and Source for all platforms, select the entry for the latest official release and then click on SWT Binary and Source from the menu on the left.
+				<b><font size="+1">Latest Release</font></b><br>
+				<a href="https://download.eclipse.org/eclipse/downloads/index.html#Latest_Release">Download page</a><br>
+				For links to latest released version of the SWT Binary and Source for all platforms, select the entry for the latest official release and then click on SWT Binary and Source from the menu on the left.
 			</p>
 		</td></tr>
 		<tr><td width="100%" valign="top">
 			<p>
-				<b><font size="+1">Stable</font></b><br>
-				<a href="https://download.eclipse.org/eclipse/downloads/index.html#Stable_Builds">Eclipse download page Stable builds (milestone builds)</a><br>
-				For links to the stable SWT Binary and Source for all platforms, select the entry for the latest milestone build and then click on SWT Binary and Source from the menu on the left.
+				<b><font size="+1">Stable Builds</font></b><br>
+				<a href="https://download.eclipse.org/eclipse/downloads/index.html#Stable_Builds">Download page</a><br>
+				For links to stable milestone builds of the SWT Binary and Source for all platforms, select the entry for the latest milestone build and then click on SWT Binary and Source from the menu on the left.
 			</p>
 		</td></tr>
 		<tr><td width="100%" valign="top">
 			<p>
-				<b><font size="+1">Development</font></b><br>
-				<a href="https://download.eclipse.org/eclipse/downloads/index.html#Integration_Builds">Eclipse download page developmet builds</a><br>
-				For links to SWT Binary and Source for all platforms, select current integration build 
+				<b><font size="+1">Integration Builds</font></b><br>
+				<a href="https://download.eclipse.org/eclipse/downloads/index.html#Integration_Builds">Download page</a><br>
+				For links to daily Integration builds of SWT Binary and Source for all platforms, select a current integration build 
 				(select entry starting with I in the Integration builds) and then click on SWT Binary and Source from the menu on the left.
+			</p>
+		</td></tr>
+		<tr><td width="100%" valign="top">
+			<p>
+				<b><font size="+1">Maven Artifacts</font></b><br>
+				SWT fragments for all the supported platforms are published to Maven Central for every release. The table below contains the links to the artifacts.
+				<table border="1" cellpadding="3" cellspacing="1">
+					<tr>
+						<td width="25%"><a href="https://mvnrepository.com/artifact/org.eclipse.platform/org.eclipse.swt.win32.win32.x86_64">Windows</a></td>
+						<td width="25%"><a href="https://mvnrepository.com/artifact/org.eclipse.platform/org.eclipse.swt.cocoa.macosx.x86_64">Mac/Cocoa</a></td>
+						<td width="25%"><a href="https://mvnrepository.com/artifact/org.eclipse.platform/org.eclipse.swt.gtk.linux.x86_64">Linux/GTK (x86 64-bit)</a></td>
+						<td width="25%"><a href="https://mvnrepository.com/artifact/org.eclipse.platform/org.eclipse.swt.gtk.linux.ppc64le">Linux/GTK (ppcle 64-bit)</a></td>
+					</tr>
+				</table>
 			</p>
 		</td></tr>
 	</table>
