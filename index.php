@@ -22,22 +22,29 @@ on which it is implemented.</p>
 </div>
 
 <div class="homeitem">
-	<h2>Releases</h2>
+	<h2>Downloads</h2>
 
 	<table width="100%">
 		<tr><td width="100%" valign="top">
 			<p>
+				<b><font size="+1">Release</font></b><br>
+				<a href="https://download.eclipse.org/eclipse/downloads/index.html#Latest_Release">Eclipse download page Latest Releases</a><br>
+				For links to the stable SWT Binary and Source for all platforms, select the entry for the latest official release and then click on SWT Binary and Source from the menu on the left.
+			</p>
+		</td></tr>
+		<tr><td width="100%" valign="top">
+			<p>
 				<b><font size="+1">Stable</font></b><br>
-				<a href="http://download.eclipse.org/eclipse/downloads/">Eclipse download page</a><br>
-				For links to the stable SWT Binary and Source for all platforms, select the entry for the latest official release and then scroll to bottom of page.
+				<a href="https://download.eclipse.org/eclipse/downloads/index.html#Stable_Builds">Eclipse download page Stable builds (milestone builds)</a><br>
+				For links to the stable SWT Binary and Source for all platforms, select the entry for the latest milestone build and then click on SWT Binary and Source from the menu on the left.
 			</p>
 		</td></tr>
 		<tr><td width="100%" valign="top">
 			<p>
 				<b><font size="+1">Development</font></b><br>
-				<a href="http://download.eclipse.org/eclipse/downloads/">Eclipse download page</a><br>
+				<a href="https://download.eclipse.org/eclipse/downloads/index.html#Integration_Builds">Eclipse download page developmet builds</a><br>
 				For links to SWT Binary and Source for all platforms, select current integration build 
-				(select entry starting with I in theLatest Downloads) and then scroll to bottom of page.
+				(select entry starting with I in the Integration builds) and then click on SWT Binary and Source from the menu on the left.
 			</p>
 		</td></tr>
 	</table>
