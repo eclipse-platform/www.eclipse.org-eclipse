@@ -54,8 +54,8 @@ ob_start();
 	<h2><a href="#insideEclipse" name="insideEclipse"></a>Running the SWT Examples inside Eclipse</h2>
 
 	<ol>
-		<li>To get the examples, go to the Eclipse downloads page at <a href="http://download.eclipse.org/eclipse/downloads">
-		  http://download.eclipse.org/eclipse/downloads</a>.</li>
+		<li>To get the examples, go to the Eclipse downloads page at <a href="https://download.eclipse.org/eclipse/downloads">
+		  https://download.eclipse.org/eclipse/downloads</a>.</li>
 		<li>Click on the Eclipse build that you would like examples for
 		  (i.e. the Eclipse build that you are running; typically the latest Stable Build).</li>
 		<li>Scroll down until you see "Example Plug-ins". Read the paragraph on installing them, and select the download for your platform.</li>
@@ -95,8 +95,8 @@ ob_start();
 
 	<p>(NOTE: these instructions will only work for Eclipse 3.3 and newer) To run the ControlExample or CustomControlExample standalone:</p>
 	<ol>
-		<li>Go to the Eclipse downloads page at <a href="http://download.eclipse.org/eclipse/downloads/">
-			http://download.eclipse.org/eclipse/downloads/</a>.</li>
+		<li>Go to the Eclipse downloads page at <a href="https://download.eclipse.org/eclipse/downloads/">
+			https://download.eclipse.org/eclipse/downloads/</a>.</li>
 		<li>Click on the Eclipse build that you would like examples for
 			(i.e. the Eclipse/SWT build that you are running; typically the latest Stable Build).</li>
 		<li>Scroll down until you see "Example Plug-ins", download the .zip for your platform, and extract it to your local machine.</li>

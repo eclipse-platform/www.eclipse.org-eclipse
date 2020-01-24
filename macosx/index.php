@@ -18,9 +18,7 @@ ob_start();
     Disk images are automatically mounted on download, presenting
     the user with the bundle icon so it can be dragged to their Applications
     folder.  More information on application
-    bundles and disk images can be found in the
-    <a href="http://developer.apple.com/documentation/DeveloperTools/Conceptual/SoftwareDistribution/index.html">Software Distribution</a>
-    section of the Apple documentation.</p>
+    bundles and disk images can be found in Apple documentation.</p>
 
     <center><table>
     <tr><td><a href="SWTHello.dmg"><img style="display: block; text-align: center; margin: auto;" src="dmgicon.png" border="0" alt="SWTHello.dmg"></a>

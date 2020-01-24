@@ -11,7 +11,7 @@ ob_start();
 <p>First, create jar archives with SWT and its libraries for each platform that you wish to run on:</p>
 <ol>
 	<li>Create a directory <em>&lt;yourApplication&gt;</em> for collecting the deployable .jar archives.</li>
-	<li>Go to <a href="http://www.eclipse.org/swt/">http://www.eclipse.org/swt</a> and download the desired SWT Release for one of your target platforms. Extract this into a convenient location.</li>
+	<li>Go to <a href="https://www.eclipse.org/swt/">https://www.eclipse.org/swt</a> and download the desired SWT Release for one of your target platforms. Extract this into a convenient location.</li>
 	<li>Rename the <em>swt.jar</em> file in the extracted folder to a name that describes its target platform, such as <em>swt-&lt;ws&gt;-&lt;os&gt;-&lt;arch&gt;.jar</em>.</li>
 	<li><em>(If you are packaging SWT version 3.3 or newer then this step should be skipped)</em> Create a .jar archive of SWT's native libraries for the target platform by going into the extracted folder and executing <em>"<code>jar cvf swt-native-&lt;ws&gt;-&lt;os&gt;-&lt;arch&gt;.jar *.&lt;library-suffix&gt;</code>"</em>.
 		<em>&lt;library-suffix&gt;</em> will be <em>"dll"</em> for Windows and <em>"so"</em> for Linux and Solaris.</li>
@@ -32,19 +32,19 @@ ob_start();
 	<li>Repeat step 2 for each of the <em>swt-&lt;ws&gt;-&lt;os&gt;-&lt;arch&gt;.jar</em> and <em>swt-native-&lt;ws&gt;-&lt;os&gt;-&lt;arch&gt;.jar</em> archives.</li>
 </ol>
 
-<p>The last step is to create a .jnlp file that will be used to launch your application through JWS <a href="http://java.sun.com/j2se/1.5.0/docs/guide/javaws/developersguide/syntax.html">(jnlp syntax guide)</a>.
+<p>The last step is to create a .jnlp file that will be used to launch your application through JWS <a href="https://docs.oracle.com/javase/1.5.0/docs/guide/javaws/developersguide/syntax.html">(jnlp syntax guide)</a>.
 The example .jnlp file below demonstrates how to specify the SWT jars based on the target platform
 <em>(note that if you are packaging SWT version 3.3 or newer then the &lt;nativelib&gt; tags are not needed)</em>.</p>
 
 <table style="border: solid 1px #000000; margin-left: auto; margin-right: auto; background-color: #eeeeff">
 <tr><td><pre style="margin: 0; padding:0;">&lt;?xml version="1.0" encoding="utf-8"?&gt;
 &lt;jnlp spec="1.0+"
-	codebase="http://www.eclipse.org/swt/jws"
+	codebase="https://www.eclipse.org/swt/jws"
 	href="controlexample.jnlp"&gt;
 	&lt;information&gt;
   		&lt;title&gt;Control Example&lt;/title&gt;
   		&lt;vendor&gt;eclipse.org&lt;/vendor&gt;
-  		&lt;homepage href="http://www.eclipse.org/swt/jws/" /&gt;
+  		&lt;homepage href="https://www.eclipse.org/swt/jws/" /&gt;
   		&lt;description&gt;A demonstration of SWT Widgets&lt;/description&gt;
   		&lt;description&gt;Control Example&lt;/description&gt;
 	&lt;/information&gt;
@@ -109,7 +109,7 @@ The example .jnlp file below demonstrates how to specify the SWT jars based on t
 <p>Now you can test the deployment of your application by pointing your browser at your .jnlp file (note that you must either have Java 1.5 or JWS
 installed on your machine). You can also create a link to the .jnlp file from an HTML page, as shown below. If all steps have been done correctly then
 JWS will ask if you want to trust your own unverified signature, and after answering Yes, your application will appear.  (Example:
-<a href="http://www.eclipse.org/swt/jws/controlexample.jnlp">http://www.eclipse.org/swt/jws/controlexample.jnlp</a>).</p>
+<a href="https://www.eclipse.org/swt/jws/controlexample.jnlp">https://www.eclipse.org/swt/jws/controlexample.jnlp</a>).</p>
 
 <img src="./swtjwscontrol.png" alt="SWT Control Example launched via Java Web Start">
 
