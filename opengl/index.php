@@ -20,14 +20,14 @@ provides a thin layer above the window-system specific integration API,
 enabling applications to use their Java OpenGL binding of choice.</p>
 
 <ol>
-<li>The <a href="http://www.lwjgl.org/">Lightweight Java Game Library
+<li>The <a href="https://www.lwjgl.org/">Lightweight Java Game Library
 (LWJGL)</a> is a Java binding for OpenGL which supports OpenGL 2.0 and
 many interesting extensions.  For an example using <i>LWJGL</i> with SWT, see
-<a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet195.java">Snippet 195</a>.
+<a href="https://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet195.java">Snippet 195</a>.
 <p></p>
-<li><a href="http://jogl.dev.java.net/">JOGL</a> is a Java binding for OpenGL.
+<li><a href="https://jogamp.org/jogl/www/">JOGL</a> is a Java binding for OpenGL.
 For an example using <i>JOGL</i> with SWT, see
-<a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet209.java">Snippet 209</a>.
+<a href="https://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet209.java">Snippet 209</a>.
 <p></p>
 <li><a href="http://gljava.sourceforge.net/">gljava</a> is a Java binding
 for OpenGL which aims to be simple and thin.  <i>gljava</i> is reported to work
@@ -42,7 +42,7 @@ To run the OpenGL view example, simply extract the zip and the
 <i>org.eclipse.opengl</i> plugin to your Eclipse plugins folder. To run the standalone
 example, download the examples zip along with the <i>org.eclipse.opengl</i> zip for
 your platform and import them into your workspace.  There is also a stand-alone snippet that uses this package
-(<a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet174.java">Snippet 174</a>).
+(<a href="https://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet174.java">Snippet 174</a>).
 </p>
 
 <p><b>If you are using SWT 3.2 or newer then you should use the supported OpenGL binding that is

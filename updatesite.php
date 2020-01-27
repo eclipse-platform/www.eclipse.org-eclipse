@@ -18,15 +18,15 @@ branches of SWT.</p>
 </th><th> Update Site URL
 </th></tr>
 <tr>
-<td> <strong>4.14 and newer</strong> </td>
+<td> <strong>4.5 and newer</strong> </td>
 <td>Part of the main Platform P2 repository.
-<ul><li>Use Release update site to receive updates for a particular release - https://download.eclipse.org/eclipse/updates/4.14 (or newer version)</li>
+<ul><li>Use Release update site to receive updates for a particular release - https://download.eclipse.org/eclipse/updates/4.5 (or newer version)</li>
 <li>Milestone update site to receive updates in the current milestone - https://download.eclipse.org/eclipse/updates/milestones</li>
 <li>I-build update site to receive updates in the current I-build - https://download.eclipse.org/eclipse/updates/I-builds</li></ul>
 </td>
 </tr>
 <tr>
-<td> <strong>pre 4.14 releases</strong> </td><td>SWT Tools have to be build manualy from the respective tag/branch for the release needed.</td>
+<td> <strong>pre 4.5 releases</strong> </td><td>SWT Tools have to be build manualy from the respective tag/branch for the release needed.</td>
 </tr>
 </table>
 
