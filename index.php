@@ -53,10 +53,10 @@ on which it is implemented.</p>
 				SWT fragments for all the supported platforms are published to Maven Central for every release. The table below contains the links to the artifacts.
 				<table border="1" cellpadding="3" cellspacing="1">
 					<tr>
-						<td width="25%"><a href="https://mvnrepository.com/artifact/org.eclipse.platform/org.eclipse.swt.win32.win32.x86_64">Windows</a></td>
-						<td width="25%"><a href="https://mvnrepository.com/artifact/org.eclipse.platform/org.eclipse.swt.cocoa.macosx.x86_64">Mac/Cocoa</a></td>
-						<td width="25%"><a href="https://mvnrepository.com/artifact/org.eclipse.platform/org.eclipse.swt.gtk.linux.x86_64">Linux/GTK (x86 64-bit)</a></td>
-						<td width="25%"><a href="https://mvnrepository.com/artifact/org.eclipse.platform/org.eclipse.swt.gtk.linux.ppc64le">Linux/GTK (ppcle 64-bit)</a></td>
+						<td width="25%" align="center"><a href="https://mvnrepository.com/artifact/org.eclipse.platform/org.eclipse.swt.win32.win32.x86_64">Windows</a></td>
+						<td width="25%" align="center"><a href="https://mvnrepository.com/artifact/org.eclipse.platform/org.eclipse.swt.cocoa.macosx.x86_64">Mac/Cocoa</a></td>
+						<td width="25%" align="center"><a href="https://mvnrepository.com/artifact/org.eclipse.platform/org.eclipse.swt.gtk.linux.x86_64">Linux/GTK (x86 64-bit)</a></td>
+						<td width="25%" align="center"><a href="https://mvnrepository.com/artifact/org.eclipse.platform/org.eclipse.swt.gtk.linux.ppc64le">Linux/GTK (ppcle 64-bit)</a></td>
 					</tr>
 				</table>
 			</p>
@@ -79,11 +79,9 @@ on which it is implemented.</p>
 		<li><a href="eclipse.php">How to develop SWT applications in Eclipse</a></li>
 		<li><a href="examples.php">How to run the ControlExample and other SWT examples</a></li>
 		<li><a href="macosx/">How to deploy SWT applications on Mac OS X</a></li>
-		<li><a href="jws/">How to deploy SWT applications using Java Web Start</a></li>
 		<li><a href="jnigen.php">How to generate the SWT JNI Code</a></li>
 		<li><a href="macgen.php">How to generate the SWT JNI Code for Cocoa</a></li>
 		<li><a href="opengl/">Using OpenGL in SWT Applications</a></li>
-		<li><a href="cocoaport.php">How to help with the SWT Cocoa port</a></li>
 		<li><a href="http://www.eclipse.org/articles/index.php?sort=date&category=SWT">Many more articles about SWT</a> on Eclipse Corner at eclipse.org</li>
 		<li><a href="docs.php">Full list of articles and documentation</a></li>
 	</ul>
@@ -93,6 +91,7 @@ on which it is implemented.</p>
 	<h2>Resources</h2>
 
 	<ul>
+		<li><a href="http://wiki.eclipse.org/SWT">SWT wiki</a></li>
 		<li><a href="widgets/">Widget screenshots</a> with links to documentation</li>
 		<li><a href="snippets/">Snippets</a>, helpful little code examples</li>
 		<li><a href="examples.php">Examples</a>, helpful big code examples</li>

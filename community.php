@@ -7,48 +7,15 @@ ob_start();
 <div id="midcolumn">
 <h1>The SWT Community Page</h1>
 
-<p>This page provides links to additional SWT ports, widgets, applications, and information
+<p>This page provides links to additional SWT widgets, applications, and information
 maintained elsewhere in the community.  If you have a project and would like to
 see it listed here, please let us know on the
-<a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT developer mailing list</a>.</p>
-
-<div class="homeitem">
-<h2>Code and Bug Fixes</h2>
-
-<p>Many thanks to the <a href="contributors.txt">people</a> who have
-contributed code and bug fixes to SWT.</p>
-</div>
+<a href="http://dev.eclipse.org/mailman/listinfo/platform-dev">Platform developer mailing list</a>.</p>
 
 <div class="homeitem">
 <h2>SWT Wiki</h2>
 
 <p>The community is welcome to use and contribute to the <a href="http://wiki.eclipse.org/SWT">SWT wiki</a>.</p>
-</div>
-
-<div class="homeitem">
-<h2>Ports</h2>
-
-<p>Ivan Markov is working on a port of SWT to the
-<a href="http://www.fox-toolkit.org/">Fox Widget Toolkit</a>.</p>
-
-<ul>
-  <li>Homepage: <a href="http://swtfox.sf.net">http://swtfox.sf.net/</a></li>
-  <li>CVS: <a href="http://cvs.sourceforge.net/viewcvs.py/swtfox/">:pserver:anonymous@cvs.sourceforge.net:/cvsroot/swtfox</a></li>
-</ul>
-
-<p>Christopher Deckers is working on a port of SWT on top of the Swing widget
-toolkit.</p>
-
-<ul>
-  <li>Homepage: <a href="http://sourceforge.net/projects/swtswing">http://sourceforge.net/projects/swtswing/</a></li>
-  <li>CVS: <a href="http://cvs.sourceforge.net/viewcvs.py/swtswing/">:pserver:anonymous@cvs.sourceforge.net:/cvsroot/swtswing</a></li>
-</ul>
-
-<p>A port exists for the <a href="http://digitalmars.com/d/index.html">D programming language</a>.  It currently runs on Windows (x86) and Linux GTK (x86), and a Mac Cocoa implementation has been started.
-
-<ul>
-  <li>Homepage: <a href="http://www.dsource.org/projects/dwt">http://www.dsource.org/projects/dwt</a></li>
-</ul>
 </div>
 
 <div class="homeitem">
