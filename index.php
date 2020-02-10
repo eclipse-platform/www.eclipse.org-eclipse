@@ -70,6 +70,7 @@ on which it is implemented.</p>
 	<ul>
 		<li><a href="fixbugs.php">How to contribute a feature or bug fix to SWT</a></li>
 		<li><a href="git.php">How to get the SWT source code via Git</a></li>
+		<li><a href="swt_win_native.php">How to setup SWT Windows native build environment</a></li>
 	</ul>
 </div>
 <div class="homeitem">
