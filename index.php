@@ -110,13 +110,6 @@ on which it is implemented.</p>
 <div class="homeitem">
 	<h2><a href="#contact" name="contact"></a>Contact Us</h2>
 
-	<p>The <a href="news://news.eclipse.org/eclipse.platform.swt">SWT newsgroup</a>
-	[<a href="http://eclipse.org/newsgroups/register.php">register</a>]
-	is a very active user discussion and help forum.
-	See the
-	<a href="http://www.eclipse.org/newsgroups/index.php">Eclipse Community Forums page (expand Eclipse Projects to see SWT)</a>
-	for information on this and other newsgroups.</p>
-	
 	<p>SWT development is discussed and tracked in the
 	<a href="http://bugs.eclipse.org/bugs/" target="_top">Eclipse bugzilla</a> under the
 	Platform/SWT component.  You can subscribe to the new bug inbox by
@@ -124,8 +117,8 @@ on which it is implemented.</p>
 	bugzilla email preferences.</p>
 	
 	<p>If you are modifying or porting SWT and have questions, try the
-	<a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT developer mailing list</a>
-	[<a href="http://dev.eclipse.org/mhonarc/lists/platform-swt-dev/maillist.html">archive</a>,
+	<a href="http://dev.eclipse.org/mailman/listinfo/platform-dev">SWT developer mailing list</a>
+	[<a href="http://dev.eclipse.org/mhonarc/lists/platform-dev/maillist.html">archive</a>,
 	<a href="http://www.eclipse.org/search/search.cgi">search</a>].</p>
 </div>
 </div>
