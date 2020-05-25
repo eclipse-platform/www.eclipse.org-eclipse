@@ -20,12 +20,10 @@ For more information on how to generate the JNI code, see <a href="jnigen.php">t
 <ul>
   <li><b>After installing the Sleak plug-in (above):</b></li>
     <ul>
-      <li>Extract the <code>.options</code> file from the <code>eclipse/plugins/org.eclipse.ui_&lt;version&gt;.jar</code> archive to the <code>eclipse/</code> folder.</li>
-      <li>Add the following lines to the <code>.options</code> file:
+      <li>Create an empty options file with the following lines in it:
            <br><code>org.eclipse.ui/debug=true</code>
            <br><code>org.eclipse.ui/trace/graphics=true</code></li>
-      <li>Launch Eclipse with the "-clean -debug" options on the command line.
-       	   <ul><li>Note that you do not need the "-clean" option with Eclipse 3.4 M6 or later.</li></ul></li>
+      <li>Launch Eclipse with the "-debug OPTIONS" where OPTIONS is the path to the options file created.
       <li>Open the SWT Sleak view (Window &gt; Show View &gt; Other ... &gt; SWT Tools &gt; Sleak)</li>
       <li>The plug-in monitors all other plug-ins running in its Eclipse environment.</li>
     </ul>
