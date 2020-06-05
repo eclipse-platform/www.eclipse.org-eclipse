@@ -24,13 +24,13 @@ ob_start();
 <h3>Cloning the SWT repos</h3>
 Anonymous git access to the SWT repositories can be obtained through either http or git protocols. To clone the SWT repos from the command line:
 <ul>
-<li><tt>git clone http://git.eclipse.org/gitroot/platform/eclipse.platform.swt.git</tt></li>
-<li><tt>git clone http://git.eclipse.org/gitroot/platform/eclipse.platform.swt.binaries.git</tt></li>
+<li><tt>git clone https://git.eclipse.org/r/platform/eclipse.platform.swt.git</tt></li>
+<li><tt>git clone https://git.eclipse.org/r/platform/eclipse.platform.swt.binaries.git</tt></li>
 </ul>
-For committers, use the ssh protocol:
+For committers, use the ssh protocol (replace <code>userid></code> with your ID):
 <ul>
-<li><tt>git clone ssh://userid@git.eclipse.org/gitroot/platform/eclipse.platform.swt.git</tt></li>
-<li><tt>git clone ssh://userid@git.eclipse.org/gitroot/platform/eclipse.platform.swt.binaries.git</tt></li>
+<li><tt>git clone ssh://userid@git.eclipse.org:29418/platform/eclipse.platform.swt.git</tt></li>
+<li><tt>git clone ssh://userid@git.eclipse.org:29418/platform/eclipse.platform.swt.binaries.git</tt></li>
 </ul>
 </p>
 
