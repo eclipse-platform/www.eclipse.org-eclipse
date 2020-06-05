@@ -10,15 +10,15 @@ ob_start();
 <p>As part of the Eclipse Git migration, SWT has moved all of its CVS projects into 2 Git repos - one for sources and one for binaries.
 <br>For those new to the Git world, there are many resources available online that can provide an intro to Git. Some recommended ones:
 <ul>
-<li>The <a href="http://git-scm.com/">git homepage</a> has a <a href="http://git-scm.com/documentation">documentation section</a> with good links to tutorials.</li>
-<li>The online <a href="http://progit.org/book/">Pro Git</a> book provdes a more comprehensive overview of Git.</li>
+<li>The <a href="https://git-scm.com/">git homepage</a> has a <a href="https://git-scm.com/documentation">documentation section</a> with good links to tutorials.</li>
+<li>The online <a href="https://git-scm.com/book/en/v2">Pro Git</a> book provdes a more comprehensive overview of Git.</li>
 </ul>
 </p>
 <h3>Git Web View</h3>
 <p>As of Eclipse 3.8, SWT lives at git.eclipse.org. Both SWT repos can be viewed online at:
 <ul>
-<li><a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/">eclipse.platform.swt.git</a></li> 
-<li><a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.binaries.git/">eclipse.platform.swt.binaries.git</a></li>
+<li><a href="https://git.eclipse.org/c/platform/eclipse.platform.swt.git/">eclipse.platform.swt.git</a></li> 
+<li><a href="https://git.eclipse.org/c/platform/eclipse.platform.swt.binaries.git/">eclipse.platform.swt.binaries.git</a></li>
 </ul>
 
 <h3>Cloning the SWT repos</h3>
@@ -27,7 +27,7 @@ Anonymous git access to the SWT repositories can be obtained through either http
 <li><tt>git clone https://git.eclipse.org/r/platform/eclipse.platform.swt.git</tt></li>
 <li><tt>git clone https://git.eclipse.org/r/platform/eclipse.platform.swt.binaries.git</tt></li>
 </ul>
-For committers, use the ssh protocol (replace <code>userid></code> with your ID):
+For committers, use the ssh protocol (replace <code>userid</code> with your ID):
 <ul>
 <li><tt>git clone ssh://userid@git.eclipse.org:29418/platform/eclipse.platform.swt.git</tt></li>
 <li><tt>git clone ssh://userid@git.eclipse.org:29418/platform/eclipse.platform.swt.binaries.git</tt></li>
@@ -37,9 +37,9 @@ For committers, use the ssh protocol (replace <code>userid></code> with your ID)
 
 <h3>Using EGit</h3>
 <p>While it is possible to use git only from the command line to develop SWT, it is recommended to use EGit to allow you to perform all git operations from within Eclipse. Here is a quick guide to help you 
-get set up (<b>see also <a href="http://wiki.eclipse.org/Platform-releng/Git_Workflows#Clone_a_repo">Platform-releng/Git Workflows page</a> for more workflow hints.</b>).<p>
+get set up (<b>see also <a href="https://wiki.eclipse.org/Platform-releng/Git_Workflows#Clone_a_repo">Platform-releng/Git Workflows page</a> for more workflow hints.</b>).<p>
 <p>
-The EGit User guide can be found <a href="http://wiki.eclipse.org/EGit/User_Guide">here</a>.
+The EGit User guide can be found <a href="https://wiki.eclipse.org/EGit/User_Guide">here</a>.
 </p>
 <h4>Installing EGit</h4>
 <p>
