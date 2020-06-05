@@ -43,8 +43,8 @@ The EGit User guide can be found <a href="https://wiki.eclipse.org/EGit/User_Gui
 </p>
 <h4>Installing EGit</h4>
 <p>
-You can install EGit 1.0.0 from <a href="http://download.eclipse.org/releases/indigo">Indigo</a>, it's already available. From within Eclipse, you can select Help>Install New Software... and then select the 
-Indigo site from the 'Work With' combo box. Select Eclipse EGit from underneath the 'Collaboration' section and install.
+You can install EGit from <a href="https://download.eclipse.org/releases/latest/">Latest Eclipse Simultaneous Release</a>, it's already available. From within Eclipse, you can select Help>Install New Software... and then select the 
+2020-03 (or newer) site from the 'Work With' combo box. Select Eclipse EGit from underneath the 'Collaboration' section and install.
 </p>
 <h4>Getting the Source</h4>
 <p>
@@ -63,14 +63,14 @@ them into your workspace.
 <br>
 For anonymous access:
 <ul>
-<li>http://git.eclipse.org/gitroot/platform/eclipse.platform.swt.git</li>
-<li>http://git.eclipse.org/gitroot/platform/eclipse.platform.swt.binaries.git</li>
+<li>https://git.eclipse.org/r/platform/eclipse.platform.swt.git</li>
+<li>https://git.eclipse.org/r/platform/eclipse.platform.swt.binaries.git</li>
 </ul>
 <br>
 For committer access (substitute in proper userid):
 <ul>
-<li>ssh://userid@git.eclipse.org/gitroot/platform/eclipse.platform.swt.git</li>
-<li>ssh://userid@git.eclipse.org/gitroot/platform/eclipse.platform.swt.binaries.git</li>
+<li>ssh://userid@git.eclipse.org:29418/platform/eclipse.platform.swt.git</li>
+<li>ssh://userid@git.eclipse.org:29418/platform/eclipse.platform.swt.binaries.git</li>
 </ul>
 <center><p><img src="images/egit.clone.repo.png" alt="Clone repo"></p></center>
 </li>
