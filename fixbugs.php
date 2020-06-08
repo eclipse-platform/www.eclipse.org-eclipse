@@ -10,23 +10,19 @@ ob_start();
 
 <h2>Set up your Java environment:</h2>
 <ol>
-<li>Download and install a Java JRE (SWT requires a 1.8.x JRE).<br>
+<li>Download and install a Java JRE (SWT requires a 1.8.x JRE).<br></li>
+<li><Download and install the <a href="https://download.eclipse.org/eclipse/downloads/index.html#Latest_Release">Latest release</a> or the latest <a href="https://download.eclipse.org/eclipse/downloads/index.html#Stable_Builds">Stable build</a>.</li>
+<li><a href="/swt/git.php">Setup SWT from GIT.</a><br>
+Make sure to load <code>org.eclipse.swt</code> plus any swt fragment you need (for example, <code>org.eclipse.swt.gtk.linux.x86</code>),
+<code>org.eclipse.swt.snippets</code>, and <code>org.eclipse.swt.examples</code>.<br>
 </li>
-<li><a href="download.eclipse.org/eclipse/downloads/">Download and install the latest I* or N* build.</a></li>
-<li><a href="/swt/git.php">Setup SWT from GIT.</a>
-Make sure to load <code>org.eclipse.swt</code> plus any swt fragment you need
-(for example, <code>org.eclipse.swt.gtk.linux.x86</code>),
-<code>org.eclipse.swt.snippets</code>,
-and <code>org.eclipse.swt.examples</code>.
-<br>
-</li>
-<li>Click on any Snippet or example, and select Run As&gt;Java
+<li>Click on any Snippet or Example, and select Run As&gt;Java
 Application. You can modify any of the existing snippets or make your own in order to try to reproduce the issue.<br>
 </li>
-<li> Once the issue is reproducible, inspect the SWT source code to see if you can locate/fix the issue.
-(Debugging Tip: In gtk, you can switch between GTK2 and GTK3, by setting SWT_GTK3=0 or =1 in your launch configuration)</li>
-<li> When you have a patch that is ready for review, you should submit the patch to gerrit for review. You have to configure your git repo to push to gerrit.
+<li> Once the issue is reproducible, inspect the SWT source code to see if you can locate/fix the issue.</li>
+<li> When you have a patch that is ready for review, you should submit the patch to gerrit for review. You have to configure your Git repo to push to Gerrit.
 For more information and steps, please see <a href="https://wiki.eclipse.org/Gerrit">Gerrit wiki page</a>.
+</li>
 </ol>
 
 <h2>Understand SWT:</h2>
