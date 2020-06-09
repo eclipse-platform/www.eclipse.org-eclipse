@@ -11,7 +11,7 @@ ob_start();
 <h2>Set up your Java environment:</h2>
 <ol>
 <li>Download and install a Java JRE (SWT requires a 1.8.x JRE).<br></li>
-<li><Download and install the <a href="https://download.eclipse.org/eclipse/downloads/index.html#Latest_Release">Latest release</a> or the latest <a href="https://download.eclipse.org/eclipse/downloads/index.html#Stable_Builds">Stable build</a>.</li>
+<li>Download and install the <a href="https://download.eclipse.org/eclipse/downloads/index.html#Latest_Release">Latest release</a> or the latest <a href="https://download.eclipse.org/eclipse/downloads/index.html#Stable_Builds">Stable build</a>.</li>
 <li><a href="/swt/git.php">Setup SWT from GIT.</a><br>
 Make sure to load <code>org.eclipse.swt</code> plus any swt fragment you need (for example, <code>org.eclipse.swt.gtk.linux.x86</code>),
 <code>org.eclipse.swt.snippets</code>, and <code>org.eclipse.swt.examples</code>.<br>
