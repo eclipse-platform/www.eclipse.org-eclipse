@@ -8,7 +8,8 @@ ob_start();
 <h1>The SWT FAQ</h1>
 
 <p>If you have questions you believe should go in here, please let us know on
-the <a href="http://dev.eclipse.org/mailman/listinfo/platform-swt-dev">SWT developer mailing list</a>.</p>
+the <a href="http://dev.eclipse.org/mailman/listinfo/platform-dev">Platform developer mailing list</a> 
+or just open a new bug: https://bugs.eclipse.org/bugs/enter_bug.cgi?product=Platform&component=SWT.</p>
 
 <ul>
   <li><a href="#swtpatchtestingdetails">What are the testing details that should be accompanied with an SWT patch submitted for review?</a></li>
