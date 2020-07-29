@@ -866,6 +866,9 @@ the SWT.CENTER style when creating a composite.
   The property name is <code>org.eclipse.swt.browser.DefaultType</code> and valid values for it currently include "<code>mozilla</code>" and
   "<code>webkit</code>".  This property must be set before the <em>first</em> Browser instance is created.
   <p>
+  <em>Note:</em> As of Eclipse/SWT 4.8, the SWT.MOZILLA style is deprecated and XULRunner is not a supported native renderer on any of the supported platforms.
+  Hence, setting the value of the property to mozilla is not valid.
+  <p>
   <em>Note:</em> As of Eclipse/SWT 4.3 a user can specify a comma-separated list of native renderers, in order of preference, for the
   <code>org.eclipse.swt.browser.DefaultType</code> value.  Additionally, "<code>ie</code>" is now a valid native renderer value.  The purpose of these
   changes is to enable applications to specify the default use of either Mozilla or WebKit on non-Windows platforms (where conflicting dependent library
@@ -908,9 +911,7 @@ the SWT.CENTER style when creating a composite.
   </dd>
 
   <dt><strong><a name="browserlinux">Q: What do I need to run the SWT Browser inside Eclipse on Linux?</a></strong></dt>
-  <dd>A: The browser versions that are supported by each Eclipse release are listed below. Note that Mozilla/XULRunner versions that are not
-    final releases (eg.- betas, alphas, nightlies) are <em>not</em> supported, even if their version technically satisfies a listed version range.
-    Also note that the Mozilla/XULRunner must be compiled for the same architecture as the SWT jar that is being used.
+  <dd>A: The browser versions that are supported by each Eclipse release are listed below.
     <ul>
       <li>Eclipse 4.8 and newer: XULRunner is no longer supported.</li>
       <li>Eclipse 4.5 to 4.7: Mozilla 1.4 GTK2 - 1.7.x GTK2, XULRunner 1.8.x - 1.9.x, 3.6.x, 10.x, 24.x and 31.x (but <em>not</em> 2.x nor other unlisted versions), WebKitGTK+ 1.2.x and newer 
@@ -936,6 +937,9 @@ the SWT.CENTER style when creating a composite.
       included in major Linux distributions often do in the absence of a XULRunner installation.  Attempting to use a Firefox install
       without linkable Gecko libraries will throw an error with message "No more handles [NS_InitEmbedding...error -2147221164]".</li>
     </ul>
+    
+    <br>Note that Mozilla/XULRunner versions that are not final releases (eg.- betas, alphas, nightlies) are <em>not</em> supported, even if their version technically satisfies a listed version range.
+    Also note that the Mozilla/XULRunner must be compiled for the same architecture as the SWT jar that is being used.
 
     <br>The version of Mozilla or Firefox installed on your system varies with your Linux distribution.
     The following Linux distributions meet the minimum Mozilla requirements for using the Browser widget.
@@ -969,7 +973,10 @@ the SWT.CENTER style when creating a composite.
   <dd>A: To specify that a WebKit renderer be used by a Browser instance, create it with style <code>SWT.WEBKIT</code> (<em>@since 3.7</em>).  The runtime requirements for
       using WebKit-based Browsers are listed below.  Note that failure to meet these runtime requirements will cause the Browser instantiation to fail.
     <ul>
-	  <li>Windows:
+	  <li>Linux: WebKitGTK 1.2.0 or newer must be in the library load path.  Examples of Linux distros that meet this requirement by default
+	      include Red Hat Enterprise Linux 6 and Ubuntu 10.04.</li>
+	  <li>OS X: No additional runtime requirements, the default renderer is WebKit-based.</li>
+	  <li>Windows: Eclipse/SWT 4.10 dropped 32-bit support and Webkit is no longer supported. For older versions:
 	  <ul>
 	    <li>32-bit SWT</li>
 	    <li>Safari must be installed</li>
@@ -978,9 +985,6 @@ the SWT.CENTER style when creating a composite.
 	        "<code>C:\Program Files\Common Files\Apple\Apple Application Support</code>".  If more than one of these directories are found then choose
 	        the one with "Safari" in its directory ancestry.</li>
 	  </ul>
-	  <li>Linux: WebKitGTK 1.2.0 or newer must be in the library load path.  Examples of Linux distros that meet this requirement by default
-	      include Red Hat Enterprise Linux 6 and Ubuntu 10.04.</li>
-	  <li>OS X: No additional runtime requirements, the default renderer is WebKit-based.</li>
     </ul>
     <p>
     It is important to note that conflicts have been reported between the dependent libraries of WebKit and Mozilla.  As a result it is advised that Browser
@@ -1034,12 +1038,6 @@ the SWT.CENTER style when creating a composite.
 	a thread other than the SWT thread, using either java.awt.EventQueue.invokeLater() or javax.swing.SwingUtilities.invokeLater(). 
 	<strong>NOTE:</strong> This is true on ALL PLATFORMS, not just Mac OS X, but your application is almost guaranteed to hang or
 	be very unstable if you don't follow this rule on the Mac.
-  </dd>
-
-  <dt><strong><a name="swtawtsolaris">Q: Why does the SWT_AWT bridge not work for me on AIX or Solaris?</a></strong></dt>
-  <dd>A: The SWT_AWT bridge requires that AWT be using XToolkit, since this implements the XEmbed
-      protocol.  However by default AWT on AIX and Solaris use MToolkit.  This can be easily changed as
-      described in <a href="http://java.sun.com/j2se/1.5.0/docs/guide/awt/1.5/xawt.html">XToolkit on Solaris/Linux</a>.
   </dd>
 
   <dt><strong><a name="printOnGTK">Q: Why is the Print menu item disabled in Eclipse on GTK (Linux, UNIX)?</a></strong></dt>
@@ -1211,7 +1209,15 @@ the SWT.CENTER style when creating a composite.
 	</ol>
   </dd>
   
+  <p></p>
+  <hr>
+  <p></p>
+  
   <dt>Archived questions and answers</dt>
+  
+  <p></p>
+  <hr>
+  <p></p>
   
   <dt><strong><a name="moreAccessibilityInfo"> Q:  Where can I get more info on Accessibility in Eclipse/SWT?</a></strong></dt>
   <dd>A: You can get more information on the Accessibility Features in Eclipse, and the Eclipse/SWT Accessibility API on the
@@ -1475,6 +1481,12 @@ public class DisplayMozillaVersion {
   
   <dt><strong><a name="rtlgtk28"> Q:  Why doesn't SWT.RIGHT_TO_LEFT work on some GTK versions (less than 2.8)?</a></strong></dt>
   <dd>A: SWT relies on the Cairo graphics library to render strings and GTK started using Cairo in version 2.8. 
+  </dd>
+  
+  <dt><strong><a name="swtawtsolaris">Q: Why does the SWT_AWT bridge not work for me on AIX or Solaris?</a></strong></dt>
+  <dd>A: The SWT_AWT bridge requires that AWT be using XToolkit, since this implements the XEmbed
+      protocol.  However by default AWT on AIX and Solaris use MToolkit.  This can be easily changed as
+      described in <a href="http://java.sun.com/j2se/1.5.0/docs/guide/awt/1.5/xawt.html">XToolkit on Solaris/Linux</a>.
   </dd>
 
 </dl>
