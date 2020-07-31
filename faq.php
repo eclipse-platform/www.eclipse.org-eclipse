@@ -1004,12 +1004,12 @@ the SWT.CENTER style when creating a composite.
   <p>
   To use the Chromium libraries from the Eclipse SDK:
   <ul>
-    <li>Install the CEF binaries in Eclipse from the p2 repo - http://dl.maketechnology.io/chromium-cef/rls/repository</li>
+    <li>Install the CEF binaries in Eclipse from the p2 repo - <a href="http://dl.maketechnology.io/chromium-cef/rls/repository">CEF p2 repo from Make technology</a></li>
     <li>Add the required jars to classpath of project:
         <ul>
-         <li>SWT-Chromium fragment (org.eclipse.swt.browser.chromium.<ws>.<os>.<arch>.jar)</li>
-         <li>SWT fragment (org.eclipse.swt.<ws>.<os>.<arch>.jar)</li>
-         <li>CEF binary (com.make.chromium.cef.<ws>.<os>.<arch>.jar)</li>
+         <li>SWT-Chromium fragment (<code>org.eclipse.swt.browser.chromium.&lt;ws&gt;.&lt;os&gt;.&lt;arch&gt;.jar</code>)</li>
+         <li>SWT fragment (<code>org.eclipse.swt.&lt;ws&gt;.&lt;os&gt;.&lt;arch&gt;.jar</code>)</li>
+         <li>CEF binary (<code>com.make.chromium.cef.&lt;ws&gt;.&lt;os&gt;.&lt;arch&gt;.jar</code>)</li>
         </ul>
     </li>
   </ul>
@@ -1018,16 +1018,16 @@ the SWT.CENTER style when creating a composite.
   <ul>
     <li>Get CEF binaries for your platform from the p2 repo:
      <ul>
-       <li>http://dl.maketechnology.io/chromium-cef/rls/repository/plugins/com.make.chromium.cef.gtk.linux.x86_64_0.4.0.202005172227.jar</li>
-       <li>http://dl.maketechnology.io/chromium-cef/rls/repository/plugins/com.make.chromium.cef.cocoa.macosx.x86_64_0.4.0.202005172227.jar</li>
-       <li>http://dl.maketechnology.io/chromium-cef/rls/repository/plugins/com.make.chromium.cef.win32.win.x86_64_0.4.0.202005172227.jar</li>
+       <li><a href="http://dl.maketechnology.io/chromium-cef/rls/repository/plugins/com.make.chromium.cef.gtk.linux.x86_64_0.4.0.202005172227.jar">CEF GTK binaries</a></li>
+       <li><a href="http://dl.maketechnology.io/chromium-cef/rls/repository/plugins/com.make.chromium.cef.cocoa.macosx.x86_64_0.4.0.202005172227.jar">CEF Mac binaries</a></li>
+       <li><a href="http://dl.maketechnology.io/chromium-cef/rls/repository/plugins/com.make.chromium.cef.win32.win.x86_64_0.4.0.202005172227.jar">CEF Windows binaries</a></li>
      </ul>
     </li>
     <li>Add the required jars to classpath of project:
      <ul>
-       <li>SWT-Chromium standalone jar (swt-chromium.jar)</li>
-       <li>SWT standalone jar (swt.jar)</li>
-       <li>CEF binary (com.make.chromium.cef.<ws>.<os>.<arch>.jar)</li>
+       <li>SWT-Chromium standalone jar (<code>swt-chromium.jar</code>)</li>
+       <li>SWT standalone jar (<code>swt.jar</code>)</li>
+       <li>CEF binary (<code>com.make.chromium.cef.&lt;ws&gt;.&lt;os&gt;.&lt;arch&gt;.jar</code>)</li>
      </ul>
     </li>
   </ul>
