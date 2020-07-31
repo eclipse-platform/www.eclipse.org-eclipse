@@ -64,6 +64,7 @@ or just open a new bug: https://bugs.eclipse.org/bugs/enter_bug.cgi?product=Plat
   <li><a href="#browserlinux">What do I need to run the SWT Browser inside Eclipse on Linux?</a></li>
   <li><a href="#browserlinuxrcp">What do I need to run the SWT Browser in a standalone application on Linux or Solaris?</a></li>
   <li><a href="#howusewebkit">How do I explicitly use WebKit as the Browser's underlying renderer?</a></li>
+  <li><a href="#howusechromium">How do I explicitly use Chromium as the Browser's underlying renderer?</a></li>
   <li><a href="#browserwebkitgtk">How do I use the WebKit renderer on Linux-GTK?</a></li>
   <li><a href="#browserscrollbar">How do I hide the Browser's scrollbars?</a></li>
   <li><a href="#browserproxy">How do I set a proxy for the Browser to use?</a></li>
@@ -845,7 +846,8 @@ the SWT.CENTER style when creating a composite.
       <br>
       Browsers should typically be created with style <code>SWT.NONE</code> as this will attempt to use a native renderer that should not require
       additional software installation.  However for clients with specific native browser requirements, the type of native renderer to use can be specified
-      on a per-instance basis, see <a href="#howusewebkit">How do I explicity use WebKit as the Browser's underlying renderer?</a> and
+      on a per-instance basis, see <a href="#howusewebkit">How do I explicity use WebKit as the Browser's underlying renderer?</a>, 
+      <a href="#howusechromium">How do I explicitly use Chromium as the Browser's underlying renderer?</a> and 
       <a href="#howusemozilla">How do I explicitly use Mozilla as the Browser's underlying renderer?</a>.
       <p>
       Note that as of Eclipse/SWT 4.8, the SWT.MOZILLA style is deprecated and XULRunner is not a supported native renderer on any of the supported platforms.
@@ -862,9 +864,9 @@ the SWT.CENTER style when creating a composite.
   the default type of native renderer to use can avoid crashes caused by conflicting dependent libraries.
   <p>
   As of Eclipse/SWT 3.7.1 a user can set a property to specify the type of native renderer to use for <code>SWT.NONE</code>-style Browsers.
-  Setting this property does not affect Browsers that are created with styles such as <code>SWT.MOZILLA</code> or <code>SWT.WEBKIT</code>.
-  The property name is <code>org.eclipse.swt.browser.DefaultType</code> and valid values for it currently include "<code>mozilla</code>" and
-  "<code>webkit</code>".  This property must be set before the <em>first</em> Browser instance is created.
+  Setting this property does not affect Browsers that are created with styles such as <code>SWT.WEBKIT</code> or <code>SWT.CHROMIUM</code>.
+  The property name is <code>org.eclipse.swt.browser.DefaultType</code> and valid values for it currently include "<code>webkit</code>", 
+  "<code>ie</code>" (@since 4.3) and "<code>chromium</code>" (@since 4.17).  This property must be set before the <em>first</em> Browser instance is created.
   <p>
   <em>Note:</em> As of Eclipse/SWT 4.8, the SWT.MOZILLA style is deprecated and XULRunner is not a supported native renderer on any of the supported platforms.
   Hence, setting the value of the property to mozilla is not valid.
@@ -992,6 +994,43 @@ the SWT.CENTER style when creating a composite.
     java property <code>org.eclipse.swt.browser.DefaultType</code> should also be set to this type to ensure that <code>SWT.NONE</code>-style Browsers
     do not cause the libraries from the other native browser renderer to be loaded (see
     <a href="#browserspecifydefault">How do I specify the default type of native renderer that is used by the Browser?</a>).  </p>
+  </dd>
+  
+  <dt><strong><a name="howusechromium">Q: How do I explicitly use Chromium as the Browser's underlying renderer?</a></strong></dt>
+  <dd>A: To specify that a Chromium renderer be used by a Browser instance, create it with style <code>SWT.CHROMIUM</code> (<em>@since 4.17</em>) or 
+  set the Java property org.eclipse.swt.browser.DefaultType=chromium.
+  <p>
+  You can get the SWT-Chromium libraries from the Eclipse SDK or from the standalone SWT Chromium support libraries section on the download page.
+  <p>
+  To use the Chromium libraries from the Eclipse SDK:
+  <ul>
+    <li>Install the CEF binaries in Eclipse from the p2 repo - http://dl.maketechnology.io/chromium-cef/rls/repository</li>
+    <li>Add the required jars to classpath of project:
+        <ul>
+         <li>SWT-Chromium fragment (org.eclipse.swt.browser.chromium.<ws>.<os>.<arch>.jar)</li>
+         <li>SWT fragment (org.eclipse.swt.<ws>.<os>.<arch>.jar)</li>
+         <li>CEF binary (com.make.chromium.cef.<ws>.<os>.<arch>.jar)</li>
+        </ul>
+    </li>
+  </ul>
+  <p>
+  To use the Chromium libraries from the standalone SWT downloads:
+  <ul>
+    <li>Get CEF binaries for your platform from the p2 repo:
+     <ul>
+       <li>http://dl.maketechnology.io/chromium-cef/rls/repository/plugins/com.make.chromium.cef.gtk.linux.x86_64_0.4.0.202005172227.jar</li>
+       <li>http://dl.maketechnology.io/chromium-cef/rls/repository/plugins/com.make.chromium.cef.cocoa.macosx.x86_64_0.4.0.202005172227.jar</li>
+       <li>http://dl.maketechnology.io/chromium-cef/rls/repository/plugins/com.make.chromium.cef.win32.win.x86_64_0.4.0.202005172227.jar</li>
+     </ul>
+    </li>
+    <li>Add the required jars to classpath of project:
+     <ul>
+       <li>SWT-Chromium standalone jar (swt-chromium.jar)</li>
+       <li>SWT standalone jar (swt.jar)</li>
+       <li>CEF binary (com.make.chromium.cef.<ws>.<os>.<arch>.jar)</li>
+     </ul>
+    </li>
+  </ul>
   </dd>
 
   <dt><strong><a name="browserwebkitgtk">Q: How do I use the WebKit renderer on Linux-GTK?</a></strong></dt>
@@ -1209,6 +1248,11 @@ the SWT.CENTER style when creating a composite.
 	</ol>
   </dd>
   
+  <dt><strong><a name="moreAccessibilityInfo"> Q:  Where can I get more info on Accessibility in Eclipse/SWT?</a></strong></dt>
+  <dd>A: You can get more information on the Accessibility Features in Eclipse, and the Eclipse/SWT Accessibility API on the
+  <a href="http://wiki.eclipse.org/Accessibility">Eclipse/SWT Accessibility wiki</a>.
+  </dd>
+  
   <p></p>
   <hr>
   <p></p>
@@ -1219,12 +1263,7 @@ the SWT.CENTER style when creating a composite.
   <hr>
   <p></p>
   
-  <dt><strong><a name="moreAccessibilityInfo"> Q:  Where can I get more info on Accessibility in Eclipse/SWT?</a></strong></dt>
-  <dd>A: You can get more information on the Accessibility Features in Eclipse, and the Eclipse/SWT Accessibility API on the
-  <a href="http://wiki.eclipse.org/Accessibility">Eclipse/SWT Accessibility wiki</a>.
-  </dd>
-  
-    <dt><strong><a name="gtk32">Q: How do I build the 32-bit version of SWT GTK?</a></strong></dt>
+  <dt><strong><a name="gtk32">Q: How do I build the 32-bit version of SWT GTK?</a></strong></dt>
   <dd>A: Follow these steps to extract the 32-bit SWT GTK source code from GIT and produce your own build:
   <ol>
     <li>Start Eclipse and retrieve the <code>org.eclipse.swt</code>, <code>org.eclipse.swt.gtk.linux.x86</code> and
