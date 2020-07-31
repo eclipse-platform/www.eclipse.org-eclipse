@@ -915,6 +915,7 @@ the SWT.CENTER style when creating a composite.
   <dt><strong><a name="browserlinux">Q: What do I need to run the SWT Browser inside Eclipse on Linux?</a></strong></dt>
   <dd>A: The browser versions that are supported by each Eclipse release are listed below.
     <ul>
+      <li>Eclipse 4.17: Chromium is supported.</li>
       <li>Eclipse 4.8 and newer: XULRunner is no longer supported.</li>
       <li>Eclipse 4.5 to 4.7: Mozilla 1.4 GTK2 - 1.7.x GTK2, XULRunner 1.8.x - 1.9.x, 3.6.x, 10.x, 24.x and 31.x (but <em>not</em> 2.x nor other unlisted versions), WebKitGTK+ 1.2.x and newer 
       (Note:Eclipse 4.5 support for XULRunner 31.x is not available on Linux due to <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=467646">Bug 467646.</a>)
@@ -998,7 +999,7 @@ the SWT.CENTER style when creating a composite.
   
   <dt><strong><a name="howusechromium">Q: How do I explicitly use Chromium as the Browser's underlying renderer?</a></strong></dt>
   <dd>A: To specify that a Chromium renderer be used by a Browser instance, create it with style <code>SWT.CHROMIUM</code> (<em>@since 4.17</em>) or 
-  set the Java property org.eclipse.swt.browser.DefaultType=chromium.
+  set the Java property <code>org.eclipse.swt.browser.DefaultType=chromium</code>.
   <p>
   You can get the SWT-Chromium libraries from the Eclipse SDK or from the standalone SWT Chromium support libraries section on the download page.
   <p>
