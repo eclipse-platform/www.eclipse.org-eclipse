@@ -1032,6 +1032,12 @@ the SWT.CENTER style when creating a composite.
      </ul>
     </li>
   </ul>
+  <p>
+  To launch Eclipse with Chromium as the default browser type:
+  <ul>
+    <li>Install the CEF binaries in Eclipse from the p2 repo - <a href="http://dl.maketechnology.io/chromium-cef/rls/repository">CEF p2 repo from Make technology</a></li>
+    <li>In eclipse.ini, add <code>-Dorg.eclipse.swt.browser.DefaultType=chromium</code> under -vmargs.</li>
+  </ul>
   </dd>
 
   <dt><strong><a name="browserwebkitgtk">Q: How do I use the WebKit renderer on Linux-GTK?</a></strong></dt>
