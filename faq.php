@@ -1021,7 +1021,7 @@ the SWT.CENTER style when creating a composite.
      <ul>
        <li><a href="http://dl.maketechnology.io/chromium-cef/rls/repository/plugins/com.make.chromium.cef.gtk.linux.x86_64_0.4.0.202005172227.jar">CEF GTK binaries</a></li>
        <li><a href="http://dl.maketechnology.io/chromium-cef/rls/repository/plugins/com.make.chromium.cef.cocoa.macosx.x86_64_0.4.0.202005172227.jar">CEF Mac binaries</a></li>
-       <li><a href="http://dl.maketechnology.io/chromium-cef/rls/repository/plugins/com.make.chromium.cef.win32.win.x86_64_0.4.0.202005172227.jar">CEF Windows binaries</a></li>
+       <li><a href="http://dl.maketechnology.io/chromium-cef/rls/repository/plugins/com.make.chromium.cef.win32.win32.x86_64_0.4.0.202005172227.jar">CEF Windows binaries</a></li>
      </ul>
     </li>
     <li>Add the required jars to classpath of project:
