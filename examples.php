@@ -58,7 +58,7 @@ ob_start();
 		  https://download.eclipse.org/eclipse/downloads</a>.</li>
 		<li>Click on the Eclipse build that you would like examples for
 		  (i.e. the Eclipse build that you are running; typically the latest Stable Build).</li>
-		<li>Scroll down until you see "Example Plug-ins". Read the paragraph on installing them, and select the download for your platform.</li>
+		<li>Scroll down until you see "Eclipse p2 Repository", use the update site provided under "To update your build to use this specific build, you can use the software repository at" to install using "Install New Sotware..." under Help menu.</li>
 		<li>After installing the examples, you can find their source in <code>eclipse/plugins/org.eclipse.swt.examples.&lt;exampleName&gt;.source_&lt;version&gt;.jar</code>.
 		<li>To run the plug-in SWT examples, restart Eclipse, go to <i>Window &gt; Show View... &gt; Other...</i> and expand "SWT Examples".</li>
 	</ol>
@@ -99,8 +99,9 @@ ob_start();
 			https://download.eclipse.org/eclipse/downloads/</a>.</li>
 		<li>Click on the Eclipse build that you would like examples for
 			(i.e. the Eclipse/SWT build that you are running; typically the latest Stable Build).</li>
-		<li>Scroll down until you see "Example Plug-ins", download the .zip for your platform, and extract it to your local machine.</li>
-		<li>In the directory with the extracted example plug-ins, find file <code>org.eclipse.swt.examples_&lt;version&gt;.jar</code>, and extract it in place.</li>
+		<li>Scroll down until you see "Eclipse p2 Repository", go to link provided under "To update your build to use this specific build, you can use the software repository at".</li>
+		<li>Go to plugins folder, find file <code>org.eclipse.swt.examples_&lt;version&gt;.jar</code>, and download it.</li>
+		<li>Extract <code>org.eclipse.swt.examples_&lt;version&gt;.jar</code> to a folder.</li>
 		<li>Open a DOS window (on Windows) or a terminal window (on Mac or Linux) and navigate to this directory.</li>
 		<li>To run the example, type the following line with the appropriate paths substituted:<br>
 	
