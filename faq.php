@@ -8,7 +8,7 @@ ob_start();
 <h1>The SWT FAQ</h1>
 
 <p>If you have questions you believe should go in here, please let us know on
-the <a href="http://dev.eclipse.org/mailman/listinfo/platform-dev">Platform developer mailing list</a> 
+the <a href="http://dev.eclipse.org/mailman/listinfo/platform-dev">Platform developer mailing list</a>
 or just open a new bug: https://bugs.eclipse.org/bugs/enter_bug.cgi?product=Platform&component=SWT.</p>
 
 <ul>
@@ -170,7 +170,7 @@ Archive: Questions that are not relevant for the latest SWT versions but may be 
     classes). Some aspects of the beans paradigm, such as the ability to create beans with
     null constructors, run counter to the constraints of the underlying operating systems
     that SWT runs on.  For example, operating systems do not typically support creating a
-    widget without specifying its parent. 
+    widget without specifying its parent.
     <p></p>
     The essence of the problem is that if you allow a widget to be created with a null
     constructor, then you can't actually create the o/s resources at the time the constructor
@@ -191,19 +191,19 @@ Archive: Questions that are not relevant for the latest SWT versions but may be 
   <dt><strong><a name="whatisasnippet">Q: What is a snippet and why do I care?</a></strong>
   </dt>
   <dd>A: A snippet is a <em>minimal stand alone</em> program that demonstrates functionality or
-  	lack of functionality.  
-  	
-  	<p>Why is this important?  Posting a snippet to the news group is the
-  	quickest way to get help.  Including a snippet in a bug report is the fastest
-  	way to get a bug fixed.  Taking the time to construct a snippet helps you understand
-  	the API of the library you are calling and focuses your thinking.  For example, the
-  	SWT team uses C and Java snippets internally to prove or disprove problems in the operating system.
-	Often, something you think is a bug is actually caused by something elsewhere
-	in your program.  
-	
-	<p>Snippets isolate problems.  Code speaks louder than words.  
-	
-	<p>Here is a minimal stand alone SWT program to help you get started:
+    lack of functionality.
+
+    <p>Why is this important?  Posting a snippet to the news group is the
+    quickest way to get help.  Including a snippet in a bug report is the fastest
+    way to get a bug fixed.  Taking the time to construct a snippet helps you understand
+    the API of the library you are calling and focuses your thinking.  For example, the
+    SWT team uses C and Java snippets internally to prove or disprove problems in the operating system.
+  Often, something you think is a bug is actually caused by something elsewhere
+  in your program.
+
+  <p>Snippets isolate problems.  Code speaks louder than words.
+
+  <p>Here is a minimal stand alone SWT program to help you get started:
 <pre>public static void main (String [] args) {
     Display display = new Display ();
     Shell shell = new Shell (display);
@@ -213,8 +213,8 @@ Archive: Questions that are not relevant for the latest SWT versions but may be 
     }
     display.dispose ();
 }</pre>
-    
-	For a list of sample snippets, see the <a href="snippets">SWT snippets page</a>.
+
+  For a list of sample snippets, see the <a href="snippets">SWT snippets page</a>.
   </dd>
 
   <dt><strong><a name="swtsource">Q: Where do I find the SWT source?</a></strong>
@@ -234,11 +234,11 @@ Archive: Questions that are not relevant for the latest SWT versions but may be 
       <li>Load the projects <strong>org.eclipse.swt</strong> and <strong>org.eclipse.swt.</strong><em>WS.OS.ARCH</em> where <em>WS.OS.ARCH</em> are the names of the
         windowing system, operating system and architecture of interest, respectively.  For example, <strong>org.eclipse.swt.gtk.linux.x86</strong>.
       <li>In the project <strong>org.eclipse.swt.</strong><em>WS.OS.ARCH</em>, locate the file <strong>build.xml</strong>.  This is an Ant script.
-      <li>Run Ant on the target <strong>build.jars</strong>.  If you are using eclipse as your development environment, you can run 
+      <li>Run Ant on the target <strong>build.jars</strong>.  If you are using eclipse as your development environment, you can run
         Ant by selecting the file in the Navigator or Packages view, then selecting <strong>Run Ant...</strong> from the context
         menu.
       <li>The script will create file <strong>swt.jar</strong> in the root directory of the <strong>org.eclipse.swt.</strong><em>WS.OS.ARCH</em>
-        project.  When it has finished running you can Refresh this project to bring this jar into your eclipse workspace. 
+        project.  When it has finished running you can Refresh this project to bring this jar into your eclipse workspace.
     </ol>
   </dd>
 
@@ -247,7 +247,7 @@ Archive: Questions that are not relevant for the latest SWT versions but may be 
   <dd>A: The SWT Eclipse plug-in can be built (excluding the signing of the jar) with the steps below.
     <ol>
       <li> Retrieve SWT directly from GIT as described in <a href="/swt/git.php">Using SWT from GIT</a>
-      <li> Load the projects org.eclipse.swt and org.eclipse.swt.WS.OS.ARCH where WS.OS.ARCH are the names of the windowing system, operating system and architecture of interest, respectively. For example, org.eclipse.swt.gtk.linux.x86. 
+      <li> Load the projects org.eclipse.swt and org.eclipse.swt.WS.OS.ARCH where WS.OS.ARCH are the names of the windowing system, operating system and architecture of interest, respectively. For example, org.eclipse.swt.gtk.linux.x86.
       <li>(optional) If you wish to compile SWT in your workspace, in the Navigator view rename the <strong>org.eclipse.swt</strong> project's <strong>.classpath_</strong>WS
         file to <strong>.classpath</strong>.  This is useful if, for instance, you have a patch to apply to the SWT codebase before building the plug-in.
       <li>Invoke the File > Export... menu item, then select the "Plug-in Development" - "Deployable Plug-ins and Fragments" wizard, and press Next.
@@ -262,9 +262,9 @@ Archive: Questions that are not relevant for the latest SWT versions but may be 
     As a result, subsequent exports of the same plug-in will <em>NOT</em> recompile the workspace contents, and therefore will not contain any changes that have
     been made in the interim.  For such changes to be included in a re-export of the plug-in, these intermediate files must be deleted in order to force
     their recompilation.  The easiest way to do this is to select the <strong>org.eclipse.swt.</strong><em>WS.OS.ARCH</em> project, press F5 to refresh it, and
-    then replace its content with the released content.    
+    then replace its content with the released content.
   </dd>
-     
+
   <dt><strong><a name="howbuilddll">Q: How do I build the SWT JNI libraries for my platform?</a></strong>
   </dt>
   <dd>A: SWT uses JNI to interact with the native widgets in the
@@ -272,14 +272,14 @@ Archive: Questions that are not relevant for the latest SWT versions but may be 
    windowing system, operating system and hardware architecture of
    interest.  The libraries can be built either from the code in the GIT
    repository or from an eclipse SDK download.
-  
+
    <p>In order to build the required libraries and run Eclipse, you
    will require a JDK (Java Development Kit) version that is supported
    by Eclipse.  Check eclipse.org for details.</p>
-    
+
    <p><strong>Building the SWT JNI libraries from the eclipse SDK download:</strong>
    <ol>
-     <li>Download an Eclipse distribution from 
+     <li>Download an Eclipse distribution from
        <a href="http://www.eclipse.org/downloads/index.php">http://www.eclipse.org/downloads/index.php</a>.</li>
 
      <li>Unzip the distribution.  This will create a directory called <tt>eclipse</tt>.
@@ -347,13 +347,13 @@ Archive: Questions that are not relevant for the latest SWT versions but may be 
   <dd>A: For the steps to add new natives to the SWT JNI libraries, see <a href="/swt/jnigen.php">
   Generating the SWT JNI Code.</a>
   </dd>
-  
+
   <dt><strong><a name="howaddnativescocoa">Q: How do I add a new native to the SWT JNI libraries for Cocoa?</a></strong>
   </dt>
   <dd>A: For the steps to add new natives to the SWT Cocoa JNI libraries, see <a href="/swt/macgen.php">
-  Generating the SWT PI Code for Cocoa.</a> 
+  Generating the SWT PI Code for Cocoa.</a>
   </dd>
-  
+
   <dt><strong><a name="gtk64">Q: How do I build the 64-bit version of SWT GTK?</a></strong></dt>
   <dd>A: Follow these steps to extract the 64-bit SWT GTK source code from GIT and produce your own build:
   <ol>
@@ -370,10 +370,10 @@ Archive: Questions that are not relevant for the latest SWT versions but may be 
         the <code>org.eclipse.swt.gtk.linux.x86_64</code> project when this target has completed, to pick up the new libraries.</li>
     </ul>
     <li>You're done!  The <code>org.eclipse.swt.gtk.linux.x86_64</code> project will now contain the 64-bit native libraries, and if you're
-      interested, the 64-bit source code will now be available in the <code>org.eclipse.swt.gtk.linux.x86_64/src</code> folder.  
+      interested, the 64-bit source code will now be available in the <code>org.eclipse.swt.gtk.linux.x86_64/src</code> folder.
   </ol>
   </dd>
-  
+
   <dt><strong><a name="gtkstartup">Q: Which GTK version do I need to run SWT?</a></strong></dt>
   <dd>A: SWT requires the following GTK+ versions (or newer) to be installed:
     <ul>
@@ -411,17 +411,17 @@ Archive: Questions that are not relevant for the latest SWT versions but may be 
 
   <dt><strong><a name="cocoa64launch">Q: Why do I get an UnsatisfiedLinkError when launching from the 64-bit Cocoa port?</a></strong></dt>
   <dd>A: You need to be sure that you are forcing your launch to use a 64-bit VM. Apple ships most of their VMs with 32 and
-  	  64-bit binaries. To force the VM to run in 64-bit mode, use the -d64 option as VM argument in your launch configuration.
-  	  
-  	  <p>If you are launching with SWT from GIT in your workspace (see
+      64-bit binaries. To force the VM to run in 64-bit mode, use the -d64 option as VM argument in your launch configuration.
+
+      <p>If you are launching with SWT from GIT in your workspace (see
       <a href="/swt/git.php">How to use SWT from GIT</a>, use <code>.classpath_cocoa</code>
       as the <code>.classpath</code> file in the <code>org.eclipse.swt</code> project and make sure you have the
       org.eclipse.swt.cocoa.maxosx.x86_64 project in your workspace),
       then you also need to modify the <code>.classpath</code> file as follows:
-  	  <pre>
+      <pre>
          attribute value="org.eclipse.swt.cocoa.macosx"</pre>change to:<pre>
          attribute value="org.eclipse.swt.cocoa.macosx.x86_64"</pre>
-  	  </p>
+      </p>
   </dd>
 
   <dt><strong><a name="winexternalmanifestfile">Q: How to enable external manifest file on Windows?</a></strong></dt>
@@ -430,31 +430,31 @@ Archive: Questions that are not relevant for the latest SWT versions but may be 
     <br><ul>
       <li>Open Windows Registry Editor.</li>
       <li>Locate and then click the following registry subkey:
-		HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\SideBySide</li>
+    HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\SideBySide</li>
       <li>On the Edit menu, point to New, and then click DWORD Value.</li>
       <li>Type PreferExternalManifest, and then press ENTER.</li>
       <li>Right-click PreferExternalManifest, and then click Modify.</li>
       <li>In the Edit DWORD Value dialog box, click Decimal under Base.</li>
       <li>In the Value data box, type 1, and then click OK.</li>
       <li>On the File menu, click Exit to close Registry Editor.</li>
-    
-    <p>The name of the manifest file must match the name of the executable.  
-    In the case of eclipse, the executable is <tt>javaw.exe</tt> and the manifest file 
+
+    <p>The name of the manifest file must match the name of the executable.
+    In the case of eclipse, the executable is <tt>javaw.exe</tt> and the manifest file
     must have the name <tt>javaw.exe.manifest</tt>.  The manifest file must be in the
-    <tt>jre\bin</tt> folder for the VM you use to launch Eclipse.  Note: the 
+    <tt>jre\bin</tt> folder for the VM you use to launch Eclipse.  Note: the
     <tt>eclipse.exe</tt> executable does not launch Eclipse; <tt>eclipse.exe</tt>
     displays a splash screen and then invokes the Java VM.</p>
     <p>Here is a <a href="javaw.exe.manifest">sample manifest file</a> to download.</p>
   </dd>
 
   <dt><strong><a name="win10dpiawareness">Q: How to enable 'dpiAwareness' setting on Windows 10?</a></strong></dt>
-  <dd> A: In order to enable dpiawareness on Windows10, there must be a manifest file 
+  <dd> A: In order to enable dpiawareness on Windows10, there must be a manifest file
     located in the same place as the executable that launches the application.
-    <br>Here is a <a href="javaw.exe.manifest">sample manifest file</a> to download, for more details on <a href="https://www.eclipse.org/swt/faq.php#winexternalmanifestfile">how to enable external manifest file on Windows</a> 
+    <br>Here is a <a href="javaw.exe.manifest">sample manifest file</a> to download, for more details on <a href="https://www.eclipse.org/swt/faq.php#winexternalmanifestfile">how to enable external manifest file on Windows</a>
   </dd>
 
   <dt><strong><a name="gtkfontsandcolors">Q: On GTK, how do I change the default fonts and colors of widgets?</a></strong></dt>
-  <dd>A: GTK uses a file called <tt>.gtkrc</tt> which is located in your home directory.  
+  <dd>A: GTK uses a file called <tt>.gtkrc</tt> which is located in your home directory.
     On some versions of Linux, this file is called <tt>.gtkrc-2.0</tt>.
     Here is an example of the content of that file which sets the font and colors for Eclipse:
     <pre>
@@ -471,7 +471,7 @@ Archive: Questions that are not relevant for the latest SWT versions but may be 
       }
       class "GtkWidget" style "eclipse"
     </pre>
-    
+
     <p>To turn off anti-aliasing of fonts you should use the facilities
     available in your desktop if possible, such as the Gnome Font
     Properties dialog.  An alternate approach is to ensure that your
@@ -501,32 +501,32 @@ Archive: Questions that are not relevant for the latest SWT versions but may be 
     automatically if the platform-specific SWT jar is on the java classpath.  For older Eclipse/SWT
     versions you need to place the SWT JNI libraries in a place where the Java Virtual Machine will
     find them.
-    
-    <p>The SWT JNI libraries are included in the SWT download.  
+
+    <p>The SWT JNI libraries are included in the SWT download.
 
     <p>A Java application can be informed of the location of the libraries in several ways:
     <p></p>
       <ol>
       <li>Set the library path in the VM launch arguments.
-      
-      <p>In the Launch Configuration Dialog of eclipse select the Arguments 
+
+      <p>In the Launch Configuration Dialog of eclipse select the Arguments
       page, and in the VM arguments field enter:
       <tt>-Djava.library.path={runtime-library-path}</tt>
       Where the runtime-library-path is the absolute path to the directory containing
-      the native code library (see above). 
-    
-      <p>This solution means that the SWT libraries have to be manually 
+      the native code library (see above).
+
+      <p>This solution means that the SWT libraries have to be manually
       added to every project that uses SWT.</p><p></p>
-    
+
     <li>Set the library location in an environment variable.
-    <p>For Windows this is done by editing the PATH environment variable to 
+    <p>For Windows this is done by editing the PATH environment variable to
     include the above mentioned runtime-library-path.
     <br>in Win 9X this is done by editing the autoexec.bat file,
     <br>on NT or 2K the variable is edited through <strong>My Computer</strong> &gt; <strong>Properties</strong> &gt; <strong>Advanced</strong> &gt; <strong>Environment Variables</strong>.
-	<p>On linux/unix, modify the LD_LIBRARY_PATH environment variable to include the runtime-library-path.
-	<p></p>
-	
-	<li>Copy the SWT library to a directory that is already on the Java library path.  For example, the jre/bin directory.
+  <p>On linux/unix, modify the LD_LIBRARY_PATH environment variable to include the runtime-library-path.
+  <p></p>
+
+  <li>Copy the SWT library to a directory that is already on the Java library path.  For example, the jre/bin directory.
     <p>The disadvantage of this solution is that every time you upgrade eclipse you have to remember to copy the native code library.</p>
    </ol>
     <p>Starting with Eclipse 3.1, the SWT plugin that comes with Eclipse, includes the JNI libraries in the SWT jar.
@@ -546,10 +546,10 @@ Archive: Questions that are not relevant for the latest SWT versions but may be 
   </dd>
 
   <dt><strong><a name="missinglibXm">Q: Why do I get the error "java.lang.UnsatisfiedLinkError: libXm.so.2: cannot open shared object file: No such file or directory."?</a></strong></dt>
-  <dd>A: On motif, the SWT library links against the open motif library libXm.so.2.  On most platforms, the open motif library is installed 
-  and added to the library path by default. However, on some Linux platforms, either open motif is not installed or is not on the default library 
+  <dd>A: On motif, the SWT library links against the open motif library libXm.so.2.  On most platforms, the open motif library is installed
+  and added to the library path by default. However, on some Linux platforms, either open motif is not installed or is not on the default library
   path, or lesstif is installed.  Eclipse (and the standalone version of SWT) includes the libXm.so.2 library in the root of the Eclipse install.
-  <p>You need to either launch Eclipse from the installed directory or modify the LD_LIBRARY_PATH environment variable to 
+  <p>You need to either launch Eclipse from the installed directory or modify the LD_LIBRARY_PATH environment variable to
   include the location of libXm.so.2. </p>
   <p>Note <code>-Djava.library.path</code> is used by the VM to locate libraries for System.loadLibrary calls.  However, it does
   not update the LD_LIBRARY_PATH and therefore does not help libraries locate other libraries.</p>
@@ -575,32 +575,32 @@ Archive: Questions that are not relevant for the latest SWT versions but may be 
    <ol>
     <li>Create a .options file in the same directory as your eclipse executable.</li>
     <li>Place the following lines in the .options file:
-		<br>org.eclipse.ui/debug=true
-		<br>org.eclipse.ui/debug/swtdebugglobal=true</li>
+    <br>org.eclipse.ui/debug=true
+    <br>org.eclipse.ui/debug/swtdebugglobal=true</li>
     <li>Start up eclipse from the command line with the debug flag: ./eclipse -debug</li>
     </ol>
-	<p>All messages from SWT will be printed to the console window.</p>
+  <p>All messages from SWT will be printed to the console window.</p>
   </dd>
-  
+
   <dt><strong><a name="swinginswt">Q: Can I use Swing or AWT inside Eclipse?</a></strong></dt>
   <dd>A: Yes.  As of Eclipse 3.2, Swing and AWT can be embedded in SWT on Windows, GTK and OS X.
   However it is important to note that a supporting JDK is required on some platforms in order for this
   to work.  Specifically, GTK require that JDK 1.5 or newer be used.
   Additionally, AIX and Solaris users must ensure that AWT is using XToolkit, as described in
   <a href="#swtawtsolaris">Why does the SWT_AWT bridge not work for me on AIX or Solaris?</a>
-  
+
   <p>See this <a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet135.java">snippet</a> for an example of how to use the API.</p>
   </dd>
 
   <dt><strong><a name="cairoRemoved">Q: Why does Eclipse (4.2 and greater) on GTK crash with a call to org.eclipse.swt.internal.C.memmove originating from some graphics call?</a></strong></dt>
   <dd>A: Eclipse 4.2 (and greater) makes use of functions in cairo that were not present in the 1.0.2 version of cairo that shipped with Eclipse by default. Since all modern Linux distributions that ship GTK will ship a more recent version of the Cairo library, it was decided to stop shipping the library.
-	<p>If you are running an older Linux distribution that does not include cairo, you will have to install the cairo library (any version greater than 1.2)</p>
+  <p>If you are running an older Linux distribution that does not include cairo, you will have to install the cairo library (any version greater than 1.2)</p>
   </dd>
 
   <dt><strong><a name="subclassing">Q: Why can't I subclass SWT widgets like Button and Table?</a></strong></dt>
   <dd>A: You can but it is not recommended.  The article <a href="http://eclipse.org/articles/Article-Writing%20Your%20Own%20Widget/Writing%20Your%20Own%20Widget.htm">Creating Your Own Widget using SWT</a>
   describes the reasons in detail:
-  
+
   <h3>Subclassing Widgets Directly</h3>
 
 <p>In extreme circumstances, you may need to subclass a widget other than
@@ -667,8 +667,8 @@ Problem" at: <a href="http://www.cas.mcmaster.ca/~emil/publications/fragile/">ht
     The printStackTrace() method in these classes has been overridden to print the
     stacktrace of the original exception as well.
 
-    <p>The problem with the other two API methods (i.e. printStackTrace(PrintStream) and 
-    printStackTrace(PrintWriter)) is that the classes mentioned in their arguments 
+    <p>The problem with the other two API methods (i.e. printStackTrace(PrintStream) and
+    printStackTrace(PrintWriter)) is that the classes mentioned in their arguments
     (PrintStream and PrintWriter) are not available in the CLDC class library.
     Because we need to maintain compatability with CLDC, we can not override them.</p>
   </dd>
@@ -718,7 +718,7 @@ Problem" at: <a href="http://www.cas.mcmaster.ca/~emil/publications/fragile/">ht
   // Get the ImageData and create a new printer Image from it
   ImageData imageData = image.getImageData();
   Image printImage = new Image(printer, imageData);</pre>
-    
+
     <p>Then print using <em>printImage</em>.
     (Remember to dispose both images when you are done with them).
 
@@ -757,7 +757,7 @@ Problem" at: <a href="http://www.cas.mcmaster.ca/~emil/publications/fragile/">ht
     etc., then please look at the inner class Printing in StyledText in
     org.eclipse.swt.custom. An instance of this class is created by the
     StyledText.print(Printer) API method.
-    
+
     <p>Note also that when printing, any graphics objects that you use to draw,
     such as fonts, colors, and images, need to be re-created on the printer
     device before you can draw them to the printer GC.
@@ -778,16 +778,16 @@ Problem" at: <a href="http://www.cas.mcmaster.ca/~emil/publications/fragile/">ht
 
   <dt><strong><a name="printertrim">Q: What does computeTrim mean for a Printer?</a></strong></dt>
   <dd>A: The "trim" is the area of the page that the printer cannot print on.
-  	Usually, computeTrim is used as follows: <br><code>Rectangle trim = printer.computeTrim(0, 0, 0, 0);</code>
-  	
-	<p>A printer that can print edge-to-edge would have a trim.x and trim.y of 0,0.
-	The trim.width and trim.height would be the same as the width and height of the physical paper.
-	</p>
-	
-	<p>A 600 dot per inch printer that cannot print on the leftmost 0.18 inch of the paper would have a trim.x of -108.
-	So to print starting at precisely 1" from the left edge, take 600 (i.e. 1") and "add" -108 (i.e. subtract 0.18") to get the starting x position.
-	Trim positions are negative because they are relative to the 0,0 position of the client area (or 'printable area') of the paper.
-	</p>
+    Usually, computeTrim is used as follows: <br><code>Rectangle trim = printer.computeTrim(0, 0, 0, 0);</code>
+
+  <p>A printer that can print edge-to-edge would have a trim.x and trim.y of 0,0.
+  The trim.width and trim.height would be the same as the width and height of the physical paper.
+  </p>
+
+  <p>A 600 dot per inch printer that cannot print on the leftmost 0.18 inch of the paper would have a trim.x of -108.
+  So to print starting at precisely 1" from the left edge, take 600 (i.e. 1") and "add" -108 (i.e. subtract 0.18") to get the starting x position.
+  Trim positions are negative because they are relative to the 0,0 position of the client area (or 'printable area') of the paper.
+  </p>
   </dd>
 
   <dt><strong><a name="autotest">Q: How can I implement user interaction tests?</a></strong></dt>
@@ -808,11 +808,11 @@ Problem" at: <a href="http://www.cas.mcmaster.ca/~emil/publications/fragile/">ht
       utilized.  This can be fixed by unchecking the "Apply KDE colors to
       non-KDE apps" option in the KDE colors control panel.
   </dd>
-  
+
     <dt><strong><a name="gtkwidgethidden">Q: On gtk and motif, why are some widgets hidden when they are visible on Windows or the Macintosh?</a></strong></dt>
-  <dd>A: The SWT.CENTER, although undefined for composites, has 
-the same value as SWT.EMBEDDED which is used to embed widgets from 
-other widget toolkits into SWT.  On some operating systems (GTK, Motif), this 
+  <dd>A: The SWT.CENTER, although undefined for composites, has
+the same value as SWT.EMBEDDED which is used to embed widgets from
+other widget toolkits into SWT.  On some operating systems (GTK, Motif), this
 may cause the children of this compostite to be obscured.  Do not use
 the SWT.CENTER style when creating a composite.
   </dd>
@@ -846,8 +846,8 @@ the SWT.CENTER style when creating a composite.
       <br>
       Browsers should typically be created with style <code>SWT.NONE</code> as this will attempt to use a native renderer that should not require
       additional software installation.  However for clients with specific native browser requirements, the type of native renderer to use can be specified
-      on a per-instance basis, see <a href="#howusewebkit">How do I explicity use WebKit as the Browser's underlying renderer?</a>, 
-      <a href="#howusechromium">How do I explicitly use Chromium as the Browser's underlying renderer?</a> and 
+      on a per-instance basis, see <a href="#howusewebkit">How do I explicity use WebKit as the Browser's underlying renderer?</a>,
+      <a href="#howusechromium">How do I explicitly use Chromium as the Browser's underlying renderer?</a> and
       <a href="#howusemozilla">How do I explicitly use Mozilla as the Browser's underlying renderer?</a>.
       <p>
       Note that as of Eclipse/SWT 4.8, the SWT.MOZILLA style is deprecated and XULRunner is not a supported native renderer on any of the supported platforms.
@@ -865,7 +865,7 @@ the SWT.CENTER style when creating a composite.
   <p>
   As of Eclipse/SWT 3.7.1 a user can set a property to specify the type of native renderer to use for <code>SWT.NONE</code>-style Browsers.
   Setting this property does not affect Browsers that are created with styles such as <code>SWT.WEBKIT</code> or <code>SWT.CHROMIUM</code>.
-  The property name is <code>org.eclipse.swt.browser.DefaultType</code> and valid values for it currently include "<code>webkit</code>", 
+  The property name is <code>org.eclipse.swt.browser.DefaultType</code> and valid values for it currently include "<code>webkit</code>",
   "<code>ie</code>" (@since 4.3) and "<code>chromium</code>" (@since 4.17).  This property must be set before the <em>first</em> Browser instance is created.
   <p>
   <em>Note:</em> As of Eclipse/SWT 4.8, the SWT.MOZILLA style is deprecated and XULRunner is not a supported native renderer on any of the supported platforms.
@@ -917,9 +917,9 @@ the SWT.CENTER style when creating a composite.
     <ul>
       <li>Eclipse 4.17: Chromium v59 is supported. WebKitGTK+ 2 (webkitgtk4) is default.</li>
       <li>Eclipse 4.8 and newer: WebKitGTK+ 2 (webkitgtk4) GTK3 is the default, XULRunner is no longer supported.</li>
-      <li>Eclipse 4.5 to 4.7: Mozilla 1.4 GTK2 - 1.7.x GTK2, XULRunner 1.8.x - 1.9.x, 3.6.x, 10.x, 24.x and 31.x (but <em>not</em> 2.x nor other unlisted versions), WebKitGTK+ 1.2.x and newer 
+      <li>Eclipse 4.5 to 4.7: Mozilla 1.4 GTK2 - 1.7.x GTK2, XULRunner 1.8.x - 1.9.x, 3.6.x, 10.x, 24.x and 31.x (but <em>not</em> 2.x nor other unlisted versions), WebKitGTK+ 1.2.x and newer
       (Note:Eclipse 4.5 support for XULRunner 31.x is not available on Linux due to <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=467646">Bug 467646.</a>)
-      <li>Eclipse 4.4: Mozilla 1.4 GTK2 - 1.7.x GTK2, XULRunner 1.8.x - 1.9.x, 3.6.x, 10.x and 24.x (but <em>not</em> 2.x nor other unlisted versions), WebKitGTK+ 1.2.x and newer 
+      <li>Eclipse 4.4: Mozilla 1.4 GTK2 - 1.7.x GTK2, XULRunner 1.8.x - 1.9.x, 3.6.x, 10.x and 24.x (but <em>not</em> 2.x nor other unlisted versions), WebKitGTK+ 1.2.x and newer
       (Note:Eclipse 4.4 and newer uses GTK 3 by default and XULRunner cannot be used in this case as it is not ported to GTK 3 yet)</li>
       <li>Eclipse 4.2.2: Mozilla 1.4 GTK2 - 1.7.x GTK2, XULRunner 1.8.x - 1.9.x, 3.6.x and 10.x (but <em>not</em> 2.x nor 4.x - 9.x), WebKitGTK+ 1.2.x and newer</li>
       <li>Eclipse 4.2: Mozilla 1.4 GTK2 - 1.7.x GTK2, XULRunner 1.8.x - 1.9.x, 3.6.x and 10.x (but <em>not</em> 2.x nor 4.x - 9.x), WebKitGTK+ 1.2.x - 1.8.x</li>
@@ -933,28 +933,28 @@ the SWT.CENTER style when creating a composite.
       <li>Eclipse 3.2.x: Mozilla 1.4 GTK2 - 1.7.x GTK2.</li>
       <li>Eclipse 3.1.x: Mozilla 1.4 GTK2 - 1.7.8 GTK2.</li>
       <li>Eclipse 3.0.x: Mozilla 1.4 GTK2 - 1.6 GTK2.</li>
-      
+
       <li>Also note that a Firefox release whose contained Gecko version correlates with the Mozilla versions above can also be used
-      with Eclipse 3.1 and newer (Linux only), provided that it has been compiled with linkable Gecko libraries.  It is important to  
+      with Eclipse 3.1 and newer (Linux only), provided that it has been compiled with linkable Gecko libraries.  It is important to
       note that Firefox downloads from mozilla.org do <em>not</em> satisfy this criteria, but Firefox installations that are
       included in major Linux distributions often do in the absence of a XULRunner installation.  Attempting to use a Firefox install
       without linkable Gecko libraries will throw an error with message "No more handles [NS_InitEmbedding...error -2147221164]".</li>
     </ul>
-    
+
     <br>Note that Mozilla/XULRunner versions that are not final releases (eg.- betas, alphas, nightlies) are <em>not</em> supported, even if their version technically satisfies a listed version range.
     Also note that the Mozilla/XULRunner must be compiled for the same architecture as the SWT jar that is being used.
 
     <br>The version of Mozilla or Firefox installed on your system varies with your Linux distribution.
     The following Linux distributions meet the minimum Mozilla requirements for using the Browser widget.
     <ul>
-    	<li>RedHat Enterprise Linux 3</li>
-    	<li>Suse 9</li>
+      <li>RedHat Enterprise Linux 3</li>
+      <li>Suse 9</li>
     </ul>
     <br>If you use the IBM 1.4 VM <a href="#browserlinuxibm">check this.</a>
     <br>
-	<br>In general the Browser control will automatically detect an appropriate native browser to use.  However if you wish to point at a specific
-	XULRunner or Mozilla install to use then this can be specified as described in <a href="#specifyxulrunner">Can I specify which XULRunner installation
-	gets used?</a> or <a href="#browserlinuxrcp">What do I need to run the SWT Browser in a standalone application on Linux or Solaris?</a>.
+  <br>In general the Browser control will automatically detect an appropriate native browser to use.  However if you wish to point at a specific
+  XULRunner or Mozilla install to use then this can be specified as described in <a href="#specifyxulrunner">Can I specify which XULRunner installation
+  gets used?</a> or <a href="#browserlinuxrcp">What do I need to run the SWT Browser in a standalone application on Linux or Solaris?</a>.
   </dd>
 
   <dt><strong><a name="browserlinuxrcp">Q: What do I need to run the SWT Browser in a standalone application on Linux or Solaris?</a></strong></dt>
@@ -976,18 +976,18 @@ the SWT.CENTER style when creating a composite.
   <dd>A: To specify that a WebKit renderer be used by a Browser instance, create it with style <code>SWT.WEBKIT</code> (<em>@since 3.7</em>).  The runtime requirements for
       using WebKit-based Browsers are listed below.  Note that failure to meet these runtime requirements will cause the Browser instantiation to fail.
     <ul>
-	  <li>Linux: WebKitGTK 1.2.0 or newer must be in the library load path.  Examples of Linux distros that meet this requirement by default
-	      include Red Hat Enterprise Linux 6 and Ubuntu 10.04.</li>
-	  <li>OS X: No additional runtime requirements, the default renderer is WebKit-based.</li>
-	  <li>Windows: Eclipse/SWT 4.10 dropped 32-bit support and Webkit is no longer supported. For older versions:
-	  <ul>
-	    <li>32-bit SWT</li>
-	    <li>Safari must be installed</li>
-	  	<li>For OSs older than XP+SP1, the path to the Apple Application Support installation must be prepended to Windows' "Path" environment variable
-	        before running eclipse.  This installation will be in a location like "<code>C:\Program Files\Safari\Apple Application Support</code>" or
-	        "<code>C:\Program Files\Common Files\Apple\Apple Application Support</code>".  If more than one of these directories are found then choose
-	        the one with "Safari" in its directory ancestry.</li>
-	  </ul>
+    <li>Linux: WebKitGTK 1.2.0 or newer must be in the library load path.  Examples of Linux distros that meet this requirement by default
+        include Red Hat Enterprise Linux 6 and Ubuntu 10.04.</li>
+    <li>OS X: No additional runtime requirements, the default renderer is WebKit-based.</li>
+    <li>Windows: Eclipse/SWT 4.10 dropped 32-bit support and Webkit is no longer supported. For older versions:
+    <ul>
+      <li>32-bit SWT</li>
+      <li>Safari must be installed</li>
+      <li>For OSs older than XP+SP1, the path to the Apple Application Support installation must be prepended to Windows' "Path" environment variable
+          before running eclipse.  This installation will be in a location like "<code>C:\Program Files\Safari\Apple Application Support</code>" or
+          "<code>C:\Program Files\Common Files\Apple\Apple Application Support</code>".  If more than one of these directories are found then choose
+          the one with "Safari" in its directory ancestry.</li>
+    </ul>
     </ul>
     <p>
     It is important to note that conflicts have been reported between the dependent libraries of WebKit and Mozilla.  As a result it is advised that Browser
@@ -996,9 +996,9 @@ the SWT.CENTER style when creating a composite.
     do not cause the libraries from the other native browser renderer to be loaded (see
     <a href="#browserspecifydefault">How do I specify the default type of native renderer that is used by the Browser?</a>).  </p>
   </dd>
-  
+
   <dt><strong><a name="howusechromium">Q: How do I explicitly use Chromium as the Browser's underlying renderer?</a></strong></dt>
-  <dd>A: To specify that a Chromium renderer be used by a Browser instance, create it with style <code>SWT.CHROMIUM</code> (<em>@since 4.17</em>) or 
+  <dd>A: To specify that a Chromium renderer be used by a Browser instance, create it with style <code>SWT.CHROMIUM</code> (<em>@since 4.17</em>) or
   set the Java property <code>org.eclipse.swt.browser.DefaultType=chromium</code>.
   <p>
   You can get the SWT-Chromium libraries from the Eclipse SDK or from the standalone SWT Chromium support libraries section on the download page.
@@ -1054,36 +1054,36 @@ the SWT.CENTER style when creating a composite.
   <dd>A: The only way to influence whether scrollbars are shown in a Browser or not is for the document it's showing to
       specify a style such as <code>'overflow:auto'</code> or <code>'overflow:hidden'</code>.  There are two ways to do this:
       <ol>
-    	<li>If you are providing the document being shown then its body tag can specify this style like
-    	    <code>&lt;body style='overflow:hidden'&gt;</code>.</li>
-    	<li>Alternatively, this style can be changed in the DOM for any document that has been loaded.  The easiest way
-    	    to do this is with a line like <code><em>&lt;yourBrowser&gt;</em>.execute("document.getElementsByTagName('body')[0].style.overflow='auto'");</code>.</li>
+      <li>If you are providing the document being shown then its body tag can specify this style like
+          <code>&lt;body style='overflow:hidden'&gt;</code>.</li>
+      <li>Alternatively, this style can be changed in the DOM for any document that has been loaded.  The easiest way
+          to do this is with a line like <code><em>&lt;yourBrowser&gt;</em>.execute("document.getElementsByTagName('body')[0].style.overflow='auto'");</code>.</li>
       </ol>
   </dd>
 
   <dt><strong><a name="browserproxy">Q: How do I set a proxy for the Browser to use?</a></strong></dt>
   <dd>A:
-  	<ul>
-  	  <li>Windows: All Browser instances, regardless of native renderer, automatically use Windows' global proxy settings.
-  	    These settings can be changed at any time in the Windows Control Panel.
-  	  <li>OS X: All Browser instances, regardless of native renderer, automatically use OS X's global proxy settings.
-  	    These settings can be changed at any time in the OS X System Preferences.</li>
-  	  <li>Linux/Solaris: Proxy information must be explicitly specified by setting values for java properties
-  	    <code>network.proxy_host</code> and <code>network.proxy_port</code> (<em>@since 3.4</em>).  These properties are checked
-  	    the first time a Browser is created, and if set, will be used for all non-local HTTP, HTTPS and FTP requests in all Browser
-  	    instances.  A user wishing to set these values should do so by passing <code>-D...</code> VM arguments to the JRE at startup.</li>
+    <ul>
+      <li>Windows: All Browser instances, regardless of native renderer, automatically use Windows' global proxy settings.
+        These settings can be changed at any time in the Windows Control Panel.
+      <li>OS X: All Browser instances, regardless of native renderer, automatically use OS X's global proxy settings.
+        These settings can be changed at any time in the OS X System Preferences.</li>
+      <li>Linux/Solaris: Proxy information must be explicitly specified by setting values for java properties
+        <code>network.proxy_host</code> and <code>network.proxy_port</code> (<em>@since 3.4</em>).  These properties are checked
+        the first time a Browser is created, and if set, will be used for all non-local HTTP, HTTPS and FTP requests in all Browser
+        instances.  A user wishing to set these values should do so by passing <code>-D...</code> VM arguments to the JRE at startup.</li>
     </ul>
   </dd>
 
   <dt><strong><a name="swtawtosxmore">Q: Why does the SWT_AWT bridge not work for me on OS X, even after updating Java or the OS?</a></strong></dt>
   <dd>A: Prior to Eclipse 3.6, both the Carbon and Cocoa versions of the SWT only supported embedding the SWT in an AWT Frame.
-	In Cocoa SWT 3.6 and later, embedding works in either direction. If you have the right environment, next,
-	make sure you are starting your application with the argument '-XstartOnFirstThread'. This is necessary even
-	if you will be using Swing or the AWT. Next, make sure your code is calling each toolkit on the correct thread. Code
-	that calls into the SWT	must be running on the main thread, and code that calls the AWT or Swing must be called from 
-	a thread other than the SWT thread, using either java.awt.EventQueue.invokeLater() or javax.swing.SwingUtilities.invokeLater(). 
-	<strong>NOTE:</strong> This is true on ALL PLATFORMS, not just Mac OS X, but your application is almost guaranteed to hang or
-	be very unstable if you don't follow this rule on the Mac.
+  In Cocoa SWT 3.6 and later, embedding works in either direction. If you have the right environment, next,
+  make sure you are starting your application with the argument '-XstartOnFirstThread'. This is necessary even
+  if you will be using Swing or the AWT. Next, make sure your code is calling each toolkit on the correct thread. Code
+  that calls into the SWT must be running on the main thread, and code that calls the AWT or Swing must be called from
+  a thread other than the SWT thread, using either java.awt.EventQueue.invokeLater() or javax.swing.SwingUtilities.invokeLater().
+  <strong>NOTE:</strong> This is true on ALL PLATFORMS, not just Mac OS X, but your application is almost guaranteed to hang or
+  be very unstable if you don't follow this rule on the Mac.
   </dd>
 
   <dt><strong><a name="printOnGTK">Q: Why is the Print menu item disabled in Eclipse on GTK (Linux, UNIX)?</a></strong></dt>
@@ -1092,36 +1092,36 @@ the SWT.CENTER style when creating a composite.
   <p>Prior to Eclipse 3.3, printing was not implemented on GTK; however you can use the External Tools support in Eclipse
   to print files using lpr or some other printing utility. See <a href="#printOnX">here</a> for the steps to set this up.
   </dd>
-  
+
   <dt><strong><a name="uithread">Q: Why do I get the error "org.eclipse.swt.SWTException: Invalid thread access"?</a></strong></dt>
-  <dd>A: In SWT, by definition the thread that creates the Display is a UI-thread.  This thread is responsible for 
-  reading and dispatching events from the operating system event queue, and invoking listeners in response to these events.  
-  Listener code is executed in the UI-thread.  This makes an SWT application generally quite responsive, behaving like most 
-  other operating system programs.  However, any long operation, when executed by a listener, will run in the UI-thread 
+  <dd>A: In SWT, by definition the thread that creates the Display is a UI-thread.  This thread is responsible for
+  reading and dispatching events from the operating system event queue, and invoking listeners in response to these events.
+  Listener code is executed in the UI-thread.  This makes an SWT application generally quite responsive, behaving like most
+  other operating system programs.  However, any long operation, when executed by a listener, will run in the UI-thread
   and prevent it from reading and dispatching events, thus hanging the application.
-  
-  <p>If a listener has a large amount of work to perform, instead of performing that work in the UI-thread, it can 
-  fork a separate thread so the UI-thread can continue dispatching events. If the other thread needs to execute code 
-  that accesses an SWT object, such as changing the string in a label, there is a concurrency issue.  At the very 
-  least, some kind of synchronization is necessary to prevent the operating system or SWT from crashing, hanging or 
+
+  <p>If a listener has a large amount of work to perform, instead of performing that work in the UI-thread, it can
+  fork a separate thread so the UI-thread can continue dispatching events. If the other thread needs to execute code
+  that accesses an SWT object, such as changing the string in a label, there is a concurrency issue.  At the very
+  least, some kind of synchronization is necessary to prevent the operating system or SWT from crashing, hanging or
   behaving unpredictably.</p>
 
-  <p>SWT implements a single-threaded UI model often called apartment threading.  In this model, only the UI-thread 
-  can invoke UI operations.  SWT strictly enforces this rule.  If you try and access an SWT object from outside the 
-  UI-thread, you get the exception "org.eclipse.swt.SWTException: Invalid thread access".  Different operating systems 
-  have different rules governing threads, UI components and synchronization.  Some use a single-threaded UI model 
-  like SWT.  Others allow only one thread at a time in the window system library, controlling access through a 
-  global lock.  This type of multi-threaded UI model is often called free threading.  Currently, in order to be 
+  <p>SWT implements a single-threaded UI model often called apartment threading.  In this model, only the UI-thread
+  can invoke UI operations.  SWT strictly enforces this rule.  If you try and access an SWT object from outside the
+  UI-thread, you get the exception "org.eclipse.swt.SWTException: Invalid thread access".  Different operating systems
+  have different rules governing threads, UI components and synchronization.  Some use a single-threaded UI model
+  like SWT.  Others allow only one thread at a time in the window system library, controlling access through a
+  global lock.  This type of multi-threaded UI model is often called free threading.  Currently, in order to be
   simple, efficient and portable, SWT is apartment threaded.</p>
 
-  <p>To allow background threads to perform operations on objects belonging to the UI-thread, the methods 
-  syncExec(Runnable runnable) and asyncExec(Runnable runnable) of Display are used.  These are the only 
-  methods in SWT that can be called from any thread.  They allow a runnable to be executed by the UI-thread, 
-  either synchronously, causing the background thread to wait for the runnable to finish, or asynchronously 
-  allowing the background thread to continue execution without waiting for the result.  A runnable that is 
-  executed using syncExec() most closely matches the equivalent direct call to the UI operation because a 
+  <p>To allow background threads to perform operations on objects belonging to the UI-thread, the methods
+  syncExec(Runnable runnable) and asyncExec(Runnable runnable) of Display are used.  These are the only
+  methods in SWT that can be called from any thread.  They allow a runnable to be executed by the UI-thread,
+  either synchronously, causing the background thread to wait for the runnable to finish, or asynchronously
+  allowing the background thread to continue execution without waiting for the result.  A runnable that is
+  executed using syncExec() most closely matches the equivalent direct call to the UI operation because a
   Java method call always waits for the result before proceeding, just like syncExec().</p>
- 
+
   <p>The following code sets the text of a label from a background thread and waits for the operation to complete:
 
 <pre>display.syncExec(
@@ -1147,7 +1147,7 @@ the SWT.CENTER style when creating a composite.
       <a href="http://www.microsoft.com/downloads/details.aspx?FamilyID=6a63ab9c-df12-4d41-933c-be590feaa05a&amp;DisplayLang=en">download</a>
       a redistributable package from Microsoft.
   </dd>
-  
+
   <dt><strong><a name="decorationHints"> Q:  Why doesn't my Shell have the trim decorations that I specified in its constructor?</a></strong></dt>
   <dd>A: The native window system is responsible for creating the decorations for all windows, and has the right to not fully honor the set of requested decorations.
     For this reason, styles that are passed to a Shell's constructor are considered to be hints.  For example, on some window managers, creating
@@ -1168,7 +1168,7 @@ the SWT.CENTER style when creating a composite.
     <p>Note that some specific programmatically-triggered events are sent, typically in response to low-level
     widget operations such as focus, move and resize changes. </p>
   </dd>
-  
+
   <dt><strong><a name="relayout"> Q:  Why doesn't my layout update when I create/dispose/move/resize a control?</a></strong></dt>
   <dd>A: A layout is only performed automatically on a Composite's children when the Composite
       is resized, including when it is initially shown.  To make a Composite lay out its
@@ -1176,7 +1176,7 @@ the SWT.CENTER style when creating a composite.
       its <em>layout()</em> method must be called.  For an example of this see SWT snippet
       <a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet98.java">create and dispose children of a composite</a>.
   </dd>
-  
+
   <dt><strong><a name="scrolledcomposite"> Q:  How do I programmatically scroll a Composite?</a></strong></dt>
   <dd>A: This is done by using a ScrolledComposite instead of a Composite, and invoking
       <code>ScrolledComposite.setOrigin(...)</code> to scroll it.  For an example of this see SWT snippet
@@ -1184,26 +1184,26 @@ the SWT.CENTER style when creating a composite.
   </dd>
 
   <dt><strong><a name="copypastewithKlipper"> Q:  Why does Copy/Paste sometimes not work on Linux?</a></strong></dt>
-  <dd>A: There's a known Copy/Paste problem for people who run Klipper Clipboard applet which 
-  		causes Eclipse clipboard operations to fail. For more information about this issue see 
-  		<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=153809">Bug 153809</a> 
-  		<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=226540">Bug 226540</a>.
+  <dd>A: There's a known Copy/Paste problem for people who run Klipper Clipboard applet which
+      causes Eclipse clipboard operations to fail. For more information about this issue see
+      <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=153809">Bug 153809</a>
+      <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=226540">Bug 226540</a>.
   </dd>
 
   <dt><strong><a name="jumplist"> Q: Can I use the TaskItem's menu without the launcher?</a></strong></dt>
   <dd>A: The TaskItem's menu (also known as Jump List on Windows 7) was designed to be used  in conjunction with
-  the eclipse launcher. That said, it is possible on Windows 7 to overwrite the default values for the items in the 
-  jump list calling <code>setData()</code> on the respective menu item using the following keys:  
+  the eclipse launcher. That said, it is possible on Windows 7 to overwrite the default values for the items in the
+  jump list calling <code>setData()</code> on the respective menu item using the following keys:
   <ol>
     <li><strong>org.eclipse.swt.win32.taskbar.executable:</strong> path to the executable</li>
     <li><strong>org.eclipse.swt.win32.taskbar.arguments:</strong> arguments to be passed to the executable</li>
     <li><strong>org.eclipse.swt.win32.taskbar.icon:</strong> path to the icon file</li>
     <li><strong>org.eclipse.swt.win32.taskbar.icon.index:</strong> the index of the icon, when the icon file is a dll or an exe</li>
   </ol>
-  For more information about this issue see	<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=306039">Bug 306039</a>.
+  For more information about this issue see <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=306039">Bug 306039</a>.
   <p></p>
   </dd>
-  
+
    <dt><strong><a name="multiplatformjar"> Q:  How do I produce a single jar file that contains all of the various SWT platform jars?</a></strong></dt>
   <dd>A: Please see <a href="http://stackoverflow.com/questions/2706222/create-cross-platform-java-swt-application/5784073#5784073">this post</a> for a complete overview
   of how to package the jars.
@@ -1216,10 +1216,10 @@ the SWT.CENTER style when creating a composite.
   <br>
   The animation can be enabled by passing the -Dorg.eclipse.swt.internal.win32.enableFadeInOutExpandos argument to the JVM. For example:<p>
   <code>eclipse -vmargs -Dorg.eclipse.swt.internal.win32.enableFadeInOutExpandos</code></p> will bring the animation back to Eclipse.
-  <p>Alternatively, the flag <code>-Dorg.eclipse.swt.internal.win32.enableFadeInOutExpandos</code> can be added to the end of eclipse's 
+  <p>Alternatively, the flag <code>-Dorg.eclipse.swt.internal.win32.enableFadeInOutExpandos</code> can be added to the end of eclipse's
   <code>eclipse.ini</code> for the same result.</p>
   </dd>
-    
+
   <dt><strong><a name="keyboardshortcuts">Q: What are the standard keyboard shortcuts on Windows, Mac OS X, Linux?</a></strong></dt>
   <dd>A: Since SWT uses native controls, standard keyboard shortcuts can be used in SWT applications.
   Here is a useful <a href="http://en.wikipedia.org/wiki/Table_of_keyboard_shortcuts">Table of Keyboard Shortcuts</a>.
@@ -1232,44 +1232,44 @@ the SWT.CENTER style when creating a composite.
   <dd>A: Yes. Eclipse works with JAWS and NVDA on Windows, VoiceOver on the Mac, and Orca on Linux.
   Window-Eyes and Hal/SuperNova on Windows have not been tested recently, however they both worked the last time they were tested.
   </dd>
-  
+
   <dt><strong><a name="oldScreenReaderNotWorking"> Q:  Why doesn't my old Windows screen reader work with Eclipse 3.6?</a></strong></dt>
   <dd>A: JAWS version 8 and 9 and Window-Eyes version 6 no longer work well with Eclipse and other SWT applications.
-	Window-Eyes 6 will cause Eclipse to crash, and JAWS 8 and 9 can cause SWT applications to crash.
-	The reason is that Eclipse 3.6 added support for IAccessible2, and these older screen reader versions
-	contain a partial implementation of IAccessible2 that does not follow the current IAccessible2 specification.
-	The workaround is to launch eclipse or your SWT application using the
-	<br><code>-Dorg.eclipse.swt.accessibility.UseIA2=false</code>
-	<br>VM argument. For more information about this issue see
-	<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=313182">Bug 313182</a>.
+  Window-Eyes 6 will cause Eclipse to crash, and JAWS 8 and 9 can cause SWT applications to crash.
+  The reason is that Eclipse 3.6 added support for IAccessible2, and these older screen reader versions
+  contain a partial implementation of IAccessible2 that does not follow the current IAccessible2 specification.
+  The workaround is to launch eclipse or your SWT application using the
+  <br><code>-Dorg.eclipse.swt.accessibility.UseIA2=false</code>
+  <br>VM argument. For more information about this issue see
+  <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=313182">Bug 313182</a>.
   </dd>
 
   <dt><strong><a name="tableheaderswithJAWS"> Q:  How do I get JAWS to read Table column headers?</a></strong></dt>
   <dd>A: JAWS does not read table column headers by default.
-  	To get JAWS to read table headers, you need to do the following steps with JAWS running:
-	<ol>
-		<li>Focus on the table</li>
-		<li>Press Insert+F2  (this opens the "Run JAWS Manager" dialog)</li>
-		<li>Select "Customize ListView" and OK   (this opens the "Customize ListView Headers" dialog)</li>
-		<li>Select OK</li>
-	</ol>
+    To get JAWS to read table headers, you need to do the following steps with JAWS running:
+  <ol>
+    <li>Focus on the table</li>
+    <li>Press Insert+F2  (this opens the "Run JAWS Manager" dialog)</li>
+    <li>Select "Customize ListView" and OK   (this opens the "Customize ListView Headers" dialog)</li>
+    <li>Select OK</li>
+  </ol>
   </dd>
-  
+
   <dt><strong><a name="moreAccessibilityInfo"> Q:  Where can I get more info on Accessibility in Eclipse/SWT?</a></strong></dt>
   <dd>A: You can get more information on the Accessibility Features in Eclipse, and the Eclipse/SWT Accessibility API on the
   <a href="http://wiki.eclipse.org/Accessibility">Eclipse/SWT Accessibility wiki</a>.
   </dd>
-  
+
   <p></p>
   <hr>
   <p></p>
-  
+
   <dt>Archived questions and answers</dt>
-  
+
   <p></p>
   <hr>
   <p></p>
-  
+
   <dt><strong><a name="gtk32">Q: How do I build the 32-bit version of SWT GTK?</a></strong></dt>
   <dd>A: Follow these steps to extract the 32-bit SWT GTK source code from GIT and produce your own build:
   <ol>
@@ -1286,10 +1286,10 @@ the SWT.CENTER style when creating a composite.
         the <code>org.eclipse.swt.gtk.linux.x86</code> project when this target has completed, to pick up the new libraries.</li>
     </ul>
     <li>You're done!  The <code>org.eclipse.swt.gtk.linux.x86</code> project will now contain the 32-bit native libraries, and if you're
-      interested, the 32-bit source code will now be available in the <code>org.eclipse.swt.gtk.linux.x86/src</code> folder.  
+      interested, the 32-bit source code will now be available in the <code>org.eclipse.swt.gtk.linux.x86/src</code> folder.
   </ol>
   </dd>
-  
+
   <dt><strong><a name="javawebstart">Q: How can I deploy my standalone SWT application with Java Web Start?</a></strong></dt>
   <dd>A: For steps that can be used to package and deploy an SWT application with Java Web Start (JWS) see
     <a href="/swt/jws/">How to deploy SWT Applications with Java Web Start</a>.  A related article
@@ -1298,12 +1298,12 @@ the SWT.CENTER style when creating a composite.
   </dd>
 
   <dt><strong><a name="xpthemes">Q: How do I make SWT use the Windows XP themes?</a></strong></dt>
-  <dd> A: In order for an application to use Windows XP themes, there must be a manifest file 
+  <dd> A: In order for an application to use Windows XP themes, there must be a manifest file
     located in the same place as the executable that launches the application.
-    <br>Here is a <a href="javaw.exe.manifest">sample manifest file</a> to download, for more details on <a href="https://www.eclipse.org/swt/faq.php#winexternalmanifestfile">how to enable external manifest file on Windows</a> 
-    
+    <br>Here is a <a href="javaw.exe.manifest">sample manifest file</a> to download, for more details on <a href="https://www.eclipse.org/swt/faq.php#winexternalmanifestfile">how to enable external manifest file on Windows</a>
+
     <p>Note: As of SWT 3.2, the manifest file is no longer needed.</p>
-  </dd>  
+  </dd>
 
   <dt><strong><a name="browsersolaris">Q: What do I need to run the SWT Browser inside Eclipse on Solaris?</a></strong></dt>
   <dd>A: The Browser is supported on OpenSolaris (x86) and Solaris 10 (SPARC).  The Mozilla versions that are supported by each Eclipse release are:
@@ -1314,7 +1314,7 @@ the SWT.CENTER style when creating a composite.
         <li>Eclipse 3.5.2 and newer: Mozilla 1.7.x GTK2, XULRunner 1.8.x - 1.9.2.x and 3.6.x</li>
         <li>Note that a Firefox release whose contained Gecko version correlates with the Mozilla versions above can also be used.
         Unlike other platforms, since Sun's compiler does not produce statically-linked libraries, Firefox builds downloaded from mozilla.org
-        <em>can</em> be used on Solaris. 
+        <em>can</em> be used on Solaris.
       </ul>
       <li>Solaris 10 (SPARC)
       <ul>
@@ -1329,7 +1329,7 @@ the SWT.CENTER style when creating a composite.
   </dd>
 
   <dt><strong><a name="howusemozilla">Q: How do I explicitly use Mozilla as the Browser's underlying renderer?</a></strong></dt>
-  <dd>A: A Browser can be created with style <code>SWT.MOZILLA</code> to specify that its renderer must be Mozilla-based (<em>@since 3.3</em>). 
+  <dd>A: A Browser can be created with style <code>SWT.MOZILLA</code> to specify that its renderer must be Mozilla-based (<em>@since 3.3</em>).
       Note that <code>SWT.MOZILLA</code> style is deprecated in <em>4.8</em> and XULRunner is not supported in Eclipse 4.8 and newer versions.
       <p>
       The runtime requirements for using Mozilla-based Browsers in Eclipse/SWT 4.4 to 4.7 are listed below. Note that failure to meet these runtime requirements will cause the Browser instantiation to fail.
@@ -1346,7 +1346,7 @@ the SWT.CENTER style when creating a composite.
       <li>To use <a href="http://developer.mozilla.org/en/docs/XULRunner">XULRunner</a> it must be detectable by the Browser.  For XULRunner versions 1.8.0.x - 3.6.x
         this is facilitated by either <a href="http://developer.mozilla.org/en/docs/XULRunner_1.8.0.1_Release_Notes#Installing_XULRunner">installing</a> it or by
         <a href="#specifyxulrunner">explicitly specifying its location.</a>  For XULRunner versions newer than 3.6.x the only way to do this is by explicitly specifying its location.</li>
-	  <li>The installed/specified XULRunner version must be 1.8.1.2 - 3.6.x to make use of JavaXPCOM
+    <li>The installed/specified XULRunner version must be 1.8.1.2 - 3.6.x to make use of JavaXPCOM
     </ul>
     <p>
     It is important to note that conflicts have been reported between the dependent libraries of WebKit and Mozilla.  As a result it is advised that Browser
@@ -1355,7 +1355,7 @@ the SWT.CENTER style when creating a composite.
     do not cause the libraries from the other native browser renderer to be loaded (see
     <a href="#browserspecifydefault">How do I specify the default type of native renderer that is used by the Browser?</a>).  </p>
   </dd>
-  
+
   <dt><strong><a name="browserapplets">Q: Can I view Java applets in the SWT Browser?</a></strong></dt>
   <dd>A: Browser support for applets varies by platform:
     <ul>
@@ -1373,9 +1373,9 @@ the SWT.CENTER style when creating a composite.
       For info about adding directories to the Mozilla plug-in search path see <a href="#mozillaPlugins">How can my Mozilla-based Browser find my Mozilla plug-ins?</a></li>
       <li>OS X (WebKit): Applets cannot be viewed with WebKit-based Browsers on OS X because the launching of a JRE to execute the applet collides with the
       JRE that is running the application.</li>
-    </ul>      
+    </ul>
   </dd>
-  
+
   <dt><strong><a name="specifyxulrunner">Q: Can I specify which XULRunner installation gets used?</a></strong></dt>
   <dd>A: Typically a Mozilla-based Browser uses XULRunner's lookup mechanism to find a registered XULRunner at runtime,
     in which case a XULRunner location does not need to be specified.  However if you wish to override this mechanism you
@@ -1421,13 +1421,13 @@ public class XULRunnerInitializer {
     }
 }
       </pre></li>
-    </ul> 
+    </ul>
   </dd>
 
   <dt><strong><a name="specifyprofile">Q: Can I specify which Mozilla profile gets used?</a></strong></dt>
   <dd>A: (<em>@since 4.4</em>) A profile can be specified for use by all Mozilla-based Browser instances by setting Java property <code>org.eclipse.swt.browser.MOZ_PROFILE_PATH</code> to the
     path of the profile before the first instance of a Mozilla-based Browser is created.  The best opportunity for a user to set this property is by launching their application with a <code>-D</code>
-    VM switch (eg.- add to the end of the eclipse.ini file: <code>-Dorg.eclipse.swt.browser.MOZ_PROFILE_PATH=...</code>). 
+    VM switch (eg.- add to the end of the eclipse.ini file: <code>-Dorg.eclipse.swt.browser.MOZ_PROFILE_PATH=...</code>).
   </dd>
 
   <dt><strong><a name="howdetectmozilla">Q: How does the Browser detect a native Mozilla browser to use?</a></strong></dt>
@@ -1483,18 +1483,18 @@ public class DisplayMozillaVersion {
 
   <dt><strong><a name="mozillaplugins">Q: How can my Mozilla-based Browser find my Mozilla plug-ins?</a></strong></dt>
   <dd>A: As of eclipse 3.3 the default set of Mozilla plug-in paths that are searched can be augmented by defining
-    environment variable <code>MOZ_PLUGIN_PATH</code>. For example: <code>export MOZ_PLUGIN_PATH=/usr/lib/browser-plugins</code>. 
+    environment variable <code>MOZ_PLUGIN_PATH</code>. For example: <code>export MOZ_PLUGIN_PATH=/usr/lib/browser-plugins</code>.
   </dd>
 
-  <dt><strong><a name="howusejavaxpcom">Q: How do I use JavaXPCOM with the Browser?</a></strong></dt>  
+  <dt><strong><a name="howusejavaxpcom">Q: How do I use JavaXPCOM with the Browser?</a></strong></dt>
   <dd>A: First, ensure that you have all of the requirements listed in
     <a href="/swt/faq.php#howusemozilla">How do I explicitly use Mozilla as the Browser's underlying renderer?</a>.
     Once these are in place then you can reference JavaXPCOM as follows:
     <p><ul>
       <li>If your application runs as an Eclipse plug-in:
       <ul>
-		<li>download the <a href="http://releases.mozilla.org/pub/mozilla.org/xulrunner/releases/">XULRunner SDK</a> for the XULRunner version that you will be embedding</li>
-		<li>add its lib/MozillaInterfaces.jar and (if present) lib/MozillaGlue.jar files to your plugin root
+    <li>download the <a href="http://releases.mozilla.org/pub/mozilla.org/xulrunner/releases/">XULRunner SDK</a> for the XULRunner version that you will be embedding</li>
+    <li>add its lib/MozillaInterfaces.jar and (if present) lib/MozillaGlue.jar files to your plugin root
         <li>open your plug-in's META-INF/MANIFEST.MF file in the Plug-in Manifest editor</li>
           <ul>
             <li>switch to its "Runtime" tab</li>
@@ -1521,14 +1521,14 @@ public class DisplayMozillaVersion {
   <dt><strong><a name="printOnGTKHangs">Q: Why does Eclipse 3.3 freeze when I open an editor on GTK 2.10 and GTK 2.12 (Linux, UNIX)?</a></strong></dt>
   <dd>A: There is a bug in some versions of GTK that causes certain print backends to hang.
   <p>If you do not want to upgrade your GTK to a fixed version, you can make use of the org.eclipse.swt.internal.gtk.disablePrinting
-   flag available in Eclipse 3.3.1 maintenance builds as well as 3.4 M1 and later. To use this, you must pass the flag to eclipse on startup: 
+   flag available in Eclipse 3.3.1 maintenance builds as well as 3.4 M1 and later. To use this, you must pass the flag to eclipse on startup:
    <br>./eclipse -vmargs -Dorg.eclipse.swt.internal.gtk.disablePrinting
   </dd>
-  
+
   <dt><strong><a name="rtlgtk28"> Q:  Why doesn't SWT.RIGHT_TO_LEFT work on some GTK versions (less than 2.8)?</a></strong></dt>
-  <dd>A: SWT relies on the Cairo graphics library to render strings and GTK started using Cairo in version 2.8. 
+  <dd>A: SWT relies on the Cairo graphics library to render strings and GTK started using Cairo in version 2.8.
   </dd>
-  
+
   <dt><strong><a name="swtawtsolaris">Q: Why does the SWT_AWT bridge not work for me on AIX or Solaris?</a></strong></dt>
   <dd>A: The SWT_AWT bridge requires that AWT be using XToolkit, since this implements the XEmbed
       protocol.  However by default AWT on AIX and Solaris use MToolkit.  This can be easily changed as
@@ -1537,7 +1537,7 @@ public class DisplayMozillaVersion {
 
 </dl>
 </div>
-<?php 
+<?php
 $html = ob_get_clean();
 
 $App->AddExtraHtmlHeader('<style type="text/css">dt { margin-top: 10px; }</style>');
