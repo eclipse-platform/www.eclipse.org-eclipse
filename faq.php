@@ -62,10 +62,10 @@ or just open a new bug: https://bugs.eclipse.org/bugs/enter_bug.cgi?product=Plat
   <li><a href="#browserspecifydefault">How do I specify the default type of native renderer that is used by the Browser?</a></li>
   <li><a href="#browsernativeie">Which Internet Explorer version do Browsers on Windows use?</a></li>
   <li><a href="#browserlinux">What do I need to run the SWT Browser inside Eclipse on Linux?</a></li>
-  <li><a href="#browserlinuxrcp">What do I need to run the SWT Browser in a standalone application on Linux or Solaris?</a></li>
-  <li><a href="#howusewebkit">How do I explicitly use WebKit as the Browser's underlying renderer?</a></li>
   <li><a href="#howusechromium">How do I explicitly use Chromium as the Browser's underlying renderer?</a></li>
-  <li><a href="#browserwebkitgtk">How do I use the WebKit renderer on Linux-GTK?</a></li>
+  <li><a href="#howuseedge">How do I explicitly use Edge as the Browser's underlying renderer?</a></li>
+  <li><a href="#howuseedgeoptions">What configuration options are avaibale for the Edge renderer?</a></li>
+  <li><a href="#edgelimitations">What are the limitations of the Edge Browser renderer?</a></li>
   <li><a href="#browserscrollbar">How do I hide the Browser's scrollbars?</a></li>
   <li><a href="#browserproxy">How do I set a proxy for the Browser to use?</a></li>
 </ul><ul>
@@ -102,8 +102,11 @@ Archive: Questions that are not relevant for the latest SWT versions but may be 
   <li><a href="#gtk32">How do I build the 32-bit version of SWT GTK?</a></li>
   <li><a href="#javawebstart">How can I deploy my standalone SWT application with Java Web Start?</a></li>
   <li><a href="#xpthemes">How do I make SWT use the Windows XP themes?</a></li>
+  <li><a href="#browserlinuxrcp">What do I need to run the SWT Browser in a standalone application on Linux or Solaris?</a></li>
   <li><a href="#browsersolaris">What do I need to run the SWT Browser inside Eclipse on Solaris?</a></li>
   <li><a href="#howusemozilla">How do I explicitly use Mozilla as the Browser's underlying renderer?</a></li>
+  <li><a href="#howusewebkit">How do I explicitly use WebKit as the Browser's underlying renderer?</a></li>
+  <li><a href="#browserwebkitgtk">How do I use the WebKit renderer on Linux-GTK?</a></li>
   <li><a href="#browserapplets">Can I view Java applets in the SWT Browser?</a></li>
   <li><a href="#specifyxulrunner">Can I specify which XULRunner installation gets used?</a></li>
   <li><a href="#specifyprofile">Can I specify which Mozilla profile gets used?</a></li>
@@ -829,61 +832,53 @@ the SWT.CENTER style when creating a composite.
   </dd>
 
   <dt><strong><a name="whatisbrowser">Q: What is the SWT Browser widget?</a></strong></dt>
-  <dd>A: The SWT Browser widget is used to display HTML documents. It is
-      designed to provide a basic and portable API sufficient for essential
-      HTML browsing and rendering on the platforms on which it is implemented.
+  <dd>A: The SWT Browser widget wraps a native web browser engine and can be used to display HTML documents,
+      provide browser-like experience or create hybrid web/native applications.
   </dd>
 
-  <dt><strong><a name="browserplatforms">Q: Which platforms support the SWT Browser, and which native renderers do they use?</a></strong></dt>
-  <dd>A: The SWT Browser is currently available on the platforms listed below.  By default, Browser instances created with style <code>SWT.NONE</code>
-      use the following native renderers:
-      <ul>
-        <li>Windows 2000 and newer (Internet Explorer 5.5 and newer)</li>
-        <li>Mac OS X 10.5 and newer (WebKit)</li>
-        <li>Linux GTK (<a href="#browserlinux">details</a>)
-        <li>Solaris-x86 and Solaris 10 SPARC (<a href="#browsersolaris">details</a>)
-      </ul>
-      <br>
-      Browsers should typically be created with style <code>SWT.NONE</code> as this will attempt to use a native renderer that should not require
-      additional software installation.  However for clients with specific native browser requirements, the type of native renderer to use can be specified
-      on a per-instance basis, see <a href="#howusewebkit">How do I explicity use WebKit as the Browser's underlying renderer?</a>,
-      <a href="#howusechromium">How do I explicitly use Chromium as the Browser's underlying renderer?</a> and
-      <a href="#howusemozilla">How do I explicitly use Mozilla as the Browser's underlying renderer?</a>.
-      <p>
-      Note that as of Eclipse/SWT 4.8, the SWT.MOZILLA style is deprecated and XULRunner is not a supported native renderer on any of the supported platforms.
-      <p>
-      Note that as of Eclipse/SWT 3.7 it is possible to override the default native renderer that is used for <code>SWT.NONE</code>-style Browsers,
-      see <a href="#browserspecifydefault">How do I specify the default type of native renderer that is used by the Browser?</a>.
+  <dt><strong><a name="browserplatforms">Q: Which platforms support the SWT Browser, and which native renderers are available?</a></strong></dt>
+  <dd>A: The SWT Browser is currently available on all supported platforms. Available renderers and corresponding widget style flags are:
+    <p>
+    <table>
+      <tr><th>Renderer</th><th>Platform</th><th>Style Flag</th><th>Default</th></tr>
+      <tr><td>Internet Explorer</td><td>Windows</td><td><code>SWT.IE</code></td><td>Yes</td></tr>
+      <tr><td>WebKit</td><td>macOS, Linux GTK</td><td><code>SWT.WEBKIT</code></td><td>Yes</td></tr>
+      <tr><td>Edge (Chromium-based)</td><td>Windows</td><td><code>SWT.EDGE</code></td><td>No</td></tr>
+      <tr><td>Chromium</td><td>All</td><td><code>SWT.CHROMIUM</code></td><td>No</td></tr>
+    </table>
+    <p>
+    <em>Note:</em> As of Eclipse/SWT 4.8, Mozilla (XULRunner) renderer is no longer supported, <code>SWT.MOZILLA</code> flag is deprecated and has no effect.
+    <p>
+    Browser instances created with style <code>SWT.NONE</code> will use the default platform renderer
+    according to the table above. Default renderer does not require additional software installation.
+    It is possible to override the default native renderer, see <a href="#browserspecifydefault">How do I specify the default type of native renderer that is used by the Browser?</a>.
+    <p>
+    For additional information on specific renderers see <a href="#howusechromium">How do I explicitly use Chromium as the Browser's underlying renderer?</a> and
+    <a href="#howuseedge">How do I explicitly use Edge as the Browser's underlying renderer?</a>.
   </dd>
 
   <dt><strong><a name="browserspecifydefault">Q: How do I specify the default type of native renderer that is used by the Browser?</a></strong></dt>
   <dd>A: The default native renderers that are used for <code>SWT.NONE</code>-style Browsers are listed in
-  <a href="#browserplatforms">Which platforms support the SWT Browser, and which native renderers do they use?</a>.  In general these defaults
-  should not be overridden because they are chosen with the goal of using a renderer that should not require
-  additional software installation.  However there are situations, such as the potential mixing of Mozilla and WebKit Browsers, where specifying
-  the default type of native renderer to use can avoid crashes caused by conflicting dependent libraries.
-  <p>
-  As of Eclipse/SWT 3.7.1 a user can set a property to specify the type of native renderer to use for <code>SWT.NONE</code>-style Browsers.
-  Setting this property does not affect Browsers that are created with styles such as <code>SWT.WEBKIT</code> or <code>SWT.CHROMIUM</code>.
-  The property name is <code>org.eclipse.swt.browser.DefaultType</code> and valid values for it currently include "<code>webkit</code>",
-  "<code>ie</code>" (@since 4.3) and "<code>chromium</code>" (@since 4.17).  This property must be set before the <em>first</em> Browser instance is created.
-  <p>
-  <em>Note:</em> As of Eclipse/SWT 4.8, the SWT.MOZILLA style is deprecated and XULRunner is not a supported native renderer on any of the supported platforms.
-  Hence, setting the value of the property to mozilla is not valid.
-  <p>
-  <em>Note:</em> As of Eclipse/SWT 4.3 a user can specify a comma-separated list of native renderers, in order of preference, for the
-  <code>org.eclipse.swt.browser.DefaultType</code> value.  Additionally, "<code>ie</code>" is now a valid native renderer value.  The purpose of these
-  changes is to enable applications to specify the default use of either Mozilla or WebKit on non-Windows platforms (where conflicting dependent library
-  problems can occur) without affecting the default renderer that is used on Windows (IE).  An application wishing to do this should set this property's
-  value to either "<code>ie,webkit</code>" or "<code>ie,mozilla</code>".  On Windows this will leave <code>SWT.NONE</code>-style Browsers to use IE, and
-  on other platforms where IE is not available the second specified renderer in the list will be used for <code>SWT.NONE</code>-style Browsers.
-  <p>
-  The best opportunity for a user to set this property is by launching their application with a <code>-D</code>
-  VM switch (eg.- add to the end of the eclipse.ini file: <code>-Dorg.eclipse.swt.browser.DefaultType=webkit</code>).
-  <p>
-  An alternate approach that an eclipse application may use is to provide a <code>BrowserInitializer</code>
-  implementation that sets this property.  This implementation will be invoked when the first Browser instance
-  is about to be created.  The steps to do this are:
+    <a href="#browserplatforms">Which platforms support the SWT Browser, and which native renderers do they use?</a>.
+    Default is chosen to not require additional software installation and to preserve backward-compativle behavior.
+    <p>
+    A user can set a property to specify the type of native renderer to use for <code>SWT.NONE</code>-style Browsers.
+    Setting this property does not affect Browsers that are created with explicit renderer styles such as <code>SWT.WEBKIT</code> or <code>SWT.CHROMIUM</code>.
+    The property name is <code>org.eclipse.swt.browser.DefaultType</code> and valid values for it currently include "<code>webkit</code>",
+    "<code>ie</code>" (since 4.3), "<code>chromium</code>" (since 4.17) and "<code>edge</code>" (since 4.19).  This property must be set before the <em>first</em> Browser instance is created.
+    <p>
+    <em>Note:</em> As of Eclipse/SWT 4.8, Mozilla (XULRunner) renderer is no longer supported, the value <code>mozilla</code> has no effect.
+    <p>
+    A user can specify a comma-separated list of native renderers, in order of preference, for the <code>org.eclipse.swt.browser.DefaultType</code> value.
+    Valus not applicable to a particular platform are ignored.  For example, the value of <code>edge,chromium</code> will change the default
+    to Edge on Windows and Chromium on other platforms.
+    <p>
+    The best opportunity for a user to set this property is by launching their application with a <code>-D</code>
+    VM switch (eg. add to the end of the eclipse.ini file: <code>-Dorg.eclipse.swt.browser.DefaultType=chromium</code>).
+    <p>
+    An alternate approach that an eclipse application may use is to provide a <code>BrowserInitializer</code>
+    implementation that sets this property.  This implementation will be invoked when the first Browser instance
+    is about to be created.  The steps to do this are:
     <ul>
       <li>Create a fragment with host plug-in <code>org.eclipse.swt</code>.</li>
       <li>In this fragment create class <code>org.eclipse.swt.browser.BrowserInitializer</code>.</li>
@@ -892,113 +887,36 @@ the SWT.CENTER style when creating a composite.
   </dd>
 
   <dt><strong><a name="browsernativeie">Q: Which Internet Explorer version do Browsers on Windows use?</a></strong></dt>
-  <dd>A: Windows machines typically only have one production release of Internet Explorer (IE) installed at a time, so the Browser control
-    embeds the same native WebBrowser that is used by stand-alone IE.  However it's important to note that for Eclipse/SWT releases prior
-    to 3.7, the <em>default</em> compatibility mode of the Browser control is capped at IE7.  This means, for instance, that HTML documents
-    containing HTML5 <code>canvas</code> tags will not be shown properly, even if IE9 is installed on the machine.  An HTML document can override
-    this behavior by including a <code>X-UA-Compatible</code> meta tag as described in <a href="http://msdn.microsoft.com/en-us/library/cc288325%28v=vs.85%29.aspx">
-    Defining Document Compatibility</a>, which enables the Browser to use a more modern compatibility mode if an IE version newer than IE7 is installed.
+  <dd>A: All supported Windows versions provide Internet Explorer 11.
     <p>
-    As of Eclipse/SWT 3.7 the Browser control defaults to using the compatibility mode that matches the installed IE version.  This behavior will
-    be overridden in the following two cases:
-    <ol>
-      <li>If an HTML document contains a <code>X-UA-Compatible</code> meta tag that specifies an older IE version then the Browser will honor
-      this request.  This will only affect the compatibility mode that is used for showing the document containing the meta tag, it will not
-      affect the compatibility mode for other documents.</li>
-      <li>The Browser's default compatibility mode can be overridden by setting java property <code>org.eclipse.swt.browser.IEVersion</code> to a value
-      from <a href="http://msdn.microsoft.com/en-us/library/ee330730%28v=vs.85%29.aspx#browser_emulation">Browser Emulation</a> before the first
-      Browser instance is created.  For example, adding the line <code>-Dorg.eclipse.swt.browser.IEVersion=7000</code> to the end of
-      eclipse's <code>eclipse.ini</code> file will revert all IE-based Browsers to use IE7 compatibility mode by default.</li>
-    </ol>
+    An HTML document can override this behavior by including a <code>X-UA-Compatible</code> meta tag as described in
+    <a href="http://msdn.microsoft.com/en-us/library/cc288325%28v=vs.85%29.aspx">Defining Document Compatibility</a>.
+    <p>
+    Additionally, the Browser's default compatibility mode can be overridden by setting Java property <code>org.eclipse.swt.browser.IEVersion</code> to a value
+    from <a href="http://msdn.microsoft.com/en-us/library/ee330730%28v=vs.85%29.aspx#browser_emulation">Browser Emulation</a> before the first
+    Browser instance is created.  For example, adding the line <code>-Dorg.eclipse.swt.browser.IEVersion=7000</code> to the end of
+    eclipse's <code>eclipse.ini</code> file will revert all IE-based Browsers to use IE7 compatibility mode by default.</li>
   </dd>
 
   <dt><strong><a name="browserlinux">Q: What do I need to run the SWT Browser inside Eclipse on Linux?</a></strong></dt>
-  <dd>A: The browser versions that are supported by each Eclipse release are listed below.
+  <dd>A: Default Browser renderer for Linux GTK is WebKitGTK+ 2.  Generally, it will be installed as part of the GTK-based desktop environment.
+    <p>
+    Particular package name depends on the distribution. For example:
     <ul>
-      <li>Eclipse 4.17: Chromium v59 is supported. WebKitGTK+ 2 (webkitgtk4) is default.</li>
-      <li>Eclipse 4.8 and newer: WebKitGTK+ 2 (webkitgtk4) GTK3 is the default, XULRunner is no longer supported.</li>
-      <li>Eclipse 4.5 to 4.7: Mozilla 1.4 GTK2 - 1.7.x GTK2, XULRunner 1.8.x - 1.9.x, 3.6.x, 10.x, 24.x and 31.x (but <em>not</em> 2.x nor other unlisted versions), WebKitGTK+ 1.2.x and newer
-      (Note:Eclipse 4.5 support for XULRunner 31.x is not available on Linux due to <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=467646">Bug 467646.</a>)
-      <li>Eclipse 4.4: Mozilla 1.4 GTK2 - 1.7.x GTK2, XULRunner 1.8.x - 1.9.x, 3.6.x, 10.x and 24.x (but <em>not</em> 2.x nor other unlisted versions), WebKitGTK+ 1.2.x and newer
-      (Note:Eclipse 4.4 and newer uses GTK 3 by default and XULRunner cannot be used in this case as it is not ported to GTK 3 yet)</li>
-      <li>Eclipse 4.2.2: Mozilla 1.4 GTK2 - 1.7.x GTK2, XULRunner 1.8.x - 1.9.x, 3.6.x and 10.x (but <em>not</em> 2.x nor 4.x - 9.x), WebKitGTK+ 1.2.x and newer</li>
-      <li>Eclipse 4.2: Mozilla 1.4 GTK2 - 1.7.x GTK2, XULRunner 1.8.x - 1.9.x, 3.6.x and 10.x (but <em>not</em> 2.x nor 4.x - 9.x), WebKitGTK+ 1.2.x - 1.8.x</li>
-      <li>Eclipse 3.8.x: Mozilla 1.4 GTK2 - 1.7.x GTK2, XULRunner 1.8.x - 1.9.x, 3.6.x and 10.x (but <em>not</em> 2.x nor 4.x - 9.x), WebKitGTK+ 1.2.x and newer</li>
-      <li>Eclipse 3.7.x: Mozilla 1.4 GTK2 - 1.7.x GTK2, XULRunner 1.8.x - 1.9.x and 3.6.x (but <em>not</em> 2.x), WebKitGTK+ 1.2.x and newer</li>
-      <li>Eclipse 3.6.x: Mozilla 1.4 GTK2 - 1.7.x GTK2, XULRunner 1.8.x - 1.9.x and 3.6.x (but <em>not</em> 2.x), WebKitGTK+ 1.2.x (see <a href="#browserwebkitgtk">How do I use the WebKit renderer on Linux-GTK?</a>)</li>
-      <li>Eclipse 3.5.2: Mozilla 1.4 GTK2 - 1.7.x GTK2, XULRunner 1.8.x - 1.9.x and 3.6.x (but <em>not</em> 2.x).</li>
-      <li>Eclipse 3.5.0 and 3.5.1: Mozilla 1.4 GTK2 - 1.7.x GTK2, XULRunner 1.8.x - 1.9.1.x.</li>
-      <li>Eclipse 3.4.x: Mozilla 1.4 GTK2 - 1.7.x GTK2, XULRunner 1.8.x - 1.9.0.x.</li>
-      <li>Eclipse 3.3.x: Mozilla 1.4 GTK2 - 1.7.x GTK2, XULRunner 1.8.x.</li>
-      <li>Eclipse 3.2.x: Mozilla 1.4 GTK2 - 1.7.x GTK2.</li>
-      <li>Eclipse 3.1.x: Mozilla 1.4 GTK2 - 1.7.8 GTK2.</li>
-      <li>Eclipse 3.0.x: Mozilla 1.4 GTK2 - 1.6 GTK2.</li>
-
-      <li>Also note that a Firefox release whose contained Gecko version correlates with the Mozilla versions above can also be used
-      with Eclipse 3.1 and newer (Linux only), provided that it has been compiled with linkable Gecko libraries.  It is important to
-      note that Firefox downloads from mozilla.org do <em>not</em> satisfy this criteria, but Firefox installations that are
-      included in major Linux distributions often do in the absence of a XULRunner installation.  Attempting to use a Firefox install
-      without linkable Gecko libraries will throw an error with message "No more handles [NS_InitEmbedding...error -2147221164]".</li>
-    </ul>
-
-    <br>Note that Mozilla/XULRunner versions that are not final releases (eg.- betas, alphas, nightlies) are <em>not</em> supported, even if their version technically satisfies a listed version range.
-    Also note that the Mozilla/XULRunner must be compiled for the same architecture as the SWT jar that is being used.
-
-    <br>The version of Mozilla or Firefox installed on your system varies with your Linux distribution.
-    The following Linux distributions meet the minimum Mozilla requirements for using the Browser widget.
-    <ul>
-      <li>RedHat Enterprise Linux 3</li>
-      <li>Suse 9</li>
-    </ul>
-    <br>If you use the IBM 1.4 VM <a href="#browserlinuxibm">check this.</a>
-    <br>
-  <br>In general the Browser control will automatically detect an appropriate native browser to use.  However if you wish to point at a specific
-  XULRunner or Mozilla install to use then this can be specified as described in <a href="#specifyxulrunner">Can I specify which XULRunner installation
-  gets used?</a> or <a href="#browserlinuxrcp">What do I need to run the SWT Browser in a standalone application on Linux or Solaris?</a>.
-  </dd>
-
-  <dt><strong><a name="browserlinuxrcp">Q: What do I need to run the SWT Browser in a standalone application on Linux or Solaris?</a></strong></dt>
-  <dd>A: Follow the steps below to use the SWT Browser widget in your standalone SWT application.
-    <ul>
-      <li>A supported native browser must be installed (<a href="#browserlinux">linux requirements</a>) (<a href="#browsersolaris">solaris requirements</a>).</li>
-      <li>If a supported WebKitGTK and/or XULRunner is installed then it should be found automatically at runtime with no additional effort.  For other native Mozilla-based browsers:</li>
-      <ol>
-        <li>Set the environment variable MOZILLA_FIVE_HOME to the native browser's installation folder. e.g. <code>setenv MOZILLA_FIVE_HOME /usr/lib/mozilla</code></li>
-        <li>Set the environmnent variable LD_LIBRARY_PATH to include MOZILLA_FIVE_HOME. e.g. <code>setenv LD_LIBRARY_PATH ${MOZILLA_FIVE_HOME}:${LD_LIBRARY_PATH}</code></li>
-        <li>Your standalone SWT application can now use the Browser widget.
-      </ol>
-    </ul>
-    <br>If you use the IBM 1.4 VM <a href="#browserlinuxibm">check this.</a>
-    <br>
-  </dd>
-
-  <dt><strong><a name="howusewebkit">Q: How do I explicitly use WebKit as the Browser's underlying renderer?</a></strong></dt>
-  <dd>A: To specify that a WebKit renderer be used by a Browser instance, create it with style <code>SWT.WEBKIT</code> (<em>@since 3.7</em>).  The runtime requirements for
-      using WebKit-based Browsers are listed below.  Note that failure to meet these runtime requirements will cause the Browser instantiation to fail.
-    <ul>
-    <li>Linux: WebKitGTK 1.2.0 or newer must be in the library load path.  Examples of Linux distros that meet this requirement by default
-        include Red Hat Enterprise Linux 6 and Ubuntu 10.04.</li>
-    <li>OS X: No additional runtime requirements, the default renderer is WebKit-based.</li>
-    <li>Windows: Eclipse/SWT 4.10 dropped 32-bit support and Webkit is no longer supported. For older versions:
-    <ul>
-      <li>32-bit SWT</li>
-      <li>Safari must be installed</li>
-      <li>For OSs older than XP+SP1, the path to the Apple Application Support installation must be prepended to Windows' "Path" environment variable
-          before running eclipse.  This installation will be in a location like "<code>C:\Program Files\Safari\Apple Application Support</code>" or
-          "<code>C:\Program Files\Common Files\Apple\Apple Application Support</code>".  If more than one of these directories are found then choose
-          the one with "Safari" in its directory ancestry.</li>
-    </ul>
+      <li>RHEL, Fedora: webkit2gtk3 or webkitgtk4</li>
+      <li>Debian, Ubuntu: libwebkit2gtk-4.0-37</li>
+      <li>SLES, openSUSE: libwebkit2gtk-4_0-37</li>
     </ul>
     <p>
-    It is important to note that conflicts have been reported between the dependent libraries of WebKit and Mozilla.  As a result it is advised that Browser
-    instances with these respective types not be mixed in an application.  If a Browser with one of these types <em>must</em> be used in an application then
-    java property <code>org.eclipse.swt.browser.DefaultType</code> should also be set to this type to ensure that <code>SWT.NONE</code>-style Browsers
-    do not cause the libraries from the other native browser renderer to be loaded (see
-    <a href="#browserspecifydefault">How do I specify the default type of native renderer that is used by the Browser?</a>).  </p>
+    <em>Note: </em> as of Eclipse/SWT 4.8, Mozilla (XULRunner) is no longer supported.
+    </br>
+    <em>Note: </em> as of Eclipse/SWT 4.15, WebKitGTK 1.x is no longer supported.
+    <p>
+    Chromium renderer is also available for Linux, see <a href="#howusechromium">How do I explicitly use Chromium as the Browser's underlying renderer?</a>.
   </dd>
 
   <dt><strong><a name="howusechromium">Q: How do I explicitly use Chromium as the Browser's underlying renderer?</a></strong></dt>
-  <dd>A: To specify that a Chromium renderer be used by a Browser instance, create it with style <code>SWT.CHROMIUM</code> (<em>@since 4.17</em>) or
+  <dd>A: To specify that a Chromium renderer be used by a Browser instance, create it with style <code>SWT.CHROMIUM</code> (since 4.17) or
   set the Java property <code>org.eclipse.swt.browser.DefaultType=chromium</code>.
   <p>
   You can get the SWT-Chromium libraries from the Eclipse SDK or from the standalone SWT Chromium support libraries section on the download page.
@@ -1040,14 +958,143 @@ the SWT.CENTER style when creating a composite.
   </ul>
   </dd>
 
-  <dt><strong><a name="browserwebkitgtk">Q: How do I use the WebKit renderer on Linux-GTK?</a></strong></dt>
-  <dd>A: In Eclipse/SWT 3.7 and newer the Browser attempts to use WebKitGTK for SWT.NONE-style Browsers created on GTK.  For this to succeed, WebKitGTK
-      1.2.0 or newer must be in the library load path.  Examples of Linux distros that meet this requirement by default include Red Hat
-      Enterprise Linux 6 and Ubuntu 10.04.  Linux installations that do not meet this requirement will fall back to using Mozilla for SWT.NONE-style Browsers.
-      <p>
-      Eclipse/SWT 3.6.x can also use WebKitGTK for SWT.NONE-style Browsers created on GTK, but the user must explicitly request this by setting java property
-      "<code>org.eclipse.swt.browser.UseWebKitGTK</code>" to "<code>true</code>".  In the absence of this property being set, Mozilla is used for all SWT.NONE-style
-      Browsers.  (Note that Eclipse/SWT 3.6.x is only able to use WebKitGTK 1.2.x; it will fail if a newer WebKitGTK release is found.)
+  <dt><strong><a name="howuseedge">Q: How do I explicitly use Edge as the Browser's underlying renderer?</a></strong></dt>
+  <dd>A: To specify that an Edge renderer be used by a Browser instance, create it with style <code>SWT.EDGE</code> (since 4.19) or
+    set the Java property <code>org.eclipse.swt.browser.DefaultType=edge</code>.
+    <p>
+    Edge rendering back-end uses the WebView2 component, which is based on, but distinct from the Edge browser itself.
+    WebView2 has to be installed separately from one of the following sources:
+    <ul>
+      <li>A stand-alone runtime installer, either web or offline
+        (<a href="https://developer.microsoft.com/en-us/microsoft-edge/webview2/#webview-title">Download the WebView2 Runtime</a> from Microsoft).
+        <br/>
+        This runtime will be shared between all applications on the machine and will auto-update itself independent of your application.
+      </li>
+      <li>
+        A fixed-version archive with all the necessary files (Same link as above).
+        <br/>
+        This is a complete, fixed set of files to be included with your application.
+        Unlike the first option, you have complete freedom in bundling, packaging and updating it.
+      </li>
+      <li>
+        Beta, Dev or Canary version of the Edge browser
+        (<a href="https://www.microsoftedgeinsider.com/en-us/download">https://www.microsoftedgeinsider.com/en-us/download</a>).
+        <br/>
+        This option is convenient for testing, but production deployments should use the previous two options.
+      </li>
+    </ul>
+    <p>
+    <em>Note:</em> Stable Edge browser installations <strong>don't</strong> provide a WebView2 component.
+    <p>
+    See also <a href="https://docs.microsoft.com/en-us/microsoft-edge/webview2/concepts/distribution">Distribution of apps using WebView2</a> on MSDN.
+    <p>
+    SWT will automatically locate installed browsers and runtimes.
+    In case you want to use fixed-version binaries or override the automatically chosen version,
+    set the <code>org.eclipse.swt.browser.EdgeDir</code> Java property to the directory containing <code>msedgewebview2.exe</code>.
+    For example:
+    <pre>    java "-Dorg.eclipse.swt.browser.EdgeDir=c:\Program Files (x86)\Microsoft\Edge Beta\Application\88.0.705.29" ...</pre>
+    <p>
+    WebView2 creates a user data directory to stores caches and persistent data like cookies and localStorage.
+    All WebView2 instances in an application and all instances of the same application share this directory.
+    <p>
+    The default user directory location is <code>%LOCALAPPDATA%\&lt;AppName&gt;\WebView2</code>,
+    where <code>&lt;AppName&gt;</code> is defined with <code>Display.setAppName()</code>.
+    This location can be overridden on a per-process basis by setting the
+    <code>org.eclipse.swt.browser.EdgeDataDir</code> Java property.
+  </dd>
+
+  <dt><strong><a name="howuseedgeoptions">Q: What configuration options are avaibale for the Edge renderer?</a></strong></dt>
+  <dd>A: Several Java properties are available to fine-tune the behavior of the Edge renderer.
+    <p>
+    The properties <code>org.eclipse.swt.browser.EdgeDir</code> and <code>org.eclipse.swt.browser.EdgeDataDir</code> are described in
+    <a href="#howuseedge">How do I explicitly use Edge as the Browser's underlying renderer</a>.
+    <p>
+    The property <code>org.eclipse.swt.browser.EdgeArgs</code> defines command line
+    arguments to be passed directly to the Chromium process.
+    For a list of available arguments (unofficial) see
+    <a href="https://peter.sh/experiments/chromium-command-line-switches/">https://peter.sh/experiments/chromium-command-line-switches/</a>.
+    <br/>
+    For example, to disable GPU rendering use:
+    <pre>    java -Dorg.eclipse.swt.browser.EdgeArgs=--disable-gpu ...</pre>
+    <p>
+    The property <code>org.eclipse.swt.browser.EdgeLanguage</code> is a language or
+    language+country code that defines the browser UI language and preferred
+    language for HTTP requests (<code>Accept-Languages</code> header).
+    Example values: <code>en</code>, <code>ja</code>, <code>en-GB</code>, <code>de-AT</code>, etc.
+    <p>
+    Informational property <code>org.eclipse.swt.browser.EdgeVersion</code> contains the
+    version of the browser currently in use.
+    <p>
+    <em>Note:</em> All of the properties described above must be set before the first instance of the Edge-based <code>Browser</code> is created.
+  </dd>
+
+  <dt><strong><a name="edgelimitations">Q: What are the limitations of the Edge Browser renderer?</a></strong></dt>
+  <dd>A: Due to API differences and WebView2 implementation details, Edge renderer doesn't implement complete Browser widget API.
+    Some features aren't available or behave differently compared to the older Internet Explorer renderer.
+    <p>
+    <ul>
+      <li><code>AuthenticationListener</code>:
+        Unsupported. Missing upstream API.
+      </li>
+      <li><code>StatusTextListener</code>:
+        Unsupported. Conceptually obsolete.
+      </li>
+      <li><code>VisibilityWindowListener.hide</code>:
+        Unsupported. Conceptually obsolete.
+      </li>
+      <li><code>ProgressListener.changed</code>:
+        Unsupported. Missing upstream API.
+      </li>
+      <li><code>ProgressListener.completed</code>:
+        Fires for the top level document only.
+        On Edge version 88 and later it matches the <code>DOMContentLoaded</code> JavaScript event,
+        on earlier versions it matches the <code>load</code> JavaScript event.
+      </li>
+      <li><code>LocationListener.changing</code>, <code>OpenWindowListener.open</code>:
+        These events may return values and have to run synchronously.
+        Calling <code>evaluate()</code> and <code>getText()</code> from their handlers is impossible and will throw an exception.
+      </li>
+      <li><code>LocationListener.changed</code>:
+        Fires for the top document only. May not fire when using <code>setText()</code>.
+      </li>
+      <li><code>KeyListener</code>, <code>MouseListener</code>:
+        Unsupported. Missing upstream API.
+      </li>
+      <li><code>evaluate(String script, boolean trusted)</code>:
+        The parameter <code>trusted</code> is ignored. Everything runs in the same security context scoped to a given user directory.
+      </li>
+      <li><code>execute(String script)</code>:
+        Execution is always asynchronous. You can't observe evaluation effects immediately after the <code>execute()</code> call.
+        Use <code>evaluate()</code> for synchronous script evaluation.
+      </li>
+      <li><code>getText()</code>:
+        Returns the live contents of HTML document as seen by the browser.
+        This can differ from what was set with <code>setText()</code> due to browser processing and script execution.
+        <br/>
+        <em>Note:</em> Implemented as <code>evaluate("return document.documentElement.outerHTML")</code>.
+      </li>
+      <li><code>setText()</code>:
+        This method uses <code>data:</code> URLs internally (WebView2 implementation detail) and these URLs might appear in the <code>LocationEvent.url</code> field.
+      </li>
+      <li><code>getCookie()</code>, <code>setCookie()</code>:
+        Unsupported. WebView doesn't have a global cookie manager.
+      </li>
+      <li><code>setUrl(String url, String postData, String[] headers)</code>:
+        The parameters <code>headers</code> and <code>postData</code> require Edge 88 or later
+        (currently in Beta).
+      </li>
+      <li><code>close()</code>:
+        Unsupported. Missing upstream API.
+      </li>
+      <li>
+        Unless loaded from a <code>file://</code> URL, pages don't have access to other <code>file://</code> URLs.
+      </li>
+      <li>
+        Pages navigated to with <code>setText()</code> might appear to have <code>data:</code> URLs in event parameters and elsewhere.
+        (Internet Explorer uses <code>about:blank</code> URL in this case).
+      </li>
+    </ul>
+    <p>
   </dd>
 
   <dt><strong><a name="browserscrollbar">Q: How do I hide the Browser's scrollbars?</a></strong></dt>
@@ -1305,6 +1352,19 @@ the SWT.CENTER style when creating a composite.
     <p>Note: As of SWT 3.2, the manifest file is no longer needed.</p>
   </dd>
 
+  <dt><strong><a name="browserlinuxrcp">Q: What do I need to run the SWT Browser in a standalone application on Linux or Solaris?</a></strong></dt>
+  <dd>A: Follow the steps below to use the SWT Browser widget in your standalone SWT application.
+    <ul>
+      <li>A supported native browser must be installed (<a href="#browserlinux">linux requirements</a>) (<a href="#browsersolaris">solaris requirements</a>).</li>
+      <li>If a supported WebKitGTK and/or XULRunner is installed then it should be found automatically at runtime with no additional effort.  For other native Mozilla-based browsers:</li>
+      <ol>
+        <li>Set the environment variable MOZILLA_FIVE_HOME to the native browser's installation folder. e.g. <code>setenv MOZILLA_FIVE_HOME /usr/lib/mozilla</code></li>
+        <li>Set the environmnent variable LD_LIBRARY_PATH to include MOZILLA_FIVE_HOME. e.g. <code>setenv LD_LIBRARY_PATH ${MOZILLA_FIVE_HOME}:${LD_LIBRARY_PATH}</code></li>
+        <li>Your standalone SWT application can now use the Browser widget.
+      </ol>
+    </ul>
+  </dd>
+
   <dt><strong><a name="browsersolaris">Q: What do I need to run the SWT Browser inside Eclipse on Solaris?</a></strong></dt>
   <dd>A: The Browser is supported on OpenSolaris (x86) and Solaris 10 (SPARC).  The Mozilla versions that are supported by each Eclipse release are:
     <ul>
@@ -1354,6 +1414,41 @@ the SWT.CENTER style when creating a composite.
     java property <code>org.eclipse.swt.browser.DefaultType</code> should also be set to this type to ensure that <code>SWT.NONE</code>-style Browsers
     do not cause the libraries from the other native browser renderer to be loaded (see
     <a href="#browserspecifydefault">How do I specify the default type of native renderer that is used by the Browser?</a>).  </p>
+  </dd>
+
+  <dt><strong><a name="howusewebkit">Q: How do I explicitly use WebKit as the Browser's underlying renderer?</a></strong></dt>
+  <dd>A: To specify that a WebKit renderer be used by a Browser instance, create it with style <code>SWT.WEBKIT</code> (<em>@since 3.7</em>).  The runtime requirements for
+      using WebKit-based Browsers are listed below.  Note that failure to meet these runtime requirements will cause the Browser instantiation to fail.
+    <ul>
+    <li>Linux: WebKitGTK 1.2.0 or newer must be in the library load path.  Examples of Linux distros that meet this requirement by default
+        include Red Hat Enterprise Linux 6 and Ubuntu 10.04.</li>
+    <li>OS X: No additional runtime requirements, the default renderer is WebKit-based.</li>
+    <li>Windows: Eclipse/SWT 4.10 dropped 32-bit support and Webkit is no longer supported. For older versions:
+    <ul>
+      <li>32-bit SWT</li>
+      <li>Safari must be installed</li>
+      <li>For OSs older than XP+SP1, the path to the Apple Application Support installation must be prepended to Windows' "Path" environment variable
+          before running eclipse.  This installation will be in a location like "<code>C:\Program Files\Safari\Apple Application Support</code>" or
+          "<code>C:\Program Files\Common Files\Apple\Apple Application Support</code>".  If more than one of these directories are found then choose
+          the one with "Safari" in its directory ancestry.</li>
+    </ul>
+    </ul>
+    <p>
+    It is important to note that conflicts have been reported between the dependent libraries of WebKit and Mozilla.  As a result it is advised that Browser
+    instances with these respective types not be mixed in an application.  If a Browser with one of these types <em>must</em> be used in an application then
+    java property <code>org.eclipse.swt.browser.DefaultType</code> should also be set to this type to ensure that <code>SWT.NONE</code>-style Browsers
+    do not cause the libraries from the other native browser renderer to be loaded (see
+    <a href="#browserspecifydefault">How do I specify the default type of native renderer that is used by the Browser?</a>).  </p>
+  </dd>
+
+  <dt><strong><a name="browserwebkitgtk">Q: How do I use the WebKit renderer on Linux-GTK?</a></strong></dt>
+  <dd>A: In Eclipse/SWT 3.7 and newer the Browser attempts to use WebKitGTK for SWT.NONE-style Browsers created on GTK.  For this to succeed, WebKitGTK
+      1.2.0 or newer must be in the library load path.  Examples of Linux distros that meet this requirement by default include Red Hat
+      Enterprise Linux 6 and Ubuntu 10.04.  Linux installations that do not meet this requirement will fall back to using Mozilla for SWT.NONE-style Browsers.
+      <p>
+      Eclipse/SWT 3.6.x can also use WebKitGTK for SWT.NONE-style Browsers created on GTK, but the user must explicitly request this by setting java property
+      "<code>org.eclipse.swt.browser.UseWebKitGTK</code>" to "<code>true</code>".  In the absence of this property being set, Mozilla is used for all SWT.NONE-style
+      Browsers.  (Note that Eclipse/SWT 3.6.x is only able to use WebKitGTK 1.2.x; it will fail if a newer WebKitGTK release is found.)
   </dd>
 
   <dt><strong><a name="browserapplets">Q: Can I view Java applets in the SWT Browser?</a></strong></dt>
