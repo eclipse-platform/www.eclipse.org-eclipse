@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on The Community for Open Innovation and Collaboration</title>
+    <link>https://staging.eclipse.org/eclipse/tags/</link>
+    <description>Recent content in Tags on The Community for Open Innovation and Collaboration</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>webdev@eclipse-foundation.org (Christopher Guindon)</managingEditor>
+    <webMaster>webdev@eclipse-foundation.org (Christopher Guindon)</webMaster><atom:link href="https://staging.eclipse.org/eclipse/tags/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

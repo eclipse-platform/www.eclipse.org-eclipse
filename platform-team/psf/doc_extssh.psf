@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<psf version="2.0">
-<provider id="org.eclipse.team.cvs.core.cvsnature">
-<project reference="1.0,:extssh:dev.eclipse.org:/cvsroot/eclipse,org.eclipse.platform.doc.isv,org.eclipse.platform.doc.isv"/>
-<project reference="1.0,:extssh:dev.eclipse.org:/cvsroot/eclipse,org.eclipse.platform.doc.user,org.eclipse.platform.doc.user"/>
-</provider>
-</psf>
