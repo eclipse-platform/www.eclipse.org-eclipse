@@ -10,12 +10,22 @@ ob_start();
 
 <h3>Software needed for setting up windows native build</h3>
 <ol>
-<li><p> Microsoft 'Visual Studio - Community 2017' and 'Windows 10 SDK', link to <a href="https://www.visualstudio.com/thank-you-downloading-visual-studio/?sku=Community&rel=15">download page</a></p>
+<li><p> Microsoft 'Visual Studio - Community 2019' and 'Windows 10 SDK', link to <a href="https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=Community&rel=16">download page</a></p>
+	<ul>
+	<li>Run the web installer.
+	<li>Go to "Desktop development with C++".
+	<li>Select/turn the check-box ON for below items from the list:
+		<ul>
+		<li>VC++ 2019 v141 toolset(x86, x64)
+		<li>Windows 10 SDK (10.0.16299.0) for Desktop C++
+		</ul>
+		<p>Note: [Version numbers (v141, 10.0.16299.0) mentioned above get revised as per latest Microsoft 'Visual Studio' update.]</p>
+	</ul>
 <li><p> JDK8 64bit link to <a href="http://www.oracle.com/technetwork/java/javase/overview/java8-2100321.html">Oracle JDK</a> or <a href="https://developer.ibm.com/javasdk/downloads/">IBM JDK</a></p>
 <li> Cygwin [Optional for local setup]</p>
 </ol>
-<p>Note: [Moved to latest "Win10 SDK" and "Visual Studio 2017 community edition" 
-via bugzilla <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=526802">bug 526802</a>]</b></p>
+<p>Note: [Eclipse SWT Windows moved to latest "Win10 SDK" and "Visual Studio 2019 community edition" 
+via bugzilla <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=572308">bug 572308</a>]</b></p>
 
 <h3>Steps to set up Windows native build:</h3>
 <ol>
@@ -35,7 +45,7 @@ via bugzilla <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=526802">bug 
 <li><p> 'SWT_BUILDDIR' root directory contain various libraries like Visual Studio libraries, JDK, etc.. </p>
 <p> Setup your own 'SWT_BUILDDIR' with below like directory structure:</p>
 <ul>
-<li><p> Install Visual Studio Community 2017 libraries in default location or in: 'SWT_BUILDDIR\Microsoft\Visual Studio\2017'</p>
+<li><p> Install Visual Studio Community 2019 libraries in default location or in: 'SWT_BUILDDIR\Microsoft\Visual Studio\2019'</p>
 <li><p> Windows10 SDK gets installed in "Program Files (x86)" directory by default like: 'C:\Program Files (x86)\Windows Kits\10'</p>
 <li><p> Install/Unzip JDK8 64bit in 'SWT_BUILDDIR\Java\Oracle\jdk1.8.0-latest\x64'</p>
 </ul>
