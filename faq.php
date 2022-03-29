@@ -592,7 +592,7 @@ Archive: Questions that are not relevant for the latest SWT versions but may be 
   Additionally, AIX and Solaris users must ensure that AWT is using XToolkit, as described in
   <a href="#swtawtsolaris">Why does the SWT_AWT bridge not work for me on AIX or Solaris?</a>
 
-  <p>See this <a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet135.java">snippet</a> for an example of how to use the API.</p>
+  <p>See this <a href="https://github.com/eclipse-platform/eclipse.platform.swt/tree/master/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet135.java">snippet</a> for an example of how to use the API.</p>
   </dd>
 
   <dt><strong><a name="cairoRemoved">Q: Why does Eclipse (4.2 and greater) on GTK crash with a call to org.eclipse.swt.internal.C.memmove originating from some graphics call?</a></strong></dt>
@@ -1221,13 +1221,13 @@ the SWT.CENTER style when creating a composite.
       is resized, including when it is initially shown.  To make a Composite lay out its
       children under any other circumstances, such as when children are created or disposed,
       its <em>layout()</em> method must be called.  For an example of this see SWT snippet
-      <a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet98.java">create and dispose children of a composite</a>.
+      <a href="https://github.com/eclipse-platform/eclipse.platform.swt/tree/master/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet98.java">create and dispose children of a composite</a>.
   </dd>
 
   <dt><strong><a name="scrolledcomposite"> Q:  How do I programmatically scroll a Composite?</a></strong></dt>
   <dd>A: This is done by using a ScrolledComposite instead of a Composite, and invoking
       <code>ScrolledComposite.setOrigin(...)</code> to scroll it.  For an example of this see SWT snippet
-      <a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet296.java">use a ScrolledComposite to scroll a Tree vertically</a>.
+      <a href="https://github.com/eclipse-platform/eclipse.platform.swt/tree/master/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet296.java">use a ScrolledComposite to scroll a Tree vertically</a>.
   </dd>
 
   <dt><strong><a name="copypastewithKlipper"> Q:  Why does Copy/Paste sometimes not work on Linux?</a></strong></dt>
@@ -1604,8 +1604,6 @@ public class DisplayMozillaVersion {
         <li>add its lib/MozillaInterfaces.jar and (if present) lib/MozillaGlue.jar files to your application's java build path</li>
       </ul>
     </ul>
-    <p>You can use <code>Browser.getWebBrowser()</code> to access the JavaXPCOM <code>nsIWebBrowser</code> that represents the Browser instance.  For an example of using JavaXPCOM see
-      <a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet267.java">Snippet 267</a>.</p>
   </dd>
 
   <dt><strong><a name="32eclipsegtk64"> Q:  Why do I get strange drawing behaviour when running 32 bit Eclipse on a 64 bit GTK platform?</a></strong></dt>

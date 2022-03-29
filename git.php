@@ -15,22 +15,17 @@ ob_start();
 </ul>
 </p>
 <h3>Git Web View</h3>
-<p>As of Eclipse 3.8, SWT lives at git.eclipse.org. Both SWT repos can be viewed online at:
+<p>SWT lives at GitHub. Both SWT repos can be viewed online at:
 <ul>
-<li><a href="https://git.eclipse.org/c/platform/eclipse.platform.swt.git/">eclipse.platform.swt.git</a></li> 
-<li><a href="https://git.eclipse.org/c/platform/eclipse.platform.swt.binaries.git/">eclipse.platform.swt.binaries.git</a></li>
+<li><a href="https://github.com/eclipse-platform/eclipse.platform.swt/">eclipse.platform.swt.git</a></li> 
+<li><a href="https://github.com/eclipse-platform/eclipse.platform.swt.binaries/">eclipse.platform.swt.binaries.git</a></li>
 </ul>
 
 <h3>Cloning the SWT repos</h3>
 Anonymous git access to the SWT repositories can be obtained through either http or git protocols. To clone the SWT repos from the command line:
 <ul>
-<li><tt>git clone https://git.eclipse.org/r/platform/eclipse.platform.swt.git</tt></li>
-<li><tt>git clone https://git.eclipse.org/r/platform/eclipse.platform.swt.binaries.git</tt></li>
-</ul>
-For committers, use the ssh protocol (replace <code>userid</code> with your ID):
-<ul>
-<li><tt>git clone ssh://userid@git.eclipse.org:29418/platform/eclipse.platform.swt.git</tt></li>
-<li><tt>git clone ssh://userid@git.eclipse.org:29418/platform/eclipse.platform.swt.binaries.git</tt></li>
+<li><a href="https://docs.github.com/en/get-started/quickstart/fork-a-repo">Fork SWT repositories</a></li>
+<li><a href="https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository">Clone your own fork locally</a></li>
 </ul>
 </p>
 
@@ -61,18 +56,11 @@ them into your workspace.
 </li>
 <li>Paste one of the following URIs into the URI field, and EGit will fill in the rest for you. When finished, click Next.
 <br>
-For anonymous access:
+For committer access, fork the repository and clone your own fork (substitute in proper userid):
 <ul>
-<li>https://git.eclipse.org/r/platform/eclipse.platform.swt.git</li>
-<li>https://git.eclipse.org/r/platform/eclipse.platform.swt.binaries.git</li>
+<li>https://github.com/userid/eclipse.platform.swt.git</li>
+<li>https://github.com/userid/eclipse.platform.swt.binaries.git</li>
 </ul>
-<br>
-For committer access (substitute in proper userid):
-<ul>
-<li>ssh://userid@git.eclipse.org:29418/platform/eclipse.platform.swt.git</li>
-<li>ssh://userid@git.eclipse.org:29418/platform/eclipse.platform.swt.binaries.git</li>
-</ul>
-<center><p><img src="images/egit.clone.repo.png" alt="Clone repo"></p></center>
 </li>
 <li>Select master and any other branches that you are interested in. Click Next.  
 <center><p><img src="images/egit.branches.png" alt="Get branches"></p></center>

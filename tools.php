@@ -28,7 +28,7 @@ For more information on how to generate the JNI code, see <a href="jnigen.php">t
       <li>The plug-in monitors all other plug-ins running in its Eclipse environment.</li>
     </ul>
 </ul><ul>
-  <li><b>Sleak for standalone applications </b><a href="https://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/bundles/org.eclipse.swt.tools.spies/src/org/eclipse/swt/tools/internal/Sleak.java">(Sleak.java)</a></li>
+  <li><b>Sleak for standalone applications </b><a href="https://github.com/eclipse-platform/eclipse.platform.swt/tree/master/bundles/org.eclipse.swt.tools.spies/src/org/eclipse/swt/tools/internal/Sleak.java">(Sleak.java)</a></li>
 </ul>
 
 <p><b>SWT Spy plug-in</b> for Eclipse is a simple tool that prints out
