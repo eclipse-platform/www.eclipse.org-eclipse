@@ -19,18 +19,19 @@
       <objectContribution
             id="org.eclipse.ui.examples.filesystem.contribution1"
             objectClass="org.eclipse.core.resources.IFile">
+         <action
+               class="org.eclipse.ui.examples.filesystem.ExpandZipAction"
+               enablesFor="1"
+               id="org.eclipse.ui.examples.filesystem.expandZip"
+               label="Expand Zip File"
+               menubarPath="additions">
          		<enablement>
 		            <or>
 		               <objectState name="extension" value="jar"/>
    		            <objectState name="extension" value="zip"/>
    		         </or>
          		</enablement>
-         <action
-               class="org.eclipse.ui.examples.filesystem.ExpandZipAction"
-               enablesFor="1"
-               id="org.eclipse.ui.examples.filesystem.expandZip"
-               label="Expand Zip File"
-               menubarPath="additions"/>
+       	</action>
       </objectContribution>
    </extension>
    <extension
@@ -38,18 +39,19 @@
       <objectContribution
             id="org.eclipse.ui.examples.filesystem.contribution2"
             objectClass="org.eclipse.core.resources.IFolder">
+         <action
+               class="org.eclipse.ui.examples.filesystem.CollapseZipAction"
+               enablesFor="1"
+               id="org.eclipse.ui.examples.filesystem.collapseZip"
+               label="Collapse Zip File"
+               menubarPath="additions">
          		<enablement>
 		            <or>
 		               <objectState name="extension" value="jar"/>
    		            <objectState name="extension" value="zip"/>
    		         </or>
          		</enablement>
-         <action
-               class="org.eclipse.ui.examples.filesystem.CollapseZipAction"
-               enablesFor="1"
-               id="org.eclipse.ui.examples.filesystem.collapseZip"
-               label="Collapse Zip File"
-               menubarPath="additions"/>
+           </action>
       </objectContribution>
    </extension>
    <extension
