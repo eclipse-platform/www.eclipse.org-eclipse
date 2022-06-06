@@ -362,7 +362,7 @@ compared to bugs which are reproducible on the target environments listed above.
   
 <p><strong>Source Compatibility:</strong> Eclipse SDK 4.24 will be upwards source-compatible
   with Eclipse SDK 4.23 except in the areas noted in the
-  <a href="http://www.eclipse.org/eclipse/development/porting/eclipse_4_23_porting_guide.html" target="_top">
+  <a href="http://www.eclipse.org/eclipse/development/porting/eclipse_4_24_porting_guide.html" target="_top">
     <em>Eclipse 4.24 Plug-in Migration Guide</em>
   </a>. This means that source files written
   to use Eclipse SDK 4.24 APIs might successfully compile and run against Eclipse
