@@ -340,7 +340,7 @@ compared to bugs which are reproducible on the target environments listed above.
 
 <p><strong>API Contract Compatibility:</strong> Eclipse SDK 4.24 will be upwards
   contract-compatible with Eclipse SDK 4.23 except in those areas noted in the
-  <a href="http://www.eclipse.org/eclipse/development/porting/eclipse_4_23_porting_guide.html" target="_top">
+  <a href="http://www.eclipse.org/eclipse/development/porting/eclipse_4_24_porting_guide.html" target="_top">
     <em>Eclipse 4.24 Plug-in Migration Guide</em>
   </a>. Programs that use affected APIs and extension points will need to be ported
   to Eclipse SDK 4.24 APIs. Downward contract compatibility
@@ -352,7 +352,7 @@ compared to bugs which are reproducible on the target environments listed above.
   
 <p><strong>Binary (plug-in) Compatibility:</strong> Eclipse SDK 4.24 will be upwards
   binary-compatible with Eclipse SDK 4.23 except in those areas noted in the
-  <a href="http://www.eclipse.org/eclipse/development/porting/eclipse_4_23_porting_guide.html" target="_top">
+  <a href="http://www.eclipse.org/eclipse/development/porting/eclipse_4_24_porting_guide.html" target="_top">
     <em>Eclipse 4.24 Plug-in Migration Guide</em>
   </a>. Downward plug-in compatibility is not supported. Plug-ins for Eclipse SDK
   4.24 will not be usable in Eclipse SDK 4.23. Refer to
