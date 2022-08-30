@@ -16,7 +16,7 @@
 <p:introduction>
 <div>
 <p>
-Last revised 8:00 EDT June 6, 2022.
+Last revised 8:00 EDT August 30, 2022.
 
 <!--
 <img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />
@@ -124,8 +124,8 @@ NOTE: This is only necessary once per year. For us with the 202x-03 release.
 <p>Dates for builds and test passes after M3 will be available in the 
 <!-- 
 Eclipse 4.25 Endgame Plan.
-<a href="http://www.eclipse.org/eclipse/development/plans/freeze_plan_4_24.php">Eclipse 4.25 Endgame Plan</a>.
  -->
+<a href="http://www.eclipse.org/eclipse/development/plans/freeze_plan_4_24.php">Eclipse 4.25 Endgame Plan</a>.
 </p>
 </div>
 </p:postamble>
