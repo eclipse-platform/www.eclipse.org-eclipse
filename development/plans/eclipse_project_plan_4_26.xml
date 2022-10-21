@@ -9,7 +9,7 @@
   xmlns:p="http://www.eclipse.org/project/plan" xmlns="http://www.w3.org/1999/xhtml"
   name="Eclipse Project">
 
-<p:release projectid="eclipse" version="2022-09"/>
+<p:release projectid="eclipse" version="2022-12"/>
 
 <!-- ============================================== -->
 
