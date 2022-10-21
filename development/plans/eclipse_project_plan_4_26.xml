@@ -1,0 +1,454 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<!--  Use this to test local rendering in firefox. Comment out this line once this plan is linked to portal data. -->
+<?xml-stylesheet type="text/xsl" href="project-plan-render.xsl"?>
+
+<!-- <?xml-stylesheet type="text/xsl" href="http://www.eclipse.org/projects/project-plan.xsl"?> -->
+
+<p:plan
+  plan-format="1.0"
+  xmlns:p="http://www.eclipse.org/project/plan" xmlns="http://www.w3.org/1999/xhtml"
+  name="Eclipse Project">
+
+<p:release projectid="eclipse" version="2022-09"/>
+
+<!-- ============================================== -->
+
+<p:introduction>
+<div>
+<p>
+Last revised October 21, 2022.
+
+<!--
+<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />
+marks interesting changes since the previous draft of 
+<a href="http://www.eclipse.org/projects/project-plan.php?planurl=http://www.eclipse.org/eclipse/development/plans/eclipse_project_plan_4_18.xml">December 16, 2017</a>.
+-->
+
+</p>
+<p><i>Please send comments about this plan to the</i> <a href="mailto:eclipse-dev@eclipse.org">eclipse-dev@eclipse.org</a> <i>developer
+  mailing list.</i>
+</p>
+<p>This document lays out the feature and API set for the next feature release
+  of the Eclipse SDK after 4.25, designated release 4.26 and code-named 2022-12.
+</p>
+
+<p>Plans do not materialize out of nowhere, nor are they entirely static. To
+  ensure the planning process is transparent and open to the entire Eclipse community,
+  we (the Eclipse Project PMC) post plans in an embryonic form and revise them
+  throughout the release cycle. </p>
+<p>The first part of the plan deals with the important matters of release deliverables,
+  release milestones, target operating environments, and release-to-release compatibility.
+  These are all things that need to be clear for any release, even if no features
+  were to change. </p>
+<p>The remainder of the plan consists of plan items for all of the sub-projects
+  under the top level Eclipse Project. Each plan item covers a feature or API
+  that is to be added to the Eclipse Project deliverables, or some aspect of
+  the Eclipse Project that is to be improved. Each plan item has its own entry
+  in the Eclipse bugzilla database, with a title and a concise summary (usually
+  a single paragraph) that explains the work item at a suitably high enough level
+  so that everyone can readily understand what the work item is without having
+  to understand the nitty-gritty detail. </p>
+<p>Not all plan items represent the same amount of work; some may be quite large,
+  others, quite small. Some plan items may involve work that is localized to
+  a single component; others may involve coordinated changes to several components;
+  other may pervade the entire SDK. Although some plan items are for work that
+  is more pressing than others, the plan items appear in no particular order. </p>
+<p>With the previous release as the starting point, this is the plan for how
+  we will enhance and improve it. Fixing bugs, improving test coverage, documentation,
+  examples, performance tuning, usability, etc. are considered routine ongoing
+  maintenance activities and are not included in this plan unless they would
+  also involve a significant change to the API or feature set, or involve a significant
+  amount of work. The intent of the plan is to account for all interesting feature
+  work. </p>
+
+</div>
+</p:introduction>
+
+<!-- ============================================== -->
+
+<p:release_deliverables>
+<div>
+
+<p>The release deliverables have the same form as previous releases, namely: </p>
+<ul>
+  <li>Source code release for all Eclipse Project deliverables, available as
+    versions tagged &quot;R4_26&quot; in the Eclipse Project Git
+    repositories <a href="https://github.com/eclipse-equinox/">Equinox</a>, <a href="https://github.com/eclipse-jdt/">JDT</a>,
+     <a href="https://github.com/eclipse-pde/">PDE</a> and <a href="https://github.com/eclipse-platform/">Platform</a>.</li>
+  <li>Eclipse SDK (runtime binary and SDK for Equinox, Platform, JDT, and PDE) (downloadable).</li>
+  <li>Eclipse Equinox (runtime and source repositories) (downloadable).</li>
+  <li>Eclipse Platform (runtime and source repositories) (downloadable).</li>
+  <li>Eclipse ECJ (runtime and source for the Eclipse Compiler for Java) (downloadable).</li>
+  <li>Eclipse PDE (Installable from repository for the Plug-in Development Environment) (downloadable).</li>
+  <li>Eclipse SDK Examples (Installable from repository).</li>
+  <li>SWT distribution (downloadable).</li>
+</ul>
+
+
+</div>
+</p:release_deliverables>
+
+<!-- ============================================== -->
+
+<p:release_milestones>
+
+<p:preamble><p>      
+  Release milestones will be occurring at roughly 6 week intervals, and will be aligned with the
+  <a href="https://wiki.eclipse.org/Category:SimRel-2022-09">
+  2022-12 Simultaneous Release</a> train.</p>
+</p:preamble>
+<p:milestone date="2022-09-28" milestone="M1"><div>4.26 M1</div></p:milestone>
+<p:milestone date="2022-10-21" milestone="M2"><div>4.26 M2 (only submit I-build)</div></p:milestone>
+<p:milestone date="2022-11-11" milestone=""><div>Release Record Deadline</div></p:milestone>
+<p:milestone date="2022-11-11" milestone="M3"><div>4.26 M3</div></p:milestone>
+<!--
+NOTE: This is only necessary once per year. For us with the 202x-03 release.
+<p:milestone date="2022-02-25" milestone=""><div>IP Log Submission Deadline</div></p:milestone>
+-->
+<p:milestone date="2022-11-18" milestone="RC1"><div>4.26 RC1 - <b>API and feature freeze</b></div></p:milestone>
+<!--
+NOTE: This is only necessary once per year. For us with the 202x-03 release.
+<p:milestone date="2022-09-02" milestone=""><div>Review Material Submission Deadline</div></p:milestone>
+-->
+<p:milestone date="2022-11-25" milestone=""><div>New and Noteworthy Material Deadline</div></p:milestone>
+<p:milestone date="2022-11-25" milestone="RC2"><div>4.26 RC2</div></p:milestone>
+<p:milestone date="2022-12-07" milestone="GA"><div>4.26 GA</div></p:milestone>
+
+<p:postamble>
+<div>
+<p>Our target is to complete 4.26 in December 2022.
+  All release deliverables will be available for download as soon as the release has been
+  tested and validated in the target operating configurations listed below.</p>
+<p>PMC approval is required for API changes and additions after M3.</p>
+<p>Dates for builds and test passes after M3 will be available in the 
+<!-- 
+Eclipse 4.25 Endgame Plan.
+ -->
+<a href="http://www.eclipse.org/eclipse/development/plans/freeze_plan_4_26.php">Eclipse 4.26 Endgame Plan</a>.
+</p>
+</div>
+</p:postamble>
+
+</p:release_milestones>
+
+<!-- ============================================== -->
+
+<p:target_environments>
+
+<div>
+<p>In order to remain current, each Eclipse Project release targets reasonably current
+  operating environments.</p>
+<p>Most of the Eclipse SDK is &quot;pure&quot; Java code and has no direct dependence
+  on the underlying operating system. The chief dependence is therefore on the
+  Java Platform itself. Portions are targeted to specific classes of operating
+  environments, requiring their source code to only reference facilities available
+  in particular class libraries (e.g. Java 8, Java 11, etc).</p>
+<p>
+  In general, the 4.26 release of the Eclipse Project is developed on Java SE 11 VMs.
+  As such, the Eclipse SDK as a whole
+  is targeted at all modern, desktop Java VMs. Most functionality is available for
+  Java SE 11 level development everywhere, and extended development capabilities are made
+  available on the VMs that support them.</p>
+<p>There are many different implementations of the Java Platform running atop
+  a variety of operating systems. We focus our testing on a handful of
+  popular combinations of operating system and Java Platform; these are our <em>reference
+  platforms</em>. Eclipse undoubtedly runs fine in many operating environments
+  beyond the reference platforms we test. However, since we do not systematically test
+  them we cannot vouch for them. Problems encountered when running Eclipse on a
+  non-reference platform that cannot be recreated on any reference platform will
+  be given lower priority than problems with running Eclipse on a reference platform.</p>
+<p>Eclipse 4.26 is tested and validated on the following reference platforms
+  (this list is updated over the course of the release cycle):</p>
+<style type="text/css">
+	table.platforms {
+		border-width: 1px;
+		border-spacing: 0px;
+		border-style: solid;
+		border-collapse: separate;
+	}
+	table.platforms th {
+		border-width: 1px;
+		padding: 3px;
+		border-style: inset;
+		border-color: black;
+		background-color: #B9A9FF;
+	}
+	table.platforms td {
+		border-width: 1px 1px 1px 1px;
+		padding: 3px 3px 3px 3px;
+		border-style: inset inset inset inset;
+		border-color: gray gray gray gray;
+	}
+	table.platforms tr.c0 td {
+		background-color: #FDFDFD;
+	}
+	table.platforms tr.c1 td {
+		background-color: #F4EEFF;
+	}
+</style>
+<center>
+	<table class="platforms">
+		<tr>
+			<th>Operating System</th>
+			<th>Version</th>
+			<th>Hardware</th>
+			<th>JRE</th>
+			<th>Windowing System</th>
+		</tr>
+		<!-- ************ WINDOWS ************** -->
+		<tr class="c0">
+			<td rowspan="1">Windows</td>
+			<td rowspan="1">
+				10<br/>
+				11
+			</td>
+			<td rowspan="1">x86 64-bit</td>
+			<td rowspan="1">
+				OpenJDK 11.0.15 (LTS)<br/>
+				OpenJDK 17.0.3 (LTS)<br/>
+				Oracle Java 11.0.15 (LTS)<br/>
+				Oracle Java 17.0.3 (LTS)<br/>
+			</td>
+			<td rowspan="1">Win32</td>
+		</tr>
+		<!-- ************ RHEL ************** -->
+		<tr class="c1">
+			<td rowspan="2">Red Hat Enterprise Linux</td>
+
+			<td rowspan="2">9.0
+			</td>
+			<td rowspan="1">
+				x86 64-bit<br/>
+				aarch64<br/>
+			</td>
+			<td rowspan="1">
+				OpenJDK 11.0.15 (LTS)<br/>
+				OpenJDK 17.0.3 (LTS)<br/>
+				Oracle Java 11.0.15 (LTS)<br/>
+				Oracle Java 17.0.3 (LTS)<br/>
+			</td>
+			<td rowspan="2">GTK 3</td>
+		</tr>
+		<tr class="c1">
+			<td rowspan="1">Power 64-bit LE</td>
+			<td rowspan="1">
+				OpenJDK 11.0.15 (LTS)
+			</td>
+		</tr>
+		<!-- ************ SLES ************** -->
+		<tr class="c0">
+			<td rowspan="2">SUSE Linux Enterprise Server</td>
+			<td rowspan="2">
+				15 SP4
+			</td>
+			<td rowspan="1">x86 64-bit</td>
+			<td rowspan="1">
+				OpenJDK 11.0.15 (LTS)<br/>
+				OpenJDK 17.0.3 (LTS)<br/>
+			</td>
+			<td rowspan="2">GTK 3</td>
+		</tr>
+		<tr class="c0">
+			<td rowspan="1">Power 64-bit LE</td>
+			<td rowspan="1">
+				OpenJDK 11.0.15 (LTS)
+			</td>
+		</tr>
+
+		<!-- ************ Ubuntu ************** -->
+		<tr class="c1">
+			<td rowspan="1">Ubuntu Long Term Support</td>
+		    <td rowspan="1">22.04</td>
+			<td rowspan="1">
+				x86 64-bit<br/>
+				aarch64<br/>
+			</td>
+			<td rowspan="1">
+				OpenJDK 11.0.15 (LTS)<br/>
+				OpenJDK 17.0.3 (LTS)<br/>
+			</td>
+			<td rowspan="1">GTK 3</td>
+		</tr>
+		
+		<!-- ************ Mac ************** -->
+		<tr class="c1">
+			<td rowspan="2">Apple macOS</td>
+			<td rowspan="1">
+				11<br/>
+				12
+			</td>
+			
+			<td rowspan="1">x86 64-bit</td>
+			
+			<td rowspan="1">
+				OpenJDK 11.0.15 (LTS)<br/>
+				OpenJDK 17.0.3 (LTS)<br/>
+				Oracle Java 11.0.15 (LTS)<br/>
+				Oracle Java 17.0.3 (LTS)
+			</td>
+			
+			<td rowspan="2">Cocoa</td>
+		</tr>
+ 	    <tr class="c0">
+			<td rowspan="1">
+				11<br/>
+				12
+			</td>
+			<td rowspan="1">
+				M1 (arm64)
+			</td>
+            <td rowspan="1">OpenJDK 17.0.3 (LTS)</td>
+   		</tr>
+	</table>
+ </center>
+
+<p>As stated above, <i>we expect that Eclipse works fine on other current
+  Java VM and OS versions but we cannot flag these as reference platforms without
+  significant community support for testing them.</i></p>
+<p>With respect to GTK 3 versions: the <i>required</i> version of GTK 3 which Eclipse SDK 4.26
+will run on is 3.22 or newer.
+</p>
+
+<p>With respect to GTK 3 themes: Adwaita theme is guaranteed to work. Eclipse SDK will run with other GTK 3 themes,
+however we cannot flag these as reference versions without significant community support for testing and/or development
+of fixes. Bugs that are reproducible only with themes other than Adwaita will be given a lower priority (or may not be fixed at all),
+compared to bugs which are reproducible on the target environments listed above.
+</p>
+</div>
+
+<p:internationalization>
+<p>The Eclipse SDK is designed as the basis for internationalized products. The
+  user interface elements provided by the Eclipse SDK components, including dialogs
+  and error messages, are externalized. The English strings are provided as the
+  default resource bundles.</p>
+<p>Latin-1, DBCS, and BiDi locales are supported by the Eclipse SDK on all reference platforms.</p>
+<p>The Eclipse SDK supports GB 18030 (level 1), the Chinese code page standard,
+  on Windows, Linux and the Macintosh.</p>
+</p:internationalization>
+
+</p:target_environments>
+ 
+<!-- ============================================== -->
+
+<p:compatibility_with_previous_releases>
+<div>
+
+<h3>Compatibility of Release 4.26 with 4.25</h3>
+<p>Eclipse 4.26 will be compatible with Eclipse 4.25</p>
+
+<p><strong>API Contract Compatibility:</strong> Eclipse SDK 4.26 will be upwards
+  contract-compatible with Eclipse SDK 4.25 except in those areas noted in the
+  <a href="https://www.eclipse.org/eclipse/development/porting/eclipse_4_26_porting_guide.html" target="_top">
+    <em>Eclipse 4.26 Plug-in Migration Guide</em>
+  </a>. Programs that use affected APIs and extension points will need to be ported
+  to Eclipse SDK 4.26 APIs. Downward contract compatibility
+  is not supported. There is no guarantee that compliance with Eclipse SDK 4.26
+  APIs would ensure compliance with Eclipse SDK 4.25 APIs. Refer to
+  <a href="https://wiki.eclipse.org/index.php/Evolving_Java-based_APIs">
+    <em>Evolving Java-based APIs</em>
+  </a> for a discussion of the kinds of API changes that maintain contract compatibility.</p>
+  
+<p><strong>Binary (plug-in) Compatibility:</strong> Eclipse SDK 4.26 will be upwards
+  binary-compatible with Eclipse SDK 4.25 except in those areas noted in the
+  <a href="https://www.eclipse.org/eclipse/development/porting/eclipse_4_26_porting_guide.html" target="_top">
+    <em>Eclipse 4.26 Plug-in Migration Guide</em>
+  </a>. Downward plug-in compatibility is not supported. Plug-ins for Eclipse SDK
+  4.26 will not be usable in Eclipse SDK 4.25. Refer to
+  <a href="https://wiki.eclipse.org/index.php/Evolving_Java-based_APIs">
+    <em>Evolving Java-based APIs</em>
+  </a> for a discussion of the kinds of API changes that maintain binary compatibility.</p>
+  
+<p><strong>Source Compatibility:</strong> Eclipse SDK 4.26 will be upwards source-compatible
+  with Eclipse SDK 4.25 except in the areas noted in the
+  <a href="https://www.eclipse.org/eclipse/development/porting/eclipse_4_26_porting_guide.html" target="_top">
+    <em>Eclipse 4.26 Plug-in Migration Guide</em>
+  </a>. This means that source files written
+  to use Eclipse SDK 4.26 APIs might successfully compile and run against Eclipse
+  SDK 4.25 APIs, although this is not guaranteed. Downward source compatibility
+  is not supported. If source files use new Eclipse SDK APIs, they will not be
+  usable with an earlier version of the Eclipse SDK. </p>
+  
+<p><strong>Workspace Compatibility:</strong> Eclipse SDK 4.26 will be upwards
+  workspace-compatible with earlier 3.x and 4.25 versions of the Eclipse SDK unless noted.
+  This means that workspaces and projects created with Eclipse SDK 4.25, 4.24, 4.23, .. 3.0 can be successfully
+  opened by Eclipse SDK 4.26 and upgraded to a 4.26 workspace. This includes both
+  hidden metadata, which is localized to a particular workspace, as well as metadata
+  files found within a workspace project (e.g., the .project file), which may
+  propagate between workspaces via file copying or team repositories. Individual
+  plug-ins developed for Eclipse SDK 4.26 should provide similar upwards compatibility
+  for their hidden and visible workspace metadata created by earlier versions;
+  4.26 plug-in developers are responsible for ensuring that their plug-ins recognize
+  metadata from earlier versions and process it appropriately. User
+  interface session state may be discarded when a workspace is upgraded. Downward
+  workspace compatibility is not supported. A workspace created (or opened) by
+  a product based on Eclipse 4.26 will be unusable with a product based on an earlier
+  version of Eclipse. Visible metadata files created (or overwritten) by Eclipse
+  4.26 will generally be unusable with earlier versions of Eclipse. </p>
+  
+<p><strong>Non-compliant usage of API's</strong>: All non-API methods and classes,
+  and certainly everything in a package with &quot;internal&quot; in its name or
+  x-internal in the bundle manifest entry,
+  are considered implementation details which may vary between operating environment
+  and are subject to change without notice. Client plug-ins that directly depend
+  on anything other than what is specified in the Eclipse SDK API are inherently
+  unsupportable and receive no guarantees about compatibility within a single
+  release much less with earlier releases. Refer to
+  <a href="https://www.eclipse.org/articles/Article-API-Use/index.html">
+    <em>How to Use the Eclipse API</em>
+  </a> for information about how to write compliant plug-ins. </p>
+
+</div>
+</p:compatibility_with_previous_releases>
+  
+<!-- ============================================== -->
+
+<p:themes_and_priorities>
+
+<p:preamble>
+We no longer group the plan items into separate themes as this is does not provide real value to our users.
+<div>
+<p>Each plan item listed in the sub-project plans covers a feature or API that is
+  to be added to the Eclipse Project deliverables, or some aspect of the Eclipse Project that is
+  to be improved. Each plan item has its own entry in the Eclipse bugzilla database, with a title
+  and a concise summary (usually a single paragraph) that explains the work item at a suitably
+  high enough level so that everyone can readily understand what the work item entails.</p>
+<p> Although there are three mature projects under the top-level Eclipse Project, there
+  is a significant amount of commonality and shared effort between them. In general,
+  many plan items involve coordinated changes to multiple components, and thus
+  attempting to separate the items into sections based on sub-project leads to
+  artificial distinctions between them (e.g., Platform UI vs. JDT UI, Platform
+  Debug vs. JDT Debug, etc.). As such, this plan covers the work of all mature sub-projects
+  under the top level Eclipse Project.</p>
+<p>Not all plan items represent the same amount of work; some may be quite
+  large, others, quite small. Although some plan items are for work that is 
+  more pressing than others, the plan items appear in no particular order.
+  See the corresponding bugzilla items for up-to-date status information on
+  ongoing work and planned delivery milestones.</p>
+</div>
+</p:preamble>
+
+<p:theme name="Sub-Project Plans">
+<p:description>
+<p>
+<!--
+<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />
+-->
+TBD
+<!--
+<ul>
+<li><a href="http://eclip.se/tmpolid6">Equinox</a></li>
+<li><a href="http://eclip.se/tmpolid7">Platform</a></li>
+<li><a href="http://eclip.se/tmpolid8">JDT</a></li>
+<li><a href="http://eclip.se/tmpolid9">PDE</a></li>
+</ul>
+-->
+</p>
+</p:description>
+
+</p:theme>
+
+</p:themes_and_priorities>
+    
+<!-- ============================================== -->
+
+</p:plan>
