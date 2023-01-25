@@ -79,7 +79,7 @@ marks interesting changes since the previous draft of
   <li>Eclipse Equinox (runtime and source repositories) (downloadable).</li>
   <li>Eclipse Platform (runtime and source repositories) (downloadable).</li>
   <li>Eclipse ECJ (runtime and source for the Eclipse Compiler for Java) (downloadable).</li>
-  <li>Eclipse PDE (Installable from repository for the Plug-in Development Environment) (downloadable).</li>
+  <li>Eclipse PDE (Installable from repository for the Plug-in Development Environment).</li>
   <li>Eclipse SDK Examples (Installable from repository).</li>
   <li>SWT distribution (downloadable).</li>
 </ul>
