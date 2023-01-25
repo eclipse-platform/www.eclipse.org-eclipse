@@ -44,87 +44,56 @@ ob_start();
 	<div id="midcolumn">
 		<h1><?= $pageTitle ?></h1>
 		<div class="homeitem3col">
-			<h3>Status</h3>
-			<p><b>Two daily I-builds towards RC1</b></p>
-      	</div>
-		<div class="homeitem3col">
 			<h3>Detailed Timeline</h3>
 	        <table class="schedule" border="0" cellspacing="0" align="center" width=100%>
 	          <tr>
-	            <td>November 2022</td>
-	          </tr>
-	          <tr>
-	            <td></td>
-	            <td></td>
-	            <td></td>
+	            <td>February 2023</td>
 	            <td></td>
 	            <td>Two daily I-builds towards RC1</td>
-	            <td></td>
 	          </tr>
-			  <tr>
-	            <td class="spacer">&nbsp;</td>
-	          </tr>
-	          <tr>
-	            <td></td>
-	            <td class="date">16</td>
+		  <tr>
+	            <td class="date">22</td>
 	            <td class="date">Wed 18:00 ET</td>
-	            <td></td>
 	            <td>API and feature freeze</td>
-	            <td></td>
 	          </tr>
 	          <tr>
-	            <td></td>
-	            <td class="date">16</td>
+	            <td class="date">22</td>
 	            <td class="date">Wed 18:00 ET</td>
-	            <td></td>
 	            <td>Release Candidate 1 build</td>
-	            <td></td>
 	          </tr>
 	          <tr>
-	            <td></td>
-	            <td class="date">18</td>
+	            <td class="date">24</td>
 	            <td class="date">Fri</td>
-	            <td></td>
 	            <td>Submit RC1 to release train</td>
-	            <td></td>
-	          </tr>
-	          <tr>
-	            <td></td>
-	            <td class="date">25</td>
-	            <td class="date">Wed 18:00 ET</td>
-	            <td></td>
-	            <td>Release Candidate 2 build</td>
-	            <td></td>
-	          </tr>
-	          <tr>
-	            <td></td>
-	            <td class="date">26</td>
-	            <td class="date">Thu</td>
-	            <td></td>
-	            <td>1-day test pass against RC2 and sign-off</td>
-	            <td></td>
-	          </tr>
-	          <tr>
-	            <td></td>
-	            <td class="date">27</td>
-	            <td class="date">Fri</td>
-	            <td></td>
-	            <td>Submit RC2 to release train</td>
-	            <td></td>
-	          </tr>
-	          <tr>
-	            <td>December 2022</td>
 	          </tr>
 	          <tr>
 	            <td class="spacer">&nbsp;</td>
 	          </tr>
-			  <tr class="current">
-	            <td></td>
-	            <td class="date">07</td>
+	          <tr>
+	            <td>March 2023</td>
+	          </tr>
+	          <tr>
+	            <td class="date">1</td>
+	            <td class="date">Wed 18:00 ET</td>
+	            <td>Release Candidate 2 build</td>
+	          </tr>
+	          <tr>
+	            <td class="date">2</td>
+	            <td class="date">Thu</td>
+	            <td>1-day test pass against RC2 and sign-off</td>
+	          </tr>
+	          <tr>
+	            <td class="date">3</td>
+	            <td class="date">Fri</td>
+	            <td>Submit RC2 to release train</td>
+	          </tr>
+	          <tr>
+	            <td class="spacer">&nbsp;</td>
+	          </tr>
+		  <tr>
+	            <td class="date">15</td>
 	            <td class="date">Wed</td>
-	            <td></td>
 	            <td>GA</td>
-	            <td></td>
 	          </tr>
 	        </table>
       	</div>
@@ -199,7 +168,7 @@ ob_start();
 	
 			<strong>2023-03 (4.27) Release</strong>
 			<p>The 2023-03 (4.27) release should be complete and available for download by 
-	              December 07, 2022 as part of the <a href="https://wiki.eclipse.org/Category:SimRel-2023-03">2023-03 Simultaneous Release</a>. If product teams intending 
+	              March 15, 2022 as part of the <a href="https://wiki.eclipse.org/Category:SimRel-2023-03">2023-03 Simultaneous Release</a>. If product teams intending 
 	              to ship on 2023-03 (4.27) uncover further serious defects during the endgame, 
 	              we may schedule additional release candidate builds to incorporate fixes.
 			</p>    
