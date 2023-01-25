@@ -168,7 +168,7 @@ ob_start();
 	
 			<strong>2023-03 (4.27) Release</strong>
 			<p>The 2023-03 (4.27) release should be complete and available for download by 
-	              March 15, 2022 as part of the <a href="https://wiki.eclipse.org/Category:SimRel-2023-03">2023-03 Simultaneous Release</a>. If product teams intending 
+	              March 15, 2023 as part of the <a href="https://wiki.eclipse.org/Category:SimRel-2023-03">2023-03 Simultaneous Release</a>. If product teams intending 
 	              to ship on 2023-03 (4.27) uncover further serious defects during the endgame, 
 	              we may schedule additional release candidate builds to incorporate fixes.
 			</p>    
