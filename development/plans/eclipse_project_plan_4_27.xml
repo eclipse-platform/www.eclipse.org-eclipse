@@ -99,20 +99,18 @@ marks interesting changes since the previous draft of
 </p:preamble>
 <p:milestone date="2023-09-28" milestone="M1"><div>4.27 M1</div></p:milestone>
 <p:milestone date="2023-01-27" milestone="M2"><div>4.27 M2 (only submit I-build)</div></p:milestone>
-<p:milestone date="2023-??-??" milestone=""><div>Release Record Deadline</div></p:milestone>
-<p:milestone date="2023-??-??" milestone="M3"><div>4.27 M3</div></p:milestone>
+<p:milestone date="2023-02-17" milestone="M3"><div>4.27 M3 - <b>Release Record Deadline</b></div></p:milestone>
 <!--
 NOTE: This is only necessary once per year. For us with the 202x-03 release.
 <p:milestone date="2022-02-25" milestone=""><div>IP Log Submission Deadline</div></p:milestone>
 -->
-<p:milestone date="2023-??-??" milestone="RC1"><div>4.27 RC1 - <b>API and feature freeze</b></div></p:milestone>
+<p:milestone date="2023-02-24" milestone="RC1"><div>4.27 RC1 - <b>API and feature freeze</b></div></p:milestone>
 <!--
 NOTE: This is only necessary once per year. For us with the 202x-03 release.
 <p:milestone date="2022-09-02" milestone=""><div>Review Material Submission Deadline</div></p:milestone>
 -->
-<p:milestone date="2023-??-??" milestone=""><div>New and Noteworthy Material Deadline</div></p:milestone>
-<p:milestone date="2023-??-??" milestone="RC2"><div>4.27 RC2</div></p:milestone>
-<p:milestone date="2023-??-??" milestone="GA"><div>4.27 GA</div></p:milestone>
+<p:milestone date="2023-03-03" milestone="RC2"><div>4.27 RC2 - <b>New and Noteworthy Material Deadline</b></div></p:milestone>
+<p:milestone date="2023-03-15" milestone="GA"><div>4.27 GA</div></p:milestone>
 
 <p:postamble>
 <div>
