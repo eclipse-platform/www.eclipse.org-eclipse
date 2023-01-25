@@ -425,26 +425,6 @@ We no longer group the plan items into separate themes as this is does not provi
 </div>
 </p:preamble>
 
-<p:theme name="Sub-Project Plans">
-<p:description>
-<p>
-<!--
-<img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />
--->
-TBD
-<!--
-<ul>
-<li><a href="http://eclip.se/tmpolid6">Equinox</a></li>
-<li><a href="http://eclip.se/tmpolid7">Platform</a></li>
-<li><a href="http://eclip.se/tmpolid8">JDT</a></li>
-<li><a href="http://eclip.se/tmpolid9">PDE</a></li>
-</ul>
--->
-</p>
-</p:description>
-
-</p:theme>
-
 </p:themes_and_priorities>
     
 <!-- ============================================== -->
