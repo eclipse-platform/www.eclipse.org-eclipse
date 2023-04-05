@@ -9,7 +9,7 @@
   xmlns:p="http://www.eclipse.org/project/plan" xmlns="http://www.w3.org/1999/xhtml"
   name="Eclipse Project">
 
-<p:release projectid="eclipse" version="2023-06"/>
+<p:release projectid="eclipse" version="2023-03"/>
 
 <!-- ============================================== -->
 
@@ -29,7 +29,7 @@ marks interesting changes since the previous draft of
   mailing list.</i>
 </p>
 <p>This document lays out the feature and API set for the next feature release
-  of the Eclipse SDK after 4.27, designated release 4.28 and code-named 2023-06.
+  of the Eclipse SDK after 4.26, designated release 4.27 and code-named 2023-03.
 </p>
 
 <p>Plans do not materialize out of nowhere, nor are they entirely static. To
@@ -94,35 +94,35 @@ marks interesting changes since the previous draft of
 
 <p:preamble><p>      
   Release milestones will be occurring at roughly 6 week intervals, and will be aligned with the
-  <a href="https://wiki.eclipse.org/Category:SimRel-2023-06">
-  2023-06 Simultaneous Release</a> train.</p>
+  <a href="https://wiki.eclipse.org/Category:SimRel-2023-03">
+  2023-03 Simultaneous Release</a> train.</p>
 </p:preamble>
-<p:milestone date="2023-04-07" milestone="M1"><div>4.28 M1</div></p:milestone>
-<p:milestone date="2023-04-28" milestone="M2"><div>4.28 M2 (only submit I-build)</div></p:milestone>
-<p:milestone date="2023-05-19" milestone="M3"><div>4.28 M3 - <b>Release Record Deadline</b></div></p:milestone>
+<p:milestone date="2023-09-28" milestone="M1"><div>4.27 M1</div></p:milestone>
+<p:milestone date="2023-01-27" milestone="M2"><div>4.27 M2 (only submit I-build)</div></p:milestone>
+<p:milestone date="2023-02-17" milestone="M3"><div>4.27 M3 - <b>Release Record Deadline</b></div></p:milestone>
 <!--
 NOTE: This is only necessary once per year. For us with the 202x-03 release.
-<p:milestone date="2023-05-27" milestone=""><div>IP Log Submission Deadline</div></p:milestone>
+<p:milestone date="2022-02-25" milestone=""><div>IP Log Submission Deadline</div></p:milestone>
 -->
-<p:milestone date="2023-05-26" milestone="RC1"><div>4.28 RC1 - <b>API and feature freeze</b></div></p:milestone>
+<p:milestone date="2023-02-24" milestone="RC1"><div>4.27 RC1 - <b>API and feature freeze</b></div></p:milestone>
 <!--
 NOTE: This is only necessary once per year. For us with the 202x-03 release.
-<p:milestone date="2023-06-03" milestone=""><div>Review Material Submission Deadline</div></p:milestone>
+<p:milestone date="2022-09-02" milestone=""><div>Review Material Submission Deadline</div></p:milestone>
 -->
-<p:milestone date="2023-06-02" milestone="RC2"><div>4.28 RC2 - <b>New and Noteworthy Material Deadline</b></div></p:milestone>
-<p:milestone date="2023-06-14" milestone="GA"><div>4.28 GA</div></p:milestone>
+<p:milestone date="2023-03-03" milestone="RC2"><div>4.27 RC2 - <b>New and Noteworthy Material Deadline</b></div></p:milestone>
+<p:milestone date="2023-03-15" milestone="GA"><div>4.27 GA</div></p:milestone>
 
 <p:postamble>
 <div>
-<p>Our target is to complete 4.28 in June 2023.
+<p>Our target is to complete 4.27 in March 2023.
   All release deliverables will be available for download as soon as the release has been
   tested and validated in the target operating configurations listed below.</p>
 <p>PMC approval is required for API changes and additions after M3.</p>
 <p>Dates for builds and test passes after M3 will be available in the 
 <!-- 
-Eclipse 4.28 Endgame Plan.
+Eclipse 4.25 Endgame Plan.
  -->
-<a href="http://www.eclipse.org/eclipse/development/plans/freeze_plan_4_27.php">Eclipse 4.28 Endgame Plan</a>.
+<a href="http://www.eclipse.org/eclipse/development/plans/freeze_plan_4_27.php">Eclipse 4.27 Endgame Plan</a>.
 </p>
 </div>
 </p:postamble>
@@ -142,7 +142,7 @@ Eclipse 4.28 Endgame Plan.
   environments, requiring their source code to only reference facilities available
   in particular class libraries (e.g. Java 8, Java 11, etc).</p>
 <p>
-  In general, the 4.28 release of the Eclipse Project is developed on Java SE 11 VMs.
+  In general, the 4.27 release of the Eclipse Project is developed on Java SE 11 VMs.
   As such, the Eclipse SDK as a whole
   is targeted at all modern, desktop Java VMs. Most functionality is available for
   Java SE 11 level development everywhere, and extended development capabilities are made
@@ -155,7 +155,7 @@ Eclipse 4.28 Endgame Plan.
   them we cannot vouch for them. Problems encountered when running Eclipse on a
   non-reference platform that cannot be recreated on any reference platform will
   be given lower priority than problems with running Eclipse on a reference platform.</p>
-<p>Eclipse 4.28 is tested and validated on the following reference platforms
+<p>Eclipse 4.27 is tested and validated on the following reference platforms
   (this list is updated over the course of the release cycle):</p>
 <style type="text/css">
 	table.platforms {
@@ -266,8 +266,8 @@ Eclipse 4.28 Endgame Plan.
 		<tr class="c1">
 			<td rowspan="2">Apple macOS</td>
 			<td rowspan="1">
-				12<br/>
-				13
+				11<br/>
+				12
 			</td>
 			
 			<td rowspan="1">x86 64-bit</td>
@@ -281,8 +281,8 @@ Eclipse 4.28 Endgame Plan.
 		</tr>
  	    <tr class="c0">
 			<td rowspan="1">
-				12<br/>
-				13
+				11<br/>
+				12
 			</td>
 			<td rowspan="1">
 				M1 (arm64)
@@ -295,7 +295,7 @@ Eclipse 4.28 Endgame Plan.
 <p>As stated above, <i>we expect that Eclipse works fine on other current
   Java VM and OS versions but we cannot flag these as reference platforms without
   significant community support for testing them.</i></p>
-<p>With respect to GTK 3 versions: the <i>required</i> version of GTK 3 which Eclipse SDK 4.28
+<p>With respect to GTK 3 versions: the <i>required</i> version of GTK 3 which Eclipse SDK 4.27
 will run on is 3.22 or newer.
 </p>
 
@@ -323,57 +323,57 @@ compared to bugs which are reproducible on the target environments listed above.
 <p:compatibility_with_previous_releases>
 <div>
 
-<h3>Compatibility of Release 4.28 with 4.27</h3>
-<p>Eclipse 4.28 will be compatible with Eclipse 4.27</p>
+<h3>Compatibility of Release 4.27 with 4.26</h3>
+<p>Eclipse 4.27 will be compatible with Eclipse 4.26</p>
 
-<p><strong>API Contract Compatibility:</strong> Eclipse SDK 4.28 will be upwards
-  contract-compatible with Eclipse SDK 4.27 except in those areas noted in the
+<p><strong>API Contract Compatibility:</strong> Eclipse SDK 4.27 will be upwards
+  contract-compatible with Eclipse SDK 4.26 except in those areas noted in the
   <a href="https://www.eclipse.org/eclipse/development/porting/eclipse_4_27_porting_guide.html" target="_top">
-    <em>Eclipse 4.28 Plug-in Migration Guide</em>
+    <em>Eclipse 4.27 Plug-in Migration Guide</em>
   </a>. Programs that use affected APIs and extension points will need to be ported
-  to Eclipse SDK 4.28 APIs. Downward contract compatibility
-  is not supported. There is no guarantee that compliance with Eclipse SDK 4.28
-  APIs would ensure compliance with Eclipse SDK 4.27 APIs. Refer to
+  to Eclipse SDK 4.27 APIs. Downward contract compatibility
+  is not supported. There is no guarantee that compliance with Eclipse SDK 4.27
+  APIs would ensure compliance with Eclipse SDK 4.26 APIs. Refer to
   <a href="https://wiki.eclipse.org/index.php/Evolving_Java-based_APIs">
     <em>Evolving Java-based APIs</em>
   </a> for a discussion of the kinds of API changes that maintain contract compatibility.</p>
   
-<p><strong>Binary (plug-in) Compatibility:</strong> Eclipse SDK 4.28 will be upwards
-  binary-compatible with Eclipse SDK 4.27 except in those areas noted in the
+<p><strong>Binary (plug-in) Compatibility:</strong> Eclipse SDK 4.27 will be upwards
+  binary-compatible with Eclipse SDK 4.26 except in those areas noted in the
   <a href="https://www.eclipse.org/eclipse/development/porting/eclipse_4_27_porting_guide.html" target="_top">
-    <em>Eclipse 4.28 Plug-in Migration Guide</em>
+    <em>Eclipse 4.27 Plug-in Migration Guide</em>
   </a>. Downward plug-in compatibility is not supported. Plug-ins for Eclipse SDK
-  4.28 will not be usable in Eclipse SDK 4.27. Refer to
+  4.27 will not be usable in Eclipse SDK 4.26. Refer to
   <a href="https://wiki.eclipse.org/index.php/Evolving_Java-based_APIs">
     <em>Evolving Java-based APIs</em>
   </a> for a discussion of the kinds of API changes that maintain binary compatibility.</p>
   
-<p><strong>Source Compatibility:</strong> Eclipse SDK 4.28 will be upwards source-compatible
-  with Eclipse SDK 4.27 except in the areas noted in the
+<p><strong>Source Compatibility:</strong> Eclipse SDK 4.27 will be upwards source-compatible
+  with Eclipse SDK 4.26 except in the areas noted in the
   <a href="https://www.eclipse.org/eclipse/development/porting/eclipse_4_27_porting_guide.html" target="_top">
-    <em>Eclipse 4.28 Plug-in Migration Guide</em>
+    <em>Eclipse 4.27 Plug-in Migration Guide</em>
   </a>. This means that source files written
-  to use Eclipse SDK 4.28 APIs might successfully compile and run against Eclipse
-  SDK 4.27 APIs, although this is not guaranteed. Downward source compatibility
+  to use Eclipse SDK 4.27 APIs might successfully compile and run against Eclipse
+  SDK 4.26 APIs, although this is not guaranteed. Downward source compatibility
   is not supported. If source files use new Eclipse SDK APIs, they will not be
   usable with an earlier version of the Eclipse SDK. </p>
   
-<p><strong>Workspace Compatibility:</strong> Eclipse SDK 4.28 will be upwards
-  workspace-compatible with earlier 3.x and 4.27 versions of the Eclipse SDK unless noted.
-  This means that workspaces and projects created with Eclipse SDK 4.27, 4.24, 4.23, .. 3.0 can be successfully
-  opened by Eclipse SDK 4.28 and upgraded to a 4.28 workspace. This includes both
+<p><strong>Workspace Compatibility:</strong> Eclipse SDK 4.27 will be upwards
+  workspace-compatible with earlier 3.x and 4.26 versions of the Eclipse SDK unless noted.
+  This means that workspaces and projects created with Eclipse SDK 4.26, 4.24, 4.23, .. 3.0 can be successfully
+  opened by Eclipse SDK 4.27 and upgraded to a 4.27 workspace. This includes both
   hidden metadata, which is localized to a particular workspace, as well as metadata
   files found within a workspace project (e.g., the .project file), which may
   propagate between workspaces via file copying or team repositories. Individual
-  plug-ins developed for Eclipse SDK 4.28 should provide similar upwards compatibility
+  plug-ins developed for Eclipse SDK 4.27 should provide similar upwards compatibility
   for their hidden and visible workspace metadata created by earlier versions;
-  4.28 plug-in developers are responsible for ensuring that their plug-ins recognize
+  4.27 plug-in developers are responsible for ensuring that their plug-ins recognize
   metadata from earlier versions and process it appropriately. User
   interface session state may be discarded when a workspace is upgraded. Downward
   workspace compatibility is not supported. A workspace created (or opened) by
-  a product based on Eclipse 4.28 will be unusable with a product based on an earlier
+  a product based on Eclipse 4.27 will be unusable with a product based on an earlier
   version of Eclipse. Visible metadata files created (or overwritten) by Eclipse
-  4.28 will generally be unusable with earlier versions of Eclipse. </p>
+  4.27 will generally be unusable with earlier versions of Eclipse. </p>
   
 <p><strong>Non-compliant usage of API's</strong>: All non-API methods and classes,
   and certainly everything in a package with &quot;internal&quot; in its name or
@@ -392,7 +392,7 @@ compared to bugs which are reproducible on the target environments listed above.
   
 <!-- ============================================== -->
 
-<!--   <p:themes_and_priorities>  -->
+<p:themes_and_priorities>
 
 <p:preamble>
 We no longer group the plan items into separate themes as this is does not provide real value to our users.
@@ -417,7 +417,7 @@ We no longer group the plan items into separate themes as this is does not provi
 </div>
 </p:preamble>
 
-<!--  </p:themes_and_priorities>    -->
+</p:themes_and_priorities>
     
 <!-- ============================================== -->
 
