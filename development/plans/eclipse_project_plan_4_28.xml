@@ -140,12 +140,12 @@ Eclipse 4.28 Endgame Plan.
   on the underlying operating system. The chief dependence is therefore on the
   Java Platform itself. Portions are targeted to specific classes of operating
   environments, requiring their source code to only reference facilities available
-  in particular class libraries (e.g. Java 8, Java 11, etc).</p>
+  in particular class libraries (e.g. Java 17, Java 19, etc).</p>
 <p>
-  In general, the 4.28 release of the Eclipse Project is developed on Java SE 11 VMs.
+  In general, the 4.28 release of the Eclipse Project is developed on Java SE 17 VMs.
   As such, the Eclipse SDK as a whole
   is targeted at all modern, desktop Java VMs. Most functionality is available for
-  Java SE 11 level development everywhere, and extended development capabilities are made
+  Java SE 17 level development everywhere, and extended development capabilities are made
   available on the VMs that support them.</p>
 <p>There are many different implementations of the Java Platform running atop
   a variety of operating systems. We focus our testing on a handful of
