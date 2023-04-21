@@ -3,7 +3,7 @@ Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
 Bundle-Vendor: %pluginProvider
 Bundle-SymbolicName: org.eclipse.ui.examples.statushandlers.testtool;singleton:=true
-Bundle-Version: 1.0.0
+Bundle-Version: 1.1.0
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.core.resources,
  org.eclipse.ui,
@@ -16,6 +16,4 @@ Export-Package: org.eclipse.ui.examples.statushandlers.testtool,
  org.eclipse.ui.examples.statushandlers.testtool.views,
  org.eclipse.ui.examples.statushandlers.testtool.wizards
 Bundle-Localization: plugin
-Bundle-RequiredExecutionEnvironment: J2SE-1.4,
- CDC-1.0/Foundation-1.0,
- J2SE-1.3
+Bundle-RequiredExecutionEnvironment: JavaSE-17
