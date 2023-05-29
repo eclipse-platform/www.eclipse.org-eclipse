@@ -10,7 +10,7 @@ $App   = new App();
 $Nav  = new Nav();
 $Menu   = new Menu();
 $right_nav = FALSE;
-$keyword = 'eclipse, 4.27, 2023-03, acknowledgements, acknowledgments, thanks';
+$keyword = 'eclipse, 4.28, 2023-06, acknowledgements, acknowledgments, thanks';
 
 include($App->getProjectCommon());
 header('Content-type: text/plain; charset=utf-8');
