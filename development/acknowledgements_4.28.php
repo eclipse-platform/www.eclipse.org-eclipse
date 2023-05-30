@@ -84,7 +84,7 @@ ob_start();
      also provide timely updates so that we can release on time. Special thanks to the following list of
       people, in alphabetical order, who contributed code to the project:
      
-      Alexandr Miloslavskiy, Alshama MS, Andrey Loskutov, Azerr, Matthias Becker, Christopher Hermann, Christoph Kaser, Christoph L&#xC3;ubrich, Daniel Kr&#xDC;gler, Deepika Udayagiri, Dominic Scharfe, 
+      Alexandr Miloslavskiy, Alshama MS, Andrey Loskutov, Azerr, Christopher Hermann, Christoph Kaser, Christoph L&#xC3;ubrich, Daniel Kr&#xDC;gler, Deepika Udayagiri, Dominic Scharfe, 
       Ed Merks, Elsa Zacharia, Federico Jeanne, Feilim Breatnach, Francisco Perez, Frederic Gurr, Gesa Hentschke, Gireesh Punathil, Hannes Wellmann, Heiko Klare, H&#xE9;lios Gilles, Jeff Johnston, 
       Jonah Graham, J&#xC3;rg Kubitz, Kellner, Niklas, Lakshmi P Shanmugam, Lars Vogel, Marcus Hoepfner, Mat Booth, Matthias Becker, Michael Keppler, Mickael Istria, Mihai Nita, Ole Osterhagen, 
       Patrick Ziegler, Phil Beauvoir, Raghunandana, Rahul Mohanan, Ruben Porras, Ruben Porras Campo, Samantha Dawley, Sebastian Ratz, Sheena, Shitesh Arihunta, Shiyas T S, Simeon Andreev, 
