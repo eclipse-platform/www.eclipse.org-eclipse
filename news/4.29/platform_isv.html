@@ -44,6 +44,28 @@ ul {padding-left: 13px;}
   <tr>
     <td id="SWT" class="section" colspan="2"><h2>SWT Changes</h2></td>
   </tr>
+
+  <tr id="setfocus-no-longer-activates-shell"> <!-- https://github.com/eclipse-platform/eclipse.platform.swt/issues/450 -->
+    <td class="title">Control.setFocus() no longer activates its Shell</td>
+    <td class="content">
+      Previously calling <code>Control.setFocus()</code> also activated its
+      <code>Shell</code>. This behavior was never documented and was never
+      explained why it existed. But it caused problems: setting focus
+	  to a control in a background Shell caused the Shell to jump on user.
+      <p>
+      Now setting focus just sets focus, even if the Shell is in the background.
+      To also bring Shell to front, explicitly call <code>Shell.setActive()</code>.
+	  </p><p>
+      This change can be disabled using a Java property.
+      For Example, add this VM argument in <code>eclipse.ini</code> or on
+	  the command line after <code>-vmargs</code>:
+      <pre><b>-Dorg.eclipse.swt.internal.activateShellOnForceFocus=true</b></pre>
+      Note: this property is only added temporarily and will be removed later.
+	  </p><p>
+	  See <a href="https://github.com/eclipse-platform/eclipse.platform.swt/issues/450">SWT Issue 450</a>
+	  </p>
+    </td>
+  </tr>
   <!-- *********************** End of SWT *********************** -->
   <tr><td colspan="2"/></tr>
 </tbody>
