@@ -75,6 +75,23 @@ ul {padding-left: 13px;}
     <h2>General Updates </h2>
     </td>
   </tr>
+
+  <tr id="open-new-workbench-window-on-current-monitor">
+    <!-- https://github.com/eclipse-platform/eclipse.platform.ui/pull/755 -->
+    <td class="title">Open New Workbench Window on Current Monitor</td>
+    <td class="content">
+      When creating a new workbench window, it was either placed on the monitor showing the currently
+      active window or on the primary monitor, depending on the operating system. Now the new window
+      is always placed on the monitor that shows the active workbench window.
+      In case the active workbench window spans multiple monitors, the monitor that displays the
+      largest part of the active window is selected.
+      <p>
+      This makes the placement of newly created workbench windows consistent across all operating
+      systems. It also better reflects the common user expectation to have a new window placed near
+      the existing one rather than on the primary monitor.
+      </p>
+    </td>
+  </tr>
   <!-- ******************* End of General Updates ************************************* -->
   <tr><td colspan="2"/></tr>
 </tbody>
