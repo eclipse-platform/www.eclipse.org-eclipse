@@ -76,6 +76,26 @@ ul {padding-left: 13px;}
   <p><img src="images/java-constant-hover-example.png" alt="Example of Java Constant Hover"/></p>
   </td>
   </tr>
+  <tr id="lambda-cleanup-improvements">
+  <td class="title"><a href="#lambda-cleanup-improvements">Lambda Cleanup Improvements</a></td>
+  <td class="content">
+  A number of improvements have been made to the Java cleanups concerning converting to use lambdas and simplifying existing
+  lambdas.  First of all, the cleanup preference: <b>Convert functional interface instances</b> on the <b>Java Features</b> tab
+  for Java 8 has added an additional checkbox: <b>Simplify method reference syntax for lambda conversions</b>.  This checkbox is
+  selected by default and instructs the cleanup to use method reference syntax where possible when converting from anonymous
+  classes.  If the checkbox is unselected, method reference syntax will not be used by default (sometimes required to avoid
+  a runtime <i>NullPointerException</i>) but will only be used if the user has also selected the <b>Simplify lambda expression and
+  method reference syntax</b> cleanup option found on the <b>Code Style</b> tab.  By default, the Quick fix to convert an
+  anonymous class will also by default now use the method reference syntax where possible.
+  <p><img src="images/new-lambda-pref.png" alt="New Lambda Cleanup Preference"/></p>
+  <p>The second improvement to the lambda cleanups and quick fix is that the code now recognizes use of <b>instanceof</b> can
+  be replaced with a method reference to <b>isInstance</b>.
+  <p>The following code:</p>
+  <p><img src="images/lambda-example-before.png" alt="Lambda Cleanup Example Before"/></p>
+  <p>with the lambda cleanup will by default change to:</p>
+  <p><img src="images/lambda-example-after.png" alt="Lambda Cleanup Example After"/></p>
+  </td>
+  </tr>
 
   <!-- ******************* End of Java Editor ************************************* -->
 
