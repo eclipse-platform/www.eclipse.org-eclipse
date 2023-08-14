@@ -16,7 +16,7 @@
 <p:introduction>
 <div>
 <p>
-Last revised July 04, 2023.
+Last revised August 14, 2023.
 
 <!--
 <img src="http://www.eclipse.org/eclipse/development/new.gif" alt="(new)" border="0" height="12" width="12" />
@@ -202,8 +202,8 @@ Eclipse 4.29 Endgame Plan.
 			</td>
 			<td rowspan="1">x86 64-bit</td>
 			<td rowspan="1">
-				OpenJDK 17.0.3 (LTS)<br/>
-				Oracle Java 17.0.3 (LTS)<br/>
+				OpenJDK 17.0.8 (LTS)<br/>
+				Oracle Java 17.0.8 (LTS)<br/>
 			</td>
 			<td rowspan="1">Win32</td>
 		</tr>
@@ -218,15 +218,15 @@ Eclipse 4.29 Endgame Plan.
 				aarch64<br/>
 			</td>
 			<td rowspan="1">
-				OpenJDK 17.0.3 (LTS)<br/>
-				Oracle Java 17.0.3 (LTS)<br/>
+				OpenJDK 17.0.8 (LTS)<br/>
+				Oracle Java 17.0.8 (LTS)<br/>
 			</td>
 			<td rowspan="2">GTK 3</td>
 		</tr>
 		<tr class="c1">
 			<td rowspan="1">Power 64-bit LE</td>
 			<td rowspan="1">
-				OpenJDK 11.0.15 (LTS)
+				OpenJDK 17.0.8 (LTS)
 			</td>
 		</tr>
 		<!-- ************ SLES ************** -->
@@ -237,14 +237,14 @@ Eclipse 4.29 Endgame Plan.
 			</td>
 			<td rowspan="1">x86 64-bit</td>
 			<td rowspan="1">
-				OpenJDK 17.0.3 (LTS)<br/>
+				OpenJDK 17.0.8 (LTS)<br/>
 			</td>
 			<td rowspan="2">GTK 3</td>
 		</tr>
 		<tr class="c0">
 			<td rowspan="1">Power 64-bit LE</td>
 			<td rowspan="1">
-				OpenJDK 11.0.15 (LTS)
+				OpenJDK 17.0.8 (LTS)
 			</td>
 		</tr>
 
@@ -257,7 +257,7 @@ Eclipse 4.29 Endgame Plan.
 				aarch64<br/>
 			</td>
 			<td rowspan="1">
-				OpenJDK 17.0.3 (LTS)<br/>
+				OpenJDK 17.0.8 (LTS)<br/>
 			</td>
 			<td rowspan="1">GTK 3</td>
 		</tr>
@@ -273,8 +273,8 @@ Eclipse 4.29 Endgame Plan.
 			<td rowspan="1">x86 64-bit</td>
 			
 			<td rowspan="1">
-				OpenJDK 17.0.3 (LTS)<br/>
-				Oracle Java 17.0.3 (LTS)
+				OpenJDK 17.0.8 (LTS)<br/>
+				Oracle Java 17.0.8 (LTS)
 			</td>
 			
 			<td rowspan="2">Cocoa</td>
@@ -287,7 +287,7 @@ Eclipse 4.29 Endgame Plan.
 			<td rowspan="1">
 				M1 (arm64)
 			</td>
-            <td rowspan="1">OpenJDK 17.0.3 (LTS)</td>
+            <td rowspan="1">OpenJDK 17.0.8 (LTS)</td>
    		</tr>
 	</table>
  </center>
