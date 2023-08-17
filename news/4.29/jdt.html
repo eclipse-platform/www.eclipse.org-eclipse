@@ -56,6 +56,21 @@ ul {padding-left: 13px;}
     <h2>JUnit</h2>
     </td>
   </tr>
+  <tr id="junit-search-progress">
+  <td class="title"><a href="#junit-search-progress">Show progress when searching test methods in JUnit run/debug configuration</a></td>
+  <td class="content">
+  A progress dialog and a progress bar have been added to the <b>Run/Debug configurations</b> of JUnit tests. 
+  <p>If the configuration references a <b>test method</b> then a search takes place, which sometimes requires some time and led previously to a UI freeze. 
+  There is now a progress indication in the form of a progress dialog when first opening the <b>Run/Debug Configurations</b> dialog:</p>
+  <p><img src="images/junit-search-progress-dialog.png" alt="JUnit search progress dialog"/></p>
+  <p>Or in the form of a progress bar if the dialog is already opened:</p>
+  <p><img src="images/junit-search-progress-bar.png" alt="JUnit search progress bar"/></p>
+  <p>In case the search is canceled by the user, the cancelation will be reported in the notification area of the <b>Run/Debug Configurations</b> dialog,
+  the text field <b>Test method:</b> will be disabled and and the <b>Run/Debug</b> button will be disabled. The <b>Search...</b> button right next to
+  <b>Test method:</b> remains enabled and triggers the search again.</p>.
+  <p><img src="images/junit-search-progress-run-configuration.png" alt="JUnit search progress Run Configuration"/></p>
+  </td>
+  </tr>
   <!-- ******************* End of JUnit ************************************* -->
 
   <!-- ******************* Java Editor ************************************* -->
