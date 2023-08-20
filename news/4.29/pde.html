@@ -76,6 +76,20 @@ ul {padding-left: 13px;}
     </td>
   </tr>
 
+  <tr id="product-startLevel-configuration">
+    <!-- https://github.com/eclipse-pde/eclipse.pde/pull/642 -->
+    <!-- https://github.com/eclipse-pde/eclipse.pde/pull/643 -->
+    <td class="title">Enhanced Start Levels configuration in Products</td>
+    <td class="content">
+      For Products the specification of Plug-in <code>Start Levels</code> in the <code>Configuration</code> page of the Product-Editor has been enhanced.
+      <ul>
+      <li>Plugin's that are only transitively contained in a product can now have their <code>Start Level</code> configured too</li>
+      <li>Recommended Plug-ins are only added if they are (transitively) contained in the product.</li>
+      </ul>
+      <p><img src="images/product-start-levels.png" alt="Mixed products usage"/></p>
+    </td>
+  </tr>
+
   <!-- ******************** End of Editors ********************** -->
 
   <!-- ******************** APITools ********************** -->
