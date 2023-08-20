@@ -57,6 +57,25 @@ ul {padding-left: 13px;}
     </td>
   </tr>
 
+  <tr id="mixed-products">
+    <!-- https://github.com/eclipse-pde/eclipse.pde/pull/291 -->
+    <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=325614 -->
+    <td class="title">Support for mixed Products</td>
+    <td class="content">
+      The PDE Product Editor now supports <em>mixed products</em>, which consist of both Plug-ins and Feature.
+      On the <code>Overview</code> page of the Product, just select
+      <br/>
+      <code>The product configuration is based on: <b>plug-ins and feature</b></code>
+      <br/>
+      and you can add Plug-ins and Features to the Product in the <code>Contents</code> page of the editor.
+      <p>
+      You can launch <em>mixed products</em> as usual from the IDE via shortcuts in the <code>Overview</code> page.
+      Tycho supports building mixed products since version <code>3.0.0</code>.
+      </p>
+      <p><img src="images/mixed-products.png" alt="Mixed products usage"/></p>
+    </td>
+  </tr>
+
   <!-- ******************** End of Editors ********************** -->
 
   <!-- ******************** APITools ********************** -->
