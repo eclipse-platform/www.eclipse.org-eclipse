@@ -113,11 +113,26 @@ ul {padding-left: 13px;}
   </tr>
 
   <!-- ******************* End of Java Editor ************************************* -->
+ 
 
   <!-- ******************* Java Views and Dialogs ************************************* -->
   <tr>
     <td id="JavaViewsAndDialogs" class="section" colspan="2">
     <h2>Java Views and Dialogs</h2>
+    </td>
+  </tr>
+  <tr id="ignoreWhitespace">
+    <!-- https://github.com/eclipse-jdt/eclipse.jdt.ui/pull/584 -->
+    <!-- https://github.com/eclipse-jdt/eclipse.jdt.ui/commit/8234af07ce40f708b34b4d48b195f0d4e4dc8402 -->
+    <td class="title">Improved "Ignore Whitespace" in Java Compare</td>
+    <td class="content">
+      Up to now the "Ignore White Space" context menu action in the Java Compare editor ignored all whitespace, including what may be semantically significant whitespace.
+      <p><img src="images/show_ws.png" alt="Showing all white space changed"/></p>
+      For example, a white space difference in a Java string literal is semantically significant while trailing white space is not.
+      <p>
+	  This has now been inproved so that e.g. white space changes in string literals are also shown while "Ignore White Space" is active.
+      </p>
+      <p><img src="images/ignore_ws.png" alt="Hiding insignificant white space"/></p>
     </td>
   </tr>
   <!-- ******************* End of Java Views and Dialogs ************************************* -->
