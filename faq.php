@@ -417,13 +417,9 @@ Archive: Questions that are not relevant for the latest SWT versions but may be 
       64-bit binaries. To force the VM to run in 64-bit mode, use the -d64 option as VM argument in your launch configuration.
 
       <p>If you are launching with SWT from GIT in your workspace (see
-      <a href="/swt/git.php">How to use SWT from GIT</a>, use <code>.classpath_cocoa</code>
+      <a href="/swt/git.php">How to use SWT from GIT</a>, use <code>.classpath_cocoa_x86_64</code> or <code>.classpath_cocoa_aarch64</code>
       as the <code>.classpath</code> file in the <code>org.eclipse.swt</code> project and make sure you have the
-      org.eclipse.swt.cocoa.maxosx.x86_64 project in your workspace),
-      then you also need to modify the <code>.classpath</code> file as follows:
-      <pre>
-         attribute value="org.eclipse.swt.cocoa.macosx"</pre>change to:<pre>
-         attribute value="org.eclipse.swt.cocoa.macosx.x86_64"</pre>
+      org.eclipse.swt.cocoa.maxosx.x86_64 or org.eclipse.swt.cocoa.maxosx.aarch64 project in your workspace).
       </p>
   </dd>
 
