@@ -46,24 +46,23 @@ ul {padding-left: 13px;}
   </tr>
 
   <tr id="setfocus-no-longer-activates-shell"> <!-- https://github.com/eclipse-platform/eclipse.platform.swt/issues/450 -->
-    <td class="title">Control.setFocus() no longer activates its Shell</td>
+    <td class="title">Control.setFocus() can be configured to avoid activating its shell</td>
     <td class="content">
-      Previously calling <code>Control.setFocus()</code> also activated its
-      <code>Shell</code>. This behavior was never documented and was never
-      explained why it existed. But it caused problems: setting focus
-	  to a control in a background Shell caused the Shell to jump on user.
+      Calling <code>Control.setFocus()</code> also activates its containing <code>Shell</code>.
+      This behavior is undocumented and somewhat surprising; 
+      it makes it impossible to set focus on a specific control in a background shell without that shell popping to the foreground as a side effect.
+      The new system property <code>org.eclipse.swt.internal.activateShellOnForceFocus</code> can be used to disable this side effect
+      such that only an explicit call to <code>Shell.setActive()</code> will bring the shell to the foreground. 
       <p>
-      Now setting focus just sets focus, even if the Shell is in the background.
-      To also bring Shell to front, explicitly call <code>Shell.setActive()</code>.
-	  </p><p>
-      This change can be disabled using a Java property.
-      For Example, add this VM argument in <code>eclipse.ini</code> or on
-	  the command line after <code>-vmargs</code>:
-      <pre><b>-Dorg.eclipse.swt.internal.activateShellOnForceFocus=true</b></pre>
-      Note: this property is only added temporarily and will be removed later.
-	  </p><p>
-	  See <a href="https://github.com/eclipse-platform/eclipse.platform.swt/issues/450">SWT Issue 450</a>
-	  </p>
+      The new system property can be added as VM argument in the <code>eclipse.ini</code> after the <code>-vmargs</code> line in that file to disable the activation side effect for a product:
+      </p>
+      <pre><b>-Dorg.eclipse.swt.internal.activateShellOnForceFocus=false</b></pre>
+      <p>
+      Or it can be specified on the command line as <code>-vmargs -Dorg.eclipse.swt.internal.activateShellOnForceFocus=false</code>.
+      </p>
+      <p>
+      See <a href="https://github.com/eclipse-platform/eclipse.platform.swt/issues/450">SWT Issue 450</a>
+      </p>
     </td>
   </tr>
   <!-- *********************** End of SWT *********************** -->
