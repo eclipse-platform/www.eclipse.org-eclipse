@@ -10,7 +10,7 @@ $App   = new App();
 $Nav  = new Nav();
 $Menu   = new Menu();
 $right_nav = FALSE;
-$keyword = 'eclipse, 4.28, 2023-06, acknowledgements, acknowledgments, thanks';
+$keyword = 'eclipse, 4.29, 2023-09, acknowledgements, acknowledgments, thanks';
 
 include($App->getProjectCommon());
 header('Content-type: text/plain; charset=utf-8');
@@ -22,17 +22,17 @@ header('Content-type: text/plain; charset=utf-8');
 # index.php
 #
 # Author:    Rahul Mohanan and others on Eclipse Project
-# Date:      2023-05-29
+# Date:      2023-08-30
 #
-# Description: Eclipse project 2023-06 release acknowledgments page
+# Description: Eclipse project 2023-09 release acknowledgments page
 #
 #
 #****************************************************************************
 
 #
 # Begin: page-specific settings.  Change these.
-$pageTitle     = "Eclipse 2023-06 Acknowledgements";
-$pageKeywords  = "eclipse, 4.28, 2023-06, acknowledgements, acknowledgments, thanks";
+$pageTitle     = "Eclipse 2023-09 Acknowledgements";
+$pageKeywords  = "eclipse, 4.29, 2023-09, acknowledgements, acknowledgments, thanks";
 $pageAuthor    = "Rahul Mohanan and the Eclipse Project Team";
 
 # Add page-specific Nav bars here
@@ -63,7 +63,7 @@ ob_start();
   <div class="homeitem3col">
   
   
-    <h3>Eclipse 2023-06 Acknowledgements</h3>
+    <h3>Eclipse 2023-09 Acknowledgements</h3>
     
     <p>The entire Eclipse Project team would like to thank the Eclipse Foundation staff for their tireless efforts, including: Denis Roy, Matt Ward, Eric Poirier, Pawel Stankiewicz, Frederic Gurr and Mika&#xEB;l Barbero for not only 
     keeping all that infrastructure going, but also constantly improving it; Sharon Corbett for guiding us through the Eclipse legal process; Wayne Beaton for giving us process 
