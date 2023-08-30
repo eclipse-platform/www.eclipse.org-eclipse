@@ -49,8 +49,12 @@ ul {padding-left: 13px;}
   <tr id="osgi-repository-target-type">
     <td class="title"><a href="#osgi-repository-target-type">New OSGi Repository Target Location Type</a></td>
     <td class="content">
-      The OSGi Specification defines a XML format for representing a repository as defined in "<a href="https://docs.osgi.org/specification/osgi.cmpn/8.0.0/service.repository.html">132 Repository Service Specification</a>" that allows to hold "Resources" with requirements and capabilities.
-      Such a repository usually contains a set of bundles and is very similar to what we have today with P2 updatesites, to improve interfacing of PDE with such repositories this adds a new target location type "Repository" where content can be used as usual.
+      The OSGi Specification defines an XML format for representing a repository, 
+      as defined in the <a href="https://docs.osgi.org/specification/osgi.cmpn/8.0.0/service.repository.html">Repository Service Specification</a>,
+      to provide access to external resources based on their associated requirements and capabilities.
+      Such a repository typically contains a set of bundles and is analogous to what is provided by a p2 update site. 
+      To facilitate PDE's integration with such OSGi standard repositories, 
+      a new target location type <code>OSGi Repository</code> is supported.
       <p>
         <img src="images/osgi-repository-target-type.png" alt="grafik"/>
       </p>
@@ -60,16 +64,17 @@ ul {padding-left: 13px;}
   <tr id="mixed-products">
     <!-- https://github.com/eclipse-pde/eclipse.pde/pull/291 -->
     <!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=325614 -->
-    <td class="title">Support for mixed Products</td>
+    <td class="title">Support for Mixed Products</td>
     <td class="content">
-      The PDE Product Editor now supports <em>mixed products</em>, which consist of both Plug-ins and Feature.
-      On the <code>Overview</code> page of the Product, just select
-      <br/>
-      <code>The product configuration is based on: <b>plug-ins and feature</b></code>
-      <br/>
-      and you can add Plug-ins and Features to the Product in the <code>Contents</code> page of the editor.
+      The PDE Product Configuration Editor now supports <em>mixed products</em>, which consist of both plug-ins and features.
+      To exploit this new capability, use the <code>Overview</code> page of the editor to select the following radio button:
       <p>
-      You can launch <em>mixed products</em> as usual from the IDE via shortcuts in the <code>Overview</code> page.
+      &nbsp;&nbsp;<code>The product configuration is based on: <b>&bull; plug-ins and feature</b></code>
+      </p>
+      <p>
+      You can then add both plug-ins and features to the product on the <code>Contents</code> page of the editor.
+      <p>
+      You can launch <em>mixed products</em> from the IDE as usual via shortcuts on the <code>Overview</code> page.
       Tycho supports building mixed products since version <code>3.0.0</code>.
       </p>
       <p><img src="images/mixed-products.png" alt="Mixed products usage"/></p>
@@ -79,12 +84,12 @@ ul {padding-left: 13px;}
   <tr id="product-startLevel-configuration">
     <!-- https://github.com/eclipse-pde/eclipse.pde/pull/642 -->
     <!-- https://github.com/eclipse-pde/eclipse.pde/pull/643 -->
-    <td class="title">Enhanced Start Levels configuration in Products</td>
+    <td class="title">Enhanced Start Levels Configuration in Products</td>
     <td class="content">
-      For Products the specification of Plug-in <code>Start Levels</code> in the <code>Configuration</code> page of the Product-Editor has been enhanced.
+      The specification of plug-in <code>Start Levels</code> on the <code>Configuration</code> page of the PDE Product Configuration Editor has been enhanced.
       <ul>
-      <li>Plugin's that are only transitively contained in a product can now have their <code>Start Level</code> configured too</li>
-      <li>Recommended Plug-ins are only added if they are (transitively) contained in the product.</li>
+      <li>Plug-in's that are only transitively contained in a product can now have their <code>Start Level</code> configured as well.</li>
+      <li>Recommended plug-ins are only added if they are (transitively) contained in the product.</li>
       </ul>
       <p><img src="images/product-start-levels.png" alt="Mixed products usage"/></p>
     </td>
