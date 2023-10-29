@@ -46,6 +46,19 @@ ul {padding-left: 13px;}
   <tr>
     <td id="editors" class="section" colspan="2"><h2>Editors</h2></td>
   </tr>
+
+  <tr id="product-update-repository-name">
+    <!-- https://github.com/eclipse-equinox/p2/issues/345 -->
+    <!-- https://github.com/eclipse-equinox/p2/pull/353 -->
+    <!-- https://github.com/eclipse-pde/eclipse.pde/pull/824 -->
+    <td class="title">Support for names of product update repositories</td>
+    <td class="content">
+      The PDE Product Editor now supports in its <code>Updates</code> section to specify the <code>Name</code> of each update repository.
+      In the assembled product the names will be presented to a user in the preferences under <code>Available Software Sites</code>.
+      <p><img src="images/product_updates_names.png" alt="Product Updates with Name"/></p>
+    </td>
+  </tr>
+
   <!-- ******************** End of Editors ********************** -->
 
   <!-- ******************** APITools ********************** -->
