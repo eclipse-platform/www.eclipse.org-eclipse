@@ -96,6 +96,17 @@ ul {padding-left: 13px;}
       <p><img src="images/remove_default_case_result.png" alt="result of remove default case quick fix"/></p>
     </td>
   </tr>
+  <tr id="insert-break-statement">
+    <!-- https://github.com/eclipse-jdt/eclipse.jdt.ui/issues/881 -->
+    <td class="title">Quick Fix to insert break statement</td>
+    <td class="content">
+      You can use the new <b>Quick Fix (Ctrl+1)</b> to insert the <code>break</code> statement when there is an illegal fall-through to a pattern in a switch statement.
+      For example,
+      <p><img src="images/insert_break.png" alt="insert break statement quick fix"/></p>
+      will result in:
+      <p><img src="images/insert_break_result.png" alt="result of insert break statement quick fix"/></p>
+    </td>
+  </tr>
   <!-- ******************* End of Java Editor ************************************* -->
 
   <!-- ******************* Java Views and Dialogs ************************************* -->
