@@ -59,6 +59,33 @@ ul {padding-left: 13px;}
     </td>
   </tr>
 
+  <tr id="unnecessary-attributes-removal">
+    <!-- https://github.com/eclipse-pde/eclipse.pde/issues/730 -->
+    <!-- https://github.com/eclipse-pde/eclipse.pde/pull/770 -->
+    <!-- https://github.com/eclipse-equinox/p2/pull/378 -->
+    <!-- https://github.com/eclipse-pde/eclipse.pde/pull/882 -->
+    <td class="title">Removed support for unnecessary attributes in Features and Products</td>
+    <td class="content">
+      The <code>Feature</code> editor has its support for the following attributes of <code>plugin</code> elements removed:
+      <ul>
+        <li><code>download-size</code></li>
+        <li><code>install-size</code></li>
+        <li><code>unpack</code></li>
+        <li><code>fragment</code></li>
+      </ul>
+      These attributes are unused and without effect for a long time and unnecessarily increase the complexity of the editor and the size of a <code>feature.xml</code> file.
+      They are ignored when present in an existing Feature and removed by the editor upon the next modification through the editor.
+      <p>
+      The <code>Product Configuration</code> editor has its support for the following attribute of <code>plugin</code> elements removed:
+      <ul>
+        <li><code>fragment</code></li>
+      </ul>
+      This attribute is unused and without effect for a long time and unnecessarily increase the size of a <code>.product</code> file.
+      They are ignored when present in an existing Product and removed by the editor upon the next modification through the editor.
+      </p>
+    </td>
+  </tr>
+
   <!-- ******************** End of Editors ********************** -->
 
   <!-- ******************** APITools ********************** -->
