@@ -27,6 +27,7 @@ ul {padding-left: 13px;}
     <li><a href="#TextEditors">Text Editors</a></li>
     <li><a href="#Preferences">Preferences</a></li>
     <li><a href="#StylingThemes">Themes and Styling</a></li>
+    <li><a href="#Security">Security</a></li>
     <li><a href="#GeneralUpdates">General Updates</a></li>
 </ul>
 
@@ -69,6 +70,47 @@ ul {padding-left: 13px;}
   </tr>
   <!-- ******************* End of Themes and Styling ************************************* -->
 
+  <!-- ******************* Security ************************************* -->
+  <tr>
+    <td id="Security" class="section" colspan="2">
+    <h2>Security</h2>
+    </td>
+  </tr>
+
+  <tr id="p2-director">
+    <!-- https://github.com/eclipse-equinox/p2/issues/365 -->
+    <td class="title">p2 Director Application Security</td>
+    <td class="content">
+    To provide similar security controls as <a href="../4.28/platform.php#Security">available in the IDE</a>,
+    the following command-line arguments are now supported the <a href="https://help.eclipse.org/latest/index.jsp?topic=%2Forg.eclipse.platform.doc.isv%2Fguide%2Fp2_director.html">p2 director application</a>:
+    <p></p>
+    <dl>
+    <dt>-trustSignedContentOnly | -tsco</dt>
+    <dd>
+    Whether to trust each artifact only if it is jar-signed or PGP-signed.
+    </dd>
+    <dt>-trustedAuthorities | -ta &lt;comma separated list&gt;</dt>
+    <dd>
+    The authorities from which repository content, including repository metadata, is trusted. An empty value will reject all remote connections.
+    </dd>
+    <dt>-trustedPGPKeys | -tk &lt;comma separated list&gt;</dt>
+    <dd>
+    The fingerprints of PGP keys to trust as signers of artifacts. An empty value will reject all PGP keys.
+    </dd>
+    <dt>-trustedCertificates | -tc &lt;comma separated list&gt;</dt>
+    <dd>
+    The SHA-256 'fingerprints' of unanchored certificates to trust as signers of artifacts. An empty value will reject all unanchored certificates.
+    </dd>
+    <dt>-verboseTrust | -vt</dt>
+    <dd>
+    Whether to print detailed information about the content trust.
+    </dd>
+    </dl>
+    </td>
+  </tr>
+
+  <!-- ******************* End of Security ************************************* -->
+  
   <!-- ******************* General Updates ************************************* -->
   <tr>
     <td id="GeneralUpdates" class="section" colspan="2">
