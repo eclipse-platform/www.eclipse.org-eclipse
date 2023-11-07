@@ -18,7 +18,6 @@ import org.eclipse.ui.ide.markers.compatibility.api.MarkerSupportConstants;
 
 /**
  * @since 3.4
- * 
  */
 public class MarkerIDField extends MarkerField {
 

@@ -28,7 +28,6 @@ import org.eclipse.ui.ide.markers.compatibility.api.internal.MarkerMessages;
  * severity and description field.
  * 
  * @since 3.4
- * 
  */
 public class SeverityAndDescriptionConfigurationArea extends
 		DescriptionConfigurationArea {
@@ -70,8 +69,6 @@ public class SeverityAndDescriptionConfigurationArea extends
 
 	/**
 	 * Create a group for the severity selection.
-	 * 
-	 * @param parent
 	 */
 	private void createSeverityGroup(Composite parent) {
 
@@ -157,7 +154,6 @@ public class SeverityAndDescriptionConfigurationArea extends
 	 * 
 	 * @param constant
 	 *            one of {@link IMarker#SEVERITY_ERROR},{@link IMarker#SEVERITY_WARNING},{@link IMarker#SEVERITY_INFO}
-	 * @param enabled
 	 */
 	private void updateSeverities(int constant, boolean enabled) {
 		if (enabled)

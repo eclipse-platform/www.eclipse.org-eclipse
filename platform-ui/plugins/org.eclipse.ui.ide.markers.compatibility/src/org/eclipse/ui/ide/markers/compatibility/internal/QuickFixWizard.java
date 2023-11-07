@@ -32,7 +32,6 @@ import org.eclipse.ui.statushandlers.StatusManager;
  * QuickFixWizard is the wizard for quick fixes.
  * 
  * @since 3.4
- * 
  */
 class QuickFixWizard extends Wizard {
 

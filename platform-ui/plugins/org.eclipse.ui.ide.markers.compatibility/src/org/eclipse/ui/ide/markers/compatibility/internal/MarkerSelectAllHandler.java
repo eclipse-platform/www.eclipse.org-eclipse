@@ -17,7 +17,6 @@ import org.eclipse.ui.ide.markers.compatibility.api.MarkerViewHandler;
 /**
  * MarkerSelectAllHandler is the handler for the select all action.
  * @since 3.4
- *
  */
 public class MarkerSelectAllHandler extends MarkerViewHandler implements
 		IHandler {

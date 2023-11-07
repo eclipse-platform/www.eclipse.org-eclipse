@@ -40,7 +40,6 @@ import org.eclipse.ui.ide.markers.compatibility.api.internal.MarkerTypesModel;
  * extension point.
  * 
  * @since 3.4
- * 
  */
 public class MarkerContentGenerator {
 
@@ -60,8 +59,6 @@ public class MarkerContentGenerator {
 
 	/**
 	 * Create a new MarkerContentGenerator
-	 * 
-	 * @param element
 	 */
 	public MarkerContentGenerator(IConfigurationElement element) {
 		configurationElement = element;
@@ -69,8 +66,6 @@ public class MarkerContentGenerator {
 
 	/**
 	 * Add the groups defined in the receiver to the collection of groups.
-	 * 
-	 * @param groups
 	 */
 	private void addDefinedGroups(Collection groups) {
 		// Add the ones in the receiver.
@@ -84,8 +79,6 @@ public class MarkerContentGenerator {
 
 	/**
 	 * Add all of the markerGroups defined in element.
-	 * 
-	 * @param groups
 	 */
 	private void addGroupsFrom(IConfigurationElement element, Collection groups) {
 		IConfigurationElement[] groupings = element
@@ -100,7 +93,6 @@ public class MarkerContentGenerator {
 	/**
 	 * Compute all of the markers for the receiver's type.
 	 * 
-	 * @param subMonitor
 	 * @return MarkerEntry
 	 */
 	private Collection computeAllMarkers(SubProgressMonitor subMonitor) {
@@ -116,8 +108,6 @@ public class MarkerContentGenerator {
 	 * 
 	 * @param returnMarkers
 	 *            {@link Collection} of {@link IMarker}
-	 * @param subMonitor
-	 * @param filterGroup
 	 * @param focusResources
 	 *            the resource currently selected
 	 */
@@ -163,8 +153,6 @@ public class MarkerContentGenerator {
 	 * 
 	 * @param results
 	 *            Collection of {@link IMarker}
-	 * @param group
-	 * @param markers
 	 */
 	private void filterMarkers(Collection results,
 			MarkerFieldFilterGroup group, IMarker[] markers) {
@@ -178,9 +166,6 @@ public class MarkerContentGenerator {
 	/**
 	 * Iterate through the return markers. If they do not exist in matching
 	 * remove them.
-	 * 
-	 * @param matching
-	 * @param returnMarkers
 	 */
 	private void findIntersection(Collection matching, Collection returnMarkers) {
 		HashSet removeMarkers = new HashSet();
@@ -200,11 +185,8 @@ public class MarkerContentGenerator {
 	 * 
 	 * @param results
 	 *            The Collection to add new entries to
-	 * @param resources
 	 * @param group
 	 *            the group to filter on. May be <code>null</code>.
-	 * @param depth
-	 * @param monitor
 	 */
 	private void findMarkers(Collection results, IResource[] resources,
 			MarkerFieldFilterGroup group, int depth, IProgressMonitor monitor) {
@@ -321,7 +303,6 @@ public class MarkerContentGenerator {
 	 * Re-generate all of the markers and filter them based on the enabled
 	 * filters.
 	 * 
-	 * @param subMonitor
 	 * @param andFilters
 	 *            if <code>true</code> return the intersection of the filters
 	 * @param focusResources
@@ -451,7 +432,6 @@ public class MarkerContentGenerator {
 	/**
 	 * Get the group called groupName from the receiver
 	 * 
-	 * @param groupName
 	 * @return MarkerGroup or <code>null</code>
 	 */
 	MarkerGroup getMarkerGroup(String groupName) {
@@ -533,7 +513,6 @@ public class MarkerContentGenerator {
 	/**
 	 * Return all of the projects being shown.
 	 * 
-	 * @param focusResources
 	 * @return IResource[]
 	 */
 	private IResource[] getProjects(IResource[] focusResources) {
@@ -554,7 +533,6 @@ public class MarkerContentGenerator {
 	/**
 	 * Get the resources in working set.
 	 * 
-	 * @param workingSet
 	 * @return IResource[]
 	 */
 	private IResource[] getResourcesInWorkingSet(IWorkingSet workingSet) {
@@ -628,8 +606,6 @@ public class MarkerContentGenerator {
 
 	/**
 	 * Remove the element from the generator extensions
-	 * 
-	 * @param element
 	 */
 	public void removeExtension(IConfigurationElement element) {
 		generatorExtensions.remove(element);

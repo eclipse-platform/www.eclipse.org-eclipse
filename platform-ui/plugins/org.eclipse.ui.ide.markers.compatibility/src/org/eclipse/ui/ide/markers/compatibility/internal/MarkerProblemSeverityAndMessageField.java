@@ -21,7 +21,6 @@ import org.eclipse.ui.internal.ide.IDEInternalWorkbenchImages;
  * MarkerSeverityAndMessageField is the field for severity and messages.
  * 
  * @since 3.4
- * 
  */
 public class MarkerProblemSeverityAndMessageField extends MarkerDescriptionField {
 

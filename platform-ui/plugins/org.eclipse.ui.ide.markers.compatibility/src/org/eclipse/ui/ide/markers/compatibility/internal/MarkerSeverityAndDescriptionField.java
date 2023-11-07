@@ -19,7 +19,6 @@ import org.eclipse.ui.ide.markers.compatibility.api.MarkerItem;
  * MarkerSeverityAndDescriptionField can handle severities for all markers.
  * 
  * @since 3.4
- * 
  */
 public class MarkerSeverityAndDescriptionField extends MarkerDescriptionField {
 

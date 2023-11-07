@@ -22,7 +22,6 @@ import org.eclipse.ui.ide.markers.compatibility.api.internal.TaskFilter;
  * PriorityMarkerFieldFilter is the field filter for priority in markers
  * 
  * @since 3.4
- * 
  */
 public class PriorityMarkerFieldFilter extends CompatibilityFieldFilter {
 

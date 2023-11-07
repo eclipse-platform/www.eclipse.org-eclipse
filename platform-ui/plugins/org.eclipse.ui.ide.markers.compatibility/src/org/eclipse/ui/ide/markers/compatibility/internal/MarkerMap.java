@@ -22,7 +22,6 @@ import org.eclipse.ui.ide.markers.compatibility.api.MarkerItem;
  * {@link IMarker} and thier {@link MarkerEntry} wrappers.
  * 
  * @since 3.4
- * 
  */
 class MarkerMap {
 
@@ -42,8 +41,6 @@ class MarkerMap {
 
 	/**
 	 * Create an instance of the receiver from markers.
-	 * 
-	 * @param markers
 	 */
 
 	public MarkerMap(MarkerEntry[] markers) {
@@ -71,7 +68,6 @@ class MarkerMap {
 	/**
 	 * Return the entry at index
 	 * 
-	 * @param index
 	 * @return MarkerEntry
 	 */
 	public MarkerEntry elementAt(int index) {
@@ -81,7 +77,6 @@ class MarkerMap {
 	/**
 	 * Return the {@link MarkerItem} that maps to marker.
 	 * 
-	 * @param marker
 	 * @return {@link MarkerItem}
 	 */
 	public MarkerItem getMarkerItem(IMarker marker) {

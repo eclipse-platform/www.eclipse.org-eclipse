@@ -273,8 +273,6 @@ public class ProjectRefreshSnapshotExportWizardPage extends
 
 	/**
 	 * Create the area to specify the snapshot directory.
-	 * 
-	 * @param workArea
 	 */
 	private void createSnapshotArea(Composite workArea) {
 		// project specification group
@@ -384,7 +382,6 @@ public class ProjectRefreshSnapshotExportWizardPage extends
 
 	/**
 	 * @return Return true to indicate that the operation was a success
-	 * 
 	 */
 	public boolean finish() {
 		IProject[] projectsToSnapshot = getCheckedElements();

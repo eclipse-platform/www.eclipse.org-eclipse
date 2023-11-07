@@ -17,7 +17,6 @@ import org.eclipse.ui.ide.markers.compatibility.internal.ExtendedMarkersView;
  * The MarkerSupportView is a view that supports the extensions
  * in the markerSupport extension point.
  * @since 3.4
- *
  */
 public abstract class MarkerSupportView extends ExtendedMarkersView {
 

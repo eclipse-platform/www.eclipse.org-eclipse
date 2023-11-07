@@ -110,8 +110,6 @@ public class FTPFile extends FileStore {
 	 * list its own contents and then return the directory information
 	 * for the self reference directory entry (".").
 	 * 
-	 * @param options
-	 * @param monitor
 	 * @return File info for the root element
 	 */
 	private IFileInfo fetchRootInfo(int options, IProgressMonitor monitor) {

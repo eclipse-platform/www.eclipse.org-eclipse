@@ -33,7 +33,6 @@ import com.ibm.icu.text.Collator;
  * an {@link ExtendedMarkersView}.
  * 
  * @since 3.4
- * 
  */
 public class MarkerEntry extends MarkerItem implements IAdaptable {
 
@@ -47,8 +46,6 @@ public class MarkerEntry extends MarkerItem implements IAdaptable {
 
 	/**
 	 * Create a new instance of the receiver.
-	 * 
-	 * @param marker
 	 */
 	public MarkerEntry(IMarker marker) {
 		this.marker = marker;
@@ -79,7 +76,6 @@ public class MarkerEntry extends MarkerItem implements IAdaptable {
 	/**
 	 * Get the value of the attribute in the enclosed marker.
 	 * 
-	 * @param attribute
 	 * @param defaultValue
 	 *            the defaultValue if the value is not set
 	 * @return int
@@ -103,7 +99,6 @@ public class MarkerEntry extends MarkerItem implements IAdaptable {
 	/**
 	 * Get the String value of the attribute in the enclosed marker.
 	 * 
-	 * @param attribute
 	 * @param defaultValue
 	 *            the defaultValue if the value is not set
 	 * @return String
@@ -136,7 +131,6 @@ public class MarkerEntry extends MarkerItem implements IAdaptable {
 	/**
 	 * Get the CollationKey for the string attribute.
 	 * 
-	 * @param attribute
 	 * @param defaultValue
 	 *            the defaultValue if the value is not set
 	 * @return CollationKey
@@ -324,8 +318,6 @@ public class MarkerEntry extends MarkerItem implements IAdaptable {
 
 	/**
 	 * Set the category to markerCategory.
-	 * 
-	 * @param markerCategory
 	 */
 	public void setCategory(MarkerCategory markerCategory) {
 		category = markerCategory;

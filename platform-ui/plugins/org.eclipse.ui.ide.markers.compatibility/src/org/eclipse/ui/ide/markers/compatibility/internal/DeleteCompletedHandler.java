@@ -28,7 +28,6 @@ import org.eclipse.ui.ide.undo.WorkspaceUndoUtil;
  * DeleteCompletedHandler is the handler for the deletion of completed
  * tasks.
  * @since 3.4
- *
  */
 public class DeleteCompletedHandler extends MarkerViewHandler {
 
@@ -80,7 +79,6 @@ public class DeleteCompletedHandler extends MarkerViewHandler {
 	/**
 	 * Get the list of completed tasks from the view.
 	 * 
-	 * @param view
 	 * @return List of {@link IMarker}
 	 */
 	private List getCompletedTasks(ExtendedMarkersView view) {

@@ -20,14 +20,12 @@ import org.eclipse.ui.ide.markers.compatibility.api.internal.Util;
  * WorkbenchMarkerResolution is the resolution that can be grouped
  * with others that are similar to allow multi selection.
  * @since 3.2
- *
  */
 public abstract class WorkbenchMarkerResolution implements IMarkerResolution2 {
 	
 	/**
 	 * Iterate through the list of supplied markers. Return any that can also have
 	 * the receiver applied to them.
-	 * @param markers
 	 * @return IMarker[]
 	 * 	 
 	 * */

@@ -17,9 +17,6 @@ import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.core.runtime.SubProgressMonitor;
 import org.eclipse.ftp.*;
 
-/**
- * 
- */
 public class FTPUtil {
 	private static final ThreadLocal openClients = new ThreadLocal();
 
@@ -38,7 +35,6 @@ public class FTPUtil {
 	/**
 	 * Use this method to ensure that the same connection is used for multiple commands
 	 * issued from the same thread.
-	 * @throws FtpException
 	 */
 	public static void run(URL url, IFtpRunnable runnable, IProgressMonitor monitor) throws FtpException {
 		monitor = Policy.monitorFor(monitor);
@@ -68,7 +64,6 @@ public class FTPUtil {
 
 	/**
 	 * Converts a directory entry to a file info
-	 * @param entry
 	 * @return The file information for a directory entry
 	 */
 	public static FileInfo entryToFileInfo(IDirectoryEntry entry) {

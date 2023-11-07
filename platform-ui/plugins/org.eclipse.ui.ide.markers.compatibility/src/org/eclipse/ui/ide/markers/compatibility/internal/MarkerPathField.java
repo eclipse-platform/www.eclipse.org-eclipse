@@ -20,7 +20,6 @@ import org.eclipse.ui.ide.markers.compatibility.api.MarkerItem;
  * MarkerPathField is the field for the paths column.
  * 
  * @since 3.4
- * 
  */
 public class MarkerPathField extends MarkerField {
 

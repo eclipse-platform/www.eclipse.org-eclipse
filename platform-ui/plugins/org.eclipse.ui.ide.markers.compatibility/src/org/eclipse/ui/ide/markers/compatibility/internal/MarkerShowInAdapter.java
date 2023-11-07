@@ -24,7 +24,6 @@ import org.eclipse.ui.part.ShowInContext;
  * IShowInSource.
  * 
  * @since 3.4
- * 
  */
 public class MarkerShowInAdapter implements IAdapterFactory {
 

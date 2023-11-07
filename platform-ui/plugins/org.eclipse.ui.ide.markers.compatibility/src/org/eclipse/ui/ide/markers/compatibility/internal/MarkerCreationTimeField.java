@@ -20,7 +20,6 @@ import org.eclipse.ui.ide.markers.compatibility.api.MarkerSupportConstants;
  * MarkerCreationTimeField is the field that shows the creation time of a field.
  * 
  * @since 3.4
- * 
  */
 public class MarkerCreationTimeField extends MarkerField {
 

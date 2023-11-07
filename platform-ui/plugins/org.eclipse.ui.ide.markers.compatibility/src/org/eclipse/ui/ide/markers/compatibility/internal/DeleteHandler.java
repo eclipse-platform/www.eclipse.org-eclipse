@@ -20,7 +20,6 @@ import org.eclipse.ui.ide.markers.compatibility.api.MarkerViewHandler;
  * DeleteHandler is the handler for the deletion of a marker.
  * 
  * @since 3.4
- * 
  */
 public class DeleteHandler extends MarkerViewHandler {
 

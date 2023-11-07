@@ -81,7 +81,6 @@ public class MarkerViewUtil {
 	 *            already showing
 	 * @return <code>true</code> if the marker was successfully shown,
 	 *         <code>false</code> if not
-	 * 
 	 */
 	public static boolean showMarker(IWorkbenchPage page, IMarker marker,
 			boolean showView) {

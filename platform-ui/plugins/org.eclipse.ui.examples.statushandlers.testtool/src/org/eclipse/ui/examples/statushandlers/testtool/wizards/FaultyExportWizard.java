@@ -66,8 +66,6 @@ public class FaultyExportWizard extends Wizard implements IExportWizard {
 	public class MyWizardPage extends WizardPage {
 		/**
 		 * Creates some wizard page
-		 * 
-		 * @param pageName
 		 */
 		protected MyWizardPage(String pageName) {
 			super(pageName);

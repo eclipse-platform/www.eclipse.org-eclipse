@@ -110,7 +110,6 @@ import org.eclipse.ui.views.tasklist.ITaskListResourceAdapter;
  * markerContentProvider will be used.
  * 
  * @since 3.4
- * 
  */
 public class ExtendedMarkersView extends ViewPart {
 
@@ -118,7 +117,6 @@ public class ExtendedMarkersView extends ViewPart {
 	 * MarkerSelectionEntry is a cache of the values for a marker entry.
 	 * 
 	 * @since 3.4
-	 * 
 	 */
 	final class MarkerSelectionEntry {
 
@@ -135,7 +133,6 @@ public class ExtendedMarkersView extends ViewPart {
 		/**
 		 * Return whether or not the entry is equivalent to the cached state.
 		 * 
-		 * @param item
 		 * @return boolean <code>true</code> if they are equivalent
 		 */
 		boolean isEquivalentTo(MarkerItem item) {
@@ -205,9 +202,6 @@ public class ExtendedMarkersView extends ViewPart {
 
 	/**
 	 * Open the supplied marker in an editor in page
-	 * 
-	 * @param marker
-	 * @param page
 	 */
 	public static void openMarkerInEditor(IMarker marker, IWorkbenchPage page) {
 		// optimization: if the active editor has the same input as
@@ -304,9 +298,6 @@ public class ExtendedMarkersView extends ViewPart {
 	/**
 	 * Add all concrete {@link MarkerItem} elements associated with the receiver
 	 * to allMarkers.
-	 * 
-	 * @param markerItem
-	 * @param allMarkers
 	 */
 	private void addAllConcreteItems(MarkerItem markerItem,
 			Collection allMarkers) {
@@ -324,8 +315,6 @@ public class ExtendedMarkersView extends ViewPart {
 
 	/**
 	 * Add the category to the list of expanded categories.
-	 * 
-	 * @param category
 	 */
 	void addExpandedCategory(MarkerCategory category) {
 		getCategoriesToExpand().add(category.getName());
@@ -335,7 +324,6 @@ public class ExtendedMarkersView extends ViewPart {
 	/**
 	 * Add all of the markers in markerItem recursively.
 	 * 
-	 * @param markerItem
 	 * @param allMarkers
 	 *            {@link Collection} of {@link IMarker}
 	 */
@@ -696,7 +684,6 @@ public class ExtendedMarkersView extends ViewPart {
 	 * Return the content provider for the receiver.
 	 * 
 	 * @return ITreeContentProvider
-	 * 
 	 */
 	private ITreeContentProvider getContentProvider() {
 		return new ITreeContentProvider() {
@@ -775,7 +762,6 @@ public class ExtendedMarkersView extends ViewPart {
 			/**
 			 * Get the children limited by the marker limits.
 			 * 
-			 * @param children
 			 * @return Object[]
 			 */
 			private Object[] getLimitedChildren(Object[] children) {
@@ -1167,8 +1153,6 @@ public class ExtendedMarkersView extends ViewPart {
 
 	/**
 	 * Log that a generator id is invalid.
-	 * 
-	 * @param id
 	 */
 	void logInvalidGenerator(String id) {
 		StatusManager.getManager().handle(
@@ -1180,7 +1164,6 @@ public class ExtendedMarkersView extends ViewPart {
 	/**
 	 * Return whether or not group is enabled.
 	 * 
-	 * @param group
 	 * @return boolean
 	 */
 	boolean isEnabled(MarkerFieldFilterGroup group) {
@@ -1199,7 +1182,6 @@ public class ExtendedMarkersView extends ViewPart {
 	/**
 	 * Return whether or not generator is the selected one.
 	 * 
-	 * @param generator
 	 * @return boolean
 	 */
 	boolean isShowing(MarkerContentGenerator generator) {
@@ -1252,8 +1234,6 @@ public class ExtendedMarkersView extends ViewPart {
 
 	/**
 	 * Remove the category from the list of expanded ones.
-	 * 
-	 * @param category
 	 */
 	void removeExpandedCategory(MarkerCategory category) {
 		getCategoriesToExpand().remove(category.getName());
@@ -1262,8 +1242,6 @@ public class ExtendedMarkersView extends ViewPart {
 
 	/**
 	 * Preserve the selection for re-selection after the next update.
-	 * 
-	 * @param selection
 	 */
 	void saveSelection(ISelection selection) {
 		preservedSelection.clear();
@@ -1313,8 +1291,6 @@ public class ExtendedMarkersView extends ViewPart {
 
 	/**
 	 * Set the category group for the receiver.
-	 * 
-	 * @param group
 	 */
 	void setCategoryGroup(MarkerGroup group) {
 		getCategoriesToExpand().clear();
@@ -1323,8 +1299,6 @@ public class ExtendedMarkersView extends ViewPart {
 
 	/**
 	 * Set the content generator for the receiver.
-	 * 
-	 * @param generator
 	 */
 	void setContentGenerator(MarkerContentGenerator generator) {
 		viewer.setSelection(new StructuredSelection());
@@ -1346,8 +1320,6 @@ public class ExtendedMarkersView extends ViewPart {
 
 	/**
 	 * Set the primary sort field
-	 * 
-	 * @param field
 	 */
 	void setPrimarySortField(MarkerField field) {
 		TreeColumn[] columns = viewer.getTree().getColumns();
@@ -1366,9 +1338,6 @@ public class ExtendedMarkersView extends ViewPart {
 
 	/**
 	 * Set the primary sort field to field and update the column.
-	 * 
-	 * @param field
-	 * @param column
 	 */
 	private void setPrimarySortField(MarkerField field, TreeColumn column) {
 		builder.setPrimarySortField(field);
@@ -1383,8 +1352,6 @@ public class ExtendedMarkersView extends ViewPart {
 
 	/**
 	 * Add group to the enabled filters.
-	 * 
-	 * @param group
 	 */
 	void toggleFilter(MarkerFieldFilterGroup group) {
 		builder.toggleFilter(group);
@@ -1402,7 +1369,6 @@ public class ExtendedMarkersView extends ViewPart {
 	/**
 	 * Update the direction indicator as column is now the primary column.
 	 * 
-	 * @param column
 	 * @field {@link MarkerField}
 	 */
 	void updateDirectionIndicator(TreeColumn column, MarkerField field) {
@@ -1447,9 +1413,6 @@ public class ExtendedMarkersView extends ViewPart {
 
 	/**
 	 * Set the selection of the receiver. reveal the item if reveal is true.
-	 * 
-	 * @param structuredSelection
-	 * @param reveal
 	 */
 	void setSelection(StructuredSelection structuredSelection, boolean reveal) {
 
@@ -1527,8 +1490,6 @@ public class ExtendedMarkersView extends ViewPart {
 
 	/**
 	 * Restore the expanded categories.
-	 * 
-	 * @param builder
 	 */
 	void reexpandCategories(final CachedMarkerBuilder builder) {
 		if (!getCategoriesToExpand().isEmpty() && builder.isShowingHierarchy()) {
@@ -1544,8 +1505,6 @@ public class ExtendedMarkersView extends ViewPart {
 
 	/**
 	 * Initialize the title based on the count
-	 * 
-	 * @param count
 	 */
 	void initializeTitle(String count) {
 		setPartName(NLS.bind(MarkerMessages.newViewTitle, new Object[] {

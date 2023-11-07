@@ -9,7 +9,6 @@ import org.eclipse.ui.ide.markers.compatibility.api.MarkerViewHandler;
  * configuration dialog
  * 
  * @since 3.4
- * 
  */
 public class ConfigureContentsDialogHandler extends MarkerViewHandler implements IHandler {
 

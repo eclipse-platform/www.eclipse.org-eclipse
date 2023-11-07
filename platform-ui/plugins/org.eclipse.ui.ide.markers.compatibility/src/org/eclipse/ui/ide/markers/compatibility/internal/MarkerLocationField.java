@@ -21,7 +21,6 @@ import org.eclipse.ui.ide.markers.compatibility.api.MarkerSupportConstants;
  * MarkerLocationField is the field for the location field.
  * 
  * @since 3.4
- * 
  */
 public class MarkerLocationField extends MarkerField {
 

@@ -27,7 +27,6 @@ import org.eclipse.swt.widgets.Control;
  * FilterConfigurationArea is the area that the user can configure a filter in.
  * 
  * @since 3.4
- * 
  */
 public abstract class FilterConfigurationArea {
 
@@ -37,15 +36,11 @@ public abstract class FilterConfigurationArea {
 
 	/**
 	 * Apply the current settings to the filter.
-	 * 
-	 * @param filter
 	 */
 	public abstract void apply(MarkerFieldFilter filter);
 
 	/**
 	 * Create the contents of the configuration area in the parent.
-	 * 
-	 * @param parent
 	 */
 	public abstract void createContents(Composite parent);
 
@@ -70,8 +65,6 @@ public abstract class FilterConfigurationArea {
 
 	/**
 	 * Initialise {@link FontMetrics} for the receiver.
-	 * 
-	 * @param control
 	 */
 	protected void initializeFontMetrics(Control control) {
 		GC gc = new GC(control);
@@ -83,15 +76,11 @@ public abstract class FilterConfigurationArea {
 
 	/**
 	 * Initialise the receiver using the filter.
-	 * 
-	 * @param filter
 	 */
 	public abstract void initialize(MarkerFieldFilter filter);
 	
 	/**
 	 * Set the markerField for the receiver
-	 * 
-	 * @param markerField
 	 */
 	public void setField(MarkerField markerField) {
 		field = markerField;
@@ -99,7 +88,6 @@ public abstract class FilterConfigurationArea {
 
 	/**
 	 * Set the standard button data for the button.
-	 * @param button
 	 */
 	protected void setButtonLayoutData(Button button) {
 		GridData data = new GridData(GridData.HORIZONTAL_ALIGN_FILL);

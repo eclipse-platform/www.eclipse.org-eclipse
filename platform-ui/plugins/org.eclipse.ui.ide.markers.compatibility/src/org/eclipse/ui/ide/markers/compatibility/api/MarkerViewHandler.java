@@ -30,7 +30,6 @@ import org.eclipse.ui.internal.ide.IDEWorkbenchPlugin;
  * MarkerViewHandler is the abstract class of the handlers for the 
  * {@link MarkerSupportView}
  * @since 3.4
- *
  */
 public abstract class MarkerViewHandler extends AbstractHandler {
 
@@ -38,7 +37,6 @@ public abstract class MarkerViewHandler extends AbstractHandler {
 
 	/**
 	 * Get the view this event occurred on.
-	 * @param event
 	 * @return {@link MarkerSupportView} or <code>null</code>
 	 */
 	public MarkerSupportView getView(ExecutionEvent event) {
@@ -51,10 +49,6 @@ public abstract class MarkerViewHandler extends AbstractHandler {
 	
 	/**
 	 * Execute the specified undoable operation
-	 * @param operation
-	 * @param title
-	 * @param monitor
-	 * @param uiInfo
 	 */
 	public void execute(IUndoableOperation operation, String title,
 			IProgressMonitor monitor, IAdaptable uiInfo) {
@@ -77,7 +71,6 @@ public abstract class MarkerViewHandler extends AbstractHandler {
 	 * Get the selected markers for the receiver in the view from
 	 * event. If the view cannot be found then return an empty
 	 * array.
-	 * @param event
 	 * @return {@link IMarker}[]
 	 */
 	public IMarker[] getSelectedMarkers(ExecutionEvent event){

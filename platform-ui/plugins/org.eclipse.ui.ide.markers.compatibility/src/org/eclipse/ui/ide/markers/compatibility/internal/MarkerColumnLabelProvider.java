@@ -32,7 +32,6 @@ import org.eclipse.ui.internal.ide.IDEWorkbenchPlugin;
  * The MarkerColumnLabelProvider is a label provider for an individual column.
  * 
  * @since 3.4
- * 
  */
 public class MarkerColumnLabelProvider extends ColumnLabelProvider {
 
@@ -43,7 +42,6 @@ public class MarkerColumnLabelProvider extends ColumnLabelProvider {
 	/**
 	 * Create a MarkerViewLabelProvider on a field.
 	 * 
-	 * @param field
 	 * @param decorate
 	 *            <code>true</code> if annotations are to be shown.
 	 */

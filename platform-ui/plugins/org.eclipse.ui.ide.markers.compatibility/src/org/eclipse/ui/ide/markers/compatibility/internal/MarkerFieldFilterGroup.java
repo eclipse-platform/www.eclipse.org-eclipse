@@ -50,7 +50,6 @@ import org.eclipse.ui.statushandlers.StatusManager;
  * MarkerFieldFilterGroup is the representation of a grouping of marker filters.
  * 
  * @since 3.4
- * 
  */
 class MarkerFieldFilterGroup {
 
@@ -60,7 +59,6 @@ class MarkerFieldFilterGroup {
 
 	/**
 	 * The attribute values for the scope
-	 * 
 	 */
 
 	private static final String ATTRIBUTE_SCOPE = "scope"; //$NON-NLS-1$
@@ -101,7 +99,6 @@ class MarkerFieldFilterGroup {
 	/**
 	 * Returns the set of projects that contain the given set of resources.
 	 * 
-	 * @param resources
 	 * @return IProject[]
 	 */
 	static IProject[] getProjects(IResource[] resources) {
@@ -159,9 +156,6 @@ class MarkerFieldFilterGroup {
 
 	/**
 	 * Create a new instance of the receiver.
-	 * 
-	 * @param configurationElement
-	 * @param markerBuilder
 	 */
 	public MarkerFieldFilterGroup(IConfigurationElement configurationElement,
 			CachedMarkerBuilder markerBuilder) {
@@ -181,8 +175,6 @@ class MarkerFieldFilterGroup {
 
 	/**
 	 * Add resources and thier children's paths to the working set paths.
-	 * 
-	 * @param resources
 	 */
 	private void addResourcesAndChildrenPaths(IResource[] resources) {
 		for (int idx = 0; idx < resources.length; idx++) {
@@ -273,7 +265,6 @@ class MarkerFieldFilterGroup {
 	 * Return the MarkerFieldFilter for field or <code>null</code> if there
 	 * isn't one.
 	 * 
-	 * @param field
 	 * @return MarkerFieldFilter
 	 */
 	public MarkerFieldFilter getFilter(MarkerField field) {
@@ -451,8 +442,6 @@ class MarkerFieldFilterGroup {
 
 	/**
 	 * Load the settings from the legacy child.
-	 * 
-	 * @param memento
 	 */
 	void legacyLoadSettings(IMemento memento) {
 
@@ -557,8 +546,6 @@ class MarkerFieldFilterGroup {
 
 	/**
 	 * Populate the clone and return true if successful.
-	 * 
-	 * @param clone
 	 */
 	protected boolean populateClone(MarkerFieldFilterGroup clone) {
 		clone.scope = this.scope;
@@ -614,8 +601,6 @@ class MarkerFieldFilterGroup {
 
 	/**
 	 * Save the settings for the receiver in the memento.
-	 * 
-	 * @param memento
 	 */
 	void saveFilterSettings(IMemento memento) {
 		memento.putString(TAG_ENABLED, String.valueOf(enabled));
@@ -643,7 +628,6 @@ class MarkerFieldFilterGroup {
 	/**
 	 * Return whether or not this IMarker is being shown.
 	 * 
-	 * @param marker
 	 * @return <code>true</code> if it is being shown
 	 */
 	public boolean select(IMarker marker) {
@@ -677,8 +661,6 @@ class MarkerFieldFilterGroup {
 
 	/**
 	 * Set the name of the receiver.
-	 * 
-	 * @param newName
 	 */
 	public void setName(String newName) {
 		name = newName;
@@ -687,8 +669,6 @@ class MarkerFieldFilterGroup {
 
 	/**
 	 * Set the scope of the receiver.
-	 * 
-	 * @param newScope
 	 */
 	public void setScope(int newScope) {
 		scope = newScope;
@@ -696,8 +676,6 @@ class MarkerFieldFilterGroup {
 
 	/**
 	 * Set the working set of the receiver.
-	 * 
-	 * @param workingSet
 	 */
 	void setWorkingSet(IWorkingSet workingSet) {
 		this.workingSet = workingSet;

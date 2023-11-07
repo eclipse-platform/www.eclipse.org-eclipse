@@ -47,7 +47,6 @@ import org.eclipse.ui.ide.markers.compatibility.api.internal.MarkerType;
  * selection for the filter.
  * 
  * @since 3.4
- * 
  */
 public class TypesConfigurationArea extends GroupFilterConfigurationArea {
 
@@ -58,8 +57,6 @@ public class TypesConfigurationArea extends GroupFilterConfigurationArea {
 
 		/**
 		 * Create a new instance of the receiver.
-		 * 
-		 * @param categoryName
 		 */
 		public CategoryEntry(String categoryName) {
 			name = categoryName;
@@ -67,8 +64,6 @@ public class TypesConfigurationArea extends GroupFilterConfigurationArea {
 
 		/**
 		 * Add the node to the receiver.
-		 * 
-		 * @param node
 		 */
 		public void add(MarkerTypeEntry node) {
 			children.add(node);
@@ -137,8 +132,6 @@ public class TypesConfigurationArea extends GroupFilterConfigurationArea {
 
 		/**
 		 * Create an instance of the receiver.
-		 * 
-		 * @param markerType
 		 */
 		public MarkerTypeEntry(MarkerType markerType) {
 			this.markerType = markerType;
@@ -204,8 +197,6 @@ public class TypesConfigurationArea extends GroupFilterConfigurationArea {
 
 		/**
 		 * Set the category of the receiver.
-		 * 
-		 * @param categoryEntry
 		 */
 		public void setParent(CategoryEntry categoryEntry) {
 			category = categoryEntry;
@@ -218,9 +209,6 @@ public class TypesConfigurationArea extends GroupFilterConfigurationArea {
 
 		/**
 		 * Add any elements that contain a type in selectedTypes tp entries.
-		 * 
-		 * @param selectedTypes
-		 * @param entries
 		 */
 		public abstract void addElementsMatching(Collection selectedTypes,
 				Collection entries);
@@ -354,9 +342,6 @@ public class TypesConfigurationArea extends GroupFilterConfigurationArea {
 			/**
 			 * Set the check state of the children of element to
 			 * <code>true</code>.
-			 * 
-			 * @param element
-			 * @param checked
 			 */
 			private void setChildrenChecked(Object element, boolean checked) {
 
@@ -371,9 +356,6 @@ public class TypesConfigurationArea extends GroupFilterConfigurationArea {
 
 			/**
 			 * Update the parent check state based on the state of the element
-			 * 
-			 * @param element
-			 * @param checked
 			 */
 			private void setParentCheckState(Object element, boolean checked) {
 
@@ -421,7 +403,6 @@ public class TypesConfigurationArea extends GroupFilterConfigurationArea {
 	/**
 	 * Get the listener for select all and deselect all.
 	 * 
-	 * @param typesContentProvider
 	 * @param checked
 	 *            the check state to set
 	 * @return SelectionListener
@@ -458,7 +439,6 @@ public class TypesConfigurationArea extends GroupFilterConfigurationArea {
 	/**
 	 * Return the elements for MarkerFieldFilterGroup groip.
 	 * 
-	 * @param group
 	 * @return List of TypesEntry
 	 */
 	protected List elementsForGroup(MarkerFieldFilterGroup group) {
@@ -497,10 +477,6 @@ public class TypesConfigurationArea extends GroupFilterConfigurationArea {
 	/**
 	 * Find the type entries for group that correspond to it's current selection
 	 * and add them to the checked or grey checked lists as appropriate.
-	 * 
-	 * @param group
-	 * @param entries
-	 * @param greyEntries
 	 */
 	private void findTypeEntries(MarkerFieldFilterGroup group,
 			Collection entries, Collection greyEntries) {

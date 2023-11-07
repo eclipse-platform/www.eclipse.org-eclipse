@@ -67,7 +67,6 @@ import org.eclipse.ui.statushandlers.StatusManager;
  * QuickFixPage is a page for the quick fixes of a marker.
  * 
  * @since 3.4
- * 
  */
 public class QuickFixPage extends WizardPage {
 
@@ -163,7 +162,6 @@ public class QuickFixPage extends WizardPage {
 	/**
 	 * Create the table buttons for the receiver.
 	 * 
-	 * @param control
 	 * @return {@link Composite}
 	 */
 	private Composite createTableButtons(Composite control) {
@@ -212,9 +210,6 @@ public class QuickFixPage extends WizardPage {
 		return buttonComposite;
 	}
 
-	/**
-	 * @param control
-	 */
 	private void createResolutionsList(Composite control) {
 		resolutionsList = new ListViewer(control, SWT.BORDER | SWT.SINGLE
 				| SWT.V_SCROLL);
@@ -301,8 +296,6 @@ public class QuickFixPage extends WizardPage {
 
 	/**
 	 * Create the table that shows the markers.
-	 * 
-	 * @param control
 	 */
 	private void createMarkerTable(Composite control) {
 		markersTable = CheckboxTableViewer.newCheckList(control, SWT.BORDER
@@ -509,12 +502,6 @@ public class QuickFixPage extends WizardPage {
 	/**
 	 * Finish has been pressed. Process the resolutions. monitor the monitor to
 	 * report to.
-	 */
-	/**
-	 * @param monitor
-	 */
-	/**
-	 * @param monitor
 	 */
 	void performFinish(IProgressMonitor monitor) {
 

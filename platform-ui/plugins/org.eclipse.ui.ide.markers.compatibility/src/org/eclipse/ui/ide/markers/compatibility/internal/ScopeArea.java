@@ -31,7 +31,6 @@ import org.eclipse.ui.ide.markers.compatibility.api.internal.MarkerMessages;
  * filter.
  * 
  * @since 3.4
- * 
  */
 class ScopeArea extends GroupFilterConfigurationArea {
 

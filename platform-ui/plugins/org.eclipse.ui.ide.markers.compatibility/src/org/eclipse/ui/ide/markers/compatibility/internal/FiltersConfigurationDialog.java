@@ -60,7 +60,6 @@ import org.eclipse.ui.internal.ide.IDEWorkbenchPlugin;
  * FiltersConfigurationDialog is the dialog for configuring the filters for the
  * 
  * @since 3.3
- * 
  */
 public class FiltersConfigurationDialog extends Dialog {
 
@@ -89,7 +88,6 @@ public class FiltersConfigurationDialog extends Dialog {
 	/**
 	 * Create a new instance of the receiver on builder.
 	 * 
-	 * @param parentShell
 	 * @param builder
 	 *            The {@link CachedMarkerBuilder} to apply this to
 	 */
@@ -177,9 +175,6 @@ public class FiltersConfigurationDialog extends Dialog {
 	/**
 	 * Create a field area in the form for the FilterConfigurationArea
 	 * 
-	 * @param toolkit
-	 * @param form
-	 * @param area
 	 * @param expand
 	 *            <code>true</code> if the area should be expanded by default
 	 */
@@ -226,8 +221,6 @@ public class FiltersConfigurationDialog extends Dialog {
 
 	/**
 	 * Create the area for selecting the filters and enabling/disabling them.
-	 * 
-	 * @param top
 	 */
 	private void createFilterSelectionArea(Composite top) {
 
@@ -416,8 +409,6 @@ public class FiltersConfigurationDialog extends Dialog {
 
 	/**
 	 * Create a new filter called newName
-	 * 
-	 * @param newName
 	 */
 	private void createNewFilter(String newName) {
 		MarkerFieldFilterGroup group = new MarkerFieldFilterGroup(null, builder);
@@ -492,7 +483,6 @@ public class FiltersConfigurationDialog extends Dialog {
 	/**
 	 * Make a working copy of the groups.
 	 * 
-	 * @param groups
 	 * @return Collection of MarkerFieldFilterGroup
 	 */
 	private Collection makeWorkingCopy(Collection groups) {
@@ -577,8 +567,6 @@ public class FiltersConfigurationDialog extends Dialog {
 
 	/**
 	 * Remove the filters in selection.
-	 * 
-	 * @param selection
 	 */
 	private void removeFilters(ISelection selection) {
 		filterGroups.remove(((IStructuredSelection) selection)
@@ -599,9 +587,6 @@ public class FiltersConfigurationDialog extends Dialog {
 
 	/**
 	 * Set the control and all of it's visibility state to visible.
-	 * 
-	 * @param visible
-	 * @param control
 	 */
 	private void setEnabled(boolean visible, Control control) {
 		control.setEnabled(visible);
@@ -622,8 +607,6 @@ public class FiltersConfigurationDialog extends Dialog {
 
 	/**
 	 * Set the filter that is being worked on.
-	 * 
-	 * @param markerFieldFilterGroup
 	 */
 	private void setSelectedFilter(MarkerFieldFilterGroup markerFieldFilterGroup) {
 

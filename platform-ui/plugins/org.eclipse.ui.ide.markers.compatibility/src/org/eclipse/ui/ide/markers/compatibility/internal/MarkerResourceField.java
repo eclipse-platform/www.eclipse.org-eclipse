@@ -20,7 +20,6 @@ import org.eclipse.ui.ide.markers.compatibility.api.MarkerViewUtil;
  * MarkerResourceField is the field that specifies the resource column.
  * 
  * @since 3.4
- * 
  */
 public class MarkerResourceField extends MarkerField {
 
