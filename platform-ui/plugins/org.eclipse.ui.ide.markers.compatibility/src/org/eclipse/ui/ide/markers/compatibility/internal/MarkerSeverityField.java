@@ -21,7 +21,6 @@ import org.eclipse.ui.ide.markers.compatibility.api.internal.MarkerMessages;
  * MarkerSeverityField is the field for showing severity categories.
  * 
  * @since 3.4
- * 
  */
 public class MarkerSeverityField extends MarkerField {
 

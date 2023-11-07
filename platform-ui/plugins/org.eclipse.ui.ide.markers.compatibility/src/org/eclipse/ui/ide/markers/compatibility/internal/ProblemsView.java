@@ -18,7 +18,6 @@ import org.eclipse.ui.ide.markers.compatibility.api.internal.MarkerSupportRegist
  * The ProblemsView is the view supplied by the ide to show
  * problems.
  * @since 3.4
- *
  */
 public class ProblemsView extends MarkerSupportView {
 

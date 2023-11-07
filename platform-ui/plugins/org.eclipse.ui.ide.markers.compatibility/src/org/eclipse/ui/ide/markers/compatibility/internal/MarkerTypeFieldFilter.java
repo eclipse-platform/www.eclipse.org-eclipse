@@ -33,7 +33,6 @@ import org.eclipse.ui.ide.markers.compatibility.api.internal.ProblemFilter;
  * MarkerTypeFieldFilter is the field filter for filtering on types.
  * 
  * @since 3.4
- * 
  */
 public class MarkerTypeFieldFilter extends CompatibilityFieldFilter {
 
@@ -176,8 +175,6 @@ public class MarkerTypeFieldFilter extends CompatibilityFieldFilter {
 
 	/**
 	 * Set the set of all types to markerTypes. Select all of them by default.
-	 * 
-	 * @param markerTypes
 	 */
 	public void setAndSelectAllTypes(Collection markerTypes) {
 		allTypes = new HashMap();

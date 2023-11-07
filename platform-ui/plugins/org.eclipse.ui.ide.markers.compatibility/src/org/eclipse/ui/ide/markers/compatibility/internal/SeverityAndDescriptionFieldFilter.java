@@ -23,7 +23,6 @@ import org.eclipse.ui.ide.markers.compatibility.api.internal.ProblemFilter;
  * description field.
  * 
  * @since 3.4
- * 
  */
 public class SeverityAndDescriptionFieldFilter extends DescriptionFieldFilter {
 

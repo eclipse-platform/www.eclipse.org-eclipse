@@ -22,7 +22,6 @@ public interface TestBedComponent {
 	 * This method should create all controls on the given composite to interact
 	 * with the user. First created control should be new composite.
 	 * 
-	 * @param parent
 	 * @return The first composite.
 	 */
 	public Composite createComposite(Composite parent);

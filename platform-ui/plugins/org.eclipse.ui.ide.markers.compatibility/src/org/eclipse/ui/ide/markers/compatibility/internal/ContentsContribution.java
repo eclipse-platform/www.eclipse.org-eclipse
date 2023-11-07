@@ -19,7 +19,6 @@ import org.eclipse.ui.ide.markers.compatibility.api.internal.MarkerSupportRegist
  * contribution for the {@link ExtendedMarkersView}.
  * 
  * @since 3.4
- * 
  */
 public class ContentsContribution extends MarkersContribution {
 
@@ -72,8 +71,6 @@ public class ContentsContribution extends MarkersContribution {
 				/**
 				 * Create a menu listener for the generator and the view.
 				 * 
-				 * @param generator
-				 * @param view
 				 * @return Listener
 				 */
 				private Listener getMenuItemListener(

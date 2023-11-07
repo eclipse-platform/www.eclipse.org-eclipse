@@ -27,7 +27,6 @@ import org.eclipse.ui.ide.markers.compatibility.api.internal.MarkerMessages;
  * which field will become the primary sort field.
  * 
  * @since 3.4
- * 
  */
 public class SortFieldContribution extends MarkersContribution {
 
@@ -38,9 +37,6 @@ public class SortFieldContribution extends MarkersContribution {
 		super();
 	}
 
-	/**
-	 * @param id
-	 */
 	public SortFieldContribution(String id) {
 		super(id);
 	}
@@ -111,7 +107,6 @@ public class SortFieldContribution extends MarkersContribution {
 	/**
 	 * Return the IContributionItem for field.
 	 * 
-	 * @param field
 	 * @return IContributionItem
 	 */
 	private IContributionItem getContributionItem(final MarkerField field) {
@@ -141,8 +136,6 @@ public class SortFieldContribution extends MarkersContribution {
 			/**
 			 * Return the menu item listener for selection of a field.
 			 * 
-			 * @param field
-			 * @param view
 			 * @return Listener
 			 */
 			private Listener getMenuItemListener(final MarkerField field,

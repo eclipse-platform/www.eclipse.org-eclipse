@@ -18,7 +18,6 @@ import org.eclipse.ui.ide.markers.compatibility.api.internal.ProblemFilter;
  * {@link ProblemFilter}.
  * 
  * @since 3.4
- * 
  */
 public class CompatibilityMarkerFieldFilterGroup extends MarkerFieldFilterGroup {
 
@@ -26,9 +25,6 @@ public class CompatibilityMarkerFieldFilterGroup extends MarkerFieldFilterGroup 
 
 	/**
 	 * Create a new instance of the receiver based on the ProblemFilter.
-	 * 
-	 * @param filter
-	 * @param cachedMarkerBuilder
 	 */
 	public CompatibilityMarkerFieldFilterGroup(ProblemFilter filter,
 			CachedMarkerBuilder cachedMarkerBuilder) {

@@ -32,7 +32,6 @@ import org.eclipse.ui.internal.util.BundleUtility;
  * providers for columns in a Markers View.
  * 
  * @since 3.4
- * 
  */
 public abstract class MarkerField {
 
@@ -44,8 +43,6 @@ public abstract class MarkerField {
 	/**
 	 * Compare item1 and item2 for sorting purposes.
 	 * 
-	 * @param item1
-	 * @param item2
 	 * @return Either:
 	 *         <li>a negative number if the value of item1 is less than the
 	 *         value of item2 for this field.
@@ -164,7 +161,6 @@ public abstract class MarkerField {
 	/**
 	 * Determine the average width of font used by the control.
 	 * 
-	 * @param control
 	 * @return int
 	 */
 	public final int getFontWidth(Control control) {
@@ -187,7 +183,6 @@ public abstract class MarkerField {
 	/**
 	 * Return the image for the receiver. By default return <code>null</code>.
 	 * 
-	 * @param item
 	 * @return The image value of the object for this particular field to be
 	 *         displayed to the user or <code>null<code>.
 	 */
@@ -198,7 +193,6 @@ public abstract class MarkerField {
 	/**
 	 * Return the value for a marker.
 	 * 
-	 * @param marker
 	 * @return String
 	 */
 	public String getMarkerValue(IMarker marker) {
@@ -208,7 +202,6 @@ public abstract class MarkerField {
 	/**
 	 * Get the severity of the element.
 	 * 
-	 * @param element
 	 * @return int
 	 * @see IMarker#SEVERITY_ERROR
 	 * @see IMarker#SEVERITY_WARNING
@@ -221,7 +214,6 @@ public abstract class MarkerField {
 	}
 
 	/**
-	 * @param item
 	 * @return The String value of the object for this particular field to be
 	 *         displayed to the user.
 	 */
@@ -230,8 +222,6 @@ public abstract class MarkerField {
 
 	/**
 	 * Set the configuration element used by the receiver.
-	 * 
-	 * @param element
 	 */
 	public final void setConfigurationElement(IConfigurationElement element) {
 		configurationElement = element;

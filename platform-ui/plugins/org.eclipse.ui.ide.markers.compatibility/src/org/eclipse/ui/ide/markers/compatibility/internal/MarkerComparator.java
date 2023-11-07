@@ -24,7 +24,6 @@ import org.eclipse.ui.ide.markers.compatibility.api.MarkerItem;
  * a specific content provider.
  * 
  * @since 3.4
- * 
  */
 class MarkerComparator implements Comparator {
 
@@ -62,8 +61,6 @@ class MarkerComparator implements Comparator {
 	/**
 	 * Compare the two objects to see if they have the same category value
 	 * 
-	 * @param object1
-	 * @param object2
 	 * @return int
 	 * @see Comparable#compareTo(Object)
 	 */
@@ -107,8 +104,6 @@ class MarkerComparator implements Comparator {
 	/**
 	 * Switch the priority of the field from ascending to descending or vice
 	 * versa.
-	 * 
-	 * @param field
 	 */
 	public void reversePriority(MarkerField field) {
 		if (descendingFields.remove(field))
@@ -119,8 +114,6 @@ class MarkerComparator implements Comparator {
 
 	/**
 	 * Set field to be the first sort field.
-	 * 
-	 * @param field
 	 */
 	void setPrimarySortField(MarkerField field) {
 		if (fields[0] == field) {
@@ -144,8 +137,6 @@ class MarkerComparator implements Comparator {
 
 	/**
 	 * Restore the receiver's state from memento.
-	 * 
-	 * @param memento
 	 */
 	void restore(IMemento memento) {
 		if(memento == null)
@@ -176,7 +167,6 @@ class MarkerComparator implements Comparator {
 
 	/**
 	 * Save the current sort field in the memento.
-	 * @param memento
 	 */
 	void saveState(IMemento memento) {
 		memento.putString(PRIMARY_SORT_FIELD_TAG, fields[0].getId());

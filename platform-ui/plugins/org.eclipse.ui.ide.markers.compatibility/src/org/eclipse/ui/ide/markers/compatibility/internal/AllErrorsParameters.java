@@ -20,7 +20,6 @@ import org.eclipse.ui.ide.markers.compatibility.api.FiltersContributionParameter
  * AllErrorsParameters is the parameters for the error severity type.
  * 
  * @since 3.4
- * 
  */
 public class AllErrorsParameters extends FiltersContributionParameters {
 

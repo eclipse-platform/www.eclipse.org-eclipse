@@ -32,7 +32,6 @@ import org.eclipse.ui.internal.ide.IDEWorkbenchPlugin;
  * MarkersPreferencePage is the preference page for the markers.
  * 
  * @since 3.4
- * 
  */
 public class MarkersPreferencePage extends PreferencePage implements
 		IWorkbenchPreferencePage {
@@ -52,8 +51,6 @@ public class MarkersPreferencePage extends PreferencePage implements
 
 	/**
 	 * Create a new instance of the receiver.
-	 * 
-	 * @param title
 	 */
 	public MarkersPreferencePage(String title) {
 		super(title);
@@ -61,9 +58,6 @@ public class MarkersPreferencePage extends PreferencePage implements
 
 	/**
 	 * Create a new instance of the receiver.
-	 * 
-	 * @param title
-	 * @param image
 	 */
 	public MarkersPreferencePage(String title, ImageDescriptor image) {
 		super(title, image);
@@ -133,7 +127,6 @@ public class MarkersPreferencePage extends PreferencePage implements
 	 * 
 	 * @param control
 	 *            The parent of the editor
-	 * @param checked
 	 */
 	private void setLimitEditorEnablement(Composite control, boolean checked) {
 		limitEditor.setEnabled(checked, control);

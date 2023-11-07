@@ -17,7 +17,6 @@ import org.eclipse.ui.ide.IDE;
  * QuickFixPropertyTester is the property tester for the quick fix object.
  * 
  * @since 3.4
- * 
  */
 public class QuickFixPropertyTester extends PropertyTester {
 

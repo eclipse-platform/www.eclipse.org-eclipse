@@ -44,7 +44,6 @@ import com.ibm.icu.text.Collator;
  * functionality used by multiple classes.
  * 
  * @since 3.4
- * 
  */
 public class MarkerSupportInternalUtilities {
 
@@ -106,7 +105,6 @@ public class MarkerSupportInternalUtilities {
 	/**
 	 * Create the image at the supplied path.
 	 * 
-	 * @param completeImagePath
 	 * @return Image or <code>null</code>.
 	 */
 	public static Image createImage(String completeImagePath) {
@@ -121,7 +119,6 @@ public class MarkerSupportInternalUtilities {
 	/**
 	 * Get the IDE image at path.
 	 * 
-	 * @param constantName
 	 * @return Image
 	 */
 	private static Image getIDEImage(String constantName) {
@@ -134,7 +131,6 @@ public class MarkerSupportInternalUtilities {
 	/**
 	 * Get the image for the supplied severity
 	 * 
-	 * @param severity
 	 * @return {@link Image}
 	 */
 	public static Image getSeverityImage(int severity) {
@@ -156,8 +152,6 @@ public class MarkerSupportInternalUtilities {
 	/**
 	 * Get the MarkerFieldFilter associated with the filter in group.
 	 * 
-	 * @param group
-	 * @param area
 	 * @return MarkerFieldFilter or <code>null</code>
 	 */
 	public final MarkerFieldFilter getFilter(MarkerFieldFilterGroup group,
@@ -168,7 +162,6 @@ public class MarkerSupportInternalUtilities {
 	/**
 	 * Return a StatusAdapter for the error
 	 * 
-	 * @param exception
 	 * @return StatusAdapter
 	 */
 	public static StatusAdapter errorFor(Throwable exception) {
@@ -199,8 +192,6 @@ public class MarkerSupportInternalUtilities {
 	/**
 	 * Show the marker in view if possible.
 	 * 
-	 * @param view
-	 * @param marker
 	 * @return <code>true</code> if the marker is shown
 	 */
 	public static boolean showMarker(IViewPart view, IMarker marker) {
@@ -216,8 +207,6 @@ public class MarkerSupportInternalUtilities {
 
 	/**
 	 * Handle the core exception.
-	 * 
-	 * @param exception
 	 */
 	public static void handle(CoreException exception) {
 		// Only log if in debug mode

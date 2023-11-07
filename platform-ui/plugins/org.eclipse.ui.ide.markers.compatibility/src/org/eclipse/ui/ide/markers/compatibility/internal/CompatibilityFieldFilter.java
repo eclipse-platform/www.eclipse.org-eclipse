@@ -19,19 +19,16 @@ import org.eclipse.ui.ide.markers.compatibility.api.internal.ProblemFilter;
  * CompatibilityFieldFilter is the abstract superclass of the internal filters that support
  * the compatibility filter.
  * @since 3.4
- *
  */
 public abstract class CompatibilityFieldFilter extends MarkerFieldFilter {
 
 	/**
 	 * Load the settings in the legacy format for the receiver.
-	 * @param memento
 	 */
 	public abstract void loadLegacySettings(IMemento memento);
 
 	/**
 	 * Initialize from a legacy problem filter
-	 * @param problemFilter
 	 */
 	public abstract void initialize(ProblemFilter problemFilter);
 }

@@ -62,7 +62,6 @@ public class ExampleMarkerField extends MarkerField {
 	/**
 	 * Get the image for the receiver.
 	 * 
-	 * @param item
 	 * @return Image
 	 */
 	private Image getImage(MarkerItem item) {

@@ -15,7 +15,6 @@ package org.eclipse.ui.ide.markers.compatibility.api;
  * MarkerSupportConstants is a static class that supplies commonly used constants.
  * 
  * @since 3.4
- *
  */
 public class MarkerSupportConstants {
 	

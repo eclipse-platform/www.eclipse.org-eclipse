@@ -20,7 +20,6 @@ import com.ibm.icu.text.Collator;
 /**
  * The MarkerItem class is the class that represents the objects displayed in
  * the ExtendedMarkersView.
- * 
  */
 public abstract class MarkerItem {
 
@@ -29,8 +28,6 @@ public abstract class MarkerItem {
 	/**
 	 * Return the boolean associated with attributeName or defaultValue if
 	 * it is not found.
-	 * @param attribute
-	 * @param defaultValue
 	 * @return <code>boolean</code>
 	 */
 	public boolean getAttributeValue(String attribute, boolean defaultValue) {
@@ -42,7 +39,6 @@ public abstract class MarkerItem {
 	/**
 	 * Get the value of the attribute in the enclosed marker.
 	 * 
-	 * @param attribute
 	 * @param defaultValue
 	 *            the defaultValue if the value is not set
 	 * @return int
@@ -56,7 +52,6 @@ public abstract class MarkerItem {
 	/**
 	 * Get the String value of the attribute in the enclosed marker.
 	 * 
-	 * @param attribute
 	 * @param defaultValue
 	 *            the defaultValue if the value is not set
 	 * @return String
@@ -79,7 +74,6 @@ public abstract class MarkerItem {
 	/**
 	 * Get the CollationKey for the string attribute.
 	 * 
-	 * @param attribute
 	 * @param defaultValue
 	 *            the defaultValue if the value is not set
 	 * @return CollationKey

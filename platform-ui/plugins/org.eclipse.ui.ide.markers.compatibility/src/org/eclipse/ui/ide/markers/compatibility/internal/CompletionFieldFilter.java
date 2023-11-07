@@ -21,7 +21,6 @@ import org.eclipse.ui.ide.markers.compatibility.api.internal.TaskFilter;
  * CompletionFieldFilter is the field filter for marker fields.
  * 
  * @since 3.4
- * 
  */
 public class CompletionFieldFilter extends CompatibilityFieldFilter {
 

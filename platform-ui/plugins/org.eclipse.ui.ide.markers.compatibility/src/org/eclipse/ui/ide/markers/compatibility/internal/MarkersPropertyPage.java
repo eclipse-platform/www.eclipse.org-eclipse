@@ -47,7 +47,6 @@ import org.eclipse.ui.statushandlers.StatusManager;
  * MarkersPropertyPage is the property page for a marker.
  * 
  * @since 3.4
- * 
  */
 public class MarkersPropertyPage extends PropertyPage implements
 		IWorkbenchPropertyPage {
@@ -117,8 +116,6 @@ public class MarkersPropertyPage extends PropertyPage implements
 
 	/**
 	 * Method createCreationTimeArea.
-	 * 
-	 * @param parent
 	 */
 	private void createCreationTimeArea(Composite parent) {
 		Label label = new Label(parent, SWT.NONE);
@@ -165,8 +162,6 @@ public class MarkersPropertyPage extends PropertyPage implements
 
 	/**
 	 * Create the attributes area for editing a task
-	 * 
-	 * @param parent
 	 */
 	private void createTaskAttributes(Composite parent) {
 		createSeperator(parent);
@@ -213,8 +208,6 @@ public class MarkersPropertyPage extends PropertyPage implements
 
 	/**
 	 * Create the attributes area for problems
-	 * 
-	 * @param parent
 	 */
 	private void createProblemAttributes(Composite parent) {
 		createSeperator(parent);

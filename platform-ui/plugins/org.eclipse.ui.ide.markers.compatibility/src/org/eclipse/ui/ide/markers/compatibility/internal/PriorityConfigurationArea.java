@@ -15,7 +15,6 @@ import org.eclipse.ui.ide.markers.compatibility.api.internal.MarkerMessages;
  * priority.
  * 
  * @since 3.4
- * 
  */
 public class PriorityConfigurationArea extends FilterConfigurationArea {
 
@@ -96,9 +95,6 @@ public class PriorityConfigurationArea extends FilterConfigurationArea {
 
 	/**
 	 * Update he priorities set based on the constant and the selection value.
-	 * 
-	 * @param constant
-	 * @param enabled
 	 */
 	void updatePriorities(int constant, boolean enabled) {
 

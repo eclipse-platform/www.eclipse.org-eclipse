@@ -19,7 +19,6 @@ import org.eclipse.ui.ide.markers.compatibility.api.MarkerItem;
  * MarkerTypeField is the field that defines the marker type.
  * 
  * @since 3.3
- * 
  */
 public class MarkerTypeField extends MarkerField {
 

@@ -4,7 +4,6 @@ package org.eclipse.ui.ide.markers.compatibility.ported;
 /**
  * MarkersInternalPreferences is the port of IDEInternalPreferences for standalone 
  * marker support.
- *
  */
 public class MarkersInternalPreferences {
 	

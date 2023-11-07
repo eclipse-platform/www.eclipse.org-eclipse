@@ -18,7 +18,6 @@ import org.eclipse.ui.IMemento;
 /**
  * A MarkerFieldFilter is a filter on a particular marker field.
  * @since 3.4
- *
  */
 public abstract class MarkerFieldFilter {
 	
@@ -26,14 +25,12 @@ public abstract class MarkerFieldFilter {
 
 	/**
 	 * Return whether or not marker should be filtered by the receiver.
-	 * @param item
 	 * @return boolean <code>true</code> if the marker should be shown.
 	 */
 	public abstract boolean select(MarkerItem item);
 	
 	/**
 	 * Initialise the receiver with the values in the values Map.
-	 * @param values
 	 * @see FiltersContributionParameters
 	 */
 	public void initialize(Map values){
@@ -42,7 +39,6 @@ public abstract class MarkerFieldFilter {
 	
 	/**
 	 * Populate the working copy with the copy of whatever fields are required.
-	 * @param copy
 	 */
 	public void populateWorkingCopy(MarkerFieldFilter copy){
 		copy.field = this.field;
@@ -50,7 +46,6 @@ public abstract class MarkerFieldFilter {
 
 	/**
 	 * Set the field for the receiver.
-	 * @param markerField
 	 */
 	public final void setField(MarkerField markerField) {
 		field = markerField;
@@ -76,14 +71,12 @@ public abstract class MarkerFieldFilter {
 	/**
 	 * Save any of the relevant state for the receiver in the memento
 	 * so that it can be used to restore the user settings.
-	 * @param memento
 	 * @see #loadSettings(IMemento)
 	 */
 	public abstract void saveSettings(IMemento memento) ;
 
 	/**
 	 * Load any settings for the receiver from the memento.
-	 * @param memento
 	 * @see #saveSettings(IMemento)
 	 */
 	public abstract void loadSettings(IMemento memento) ;

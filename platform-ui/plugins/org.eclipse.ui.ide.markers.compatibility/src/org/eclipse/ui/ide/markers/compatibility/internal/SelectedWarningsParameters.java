@@ -21,7 +21,6 @@ import org.eclipse.ui.ide.markers.compatibility.api.FiltersContributionParameter
  * SelectedWarningsParameters is the parameters for warnings.
  * 
  * @since 3.4
- * 
  */
 public class SelectedWarningsParameters extends FiltersContributionParameters {
 

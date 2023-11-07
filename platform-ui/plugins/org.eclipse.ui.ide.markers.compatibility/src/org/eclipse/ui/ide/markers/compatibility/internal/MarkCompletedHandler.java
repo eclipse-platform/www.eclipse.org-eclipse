@@ -25,7 +25,6 @@ import org.eclipse.ui.ide.undo.UpdateMarkersOperation;
  * completed.
  * 
  * @since 3.4
- * 
  */
 public class MarkCompletedHandler extends MarkerViewHandler {
 

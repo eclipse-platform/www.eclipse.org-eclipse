@@ -34,8 +34,6 @@ class MarkerCategory extends MarkerItem {
 	 * Create a new instance of the receiver that has the markers between
 	 * startIndex and endIndex showing.
 	 * 
-	 * @param cachedMarkerBuilder
-	 * @param startIndex
 	 * @param endIndex
 	 *            the builder used to generate the children lazily.
 	 */

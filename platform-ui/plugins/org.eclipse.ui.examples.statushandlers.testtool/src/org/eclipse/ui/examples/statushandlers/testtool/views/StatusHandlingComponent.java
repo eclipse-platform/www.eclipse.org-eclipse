@@ -329,9 +329,6 @@ public class StatusHandlingComponent implements TestBedComponent {
 			return title;
 		}
 
-		/**
-		 * 
-		 */
 		public void execute() {
 			// see SampleStatusHandler
 			// hints and statuses could be easily modified there

@@ -34,7 +34,6 @@ import org.eclipse.ui.preferences.ViewSettingsDialog;
  * MarkerPreferencesDialog is the dialog for showing marker preferences.
  * 
  * @since 3.4
- * 
  */
 public class MarkerPreferencesDialog extends ViewSettingsDialog {
 
@@ -48,8 +47,6 @@ public class MarkerPreferencesDialog extends ViewSettingsDialog {
 
 	/**
 	 * Create a new instance of the receiver.
-	 * 
-	 * @param parentShell
 	 */
 	public MarkerPreferencesDialog(Shell parentShell) {
 		super(parentShell);
@@ -133,8 +130,6 @@ public class MarkerPreferencesDialog extends ViewSettingsDialog {
 
 	/**
 	 * Set the enabled state of the OK button by state.
-	 * 
-	 * @param state
 	 */
 	protected void setValid(boolean state, String errorMessage) {
 		Button okButton = getButton(IDialogConstants.OK_ID);
@@ -156,7 +151,6 @@ public class MarkerPreferencesDialog extends ViewSettingsDialog {
 	 * 
 	 * @param control
 	 *            The parent of the editor
-	 * @param checked
 	 */
 	private void setLimitEditorEnablement(Composite control, boolean checked) {
 		limitEditor.setEnabled(checked, control);

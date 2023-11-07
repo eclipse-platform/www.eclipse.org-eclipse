@@ -144,9 +144,6 @@ public class StatusHandlingRunnable extends TestBedRunnable {
 	private static final String ACTION = "action"; //$NON-NLS-1$
 	List items;
 
-	/**
-	 * @param statusItems
-	 */
 	public StatusHandlingRunnable(List statusItems) {
 		items = statusItems;
 	}

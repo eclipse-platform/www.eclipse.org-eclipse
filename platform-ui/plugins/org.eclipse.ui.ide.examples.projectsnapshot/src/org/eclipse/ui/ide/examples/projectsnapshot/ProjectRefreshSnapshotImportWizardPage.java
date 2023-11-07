@@ -105,8 +105,6 @@ public class ProjectRefreshSnapshotImportWizardPage extends WizardPage
 
 		/**
 		 * Create a record for a project based on the info in the file.
-		 * 
-		 * @param file
 		 */
 		ProjectRecord(File file) {
 			projectSystemFile = file;
@@ -227,7 +225,6 @@ public class ProjectRefreshSnapshotImportWizardPage extends WizardPage
 
 	/**
 	 * Creates a new project creation wizard page.
-	 * 
 	 */
 	public ProjectRefreshSnapshotImportWizardPage() {
 		this("refreshSnapshotImportPage"); //$NON-NLS-1$
@@ -235,8 +232,6 @@ public class ProjectRefreshSnapshotImportWizardPage extends WizardPage
 
 	/**
 	 * Create a new instance of the receiver.
-	 * 
-	 * @param pageName
 	 */
 	public ProjectRefreshSnapshotImportWizardPage(String pageName) {
 		super(pageName);
@@ -289,8 +284,6 @@ public class ProjectRefreshSnapshotImportWizardPage extends WizardPage
 
 	/**
 	 * Create the checkbox list for the found projects.
-	 * 
-	 * @param workArea
 	 */
 	private void createProjectsList(Composite workArea) {
 
@@ -412,8 +405,6 @@ public class ProjectRefreshSnapshotImportWizardPage extends WizardPage
 
 	/**
 	 * Create the area to specify the snapshot directory.
-	 * 
-	 * @param workArea
 	 */
 	private void createSnapshotArea(Composite workArea) {
 
@@ -492,8 +483,6 @@ public class ProjectRefreshSnapshotImportWizardPage extends WizardPage
 
 	/**
 	 * Create the area with the extra options.
-	 * 
-	 * @param workArea
 	 */
 	private void createOptionsArea(Composite workArea) {
 		Composite optionsGroup = new Composite(workArea, SWT.NONE);
@@ -609,8 +598,6 @@ public class ProjectRefreshSnapshotImportWizardPage extends WizardPage
 	/**
 	 * Update the list of projects based on path. Method declared public only
 	 * for test suite.
-	 * 
-	 * @param path
 	 */
 	public void updateProjectsList(final String path) {
 		// on an empty path empty selectedProjects
@@ -705,8 +692,6 @@ public class ProjectRefreshSnapshotImportWizardPage extends WizardPage
 	/**
 	 * Update the refresh snapshot directory if it has changed. Causes the
 	 * projects list to be updated as well, if it has changed.
-	 * 
-	 * @param path
 	 */
 	private void updateSnapshotPath(final String path) {
 		// on an empty path empty selectedProjects
@@ -767,8 +752,6 @@ public class ProjectRefreshSnapshotImportWizardPage extends WizardPage
 	 * sub-directories is performed unless the user checks the "recurse into
 	 * subfolders" flag.
 	 * 
-	 * @param files
-	 * @param directory
 	 * @param monitor
 	 *            The monitor to report to
 	 * @return boolean <code>true</code> if the operation was completed.
@@ -966,9 +949,7 @@ public class ProjectRefreshSnapshotImportWizardPage extends WizardPage
 	/**
 	 * Create the project described in record. If it is successful return true.
 	 * 
-	 * @param record
 	 * @return boolean <code>true</code> if successful
-	 * @throws InterruptedException
 	 */
 	private boolean createExistingProject(final ProjectRecord record,
 			IPath snapshotPath, IProgressMonitor monitor)
@@ -1018,7 +999,6 @@ public class ProjectRefreshSnapshotImportWizardPage extends WizardPage
 	 * <code>IOverwriteQuery</code> method asks the user whether the existing
 	 * resource at the given path should be overwritten.
 	 * 
-	 * @param pathString
 	 * @return the user's reply: one of <code>"YES"</code>, <code>"NO"</code>,
 	 *         <code>"ALL"</code>, or <code>"CANCEL"</code>
 	 */

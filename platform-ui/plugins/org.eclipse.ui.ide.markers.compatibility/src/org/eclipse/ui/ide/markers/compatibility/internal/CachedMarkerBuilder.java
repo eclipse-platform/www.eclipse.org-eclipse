@@ -64,7 +64,6 @@ import org.eclipse.ui.views.markers.internal.Util;
  * a generator.
  * 
  * @since 3.4
- * 
  */
 public class CachedMarkerBuilder {
 
@@ -119,7 +118,6 @@ public class CachedMarkerBuilder {
 	/**
 	 * Create a new instance of the receiver. Update using the updateJob.
 	 * 
-	 * @param contentGenerator
 	 * @param id
 	 *            id of the view we are building for
 	 */
@@ -196,9 +194,6 @@ public class CachedMarkerBuilder {
 
 	/**
 	 * Add the resources in resourceMapping to the resourceCollection
-	 * 
-	 * @param resourceCollection
-	 * @param resourceMapping
 	 */
 	private void addResources(Collection resourceCollection,
 			ResourceMapping resourceMapping) {
@@ -231,8 +226,6 @@ public class CachedMarkerBuilder {
 
 	/**
 	 * Build all of the markers in the receiver.
-	 * 
-	 * @param monitor
 	 */
 	void buildAllMarkers(IProgressMonitor monitor) {
 		building = true;
@@ -266,7 +259,6 @@ public class CachedMarkerBuilder {
 	/**
 	 * Break the marker up into categories
 	 * 
-	 * @param markers
 	 * @param start
 	 *            the start index in the markers
 	 * @param end
@@ -560,7 +552,6 @@ public class CachedMarkerBuilder {
 	/**
 	 * Get the MarkerItem that matches marker.
 	 * 
-	 * @param marker
 	 * @return MarkerItem or <code>null<code> if it cannot be found
 	 */
 	MarkerItem getMarkerItem(IMarker marker) {
@@ -590,7 +581,6 @@ public class CachedMarkerBuilder {
 	/**
 	 * Get the sort direction of field
 	 * 
-	 * @param field
 	 * @return int one of {@link MarkerComparator#ASCENDING} or
 	 *         {@link MarkerComparator#DESCENDING}
 	 */
@@ -730,8 +720,6 @@ public class CachedMarkerBuilder {
 
 	/**
 	 * Load the settings from the memento.
-	 * 
-	 * @param memento
 	 */
 	private void loadFilterSettings(IMemento memento) {
 
@@ -758,8 +746,6 @@ public class CachedMarkerBuilder {
 
 	/**
 	 * Load the filters defined in memento string.
-	 * 
-	 * @param mementoString
 	 */
 	private void loadFiltersFrom(String mementoString) {
 		if (mementoString.equals(IPreferenceStore.STRING_DEFAULT_DEFAULT))
@@ -802,8 +788,6 @@ public class CachedMarkerBuilder {
 	 * Load the group with id from the child if there is a matching system group
 	 * registered.
 	 * 
-	 * @param child
-	 * @param id
 	 * @return <code>true</code> if a matching group was found
 	 */
 	private boolean loadGroupWithID(IMemento child, String id) {
@@ -822,8 +806,6 @@ public class CachedMarkerBuilder {
 
 	/**
 	 * Load the legacy filter into the system.
-	 * 
-	 * @param child
 	 */
 	private void loadLegacyFilter(IMemento child) {
 		MarkerFieldFilterGroup newGroup = new MarkerFieldFilterGroup(null, this);
@@ -834,8 +816,6 @@ public class CachedMarkerBuilder {
 
 	/**
 	 * Load the pre-3.4 filters.
-	 * 
-	 * @param mementoString
 	 */
 	private void loadLegacyFiltersFrom(String mementoString) {
 
@@ -855,8 +835,6 @@ public class CachedMarkerBuilder {
 
 	/**
 	 * Load the user supplied filter
-	 * 
-	 * @param child
 	 */
 	private void loadUserFilter(IMemento child) {
 		MarkerFieldFilterGroup newGroup = new MarkerFieldFilterGroup(null, this);
@@ -929,8 +907,6 @@ public class CachedMarkerBuilder {
 
 	/**
 	 * Restore the pre-3.4 filters.
-	 * 
-	 * @param memento
 	 */
 	private void restoreLegacyFilters(IMemento memento) {
 
@@ -950,8 +926,6 @@ public class CachedMarkerBuilder {
 
 	/**
 	 * Save the state of the receiver to memento
-	 * 
-	 * @param memento
 	 */
 	void saveState(IMemento memento) {
 		getComparator().saveState(memento);
@@ -964,7 +938,6 @@ public class CachedMarkerBuilder {
 
 	/**
 	 * Schedule an update of the markers with a delay.
-	 * 
 	 */
 	void scheduleMarkerUpdate() {
 		cancelJobs();
@@ -975,8 +948,6 @@ public class CachedMarkerBuilder {
 
 	/**
 	 * Set whether the filters are being ANDed or ORed.
-	 * 
-	 * @param and
 	 */
 	void setAndFilters(boolean and) {
 		andFilters = and;
@@ -997,8 +968,6 @@ public class CachedMarkerBuilder {
 
 	/**
 	 * Categorise by the default setting for contentGenerator.
-	 * 
-	 * @param contentGenerator
 	 */
 	private void setDefaultCategoryGroup(MarkerContentGenerator contentGenerator) {
 		String categoryName = contentGenerator.getCategoryName();
@@ -1012,8 +981,6 @@ public class CachedMarkerBuilder {
 
 	/**
 	 * Set the generator and update the contents.
-	 * 
-	 * @param generator
 	 */
 	void setGenerator(MarkerContentGenerator generator) {
 		this.generator = generator;
@@ -1022,8 +989,6 @@ public class CachedMarkerBuilder {
 
 	/**
 	 * Set the primary sort field for the receiver.
-	 * 
-	 * @param field
 	 */
 	void setPrimarySortField(MarkerField field) {
 
@@ -1033,8 +998,6 @@ public class CachedMarkerBuilder {
 
 	/**
 	 * Set the progress service for the receiver.
-	 * 
-	 * @param service
 	 */
 	void setProgressService(IWorkbenchSiteProgressService service) {
 		progressService = service;
@@ -1049,8 +1012,6 @@ public class CachedMarkerBuilder {
 
 	/**
 	 * Set the updateJob for the receiver.
-	 * 
-	 * @param job
 	 */
 	void setUpdateJob(Job job) {
 		updateJob = job;
@@ -1059,9 +1020,6 @@ public class CachedMarkerBuilder {
 
 	/**
 	 * Sort the newMarkers and build categories if required.
-	 * 
-	 * @param monitor
-	 * @param newMarkers
 	 */
 	void sortAndMakeCategories(IProgressMonitor monitor, MarkerMap newMarkers) {
 
@@ -1097,8 +1055,6 @@ public class CachedMarkerBuilder {
 
 	/**
 	 * Add group to the enabled filters.
-	 * 
-	 * @param group
 	 */
 	void toggleFilter(MarkerFieldFilterGroup group) {
 		Collection enabled = getEnabledFilters();
@@ -1117,8 +1073,6 @@ public class CachedMarkerBuilder {
 	 * Update the focus resources from list. If there is an update required
 	 * return <code>true</code>. This method assumes that there are filters
 	 * on resources enabled.
-	 * 
-	 * @param elements
 	 */
 	void updateFocusElements(Object[] elements) {
 		Collection resourceCollection = new ArrayList();
@@ -1137,8 +1091,6 @@ public class CachedMarkerBuilder {
 
 	/**
 	 * Update the receiver for a change in selection.
-	 * 
-	 * @param newElements
 	 */
 	void updateForNewSelection(Object[] newElements) {
 		if (updateNeeded(newElements)) {
@@ -1150,8 +1102,6 @@ public class CachedMarkerBuilder {
 
 	/**
 	 * Update the receiver from the dialog.
-	 * 
-	 * @param dialog
 	 */
 	void updateFrom(FiltersConfigurationDialog dialog) {
 		setAndFilters(dialog.andFilters());
@@ -1208,9 +1158,6 @@ public class CachedMarkerBuilder {
 		return false;
 	}
 
-	/**
-	 * 
-	 */
 	private void writeFiltersPreference() {
 		XMLMemento memento = XMLMemento.createWriteRoot(TAG_FILTERS_SECTION);
 
@@ -1230,8 +1177,6 @@ public class CachedMarkerBuilder {
 
 	/**
 	 * Write the settings for the filters to the memento.
-	 * 
-	 * @param memento
 	 */
 	private void writeFiltersSettings(XMLMemento memento) {
 

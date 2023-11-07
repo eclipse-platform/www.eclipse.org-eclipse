@@ -17,7 +17,6 @@ import org.eclipse.ui.ide.markers.compatibility.api.MarkerViewHandler;
 /**
  * MarkerPreferencesHandler is the handler for opening the marker preferences dialog.
  * @since 3.4
- *
  */
 public class MarkerPreferencesHandler extends MarkerViewHandler implements
 		IHandler {

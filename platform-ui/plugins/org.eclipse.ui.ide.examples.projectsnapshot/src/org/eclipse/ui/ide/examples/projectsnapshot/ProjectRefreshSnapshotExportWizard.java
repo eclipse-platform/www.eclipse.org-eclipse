@@ -28,9 +28,6 @@ public class ProjectRefreshSnapshotExportWizard extends Wizard implements
 	private ProjectRefreshSnapshotExportWizardPage fMainPage;
 	private IStructuredSelection fSelection;
 
-	/**
-	 * 
-	 */
 	public ProjectRefreshSnapshotExportWizard() {
 		IDialogSettings workbenchSettings = IDEWorkbenchPlugin.getDefault()
 				.getDialogSettings();
