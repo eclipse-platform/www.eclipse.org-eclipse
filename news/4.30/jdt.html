@@ -109,7 +109,7 @@ ul {padding-left: 13px;}
   </tr>
   <tr id="deprecated-cleanup">
     <!-- https://github.com/eclipse-jdt/eclipse.jdt.ui/issues/722 -->
-    <td class="title">Cleanup to replace deprecated method calls</td>
+    <td class="title">Cleanup and quick fix to replace deprecated method calls</td>
     <td class="content">
       A new cleanup has been added to the <b>Source &gt; Clean Up &gt; Source Fixing</b> tab page to replace deprecated method calls with inlined content.  Choosing this option will inline
       the implementation of the deprecated method if and only if:
@@ -123,7 +123,7 @@ ul {padding-left: 13px;}
       <p><img src="images/deprecated-before.png" alt="deprecated method call to inline"/></p>
       will result in inlining the deprecated foo() call in foo2:
       <p><img src="images/deprecated-after.png" alt="result of deprecated method call inline"/></p>
-      <p>The clean up is also available as a quick fix for an individual call to a deprecated method (select call and click <b>CTRL + 1</b>).
+      <p>The functionality is also available as a quick fix for an individual call to a deprecated method that is marked with warning or error.  One can also select a deprecated method call and initiate as a quick assist (select call and click <b>CTRL + 1</b>).
     </td>
   </tr>
   <!-- ******************* End of Java Editor ************************************* -->
