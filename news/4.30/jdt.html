@@ -126,6 +126,17 @@ ul {padding-left: 13px;}
       <p>The functionality is also available as a quick fix for an individual call to a deprecated method that is marked with warning or error.  One can also select a deprecated method call and initiate as a quick assist (select call and click <b>CTRL + 1</b>).
     </td>
   </tr>
+  <tr id="constant-renaming">
+    <!-- https://github.com/eclipse-jdt/eclipse.jdt.ui/issues/749 -->
+    <td class="title">Quick assist to rename constant fields</td>
+    <td class="content">
+      A new quick assist has been added to rename static constant fields to follow a standard syntax using upper-case and underscores rather than camel case.
+      To use: select the constant and click <b>CTRL+1</b>.
+      For example,
+      <p><img src="images/constant-renaming.png" alt="rename constant quick assist"/></p>
+      will offer to rename the constant "valConstant1" to "VAL_CONSTANT1".
+    </td>
+  </tr>
   <!-- ******************* End of Java Editor ************************************* -->
 
   <!-- ******************* Java Views and Dialogs ************************************* -->
