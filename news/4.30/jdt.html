@@ -107,6 +107,25 @@ ul {padding-left: 13px;}
       <p><img src="images/insert_break_result.png" alt="result of insert break statement quick fix"/></p>
     </td>
   </tr>
+  <tr id="deprecated-cleanup">
+    <!-- https://github.com/eclipse-jdt/eclipse.jdt.ui/issues/722 -->
+    <td class="title">Cleanup to replace deprecated method calls</td>
+    <td class="content">
+      A new cleanup has been added to the <b>Source &gt; Clean Up &gt; Source Fixing</b> tab page to replace deprecated method calls with inlined content.  Choosing this option will inline
+      the implementation of the deprecated method if and only if:
+      <ol>
+      <li>The deprecated method has Javadoc that specifies a @deprecated tag which ends with "use {@link ...}" or "replace by {@link ...}"</li>
+      <li>The {@link ...} tag refers to a method</li>
+      <li>The linked method is actually called in the implementation of the deprecated method</li>
+      <li>Methods and fields accessed in the linked method are visible at the location it will be inlined (e.g. using a package private method is ok to call if in same package)</li>
+      </ol>
+      For example, cleaning up the following:
+      <p><img src="images/deprecated-before.png" alt="deprecated method call to inline"/></p>
+      will result in inlining the deprecated foo() call in foo2:
+      <p><img src="images/deprecated-after.png" alt="result of deprecated method call inline"/></p>
+      <p>The clean up is also available as a quick fix for an individual call to a deprecated method (select call and click <b>CTRL + 1</b>).
+    </td>
+  </tr>
   <!-- ******************* End of Java Editor ************************************* -->
 
   <!-- ******************* Java Views and Dialogs ************************************* -->
