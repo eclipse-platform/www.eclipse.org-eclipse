@@ -127,10 +127,25 @@ ul {padding-left: 13px;}
       <p>
         Plug-in developers are encouraged to migrate their E4 application model element classes to use for example <code>jakarta.inject.Inject</code> instead of <code>javax.inject.Inject</code>
         or <code>jakarta.annotation.PostConstruct</code> instead of <code>javax.annotation.PostConstruct</code>.
-        At the moment annotations from both namespaces <code>jakarta</code> and <code>javax</code> are supported, but it is not recommended to mix them in one class.
+        At the moment annotations from both namespaces <code>jakarta</code> and <code>javax</code> are supported.
       </p>
       <p>
-        The support for annotations from the <code>javax.inject</code> and <code>javax.annotation</code> package is now deprecated and will be removed in a future release, after the two years deprecation period.
+        The support for annotations from the <code>javax.inject</code> and <code>javax.annotation</code> package is now deprecated and will be removed in a future release, after a deprecation period of at least two years.
+        If it necessary to make a Plug-in compatible with past versions (that don't support <code>jakarta</code> annotations), recent and future versions (that don't support <code>javax</code> annotations) of the E4-Injector,
+        it can be considered to apply the annotations from both namespaces simultaneously and to import the packages from both namespaces only optionally.
+        But this strategy does not work for usages of the <code>javax/jakarta.inject.Provider</code> and should generally be used with caution and be verified in detail for more complex setups.
+      </p>
+      <p>
+        The Eclipse SDK itself already has been migrated off these annotations from the <code>javax</code> namespace to the <code>jakarta</code> replacements and therefore does not pull the former into a target-platform anymore.
+        If your application still needs these <code>javax</code> annotations you potentially have to add them explicitly to your target using entries like:
+      </p>
+      <pre><code>
+  &lt;unit id&#x3D;&quot;jakarta.inject.jakarta.inject-api&quot; version&#x3D;&quot;1.0.5&quot;&#x2F;&gt;
+  &lt;unit id&#x3D;&quot;jakarta.annotation-api&quot; version&#x3D;&quot;1.3.5&quot;&#x2F;&gt;
+      </code></pre>
+      <p>
+        Counterintuitively the <code>javax</code> annotations are provided by a bundle with the same symbolic name as their <code>jakarta</code> successor but with a 1.x version, while the jakarta successors have a 2.x version.
+        It is therefore necessary to specify the version explicitly since those bundles are not required in their latest version.
       </p>
     </td>
   </tr>
