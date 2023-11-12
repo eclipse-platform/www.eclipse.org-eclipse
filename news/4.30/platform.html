@@ -134,6 +134,22 @@ ul {padding-left: 13px;}
       </p>
     </td>
   </tr>
+  <tr id="new-ecf-client">
+    <!-- https://github.com/eclipse-equinox/p2/pull/206 -->
+    <td class="title"><a href="#new-ecf-client">New Http Client Backend for ECF</a></td>
+    <td class="content">
+      <p>The ECF Backend used by P2 has switched to use the httpjava-client to lower the dependency chain and efforts to maintain certain third party libraries.</p>
+      <p>
+      For now Eclipse will ship both, the new and the old backend while the newer one takes precedence. If you see any issues please proceed as follows:
+      <ol>
+      	<li>Collect as much data as possible, e.g. is a proxy used, are the site you want contact password protected, your os and similar what could be useful or is know to diverge from standard desktop environment settings.</li>
+      	<li><a href="https://github.com/eclipse-equinox/p2/issues?q=is%3Aissue+is%3Aopen+label%3A%22ecf+transport%22">Open an issue here</a> with the description of the problem and the collected data.</li>
+      	<li>Consider <a href="https://github.com/eclipse-equinox/p2/blob/master/CONTRIBUTING">providing a test-case for P2</a> to make sure your use-case is covered now and in the future and will not break again</li>
+      	<li>Configure your <code>eclipse.ini</code> to include <code>-Dorg.eclipse.ecf.provider.filetransfer.excludeContributors=org.eclipse.ecf.provider.filetransfer.httpclientjava</code> unless the problem is fixed</li>
+      </ol>
+      </p>
+    </td>
+  </tr>
   
   <!-- ******************* End of General Updates ************************************* -->
   <tr><td colspan="2"/></tr>
