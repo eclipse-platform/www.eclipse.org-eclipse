@@ -90,8 +90,7 @@ ob_start();
 	          <tr>
 	            <td>December 2023</td>
 	          </tr>
-	          <tr class="current">
-	            <td></td>
+	          <tr>
 	            <td class="date">6</td>
 	            <td class="date">Wed</td>
 	            <td></td>
