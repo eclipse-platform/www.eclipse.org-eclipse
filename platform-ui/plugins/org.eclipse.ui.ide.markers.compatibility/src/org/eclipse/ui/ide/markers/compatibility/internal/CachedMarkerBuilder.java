@@ -552,7 +552,7 @@ public class CachedMarkerBuilder {
 	/**
 	 * Get the MarkerItem that matches marker.
 	 * 
-	 * @return MarkerItem or <code>null<code> if it cannot be found
+	 * @return MarkerItem or <code>null</code> if it cannot be found
 	 */
 	MarkerItem getMarkerItem(IMarker marker) {
 		if (refreshingMarkers())
