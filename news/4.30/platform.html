@@ -151,18 +151,31 @@ ul {padding-left: 13px;}
   </tr>
   <tr id="new-ecf-client">
     <!-- https://github.com/eclipse-equinox/p2/pull/206 -->
-    <td class="title"><a href="#new-ecf-client">New Http Client Backend for P2</a></td>
+    <td class="title"><a href="#new-ecf-client">New Http Client Backend for p2</a></td>
     <td class="content">
-      <p>The ECF Backend used by P2 has switched to use the httpjava-client to lower the dependency chain and efforts to maintain certain third party libraries.</p>
       <p>
-      For now Eclipse will ship both, the new and the old backend while the newer one takes precedence. If you see any issues please proceed as follows:
-      <ol>
-      	<li>Collect as much data as possible, e.g. is a proxy used, are the site you want contact password protected, your os and similar what could be useful or is know to diverge from standard desktop environment settings.</li>
-      	<li><a href="https://github.com/eclipse-equinox/p2/issues?q=is%3Aissue+is%3Aopen+label%3A%22ecf+transport%22">Open an issue here</a> with the description of the problem and the collected data.</li>
-      	<li>Consider <a href="https://github.com/eclipse-equinox/p2/blob/master/CONTRIBUTING">providing a test-case for P2</a> to make sure your use-case is covered now and in the future and will not break again</li>
-      	<li>Configure your <code>eclipse.ini</code> to include <code>-Dorg.eclipse.ecf.provider.filetransfer.excludeContributors=org.eclipse.ecf.provider.filetransfer.httpclientjava</code> unless the problem is fixed</li>
-      </ol>
+      The ECF backend used by p2 has switched to a new JDK-based provider by default.
+      This provider is implemented using the JDK's built-in <code>java.net.http.HttpClient</code>,
+      significantly reducing the number of third-party library dependencies.
       </p>
+      <p>
+      To ease the transition, Eclipse ships both the newer JDK-based backend as well as older the Apache-based backend.
+      The JDK-based backend takes precedence.
+      If you encounter networking issues when installing or updating, particularly with regard to network access via a proxy, please proceed as follows:
+      </p>
+      <ol>
+        <li>
+        Collect as much data as possible,
+        e.g. is a proxy being used, 
+        are the sites being contacted password protected, 
+        what is your operating system,
+        what is your JDK version,
+        what configuration details about your network makes it unique?
+        </li>
+        <li><a href="https://github.com/eclipse-equinox/p2/issues?q=is%3Aissue+is%3Aopen+label%3A%22ecf+transport%22">Open an issue here</a> with a description of the problem along with all the relevant details.</li>
+        <li>Consider <a href="https://github.com/eclipse-equinox/.github/blob/main/CONTRIBUTING.md">providing a test-case for p2</a> to ensure that your use-case is covered now and forever into the future.</li>
+        <li>Configure your <code>eclipse.ini</code> to add the following JVM option to disable the JDK-based backend:<br/><code>-Dorg.eclipse.ecf.provider.filetransfer.excludeContributors=org.eclipse.ecf.provider.filetransfer.httpclientjava</code></li>
+      </ol>
     </td>
   </tr>
   
