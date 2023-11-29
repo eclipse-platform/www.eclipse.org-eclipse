@@ -20,7 +20,7 @@ jobs:
     - name: Create new release folder
       run: |
         name=$(echo ${{ github.event.milestone.due_on }} | cut -d- -f-2)
-        cd scripts
+        cd news/scripts
         ./applyTemplate.sh ${{ github.event.milestone.title }} $name
     - name: Create Pull Request for Release ${{ github.event.milestone.title }}
       uses: peter-evans/create-pull-request@153407881ec5c347639a548ade7d8ad1d6740e38 # v5.0.2
