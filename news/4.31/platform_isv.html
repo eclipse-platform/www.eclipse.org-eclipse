@@ -38,6 +38,42 @@ ul {padding-left: 13px;}
   <tr>
     <td id="Platform" class="section" colspan="2"><h2>Platform Changes</h2></td>
   </tr>
+
+  <tr id="viewer_limit_jface"> <!-- https://github.com/eclipse-platform/eclipse.platform.ui/issues/1425 -->
+      <td class="title">Viewer Limit in JFace</td>
+      <td class="content">
+        <p>
+        <code>org.eclipse.jface.viewers.ColumnViewer.setDisplayIncrementally(int incrementSize)</code> API was added to
+        JFace. If <code>incrementSize</code> is set to some positive value, viewer will show 
+        initially not more as this number of child elements per parent.
+        Additionally, viewer will also provide a way to user to show more elements if available/needed.
+        This API solves the problem with UI hangs in case viewer tries to display a large number of child elements per parent.
+        </p>
+        <p>
+        This feature is currently implemented in <code>org.eclipse.jface.viewers.TableViewer</code> 
+        and <code>org.eclipse.jface.viewers.TreeViewer</code> but not enabled by default 
+        (<code>incrementSize</code> is zero by default).
+        Each concrete viewer implementation is responsible to enable this feature if needed.
+        </p>
+        <p>Note, that even if it was designed to be backwards compatible API (as much as possible),
+        there could be some regressions while converting existing viewers code to use
+        the new API. Please consider to test carefully your code if enabling this functionality!
+        </p>
+      </td>
+  </tr>
+  
+  <tr id="viewer_limit_workbench"> <!-- https://github.com/eclipse-platform/eclipse.platform.ui/issues/1425 -->
+      <td class="title">Viewer Limit in Workbench</td>
+      <td class="content">
+        <p>Complementary to the JFace API above, <code>org.eclipse.ui.IWorkbenchPreferenceConstants</code> and
+        <code>org.eclipse.ui.views.WorkbenchViewerSetup</code> API's were added.
+        This API provides default workbench preference access and convenient way for Viewers
+        that want apply default workbench value and don't want to write extra code to
+        keep watching for preference change.
+        </p>
+      </td>
+  </tr>
+
   <!-- ******************** End of Platform ********************** -->
 
   <!-- *********************** SWT *********************** -->

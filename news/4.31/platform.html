@@ -43,6 +43,51 @@ ul {padding-left: 13px;}
     <h2>Views, Dialogs and Toolbar </h2>
     </td>
   </tr>
+
+  <tr id="viewer_limit_applied"> <!-- https://github.com/eclipse-platform/eclipse.platform.ui/issues/1425 -->
+      <td class="title">Viewer Limit in Workbench</td>
+      <td class="content">
+        <p>
+        Few most commonly used Eclipse views have enabled incremental view updates. 
+        These views will limit initially shown number of children to 1000 per parent element, and allow displaying next
+        batch of elements if requested. This increment number can be configured in the
+        <code>Preferences -> General -> Initial maximum number of elements shown in views</code>.
+        </p>
+        <p><img src="images/viewer_limit_preference.png" alt="New preference"/></p>
+        <p>
+        Note, that also other (3rd party) views can read the preference and enable 
+        this feature, but that must be explicitly done for each view. 
+        </p>
+        <p>
+        Incremental view updates feature was added to avoid UI freezes in large viewers, where SWT/JFace
+        hit the limits of the underlying native widget machinery while trying to render
+        thousands of elements, leading to minute lang UI freezes.
+        </p>
+        <p>
+        Incremental view update feature is currently enabled in the following views:
+        </p>
+        <ol>
+			<li>Package Explorer</li>
+			<li>Project Explorer</li>
+			<li>Problems View</li>
+			<li>Java Outline View</li>
+			<li>JUnit View</li>
+	    </ol>
+	    <p><img src="images/limit_in_package_explorer.png" alt="Package Explorer"/></p>
+	    <p><img src="images/limit_in_project_explorer.png" alt="Project Explorer"/></p>
+	    <p><img src="images/limit_in_problems_view.png" alt="Problems View"/></p>
+	    <p><img src="images/limit_in_outline_view.png" alt="Java Outline"/></p>
+	    <p><img src="images/limit_in_junit_view.png" alt="JUnit View"/></p>
+	    <p>
+		This new preference can be disabled in products by specifying
+		<code>org.eclipse.ui.workbench/largeViewLimit=0</code> in the
+		<code>plugin_customization.ini</code> file or via Oomph. 
+		In the same way the preference can be changed for products that need a lower
+		or higher limit. 	
+        </p>
+      </td>
+  </tr>
+
   <!-- ******************* End of Views, Dialogs and Toolbar ************************************* -->
 
   <!-- ******************* Text Editors ************************************* -->
