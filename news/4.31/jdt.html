@@ -64,6 +64,24 @@ ul {padding-left: 13px;}
     <h2>Java Editor </h2>
     </td>
   </tr>
+
+  <tr id="new-make-static-refactoring">
+    <td class="title"><a href="#new-make-static-refactoring">New Make Static Refactoring</a></td>
+    <td class="content">
+      <p>A new refactoring called 'Make Static' has been added to Eclipse's Java Development Tools (JDT), which converts instance methods into static methods, when possible. This refactoring adds an extra parameter to the method declarations to handle references to instance fields, methods, or classes in the original method. Existing calls to the method are altered accordingly, and if the extra parameter is necessary, the refactoring passes 'this' or the specific instance originally used to access the method.</p>
+      <p>To apply this refactoring, the following conditions must be met:</p>
+      <ul>
+        <li>The method is not a constructor.</li>
+        <li>The method does not override a method from the parent type nor is overridden in any child types.</li>
+        <li>The type in which the method is declared is not a local type, an anonymous type, or an annotation.</li>
+      </ul>
+      <p>The refactoring can be executed by selecting a method invocation, except in cases where a super method invocation is selected.</p>
+      <p><img src="images/make-static-refactoring-example-before.png" alt="Make Static Refactoring Example Before" /></p>
+      <p><img src="images/make-static-refactoring-example-after.png" alt="Make Static Refactoring Example After"/></p>
+      <!-- PR: https://github.com/eclipse-jdt/eclipse.jdt.ui/pull/689 -->
+      <!-- Issue/Proposal: https://github.com/eclipse-jdt/eclipse.jdt.ui/issues/590 -->
+    </td>
+  </tr>
   <!-- ******************* End of Java Editor ************************************* -->
 
   <!-- ******************* Java Views and Dialogs ************************************* -->
