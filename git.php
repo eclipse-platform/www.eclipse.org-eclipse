@@ -7,19 +7,23 @@ ob_start();
 <div id="midcolumn">
 <h1>Using SWT from Git</h1>
 <h3>Intro</h3>
-<p>As part of the Eclipse Git migration, SWT has moved all of its CVS projects into 2 Git repos - one for sources and one for binaries.
+<p>As part of the Eclipse Git migration, SWT has moved all of its CVS projects into 2 Git repos first - one for sources and one for binaries.
+Nowadays the binaries are also stored in the sources repository using Git Large File Storage (LFS) so that only one SWT Git repository exists.
 <br>For those new to the Git world, there are many resources available online that can provide an intro to Git. Some recommended ones:
 <ul>
 <li>The <a href="https://git-scm.com/">git homepage</a> has a <a href="https://git-scm.com/documentation">documentation section</a> with good links to tutorials.</li>
-<li>The online <a href="https://git-scm.com/book/en/v2">Pro Git</a> book provdes a more comprehensive overview of Git.</li>
+<li>The online <a href="https://git-scm.com/book/en/v2">Pro Git</a> book provides a more comprehensive overview of Git.</li>
+<li>The <a href="https://git-lfs.com/">Git Large File Storage (LFS) </a> provides a basic overview of Git-LFS.</li>
+
 </ul>
 </p>
 <h3>Git Web View</h3>
-<p>SWT lives at GitHub. Both SWT repos can be viewed online at:
+<p>SWT lives at GitHub. The SWT repo can be viewed online at:
 <ul>
 <li><a href="https://github.com/eclipse-platform/eclipse.platform.swt/">eclipse.platform.swt.git</a></li> 
-<li><a href="https://github.com/eclipse-platform/eclipse.platform.swt.binaries/">eclipse.platform.swt.binaries.git</a></li>
 </ul>
+The <a href="https://github.com/eclipse-platform/eclipse.platform.swt.binaries/">eclipse.platform.swt.binaries.git</a> repository is now obsolete and effectively archived.
+
 
 <h3>Cloning the SWT repos</h3>
 Anonymous git access to the SWT repositories can be obtained through either http or git protocols. To clone the SWT repos from the command line:
@@ -31,15 +35,22 @@ Anonymous git access to the SWT repositories can be obtained through either http
 
 
 <h3>Using EGit</h3>
-<p>While it is possible to use git only from the command line to develop SWT, it is recommended to use EGit to allow you to perform all git operations from within Eclipse. Here is a quick guide to help you 
-get set up (<b>see also <a href="https://wiki.eclipse.org/Platform-releng/Git_Workflows#Clone_a_repo">Platform-releng/Git Workflows page</a> for more workflow hints.</b>).<p>
+<p>While it is possible to use git (with <a href="https://github.com/git-lfs/git-lfs#installing">git-lfs installed</a>) only from the command line to develop SWT, it is recommended to use EGit to allow you to perform all git operations from within Eclipse.
+Here is a quick guide to help you get set up (<b>see also <a href="https://wiki.eclipse.org/Platform-releng/Git_Workflows#Clone_a_repo">Platform-releng/Git Workflows page</a> for more workflow hints.</b>).<p>
 <p>
-The EGit User guide can be found <a href="https://wiki.eclipse.org/EGit/User_Guide">here</a>.
+The <a href="https://wiki.eclipse.org/EGit/User_Guide">EGit User guide</a> and especially its section about <a href="https://wiki.eclipse.org/EGit/User_Guide#GIT_LFS_Support">EGit's LFS support</a> provide general help with EGit.
 </p>
-<h4>Installing EGit</h4>
+<h4>Installing EGit with LFS Support</h4>
 <p>
-You can install EGit from <a href="https://download.eclipse.org/releases/latest/">Latest Eclipse Simultaneous Release</a>, it's already available. From within Eclipse, you can select Help>Install New Software... and then select the 
-2020-03 (or newer) site from the 'Work With' combo box. Select Eclipse EGit from underneath the 'Collaboration' section and install.
+You can install EGit and its LFS Support from <a href="https://download.eclipse.org/releases/latest/">Latest Eclipse Simultaneous Release</a>, it's already available.
+From within Eclipse, you can select Help>Install New Software... and then select the 2020-03 (or newer) site from the 'Work With' combo box.
+From underneath the 'Collaboration' section select and install
+<ul>
+<li><code>Git integration for Eclipse</code></li>
+<li><code>Java implementation of Git - optional LFS support</code></li>
+</ul>
+
+After EGit with LFS Support is installed make sure <a href="https://wiki.eclipse.org/EGit/User_Guide#GIT_LFS_Support">LFS support is enabled, ideally globally</a>.
 </p>
 <h4>Getting the Source</h4>
 <p>
