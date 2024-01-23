@@ -62,7 +62,6 @@ or just open a new bug: https://bugs.eclipse.org/bugs/enter_bug.cgi?product=Plat
   <li><a href="#browserspecifydefault">How do I specify the default type of native renderer that is used by the Browser?</a></li>
   <li><a href="#browsernativeie">Which Internet Explorer version do Browsers on Windows use?</a></li>
   <li><a href="#browserlinux">What do I need to run the SWT Browser inside Eclipse on Linux?</a></li>
-  <li><a href="#howusechromium">How do I explicitly use Chromium as the Browser's underlying renderer?</a></li>
   <li><a href="#howuseedge">How do I explicitly use Edge as the Browser's underlying renderer?</a></li>
   <li><a href="#howuseedgeoptions">What configuration options are avaibale for the Edge renderer?</a></li>
   <li><a href="#edgelimitations">What are the limitations of the Edge Browser renderer?</a></li>
@@ -840,7 +839,6 @@ the SWT.CENTER style when creating a composite.
       <tr><td>Internet Explorer</td><td>Windows</td><td><code>SWT.IE</code></td><td>Yes</td></tr>
       <tr><td>WebKit</td><td>macOS, Linux GTK</td><td><code>SWT.WEBKIT</code></td><td>Yes</td></tr>
       <tr><td>Edge (Chromium-based)</td><td>Windows</td><td><code>SWT.EDGE</code></td><td>No</td></tr>
-      <tr><td>Chromium</td><td>All</td><td><code>SWT.CHROMIUM</code></td><td>No</td></tr>
     </table>
     <p>
     <em>Note:</em> As of Eclipse/SWT 4.8, Mozilla (XULRunner) renderer is no longer supported, <code>SWT.MOZILLA</code> flag is deprecated and has no effect.
@@ -849,8 +847,7 @@ the SWT.CENTER style when creating a composite.
     according to the table above. Default renderer does not require additional software installation.
     It is possible to override the default native renderer, see <a href="#browserspecifydefault">How do I specify the default type of native renderer that is used by the Browser?</a>.
     <p>
-    For additional information on specific renderers see <a href="#howusechromium">How do I explicitly use Chromium as the Browser's underlying renderer?</a> and
-    <a href="#howuseedge">How do I explicitly use Edge as the Browser's underlying renderer?</a>.
+    For additional information on specific renderers see <a href="#howuseedge">How do I explicitly use Edge as the Browser's underlying renderer?</a>.
   </dd>
 
   <dt><strong><a name="browserspecifydefault">Q: How do I specify the default type of native renderer that is used by the Browser?</a></strong></dt>
@@ -859,9 +856,9 @@ the SWT.CENTER style when creating a composite.
     Default is chosen to not require additional software installation and to preserve backward-compativle behavior.
     <p>
     A user can set a property to specify the type of native renderer to use for <code>SWT.NONE</code>-style Browsers.
-    Setting this property does not affect Browsers that are created with explicit renderer styles such as <code>SWT.WEBKIT</code> or <code>SWT.CHROMIUM</code>.
+    Setting this property does not affect Browsers that are created with explicit renderer styles such as <code>SWT.WEBKIT</code>.
     The property name is <code>org.eclipse.swt.browser.DefaultType</code> and valid values for it currently include "<code>webkit</code>",
-    "<code>ie</code>" (since 4.3), "<code>chromium</code>" (since 4.17) and "<code>edge</code>" (since 4.19).  This property must be set before the <em>first</em> Browser instance is created.
+    "<code>ie</code>" (since 4.3) and "<code>edge</code>" (since 4.19).  This property must be set before the <em>first</em> Browser instance is created.
     <p>
     <em>Note:</em> As of Eclipse/SWT 4.8, Mozilla (XULRunner) renderer is no longer supported, the value <code>mozilla</code> has no effect.
     <p>
@@ -908,50 +905,6 @@ the SWT.CENTER style when creating a composite.
     </br>
     <em>Note: </em> as of Eclipse/SWT 4.15, WebKitGTK 1.x is no longer supported.
     <p>
-    Chromium renderer is also available for Linux, see <a href="#howusechromium">How do I explicitly use Chromium as the Browser's underlying renderer?</a>.
-  </dd>
-
-  <dt><strong><a name="howusechromium">Q: How do I explicitly use Chromium as the Browser's underlying renderer?</a></strong></dt>
-  <dd>A: To specify that a Chromium renderer be used by a Browser instance, create it with style <code>SWT.CHROMIUM</code> (since 4.17) or
-  set the Java property <code>org.eclipse.swt.browser.DefaultType=chromium</code>.
-  <p>
-  You can get the SWT-Chromium libraries from the Eclipse SDK or from the standalone SWT Chromium support libraries section on the download page.
-  <p>
-  To use the Chromium libraries from the Eclipse SDK:
-  <ul>
-    <li>Install the CEF binaries in Eclipse from the p2 repo - <a href="http://dl.maketechnology.io/chromium-cef/rls/repository">CEF p2 repo from Make technology</a></li>
-    <li>Add the required jars to classpath of project:
-        <ul>
-         <li>SWT-Chromium fragment (<code>org.eclipse.swt.browser.chromium.&lt;ws&gt;.&lt;os&gt;.&lt;arch&gt;.jar</code>)</li>
-         <li>SWT fragment (<code>org.eclipse.swt.&lt;ws&gt;.&lt;os&gt;.&lt;arch&gt;.jar</code>)</li>
-         <li>CEF binary (<code>com.make.chromium.cef.&lt;ws&gt;.&lt;os&gt;.&lt;arch&gt;.jar</code>)</li>
-        </ul>
-    </li>
-  </ul>
-  <p>
-  To use the Chromium libraries from the standalone SWT downloads:
-  <ul>
-    <li>Get CEF binaries for your platform from the p2 repo:
-     <ul>
-       <li><a href="http://dl.maketechnology.io/chromium-cef/rls/repository/plugins/com.make.chromium.cef.gtk.linux.x86_64_0.4.0.202005172227.jar">CEF GTK binaries</a></li>
-       <li><a href="http://dl.maketechnology.io/chromium-cef/rls/repository/plugins/com.make.chromium.cef.cocoa.macosx.x86_64_0.4.0.202005172227.jar">CEF Mac binaries</a></li>
-       <li><a href="http://dl.maketechnology.io/chromium-cef/rls/repository/plugins/com.make.chromium.cef.win32.win32.x86_64_0.4.0.202005172227.jar">CEF Windows binaries</a></li>
-     </ul>
-    </li>
-    <li>Add the required jars to classpath of project:
-     <ul>
-       <li>SWT-Chromium standalone jar (<code>swt-chromium.jar</code>)</li>
-       <li>SWT standalone jar (<code>swt.jar</code>)</li>
-       <li>CEF binary (<code>com.make.chromium.cef.&lt;ws&gt;.&lt;os&gt;.&lt;arch&gt;.jar</code>)</li>
-     </ul>
-    </li>
-  </ul>
-  <p>
-  To launch Eclipse with Chromium as the default browser type:
-  <ul>
-    <li>Install the CEF binaries in Eclipse from the p2 repo - <a href="http://dl.maketechnology.io/chromium-cef/rls/repository">CEF p2 repo from Make technology</a></li>
-    <li>In eclipse.ini, add <code>-Dorg.eclipse.swt.browser.DefaultType=chromium</code> under -vmargs.</li>
-  </ul>
   </dd>
 
   <dt><strong><a name="howuseedge">Q: How do I explicitly use Edge as the Browser's underlying renderer?</a></strong></dt>
