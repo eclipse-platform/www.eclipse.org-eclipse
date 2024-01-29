@@ -139,6 +139,22 @@ ul {padding-left: 13px;}
     <h2>General Updates </h2>
     </td>
   </tr>
+  <tr id="eclipse_launcher_reloads_eclipse_ini_on_restart"> <!-- https://github.com/eclipse-equinox/equinox/pull/401 -->
+      <td class="title">Eclipse launcher now reloads configuration files on restart</td>
+      <td class="content">
+        <p>
+        When Eclipse was restarted using <code>File > Restart</code>, <code>File > Switch Workspace</code> or after installing a P2 updatesite, 
+        it used to restart with same arguments as it was started for the first time. Any change done by the user manually or by any touchpoint 
+        to <code>eclipse.ini</code> was not considered on restart and user had to exit the Eclipse and start it again from launcher to make 
+        the <code>eclipse.ini</code> changes effective.
+        </p>
+        <p>
+        Now Eclipse launcher is enhanced to reload Eclipse configuration files on restarts, hence any change done in <code>eclipse.ini</code> gets 
+        effective on restart. Any arguments mentioned by the user to Eclipse launcher are still kept effective on restarts. However, if the restart 
+        command provided by Eclipse contains <code>--launcher.skipOldUserArgs</code> argument then the user provided arguments to launcher are ignored.
+        </p>
+      </td>
+  </tr>
   <tr id="new_wires_command"> <!-- https://github.com/eclipse-equinox/equinox/pull/466 -->
       <td class="title">New 'wires' command in the OSGi console</td>
       <td class="content">
