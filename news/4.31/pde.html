@@ -84,8 +84,29 @@ ul {padding-left: 13px;}
     <!-- https://github.com/eclipse-pde/eclipse.pde/pull/923 -->
     <td class="title">Declarative Services Annotations 1.4 support</td>
     <td class="content">
-      The PDE Declarative Services Annotations support now allows generation of DS 1.4, for some highlight take a look here:
-      <a href="https://blog.osgi.org/2018/03/osgi-r7-highlights-declarative-services.html">OSGi R7 Highlights: Declarative Services</a></p>
+      <p>
+      	The PDE Declarative Services Annotations support now allows generation of DS 1.4, for some highlight take a look here:
+      	<a href="https://blog.osgi.org/2018/03/osgi-r7-highlights-declarative-services.html">OSGi R7 Highlights: Declarative Services</a>
+      </p>
+    </td>
+  </tr>
+  <tr id="bndclasspathsupport">
+    <!-- https://github.com/eclipse-pde/eclipse.pde/pull/1091 -->
+    <td class="title">Classpathfix for bnd projects</td>
+    <td class="content">
+    	<p>
+     		Assume you have imported a project that previously required bndtools to work and want to perform some small changes, at the moment you need to install another tooling,
+     		configure it and hope it does not interfere with your existing Eclipse install. Now the following is possible, you just go to the compile problem and choose "Fix Project Setup..."
+     		<img src="images/300469967-7ca174ef-bda6-4330-987c-4476955a6d5f.png" />
+     	</p>
+     	<p>
+     		Then you are presented with adding a Plugin-Dependencies Container
+     		<img src="images/300470913-15a7d7a7-d538-44ba-9b72-52b3b03b7dd1.png" />
+     	</p>
+     	<p>
+     		Apply that fix and you will get the bnd defined dependencies resolved
+     		<img src="images/300471668-2049b0d9-adcd-4d85-86de-9ec03056fe5d.png" />
+     	</p>
     </td>
   </tr>
    <!-- ******************** End of PDE Compiler ********************** --> 
