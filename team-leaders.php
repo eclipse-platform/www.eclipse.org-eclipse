@@ -55,17 +55,9 @@ ob_start();
 			<h3>Project Management Committee Members</h3>
 		      <ul>
 		        <li> 
-		          <b><a id="McQ"></a>Mike ("McQ") Wilson, IBM Ottawa</b><br>
-			      McQ is the overall lead for the Eclipse Project aka PMC Lead.
-			      He is a senior architect of the Eclipse SDK, a member of the Eclipse <a href="http://wiki.eclipse.org/Architecture_Council">
-			      Architecture Council</a> and one of the original Eclipse Founders. His interests include computer
-			      language design and implementation, semantic content publishing, web development,
-			      and playing the cello. Mike leads the <a href="http://www.eclipse.org/projects/project_summary.php?projectid=eclipse.e4">e4</a>
-				  subproject.
-		        </li>
-		        <li> 
 		          <b><a id="aleksandar"></a>Aleksandar Kurtakov, Red Hat Inc.</b><br>
-					Aleksandar is part of Red Hat's Eclipse team. He is Platform SWT committer, Tools PMC member and leads the <a href="http://www.eclipse.org/linuxtools/">Linux Tools</a> project.
+					Aleksandar is the overall lead for the Eclipse Project aka PMC Lead.
+					He is part of Red Hat's Eclipse team. He is Platform SWT committer, Tools PMC member and leads the <a href="http://www.eclipse.org/linuxtools/">Linux Tools</a> project.
 					He is very interested in deeper native platform integration both as runtime experience and as distribution channel.
 					He is also interested in growing the contributors and better aligning with modern systems.
 		        </li>
@@ -88,6 +80,14 @@ ob_start();
 					Jay is responsible for the Eclipse Compiler, especially supporting new Java Language features. 
 					In the past, he has also contributed to the Orion and Flux Projects. Jay has been an Eclipse
 					user since its inception.
+		        </li>
+		        <li>
+		          <b><a id="ed"></a>Ed Merks, Macromodeling GmbH</b><br>
+					Ed has been involved with Eclipse since its inception.
+					He is a committer on more than <a href="https://accounts.eclipse.org/users/emerks#tab-projects">20 Eclipse projects</a>.
+					He is a coauthor of the authoritative book <a href="http://www.informit.com/store/product.aspx?isbn=9780321331885">EMF: Eclipse Modeling Framework</a>
+					which is published as a second expanded edition. 
+					He works hard to ensure that the barriers to entry for contributors to Eclipse's diverse projects is as low possible.
 		        </li>
 		      </ul>
 		</div>
@@ -186,6 +186,14 @@ ob_start();
 			      Architecture Council</a>.
 			      He was elected by the committers to represent them in the <a href="https://eclipse.org/org/foundation/directors.php">Eclipse Foundation Board of Directors</a>.
 			      Dani worked at OTI and IBM Research GmbH. His interests included user interface and API design, editors, software quality and performance.
+		        </li>
+		        <li> 
+		          <b><a id="McQ"></a>Mike ("McQ") Wilson, IBM Ottawa</b><br>
+			      McQ was the overall lead for the Eclipse Project aka PMC Lead until 2023.
+			      He is a senior architect of the Eclipse SDK, a member of the Eclipse <a href="http://wiki.eclipse.org/Architecture_Council">
+			      Architecture Council</a> and one of the original Eclipse Founders. His interests include computer
+			      language design and implementation, semantic content publishing, web development,
+			      and playing the cello.
 		        </li>
 		      </ul>
 		</div>
