@@ -164,6 +164,34 @@ ul {padding-left: 13px;}
         <p><img src="images/active_tab.png" alt="Highlighting of active part"/></p>
       </td>
   </tr>
+  <tr id="full_text_in_view_tabs"> <!-- https://github.com/eclipse-platform/eclipse.platform.ui/issues/735 -->
+    <td class="title">Full Text in View Tabs</td>
+    <td class="content">
+        <p>
+            A new preference has been introduced to enhance the user experience for managing views. With this preference, users have more control over how view tabs are displayed.
+        </p>
+        <p>
+            Previously, as the number of views increased within a view stack, the tab titles became too small, displaying only icons. This made it challenging for users to identify views solely based on icons, leading to a cluttered UI and decreased usability.
+        </p>
+        <p>
+            To address this issue, two options are now available in the <em>Tab icons and titles in view areas</em> section on the <em>Appearance</em> preference page:
+        </p>
+        <ul>
+            <li>
+                <b>Always show full titles:</b> This option ensures that the full text of view titles is always visible in view tabs, regardless of the number of views present. It improves usability by making it easier for users to identify views. By default this option is <em>off</em>.
+                <br><br>
+                <img src="images/preference_view_tabs_full_text.png" alt="Always show full titles" />
+                <img src="images/view_tabs_full_text.png" alt="Always show full titles" />
+            </li>
+            <li>
+                <b>Hide icons:</b> With this option selected, view icons are hidden, and only the full text of view titles is displayed in view tabs. This helps in decluttering the UI and ensures that the editor area remains the focal point, especially in scenarios where numerous views are open. By default this option is <em>off</em>.
+                <br><br>
+                <img src="images/preference_view_tabs_hide_icons.png" alt="Hide icons" />
+                <img src="images/view_tabs_hide_icons.png" alt="Hide icons" />
+            </li>
+        </ul>
+    </td>
+  </tr>
   <!-- ******************* End of Themes and Styling ************************************* -->
 
   <!-- ******************* General Updates ************************************* -->
