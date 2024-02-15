@@ -50,8 +50,8 @@ ul {padding-left: 13px;}
         <p>
         Few most commonly used Eclipse views have enabled incremental view updates. 
         These views will limit initially shown number of children to 1000 per parent element, and allow displaying next
-        batch of elements if requested. This increment number can be configured in the
-        <code>Preferences -> General -> Initial maximum number of elements shown in views</code>.
+        batch of elements if requested. This increment number can be configured in the preferences under
+        <code>General -&#62; Initial maximum number of elements shown in views</code>.
         </p>
         <p><img src="images/viewer_limit_preference.png" alt="New preference"/></p>
         <p>
@@ -174,7 +174,7 @@ ul {padding-left: 13px;}
             Previously, as the number of views increased within a view stack, the tab titles became too small, displaying only icons. This made it challenging for users to identify views solely based on icons, leading to a cluttered UI and decreased usability.
         </p>
         <p>
-            To address this issue, two options are now available in the <em>Tab icons and titles in view areas</em> section on the <em>Appearance</em> preference page:
+            To address this issue, two options are now available in the <em>Tab icons and titles in view areas</em> section on the <em>General -&#62; Appearance</em> preference page:
         </p>
         <ul>
             <li>
@@ -321,8 +321,35 @@ and is consumed by:
 	 - org.eclipse.ui.intro.quicklinks 1.2.300
 	   - because it Require-Bundle: org.eclipse.ui.workbench; bundle-version="3.108.0"
         </pre>
+        </p>
       </td>
   </tr>
+
+  <tr id="windows-defender-auto-config">
+    <!-- https://github.com/eclipse-platform/eclipse.platform.ui/pull/1453 -->
+    <td class="title">Windows Defender auto configuration</td>
+    <td class="content">
+      <p>
+        On Mirosoft Windows 10 or later the Microsoft Defender can significantly slow down the startup and overall performance of Eclipse-based applications.
+        The Eclipse IDE can now detect if Microsoft Defender is active, inform you about it and if wanted can exclude itself from future Defender scans.
+      </p>
+      <p><img src="images/windows-defender-autofix_startup-check.png" alt="Windows Defender autofix startup check"/></p>
+      <p>
+        On Windows the <code>General -&#62; Startup and Shutdown</code> preference page offers further information 
+        and allows to disable the startup check for new installations and to run the exclusion check again for the running installation.
+      </p>
+      <p><img src="images/windows-defender-autofix_preference-page.png" alt="Windows Defender autofix preference page"/></p>
+      <p>
+        Creators of custom Eclipse-based products that use the <code>org.eclipse.ui.ide.workbench</code> application and want to suppress the new startup check for their product
+        can disable it by adding the following entry to their product's <em>preferenceCustomization</em> properties file:<br>
+        <code>org.eclipse.ui/windows.defender.startup.check.skip=true</code>
+        <br/>
+        To execute the startup check for products that run applications other than <code>org.eclipse.ui.ide.workbench</code> add the entry:<br>
+        <code>org.eclipse.ui/windows.defender.startup.check.app=&#60;application-id-in-use&#62;</code>
+      </p>
+    </td>
+  </tr>
+
   <!-- ******************* End of General Updates ************************************* -->
   <tr><td colspan="2"/></tr>
 </tbody>
