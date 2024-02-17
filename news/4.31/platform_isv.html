@@ -74,6 +74,32 @@ ul {padding-left: 13px;}
       </td>
   </tr>
 
+  <tr id="eclipse-osgi-services_deprecation">
+      <!-- https://github.com/eclipse-equinox/equinox/issues/18 -->
+      <!-- https://github.com/eclipse-equinox/equinox/issues/191 -->
+      <!-- https://github.com/eclipse-equinox/equinox/pull/451 -->
+      <td class="title">Deprecation of Equinox bundles</td>
+      <td class="content">
+        <p>
+          The following Equinox bundles are deprecated for removal:
+        </p>
+        <ul>
+          <li>
+            <code>org.eclipse.osgi.services</code><br/>
+            Its content has been replaced by the official OSGi bundles published to Maven-Central and it only reexports these <code>org.osgi.service.*</code> bundles.
+            Consumers are encouraged to replace their requirements on the bundle <code>org.eclipse.osgi.services</code> by imports of the <code>org.osgi.service.*</code> packages used, already now.
+            This allows the OSGi runtime to choose any suitable provider of the package that is available.
+          </li>
+          <li>
+            <code>org.eclipse.equinox.device</code><br/>
+            This implementation of the <code>org.osgi.service.device</code> service is not known to have any users and did not receive updates in the past.
+            It is deprecated for removal from future releases without replacement.
+            In case there are users after all, they can continue to use past releases, use an alternative implementation or get in contact with the Equinox team.
+          </li>
+        </ul>
+      </td>
+  </tr>
+
   <!-- ******************** End of Platform ********************** -->
 
   <!-- *********************** SWT *********************** -->
