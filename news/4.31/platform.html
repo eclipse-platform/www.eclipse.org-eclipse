@@ -386,6 +386,22 @@ and is consumed by:
       </p>
     </td>
   </tr>
+  
+  <tr id="progress_bar_made_smooth_when_launching"> <!-- https://github.com/eclipse-platform/eclipse.platform.ui/pull/1545 -->
+      <td class="title">Improvement in Progress Bar Consistency and Smoothness</td>
+      <td class="content">
+        <p>
+        Previously, in Eclipse, the progress bar did not accurately reflect the progress relative to the total time. Specifically, the initial half of the progress bar advanced rapidly,
+        while a noticeable delay occurred in the latter half. This discrepancy was due to the utilisation of bundle changed events for progress determination, which resulted in an uneven
+        progression due to the non-uniform nature of these events.
+        </p>
+        <p>
+        The progress is now made as a function of the service level events occurring while the workbench is being bootstrapped. This gives much more deterministic values around the progress
+        the workbench has achieved towards completion. This modification has led to a more consistent and smooth movement of the progress bar, leading to an overall improved user experience.
+        </p>
+        <p><img src="images/Progress_bar.png" alt="Progress Bar" width="500" height="300"></p>
+      </td>
+  </tr>
 
   <!-- ******************* End of General Updates ************************************* -->
   <tr><td colspan="2"/></tr>
