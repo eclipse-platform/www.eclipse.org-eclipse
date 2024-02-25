@@ -24,9 +24,12 @@ ul {padding-left: 13px;}
 <h2>Plug-in Development Environment</h2>
 <ul>
 	<li><a href="#dialogs-wizards-views">Dialogs, Wizards and Views</a></li>
+	<!--
 	<li><a href="#editors">Editors</a></li>
 	<li><a href="#APITools">API Tools</a></li>
 	<li><a href="#pde-compiler">PDE Compiler</a></li>
+	-->
+	<li><a href="#general">General</a></li>
 </ul>
 
 <!-- ****************** START OF N&N TABLE****************** -->
@@ -40,9 +43,10 @@ ul {padding-left: 13px;}
   <tr>
     <td id="dialogs-wizards-views" class="section" colspan="2"><h2>Dialogs, Wizards and Views</h2></td>
   </tr>
+
   <tr id="bndtemplates">
     <!-- https://github.com/eclipse-pde/eclipse.pde/pull/954 -->
-    <td class="title">Support for bnd project templates</td>
+    <td class="title">Support for bnd Project Templates</td>
     <td class="content">
       <p>
       	In the 4.28 release there was support added for <a href="https://eclipse.dev/eclipse/news/4.28/pde.php#automatic-manifest">Automatic Manifest Generation</a>,
@@ -53,36 +57,49 @@ ul {padding-left: 13px;}
 	  </p>
   	  <p>
   	  This will now create a new <b>template</b> project that can be used to create new projects:
-      <img src="images/298588266-34cd0cd9-ffed-44ad-a63f-938d8c5850d6.png" />
   	  </p>
+      <p><img src="images/298588266-34cd0cd9-ffed-44ad-a63f-938d8c5850d6.png" width="800"/></p>
   	  <p>
   	  When you now create another project you can select your created template project
-  	  <img src="images/custom_template_project.png" />
-  	  <img src="images/298589058-7e23f52b-0dd3-4e32-b11c-3d0cb0f7dced.png" />
 	  </p>
+  	  <p><img src="images/custom_template_project.png" /></p>
+  	  <p><img src="images/298589058-7e23f52b-0dd3-4e32-b11c-3d0cb0f7dced.png" width="800"/></p>
     </td>
   </tr>
   <!-- ******************** End ofDialogs, Wizard and Views ********************** -->
   
   <!-- ******************** Editors ********************** -->
+  <!--
   <tr>
     <td id="editors" class="section" colspan="2"><h2>Editors</h2></td>
   </tr>
+  -->
   <!-- ******************** End of Editors ********************** -->
 
   <!-- ******************** APITools ********************** -->
+  <!--
   <tr>
     <td id="APITools" class="section" colspan="2"><h2>API Tools</h2></td>
   </tr>
+  -->
   <!-- ******************** End of APITools ********************** -->
   
-   <!-- ******************** General ********************** -->
+  <!-- ******************** PDE Compiler ********************** -->
+  <!--
   <tr>
-    <td id="pde-general" class="section" colspan="2"><h2>General</h2></td>
+    <td id="pde-compiler" class="section" colspan="2"><h2>PDE Compiler</h2></td>
   </tr>
+  -->
+  <!-- ******************** End of PDE Compiler ********************** --> 
+
+  <!-- ******************** General ********************** -->
+  <tr>
+    <td id="general" class="section" colspan="2"><h2>General</h2></td>
+  </tr>
+
   <tr id="ds14support">
     <!-- https://github.com/eclipse-pde/eclipse.pde/pull/923 -->
-    <td class="title">Declarative Services Annotations 1.4 support</td>
+    <td class="title">Declarative Services Annotations 1.4 Support</td>
     <td class="content">
       <p>
       	The PDE Declarative Services Annotations support now allows generation of DS 1.4, for some highlight take a look here:
@@ -90,26 +107,27 @@ ul {padding-left: 13px;}
       </p>
     </td>
   </tr>
+
   <tr id="bndclasspathsupport">
     <!-- https://github.com/eclipse-pde/eclipse.pde/pull/1091 -->
-    <td class="title">Classpathfix for bnd projects</td>
+    <td class="title">Classpath Fix for bnd Projects</td>
     <td class="content">
     	<p>
      		Assume you have imported a project that previously required bndtools to work and want to perform some small changes, at the moment you need to install another tooling,
      		configure it and hope it does not interfere with your existing Eclipse install. Now the following is possible, you just go to the compile problem and choose "Fix Project Setup..."
-     		<img src="images/300469967-7ca174ef-bda6-4330-987c-4476955a6d5f.png" />
      	</p>
+     	<p><img src="images/300469967-7ca174ef-bda6-4330-987c-4476955a6d5f.png" width="800"/></p>
      	<p>
      		Then you are presented with adding a Plugin-Dependencies Container
-     		<img src="images/300470913-15a7d7a7-d538-44ba-9b72-52b3b03b7dd1.png" />
      	</p>
+     	<p><img src="images/300470913-15a7d7a7-d538-44ba-9b72-52b3b03b7dd1.png"/></p>
      	<p>
      		Apply that fix and you will get the bnd defined dependencies resolved
-     		<img src="images/300471668-2049b0d9-adcd-4d85-86de-9ec03056fe5d.png" />
      	</p>
+     	<p><img src="images/300471668-2049b0d9-adcd-4d85-86de-9ec03056fe5d.png" width="800"/></p>
     </td>
   </tr>
-   <!-- ******************** End of PDE Compiler ********************** --> 
+  <!-- ******************** End of General ********************** -->
   <tr><td colspan="2"/></tr>
 </tbody>
 </table>
