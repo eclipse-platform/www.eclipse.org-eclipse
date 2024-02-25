@@ -50,30 +50,29 @@ ul {padding-left: 13px;}
       <td class="title">Viewer Limit in Workbench</td>
       <td class="content">
         <p>
-        Few most commonly used Eclipse views have enabled incremental view updates. 
-        These views will limit initially shown number of children to 1000 per parent element, and allow displaying next
-        batch of elements if requested. This increment number can be configured in the preferences under
-        <code>General -&#62; Initial maximum number of elements shown in views</code>.
+        Several of the most commonly used Eclipse views have enabled incremental view updates. 
+        These views limit the initially-shown number of children to 1000 per parent element, and support incrementally displaying the next
+        batch of elements. The increment number can be configured in the preferences under
+        <code>General &gt; Initial maximum number of elements shown in views</code> as follows:
         </p>
         <p><img src="images/viewer_limit_preference.png" alt="New preference"/></p>
         <p>
-        Note, that also other (3rd party) views can read the preference and enable 
-        this feature, but that must be explicitly done for each view. 
+        Other (3rd party) views can also read this preference to enable this feature for that view; this must be done explicitly for each view. 
         </p>
         <p>
-        Incremental view updates feature was added to avoid UI freezes in large viewers, where SWT/JFace
-        hit the limits of the underlying native widget machinery while trying to render
-        thousands of elements, leading to minute long UI freezes.
+        The support for incremental view updates was added to avoid UI freezes in large viewers, where SWT/JFace
+        approaches the limits of the underlying native widget machinery while trying to render
+        many thousands of elements, leading to minute long UI freezes.
         </p>
         <p>
-        Incremental view update feature is currently enabled in the following views:
+        Incremental view update is currently enabled in the following views:
         </p>
         <ol>
 			<li>Package Explorer</li>
 			<li>Project Explorer</li>
-			<li>Problems View</li>
-			<li>Java Outline View</li>
-			<li>JUnit View</li>
+			<li>Problems</li>
+			<li>Java Outline</li>
+			<li>JUnit</li>
 	    </ol>
 	    <p><img src="images/limit_in_package_explorer.png" alt="Package Explorer"/></p>
 	    <p><img src="images/limit_in_project_explorer.png" alt="Project Explorer"/></p>
@@ -83,9 +82,8 @@ ul {padding-left: 13px;}
 	    <p>
 		This new preference can be disabled in products by specifying
 		<code>org.eclipse.ui.workbench/largeViewLimit=0</code> in the
-		<code>plugin_customization.ini</code> file or via Oomph. 
-		In the same way the preference can be changed for products that need a lower
-		or higher limit. 	
+		<code>plugin_customization.ini</code> file or via an Oomph preference task. 
+		In the same way, the preference value can be changed for products that need a lower or higher limit.
         </p>
       </td>
   </tr>
@@ -94,7 +92,7 @@ ul {padding-left: 13px;}
       <td class="title">Filter Field for the Installation Details Dialog's Features Tab</td>
       <td class="content">
         <p>
-        Previously, the <b>Features</b> tab of the Installation Details dialog, unlike the dialog's Plug-ins tab, did not provide a filter field. 
+        Previously the <b>Features</b> tab of the Installation Details dialog, unlike the dialog's Plug-ins tab, did not provide a filter field. 
         That inconsistency has been addressed, making it easier to find details about a specific feature.
         </p>
         <p><img src="images/featuresTab.png" alt="Hovering over tabs" width="600" height="500"></p>
@@ -105,9 +103,9 @@ ul {padding-left: 13px;}
       <td class="title">Showing Resolved Workspace Path in Launch Dialog</td>
       <td class="content">
         <p>
-        A new feature has been implemented in Eclipse launch dialog, which now alert the users that, the tilde (~) character, 
-        that usually refers to the user's home directory according to many operating system shell semantics, is unresolved whenever 
-        they try to enter the character. Additionally, this enhancement displays the resolved path within a label, offering users 
+        A new feature has been implemented in the Eclipse launch dialog, which alerts the user that, the tilde (~) character, 
+        which usually refers to the user's home directory according to many operating system shell semantics, is unresolved whenever 
+        they enter that character. Additionally, this enhancement displays the resolved path within a label, offering user 
         clear insight into the specified path.
         </p>
         <p><img src="images/Launch_dialog.png" alt="Launch Dialog" width="600" height="300"></p>
@@ -118,7 +116,7 @@ ul {padding-left: 13px;}
       <td class="title">Displaying Search Patterns in the Title Bar of Quick Search Dialogs</td>
       <td class="content">
         <p>
-        Previously, distinguishing between the search patterns of the concurrently open <b>Quick Search</b> windows was challenging, as they were all 
+        Distinguishing between the search patterns of concurrently open <b>Quick Search</b> dialogs was challenging, as they were all 
         uniformly labeled as "Quick Search". A new functionality has been incorporated, wherein the search term is displayed alongside
         the "Quick Search" label in the title bar of the dialog. This enhancement ensures that each window is uniquely identifiable,
         now denoted as "Quick Search - " followed by the respective search term, thereby enhancing effortless navigation and improved user clarity.
@@ -140,16 +138,13 @@ ul {padding-left: 13px;}
       <td class="title">Compare Editor</td>
       <td class="content">
         <p>
-        The number of differences between two files are shown on the toolbar of compare editor 
-        which matches the change markers shown next to the scroll bar in compare editor. 
+        The number of differences between two files is shown on the toolbar of compare editor;
+        this is equal to the number of change markers shown next to the scroll bar in compare editor. 
         This feature is helpful when the files compared are large and have many differences that cannot be counted manually.
-           
         </p>
         <p><img src="images/compare_editor_differences.png" alt="Compare Editor"/></p>
         <p>
-			
-        The number of differences change based on the selection in the compilation unit of Java Structure Compare.
-        
+        The number of differences changes based on the selection in the compilation unit of Java Structure Compare.
         </p>
         <p><img src="images/java_structure_compare_selection_differences.png" alt="Compare Editor"/></p>
       </td>
@@ -158,8 +153,8 @@ ul {padding-left: 13px;}
       <td class="title">Default Editor for a Content Type</td>
       <td class="content">
         <p>
-        In case of multiple editors suitable to open a content type, you can declare one of these editors as
-        default editor (the preferred editor). Just select the editor in the associated editors list and press the
+        For the case that there are multiple editors suitable to open a given content type, the user can declare one of these editors as
+        default editor, i.e., the preferred editor. Simply select the editor in the associated editors list and press the
         <b>Default</b> button. If there is no default editor, the first suitable editor found is used to open the
         content type.
         </p>
@@ -188,9 +183,9 @@ ul {padding-left: 13px;}
   <tr id="tab_hover"> <!-- https://github.com/eclipse-platform/eclipse.platform.ui/pull/1645-->
       <td class="title">Hovering Over Editor / View Tabs</td>
       <td class="content">
-        <p>When using the <b>Light</b> theme on macOS the background color of unselected tabs 
+        <p>When using the <b>Light</b> theme on macOS, the background color of unselected tabs 
         now slightly changes color when the user hovers over them with the mouse cursor.
-        The same hovering behaviour already exists on windows and when using the <b>Dark</b> theme. 
+        The same hovering behaviour already exists on Windows and when using the <b>Dark</b> theme. 
         </p>
         <p><img src="images/hover.png" alt="Hovering over tabs"/></p>
       </td>
@@ -212,20 +207,25 @@ ul {padding-left: 13px;}
             A new preference has been introduced to enhance the user experience for managing views. With this preference, users have more control over how view tabs are displayed.
         </p>
         <p>
-            Previously, as the number of views increased within a view stack, the tab titles became too small, displaying only icons. This made it challenging for users to identify views solely based on icons, leading to a cluttered UI and decreased usability.
+            Previously, as the number of views increased within a view stack, the tab titles became very small, displaying only icons.
+            This made it more challenging for users to identify views solely based on icons, sometimes leading to a cluttered UI and decreased usability.
         </p>
         <p>
-            To address this issue, two options are now available in the <em>Tab icons and titles in view areas</em> section on the <em>General -&#62; Appearance</em> preference page:
+            To address this issue, two options are now available in the <em>Tab icons and titles in view areas</em> section on the <code>General &gt; Appearance</code> preference page:
         </p>
         <ul>
             <li>
-                <b>Always show full titles:</b> This option ensures that the full text of view titles is always visible in view tabs, regardless of the number of views present. It improves usability by making it easier for users to identify views. By default this option is <em>off</em>.
+                <b>Always show full titles:</b> This option ensures that the full text of each view title is always visible in each tab, regardless of the number of views present.
+                It improves usability by making it easier for users to identify views by label. 
+                By default this option is <em>off</em>.
                 <br><br>
                 <img src="images/preference_view_tabs_full_text.png" alt="Always show full titles" />
                 <img src="images/view_tabs_full_text.png" alt="Always show full titles" />
             </li>
             <li>
-                <b>Hide icons:</b> With this option selected, view icons are hidden, and only the full text of view titles is displayed in view tabs. This helps in decluttering the UI and ensures that the editor area remains the focal point, especially in scenarios where numerous views are open. By default this option is <em>off</em>.
+                <b>Hide icons:</b> With this option selected, view icons are hidden, and only the full text of each view title is displayed in each tab.
+                This helps in decluttering the UI and ensures that the editor area remains the focal point, especially in scenarios where numerous views are open.
+                By default this option is <em>off</em>.
                 <br><br>
                 <img src="images/preference_view_tabs_hide_icons.png" alt="Hide icons" />
                 <img src="images/view_tabs_hide_icons.png" alt="Hide icons" />
@@ -245,7 +245,7 @@ ul {padding-left: 13px;}
       <td class="title">Eclipse Launcher Reloads Configuration Files on Restart</td>
       <td class="content">
         <p>
-        Previously when Eclipse was restarted using <code>File &rarr; Restart</code> or <code>File &rarr; Switch Workspace</code> as well as after installing or updating from a p2 update site, 
+        Previously when Eclipse was restarted using <code>File &gt; Restart</code> or <code>File &gt; Switch Workspace</code> as well as after installing or updating from a p2 update site, 
         it restarted with same arguments as those in effect for the initial start. 
         Any manual changes made to the <code>eclipse.ini</code>, as well as changes made by  p2 touchpoints when installing or updating, were ignored.
         To actually apply the changes of a modified <code>eclipse.ini</code>, it was necessary to exit the application and restart it from the launcher.
@@ -262,12 +262,12 @@ ul {padding-left: 13px;}
       <td class="title">New 'wires' Command in the OSGi Console</td>
       <td class="content">
         <p>
-        Before it was quite hard to find out if/why a certain bundle is using some other bundles or are used by others.
-        There is now a new 'wires' command that when executed against a given bundle prints all wires that are used by the bundle and any wires it provides to other bundles.
-        This results in a very powerful tool to analyze dependency problems and find out why a bundle is actually used.
+        Previously it was quite challenging to determine if or why a certain bundle was using other bundles or was used by other bundles.
+        There is now a new <code>wires</code> command that, for a specified bundle, prints all wires that are used by the bundle and any wires it provides to other bundles.
+        This provides a powerful tool for analyzing dependency problems and for determining why a bundle is actually used.
         </p>
         <p>
-        Example if you open Host OSGi console:
+        For example, you can open Host OSGi console and use the <code>wires</code> command as follows:
         <pre>
 WARNING: This console is connected to the current running instance of Eclipse!
 ____________________________
@@ -371,23 +371,24 @@ and is consumed by:
     <td class="title">Windows Defender Automatic Configuration</td>
     <td class="content">
       <p>
-        On Mirosoft Windows 10 or later the Microsoft Defender can significantly slow down the startup and overall performance of Eclipse-based applications.
-        The Eclipse IDE can now detect if Microsoft Defender is active, inform you about it and if wanted can exclude itself from future Defender scans.
+        On Microsoft Windows 10 or later, the Microsoft Defender can significantly slow down the startup and overall performance of Eclipse-based applications.
+        The Eclipse IDE can now detect if Microsoft Defender is active, inform the user about it and, if desired, can exclude itself from future Defender scans.
       </p>
       <p><img src="images/windows-defender-autofix_startup-check.png" alt="Windows Defender autofix startup check"/></p>
       <p>
-        On Windows the <code>General -&#62; Startup and Shutdown</code> preference page offers further information 
-        and allows to disable the startup check for new installations and to run the exclusion check again for the running installation.
+        On Windows the <code>General &gt; Startup and Shutdown</code> preference page offers further information 
+        and allows the user to disable the startup check for new installations and to run the exclusion check again for the running installation.
       </p>
       <p><img src="images/windows-defender-autofix_preference-page.png" alt="Windows Defender autofix preference page"/></p>
       <p>
         Creators of custom Eclipse-based products that use the <code>org.eclipse.ui.ide.workbench</code> application and want to suppress the new startup check for their product
         can disable it by adding the following entry to their product's <em>preferenceCustomization</em> properties file:<br>
-        <code>org.eclipse.ui/windows.defender.startup.check.skip=true</code>
-        <br/>
-        To execute the startup check for products that run applications other than <code>org.eclipse.ui.ide.workbench</code> add the entry:<br>
-        <code>org.eclipse.ui/windows.defender.startup.check.app=&#60;application-id-in-use&#62;</code>
       </p>
+      <p><code>org.eclipse.ui/windows.defender.startup.check.skip=true</code></p>
+      <p>
+        To execute the startup check for products that run applications other than <code>org.eclipse.ui.ide.workbench</code> add the entry:<br>
+      </p>
+      <p><code>org.eclipse.ui/windows.defender.startup.check.app=&#60;application-id-in-use&#62;</code></p>
     </td>
   </tr>
   
@@ -395,13 +396,13 @@ and is consumed by:
       <td class="title">Improvement in Progress Bar Consistency and Smoothness</td>
       <td class="content">
         <p>
-        Previously, in Eclipse, the progress bar did not accurately reflect the progress relative to the total time. Specifically, the initial half of the progress bar advanced rapidly,
-        while a noticeable delay occurred in the latter half. This discrepancy was due to the utilisation of bundle changed events for progress determination, which resulted in an uneven
+        Previously in Eclipse, the progress bar did not accurately reflect the progress relative to the total time. Specifically, the initial half of the progress bar advanced rapidly,
+        while a noticeable delay occurred in the latter half. This discrepancy was due to the utilisation of bundle-changed events for progress determination, which resulted in an uneven
         progression due to the non-uniform nature of these events.
         </p>
         <p>
-        The progress is now made as a function of the service level events occurring while the workbench is being bootstrapped. This gives much more deterministic values around the progress
-        the workbench has achieved towards completion. This modification has led to a more consistent and smooth movement of the progress bar, leading to an overall improved user experience.
+        The progress is now determined as a function of the service level events occurring while the workbench is being bootstrapped. This gives more meaningful values about the progress
+        the workbench has achieved towards completion. This modification has led to a more consistent and smooth advancement of the progress bar, leading to an overall improved user experience.
         </p>
         <p><img src="images/Progress_bar.png" alt="Progress Bar" width="500" height="300"></p>
       </td>
