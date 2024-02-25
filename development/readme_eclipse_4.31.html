@@ -24,7 +24,7 @@ https://validator.w3.org/check?uri=http%3A%2F%2Fwww.eclipse.org%2Feclipse%2Fdeve
   <p>
     <a
       class="mozTocH1"
-      name="mozTocId299852">Last revised Feb 25, 2024</a>
+      name="mozTocId299852">Last revised Feb 24, 2024</a>
   </p>
   <!-- 
 This following link to www.eclipse.org should be commented out
@@ -188,7 +188,7 @@ after the release.
   </p>
   <p>
     Eclipse 4.31 is tested and validated on a number of reference platforms. For the complete list, see <a
-      href="https://www.eclipse.org/projects/project-plan.php?planurl=https://www.eclipse.org/eclipse/development/plans/eclipse_project_plan_4_29.xml#target_environments">Target Environments in the
+      href="https://www.eclipse.org/projects/project-plan.php?planurl=https://www.eclipse.org/eclipse/development/plans/eclipse_project_plan_4_31.xml#target_environments">Target Environments in the
       4.31 Plan</a>.
   </p>
   <p>
@@ -219,26 +219,26 @@ after the release.
     <a
       class="mozTocH3"
       name="mozTocId324309"> <strong>API Contract Compatibility:</strong> Eclipse SDK 4.31 is upwards contract-compatible with Eclipse SDK 4.30 except in those areas noted in the
-    </a><a href="https://www.eclipse.org/eclipse/development/porting/eclipse_4_29_porting_guide.html"><em>Eclipse 4.31 Plug-in Migration Guide</em></a>. Programs that use affected APIs and extension points
+    </a><a href="https://www.eclipse.org/eclipse/development/porting/eclipse_4_31_porting_guide.html"><em>Eclipse 4.31 Plug-in Migration Guide</em></a>. Programs that use affected APIs and extension points
     will need to be ported to Eclipse SDK 4.31 APIs. Downward contract compatibility is not supported. There is no guarantee that compliance with Eclipse SDK 4.31 APIs would ensure compliance with
     Eclipse SDK 4.30 APIs. Refer to <a href="https://wiki.eclipse.org/Evolving_Java-based_APIs"><em>Evolving Java-based APIs</em></a> for a discussion of the kinds of API changes that maintain contract
     compatibility.
   </p>
   <p>
     <strong>Binary (plug-in) Compatibility:</strong> Eclipse SDK 4.31 is upwards binary-compatible with Eclipse SDK 4.30 except in those areas noted in the <a
-      href="https://www.eclipse.org/eclipse/development/porting/eclipse_4_29_porting_guide.html"><em>Eclipse 4.31 Plug-in Migration Guide</em> </a>. Downward plug-in compatibility is not supported.
+      href="https://www.eclipse.org/eclipse/development/porting/eclipse_4_31_porting_guide.html"><em>Eclipse 4.31 Plug-in Migration Guide</em> </a>. Downward plug-in compatibility is not supported.
     Plug-ins for Eclipse SDK 4.31 will not be usable in Eclipse SDK 4.30. Refer to <a href="https://wiki.eclipse.org/Evolving_Java-based_APIs"> <em>Evolving Java-based APIs</em></a> for a discussion of
     the kinds of API changes that maintain binary compatibility.
   </p>
   <p>
     <strong>Source Compatibility:</strong> Eclipse SDK 4.31 is upwards source-compatible with Eclipse SDK 4.30 except in the areas noted in the <a
-      href="https://www.eclipse.org/eclipse/development/porting/eclipse_4_29_porting_guide.html"><em>Eclipse 4.31 Plug-in Migration Guide</em> </a>. This means that source files written to use Eclipse
+      href="https://www.eclipse.org/eclipse/development/porting/eclipse_4_31_porting_guide.html"><em>Eclipse 4.31 Plug-in Migration Guide</em> </a>. This means that source files written to use Eclipse
     SDK 4.31 APIs might successfully compile and run against Eclipse SDK 4.30 APIs, although this is not guaranteed. Downward source compatibility is not supported. If source files use new Eclipse SDK
     APIs, they will not be usable with an earlier version of the Eclipse SDK.
   </p>
   <p>
     <strong>Workspace Compatibility:</strong> Eclipse SDK 4.31 is upwards workspace-compatible with earlier 3.x and 4.x versions of the Eclipse SDK unless noted. This means that workspaces and projects
-    created with Eclipse SDK 4.30, 4.28, 4.27, 4.26, 4.25, 4.24, 4.23, 4.22, 4.21, 4.20, 4.19, 4.18, 4.17, 4.16, 4.15, 4.14, 4.13, 4.12, 4.11, 4.10, 4.9, 4.8, 4.7, 4.6, 4.5 and 4.4 can be successfully opened by Eclipse SDK 4.31 and upgraded to a 4.31 workspace. This includes both hidden metadata, which is localized to a
+    created with Eclipse SDK 4.30, 4.29, 4.28, 4.27, 4.26, 4.25, 4.24, 4.23, 4.22, 4.21, 4.20, 4.19, 4.18, 4.17, 4.16, 4.15, 4.14, 4.13, 4.12, 4.11, 4.10, 4.9, 4.8, 4.7, 4.6, 4.5 and 4.4 can be successfully opened by Eclipse SDK 4.31 and upgraded to a 4.31 workspace. This includes both hidden metadata, which is localized to a
     particular workspace, as well as metadata files found within a workspace project (e.g., the .project file), which may propagate between workspaces via file copying or team repositories. Individual
     plug-ins developed for Eclipse SDK 4.31 should provide similar upwards compatibility for their hidden and visible workspace metadata created by earlier versions; 4.31 plug-in developers are
     responsible for ensuring that their plug-ins recognize metadata from earlier versions and process it appropriately. User interface session state may be discarded when a workspace is upgraded.
