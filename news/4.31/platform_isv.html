@@ -45,21 +45,21 @@ ul {padding-left: 13px;}
       <td class="title">Viewer Limit in JFace</td>
       <td class="content">
         <p>
-        <code>org.eclipse.jface.viewers.ColumnViewer.setDisplayIncrementally(int incrementSize)</code> API was added to
-        JFace. If <code>incrementSize</code> is set to some positive value, viewer will show 
-        initially not more as this number of child elements per parent.
-        Additionally, viewer will also provide a way to user to show more elements if available/needed.
-        This API solves the problem with UI hangs in case viewer tries to display a large number of child elements per parent.
+        The API method <code>org.eclipse.jface.viewers.ColumnViewer.setDisplayIncrementally(int incrementSize)</code> was added to
+        JFace. If <code>incrementSize</code> is set to some positive value, the viewer will initially show 
+        no more than this number of child elements per parent element.
+        Additionally, the viewer provides a mechanism for a user to show more elements, if available, as needed.
+        This API solves the problem with UI hangs in case a viewer tries to display a very large number of child elements per parent element.
         </p>
         <p>
         This feature is currently implemented in <code>org.eclipse.jface.viewers.TableViewer</code> 
-        and <code>org.eclipse.jface.viewers.TreeViewer</code> but not enabled by default 
-        (<code>incrementSize</code> is zero by default).
+        and <code>org.eclipse.jface.viewers.TreeViewer</code> but is not enabled by default;
+        <code>incrementSize</code> is <code>0</code> by default.
         Each concrete viewer implementation is responsible to enable this feature if needed.
         </p>
-        <p>Note, that even if it was designed to be backwards compatible API (as much as possible),
-        there could be some regressions while converting existing viewers code to use
-        the new API. Please consider to test carefully your code if enabling this functionality!
+        <p>Note that even though this feature is designed to be backwards compatible API,
+        there remains the possibility of regressions when converting existing viewer to use
+        the new API. Please fully test your code when enabling this functionality!
         </p>
       </td>
   </tr>
@@ -69,9 +69,8 @@ ul {padding-left: 13px;}
       <td class="content">
         <p>Complementary to the JFace API above, <code>org.eclipse.ui.IWorkbenchPreferenceConstants</code> and
         <code>org.eclipse.ui.views.WorkbenchViewerSetup</code> API's were added.
-        This API provides default workbench preference access and convenient way for Viewers
-        that want apply default workbench value and don't want to write extra code to
-        keep watching for preference change.
+        This API provides default workbench preference access and a convenient way for viewers
+        to use default workbench values without writing extra code to listen for preference changes.
         </p>
       </td>
   </tr>
@@ -88,15 +87,15 @@ ul {padding-left: 13px;}
         <ul>
           <li>
             <code>org.eclipse.osgi.services</code><br/>
-            Its content has been replaced by the official OSGi bundles published to Maven-Central and it only reexports these <code>org.osgi.service.*</code> bundles.
-            Consumers are encouraged to replace their requirements on the bundle <code>org.eclipse.osgi.services</code> by imports of the <code>org.osgi.service.*</code> packages used, already now.
-            This allows the OSGi runtime to choose any suitable provider of the package that is available.
+            Its content has been replaced by the official OSGi bundles published to Maven-Central and it only re-exports these <code>org.osgi.service.*</code> bundles.
+            Consumers are already encouraged to replace their requirements on the bundle <code>org.eclipse.osgi.services</code> with imports of the actual required <code>org.osgi.service.*</code> packages.
+            This allows the OSGi runtime to choose any suitable, available provider of the package.
           </li>
           <li>
             <code>org.eclipse.equinox.device</code><br/>
             This implementation of the <code>org.osgi.service.device</code> service is not known to have any users and did not receive updates in the past.
             It is deprecated for removal from future releases without replacement.
-            In case there are users after all, they can continue to use past releases, use an alternative implementation or get in contact with the Equinox team.
+            In case there are users after all, they can continue to use past releases, use an alternative implementation, or get in contact with the Equinox team.
           </li>
         </ul>
       </td>

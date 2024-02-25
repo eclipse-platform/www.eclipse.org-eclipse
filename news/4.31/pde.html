@@ -50,19 +50,19 @@ ul {padding-left: 13px;}
     <td class="content">
       <p>
       	In the 4.28 release there was support added for <a href="https://eclipse.dev/eclipse/news/4.28/pde.php#automatic-manifest">Automatic Manifest Generation</a>,
-      	this is now enhanced to support bnd project templates, so you can easily create own templates or create new projects with existing ones.
+      	this is now enhanced to support bnd project templates, so you can easily create your own templates or create new projects with existing bnd templates.
       </p>
 	  <p>
-	    <img src="images/bndtemplates.png" />
+	    <img src="images/bndtemplates.png" width="500"/>
 	  </p>
   	  <p>
-  	  This will now create a new <b>template</b> project that can be used to create new projects:
+  	  This will now create a new <b>template</b> project that can be used to create new projects based on that template:
   	  </p>
       <p><img src="images/298588266-34cd0cd9-ffed-44ad-a63f-938d8c5850d6.png" width="800"/></p>
   	  <p>
-  	  When you now create another project you can select your created template project
+  	  When you now create another project, you can select such a template project as follows:
 	  </p>
-  	  <p><img src="images/custom_template_project.png" /></p>
+  	  <p><img src="images/custom_template_project.png" width="500"/></p>
   	  <p><img src="images/298589058-7e23f52b-0dd3-4e32-b11c-3d0cb0f7dced.png" width="800"/></p>
     </td>
   </tr>
@@ -102,8 +102,8 @@ ul {padding-left: 13px;}
     <td class="title">Declarative Services Annotations 1.4 Support</td>
     <td class="content">
       <p>
-      	The PDE Declarative Services Annotations support now allows generation of DS 1.4, for some highlight take a look here:
-      	<a href="https://blog.osgi.org/2018/03/osgi-r7-highlights-declarative-services.html">OSGi R7 Highlights: Declarative Services</a>
+      	PDE's Declarative Services Annotations support now supports the generation of DS 1.4.
+      	For details, read <a href="https://blog.osgi.org/2018/03/osgi-r7-highlights-declarative-services.html">OSGi R7 Highlights: Declarative Services</a>.
       </p>
     </td>
   </tr>
@@ -113,16 +113,17 @@ ul {padding-left: 13px;}
     <td class="title">Classpath Fix for bnd Projects</td>
     <td class="content">
     	<p>
-     		Assume you have imported a project that previously required bndtools to work and want to perform some small changes, at the moment you need to install another tooling,
-     		configure it and hope it does not interfere with your existing Eclipse install. Now the following is possible, you just go to the compile problem and choose "Fix Project Setup..."
+     		Suppose that you have imported a project into the workspace that previously required Bndtools to function correctly and now you want make some small changes.
+     		Previously you would need to install Bndtools, configure it, and hope that it's compatible with the existing Eclipse installation.
+     		With the latest release of PDE, you can just go to the compilation problem and choose "Fix Project Setup..." as follows:
      	</p>
      	<p><img src="images/300469967-7ca174ef-bda6-4330-987c-4476955a6d5f.png" width="800"/></p>
      	<p>
-     		Then you are presented with adding a Plugin-Dependencies Container
+     		This will present the option to add a Plug-in Dependencies Container:
      	</p>
-     	<p><img src="images/300470913-15a7d7a7-d538-44ba-9b72-52b3b03b7dd1.png"/></p>
+     	<p><img src="images/300470913-15a7d7a7-d538-44ba-9b72-52b3b03b7dd1.png" width="500"/></p>
      	<p>
-     		Apply that fix and you will get the bnd defined dependencies resolved
+     		Apply that fix and you will see the bnd-defined dependencies are resolved:
      	</p>
      	<p><img src="images/300471668-2049b0d9-adcd-4d85-86de-9ec03056fe5d.png" width="800"/></p>
     </td>
