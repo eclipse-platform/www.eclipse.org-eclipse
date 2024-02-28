@@ -85,7 +85,7 @@ ob_start();
       people, in alphabetical order, who contributed code to the project:
       
       Alexandr Miloslavskiy, Alexander Kurtakov, Amartya Parijat, Andr&#xC3¡s P&#xC3teri, Andrey Loskutov, Christoph L&#xC3;ubrich, Deepika Udayagiri, Denis Ungemach, Dietrich Travkin, Dinesh, Ed Merks, Elsa Zacharia, 
-      Federico Jeanne, Gesa Hentschke,  Hannes Wellmann, Heiko Klare, Hernan Martinez, Jay Arthanareeswaran, Jennifer Nerlich, Joerg Kubitz, John Dallaway, J&#xC3;rg Kubitz, Kellner, Niklas, Lars Vogel, 
+      Federico Jeanne, Gesa Hentschke, Hans-Peter Schaerges, Hannes Wellmann, Heiko Klare, Hernan Martinez, Jay Arthanareeswaran, Jennifer Nerlich, Joerg Kubitz, John Dallaway, J&#xC3;rg Kubitz, Kellner, Niklas, Lars Vogel, 
       Laurent Redor, Marcus Hoepfner, Matthias Becker, Maximilian Wittmer, Michael Bangas, Michael Keppler, Mickael Istria, Mihai Nita, M Kamel, Oleksandr Krutko, Patrick Tief, Patrick Ziegler, Peter Kr&#xC3tel, 
       Phillipus, Praveen S K, Patrick Tief, Raghunandana, Rahul Mohanan, Rob Stryker, Ronald Clauss, Sebastian Ratz, Shubham Waghmare, Simeon Andreev, Sravan Kumar Lakkimsetti, Suby S Surendran, Thomas Singer, 
       Thomas Watson, Tobias Melcher, Umair Sair, Vasili Gulevich and Wim Jongman
