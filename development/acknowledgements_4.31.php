@@ -84,9 +84,9 @@ ob_start();
      also provide timely updates so that we can release on time. Special thanks to the following list of
       people, in alphabetical order, who contributed code to the project:
       
-      Alexandr Miloslavskiy, Alexander Kurtakov, Amartya Parijat, Andr&#xC3¡s P&#xC3teri, Andrey Loskutov, Christoph L&#xC3;ubrich, Deepika Udayagiri, Denis Ungemach, Dietrich Travkin, Dinesh, Ed Merks, Elsa Zacharia, 
-      Federico Jeanne, Gesa Hentschke, Hans-Peter Schaerges, Hannes Wellmann, Heiko Klare, Hernan Martinez, Jay Arthanareeswaran, Jennifer Nerlich, Joerg Kubitz, John Dallaway, J&#xC3;rg Kubitz, Kellner, Niklas, Lars Vogel, 
-      Laurent Redor, Marcus Hoepfner, Matthias Becker, Maximilian Wittmer, Michael Bangas, Michael Keppler, Mickael Istria, Mihai Nita, M Kamel, Oleksandr Krutko, Patrick Tief, Patrick Ziegler, Peter Kr&#xC3tel, 
+      Alexandr Miloslavskiy, Alexander Kurtakov, Amartya Parijat, Andrey Loskutov, Christoph Läubrich, Deepika Udayagiri, Denis Ungemach, Dietrich Travkin, Dinesh, Ed Merks, Elsa Zacharia, 
+      Federico Jeanne, Gesa Hentschke, Hans-Peter Schaerges, Hannes Wellmann, Heiko Klare, Hernan Martinez, Jay Arthanareeswaran, Jennifer Nerlich, John Dallaway, Jörg Kubitz, Kellner, Niklas, Lars Vogel, 
+      Laurent Redor, Marcus Hoepfner, Matthias Becker, Maximilian Wittmer, Michael Bangas, Michael Keppler, Mickael Istria, Mihai Nita, M Kamel, Oleksandr Krutko, Patrick Tief, Patrick Ziegler, Peter Krätel, 
       Phillipus, Praveen S K, Patrick Tief, Raghunandana, Rahul Mohanan, Rob Stryker, Ronald Clauss, Sebastian Ratz, Shubham Waghmare, Simeon Andreev, Sravan Kumar Lakkimsetti, Suby S Surendran, Thomas Singer, 
       Thomas Watson, Tobias Melcher, Umair Sair, Vasili Gulevich and Wim Jongman
       
@@ -100,18 +100,18 @@ ob_start();
     <p>The JDT team would like to thank everyone who filed good enhancement requests, helped us improve quality by testing and filing good bug reports, and provided answers on JDT forums/newsgroups. Special thanks to the following list of
       people, in alphabetical order, who contributed code to the project: 
       
-      Alexander Kurtakov, Amartya Parijat, Andrey Loskutov, Christoph L&#xC3;ubrich, David Thompson, Ed Merks, Eric Milles, Federico Jeanne, Gayan Perera, Hannes Wellmann, Heiko Klare, Hope Hadfield, Jay Arthanareeswaran, 
-      Jeff Johnston, J&#xC3;rg Kubitz, Jozef Tomek, Kalyan Prasad Tatavarthi, Lars Vogel, Manoj  N Palat, Mateusz Matela, Michael Haubenwallner, Mickael Istria, Noopur Gupta, Ole Osterhagen, Patrick Ziegler, 
-      Piotr P. Karwasz, Rahul Mohanan, Rob Stryker, Hélios GILLES, Roland Grunberg, Simeon Andreev, Snjeza, Srikanth Sankaran, Stephan Herrmann and Suby S Surendran
+      Alexander Kurtakov, Amartya Parijat, Andrey Loskutov, Christoph Läubrich, David Thompson, Ed Merks, Eric Milles, Federico Jeanne, Gayan Perera, Hannes Wellmann, Heiko Klare, Hope Hadfield, Jay Arthanareeswaran, 
+      Jeff Johnston, Jörg Kubitz, Jozef Tomek, Kalyan Prasad Tatavarthi, Lars Vogel, Manoj  N Palat, Mateusz Matela, Michael Haubenwallner, Mickael Istria, Noopur Gupta, Ole Osterhagen, Patrick Ziegler, 
+      Piotr P. Karwasz, Rahul Mohanan, Rob Stryker, Hélios Gilles, Roland Grunberg, Simeon Andreev, Snjeza, Srikanth Sankaran, Stephan Herrmann and Suby S Surendran
     </p>
     
     <p>The Plug-in Development Environment team would like to thank the numerous contributors who continue to improve the component every release.
         Special thanks to those who contributed code:
-        Alshama MS, Andrey Loskutov, Alexander Kurtakov, Christoph L&#xC3;ubrich, Dinesh, Ed Merks, Hannes Wellmann, Heiko Klare, Jennifer Nerlich, J&#xC3;rg Kubitz, Lars Vogel, Michael Haubenwallner, Michael Keppler, Mickael Istria, Niklas Kellner and Rahul Mohanan 
+        Alshama MS, Andrey Loskutov, Alexander Kurtakov, Christoph Läubrich, Dinesh, Ed Merks, Hannes Wellmann, Heiko Klare, Jennifer Nerlich, Jörg Kubitz, Lars Vogel, Michael Haubenwallner, Michael Keppler, Mickael Istria, Niklas Kellner and Rahul Mohanan 
       </p>
 
     <p>The Equinox team would like to thank all the contributors that helped improve the project by filing bug reports and enhancement requests.  We also would like to thank the community of developers that have contributed to the Equinox code base this release:
-       Andrey Loskutov, Christoph L&#xE4;ubrich, Dietrich Travkin, Ed Merks, Elsa Zacharia, Federico Jeanne, Hannes Wellmann, Heiko Klare, Jay Arthanareeswaran, J&#xE4;rg Kubitz, Lars Vogel, Matthias Becker, Rahul Mohanan, Shubham Waghmare, Sravan Kumar Lakkimsetti and Suby S Surendran
+       Andrey Loskutov, Christoph Läubrich, Dietrich Travkin, Ed Merks, Elsa Zacharia, Federico Jeanne, Hannes Wellmann, Heiko Klare, Jay Arthanareeswaran, Jörg Kubitz, Lars Vogel, Matthias Becker, Rahul Mohanan, Shubham Waghmare, Sravan Kumar Lakkimsetti and Suby S Surendran
       </p>
       
   </div>
