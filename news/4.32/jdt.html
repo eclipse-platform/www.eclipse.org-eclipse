@@ -85,6 +85,33 @@ ul {padding-left: 13px;}
     <h2>Java Views and Dialogs</h2>
     </td>
   </tr>
+  <tr id="javadocStylingImprovements">
+    <!-- https://github.com/eclipse-jdt/eclipse.jdt.ui/pull/1074 -->
+    <td class="title">Javadoc styling improvements</td>
+    <td class="content">
+      Styling of the method signatures displayed in the Javadoc view and hover dialog has been improved to make them easier
+      to read.
+      <p>
+      Until now, the entire signature has been rendered as one continuous text making it a bit hard to identify specific parts.
+      This is especially difficult when the signature contained type variables of generic declarations:
+      </p>
+      <p><img src="images/javadoc-styling-old.png" alt="Old Javadoc styling"/></p>
+      Now, by default, parts of the signature are visually distinguished by using italic, lighter, or colorized text or by placing
+      them on separate lines.
+      <p><img src="images/javadoc-styling-new.png" alt="New Javadoc styling"/></p>
+      <p>
+      Coloring is used to distinguish different types used as type variables. Four different colors are pre-configured and are also
+      re-used repeatedly in case more unique types are present in displayed Javadoc.  Note: custom colors can be configured to
+      avoid this repetition.
+      </p>
+      <p>
+      All aspects of the new styling can be customized through the Javadoc styling menu accessible via a new menu button added to 
+      the toolbar of the Javadoc view and Javadoc hover (here visible after pressing F2), where the button itself toggles the new styling
+      functionality on/off.
+      </p>
+      <p><img src="images/javadoc-styling-menu.png" alt="New Javadoc styling menu"/></p>
+    </td>
+  </tr>
   <!-- ******************* End of Java Views and Dialogs ************************************* -->
 
   <!-- ******************* Java Compiler ************************************* -->
