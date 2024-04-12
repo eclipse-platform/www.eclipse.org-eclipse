@@ -112,6 +112,22 @@ ul {padding-left: 13px;}
       <p><img src="images/javadoc-styling-menu.png" alt="New Javadoc styling menu"/></p>
     </td>
   </tr>
+  
+  <tr id="batch-encapsulate-fields">
+	  <td class="title"><a href="#batch-encapsulate-fields">Enable encapsulating multiple fields from a single dialog</a></td>
+	  <td class="content">
+	  It is now possible to encapsulate multiple fields of a class and its references in other classes by invoking <b>Refactor > Encapsulate Fields...</b> on that class.
+	  <p>The new dialog looks like this:</p>
+	  <p><img src="images/new-self-encapsulate-fields-dialog.png" width="600"/></p>
+	  <p>The Encapsulate Fields option can be accessed either by the <b>menu bar > Refactor</b> or by right clicking while hovering over any field. </p>
+	  <p>The dialog now consists of a tree where you can check all the fields that need to be encapsulated along with their getter and setter.</p>
+	  <p>You can now select <b>Same as field</b> (default option) as the access modifier for the generated getters and setters.</p>
+	  <p>The operation would have the following results as displayed in the example below:</p> 
+	  <p><img src="images/ser-change-in-own-class.png" width="1200"/></p>
+	  <p><img src="images/ser-change-in-references.png" width="600"/></p>
+	  
+	  </td>
+  </tr>
   <!-- ******************* End of Java Views and Dialogs ************************************* -->
 
   <!-- ******************* Java Compiler ************************************* -->
