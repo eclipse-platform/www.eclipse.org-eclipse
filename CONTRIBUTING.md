@@ -10,12 +10,10 @@ If you think something should be in the "New and Noteworthy" that is not,
 or if you want to fix a typo, or similar, feel free to open a bug for the respective component or 
 provide a Gerrit review to add it.
 
+Instructions for contributing a New & Noteworthy entry
+------------------------------------------------------
 
-Contribute a news entry via Gerrit:
------------------------------------
-
-The corresponding project is enabled for Gerrit. To contribute a Gerrit review, clone the Git repository via the Gerrit server.
-You find the correct clone URL via [1].
+See [these instructions](news/instructions.html)
 
 For more Information:
 ---------------------
