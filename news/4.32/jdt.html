@@ -70,11 +70,24 @@ ul {padding-left: 13px;}
     <td class="title"><a href="#split-try-with-resources">Split try-with-resources</a></td>
     <td class="content">
       <!-- https://github.com/eclipse-jdt/eclipse.jdt.core/pull/1226 -->
-      A new quick assist has been added to allow splitting resources from a try-with-resources into an inner try-with-resources.  All resources from the point of the split are added to the new inner try-with-resources statement.  The assist is offered when <b>CTRL-1</b> is clicked while some part of a resource statement in the try-with-resources is selected.
+      A new quick assist has been added to allow splitting resources from a try-with-resources into an inner try-with-resources.  All resources from the point of the split are added to the new inner try-with-resources statement.  The assist is offered when <b>CTRL+1</b> is clicked while some part of a resource statement in the try-with-resources is selected.
       <p>For example, in the following example, we can select part of the second resources statement:</p>
       <p><img src="images/split-try-with-resources-before.png" alt="try-with-resources example before" width="800"/></p>
       <p>and choose to split from that point:</p>
       <p><img src="images/split-try-with-resources-after.png" alt="try-with-resources example after" width="800"/></p>
+    </td>
+  </tr>
+  <tr id="message-format-text-block">
+    <td class="title"><a href="#message-format-text-block">String concat to formatted text block</a></td>
+    <td class="content">
+      <!-- https://github.com/eclipse-jdt/eclipse.jdt.ui/issues/1366 -->
+      The quick assists to convert a mixed string concatenatation of literals and variables into a <b>MessageFormat</b> or <b>String.format</b> call have been enhanced to use a text block when using Java 15 or greater.  This is useful when there is purposeful alignment of the line indentation of the concatenation (e.g. a code snippet).
+      <p>For example, in the following example:<p>
+      <p><img src="images/original-string-concat.png" alt="original string concatenation" width="800"/></p>
+      <p>If we use <b>CTRL+1</b> with the cursor in the concatenation and choose <b>Use 'MessageFormat' for string concatenation</b> we get:</p>
+      <p><img src="images/message-format-after.png" alt="after changing to MessageFormat" width="800"/></p>
+      <p>or if we choose <b>Use 'String.format' for string concatenation</b> we get:</p>
+      <p><img src="images/string-format-after.png" alt="after changing to String.format" width="800"/></p>
     </td>
   </tr>
   <!-- ******************* End of Java Editor ************************************* -->
