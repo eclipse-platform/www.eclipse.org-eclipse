@@ -17,7 +17,7 @@ table.news tr td.title {vertical-align: top; font-weight: bold;}
 table.news tr td.content {vertical-align: top;}
 ul {padding-left: 13px;}
 </style>
-<title>Eclipse Project 4.x - New and Noteworthy</title>
+<title>Eclipse Project 4.32 - New and Noteworthy</title>
 </head>
 
 <body>
@@ -39,6 +39,32 @@ ul {padding-left: 13px;}
   <!-- ******************** Dialogs, Wizard and Views ********************** -->
   <tr>
     <td id="dialogs-wizards-views" class="section" colspan="2"><h2>Dialogs, Wizards and Views</h2></td>
+  </tr>
+  <tr id="osgirepositories">
+    <!-- https://github.com/eclipse-pde/eclipse.pde/pull/1168 -->
+    <td class="title">New Repositories View</td>
+    <td class="content">
+      <p>
+      	As part of ongoing work to <a href="https://bnd.discourse.group/t/announcement-bnd-and-pde-cooperation/372">integrate bnd(tools) and PDE</a> and create a set of reusable components there is now a new
+      	Bundle Repositories view available
+      </p>
+	  <p>
+	    <img src="images/pde-osgi-repo-show-view.png" />
+	  </p>
+  	  <p>
+  	  Once open it shows content similar to what the PDE Target Platform State view does when you select a classic PDE project:
+  	  </p>
+      <p><img src="images/pde-osgi-repo-view.png" /></p>
+  	  <p>
+  	  in addition to the simple text search it also offers an advanced search feature:
+	  </p>
+  	  <p><img src="images/pde-osgi-repo-advanced-search.png" width="500"/></p>
+  	  <p>If you select a bnd style project this is detected and shown like this</p>
+  	  <p><img src="images/pde-osgi-repo-view-bnd.png" width="800"/></p>
+  	  <p>Additional information about this view can be found <a href="https://bndtools.org/manual/repositories-view.html">here</a>, 
+  	  if there are demands for more features or improvements let <a href="https://github.com/eclipse-pde/eclipse.pde/issues">us know</a>
+  	  or just open a PR <a href="https://github.com/eclipse-pde/eclipse.pde/pulls">here</a>.</p>
+    </td>
   </tr>
   <!-- ******************** End ofDialogs, Wizard and Views ********************** -->
   
