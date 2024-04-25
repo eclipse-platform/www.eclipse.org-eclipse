@@ -90,6 +90,17 @@ ul {padding-left: 13px;}
       <p><img src="images/string-format-after.png" alt="after changing to String.format" width="800"/></p>
     </td>
   </tr>
+  <tr id="combine-decl-and-assigment">
+    <td class="title"><a href="#combine-decl-and-assignment">Combine declaration and assignment</a></td>
+    <td class="content">
+      <!-- https://github.com/eclipse-jdt/eclipse.jdt.core/pull/1330 -->
+      The <b>Remove overridden assignment</b> cleanup found in the <b>Unnecessary Code</b> tab of the clean-up configuration dialog has been enhanced to combine a variable declaration that is immediately followed by assignment into a declaration with assignment.
+      <p>For example, the following:</p>
+      <p><img src="images/decl-with-assignment-after.png" alt="declaration with assignment immediately after" width="800"/></p>
+      <p>will be transformed into:</p>
+      <p><img src="images/decl-with-assignment-combined.png" alt="declaration with assignment combined" width="800"/></p>
+    </td>
+  </tr>
   <!-- ******************* End of Java Editor ************************************* -->
 
   <!-- ******************* Java Views and Dialogs ************************************* -->
