@@ -97,6 +97,26 @@ ul {padding-left: 13px;}
     <h2>General Updates </h2>
     </td>
   </tr>
+  
+  <tr id="winows-on-arm">
+    <!-- https://github.com/eclipse-platform/eclipse.platform.releng.aggregator/issues/577 -->
+    <td class="title">Support for Windows on ARM</td>
+    <td class="content">
+      <p>
+        The Eclipse SDK is now also available for Windows on the ARM-64bit architecture.
+		Eclipse Packages are not yet provided for Windows on ARM due to missing Eclipse Temurin JDKs for that environment,
+		but the SDK should be completely functional on that platform, with only the following limitations:
+        <ul>
+          <li>Automatic file system refresh through native hooks is not yet available.</li>
+          <li>File system access in general might be slightly slower than on the <code>x86_64</code> architecture.</li>
+        </ul>
+		It is intended to remove all those restrictions in a future release.
+      </p>
+      <p>
+      </p>
+    </td>
+  </tr>
+  
   <!-- ******************* End of General Updates ************************************* -->
   <tr><td colspan="2"/></tr>
 </tbody>
