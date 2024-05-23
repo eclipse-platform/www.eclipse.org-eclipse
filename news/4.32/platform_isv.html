@@ -38,6 +38,24 @@ ul {padding-left: 13px;}
   <tr>
     <td id="Platform" class="section" colspan="2"><h2>Platform Changes</h2></td>
   </tr>
+
+  <tr id="treeviewer_autoexpand_singlechild"> <!-- https://github.com/eclipse-platform/eclipse.platform.ui/issues/1063 -->
+    <td class="title">Auto-Expand for Single Child Elements in JFace Tree Viewers</td>
+    <td class="content">
+      <p>
+        The API method
+        <code>org.eclipse.jface.viewers.AbstractTreeViewer.setAutoExpandOnSingleChildLevels(int level)</code> was added to
+        JFace. If this method is called on a tree viewer with some positive value or the constant <code>ALL_LEVELS</code>,
+        expanding a tree item that only has a single child element will lead to a recursive expansion of child items. The
+        recursive expansion stops once an item has more than one child item or the number of expansions reaches the value
+        passed to the method.
+      <p>
+      <p>
+        To ensure backwards compatibility, this feature is disabled by default. Each instantiation of a concrete
+        implementation of <code>AbstractTreeViewer</code> is responsible for enabling this feature if needed.
+      </p>
+    </td>
+  </tr>
   <!-- ******************** End of Platform ********************** -->
 
   <!-- *********************** SWT *********************** -->
