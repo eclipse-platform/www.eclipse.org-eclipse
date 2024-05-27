@@ -100,7 +100,7 @@ ul {padding-left: 13px;}
     <td class="title"><a href="#combine-decl-and-assignment">Combine declaration and assignment</a></td>
     <td class="content">
       <!-- https://github.com/eclipse-jdt/eclipse.jdt.core/pull/1330 -->
-      The <b>Remove overridden assignment</b> cleanup found in the <b>Unnecessary Code</b> tab of the clean-up configuration dialog has been enhanced to combine a variable declaration that is immediately followed by assignment into a declaration with assignment.
+      The <b>Remove overridden assignment</b> cleanup found in the <b>Unnecessary Code</b> tab of the clean-up configuration dialog has been enhanced to combine a variable declaration that is immediately followed by an assignment into a declaration with assignment.
       <p>For example, the following:</p>
       <p><img src="images/decl-with-assignment-after.png" alt="declaration with assignment immediately after" width="800"/></p>
       <p>will be transformed into:</p>
@@ -168,7 +168,7 @@ ul {padding-left: 13px;}
 	  It is now possible to encapsulate multiple fields of a class and its references in other classes by invoking <b>Refactor > Encapsulate Fields...</b> on that class.
 	  <p>The new dialog looks like this:</p>
 	  <p><img src="images/new-self-encapsulate-fields-dialog.png" width="800"/></p>
-	  <p>The Encapsulate Fields option can be accessed either by the <b>menu bar > Refactor</b> or by right clicking while hovering over any field. </p>
+	  <p>The Encapsulate Fields option can be accessed either by the <b>menu bar &gt; Refactor</b> or by right clicking while hovering over any field. </p>
 	  <p>The dialog now consists of a tree where you can check all the fields that need to be encapsulated along with their getter and setter.</p>
 	  <p>You can now select <b>Same as field</b> (default option) as the access modifier for the generated getters and setters.</p>
 	  <p>The operation would have the following results as displayed in the example below:</p> 
