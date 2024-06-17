@@ -66,6 +66,53 @@ ul {padding-left: 13px;}
     <h2>Text Editors </h2>
     </td>
   </tr>
+  
+  <tr id="find-replace-overlay"> <!-- https://github.com/eclipse-platform/eclipse.platform.ui/pull/1192 -->
+    <td class="title">Overlay for Performing Find/Replace Operations</td>
+    <td class="content">
+      <p>
+        The find/replace dialog for performing search and replace operations within an open editor now appears as a
+        seamlessly integrated overlay on top of the editor.
+        By default, it performs a "search as you type" and opens with the replace bar collapsed, thus focussing on the
+        mostly used search functionality.
+      </p>
+      <p><img src="images/overlay-top-replace-closed.png" alt="Find/Replace Overlay with Replace Bar Collapsed" /></p>
+      <p>
+        The replace bar can be opened on demand using the expand button or with the according keyboard shortcut
+        (<code>Ctrl</code>/<code>Cmd</code> + R).
+      </p>
+      <p><img src="images/overlay-top-replace-opened.png" alt="Find/Replace Overlay with Replace Bar Opened" /></p>
+      This overlay includes several search options that can be toggled on or off either through keyboard shortcuts or by
+      clicking the corresponding icons in the overlay.
+      The supported search options are:
+      </p>
+      <ul>
+        <li><img src="images/case-sensitive.svg" alt="Icon for Search Option: Case Sensitive" /> Case sensitive search
+          (<code>Ctrl</code>/<code>Cmd</code> + <code>Shift</code> + <code>C</code>)</li>
+        <li><img src="images/whole-word.svg" alt="Icon for Search Option: Whole Word" /> Whole word search
+          (<code>Ctrl</code>/<code>Cmd</code> + <code>Shift </code>+ <code>W</code>)</li>
+        <li><img src="images/regex.svg" alt="Icon for Search Option: Regular Expression" /> Search for a regular
+          expression (<code>Ctrl</code>/<code>Cmd</code> + <code>Shift</code> + <code>P</code>)</li>
+        <li><img src="images/search-in-area.svg" alt="Icon for Search Option: Search in Area" /> Search in a selected area
+          (<code>Ctrl</code>/<code>Cmd</code> + <code>Shift</code> + <code>A</code>)</li>
+      </ul>
+      <p>
+        In case you prefer the old find/replace dialog, you can disable the overlay in the preferences under <b>General ->
+          Editors -> Text Editors</b>.
+        You can also change in the preferences whether you prefer to have the overlay appear at the bottom instead of the
+        top of the editor.
+      </p>
+      <p>
+        <img src="images/overlay-options.png" alt="Preferences for Customizing Find/Replace UI Appearance" />
+      </p>
+      <p>
+        The overlay keeps a history of the past searches and updates the history everytime you perform a search.
+        Searches by "search as you type" will not be stored to the history. You can also navigate the history using the
+        arrow keys up or down.
+      </p>
+      <p><img src="images/overlay-top-search-history.png" alt="Example for Search History in Find/Replace Overlay" /></p>
+    </td>
+  </tr>
   <!-- ******************* End of Text Editors ************************************* -->
 
   <!-- ****************** Preferences ************************************* -->
