@@ -178,9 +178,6 @@ after the release.
     5, etc).</p>
   <p>In general, the 4.28 release of the Eclipse Project is developed on Java SE 17 VMs. As such, the Eclipse SDK as a whole is targeted at all modern, desktop Java VMs.</p>
   <p>
-    <a href="#appendix">Appendix 1</a> contains a table that indicates the class library level required for each bundle.
-  </p>
-  <p>
     There are many different implementations of the Java Platform running atop a variety of operating systems. We focus our testing on a handful of popular combinations of operating system and Java
     Platform; these are our <em>reference platforms</em>. Eclipse undoubtedly runs fine in many operating environments beyond the reference platforms we test. However, since we do not systematically
     test them we cannot vouch for them. Problems encountered when running Eclipse on a non-reference platform that cannot be recreated on any reference platform will be given lower priority than
@@ -219,20 +216,20 @@ after the release.
     <a
       class="mozTocH3"
       name="mozTocId324309"> <strong>API Contract Compatibility:</strong> Eclipse SDK 4.28 is upwards contract-compatible with Eclipse SDK 4.27 except in those areas noted in the
-    </a><a href="https://www.eclipse.org/eclipse/development/porting/eclipse_4_28_porting_guide.html"><em>Eclipse 4.28 Plug-in Migration Guide</em></a>. Programs that use affected APIs and extension points
+    </a><a href="https://help.eclipse.org/2023-06/topic/org.eclipse.platform.doc.isv/porting/eclipse_4_28_porting_guide.html"><em>Eclipse 4.28 Plug-in Migration Guide</em></a>. Programs that use affected APIs and extension points
     will need to be ported to Eclipse SDK 4.28 APIs. Downward contract compatibility is not supported. There is no guarantee that compliance with Eclipse SDK 4.28 APIs would ensure compliance with
     Eclipse SDK 4.27 APIs. Refer to <a href="https://wiki.eclipse.org/Evolving_Java-based_APIs"><em>Evolving Java-based APIs</em></a> for a discussion of the kinds of API changes that maintain contract
     compatibility.
   </p>
   <p>
     <strong>Binary (plug-in) Compatibility:</strong> Eclipse SDK 4.28 is upwards binary-compatible with Eclipse SDK 4.27 except in those areas noted in the <a
-      href="https://www.eclipse.org/eclipse/development/porting/eclipse_4_28_porting_guide.html"><em>Eclipse 4.28 Plug-in Migration Guide</em> </a>. Downward plug-in compatibility is not supported.
+      href="https://help.eclipse.org/2023-06/topic/org.eclipse.platform.doc.isv/porting/eclipse_4_28_porting_guide.html"><em>Eclipse 4.28 Plug-in Migration Guide</em> </a>. Downward plug-in compatibility is not supported.
     Plug-ins for Eclipse SDK 4.28 will not be usable in Eclipse SDK 4.27. Refer to <a href="https://wiki.eclipse.org/Evolving_Java-based_APIs"> <em>Evolving Java-based APIs</em></a> for a discussion of
     the kinds of API changes that maintain binary compatibility.
   </p>
   <p>
     <strong>Source Compatibility:</strong> Eclipse SDK 4.28 is upwards source-compatible with Eclipse SDK 4.27 except in the areas noted in the <a
-      href="https://www.eclipse.org/eclipse/development/porting/eclipse_4_28_porting_guide.html"><em>Eclipse 4.28 Plug-in Migration Guide</em> </a>. This means that source files written to use Eclipse
+      href="https://help.eclipse.org/2023-06/topic/org.eclipse.platform.doc.isv/porting/eclipse_4_28_porting_guide.html"><em>Eclipse 4.28 Plug-in Migration Guide</em> </a>. This means that source files written to use Eclipse
     SDK 4.28 APIs might successfully compile and run against Eclipse SDK 4.27 APIs, although this is not guaranteed. Downward source compatibility is not supported. If source files use new Eclipse SDK
     APIs, they will not be usable with an earlier version of the Eclipse SDK.
   </p>

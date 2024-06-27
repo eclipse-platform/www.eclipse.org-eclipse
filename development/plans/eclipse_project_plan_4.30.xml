@@ -339,7 +339,7 @@ compared to bugs which are reproducible on the target environments listed above.
 
 <p><strong>API Contract Compatibility:</strong> Eclipse SDK 4.30 will be upwards
   contract-compatible with Eclipse SDK 4.29 except in those areas noted in the
-  <a href="https://www.eclipse.org/eclipse/development/porting/eclipse_4_30_porting_guide.html" target="_top">
+  <a href="https://help.eclipse.org/2023-12/topic/org.eclipse.platform.doc.isv/porting/eclipse_4_30_porting_guide.html" target="_top">
     <em>Eclipse 4.30 Plug-in Migration Guide</em>
   </a>. Programs that use affected APIs and extension points will need to be ported
   to Eclipse SDK 4.30 APIs. Downward contract compatibility
@@ -351,7 +351,7 @@ compared to bugs which are reproducible on the target environments listed above.
   
 <p><strong>Binary (plug-in) Compatibility:</strong> Eclipse SDK 4.30 will be upwards
   binary-compatible with Eclipse SDK 4.29 except in those areas noted in the
-  <a href="https://www.eclipse.org/eclipse/development/porting/eclipse_4_30_porting_guide.html" target="_top">
+  <a href="https://help.eclipse.org/2023-12/topic/org.eclipse.platform.doc.isv/porting/eclipse_4_30_porting_guide.html" target="_top">
     <em>Eclipse 4.30 Plug-in Migration Guide</em>
   </a>. Downward plug-in compatibility is not supported. Plug-ins for Eclipse SDK
   4.30 will not be usable in Eclipse SDK 4.29. Refer to
@@ -361,7 +361,7 @@ compared to bugs which are reproducible on the target environments listed above.
   
 <p><strong>Source Compatibility:</strong> Eclipse SDK 4.30 will be upwards source-compatible
   with Eclipse SDK 4.29 except in the areas noted in the
-  <a href="https://www.eclipse.org/eclipse/development/porting/eclipse_4_30_porting_guide.html" target="_top">
+  <a href="https://help.eclipse.org/2023-12/topic/org.eclipse.platform.doc.isv/porting/eclipse_4_30_porting_guide.html" target="_top">
     <em>Eclipse 4.30 Plug-in Migration Guide</em>
   </a>. This means that source files written
   to use Eclipse SDK 4.30 APIs might successfully compile and run against Eclipse
