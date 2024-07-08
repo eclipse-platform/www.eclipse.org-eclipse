@@ -190,8 +190,8 @@ Eclipse 4.33 Endgame Plan.
 			</td>
 			<td rowspan="1">x86 64-bit</td>
 			<td rowspan="1">
-				OpenJDK 17.0.8 (LTS)<br/>
-				OpenJDK 21 (LTS)<br/>
+				Java 17.0.11 (LTS)<br/>
+				Java 21.0.2 (LTS)<br/>
 				Oracle Java 17.0.8 (LTS)<br/>
 				Oracle Java 21 (LTS)<br/>
 			</td>
@@ -208,8 +208,8 @@ Eclipse 4.33 Endgame Plan.
 				aarch64<br/>
 			</td>
 			<td rowspan="1">
-				OpenJDK 17.0.8 (LTS)<br/>
-				OpenJDK 21 (LTS)<br/>
+				Java 17.0.11 (LTS)<br/>
+				Java 21.0.2 (LTS)<br/>
 				Oracle Java 17.0.8 (LTS)<br/>
 				Oracle Java 21 (LTS)<br/>
 			</td>
@@ -218,7 +218,7 @@ Eclipse 4.33 Endgame Plan.
 		<tr class="c1">
 			<td rowspan="1">Power 64-bit LE</td>
 			<td rowspan="1">
-				OpenJDK 17.0.8 (LTS)<br/>
+				Java 17.0.11 (LTS)<br/>
 			</td>
 		</tr>
 		<!-- ************ SLES ************** -->
@@ -229,29 +229,29 @@ Eclipse 4.33 Endgame Plan.
 			</td>
 			<td rowspan="1">x86 64-bit</td>
 			<td rowspan="1">
-				OpenJDK 17.0.8 (LTS)<br/>
-				OpenJDK 21 (LTS)<br/>
+				Java 17.0.11 (LTS)<br/>
+				Java 21.0.2 (LTS)<br/>
 			</td>
 			<td rowspan="2">GTK 3</td>
 		</tr>
 		<tr class="c0">
 			<td rowspan="1">Power 64-bit LE</td>
 			<td rowspan="1">
-				OpenJDK 17.0.8 (LTS)<br/>
+				Java 17.0.118 (LTS)<br/>
 			</td>
 		</tr>
 
 		<!-- ************ Ubuntu ************** -->
 		<tr class="c1">
 			<td rowspan="1">Ubuntu Long Term Support</td>
-		    <td rowspan="1">22.04</td>
+		    <td rowspan="1">24.04</td>
 			<td rowspan="1">
 				x86 64-bit<br/>
 				aarch64<br/>
 			</td>
 			<td rowspan="1">
-				OpenJDK 17.0.8 (LTS)<br/>
-				OpenJDK 21 (LTS)<br/>
+				Java 17.0.11 (LTS)<br/>
+				Java 21.0.2 (LTS)<br/>
 			</td>
 			<td rowspan="1">GTK 3</td>
 		</tr>
@@ -260,15 +260,15 @@ Eclipse 4.33 Endgame Plan.
 		<tr class="c1">
 			<td rowspan="2">Apple macOS</td>
 			<td rowspan="1">
-				12<br/>
-				13
+				13<br/>
+				14
 			</td>
 			
 			<td rowspan="1">x86 64-bit</td>
 			
 			<td rowspan="1">
-				OpenJDK 17.0.8 (LTS)<br/>
-				OpenJDK 21 (LTS)<br/>
+				Java 17.0.11 (LTS)<br/>
+				Java 21.0.2 (LTS)<br/>
 				Oracle Java 17.0.8 (LTS)<br/>
 				Oracle Java 21 (LTS)<br/>
 			</td>
@@ -277,15 +277,15 @@ Eclipse 4.33 Endgame Plan.
 		</tr>
  	    <tr class="c0">
 			<td rowspan="1">
-				12<br/>
-				13
+				13<br/>
+				14
 			</td>
 			<td rowspan="1">
 				M1 (arm64)
 			</td>
             <td rowspan="1">
-            	OpenJDK 17.0.8 (LTS)<br/>
-            	OpenJDK 21 (LTS)<br/>
+            	Java 17.0.11 (LTS)<br/>
+            	Java 21.0.2 (LTS)<br/>
             </td>
    		</tr>
 	</table>
@@ -333,7 +333,7 @@ compared to bugs which are reproducible on the target environments listed above.
   to Eclipse SDK 4.33 APIs. Downward contract compatibility
   is not supported. There is no guarantee that compliance with Eclipse SDK 4.33
   APIs would ensure compliance with Eclipse SDK 4.32 APIs. Refer to
-  <a href="https://wiki.eclipse.org/index.php/Evolving_Java-based_APIs">
+  <a href="https://github.com/eclipse-platform/eclipse.platform/blob/master/docs/Evolving-Java-based-APIs.md">
     <em>Evolving Java-based APIs</em>
   </a> for a discussion of the kinds of API changes that maintain contract compatibility.</p>
   
