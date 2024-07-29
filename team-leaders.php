@@ -62,20 +62,13 @@ ob_start();
 					He is also interested in growing the contributors and better aligning with modern systems.
 		        </li>
 				<li>
-		          <b><a id="lars"></a>Lars Vogel, vogella GmbH</b><br>
-					Lars represents the user and adopter community of Eclipse. Lars is founder and CEO of the vogella GmbH based in Hamburg, Germany.
-					He is an active Platform UI and PDE committer, contributor to other Eclipse projects and co-leads the <a href="http://www.eclipse.org/e4/">e4</a>  and
-					<a href="https://www.eclipse.org/eclipse/platform-ui/">Platform UI</a> project.
-					His interests include API and UI simplification, code clean and growing the number of committers and contributors in the project.
-		        </li>
-				<li>
 		          <b><a id="tom"></a>Tom Watson, IBM Austin</b><br>
 					Tom is one of the initial committers of the Equinox project and was involved in the initial migration of the Eclipse runtime to the OSGi Framework.
 					Currently he leads the Equinox Project, represents IBM in the Eclipse Planning Council, and is also a member of the Eclipse Architecture Council.
 					He focuses is on modularity and the OSGi Framework design and development. Tom is also a leader in the specification development process at the OSGi Alliance.
 		        </li>
 		        <li>
-		          <b><a id="tom"></a>Jay Arthanareeswaran, IBM India</b><br>
+		          <b><a id="jay"></a>Jay Arthanareeswaran, IBM India</b><br>
 					Jay is a long time committer and a lead of the Eclipse JDT subproject. In his current role, 
 					Jay is responsible for the Eclipse Compiler, especially supporting new Java Language features. 
 					In the past, he has also contributed to the Orion and Flux Projects. Jay has been an Eclipse
@@ -89,6 +82,12 @@ ob_start();
 					which is published as a second expanded edition. 
 					He works hard to ensure that the barriers to entry for contributors to Eclipse's diverse projects is as low possible.
 		        </li>
+				<li>
+				  <b><a id="hannes"></a>Hannes Wellmann</b><br>
+					Hannes is a lead of the Eclipse PDE subproject and passionate about improving developer tooling and build tools.
+					He works on modernising Eclipse at its core and establishing new technologies.
+					He also supports new contributors and aims to strengthen and enlarge the Eclipse developer community.
+				</li>
 		      </ul>
 		</div>
 		<div class="homeitem3col">
@@ -195,6 +194,13 @@ ob_start();
 			      language design and implementation, semantic content publishing, web development,
 			      and playing the cello.
 		        </li>
+				<li>
+				  <b><a id="lars"></a>Lars Vogel, vogella GmbH</b><br>
+					Lars represents the user and adopter community of Eclipse. Lars is founder and CEO of the vogella GmbH based in Hamburg, Germany.
+					He is an active Platform UI and PDE committer, contributor to other Eclipse projects and co-leads the <a href="http://www.eclipse.org/e4/">e4</a>  and
+					<a href="https://www.eclipse.org/eclipse/platform-ui/">Platform UI</a> project.
+					His interests include API and UI simplification, code clean and growing the number of committers and contributors in the project.
+				</li>
 		      </ul>
 		</div>
 		
