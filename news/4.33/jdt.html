@@ -65,6 +65,21 @@ ul {padding-left: 13px;}
     <h2>Java Editor </h2>
     </td>
   </tr>
+
+ <tr id="enhanced-if-else-switch-cleanup">
+    <td class="title"><a href="#new-make-static-refactoring">Enhance if/else to switch CleanUp</a></td>
+    <td class="content">
+	The clean-up to convert an if/else-if/else block into a switch has been enhanced to support String literals and Enum constants.  As before, the if/else-if/else block must have at least 3 blocks and must look for constant expressions except for the last block which can be put into the <b>default</b> case.
+	<p>For a <b>String</b> variable, each <b>if/else</b> expression can check using the <b>String.equals()</b> method.  For an <b>Enum</b> the code simply uses the <b>==</b> operator.  Use of the <b>||</b> operator is allowed to check multiple values and corresponds to a fall-through in the resultant switch statement.</p>
+	<p>To use the clean-up, go to <b>Source &gt; Clean Up &gt; Code Style</b> page and select: <b>Convert if/else if/else chain with 3 blocks min to switch</b>.</p>
+	<p>For example, performing the clean-up on the following:</p>
+	<p><img src="images/ifelsestring-before.png" alt="convert if/else if/else to switch"/></p>
+	<p>will result in:</p>
+	<p><img src="images/ifelsestring-after.png" alt="converted if/else if/else to switch"/></p>
+    </td>
+ </tr>
+
+
   <!-- ******************* End of Java Editor ************************************* -->
 
   <!-- ******************* Java Views and Dialogs ************************************* -->
