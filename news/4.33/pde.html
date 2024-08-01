@@ -46,6 +46,25 @@ ul {padding-left: 13px;}
   <tr>
     <td id="editors" class="section" colspan="2"><h2>Editors</h2></td>
   </tr>
+  <tr id="manifest-editor-modify.">
+    <!-- https://github.com/eclipse-pde/eclipse.pde/pull/1285 -->
+	<!-- https://github.com/eclipse-pde/eclipse.pde/pull/1324 -->
+    <td class="title">New Modify button in Execution Environment section</td>
+    <td class="content">
+      <p>
+		A new <code>Modify..</code> button is added to the <em>Execution Environments</em> section of the <em>Overview</em> tab of the Manifest Editor.
+		       At the same time the <code>Up</code> and <code>Down</code> buttons are removed.
+		       Because technically the order is irrelevant, the specified environments are always sorted in ascending order.
+      </p>
+      <p>
+        <img src="images/EESection_Manifest.png" alt="Modify button in Manifest Editor"/>
+      </p>
+	<p>
+	        The new 'Modify...' button allows you to select a new environment to replace the existing one and update the <em>Java Build Path</em> configuration in one action.
+	        The <code>Modify</code> button is enabled only when a single environment is present in this section.
+	      </p>
+    </td>
+  </tr>
   <!-- ******************** End of Editors ********************** -->
 
   <!-- ******************** APITools ********************** -->
