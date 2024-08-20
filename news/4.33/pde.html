@@ -65,6 +65,23 @@ ul {padding-left: 13px;}
 	      </p>
     </td>
   </tr>
+  <tr id="macos-url-schemes">
+    <!-- https://github.com/eclipse-pde/eclipse.pde/pull/1326 -->
+	<!-- https://github.com/eclipse-pde/eclipse.pde/pull/1379 -->
+    <td class="title">Handling URL schemes in native macOS launcher</td>
+    <td class="content">
+      <p>
+        Since auto-registering link handlers on macOS breaks the code signatures of the .app bundle (<a href="platform.html#link-handlers-on-mac">more info</a>) an
+        alternative way to declare URL schemes handled by the native launcher was added to the PDE product file editor.
+      </p>
+      <p>
+        <img src="images/macos-url-schemes.png" alt="URL Schemes on macOS in Product Editor"/>
+      </p>
+	  <p>
+        This information is placed as <a href="https://developer.apple.com/documentation/bundleresources/information_property_list/cfbundleurltypes">CFBundleURLTypes</a> entries in the <b>Info.plist</b> file of the app bundle. A corresponding <code>org.eclipse.urischeme.uriSchemeHandlers</code> extension point implementation should then be contributed by one of the plug-ins of the product.
+      </p>
+    </td>
+  </tr>
   <!-- ******************** End of Editors ********************** -->
 
   <!-- ******************** APITools ********************** -->
