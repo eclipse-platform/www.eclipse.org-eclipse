@@ -137,6 +137,22 @@ ul {padding-left: 13px;}
     <h2>General Updates </h2>
     </td>
   </tr>
+  <tr id="link-handlers-on-mac"> <!-- https://github.com/eclipse-platform/eclipse.platform.ui/pull/1902 -->
+      <td class="title">Automatic Link Handler Registration on macOS</td>
+      <td class="content">
+        <p>
+        Registering link handlers on macOS breaks the signature of the signed Eclipse application. 
+        Breaking the signature has the effect that the Eclipse application cannot be started any more.
+        </p>
+        <p>
+        For signed Eclipse applications link handlers are no longer registered automatically at start-up and also cannot 
+        be registered manually on the <b>Link Handlers</b> preference page.
+        </p>
+        <p>
+        For unsigned Eclipse applications nothing has changed.
+        </p>
+      </td>
+  </tr>
   <!-- ******************* End of General Updates ************************************* -->
   <tr><td colspan="2"/></tr>
 </tbody>
