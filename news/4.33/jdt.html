@@ -96,6 +96,21 @@ ul {padding-left: 13px;}
     <h2>Java Compiler</h2>
     </td>
   </tr>
+
+  <tr id="removed-support-for-java7-and-below">
+    <td class="title"><a href="#removed-support-for-java7-and-below">Removed support for souce, target and release Java 7 and below</a></td>
+    <td class="content">
+    <!-- https://github.com/eclipse-jdt/eclipse.jdt.ui/pull/1367 -->
+    <p>The following compiler options are now supported only for Java 8 and above:
+    <pre>
+    --source &lt;release&gt;
+    --target &lt;release&gt;
+    --release &lt;release&gt;
+    </pre>
+    <p>I.e., from Eclipse 4.33 onward, the Eclipse IDE and  <code>ecj</code> will no longer be able to produce JRE 7 (and below) compliant byte code, as the options metioned above are supported only for Java 8+.</p>
+    <p>This is the equivalent of Java 21's <code>javac</code> only supporting those options for Java 8+.</p>
+    </td>
+    </tr>
   <!-- ******************* End of Java Compiler ************************************* -->
 
   <!-- ******************* Java Formatter ************************************* -->
