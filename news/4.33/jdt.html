@@ -67,7 +67,7 @@ ul {padding-left: 13px;}
   </tr>
 
  <tr id="enhanced-if-else-switch-cleanup">
-    <td class="title"><a href="#new-make-static-refactoring">Enhance if/else to switch CleanUp</a></td>
+    <td class="title"><a href="#enhanced-if-else-switch-cleanup">Enhance if/else to switch CleanUp</a></td>
     <td class="content">
 	The clean-up to convert an if/else-if/else block into a switch has been enhanced to support String literals and Enum constants.  As before, the if/else-if/else block must have at least 3 blocks and must look for constant expressions except for the last block which can be put into the <b>default</b> case.
 	<p>For a <b>String</b> variable, each <b>if/else</b> expression can check using the <b>String.equals()</b> method.  For an <b>Enum</b> the code simply uses the <b>==</b> operator.  Use of the <b>||</b> operator is allowed to check multiple values and corresponds to a fall-through in the resultant switch statement.</p>
@@ -79,6 +79,17 @@ ul {padding-left: 13px;}
     </td>
  </tr>
 
+ <tr id="enhanced-stringbuf-to-text-block-cleanup">
+    <td class="title"><a href="#enhnaced-stringbuf-to-text-block-cleanup">Enhance StringBuffer to Text Block</a></td>
+    <td class="content">
+	    The clean-up to convert a <b>StringBuffer</b> or <b>StringBuilder</b> append sequence to Text Block has been enhanced to recognize when the instance is used to supply a <b>String</b> or <b>CharSequence</b> method argument.  In the past, an explicit <b>toString()</b> call was required after the append sequence to trigger the clean-up if the <b>StringBuffer</b> or <b>StringBuilder</b> instance wasn't further appended or did not make other method calls that made the conversion to Text Block not possible.
+	    <p>To use the clean-up, go to the <b>Java Features</b> tab of the clean-up configuration dialog and under <b>Java 15</b>, select: <b>Convert String concatenation to Text Block</b> plus <b>Include StringBuffer or StringBuilder concatenations</b>.
+	<p>For example, performing the clean-up on the following code which used to do nothing:</p>
+	<p><img src="images/stringbuf-to-text-block-before.png" alt="before convert to text block"/></p>
+	<p>will result in:</p>
+	<p><img src="images/stringbuf-to-text-block-after.png" alt="after convert to text block"/></p>
+    </td>
+ </tr>
 
   <!-- ******************* End of Java Editor ************************************* -->
 
