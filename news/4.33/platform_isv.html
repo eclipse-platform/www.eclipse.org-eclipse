@@ -38,6 +38,24 @@ ul {padding-left: 13px;}
   <tr>
     <td id="Platform" class="section" colspan="2"><h2>Platform Changes</h2></td>
   </tr>
+  <tr id="IFileAPI"> <!-- https://github.com/eclipse-platform/eclipse.platform/pull/1397 -->
+    <td class="title">IFile API for create/read/write</td>
+    <td class="content">
+		Since 3.21 <code>org.eclipse.core.resources</code> defines new methods for:
+		<ul>
+		<li><code>IFile.create(byte[], boolean, boolean, IProgressMonitor)</code></li>
+		<li><code>IFile.create(byte[], int, IProgressMonitor)</code></li>
+		<li><code>IFile.write(byte[], boolean, boolean, boolean, IProgressMonitor)</code></li>
+		<li><code>IFile.setContents(byte[], boolean, boolean, IProgressMonitor)</code></li>
+		<li><code>IFile.setContents(byte[], int, IProgressMonitor)</code></li>
+		<li><code>IFile.readAllBytes()</code></li>
+		<li><code>IFile.readNBytes(int)</code></li>
+		<li><code>IFile.readAllChars()</code></li>
+		<li><code>IFile.readString()</code></li>
+		</ul>
+		Those methods are for convenience and optimized for performance - handling small files that do not require streaming.	
+    </td>
+  </tr>
   <!-- ******************** End of Platform ********************** -->
 
   <!-- *********************** SWT *********************** -->
