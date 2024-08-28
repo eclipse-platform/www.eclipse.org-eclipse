@@ -62,6 +62,21 @@ ul {padding-left: 13px;}
   <tr>
     <td id="SWT" class="section" colspan="2"><h2>SWT Changes</h2></td>
   </tr>
+  <tr id="BusyIndicatorAPI"> <!-- https://github.com/eclipse-platform/eclipse.platform.swt/pull/1266 -->
+    <td class="title">Enhanced BusyIndicator API for Futures</td>
+    <td class="content">
+		<p>The <code>BusyIndicator</code> class defines the following new method:</p>
+		<ul>
+		<li><code>static void showWhile(Future<?> future)</code></li>
+		</ul>
+		<p>
+		If called from a <code>Display</code> thread, it waits for the given <code>Future</code> to complete and provides busy feedback using the busy indicator. 
+		While waiting for completion, pending UI events are processed to  prevent UI freeze.
+		If there is no <code>Display</code> for the current thread, <code>Future.get()</code> will be called, ignoring any <code>ExecutionException</code>
+		and no busy feedback will be displayed.
+		</p>
+    </td>
+  </tr>
   <!-- *********************** End of SWT *********************** -->
   <tr><td colspan="2"/></tr>
 </tbody>
