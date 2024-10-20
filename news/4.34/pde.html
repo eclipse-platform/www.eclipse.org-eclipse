@@ -47,17 +47,17 @@ ul {padding-left: 13px;}
     <td id="editors" class="section" colspan="2"><h2>Editors</h2></td>
   </tr>
 
-  <tr id="version-ranges-for-iu-target-location">
+  <tr id="version-range-for-iu-target-location">
     <!--  https://github.com/eclipse-pde/eclipse.pde/pull/1245 -->
-    <td class="title">Support for version ranges and omitted version in IU target location</td>
+    <td class="title">Support for version ranges and omitted versions in IU target locations</td>
     <td class="content">
-      The PDE Target Editor now supports to specify a range as version of a <code>unit</code> or to omit the specification of a version entirely in <code>InstallableUnit</code> locations.
-      Without an explicit version the value <code>0.0.0</code> is used by default, which resolves to the latest version available.
+      In the PDE Target Editor it is now possible to specify a range as <code>version</code> of a <code>unit</code> or to omit the specification of a <code>version</code> attribute entirely in <code>InstallableUnit</code> locations.
+      Without an explicit version the value <code>0.0.0</code> is used by default, which always resolves to the latest version available.
       All of the following variants to specify a version in the <code>Source</code> tab of the Target Editor are now possible:
       <p><img src="images/target-version-ranges-source.png" alt="Version ranges and omitted version in an IU target location"/></p>
-      It is also possible to define these advance versions specifications through the UI of the Target Editor.
+      It is also possible to define these advanced versions specifications through the UI of the Target Editor.
       After clicking the <code>Edit</code> button for a location, you can specify a version range for a selected unit directly in the table.
-      Entering <code>latest</code> is equivalent to <code>0.0.0</code> and always resolves to the latest version of that unit.
+      Entering <code>latest</code> is equivalent to <code>0.0.0</code> and resolves to the latest version of that unit.
       <p><img src="images/target-version-ranges-ui.png" alt="Editing of version ranges and latest version in the UI editor of an IU target location"/></p>
     </td>
    </tr>
