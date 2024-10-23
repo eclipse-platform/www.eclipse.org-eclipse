@@ -65,6 +65,32 @@ ul {padding-left: 13px;}
     <h2>Java Editor </h2>
     </td>
   </tr>
+  <tr id="boolean-if-else-cleanup">
+    <td class="title"><a href="#boolean-if-else-cleanup">New boolean if/else clean-up</a></td>
+    <td class="content">
+        A new clean-up has been created to combine two opposite boolean returns controlled by an if statement into a single return where possible.
+	<p>To use the clean-up, go to the <b>Code Style</b> tab of the clean-up configuration dialog under <b>Control statements</b> and  select: <b>Simplify boolean if/else to single return if possible</b>.</p>
+	<p>For example, applying the clean-up to the following code:</p>
+        <p><img src="images/ifelseboolean-before.png" alt="convert boolean if/else to single return before"/></p>
+	<p>results in:</p>
+        <p><img src="images/ifelseboolean-after.png" alt="convert boolean if/else to single return after"/></p>
+    </td>
+  </tr>
+  <tr id="if-else-to-switch-null-handling">
+    <td class="title"><a href="#if-else-to-switch-null-handling">Null handling for if/else to switch clean-up</a></td>
+    <td class="content">
+	    The if/else to switch clean-up has been enhanced to properly handle the case where the value can be null.  In the if/else statement, this is handled intrinsically either by an else statement or falling through the if/else if, but when converting to a switch statement, either the switch must be embedded in an if statement to test for null or for Java 21 or above, a <b>case null</b> statement needs to be added.
+	    <p>The clean-up is accessed on the <b>Code style</b> tab of the clean-up configuration dialog under <b>Control statements</b> and selecting: <b>Convert if/else if/else chain with 3 blocks min to switch</b>.</p>
+	    <p>Applying the clean-up to the following code:<p>
+            <p><img src="images/ifelse-to-switch-null-before.png" alt="convert if/else to switch before"/></p>
+	    <p>results in the following when Java version is less than 21</p>
+            <p><img src="images/ifelse-to-switch-null-after.png" alt="convert if/else to switch after"/></p>
+	    <p>and results in the following when the Java release is set to 21 and up:</p>
+            <p><img src="images/ifelse-to-switch-null-21-after.png" alt="convert if/else to switch after for Java 21 and up"/></p>
+
+    </td>
+  </tr>
+
   <!-- ******************* End of Java Editor ************************************* -->
 
   <!-- ******************* Java Views and Dialogs ************************************* -->
