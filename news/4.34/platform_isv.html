@@ -44,6 +44,35 @@ ul {padding-left: 13px;}
   <tr>
     <td id="SWT" class="section" colspan="2"><h2>SWT Changes</h2></td>
   </tr>
+  <tr id="display_rescaling_windows"> <!-- https://github.com/eclipse-platform/eclipse.platform.swt/pull/1358 -->
+    <td class="title">Monitor-Specific UI Rescaling in Display Class (Windows only)</td>
+    <td class="content">
+      <p>
+        The API methods
+        <code>org.eclipse.swt.widgets.Display#setRescalingAtRuntime(boolean)</code> and
+        <code>org.eclipse.swt.widgets.Display#isRescalingAtRuntime()</code> have been added to SWT.
+        These methods allow to enable, disable, and retrieve the state of the "rescaling at runtime" functionality.
+        When enabled, it makes shells and their contents sharply rescale according to the current monitor they are placed on
+        or moved to.
+      <p>
+      <p>
+        Note that in order to work as expected, enabling the rescaling at runtime functionality will also set the DPI
+        awareness of the Display's thread to <a
+          href="https://learn.microsoft.com/en-us/windows/win32/hidpi/setting-the-default-dpi-awareness-for-a-process">PerMonitorV2</a>.
+        This happens even if the DPI awareness of the Java process itself is set to some different value.
+      </p>
+      <p>
+        To ensure backwards compatibility, this feature is disabled by default. The feature has to be enabled for a
+        <code>Display</code> it is supposed to be used for. It needs to be activated before a shell is created to take
+        proper effect.
+        As an example, the feature can be enabled in Eclipse applications via a preference, see <a
+          href="platform.php#rescale-on-runtime-preference">this news</a>.
+      </p>
+      <p>
+        <b>Note:</b> Those methods will currently only have an effect on Windows.
+      </p>
+    </td>
+  </tr>
   <!-- *********************** End of SWT *********************** -->
   <tr><td colspan="2"/></tr>
 </tbody>
