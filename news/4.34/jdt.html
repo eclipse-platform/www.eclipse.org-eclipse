@@ -76,6 +76,27 @@ ul {padding-left: 13px;}
         <p><img src="images/ifelseboolean-after.png" alt="convert boolean if/else to single return after"/></p>
     </td>
   </tr>
+  <tr id="unused-to-unnamed-quickfix">
+    <td class="title"><a href="#unused-to-unnamed-quickfix">Rename unused to unnamed quickfix/cleanup</a></td>
+    <td class="content">
+        The quick-fix/clean-up for unused local variables has been enhanced when using Java 22 or above to rename to the unnamed variable ("_") where appropriate.  These situations include:
+	<ul>
+		<li>unused lambda parameters</li>
+		<li>unused try-with-resources resources</li>
+		<li>unused pattern variables in switch</li>
+		<li>unused variables in enhanced for statement</li>
+		<li>unused variables in regular for statement</li>
+	</ul>
+	<p>In these cases, a quick-fix will be offered to rename to the unnamed variable.  The quick-fix is a multi-fix and will also offer to fix multiple instances of the problem.</p>
+	<p>For example, hovering one of the unused variables in the file will show:</p>
+	<p><img src="images/unnamed-quickfix-before.png" alt="rename to unnamed variable before"/></p>
+	<p>and selecting to fix multiple problems of the same category results in:</p>
+	<p><img src="images/unnamed-quickfix-after.png" alt="rename to unnamed variable after"/></p>
+	<p>The new rename functionality is embedded into the existing <b>Remove unused local variables</b> clean-up found on the <b>Unnecessary Code</b> tab of the clean-up configuration dialog.  The clean-up 
+	will rename to the unnamed variable for unused locals or lambda parameters when
+	the compliance level is 22 or above.</p>
+    </td>
+  </tr>
   <tr id="if-else-to-switch-null-handling">
     <td class="title"><a href="#if-else-to-switch-null-handling">Null handling for if/else to switch clean-up</a></td>
     <td class="content">
