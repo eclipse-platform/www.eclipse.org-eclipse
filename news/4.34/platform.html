@@ -181,6 +181,43 @@ ul {padding-left: 13px;}
         </p>
       </td>
     </tr>
+    
+    <tr id="edge-browser-improvements"> <!-- https://github.com/eclipse-platform/eclipse.platform.swt/issues/1466 -->
+      <td class="title">Improvements to Edge Browser (Windows only)</td>
+      <td class="content">
+        <p>
+          In an effort to make it the default browser for Windows, several issues that affected the Edge browser 
+          have been addressed in this release. Some of them are:
+          <ul>
+          	<li>Added support for basic authentication</li>
+          	<li>Let it inherit the proper light/dark theme from Eclipse instead of Windows</li>
+          	<li>Fixed obscure "No more handles" issues</li>
+          	<li>Fixed deadlocks that occurred due to the way Edge handles requests</li>
+          	<li>Fixed some styling issues in the welcome page for Eclipse</li>
+          	<li>Fixed some issues with JavaScript being used in an empty (local) page</li>
+          </ul>
+        </p>
+        <h4>Using Edge</h4>
+        <fieldset>
+        	<legend><b>Warning</b></legend>
+			Changing the size of the browser window can currently cause flickering effects, which are currently being resolved. 
+			People who are sensitive to this should therefore either not use Edge at the moment or possibly avoid resizing browser windows.
+		</fieldset>
+        <p>
+          Edge still <b>isn't</b> the default browser but it is mature enough that it can be activated and used already.
+          In order to replace IE with Edge as the browser of choice, you can either: 
+          <ol type="a">
+          	<li>Enable the <strong>monitor-specific UI scaling</strong> 
+          		(see <a href="#rescale-on-runtime-preference">above</a>) or</li>
+          	<li>Set the parameter <b>-Dorg.eclipse.swt.browser.DefaultType=edge</b> in your <i>eclipse.ini</i></li>
+          </ol>
+        </p>
+        <p>
+          We are looking forward to the community using Edge and reporting back any findings via our umbrella issue
+          (<a href="https://github.com/eclipse-platform/eclipse.platform.swt/issues/1466">#1466</a>)! 
+        </p>
+      </td>
+    </tr>
   </tr>
   <!-- ******************* End of General Updates ************************************* -->
   <tr><td colspan="2"/></tr>
