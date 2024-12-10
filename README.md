@@ -1,9 +1,20 @@
-Eclipse home page
-=================
+Eclipse project New & Noteworthy
+================================================
 
-This repository is the holds the content for the https://www.eclipse.org/eclipse/ website.
+The eclipse/news project contains the "New and Noteworthy" descriptions for Eclipse SDK milestones and releases.
 
-How to contribute
------------------
+Contents are published under https://www.eclipse.org/eclipse/news/
 
-See [CONTRIBUTING.md](CONTRIBUTING.md)
+If you think something should be in the "New and Noteworthy" that is not,
+or if you want to fix a typo, or similar, feel free to open an issue for the respective component or
+provide a pull request review to add it.
+
+Instructions for contributing a New & Noteworthy entry
+------------------------------------------------------
+
+See [these instructions](https://eclipse.dev/eclipse/news/instructions.html) ([raw](news/instructions.html))
+
+For more Information:
+---------------------
+
+For more details, see https://github.com/eclipse-platform/.github/blob/main/CONTRIBUTING.md
