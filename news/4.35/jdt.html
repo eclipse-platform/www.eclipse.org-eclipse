@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta name="copyright" content="Copyright (c) Eclipse contributors and others 2018, 2019. This page is made available under license. For full details see the LEGAL in the documentation book that contains this page."/>
+<meta name="copyright" content="Copyright (c) Eclipse contributors and others 2018, 2025. This page is made available under license. For full details see the LEGAL in the documentation book that contains this page."/>
 <meta http-equiv="Content-Language" content="en-us"/>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 <link rel="STYLESHEET" href="news.css" type="text/css"/>
@@ -97,6 +97,62 @@ ul {padding-left: 13px;}
     <h2>Debug</h2>
     </td>
   </tr>
+  <tr id="compare-objects">
+    <td class="title">Compare Objects from Variables View</td>
+      <td class="content">
+          Developers can now easily compare elements in objects of the same type, such as <b><i>Lists, CharSequences, Sets, Iterables, Maps, Wrappers, Queues, and Deques</i> </b>, directly from the variables view. 
+          This feature provides a summarised overview of their similarities and differences.
+           For other Java types, comparisons will be made based on their fields (if available), or by their references if fields are not present.
+           This eliminates the need to write explicit comparison code in the debug shell or manually inspect each collection.<br> Simply stop at a breakpoint, select at least two variables of the same type, and view the comparison results..
+          <br>
+          <br>Here's an example <br>
+          We have stopped at line 26 which left us 4 objects of List types, now all we have to do is just select all 4 and choose "<b>Compare</b>" from right click
+          <p>
+              <img src="images/compareObjects_Menu.png" alt="Compare objects from variables view"/>
+          </p>
+          <br> Results
+          <p>
+              <img src="images/compareObjects_Results1.png" alt="Results of comparison"/>
+          </p>
+          <br>
+          Another example of comparing two char sequences <br>
+          <p>
+              <img src="images/compareObjects_Results2.png" alt="Results of comparison"/>
+          </p>
+          <br> Maps <br>
+           <p>
+              <img src="images/compareObjects_Results3.png" alt="Results of comparison"/>
+          </p>
+          <br> Custom Types (Fields available) <br>
+           <p>
+              <img src="images/compareObjects_Results4.png" alt="Results of comparison"/>
+          </p>
+          <br> Custom Types (Fields unavailable) <br>
+           <p>
+              <img src="images/compareObjects_Results5.png" alt="Results of comparison"/>
+          </p>
+      </td>
+     </td>
+ </tr>
+ 
+ <tr id="Detailformatter-for-primitives">
+    <td class="title">Detail formatters for primitives and arrays</td>
+      <td class="content">
+          Developers can now add custom formatters for Java primitives and arrays. An additional option to configure formatters for primitives is available under<b> Preferences -> Detail Formatters -> Add </b>.
+          <p>
+              <img src="images/detailFormatters_Primitives.png" alt="detail formatters option"/>
+          </p><br>
+           <p>
+              <img src="images/detailFormatters_Primitives2.png" alt="detail formatters option"/>
+          </p>
+          Custom formatting can also be accessed from the variables view menu options.<br>
+           <p>
+              <img src="images/detailFormatters_Primitives3.png" alt="detail formatters option"/>
+          </p>
+          <br>
+      </td>
+     </td>
+ </tr>
   <!--************************ End of Debug ******************************** -->
 
   <!-- *********************** JDT Developers ******************************** -->
