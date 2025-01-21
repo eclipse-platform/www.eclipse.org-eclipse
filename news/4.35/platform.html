@@ -42,6 +42,19 @@ ul {padding-left: 13px;}
     <td id="ViewsAndDialogs" class="section" colspan="2">
     <h2>Views, Dialogs and Toolbar </h2>
     </td>
+	<tr id="FilterByCategory">                    <!-- https://github.com/eclipse-platform/eclipse.platform.ui/pull/2579 -->
+	    <td class="title">Filter by Category</td> <!-- https://github.com/eclipse-platform/eclipse.platform.ui/pull/2602 -->
+	    <td class="content">
+	      <p>
+	      The search filter in the "Import/Export" wizard, as well as the "Show View" dialog has been extended to also support
+		  category names. On a match, all elements in the category are shown. This changes the previous behavior where only
+		  entries were matched and searching by a category would result in an empty tree.
+	      </p>
+		  <p>
+		      <img src="images/filterByCategory.png" alt="Filter import wizards by &quot;General&quot;"/>
+		  </p>
+	    </td>
+	</tr>
   </tr>
   <!-- ******************* End of Views, Dialogs and Toolbar ************************************* -->
 
