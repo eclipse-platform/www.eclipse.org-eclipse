@@ -137,6 +137,44 @@ ul {padding-left: 13px;}
       </p>
     </td>
   </tr>
+  <tr id="edgeBrowserDefault"> <!-- https://github.com/eclipse-platform/eclipse.platform.swt/issues/1466 -->
+    <td class="title">Edge as Default Browser on Windows</td>
+    <td class="content">
+      <p>
+        Edge replaces Internet Explorer as the default browser instantiated by SWT. Internet Explorer is outdated and out of
+        maintenance. It is replaced with the WebView2 engine used by Edge. Switching to this modern engine will ensure that
+        use cases keep working or enables uses cases that are not working with Internet Explorer anymore or have never been
+        working with it. As an example, if an Eclipse application is executed in dark mode, according CSS styling of web
+        pages will be applied if embedded via:<br>
+        <code>@media (prefers-color-scheme: dark) { ... }</code>
+      </p>
+      <p>
+        In consequence, every SWT- and Eclipse-based product will by default now create instances of the <code>Browser</code>
+        class based on Edge when running on Windows. Some notable examples are the welcome page and help in Eclipse products
+        as well as the Javadoc view and the element info popups.
+      </p>
+      <p>
+        <b>Feedback:</b> In case you experience any issues or limitations with the Edge browser implementation, please report
+        them back in the umbrella issue (<a href="https://github.com/eclipse-platform/eclipse.platform.swt/issues/1466">#1466</a>).
+      </p>
+      <p>
+        In case you want to or need to still use Internet Explorer in your Eclipse product, you can:
+        <ul>
+          <li>Switch to Internet Explorer for a complete product by setting the VM argument (for example in your
+            <i>eclipse.ini</i>: <code>-Dorg.eclipse.swt.browser.DefaultType=IE</code>
+          </li>
+          <li>Programmatically create a single browser instance with Internet Explorer by passing the flag
+            <code>SWT.IE</code> to the browser constructor
+          </li>
+          <li>
+            Create a fragment for host plug-in <code>org.eclipse.swt</code> containing a class with qualified name
+            <code>org.eclipse.swt.browser.BrowserInitializer</code> that sets the system property
+            <code>-Dorg.eclipse.swt.browser.DefaultType=IE</code> in its static initializer.
+          </li>
+        </ul>
+      </p>
+    </td>
+  </tr>
 
   <!-- ******************* End of General Updates ************************************* -->
   <tr><td colspan="2"/></tr>
