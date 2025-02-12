@@ -66,7 +66,7 @@ ul {padding-left: 13px;}
     </td>
   </tr>
   <tr id="new-folding">
-    <td class="title">Enhanced Folding for Control Statements in Eclipse JDT</td>
+    <td class="title">Enhanced folding for control statements</td>
       <td class="content">
         This feature enhances the code folding mechanism in Eclipse JDT by enabling folding for control statements like if, while, and for. </b>
         It improves code readability and navigation by allowing developers to collapse and expand structured blocks.
@@ -78,6 +78,73 @@ ul {padding-left: 13px;}
         <p>
           <img src="images/settings_folding.png" alt="Settings view of the folding"/>
         </p><br>
+      </td>
+    </td>
+  </tr>
+  <tr id="new-add-permitted-types-quick-fix">
+    <td class="title">New add permitted types quick-fix</td>
+      <td class="content">
+	 A new quick-fix has been created for Java 21 and up to add 
+	 permitted types as case labels to
+	 a switch statement/expression that specifies a variable
+	 for the expression that has a sealed type
+	 and the switch has no case labels added yet.  The quick-fix will
+	 also add <b>null</b> and <b>default</b> case labels to make
+	 the switch exhaustive.
+	 <p>In the following example, there is a sealed type: <b>Shape</b> that
+	 only permits <b>Circle</b> and <b>Crescent</b> classes to extend it.</p>
+	 <img src="images/sealed-shape.png" alt="Shape class"/>
+	 <img src="images/sealed-circle.png" alt="Circle class"/>
+	 <img src="images/sealed-crescent.png" alt="Crescent.class"/>
+	 <p>The following code gets a compiler error and the new
+	 <b>Add permitted type cases</b> quick-fix is offered:</p>
+	 <img src="images/sealed-before.png" alt="Sealed test before"/>
+	 <p>After selecting this quick-fix, this results in:</p>
+	 <img src="images/sealed-after.png" alt="Sealed test after"\>
+      </td>
+    </td>
+  </tr>
+  <tr id="new-pattern-instanceof-to-switch">
+    <td class="title">New pattern instanceof to switch cleanup</td>
+      <td class="content">
+	A new clean-up and quick-assist has been added for Java 21 and up to 
+	convert if statements using pattern instanceof expressions
+	into a switch statement or switch expression (if possible).
+	The transformation only applies if there are three
+	or more pattern instanceof references to a single variable.
+	To use the clean-up, go to the <b>Java Feature</b>
+	tab of the clean-up configuration dialog under <b>Java 21</b> and
+	select <b>Pattern instanceof to Switch</b>.
+	<p>For the following example:</p>
+	<img src="images/pattern-instanceof-before.png" alt="Pattern instanceof before"/>
+	<p>Applying the clean-up results in:</p>
+	<img src="images/pattern-instanceof-after.png" alt="Pattern instanceof after"/>
+	<p>In cases where a switch expression is not possible, a switch
+	statement will be created instead.  The quick-assist is activated
+	by clicking <b>CTRL+1</b> while having the cursor pointing within
+	an if/else if/else block.
+      </td>
+    </td>
+  </tr>
+  <tr id="string-concat-to-text-block-enhancement">
+    <td class="title">String concat to text block clean-up enhancement</td>
+      <td class="content">
+	The String concatenation to text block clean-up/quick-assist has been
+	enhanced with regards to converting a StringBuilder or StringBuffer.
+	There are situations where the StringBuilder/StringBuffer cannot
+	be converted directly into a text block (for example, if the StringBuffer
+	is further appended to or is passed as an argument to a method).  In
+	the past, the code would be left unaltered but now a text block will
+	be used to initialize the StringBuffer/StringBuilder if not too
+	small to warrant a text block.
+	<p>The clean-up is enabled on the <b>Java Feature</b> tab under
+	<b>Java 15</b> by selecting both: 
+	<b>Convert String concatenation to text block</b> and
+	<b>Include StringBuffer or StringBuilder concatenations</b>.
+	<p>For example, the following code sample:</p>
+	<img src="images/string-concat-to-text-block-before.png" alt="Text block clean-up before"/>
+	<p>gets converted to:</p>
+	<img src="images/string-concat-to-text-block-after.png" alt="Text block clean-up after"/>
       </td>
     </td>
   </tr>
