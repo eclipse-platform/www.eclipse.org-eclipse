@@ -176,6 +176,25 @@ ul {padding-left: 13px;}
     </td>
   </tr>
 
+  <tr id="e4-xpath-revised">
+    <!-- https://github.com/eclipse-platform/eclipse.platform.ui/issues/423
+         https://github.com/eclipse-platform/eclipse.platform.ui/pull/2290
+         https://github.com/eclipse-platform/eclipse.platform.ui/pull/2789 -->
+    <td class="title">E4 XPath supported reimplemented and revised</td>
+    <td class="content">
+      <p>
+        The <em>XPath</em> support of Eclipse E4 (i.e. the Plug-in <code>org.eclipse.e4.emf.xpath</code>) has been reimplemented to be purely based on <code>javax.xml.xpath.XPath</code> provided by the Java standard library.
+        This enabled the removal of <em>Apache Commons JXPath</em> as a dependency of the Eclipse SDK (and due to joint efforts even of the entire Eclipse Simultaneous Release).
+      </p>
+      <p>
+        Furthermore it has been determined that the <code>XPathContext</code> API provided by the <code>org.eclipse.e4.emf.xpath</code> Plug-in is mostly unused among all Plug-ins of the Eclipse Simultaneous Release.
+        Therefore the entire <code>org.eclipse.e4.emf.xpath</code> Plug-in and all contained APIs have been marked as deprecated and for removal in a future release.
+        As a replacement, to query an E4 model using <em>XPath</em> from code, one new method has been added:<br/>
+        <code>EModelService.findMatchingElements(MApplicationElement searchRoot, String xPath, Class&lt;T&gt; clazz)</code>
+      </p>
+    </td>
+   </tr>
+
   <!-- ******************* End of General Updates ************************************* -->
   <tr><td colspan="2"/></tr>
 </tbody>
