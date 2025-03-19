@@ -1,18 +1,121 @@
-<!DOCTYPE HTML>
-<html lang="en-US">
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="refresh" content="0; url=https://projects.eclipse.org/projects/eclipse.platform">
-		<script type="text/javascript">
-			window.location.href = "https://projects.eclipse.org/projects/eclipse.platform"
-		</script>
-		<title>Eclipse Project Redirection</title>
+	<title>Eclipse | The Eclipse Foundation</title>
+	<meta name="keywords" content="eclipse,equinox,jdt,pde" />
+	<link rel="preconnect stylesheet" href="project.css"/>
+	<script src="project.js"></script>
 </head>
 
-<body>
-	If you are not redirected automatically,
-	follow this <a href='https://projects.eclipse.org/projects/eclipse.platform'>link</a>.
+
+<body onload="generate()">
+
+	<!--
+	<div data-generate="generateDefaultHeader(this)">
+		<a href="https://marketplace.eclipse.org/">Extra</a>
+	</div>
+
+	<div data-generate="generateDefaultAside(this)">
+		<span class="separator">Extra</span>
+		<a href="https://github.com/eclipse-platform/">Extra</a>
+	</div>
+
+	<div data-generate="generateDefaultNav(this)">
+		<a class="fa-wrench" href="https://github.com/eclipse-platform/.github/discussions"
+			title="Exta: Extras">
+			Extra<p>Extras</p>
+		</a>
+	</div>
+	-->
+
+	<div data-generate="generateDefaultBreadcrumb(this)">
+		<span>Eclipse</span>
+		fa-cogs
+	</div>
+
+	<div data-generate="generateDefaultNav(this)">
+		<a class=" highlight fa-cogs" href="templates/index.html" title="Site: Details">
+			<div>Site<p>Details</p></div>
+		</a>
+	</div>
+
+	<div data-generate="generateDefaults(this)">
+	</div>
+
+	<main>
+		<h2>About the Eclipse Project</h2>
+		<p>
+			The Eclipse project is an Eclipse Foundation project,
+			overseen by a
+			<a href="https://projects.eclipse.org/projects/eclipse/who#project-role-PL">Project Management Committee</a>
+			(PMC)
+			and project leads.
+			Development takes place in subprojects working on various GitHub repositories.
+			The <a href="eclipse-charter.html">Eclipse Project Charter</a>
+			describes the organization of the project,
+			roles and responsibilities of the participants,
+			and the top-level development process for the project.
+		</p>
+		<h3>
+			Equinox
+		</h3>
+		<p>
+			The Equinox project provides an implementation of the
+			<a href="https://docs.osgi.org/specification/">OSGi core framework specification</a>,
+			a set of bundles that implement various optional OSGi services,
+			and other infrastructure for running OSGi-based systems.
+			It is the runtime basis for the Platform's plug-in runtime.
+		</p>
+		<h3>
+			Platform
+		</h3>
+		<p>
+			The Platform project defines the set of frameworks and common services that collectively
+			make up &quot;integration-ware&quot; required to support the use of Eclipse as a component model,
+			as a rich client platform (<a
+				href="https://github.com/eclipse-platform/eclipse.platform.ui/blob/master/docs/Rich_Client_Platform.md">RCP</a>),
+			and as a comprehensive tool integration platform.
+			These services and frameworks include a standard workbench user interface model
+			and a portable native widget toolkit,
+			a project model for managing resources,
+			automatic resource delta management for incremental compilers and builders,
+			language-independent debug infrastructure,
+			and infrastructure for distributed multi-user versioned resource management.
+		</p>
+		<h3>
+			Java Development Tools
+		</h3>
+		<p>
+			The JDT project provides plug-ins that implement a Java IDE for power-users,
+			that supports the development of any Java application,
+			including Eclipse plug-ins.
+			JDT adds the concept of Java projects and a Java perspective to the Eclipse platform,
+			as well as a number of views, editors, wizards, builders, and code merging and refactoring tools.
+			JDT allows Eclipse to be a development environment for itself.
+			JDT's plug-ins themselves can also be further extended by other tool builders.
+		</p>
+		<h3>
+			Plug-in Development Environment
+		</h3>
+		<p>
+			The PDE project provides a number of views and editors that make is easier to build plug-ins for Eclipse.
+			Using the PDE, you can create your plug-in manifest file (plugin.xml),
+			specify your plug-in runtime and other required plug-ins,
+			define extension points, including their specific markup,
+			associate XML Schema files with the extension point markup so extensions can be validated,
+			create extensions of other plug-in extension points, and so on.
+			PDE makes integrating plug-ins easy.
+		</p>
+		<h3>
+			Eclipse SDK
+		</h3>
+		<p>
+			These four project comprise the <a href="http://download.eclipse.org/eclipse">Eclipse SDK</a>
+			a complete development environment for Eclipse-based tools,
+			and for developing Eclipse itself.
+		</p>
+	</main>
 </body>
 
 </html>

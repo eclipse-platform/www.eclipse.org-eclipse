@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Website Templates | Eclipse Project</title>
+	<meta name="keywords" content="eclipse,equinox,jdt,pde" />
+	<link rel="preconnect stylesheet" href="../project.css"/>
+	<script src="../project.js"></script>
+</head>
+
+<body onload="generate()">
+
+	<div data-generate="generateDefaultBreadcrumb(this)">
+		<a href="../index.html">Eclipse</a>
+		<span>Templates</span>
+	</div>
+
+	<div data-generate="generateDefaultAside(this)">
+		<a href="index.html" class="separator"><i class='fa fa-pencil'></i> Templates</a>
+		<a href="extended-content.html">Extended Scaffolding</a>
+		<a href="custom-content.html">Custom Scaffolding</a>
+		<a href="icons.html">Navigation Icons</a>
+	</div>
+
+	<div data-generate="generateDefaults(this)"></div>
+
+	<main>
+		<h2>Website Content Authoring</h2>
+		<p>
+			The website is authored using <a href="../project.js">javascript templates</a>,
+			providing rich content while avoiding duplicate boiler plate content.
+			This document is defined by the following content:
+		</p>
+		<pre data-generate="generateSelf(this)"></pre>
+	</main>
+</body>
+
+</html>

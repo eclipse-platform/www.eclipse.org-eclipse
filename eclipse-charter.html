@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Charter | Eclipse Project</title>
+	<meta name="keywords" content="eclipse,equinox,jdt,pde" />
+	<link rel="preconnect stylesheet" href="project.css"/>
+	<script src="project.js"></script>
+</head>
+
+<body onload="generate()">
+
+	<div data-generate="generateDefaultBreadcrumb(this)">
+		<a href="index.html">Eclipse</a>
+		<span>Charter</span>
+	</div>
+
+	<div data-generate=" generateDefaults(this)">
+	</div>
+
+	<main>
+		<h1>Eclipse Project Charter</h1>
+		<h2>Overview</h2>
+		The Eclipse Top Level Project (the &quot;Eclipse Project&quot;) is an open source
+		software development project dedicated to providing a robust, full-featured, commercial-quality,
+		and freely available industry platform for the development of highly
+		integrated tools. This document describes the mission, scope, and
+		organization of this Top Level Project and its constituent Projects, and
+		roles and responsibilities of the participants.
+		</p>
+		<h2>Mission</h2>
+		<p>
+			The Eclipse Project provides a kind of universal tool platform - an open extensible IDE for
+			anything and yet nothing in particular. The real value comes from tool
+			plug-ins that &quot;teach&quot; the platform how to work with things - java files,
+			web content, graphics, video - almost anything one can imagine. Eclipse
+			allows tool builders to independently develop tools that integrate with other
+			people's tools so seamlessly you can't tell where one tool ends and another
+			starts.</p>
+		<p>The success of the platform depends on how well it enables a wide range of tool
+			builders to build best of breed integrated tools. But the real vision of
+			an industry platform is only realized if these tools from
+			different tool builders can be combined together by users to suit their unique
+			requirements, in ways that the tool builders never even imagined. </p>
+		<p>The mission of the Eclipse Project is to adapt and evolve the Eclipse
+			technology to meet the needs of the Eclipse tool building community and its
+			users, so that the vision of an industry tooling platform is realized.</p>
+		<h2>Scope</h2>
+		The Eclipse Project encompasses two principle areas of work:
+		<ol>
+			<li><b>Tool integration platforms.</b> Developing the core frameworks
+				and technologies upon which others can build software development tools of all kinds.</li>
+			<li><b>The tools required to build and extend these platforms.</b> Creating
+				the tools that the Eclipse project committers need in order to build the tool integration
+				platforms, and the tools the community needs to extend and adopt the platforms.</li>
+		</ol>
+		This secondary tool creation goal has a number of important objectives. First, it provides
+		an initial &quot;customer&quot; for the platform, to ensure the requirements of real
+		development tools are met by the platform. Second, it encourages community adoption
+		of the platform. The easier it is for the community to adopt and extend the platform,
+		the more successful the project will be. Finally, it allows the project contributors
+		to continuously &quot;self host&quot; on the tool platform as it is being built. This
+		creates a tight feedback loop that ensure the platform is robust, and meets the
+		needs of real tool users.
+		</p>
+		<h2>Project Management Committee</h2><a name="PMC"></a>
+		The Projects under this Charter are managed by a group known as the Project
+		Management Committee (the &quot;PMC&quot;).</p>
+		<p>PMCs are expected to ensure that:</p>
+		<p>All Projects operate effectively by providing
+			leadership to guide the Project's overall direction and by removing
+			obstacles, solving problems, and resolving conflicts.</p>
+		<p>All Project plans, technical documents and reports are publicly available</p>
+		<p>All Projects operate using open source rules of
+			engagement: meritocracy, transparency, and open participation.
+			These principles work together. Anyone can participate in a
+			Project. This open interaction,
+			from answering questions to reporting bugs to making code contributions to
+			creating designs, enables everyone to recognize and utilize the contributions.</p>
+		<p>The PMC has the following responsibilities:</p>
+		<ul>
+			<li>Providing the leadership and vision to guide the Project's overall direction
+				and architecture.</li>
+			<li>Providing assistance and
+				support to the developers and researchers working on the Project by
+				removing obstacles, solving problems, and resolving conflicts.</li>
+			<li>Ensuring that Project plans
+				are produced.</li>
+			<li>Working with the Eclipse
+				Management Organization (the &quot;EMO&quot;) to establish the development
+				processes and infrastructure needed for the development team to be
+				effective.</li>
+			<li>Recommending new Projects to the EMO.</li>
+			<li>Recommending the initial set
+				of Project committers for each new Project overseen by the PMC, and
+				establishing the procedures consistent with this Charter for voting in
+				new committers.</li>
+			<li>Helping to ensure that the
+				Projects overseen by the PMC have enough contributors, and working to
+				fill vacancies in roles.</li>
+			<li>Producing &quot;how to get
+				involved&quot; guidelines to help new potential contributors get started.</li>
+			<li>Coordinating relationships
+				with other Eclipse Foundation Projects.</li>
+			<li>Facilitating code or other
+				donations by individuals or companies.</li>
+			<li>Making recommendations to the
+				Eclipse Foundation Board regarding contributions proposed under licenses
+				other than the EPL.</li>
+			<li>Working with the EMO and
+				Committers to ensure in-bound contributions are made in accordance with
+				the Eclipse Foundation IP Policy.</li>
+			<li>Acting as a focal point for
+				the community in representing the Projects it oversees.</li>
+		</ul>
+		<p>The PMC Lead is appointed by the Board. The initial PMC is selected by the
+			PMC Lead. Thereafter, to become a member of the PMC, an individual must be
+			nominated by another member of the PMC, and unanimously approved by all PMC
+			members.</p>
+		<p>In the unlikely event that a member of the PMC becomes disruptive to the
+			process or ceases to contribute for an extended period, the member may be
+			removed by unanimous vote of remaining PMC members.
+			PMC members may resign at any time by delivering notice of
+			their resignation to the PMC Lead.</p>
+		<p>The PMC is responsible for producing and maintaining the Project Charter.
+			Development must conform to any rules or processes outlined in the Charter,
+			so a change to the development process may necessitate a change to the
+			Charter. Changes to the Charter
+			are approved by the Board.</p>
+		<p>The work of the PMC is shared by the PMC members. All PMC members are
+			expected to contribute actively. In particular, PMC members are expected to
+			take responsibility for overseeing certain areas of work in the Project, and
+			reporting to the PMC on these areas.</p>
+		<p>Active participation in the user forums and the appropriate developer
+			mailing lists is a responsibility of all PMC members, and is critical to the
+			success of the Project. PMC members are required to monitor the main Project
+			mailing list, and the developer mailing lists for all Projects and components
+			they are overseeing.</p>
+		<h2>Roles</h2>
+		<p>The Projects under this Charter are operated as meritocracies -- the more you
+			contribute, and the higher the quality of your contribution, the more you are
+			allowed to do. However with this comes increased responsibility.</p>
+		<h2>Users</h2>
+		<p>Users are the people who use the products that the Project produces. People
+			in this role aren't contributing code, but they are using the products,
+			reporting bugs, and making feature requests and suggestions. Users are
+			encouraged to participate through the user forum(s), asking questions,
+			providing suggestions, and helping other users. Users are also encouraged to
+			report problem reports using the bug tracking system. </p>
+		<h2>Developers</h2>
+		<p>Users who contribute code or documentation become developers. Developers are
+			the people who contribute code, fixes, documentation, or other work that goes
+			into the product. Developers are also encouraged to participate in the user
+			forum(s), and should monitor the developer mailing list associated with
+			their area of contribution. When appropriate, developers may also contribute
+			to development design discussions related to their area of contribution.
+			Developers are expected to be proactive in reporting problems in the bug tracking
+			system.</p>
+		<h2>Committers</h2>
+		<p>Developers who give frequent and valuable contributions to a Project, or
+			component of a Project (in the case of large Projects), can have their status
+			promoted to that of a &quot;Committer&quot; for that Project or component
+			respectively. A Committer has write access to the source code repository for
+			the associated Project (or component), and gains voting rights allowing them
+			to affect the future of the Project (or component).</p>
+		<p>In order for a Developer to become a Committer on a particular Project
+			overseen by the PMC, another Committer for the same Project (or component as
+			appropriate) can nominate that Developer or the Developer can ask to be
+			nominated. Once a Developer is nominated, the Committers for the Project (or
+			component) will vote. If there are at least 3 positive votes and no negative
+			votes, the Developer is recommended to the PMC for commit privileges. If the
+			PMC also approves, the Developer is converted into a Committer and given
+			write access to the source code repository for that Project (or component).
+			Becoming a Committer is a privilege that is earned by contributing and
+			showing discipline and good judgement. It is a responsibility that should be
+			neither given nor taken lightly.</p>
+		<p>At times, Committers may go inactive for a variety of reasons. The
+			decision making process of the Project relies on active committers who
+			respond to discussions and votes in a constructive and timely manner. The PMC
+			is responsible for ensuring the smooth operation of the Project. A Committer
+			that is disruptive, does not participate actively, or has been inactive for
+			an extended period may have his or her commit status removed by the PMC.</p>
+		<p>Active participation in the user forums and the appropriate developer
+			mailing lists is a responsibility of all Committers, and is critical to the
+			success of the Project. Committers are required to monitor and contribute to
+			the user forums.</p>
+		<p>Committers are required to monitor the developer mailing list associated
+			with all Projects and components for which they have commit privileges. This
+			is a condition of being granted commit rights to the Project or component. It
+			is mandatory because committers must participate in votes (which in some
+			cases require a certain minimum number of votes) and must respond to the
+			mailing list in a timely fashion in order to facilitate the smooth operation
+			of the Project. When a Committer is granted commit rights they will be added
+			to the appropriate mailing lists. A Committer must not be unsubscribed from a
+			developer mailing list unless their associated commit privileges are also
+			removed.</p>
+		<p>Committers are required to track, participate in, and vote on, relevant
+			discussions in their associated Projects and components. There are three
+			voting responses: +1 (yes), -1 (no, or veto), and 0 (abstain).</p>
+		<p>Committers are responsible for proactively reporting problems in the bug
+			tracking system, and annotating problem reports with status information,
+			explanations, clarifications, or requests for more information from the
+			submitter. Committers are responsible for updating problem reports when they
+			have done work related to the problem.</p>
+		<h2>Projects</h2>
+		<p>The work under this Top Level Project is further organized into Projects. New
+			Projects must be significant works consistent with the mission of the Top
+			Level Project, be recommended by the PMC, and confirmed by the EMO. Projects
+			can be discontinued by decision of the Board.</p>
+		<p>When a new Project is created, the PMC nominates a Project lead to act as
+			the technical leader and nominates the initial set of Committers for the
+			Project, and these nominations are approved by the EMO. Project leads are accountable to the
+			PMC for the success of their Project.</p>
+		<h2>Project Components</h2>
+		<p>The PMC may decide to divide a Project further into components. If a Project
+			is divided into components, commit privileges are normally granted at the
+			component level, and the committers for a given component vote on issues
+			specific to that component. Components are established and discontinued by
+			the PMC. When the PMC creates a component it appoints a component lead to act
+			as the technical leader and names the initial set of Committers for the
+			component. The component lead is designated as a committer for the Project
+			and represents the component in discussions and votes pertaining to the
+			Project as a whole. Component Committers do not participate in votes at the
+			level of the Project as a whole, unless they are also the component lead.</p>
+		<h2>Infrastructure</h2>
+		<p>The PMC works with the EMO to ensure the required infrastructure for the
+			Project. The Project
+			infrastructure will include, at minimum:</p>
+		<ul>
+			<li>Bug Database - Bugzilla
+				database for tracking bugs and feature requests.</li>
+			<li>Source Repository -- One or
+				more source code repositories containing both the master source code and
+				documentation for the Projects.</li>
+			<li>Website - A website will
+				contain information about the Project, including documentation,
+				downloads of releases, and this Charter.</li>
+			<li>General Mailing List -
+				Mailing list for development discussions pertaining to the Project as a
+				whole or that cross Projects. This mailing list is open to the public.</li>
+			<li>Project Mailing Lists -
+				Development mailing list for technical discussions related to the
+				Project. This mailing list is open to the public.</li>
+			<li>Component Mailing Lists --
+				Development mailing list for technical discussions related to the
+				component. This mailing list is open to the public.</li>
+		</ul>
+		<h2>The Development Process</h2>
+		<p>Each Project lead must produce a development plan for the release cycle, and
+			the development plan must be approved by the PMC and by a majority of
+			Committers of the Project.</p>
+		<p>Each Project must identify, and make available on its web site, the
+			requirements and prioritizations it is working against in the current release
+			cycle. In addition, each Project must post a release plan showing the date
+			and content of the next major release, including any major milestones, and
+			must keep this plan up to date.</p>
+		<p>The Committers of a Project or component decide which changes may be
+			committed to the master code base of a Project or component respectively.
+			Three +1 ('yes' votes) with no -1 ('no' votes or vetoes) are needed to
+			approve a code change. Vetoes must be followed by an explanation for the veto
+			within 24 hours or the veto becomes invalid. All votes are conducted via the
+			developer mailing list associated with the Project or component.</p>
+		<p>Special rules may be established by the PMC for Projects or components
+			with fewer than three Committers. For efficiency, some code changes from some
+			contributors (e.g. feature additions, bug fixes) may be approved in advance,
+			or approved in principle based on an outline of the work, in which case they
+			may be committed first and changed as needed, with conflicts resolved by
+			majority vote of the Committers of the Project or component, as applicable.
+			More restrictive rules for releasing changes may be established by the PMC
+			near the end of release cycles or for maintenance streams.</p>
+		<p>The master copy of the code base must reside on the Project web site where
+			it is accessible to all users, developers and committers. Committers must
+			check their changes and new work into the master code base as promptly as
+			possible (subject to any check-in voting rules that may be in effect) in
+			order to foster collaboration among widely distributed groups and so that the
+			latest work is always available to everyone. The PMC is responsible for
+			working with the Eclipse Foundation to establish a release engineering and
+			build process to ensure that builds can be reliably produced on a regular and
+			frequent basis from the master code base and made available for download from
+			the Project web site.</p>
+		<p>The PMC is responsible for establishing the level of testing appropriate
+			for each Project, and approving the test plans.</p>
+		<p>All development technical discussions are conducted using the development
+			mailing lists. If discussions are held offline, then a summary must be posted
+			to the mailing list to keep the other committers informed.</p>
+		<h2>Licensing</h2>
+		<p>All contributions to Projects under this Charter must adhere to the Eclipse
+			Foundation Intellectual Property Policy.</p>
+	</main>
+</body>
+
+</html>
