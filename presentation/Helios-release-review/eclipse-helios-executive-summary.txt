@@ -1,7 +1,0 @@
-The Eclipse Project's tenth consecutive annual release delivered on time.
-
-Helios (3.6) release highlights:
-– New platforms: PPC-64, Ubuntu LTS, Windows 7
-– Major new features: Flexible resources, open file from command line, WebKitGTK+ browser, help extensibility, new accessibility API, native task bar integration, Java formatter improvements, import plugin from CVS, API usage reporting, JUnit 4 support in test framework
-
-The project continues to have an active contributor base, with 55 active committers from nine companies in at least nine countries. There were also over 275 patches accepted from the community this release.
