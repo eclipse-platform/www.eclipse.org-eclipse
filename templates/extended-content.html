@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Extended Template | Eclipse Project</title>
+	<meta name="keywords" content="eclipse,equinox,jdt,pde" />
+	<link rel="preconnect stylesheet" href="../project.css"/>
+	<script src="../project.js"></script>
+	<style>
+		.highlight {
+			color: firebrick;
+		}
+	</style>
+</head>
+
+
+<body onload="generate()">
+
+	<div data-generate="generateDefaultHeader(this)">
+		<a href="https://marketplace.eclipse.org/"><span class="highlight">Extension</span></a>
+	</div>
+
+	<div data-generate="generateDefaultBreadcrumb(this)">
+		<a href="../index.html">Eclipse</a>
+		<a href="index.html">Templates</a>
+		<span class="highlight">Extended</span">
+	</div>
+
+	<div data-generate="generateDefaultAside(this)">
+		<a href="index.html" class="separator"><i class='fa fa-pencil'></i> Templates</a>
+		<a href="extended-content.html">Extended Scaffolding</a>
+		<a href="custom-content.html">Custom Scaffolding</a>
+		<a href="icons.html">Navigation Icons</a>
+		<span class="highlight separator">Extended</span>
+		<a href="https://github.com/eclipse-platform/"><span class="highlight">Extended</span></a>
+	</div>
+
+	<div data-generate="generateDefaultNav(this)">
+		<a class=" highlight fa-wrench" href="https://www.example.com" title="Extended: Extensions">
+			<div class="highlight">Extension<p>Extensions</p>
+			</div>
+		</a>
+	</div>
+
+	<div data-generate="generateDefaults(this)">
+	</div>
+
+	<main>
+		<h2>Extended Scaffolding</h2>
+		<p>
+			This document is defined by the following content
+			where the extended scaffolding on this page is <span class="highlight">hightlighted</span>:
+		</p>
+		<pre data-generate="generateSelf(this)"></pre>
+	</main>
+</body>
+
+</html>
