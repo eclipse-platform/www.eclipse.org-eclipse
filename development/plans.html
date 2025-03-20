@@ -2,21 +2,28 @@
 <html lang="en">
 
 <head>
-	<title>News | Eclipse Project</title>
+	<title>Plans | Eclipse Project</title>
 	<meta name="keywords" content="eclipse,equinox,jdt,pde" />
 	<link rel="preconnect stylesheet" href="../project.css" />
 	<script src="../project.js"></script>
 	<script>
 		//<![CDATA[
 		function updateTitle() {
-			const file = new URLSearchParams(window.location.search).get('file')
-			if (file != null) {
-				document.title = `News - ${file.replace(/\/.*/g, '')} | Eclipse Project`;
+			const crumb = new URLSearchParams(window.location.search).get('crumb')
+			if (crumb != null) {
+				document.title = `Plans - ${crumb} | Eclipse Project`;
 			}
 		}
 		//]]>
 	</script>
-	<link rel="stylesheet" href="news.css" />
+	<style>
+		/* <![CDATA[*/
+		td {
+			padding: 2px 4px;
+		}
+
+		/*]]>*/
+	</style>F
 </head>
 
 <body onload="generate(); updateTitle();">
@@ -25,10 +32,10 @@
 
 	<div data-generate="generateDefaultBreadcrumb(this)">
 		<a href="../index.html">Eclipse</a>
-		<a href="news.html">News</a>
+		<a href="plans.html">Plans</a>
 	</div>
 
-	<main data-generate="load()">
+	<main id="output" data-generate="loadPojectPlan()">
 	</main>
 </body>
 
