@@ -6,6 +6,7 @@ window.onscroll = function() {
 };
 
 const scriptBase = new URL(".", document.currentScript.src).href
+const apiGitHub = 'https://api.github.com/repos/eclipse-platform/www.eclipse.org-eclipse/contents/';
 
 const meta = toElements(`
 <meta charset="utf-8">
@@ -222,9 +223,9 @@ function generateBreadcrumb() {
 	const elements = breadcumbs.children;
 	const items = Array.from(elements).map(link => `<li>${link.outerHTML}</li>`);
 
-	const newsBreachcrumb = generateNewsBreadcrumb();
-	if (newsBreachcrumb != null) {
-		items.push(`<li>${newsBreachcrumb}</li>`);
+	const extraBreachcrumb = generateExtraBreadcrumb();
+	if (extraBreachcrumb != null) {
+		items.push(`<li>${extraBreachcrumb}</li>`);
 	}
 
 	return `
@@ -244,16 +245,22 @@ function generateBreadcrumb() {
 `;
 }
 
-function generateNewsBreadcrumb() {
+function generateExtraBreadcrumb() {
 	const location = new URL(window.location);
-	const file = new URLSearchParams(location.search).get('file');
-	if (file != null) {
-		const match = file.match(/[^\/]+/g);
-		if (match.length == 1) {
-			return `<span>${match[0]}</span>`;
-		} else if (match.length == 2) {
-			location.search = `file=${match[0]}`;
-			return `<a href="${location.href}">${match[0]}</a>`;
+	const search = new URLSearchParams(location.search);
+	const crumb = search.get('crumb');
+	if (crumb) {
+		return `<span>${crumb}</span>`;
+	} else {
+		const file = search.get('file');
+		if (file != null) {
+			const match = file.match(/[^\/]+/g);
+			if (match.length == 1) {
+				return `<span>${match[0]}</span>`;
+			} else if (match.length == 2 && match[0] != 'plans') {
+				location.search = `file=${match[0]}`;
+				return `<a href="${location.href}">${match[0]}</a>`;
+			}
 		}
 	}
 }
@@ -341,28 +348,6 @@ function generateAside() {
 `;
 }
 
-function hasElement(id) {
-	return document.getElementById(id) != null;
-}
-
-function toElements(text) {
-	const wrapper = document.createElement('div');
-	wrapper.innerHTML = text;
-	return wrapper.children
-}
-
-function replaceChildren(element, id, ...children) {
-	element.id = id;
-	element.replaceChildren(...children);
-	return element;
-}
-
-function prependChildren(element, id, ...children) {
-	element.id = id;
-	element.prepend(...children);
-	return element;
-}
-
 function generateFileProtocolFailure(location) {
 	return toElements(`
 <div>
@@ -388,67 +373,188 @@ function generateFileProtocolFailure(location) {
 `);
 }
 
-function parseHTML(html, location) {
-	const document = new DOMParser().parseFromString(html, 'text/html');
-	if (location) {
-		const base = document.createElement('base');
-		base.href = location;
-		document.head.appendChild(base);
+function getXSLT(document) {
+	for (const node of document.childNodes) {
+		if (node.nodeName == 'xml-stylesheet') {
+			const match = /href=['"]([^'"]+)['"']/.exec(node.textContent);
+			if (match.length == 2) {
+				return match[1];
+			}
+		}
 	}
-	return document;
+}
+
+function sendRequest(location, handler) {
+	var request = new XMLHttpRequest();
+	request.open('GET', location);
+	request.onloadend = function() {
+		handler(request);
+	};
+	request.send();
+}
+
+function parseHTML(request, handler) {
+	const location = request.responseURL;
+	const xml = request.responseXML;
+	if (xml != null) {
+		const xslt = getXSLT(xml);
+		if (xslt) {
+			sendRequest(new URL(xslt, location), request => {
+				const xsl = request.responseXML;
+				const htmlDocument = document.implementation.createHTMLDocument();
+				addBase(htmlDocument, location);
+				const xsltProcessor = new XSLTProcessor();
+				xsltProcessor.importStylesheet(xsl);
+				const resultDocument = xsltProcessor.transformToFragment(xml, htmlDocument);
+				handler(resultDocument);
+			});
+		}
+		return;
+	}
+
+	const html = request.responseText;
+	const htmlDocument = new DOMParser().parseFromString(html, 'text/html');
+	addBase(htmlDocument, location);
+	handler(htmlDocument);
 }
 
 function load(location) {
 	const baseURI = document.baseURI;
 	const effectiveLocation = location ?? new URLSearchParams(window.location.search).get('file') ?? 'index.html';
 	const resolvedLocation = new URL(effectiveLocation, baseURI);
-	var request = new XMLHttpRequest();
-	request.open('GET', resolvedLocation);
-	request.onloadend = function() {
-		const html = request.responseText;
+	sendRequest(resolvedLocation, request => {
 		if (request.status != 200) {
 			const main = document.getElementById('midcolumn');
 			if (window.location.protocol == 'file:') {
 				main.append(...generateFileProtocolFailure(resolvedLocation));
 			}
 		} else {
-			const includedDocument = parseHTML(html, request.responseURL);
-			const location = new URL(".", baseURI).toString();
-			const anchors = includedDocument.querySelectorAll("a[href]");
-			for (const anchor of anchors) {
-				const resolvedHref = anchor.href;
-				if (resolvedHref.startsWith(location)) {
-					const hrefURL = new URL(resolvedHref);
-					const hash = hrefURL.hash;
-					hrefURL.hash = '';
-					let relative = hrefURL.href.replace(location, '').replace('.php', '.html');
-					if (relative.endsWith('/')) {
-						relative = '?file=' + relative + 'index.html';
-					} else if (relative.endsWith('.html') || relative.endsWith('.php')) {
-						relative = '?file=' + relative;
+			parseHTML(request, includedDocument => {
+				const location = new URL(".", baseURI).toString();
+				const anchors = includedDocument.querySelectorAll("a[href]");
+				for (const anchor of anchors) {
+					const resolvedHref = anchor.href;
+					if (resolvedHref.startsWith(location)) {
+						const hrefURL = new URL(resolvedHref);
+						const hash = hrefURL.hash;
+						hrefURL.hash = '';
+						let relative = hrefURL.href.replace(location, '').replace('.php', '.html');
+						if (relative.endsWith('/')) {
+							relative = '?file=' + relative + 'index.html';
+						} else if (relative.endsWith('.html') || relative.endsWith('.php') || relative.endsWith('.xml')) {
+							relative = '?file=' + relative;
+						}
+						const url = new URL(relative, baseURI);
+						url.hash = hash;
+						anchor.href = url;
+					} else {
+						anchor.href = resolvedHref;
 					}
-					const url = new URL(relative, baseURI);
-					url.hash = hash;
-					anchor.href = url;
-				} else {
-					anchor.href = resolvedHref;
 				}
-			}
 
-			const imgs = includedDocument.querySelectorAll("img[src]");
-			for (const img of imgs) {
-				img.src = img.src;
-			}
+				const imgs = includedDocument.querySelectorAll("img[src]");
+				for (const img of imgs) {
+					img.src = img.src;
+				}
 
-			const main = document.getElementById('midcolumn');
-			main.replaceChildren(...includedDocument.body.children)
+				const main = document.getElementById('midcolumn');
+				if (includedDocument instanceof DocumentFragment) {
+					main.replaceChildren(...includedDocument.children);
+				} else {
+					main.replaceChildren(...includedDocument.body.children);
+				}
+			});
 		}
+	});
+}
+
+function getFileList(location, pattern, handler) {
+	sendRequest(location, request => {
+		const files = JSON.parse(request.responseText);
+		const map = new Map();
+		for (const file of files) {
+			const match = pattern.exec(file.name);
+			if (match) {
+				file.match = match;
+				let ordinal = 0.0;
+				for (let index = 1; index < match.length; ++index) {
+					const x = 100000000;
+					const segment = match[index];
+					ordinal = ordinal * x + Number(segment ?? '0');
+				}
+				map.set(ordinal, file);
+			}
+		}
+
+		const entries = [...map].sort((a, b) => {
+			return a[0] < b[0]
+		}).map(entry => entry[1]);
+
+		handler(entries);
+	});
+}
+
+function generateProjectPlans() {
+	getFileList(apiGitHub + 'development/plans', /eclipse_project_plan_([0-9]+)[-_.]([0-9]+)(?:[-_.]([0-9]+))?\.xml/, files => {
+		const items = files.map(file => {
+			const match = file.match;
+			const version = `${match[1]}.${match[2]}${match[3] ? '.' + match[3] : ''}`;
+			return `
+<li class="xnavbar-nav-links-item">
+	<a href="?file=plans/${file.name}&amp;crumb=${version}">${version}</a>
+</li>
+`;
+		});
+
+		const main = document.getElementById('midcolumn');
+		main.replaceChildren(...toElements(`
+<h2>Plans</h2>
+<ul>
+	${items.join('\n')}
+</ul>
+` ));
+	});
+}
+
+function loadPojectPlan() {
+	const file = new URLSearchParams(location.search).get('file');
+	if (file) {
+		load();
+	} else {
+		generateProjectPlans();
 	}
-	request.send();
 }
 
 function generateSelf(element) {
 	element.innerText = selfContent.replace(/\t/g, '    ').replace(/\n\n\n+/g, '\n\n');
+}
+
+function hasElement(id) {
+	return document.getElementById(id) != null;
+}
+
+function toElements(text) {
+	const wrapper = document.createElement('div');
+	wrapper.innerHTML = text;
+	return wrapper.children
+}
+
+function replaceChildren(element, id, ...children) {
+	element.id = id;
+	element.replaceChildren(...children);
+	return element;
+}
+
+function prependChildren(element, id, ...children) {
+	element.id = id;
+	element.prepend(...children);
+	return element;
+}
+
+function addBase(htmlDocument, location) {
+	const base = htmlDocument.createElement('base');
+	base.href = location;
+	htmlDocument.head.appendChild(base);
 }
 
 function toggleMenu() {
