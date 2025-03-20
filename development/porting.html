@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Porting Guide | Eclipse Project</title>
+	<meta name="keywords" content="eclipse,equinox,jdt,pde" />
+	<link rel="preconnect stylesheet" href="../project.css" />
+	<script src="../project.js"></script>
+	<script>
+		//<![CDATA[
+		function updateTitle() {
+			const crumb = new URLSearchParams(window.location.search).get('crumb')
+			if (crumb != null) {
+				document.title = `Porting Guide - ${crumb} | Eclipse Project`;
+			}
+		}
+		//]]>
+	</script>
+	<style>
+		/* <![CDATA[*/
+		/*]]>*/
+	</style>
+</head>
+
+<body onload="generate(); updateTitle();">
+	<div data-generate="generateDefaultHeader(this)">
+	</div>
+
+	<div data-generate="generateDefaultBreadcrumb(this)">
+		<a href="../index.html">Eclipse</a>
+		<a href="index.html">Details</a>
+		<span>Porting Guide</span>
+	</div>
+
+	<main id="output" data-generate="loadProjectPortingGuides()">
+	</main>
+</body>
+
+</html>

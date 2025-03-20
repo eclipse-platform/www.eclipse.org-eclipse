@@ -609,6 +609,38 @@ function loadProjectAcknowledgements() {
 	}
 }
 
+function generateProjectPortingGuides() {
+	getFileList(apiGitHub + 'development/porting', /eclipse_([0-9]+)[-_.]([0-9]+)(?:[-_.]([0-9]+))?_porting_guide\.(?:html|php)/, files => {
+		const items = files.map(file => {
+			const match = file.match;
+			const version = `${match[1]}.${match[2]}${match[3] ? '.' + match[3] : ''}`;
+			const url = file.name.endsWith('.html') ? 'porting/' + file.name : `${apiGitHub}development/porting/${file.name}`;
+			return `
+<li>
+	<a href="?file=${url}&amp;crumb=${version}">${version}</a>
+</li>
+`;
+		});
+
+		const main = document.getElementById('midcolumn');
+		main.replaceChildren(...toElements(`
+<h2><span class="fa fa-ship"> Porting Guides</span></h2>
+<ul>
+	${items.join('\n')}
+</ul>
+` ));
+	});
+}
+
+function loadProjectPortingGuides() {
+	const file = new URLSearchParams(location.search).get('file');
+	if (file) {
+		load();
+	} else {
+		generateProjectPortingGuides();
+	}
+}
+
 function generateSelf(element) {
 	element.innerText = selfContent.replace(/\t/g, '    ').replace(/\n\n\n+/g, '\n\n');
 }
