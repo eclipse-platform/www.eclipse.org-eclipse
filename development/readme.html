@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-	<title>Plans | Eclipse Project</title>
+	<title>Release Notes | Eclipse Project</title>
 	<meta name="keywords" content="eclipse,equinox,jdt,pde" />
 	<link rel="preconnect stylesheet" href="../project.css" />
 	<script src="../project.js"></script>
@@ -11,11 +11,14 @@
 		function updateTitle() {
 			const crumb = new URLSearchParams(window.location.search).get('crumb')
 			if (crumb != null) {
-				document.title = `Plans - ${crumb} | Eclipse Project`;
+				document.title = `Release Notes - ${crumb} | Eclipse Project`;
 			}
 		}
 		//]]>
 	</script>
+	<style>
+		/* <![CDATA[*/
+		/*]]>*/
 	</style>
 </head>
 
@@ -26,10 +29,10 @@
 	<div data-generate="generateDefaultBreadcrumb(this)">
 		<a href="../index.html">Eclipse</a>
 		<a href="index.html">Details</a>
-		<span>Plans</span>
+		<span>Release Notes</span>
 	</div>
 
-	<main id="output" data-generate="loadPojectPlan()">
+	<main id="output" data-generate="loadProjectReleaseNotes()">
 	</main>
 </body>
 

@@ -32,8 +32,8 @@ const defaultNav = toElements(`
 	title="Download: Distribution Sites">
 	Download<p>Distribution Sites</p>
 </a>
-<a class="fa-book" href="https://help.eclipse.org/" title="Documentation: Details">
-	Documentation<p>Details</p>
+<a class="fa-book" href="https://help.eclipse.org/" title="Documentation: help.eclipse.org">
+	Documentation<p>help.eclipse.org</p>
 </a>
 <a class="fa-users" href="https://github.com/eclipse-ide/.github/blob/main/CONTRIBUTING.md"
 	title="Contribution: Environment Setup">
@@ -393,6 +393,23 @@ function sendRequest(location, handler) {
 	request.send();
 }
 
+function getHTMLText(request) {
+	if (request.responseURL.endsWith('.php')) {
+		const php = JSON.parse(request.responseText);
+		const binary = window.atob(php.content);
+		const bytes = new Uint8Array(binary.length);
+		for (var i = 0; i < binary.length; i++) {
+			bytes[i] = binary.charCodeAt(i);
+		}
+		const decoder = new TextDecoder();
+		const realText = decoder.decode(bytes);
+		return realText;
+	}
+
+	const html = request.responseText;
+	return html;
+}
+
 function parseHTML(request, handler) {
 	const location = request.responseURL;
 	const xml = request.responseXML;
@@ -412,7 +429,7 @@ function parseHTML(request, handler) {
 		return;
 	}
 
-	const html = request.responseText;
+	const html = getHTMLText(request);
 	const htmlDocument = new DOMParser().parseFromString(html, 'text/html');
 	addBase(htmlDocument, location);
 	handler(htmlDocument);
@@ -482,7 +499,10 @@ function getFileList(location, pattern, handler) {
 					const segment = match[index];
 					ordinal = ordinal * x + Number(segment ?? '0');
 				}
-				map.set(ordinal, file);
+				const existingValue = map.get(ordinal);
+				if (existingValue == null || existingValue.name.endsWith('.php')) {
+					map.set(ordinal, file);
+				}
 			}
 		}
 
@@ -500,7 +520,7 @@ function generateProjectPlans() {
 			const match = file.match;
 			const version = `${match[1]}.${match[2]}${match[3] ? '.' + match[3] : ''}`;
 			return `
-<li class="xnavbar-nav-links-item">
+<li>
 	<a href="?file=plans/${file.name}&amp;crumb=${version}">${version}</a>
 </li>
 `;
@@ -508,7 +528,7 @@ function generateProjectPlans() {
 
 		const main = document.getElementById('midcolumn');
 		main.replaceChildren(...toElements(`
-<h2>Plans</h2>
+<h2><span class="fa fa-briefcase"> Plans</span></h2>
 <ul>
 	${items.join('\n')}
 </ul>
@@ -522,6 +542,70 @@ function loadPojectPlan() {
 		load();
 	} else {
 		generateProjectPlans();
+	}
+}
+
+function generateProjectReleaseNotes() {
+	getFileList(apiGitHub + 'development', /readme_eclipse_([0-9]+)[-_.]([0-9]+)(?:[-_.]([0-9]+))?\.html/, files => {
+		const items = files.map(file => {
+			const match = file.match;
+			const version = `${match[1]}.${match[2]}${match[3] ? '.' + match[3] : ''}`;
+			return `
+<li>
+	<a href="?file=${file.name}&amp;crumb=${version}">${version}</a>
+</li>
+`;
+		});
+
+		const main = document.getElementById('midcolumn');
+		main.replaceChildren(...toElements(`
+<h2><span class="fa fa-file-text-o"> Release Notes</span></h2>
+<ul>
+	${items.join('\n')}
+</ul>
+` ));
+	});
+}
+
+function loadProjectReleaseNotes() {
+	const file = new URLSearchParams(location.search).get('file');
+	if (file) {
+		load();
+	} else {
+		generateProjectReleaseNotes();
+	}
+}
+
+function generateProjectAcknowledgements() {
+	// acknowledgements_3_2.html
+	getFileList(apiGitHub + 'development', /acknowledgements_([0-9]+)[-_.]([0-9]+)(?:[-_.]([0-9]+))?\.(?:html|php)/, files => {
+		const items = files.map(file => {
+			const match = file.match;
+			const version = `${match[1]}.${match[2]}${match[3] ? '.' + match[3] : ''}`;
+			const url = file.name.endsWith('.html') ? file.name : `${apiGitHub}development/${file.name}`;
+			return `
+<li>
+	<a href="?file=${url}&amp;crumb=${version}">${version}</a>
+</li>
+`;
+		});
+
+		const main = document.getElementById('midcolumn');
+		main.replaceChildren(...toElements(`
+<h2><span class="fa fa-address-book-o"> Acknowlegements</span></h2>
+<ul>
+	${items.join('\n')}
+</ul>
+` ));
+	});
+}
+
+function loadProjectAcknowledgements() {
+	const file = new URLSearchParams(location.search).get('file');
+	if (file) {
+		load();
+	} else {
+		generateProjectAcknowledgements();
 	}
 }
 
