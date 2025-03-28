@@ -97,6 +97,26 @@ ul {padding-left: 13px;}
     <h2>Debug</h2>
     </td>
   </tr>
+  <tr id="collapsing-stackframes">
+    <td class="title">Collapsing stack frames</td>
+      <td class="content">
+        Navigating in deep stack frames can be challenging during debuging, due to high number of stack frames that are not relevant for most of the time, for example because they are provided by either the JDK or a testing framework, or by some library</b>
+        This feature tries to help focusing on the stack frames, that are the coming from the user created projects, drastically reducing the unnecessary noise in the Debug View
+        <p>
+          <img src="images/not-collapsed.png" alt="Original"/>
+        </p><br>
+        The feature can be enabled from the Debug toolbar in Debug → Java → Collapse Stack Frames.<br>
+        <p>
+          <img src="images/menuitem.png" alt="Menu to enable"/>
+        </p><br>
+        After enabling it, the view becomes much simpler and less intimidating:
+        <p>
+          <img src="images/collapsed.png" alt="Collapsed stack frames"/>
+        </p><br>
+      </td>
+    </td>
+  </tr>
+
   <!--************************ End of Debug ******************************** -->
 
   <!-- *********************** JDT Developers ******************************** -->
