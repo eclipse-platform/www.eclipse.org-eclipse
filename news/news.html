@@ -19,7 +19,7 @@
 	<link rel="stylesheet" href="news.css" />
 </head>
 
-<body onload="generate(); updateTitle();">
+<body>
 	<div data-generate="generateDefaultHeader(this)">
 	</div>
 
@@ -31,5 +31,9 @@
 	<main data-generate="load()">
 	</main>
 </body>
+
+<script>
+	generate(); updateTitle();	
+</script>
 
 </html>
