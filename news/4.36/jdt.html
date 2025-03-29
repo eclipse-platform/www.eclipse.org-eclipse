@@ -65,6 +65,39 @@ ul {padding-left: 13px;}
     <h2>Java Editor </h2>
     </td>
   </tr>
+  <tr id="customFoldingRegions">
+    <td class="title">Custom folding regions</td>
+    <td class="content">
+      It is now possible to create custom folding regions by specifying a comment at the start and end of the region.
+      You can enable and configure this feature under <b>Window &gt; Preferences &gt; Java &gt; Editor &gt; Folding &gt; Custom folding regions</b>.
+      <p>
+        <img src="images/custom_folding_regions_preferences.png" alt="Preference page for custom folding regions"/>
+      </p>
+      <p>
+        In that preference page, you can specify the text that should be used to start and end a custom folding region.
+	When this is enabled, writing a comment starting with the specified region start followed by another comment starting with the specified region end creates a folding region.
+      </p>
+      <p>
+        <img src="images/custom_folding_regions_code_expanded.png" alt="code containing comments with the text 'region' and 'endregion'"/>
+      </p>
+      <p>
+        Custom folding regions can be collapsed like any other folding regions.
+      </p>
+      <p>
+        <img src="images/custom_folding_regions_code_collapsed.png" alt="custom folding regions are collapsed"/>
+      </p>
+    </td>
+  </tr>
+  <tr id="foldingProjectPreferences">
+    <td class="title">Project Properties page for folding</td>
+    <td class="content">
+      Preferences for folding can now be configured on a per-project basis in addition to configuring folding for workspaces.
+      This page is available under <b>Project &gt; Properties &gt; Java Editor &gt; Folding</b>.
+      <p>
+        <img src="images/folding_property_page.png" alt="Project Properties page for folding"/>
+      </p>
+    </td>
+  </tr>
   <!-- ******************* End of Java Editor ************************************* -->
 
   <!-- ******************* Java Views and Dialogs ************************************* -->
