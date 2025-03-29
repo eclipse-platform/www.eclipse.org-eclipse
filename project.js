@@ -8,26 +8,26 @@ window.onscroll = function() {
 const scriptBase = new URL(".", document.currentScript.src).href
 const apiGitHub = 'https://api.github.com/repos/eclipse-platform/www.eclipse.org-eclipse/contents/';
 
-const meta = toElements(`
+let meta = toElements(`
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="shortcut icon" href="https://eclipseide.org/favicon.ico"/>
 `);
 
-const defaultHeader = toElements(`
+let defaultHeader = toElements(`
 	<a href="https://www.eclipse.org/downloads/packages/">Eclipse IDE</a>
 	<a href="https://eclipseide.org/working-group/">Working Group</a>
 	<a href="https://eclipseide.org/release/noteworthy/">New &amp; Noteworthy</a>
 	<a href="https://marketplace.eclipse.org/">Marketplace</a>
 `);
 
-const defaultBreadcrumb = toElements(`
+let defaultBreadcrumb = toElements(`
 	<a href="https://eclipseide.org/">Home</a>
 	<a href="https://eclipseide.org/projects/">Projects</a>
 `);
 
-const defaultNav = toElements(`
+let defaultNav = toElements(`
 <a class="fa-download" href="https://download.eclipse.org/eclipse/downloads/"
 	title="Download: Distribution Sites">
 	Download<p>Distribution Sites</p>
@@ -49,7 +49,7 @@ const defaultNav = toElements(`
 </a>
 `);
 
-const defaultAside = toElements(`
+let defaultAside = toElements(`
 <a class="separator" href="https://projects.eclipse.org/projects/eclipse"><i class='fa fa-cube'></i> Eclipse Project</a>
 <a href="https://projects.eclipse.org/projects/eclipse.equinox">Equinox</a>
 <a href="https://projects.eclipse.org/projects/eclipse.platform">Platform</a>
