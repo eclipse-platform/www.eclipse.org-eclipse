@@ -133,7 +133,52 @@ function generateBody() {
 	</main>
 	<footer id="footer">
 		<div class="container">
-			<a xhref="#" class="scrollup" onclick="scrollToTop()">Back to the top</a>
+			<div class="footer-sections row equal-height-md font-bold">
+				<div id="footer-eclipse-foundation" class="footer-section col-md-5 col-sm-8">
+					<div class="menu-heading">Eclipse Foundation</div>
+					<ul class="nav">
+						<ul class="nav">
+							<li><a href="http://www.eclipse.org/org/">About</a></li>
+							<li><a href="https://projects.eclipse.org/">Projects</a></li>
+							<li><a href="http://www.eclipse.org/collaborations/">Collaborations</a></li>
+							<li><a href="http://www.eclipse.org/membership/">Membership</a></li>
+							<li><a href="http://www.eclipse.org/sponsor/">Sponsor</a></li>
+						</ul>
+					</ul>
+				</div>
+				<div id="footer-legal" class="footer-section col-md-5 col-sm-8">
+					<div class="menu-heading">Legal</div>
+					<ul class="nav">
+						<ul class="nav">
+							<li><a href="http://www.eclipse.org/legal/privacy.php">Privacy Policy</a></li>
+							<li><a href="http://www.eclipse.org/legal/termsofuse.php">Terms of Use</a></li>
+							<li><a href="http://www.eclipse.org/legal/compliance/">Compliance</a></li>
+							<li><a href="http://www.eclipse.org/org/documents/Community_Code_of_Conduct.php">Code of
+									Conduct</a></li>
+							<li><a href="http://www.eclipse.org/legal/">Legal Resources</a></li>
+						</ul>
+					</ul>
+				</div>
+				<div id="footer-more" class="footer-section col-md-5 col-sm-8">
+					<div class="menu-heading">More</div>
+					<ul class="nav">
+						<ul class="nav">
+							<li><a href="http://www.eclipse.org/security/">Report a Vulnerability</a></li>
+							<li><a href="https://www.eclipsestatus.io/">Service Status</a></li>
+							<li><a href="http://www.eclipse.org/org/foundation/contact.php">Contact</a></li>
+							<li><a href="http://www.eclipse.org//projects/support/">Support</a></li>
+						</ul>
+					</ul>
+				</div>
+			</div>
+			<div class="col-sm-24">
+				<div class="row">
+					<div id="copyright" class="col-md-16">
+						<p id="copyright-text">Copyright © Eclipse Foundation AISBL. All Rights Reserved.</p>
+					</div>
+				</div>
+			</div>
+			<a href="#" class="scrollup" onclick="scrollToTop()">Back to the top</a>
 		</div>
 	</footer>
 </div>
