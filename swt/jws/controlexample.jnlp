@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0+"
+	codebase="http://www.eclipse.org/swt/jws/"
+	href="controlexample.jnlp">
+	<information>
+  		<title>Control Example</title>
+  		<vendor>eclipse.org</vendor>
+  		<homepage href="http://www.eclipse.org/swt/jws/" />
+  		<description>A demonstration of SWT Widgets</description>
+  		<description>Control Example</description>
+	</information>
+
+	<security>
+		<all-permissions />
+	</security>
+
+	<resources>
+		<extension href="swt.jnlp"/>
+		<jar href="controlexample.jar" />
+	</resources>
+
+	<application-desc main-class="org.eclipse.swt.examples.controlexample.ControlExample" />
+</jnlp>

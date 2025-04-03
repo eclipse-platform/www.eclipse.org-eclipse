@@ -1,0 +1,254 @@
+<html>
+<head>
+<title>Platform SWT 3.4</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="http://dev.eclipse.org/default_style.css" type="text/css">
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000">
+<table border=0 cellspacing=5 cellpadding=2 width="100%" >
+  <tr> 
+    <td align=left width="72%"> <font class=indextop>Platform SWT R3.4</font> <br>
+      <font class=indexsub> Platform SWT</font></td>
+    <td width="28%">
+    	<img src="http://dev.eclipse.org/images/Idea.jpg" height=86 width=120
+    	alt="Eclipse documentation banner"
+    	></td>
+  </tr>
+</table>
+<table border=0 cellspacing=5 cellpadding=2 width="100%" >
+  <tr> 
+    <a NAME="Overall_Planning">
+    <td align=LEFT valign=TOP colspan="2" bgcolor="#0080C0"><b><font color="#FFFFFF" face="Arial,Helvetica">
+      Overall 3.4 Plan
+    </font></b></td>
+    </a>
+  </tr>
+	<tr>
+		<td valign="top" width="2%"><img src="http://dev.eclipse.org/images/Adarrow.gif"
+			nosave="" border="0" height="16" width="16"></td>
+		<td><b>Overall Platform Themes</b>
+		<ul>
+			<li>Platforms</li>
+			<li>Consumability</li>
+			<li>Reliability</li>
+			<li>The Future</li>
+		</ul>
+		</td>
+	</tr>
+	<tr>
+		<td valign="top" width="2%"><img src="http://dev.eclipse.org/images/Adarrow.gif"
+			nosave="" border="0" height="16" width="16"></td>
+		<td><b>Plan Items</b>
+		<ul>
+			<li><img src="../images/ok.gif" nosave="" height="10" width="10" border="0"> Port SWT win32 to 64-bit
+			(<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=200081">200081</a>)</li>
+			<li><font class="indexsub" color="#8080ff">[&gt;3.4]</font> Complete SWT WPF port
+			(<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=200082">200082</a>)</li>			
+			<li><img src="../images/ok.gif" nosave="" height="10" width="10" border="0"> Support BIDI on Linux GTK
+			(<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=200083">200083</a>)</li>
+			<li><font class="indexsub" color="#8080ff">[&gt;3.4]</font> General API for drawing standard UI components
+			(<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=80554">80554</a>, 
+			<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=37706">37706</a>)</li>
+			<li><img src="../images/ok.gif" nosave="" height="10" width="10" border="0"> Provide full internationalization on Mac OS X
+			(<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=200085">200085</a>)</li>
+			<li><img src="../images/ok.gif" nosave="" height="10" width="10" border="0"> Implement accessibility for Mac OS X
+			(<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=200086">200086</a>)</li>
+			<li><img src="../images/ok.gif" nosave="" height="10" width="10" border="0"> Investigate new user-interface directions
+			(<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=200095">200095</a>)</li>
+		</ul>
+		</td>
+	</tr>
+</table>
+
+<table border="0" cellspacing="5" cellpadding="2" width="100%">
+	<tbody>
+		<tr>
+			<td align="left" valign="top" colspan="4" bgcolor="#0080c0"
+				width="100%"><b><font face="Arial,Helvetica"><font color="#ffffff">
+			Legend</font></font></b></td>
+		</tr>
+		<tr>
+			<td valign="top"><img src="../images/progress.gif" nosave="" height="5" width="14" border="0"></td>
+			<td width="50%">item is under development</td>
+			<td valign="top"><img src="../images/glass.gif" nosave="" height="10" width="10" border="0"></td>
+			<td width="50%">item is under investigation</td>
+		</tr>
+		<tr>
+			<td valign="top"><img src="../images/ok.gif" nosave="" height="10" width="10" border="0"></td>
+			<td width="50%">item is finished</td>
+			<td valign="top">( )</td>
+			<td width="50%">item is time permitting</td>
+		</tr>
+		<tr>
+			<td valign="top"><font class="indexsub" color="#8080ff">[&gt;3.4]</font></td>
+			<td width="50%">item is deferred</td>
+			<td valign="top"><font class="indexsub"><img src="../images/new.gif" alt="" border="0"></font></td>
+			<td width="50%">new</td>
+		</tr>
+	</tbody>
+</table>
+
+<table border="0" cellspacing="5" cellpadding="2" width="100%">
+	<tbody>
+	<tr>
+		<td align="left" valign="top" colspan="2" bgcolor="#0080c0"
+			width="100%"><b><font face="Arial,Helvetica"><font color="#ffffff">
+			Milestone Plan 3.4 M1 Aug 10, 2007</font></font></b></td>
+	</tr>
+	<tr>
+		<td valign="top" width="2%"><img src="http://dev.eclipse.org/images/Adarrow.gif" nosave=""
+			border="0" height="16" width="16"></td>
+		<td><ul>
+			<li>Reduce bug count</li>
+			<li>Implement SWT for 64-bit Windows</li>
+			<li>Write snippets and support newsgroup</li>
+		</ul>
+		</td>
+	</tr>
+	</tbody>
+</table>
+
+<table border="0" cellspacing="5" cellpadding="2" width="100%">
+	<tbody>
+	<tr>
+		<td align="left" valign="top" colspan="2" bgcolor="#0080c0"
+			width="100%"><b><font face="Arial,Helvetica"><font color="#ffffff">
+			Milestone Plan 3.4 M2 September 21, 2007</font></font></b></td>
+	</tr>
+	<tr>
+		<td valign="top" width="2%"><img src="http://dev.eclipse.org/images/Adarrow.gif" nosave=""
+			border="0" height="16" width="16"></td>
+		<td><ul>
+			<li>Reduce bug count</li>
+			<li>Mirror widgets and graphics on GTK</li>
+			<li>Implement inline input method for StyledText</li>
+			<li>Implement underline styles and strike out colors for StyledText</li>
+			<li>Support full screen mode for shells</li>
+			<li>Write snippets and support newsgroup</li>
+		</ul>
+		</td>
+	</tr>
+	</tbody>
+</table>
+
+<table border="0" cellspacing="5" cellpadding="2" width="100%">
+	<tbody>
+	<tr>
+		<td align="left" valign="top" colspan="2" bgcolor="#0080c0"
+			width="100%"><b><font face="Arial,Helvetica"><font color="#ffffff">
+			Milestone Plan 3.4 M3 November 2, 2007</font></font></b></td>
+	</tr>
+	<tr>
+		<td valign="top" width="2%"><img src="http://dev.eclipse.org/images/Adarrow.gif" nosave=""
+			border="0" height="16" width="16"></td>
+		<td><ul>
+			<li>Reduce bug count</li>
+			<li>Implement accessibility for the Mac</li>
+			<li>Implement HTMLTransfer and ImageTransfer</li> for clipboard
+			<li>Implement border styles and colors for StyledText</li>
+			<li>Investigate Dojo and Flex widget set</li>
+			<li>Investigate cross compile technologies (such as GWT)</li>
+			<li>Write snippets and support newsgroup</li>
+		</ul>
+		</td>
+	</tr>
+	</tbody>
+</table>
+
+<table border="0" cellspacing="5" cellpadding="2" width="100%">
+	<tbody>
+	<tr>
+		<td align="left" valign="top" colspan="2" bgcolor="#0080c0"
+			width="100%"><b><font face="Arial,Helvetica"><font color="#ffffff">
+			Milestone Plan 3.4 M4 December 14, 2007</font></font></b></td>
+	</tr>
+	<tr>
+		<td valign="top" width="2%"><img src="http://dev.eclipse.org/images/Adarrow.gif" nosave=""
+			border="0" height="16" width="16"></td>
+		<td><ul>
+			<li>Reduce bug count</li>
+			<li>Implement URL transfer support</li>
+			<li>Implement OpenGL support for Solaris</li>
+			<li>Implement proxy support for browsers</li>
+			<li>Investigate Dojo and Flex widget set</li>
+			<li>Implement CLDC-like Java class library</li>
+			<li>Write snippets and support newsgroup</li>
+		</ul>
+		</td>
+	</tr>
+	</tbody>
+</table>
+
+<table border="0" cellspacing="5" cellpadding="2" width="100%">
+	<tbody>
+	<tr>
+		<td align="left" valign="top" colspan="2" bgcolor="#0080c0"
+			width="100%"><b><font face="Arial,Helvetica"><font color="#ffffff">
+			Milestone Plan 3.4 M5 February 8, 2008</font></font></b></td>
+	</tr>
+	<tr>
+		<td valign="top" width="2%"><img src="http://dev.eclipse.org/images/Adarrow.gif" nosave=""
+			border="0" height="16" width="16"></td>
+		<td><ul>
+			<li>Reduce bug count</li>
+			<li>Support regions on controls</li>
+			<li>Implement tristate buttons</li>
+			<li>Support printing a control to a GC</li>
+			<li>Investigate Dojo and Flex widget set</li>
+			<li>Investigate animation and effects API</li>
+			<li>Write snippets and support newsgroup</li>
+		</ul>
+		</td>
+	</tr>
+	</tbody>
+</table>
+
+<table border="0" cellspacing="5" cellpadding="2" width="100%">
+	<tbody>
+	<tr>
+		<td align="left" valign="top" colspan="2" bgcolor="#0080c0"
+			width="100%"><b><font face="Arial,Helvetica"><font color="#ffffff">
+			Milestone Plan 3.4 M6 March 31, 2008</font></font></b></td>
+	</tr>
+	<tr>
+		<td valign="top" width="2%"><img src="http://dev.eclipse.org/images/Adarrow.gif" nosave=""
+			border="0" height="16" width="16"></td>
+		<td><ul>
+			<li>Reduce bug count</li>
+			<li>Implement shearing transform</li>
+			<li>Implement native file overwrite prompt</li>
+			<li>Support centering of controls in RowLayout</li>
+			<li>Improve prototype on cocoa port of SWT</li>
+			<li>Write snippets and support newsgroup</li>
+		</ul>
+		</td>
+	</tr>
+	</tbody>
+</table>
+
+<table border="0" cellspacing="5" cellpadding="2" width="100%">
+	<tbody>
+	<tr>
+		<td align="left" valign="top" colspan="2" bgcolor="#0080c0"
+			width="100%"><b><font face="Arial,Helvetica"><font color="#ffffff">
+			Milestone Plan 3.4 M7 May 2, 2008</font></font></b></td>
+	</tr>
+	<tr>
+		<td valign="top" width="2%"><img src="http://dev.eclipse.org/images/Adarrow.gif" nosave=""
+			border="0" height="16" width="16"></td>
+		<td><ul>
+			<li>Reduce bug count</li>
+			<li>Support tables and trees that don't have scroll bars</li>
+			<li>Improve prototype on cocoa port of SWT</li>
+			<li>Write snippets and support newsgroup</li>
+		</ul>
+		</td>
+	</tr>
+	</tbody>
+</table>
+
+</table>
+
+</body>
+</html>

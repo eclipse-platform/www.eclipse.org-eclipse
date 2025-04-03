@@ -1,0 +1,742 @@
+<html>
+<head>
+<title>Platform SWT 3.0</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="http://dev.eclipse.org/default_style.css" type="text/css">
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000">
+<table border=0 cellspacing=5 cellpadding=2 width="100%" >
+  <tr> 
+    <td align=left width="72%"> <font class=indextop>Platform SWT R3.0</font> <br>
+      <font class=indexsub> Platform SWT</font></td>
+    <td width="28%">
+    	<img src="http://dev.eclipse.org/images/Idea.jpg" height=86 width=120
+    	alt="Eclipse documentation banner"
+    	></td>
+  </tr>
+</table>
+<table border=0 cellspacing=5 cellpadding=2 width="100%" >
+  <tr> 
+    <a NAME="Overall_Planning">
+    <td align=LEFT valign=TOP colspan="2" bgcolor="#0080C0"><b><font color="#FFFFFF" face="Arial,Helvetica">
+      Overall 3.0 Plan
+    </font></b></td>
+    </a>
+  </tr>
+	<tr>
+		<td colspan="2">The 3.0 plan below is a proto plan and input from the
+		community is very welcome.
+		<br>
+		Last revised: Friday April 2, 2004.
+		<p></td>
+	</tr>
+	
+	<tr>
+		<td valign="top" width="2%"><img src="http://dev.eclipse.org/images/Adarrow.gif"
+			nosave="" border="0" height="16" width="16"></td>
+		<td><b>Top 5 Items</b>
+		<ul>
+			<li>Performance improvements on GTK</li>
+			<li>Performance improvements on Mac</li>
+			<li>Consistent behaviour across platforms</li>
+			<li>Improve access to native widget capabilities</li>
+			<li>Documentation, snippets, tutorials, ...</li>
+		</ul>
+		</td>
+	</tr>
+	<tr>
+		<td valign="top" width="2%"><img src="http://dev.eclipse.org/images/Adarrow.gif"
+			nosave="" border="0" height="16" width="16"></td>
+		<td><b>Overall Platform UI themes</b>
+		<ul>
+			<li>User Experience</li>
+			<li>Responsive UI</li>
+			<li>Rich Client Platform</li>
+			<li>Other</li>
+		</ul>
+		</td>
+	</tr>
+	<tr>
+		<td valign="top" width="2%"><img src="http://dev.eclipse.org/images/Adarrow.gif"
+			nosave="" border="0" height="16" width="16"></td>
+		<td><b>User Experience</b>
+		<ul>
+			<li><img src="../images/ok.gif" nosave="" height="10" width="10" border="0"> Evolve the Eclipse user experience <a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=37997">(37997)</a></li>
+			<li><img src="../images/ok.gif" nosave="" height="10" width="10" border="0"> Improve keyboard bindings <a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=37934">(37934)</a></li>
+			<li><img src="../images/ok.gif" nosave="" height="10" width="10" border="0"> Display HTML in a widget <a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=36952">(36952)</a></li>
+		</ul>
+		</td>
+	</tr>
+	<tr>
+		<td valign="top" width="2%"><img src="http://dev.eclipse.org/images/Adarrow.gif"
+			nosave="" border="0" height="16" width="16"></td>
+		<td><b>Responsive UI</b>
+		<ul>
+		    <li><img src="../images/progress.gif" nosave="" height="5" width="14" border="0"> Address platform-specific UI performance problems <a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=37683">(37683)</a></li>
+		</ul>
+		</td>
+	</tr>
+	<tr>
+		<td valign="top" width="2%"><img src="http://dev.eclipse.org/images/Adarrow.gif"
+			nosave="" border="0" height="16" width="16"></td>
+		<td><b>Rich Client Platform</b>
+		<ul>
+			<li><img src="../images/ok.gif" nosave="" height="10" width="10" border="0"> Support product branding <a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=37693">(37693)</a></li>
+		</ul>
+		</td>
+	</tr>
+	<tr>
+		<td valign="top" width="2%"><img src="http://dev.eclipse.org/images/Adarrow.gif"
+			nosave="" border="0" height="16" width="16"></td>
+		<td><b>Other</b>
+		<ul>
+			<li><img src="../images/ok.gif" nosave="" height="10" width="10" border="0"> Improve SWT accessibility support <a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=37694">(37694)</a></li>
+			<li><img src="../images/ok.gif" nosave="" height="10" width="10" border="0"> Improve SWT support for right-to-left languages <a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=36951">(36951)</a></li>
+			<li><img src="../images/ok.gif" nosave="" height="10" width="10" border="0"> Provide improved table and table tree widgets <a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=37998">(37998)</a></li>
+			<li><img src="../images/ok.gif" nosave="" height="10" width="10" border="0"> Provide Swing interoperability <a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=37724">(37724)</a></li>
+			<li><img src="../images/ok.gif" nosave="" height="10" width="10" border="0"> Port SWT to 64-bit operating environments <a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=37721">(37721)</a></li>
+		</ul>
+		</td>
+	</tr>
+</table>
+
+<table border="0" cellspacing="5" cellpadding="2" width="100%">
+	<tbody>
+		<tr>
+			<td align="left" valign="top" colspan="4" bgcolor="#0080c0"
+				width="100%"><b><font face="Arial,Helvetica"><font color="#ffffff">
+			Legend</font></font></b></td>
+		</tr>
+		<tr>
+			<td valign="top"><img src="../images/progress.gif" nosave="" height="5" width="14" border="0">
+			</td>
+			<td width="50%">item is under development.
+			</td>
+			<td valign="top"><img src="../images/glass.gif" nosave="" height="10" width="10" border="0">
+			</td>
+			<td width="50%">item is under investigation.
+			</td>
+		</tr>
+		<tr>
+			<td valign="top"><img src="../images/ok.gif" nosave="" height="10" width="10" border="0">
+			</td>
+			<td width="50%">item is finished.
+			</td>
+			<td valign="top">( )
+			</td>
+			<td width="50%">item is time permitted.
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<table border="0" cellspacing="5" cellpadding="2" width="100%">
+	<tbody>
+	<tr>
+	    <a NAME="Milestone_Planning">
+		<td align="left" valign="top" colspan="2" bgcolor="#0080c0"
+			width="100%"><b><font face="Arial,Helvetica"><font color="#ffffff">
+			Release 3.0.1 September 16, 2004</font></font></b></td>
+		</a>
+	</tr>
+	<tr>
+		<td valign="top" width="2%"><img src="http://dev.eclipse.org/images/Adarrow.gif" nosave=""
+			border="0" height="16" width="16"></td>
+		<td><b>Bugs fixed for 3.0.1</b><ul>
+			<li><a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=38855">38855</a>: Table.getImageBounds returns incorrect value</li>
+			<li><a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=39863">39863</a>: TableViewer / cellModifier / ComboBoxCellEditor: new value not set</li>
+			<li><a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=47549">47549</a>: GPF in XtSetValues on M5</li>
+			<li><a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=53265">53265</a>: [SWT Examples] Image Analyzer crashed when tried to open JPEGs on HP-UX 11i</li>
+			<li><a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=57408">57408</a>: DBCS: After pressing "Tab", anything can not be inputed</li>
+			<li><a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=66433">66433</a>: Need keyboard support for Nested Tabfolder Traversal</li>
+			<li><a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=67061">67061</a>: Blank page when opening page with Flash</li>
+			<li><a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=68273">68273</a>: Tabletree plus/minus not visible in High Contrast Mode</li>
+			<li><a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=68855">68855</a>: org.eclipse.swt.tools.internal.SwtJniGen is not working </li>
+			<li><a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=69398">69398</a>: Table.clearAll() does not force redraw</li>
+			<li><a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=69410">69410</a>: TVT3.0: mnemonics doesn't work if focus is in a text widget</li>
+			<li><a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=69440">69440</a>: Inspect32 does not show name for CCombo</li>
+			<li><a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=70077">70077</a>: [typing] Copy/paste doesn't work occasionally</li>
+			<li><a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=70299">70299</a>: Eclipse dead slow on one system, normal on other</li>
+			<li><a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=70949">70949</a>: <b>Workaround for</b> 'Unsupported color depth' error on Linux'</li>
+			<li><a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=71019">71019</a>: Setting a ToolItem's control to a Button doesn't work in Linux GTK</li>
+		</ul>
+		</td>
+	</tr>
+	</tbody>
+</table>
+
+<table border="0" cellspacing="5" cellpadding="2" width="100%">
+	<tbody>
+	<tr>
+		<td align="left" valign="top" colspan="2" bgcolor="#0080c0"
+			width="100%"><b><font face="Arial,Helvetica"><font color="#ffffff">
+			Milestone Plan 3.0 M9 May 7, 2004</font></font></b></td>
+	</tr>
+	<tr>
+		<td valign="top" width="2%"><img src="http://dev.eclipse.org/images/Adarrow.gif" nosave=""
+			border="0" height="16" width="16"></td>
+		<td><b>General Items</b><ul>
+			<li>Bug fixing, bug fixing, bug fixing</li>
+			<li>Snippets and newsgroup support</li>
+			<li>Cross platform consistency improvements</li>
+			<li>Platform accessibility improvements</li>
+		</ul>
+		</td>
+	</tr>
+	<tr>
+		<td valign="top" width="2%"><img src="http://dev.eclipse.org/images/Adarrow.gif"
+			nosave="" border="0" height="16" width="16"></td>
+		<td><b>User Experience</b>
+		<ul>
+			<li>Final 'new look' tweaks for custom widgets including CTabFolder, CBanner, ViewForm and others</li>
+		</ul>
+		</td>
+	</tr>
+	<tr>
+		<td valign="top" width="2%"><img src="http://dev.eclipse.org/images/Adarrow.gif"
+			nosave="" border="0" height="16" width="16"></td>
+		<td><b>Responsive UI</b>
+		<ul>
+		    <li>Investigation with profiling tools</li>
+		</ul>
+		</td>
+	</tr>
+	<tr>
+		<td valign="top" width="2%"><img src="http://dev.eclipse.org/images/Adarrow.gif"
+			nosave="" border="0" height="16" width="16"></td>
+		<td><b>Rich Client Platform</b>
+		<ul>
+			<li>CTabFolder appearance tweaks as needed</li>
+		</ul>
+		</td>
+	</tr>
+	<tr>
+		<td valign="top" width="2%"><img src="http://dev.eclipse.org/images/Adarrow.gif"
+			nosave="" border="0" height="16" width="16"></td>
+		<td><b>Other</b>
+		<ul>
+     		<li>Make 64-bit GTK production quality</li>
+		</ul>
+		</td>
+	</tr>
+	</tbody>
+</table>
+
+<table border="0" cellspacing="5" cellpadding="2" width="100%">
+	<tbody>
+	<tr>
+		<td align="left" valign="top" colspan="2" bgcolor="#0080c0"
+			width="100%"><b><font face="Arial,Helvetica"><font color="#ffffff">
+			Milestone Plan 3.0 M8 March 26, 2004</font></font></b></td>
+	</tr>
+	<tr>
+		<td valign="top" width="2%"><img src="http://dev.eclipse.org/images/Adarrow.gif" nosave=""
+			border="0" height="16" width="16"></td>
+		<td><b>General Items</b><ul>
+			<li>Bug fixing, snippets and newsgroup support</li>
+			<li>Eclipse 2.1.3 patches</li>
+			<li>Cross platform consistency improvements</li>
+		</ul>
+		</td>
+	</tr>
+	<tr>
+		<td valign="top" width="2%"><img src="http://dev.eclipse.org/images/Adarrow.gif"
+			nosave="" border="0" height="16" width="16"></td>
+		<td><b>User Experience</b>
+		<ul>
+			<li>New look for custom widgets including CTabFolder, ViewForm and others</li>
+		</ul>
+		</td>
+	</tr>
+	<tr>
+		<td valign="top" width="2%"><img src="http://dev.eclipse.org/images/Adarrow.gif"
+			nosave="" border="0" height="16" width="16"></td>
+		<td><b>Responsive UI</b>
+		<ul>
+		    <li></li>
+		</ul>
+		</td>
+	</tr>
+	<tr>
+		<td valign="top" width="2%"><img src="http://dev.eclipse.org/images/Adarrow.gif"
+			nosave="" border="0" height="16" width="16"></td>
+		<td><b>Rich Client Platform</b>
+		<ul>
+			<li>CTabFolder appearance flexibility</li>
+		</ul>
+		</td>
+	</tr>
+	<tr>
+		<td valign="top" width="2%"><img src="http://dev.eclipse.org/images/Adarrow.gif"
+			nosave="" border="0" height="16" width="16"></td>
+		<td><b>Other</b>
+		<ul>
+			<li>Support for virtual native Table</li>
+     		<li>Improvements to TableCursor</li>
+     		<li>Support for 64-bit on GTK</li>
+     		<li>Finish implementing Text Layout</li>
+		</ul>
+		</td>
+	</tr>
+	</tbody>
+</table>
+
+<table border="0" cellspacing="5" cellpadding="2" width="100%">
+	<tbody>
+	<tr>
+		<td align="left" valign="top" colspan="2" bgcolor="#0080c0"
+			width="100%"><b><font face="Arial,Helvetica"><font color="#ffffff">
+			Milestone Plan 3.0 M7 February 13, 2004</font></font></b></td>
+	</tr>
+	<tr>
+		<td valign="top" width="2%"><img src="http://dev.eclipse.org/images/Adarrow.gif" nosave=""
+			border="0" height="16" width="16"></td>
+		<td><b>General Items</b><ul>
+			<li>Bug fixing, snippets and newsgroup support</li>
+			<li>Prepare and present at EclipseCon</li>
+		</ul>
+		</td>
+	</tr>
+	<tr>
+		<td valign="top" width="2%"><img src="http://dev.eclipse.org/images/Adarrow.gif"
+			nosave="" border="0" height="16" width="16"></td>
+		<td><b>User Experience</b>
+		<ul>
+			<li>Additional new look changes to custom widgets</li>
+			<li>Finalize Browser API</li>
+		</ul>
+		</td>
+	</tr>
+	<tr>
+		<td valign="top" width="2%"><img src="http://dev.eclipse.org/images/Adarrow.gif"
+			nosave="" border="0" height="16" width="16"></td>
+		<td><b>Responsive UI</b>
+		<ul>
+		    <li>TBD</li>
+		</ul>
+		</td>
+	</tr>
+	<tr>
+		<td valign="top" width="2%"><img src="http://dev.eclipse.org/images/Adarrow.gif"
+			nosave="" border="0" height="16" width="16"></td>
+		<td><b>Rich Client Platform</b>
+		<ul>
+			<li>TBD</li>
+		</ul>
+		</td>
+	</tr>
+	<tr>
+		<td valign="top" width="2%"><img src="http://dev.eclipse.org/images/Adarrow.gif"
+			nosave="" border="0" height="16" width="16"></td>
+		<td><b>Other</b>
+		<ul>
+     		<li>Investigate support for large tables in native table widgets</li>
+            <li>Continue work on Text Layout</li>
+            <li>Implement TableItem.setFont and TreeItem.setFont</li>
+		</ul>
+		</td>
+	</tr>
+	</tbody>
+</table>
+
+<table border="0" cellspacing="5" cellpadding="2" width="100%">
+	<tbody>
+	<tr>
+		<td align="left" valign="top" colspan="2" bgcolor="#0080c0"
+			width="100%"><b><font face="Arial,Helvetica"><font color="#ffffff">
+			Milestone Plan 3.0 M6 December 19, 2003</font></font></b></td>
+		</a>
+	</tr>
+	<tr>
+		<td valign="top" width="2%"><img src="http://dev.eclipse.org/images/Adarrow.gif" nosave=""
+			border="0" height="16" width="16"></td>
+		<td><b>General Items</b><ul>
+			<li>Bug fixing, snippets and newsgroup support</li>
+			<li>Improvements to background colors on GTK</li>
+		</ul>
+		</td>
+	</tr>
+	<tr>
+		<td valign="top" width="2%"><img src="http://dev.eclipse.org/images/Adarrow.gif"
+			nosave="" border="0" height="16" width="16"></td>
+		<td><b>User Experience</b>
+		<ul>
+			<li>Additional new look changes to custom widgets</li>
+			<li>Browser events for window creation</li>
+		</ul>
+		</td>
+	</tr>
+	<tr>
+		<td valign="top" width="2%"><img src="http://dev.eclipse.org/images/Adarrow.gif"
+			nosave="" border="0" height="16" width="16"></td>
+		<td><b>Responsive UI</b>
+		<ul>
+		    <li>TBD</li>
+		</ul>
+		</td>
+	</tr>
+	<tr>
+		<td valign="top" width="2%"><img src="http://dev.eclipse.org/images/Adarrow.gif"
+			nosave="" border="0" height="16" width="16"></td>
+		<td><b>Rich Client Platform</b>
+		<ul>
+			<li>Dependant on the UI team for a description of what is required.</li>
+		</ul>
+		</td>
+	</tr>
+	<tr>
+		<td valign="top" width="2%"><img src="http://dev.eclipse.org/images/Adarrow.gif"
+			nosave="" border="0" height="16" width="16"></td>
+		<td><b>Other</b>
+		<ul>
+            <li>Implement Swing interoperability on Windows, Motif and GTK using JDK 1.5</li>
+            <li>Investigate Swing interoperability on Mac and Photon</li>
+            <li>Implementing Text Layout</li>
+            <li>Platform consistency improvements</li>
+		</ul>
+		</td>
+	</tr>
+	</tbody>
+</table>
+
+<table border="0" cellspacing="5" cellpadding="2" width="100%">
+	<tbody>
+	<tr>
+		<td align="left" valign="top" colspan="2" bgcolor="#0080c0"
+			width="100%"><b><font face="Arial,Helvetica"><font color="#ffffff">
+			Milestone Plan 3.0 M5 November 21, 2003</font></font></b></td>
+	</tr>
+	<tr>
+		<td valign="top" width="2%"><img src="http://dev.eclipse.org/images/Adarrow.gif" nosave=""
+			border="0" height="16" width="16"></td>
+		<td><b>General Items</b><ul>
+			<li>Bug fixing, snippets and newsgroup support</li>
+			<li>Improvements to background colors on Windows</li>
+		</ul>
+		</td>
+	</tr>
+	<tr>
+		<td valign="top" width="2%"><img src="http://dev.eclipse.org/images/Adarrow.gif"
+			nosave="" border="0" height="16" width="16"></td>
+		<td><b>User Experience</b>
+		<ul>
+			<li>New look for CTabFolder (temporarily in CTabFolder2)</li>
+			<li>Added support for Browser on Photon and Linux Motif</li>
+			<li>Added ability to set text in Browser</li>
+			<li>Support for Num-pad keys</li>
+		</ul>
+		</td>
+	</tr>
+	<tr>
+		<td valign="top" width="2%"><img src="http://dev.eclipse.org/images/Adarrow.gif"
+			nosave="" border="0" height="16" width="16"></td>
+		<td><b>Responsive UI</b>
+		<ul>
+		    <li>Improvements on GTK for computeSize and colors</li>
+		</ul>
+		</td>
+	</tr>
+	<tr>
+		<td valign="top" width="2%"><img src="http://dev.eclipse.org/images/Adarrow.gif"
+			nosave="" border="0" height="16" width="16"></td>
+		<td><b>Rich Client Platform</b>
+		<ul>
+			<li>Dependant on the UI team for a description of what is required.</li>
+		</ul>
+		</td>
+	</tr>
+	<tr>
+		<td valign="top" width="2%"><img src="http://dev.eclipse.org/images/Adarrow.gif"
+			nosave="" border="0" height="16" width="16"></td>
+		<td><b>Other</b>
+		<ul>
+            <li>Investigate support for large tables in native table widgets</li>
+			<li>Added support for printing on the Mac</li>
+			<li>Implementing Text Layout</li>
+			<li>Continuing to investigate Swing interoperability</li>
+			<li>Platform consistency improvements</li>
+		</ul>
+		</td>
+	</tr>
+	</tbody>
+</table>
+
+<table border="0" cellspacing="5" cellpadding="2" width="100%">
+	<tbody>
+	<tr>
+		<td align="left" valign="top" colspan="2" bgcolor="#0080c0"
+			width="100%"><b><font face="Arial,Helvetica"><font color="#ffffff">
+			Milestone Plan 3.0 M4 Oct 10, 2003</font></font></b></td>
+	</tr>
+	<tr>
+		<td valign="top" width="2%"><img src="http://dev.eclipse.org/images/Adarrow.gif" nosave=""
+			border="0" height="16" width="16"></td>
+		<td><b>General Items</b><ul>
+			<li>Port selected bug fixes to 2.1.2</li>
+			<li>Bug fixing, snippets and newsgroup support</li>
+			<li>Investigate printing issues on motif</li>
+		</ul>
+		</td>
+	</tr>
+	<tr>
+		<td valign="top" width="2%"><img src="http://dev.eclipse.org/images/Adarrow.gif"
+			nosave="" border="0" height="16" width="16"></td>
+		<td><b>User Experience</b>
+		<ul>
+			<li>Resolve strategy to be used for basic browser widget on Carbon, Photon and Motif</li>
+			<li>Review API for basic browser widget</li>
+			<li>Support non-rectangular windows</li>
+			<li>Support in Region for adding/subtracting polygons</li>
+		</ul>
+		</td>
+	</tr>
+	<tr>
+		<td valign="top" width="2%"><img src="http://dev.eclipse.org/images/Adarrow.gif"
+			nosave="" border="0" height="16" width="16"></td>
+		<td><b>Responsive UI</b>
+		<ul>
+		    <li>JNI Performance improvements on the remaining supported platforms (use of JNI_COMMIT and JNI_ABORT, etc)</li>
+		</ul>
+		</td>
+	</tr>
+	<tr>
+		<td valign="top" width="2%"><img src="http://dev.eclipse.org/images/Adarrow.gif"
+			nosave="" border="0" height="16" width="16"></td>
+		<td><b>Rich Client Platform</b>
+		<ul>
+			<li>Dependant on the UI team for a description of what is required</li>
+		</ul>
+		</td>
+	</tr>
+	<tr>
+		<td valign="top" width="2%"><img src="http://dev.eclipse.org/images/Adarrow.gif"
+			nosave="" border="0" height="16" width="16"></td>
+		<td><b>Other</b>
+		<ul>
+            <li>Extend Text support for Accessibility</li>
+            <li>Implement BidiUtil on GTK</li>
+            <li>Investigate TextLayout</li>
+            <li>Investigate support for multiple Displays on GTK</li>
+		</ul>
+		</td>
+	</tr>
+	</tbody>
+</table>
+
+<table border="0" cellspacing="5" cellpadding="2" width="100%">
+	<tbody>
+	<tr>
+		<td align="left" valign="top" colspan="2" bgcolor="#0080c0"
+			width="100%"><b><font face="Arial,Helvetica"><font color="#ffffff">
+			Milestone Plan 3.0 M3 Aug 29, 2003</font></font></b></td>
+	</tr>
+	<tr>
+		<td valign="top" width="2%"><img src="http://dev.eclipse.org/images/Adarrow.gif" nosave=""
+			border="0" height="16" width="16"></td>
+		<td><b>General Items</b><ul>
+			<li>Bug fixing, snippets and newsgroup support</li>
+			<li>Add new API to Region to support additional rectangle collection management</li>
+		</ul>
+		</td>
+	</tr>
+	<tr>
+		<td valign="top" width="2%"><img src="http://dev.eclipse.org/images/Adarrow.gif"
+			nosave="" border="0" height="16" width="16"></td>
+		<td><b>User Experience</b>
+		<ul>
+			<li>Provide a basic browser widget on Win32 using Internet Explorer</li>
+			<li>Provide a basic browser widget on GTK using Mozilla</li>
+			<li>Implement <code>setParent()</code> on GTK</li>
+		</ul>
+		</td>
+	</tr>
+	<tr>
+		<td valign="top" width="2%"><img src="http://dev.eclipse.org/images/Adarrow.gif"
+			nosave="" border="0" height="16" width="16"></td>
+		<td><b>Responsive UI</b>
+		<ul>
+		    <li>JNI Performance improvements on Windows (use of JNI_COMMIT and JNI_ABORT, etc)</li>
+		</ul>
+		</td>
+	</tr>
+	<tr>
+		<td valign="top" width="2%"><img src="http://dev.eclipse.org/images/Adarrow.gif"
+			nosave="" border="0" height="16" width="16"></td>
+		<td><b>Rich Client Platform</b>
+		<ul>
+			<li>Dependant on the UI team for a description of what is required</li>
+		</ul>
+		</td>
+	</tr>
+	<tr>
+		<td valign="top" width="2%"><img src="http://dev.eclipse.org/images/Adarrow.gif"
+			nosave="" border="0" height="16" width="16"></td>
+		<td><b>Other</b>
+		<ul>
+            <li>Investigate extending Text support for Accessibility</li>
+            <li>Investigate Swing interoperability</li>
+            <li>Implement support for setting foreground and background colors for single cells in Table</li>
+            <li>Investigate use of native Table Tree where provided by the OS</li>
+		</ul>
+		</td>
+	</tr>
+	</tbody>
+</table>
+
+<table border="0" cellspacing="5" cellpadding="2" width="100%">
+	<tbody>
+	<tr>
+		<td align="left" valign="top" colspan="2" bgcolor="#0080c0"
+			width="100%"><b><font face="Arial,Helvetica"><font color="#ffffff">
+			Milestone Plan 3.0 M2 July 18, 2003</font></font></b></td>
+	</tr>
+	<tr>
+		<td valign="top" width="2%"><img src="http://dev.eclipse.org/images/Adarrow.gif" nosave=""
+			border="0" height="16" width="16"></td>
+		<td><b>General Items</b><ul>
+			<li>Improve CCombo, TableEditor, TreeEditor</li>
+			<li>Bug fixing, snippets and newsgroup support</li>
+			<li>Add <code>Control.getMonitor</code> API</li>
+		</ul>
+		</td>
+	</tr>
+	<tr>
+		<td valign="top" width="2%"><img src="http://dev.eclipse.org/images/Adarrow.gif"
+			nosave="" border="0" height="16" width="16"></td>
+		<td><b>User Experience</b>
+		<ul>
+			<li>Improved keybinding support completed</li>
+			<li>Add <code>Display.addFiter</code> and <code>Display.removeFilter</code> API</li>
+			<li>Implementing HTML widget using Mozilla</li>
+			<li>Investigating tracking issues for tear off windows</li>
+			<li>Investigating issues with <code>setParent()</code></li>
+		</ul>
+		</td>
+	</tr>
+	<tr>
+		<td valign="top" width="2%"><img src="http://dev.eclipse.org/images/Adarrow.gif"
+			nosave="" border="0" height="16" width="16"></td>
+		<td><b>Responsive UI</b>
+		<ul>
+			<li>JNI improvements</li>
+			<li>FormLayout optimized</li>
+		</ul>
+		</td>
+	</tr>
+	<tr>
+		<td valign="top" width="2%"><img src="http://dev.eclipse.org/images/Adarrow.gif"
+			nosave="" border="0" height="16" width="16"></td>
+		<td><b>Rich Client Platform</b>
+		<ul>
+			<li>Dependant on the UI team for a description of what is required</li>
+		</ul>
+		</td>
+	</tr>
+	<tr>
+		<td valign="top" width="2%"><img src="http://dev.eclipse.org/images/Adarrow.gif"
+			nosave="" border="0" height="16" width="16"></td>
+		<td><b>Other</b>
+		<ul>
+			<li>Right to Left mirroring support completed</li>
+            <li>SWT accessibility support completed on GTK</li>
+            <li>Gathering requirements for Table</li>
+            <li>Investigating extensions to native table widget</li>
+		</ul>
+		</td>
+	</tr>
+	</tbody>
+</table>
+
+<table border="0" cellspacing="5" cellpadding="2" width="100%">
+	<tbody>
+	<tr>
+		<td align="left" valign="top" colspan="2" bgcolor="#0080c0"
+			width="100%"><b><font face="Arial,Helvetica"><font color="#ffffff">
+			Milestone Plan 3.0 M1 June 6, 2003</font></font></b></td>
+	</tr>
+	<tr>
+		<td valign="top" width="2%"><img src="http://dev.eclipse.org/images/Adarrow.gif" nosave=""
+			border="0" height="16" width="16"></td>
+		<td><b>General Items</b><ul>
+			<li>Mac OS X: Drag source and drop target were implemented</li>
+			<li>Mac OS X: Tracker implemented - can now drag Views in Eclipse</li>
+			<li>Mac OS X: Significant effort was put into bug fixing</li>
+			<li>Support added for multi-head display configurations.  
+			    Applications should now use the new multi-monitor API when positioning and 
+			    sizing dialogs, menus, etc.<br>
+                See the following snippet:
+                <ul>
+                <li><a href=http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/platform-swt-home/snippits/snippet120.html>center a shell on the primary monitor </a></li>
+                </ul>
+			</li>
+			<li>Support added for color cursors on Windows<br>
+                See the following snippets:
+                <ul>
+                <li><a href=http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/platform-swt-home/snippits/snippet119.html>
+                    create a color cursor from a source and a mask</a></li>
+	             <li><a href=http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/platform-swt-home/snippits/snippet118.html>
+	                  create a color cursor from an image file</a></li>
+	            </ul>
+			</li>
+			<li>Baseline tiff image decoder added for T4-encoding CCITT T.4 1D</li>
+			<li>The FontDialog has been extended to accurately present and answer Fonts composed 
+			    of multiple FontDatas</li>
+			<li>Support added to query if a data type is available on the clipboard without transferring the data</li>
+ 			    <ul>
+                <li><a href=http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/platform-swt-home/snippits/snippet122.html>enable/disable menu depending on clipboard content availability</a></li>
+                </ul>
+			<li>MenuDetect event added</li>
+			<li>Addressed focus problems on Motif</li>
+			<li>Increased robustness of Drag and Drop and improved consistency across platforms.</li>
+		</ul>
+		</td>
+	</tr>
+	<tr>
+		<td valign="top" width="2%"><img src="http://dev.eclipse.org/images/Adarrow.gif"
+			nosave="" border="0" height="16" width="16"></td>
+		<td><b>User Experience</b>
+		<ul>
+			<li>Investigating Display.filterEvent API</li>
+			<li>Investigating embedded mozilla</li>
+		</ul>
+		</td>
+	</tr>
+	<tr>
+		<td valign="top" width="2%"><img src="http://dev.eclipse.org/images/Adarrow.gif"
+			nosave="" border="0" height="16" width="16"></td>
+		<td><b>Responsive UI</b>
+		<ul>
+			<li>Adding items to a table has been optimized</li>
+            <li>Accessing the display from a control has been optimized</li>
+            <li>Mac OS X: Significant effort was put into performance improvements</li>
+		</ul>
+		</td>
+	</tr>
+	<tr>
+		<td valign="top" width="2%"><img src="http://dev.eclipse.org/images/Adarrow.gif"
+			nosave="" border="0" height="16" width="16"></td>
+		<td><b>Rich Client Platform</b>
+		<ul>
+			<li>Dependant on the UI team for a description of what is required</li>
+		</ul>
+		</td>
+	</tr>
+	<tr>
+		<td valign="top" width="2%"><img src="http://dev.eclipse.org/images/Adarrow.gif"
+			nosave="" border="0" height="16" width="16"></td>
+		<td><b>Other</b>
+		<ul>
+			<li>Support added for mirroring as required by right to left oriented languages.  
+			    Custom controls have been updated to support right to left mirroring.
+                See Display.map(), SWT.LEFT_TO_RIGHT, SWT.RIGHT_TO_LEFT, SWT.LEAD, SWT.TRAIL, 
+                new GC constructor, GC.getStyle().
+             <li>Investigating accessibility on GTK</li>
+		</ul>
+		</td>
+	</tr>
+	</tbody>
+</table>
+	
+</body>
+</html>

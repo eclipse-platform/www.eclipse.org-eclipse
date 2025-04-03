@@ -1,0 +1,78 @@
+Chris McKillop - Photon work, Browser widget for Photon
+David Whiteman
+Jason Reardon - Bugs 29730, 31686, 33580
+Yang Liu - Bug 25619 
+Lukas Weibel - Bug 7712
+Mario K - Bug 5634
+Ron Baldwin - Bug 29100
+Takashi Okamoto - Bug 32954
+Tomasz Stanczak - Bug 29027
+Semion Chichelnitsky - BIDI work for Windows and GTK, Bugs 29765, 29784, 29788, 36684, 36679, 29786, 29787 37497, 41188, 41200, 81987
+Ed Burnette - Bugs 36226, 154943
+Oyvind Harboe - Bug 27474
+Evan Sac - Bug 37519
+Richard Colley - Bug 6220
+John Ponzo - Prototype for Browser Widget on Windows and GTK
+Alex Keahan - Bug 41968
+Lorne Mach - Bug 42882
+Lina Kemmel - BIDI work for GTK
+Udagawa - Bug 45149
+Andrew Haley - SWT GTK 64-bit patch - Bug 37775
+Stefan Zeiger - Bug 32537
+Rutger Ovidius - Bug 55133
+Billy Biggs - Bugs 17563, 43684
+Sebastian Peleato - SWT Automation API, Bugs 15025, 53107
+Alex Blewitt - Bug 57876, 211361, 210861, 210869
+Leo dos Santos - Bugs 210894, 225677
+Ryan Lowe - Bug 53506
+Sam Robb - Bugs 40523, 72123
+Sumit Sarkar - Bug 61649
+Alexander Thomas - Bugs 67185, 67195 
+Sergey Prigogin - Bug 68950
+Martin Berkemeier - Bug 71570
+Darin Fisher - Bugs 61384, 76963, 80033
+Max Stepanov - Bug 68267, 260076
+Javier Pedemonte - Bugs 76983, 80033, 178134
+Ivan Markov - Bug 77342 
+Artyom Kuanbekov - Bugs 78854, 79557
+L.M. Fridael - Bug 14279
+Michal Tkacz - Bug 70318
+Sebastian Davids - Snippet174 (OpenGL)
+Ron Capelli - Bug 80033
+Florian Priester - Bugs 70854, 84012, 124591, 123922, 136890, 174565
+Rodney Dowdall  - Bugs 90513, 92648, 93151
+Jobi George - Bugs 77661, 82385
+Mike Tab - Bug 91807
+Christof Marti - Bug 92046
+Eric Zimmerman - Bugs 93619, 128448, 139987
+Arnaud Andrillon - Bug 99341
+Mitch Rudominer - Bug 103934
+Matt Scarpino - Bug 46387
+Matthew Hall -  Bug125725
+Elfi Heck - Bug 125849
+Hiroyuki Inaba - Bug 129126
+Toshihiro Izumi - Bug 113019
+Oliver Frouin - Bug 135040
+Miklos Fazekas - Bug 53260
+Scott Kovatch - Bug 67384
+Geoff Strom - Bug 24697
+Oleg Krasilnikov - Bug 155212, SWT Windows 64-bit patch - Bug 57151
+Diego Pettenò - Bug 167173
+Jeff Wu - Bugs 169293, 177284
+Ben Konrath - Bug 172590
+Brad Reynolds - Bug 116854
+ArronM - Bug 173556 - WMP fix
+George Comninos - Bug 204626
+Tobias Gerdin - Bug 202328
+Josh Arnold - Bug 209854
+Mark Powell - Bugs 47783, 86457, 196864
+Sky Yan - Bugs 210430, 211359, 211865
+Luma - Bug 211360
+David Green - Bug 220836
+Calman Steynberg - Bug 210858
+Andrew Overholt - Bug 226356
+Mikhail Kalugin - Bugs 232686, 232685
+Ryan Wilhm - Bug 253065
+M. Heinzmann - Bug 245278
+Semyon Koptelov - Bug 286040
+Nick - Bug 278572

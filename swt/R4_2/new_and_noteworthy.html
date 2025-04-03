@@ -1,0 +1,184 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<meta name="copyright" content="Copyright (c) Eclipse contributors and others 2012. This page is made available under license. For full details, see the LEGAL section in the documentation that contains this page."/>
+<meta http-equiv="Content-Language" content="en-us"/>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"/>
+<link rel="stylesheet" href="default_style.css" charset="ISO-8859-1" type="text/css"/>
+<style type="text/css"> 
+table.news td {border-top: solid thin black;}
+table.news tr {vertical-align: top;}
+table.news tr td.section {font-size: 20px; font-weight: bold;}
+table.news tr td.title {vertical-align: top; width: 30%; font-weight: bold;}
+table.news tr td.content {vertical-align: top; width: 70%;}
+</style>
+<title>Eclipse 4.2 (Juno) - New and Noteworthy in SWT</title>
+</head>
+
+<body>
+<h1><font face="Verdana">Eclipse 4.2 (Juno) - New and Noteworthy in SWT</font></h1>
+
+<ul>
+	<li><a href="#m3">Milestone M3</a></li>
+	<li><a href="#m4">Milestone M4</a></li>
+	<li><a href="#m6">Milestone M6</a></li>
+</ul>
+
+
+<table class="news" cellpadding="10" cellspacing="0">
+  <tr>
+    <td id="m3" class="section" colspan="2"><h2>Milestone M3</h2></td>
+  </tr>
+
+	<tr id="cocoa-highlight">
+    	    <td class="title">Highlight TrayItem Image</td>
+    	    <td class="content">
+     		 Users now can provide a custom image for use as the hightlight image for a tray item on Cocoa. 
+		<p>The highlight image is shown when users activate the tray item. The default tray item image will be restored when users deactivate the tray item.</p>
+		   <p><i>Default Tray Item</i><br><img src="images/nohighlight.png" alt="Default Tray Item"></p>
+		   <p><i>Highlighted Tray Item</i><br><img src="images/highlight.png" alt="Highlighted Tray Item"></p>
+   	     </td>
+  	</tr>
+
+	<tr id="styledtext-scrollbars">
+    	    <td class="title">Added support in StyledText to show the scrollbars only when needed</td>
+    	    <td class="content">
+		In the past when a StyledText was created with scrollbars it would show them all the time, even when the client area was big enough to show the entire content.
+		<p>
+		By using <code>setAlwaysShowScrollBars()</code> this behaviour can be configure so that instead of showing a disabled (useless) scrollbar, the StyledText will hide it instead and show it only when needed.
+		</p>
+   	     </td>
+  	</tr>
+  
+	<tr id="styledtext-events">
+    	    <td class="title">Event type constants in StyledText are now public</td>
+    	    <td class="content">
+     		 The following event type constants were made public:
+			<ul>
+
+			<li>ExtendedModify</li>
+			<li>LineGetBackground</li>
+			<li>LineGetStyle</li>
+			<li>TextChanging</li> 
+			<li>TextSet</li>
+			<li>VerifyKey</li>
+			<li>TextChanged</li>
+			<li>LineGetSegments</li>
+			<li>PaintObject</li>
+			<li>WordNext</li>
+			<li>WordPrevious</li>
+			<li>CaretMoved </li>
+			</ul>
+
+			This allow for these constants to be used with Widget#isListening() to verify is a listener handler was added for any event type in StyledText.
+   	     </td>
+  	</tr>
+  
+	<tr id="default-browser">
+    	    <td class="title">Default Browser renderer is now configurable</td>
+    	    <td class="content">
+     		 The native renderer that is used for <code>SWT.NONE</code>-style Browsers can now be configured by setting a Java property.
+	  	<p>This is particularly important for applications that create Browsers with a specific native renderer style (eg.- <code>SWT.MOZILLA</code>), in order to avoid conflicts that can occur when multiple native renderers are loaded in the same process.</p>
+		<p>For more information on using this new property see <a href="http://www.eclipse.org/swt/faq.php#browserspecifydefault">How do I specify the default type of native renderer that is used by the Browser?</a> .</p>
+   	     </td>
+  	</tr>
+  
+	<tr id="fontdialog">
+    	    <td class="title">FontDialog Effects</td>
+    	    <td class="content">
+     		 New API has been added to <tt>FontDialog</tt> to prevent the user from selecting font effects, such as color, underline, strikethrough and shadow.
+     		 <p><img src="images/font-dialog-effects.png" alt="FontDialog on Windows without the Effects grouping"></p>
+   	     </td>
+  	</tr>
+  
+	<tr id="combo-api">
+    	    <td class="title">New Combo API</td>
+    	    <td class="content">
+		Two new APIs were added to Combo that allow users to get the caret information in a combo box. <code>Combo.getCaretLocation</code> returns the pixel coordinates of the caret. <code>Combo.getCaretPosition</code> returns the character position of the caret.
+ 		<p>
+		For an example of how to use this API see <a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet359.java">Snippet 359</a>. 
+		 </p>
+   	     </td>
+  	</tr>
+
+  <tr>
+    <td id="m4" class="section" colspan="2"><h2>Milestone M4</h2></td>
+  </tr>
+ 
+	<tr id="TreeCursor">
+    	    <td class="title">Tree Cursor</td>
+    	    <td class="content">
+		The new TreeCursor class can be used to enable users to navigate a Tree control's individual cells, similar to what TableCursor makes possible for Table controls.  For an example of using TreeCursor see <a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/plain/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet360.java">Snippet360</a>.
+		<p><img src="images/treecursor.png" alt="Tree Cursor"></p>
+   	     </td>
+  	</tr>
+  
+	<tr id="VOContextMenu">
+    	    <td class="title">VO Context Menu</td>
+    	    <td class="content">
+     	On Mac, you can now use the keyboard to open a context menu when VoiceOver is running,
+		using the standard VO key sequence Control+Option+Shift+M.
+   	     </td>
+  	</tr>
+
+  <tr>
+    <td id="m6" class="section" colspan="2"><h2>Milestone M6</h2></td>
+  </tr>
+  
+	<tr id="XULRunner">
+    	    <td class="title"> XULRunner 10</td>
+    	    <td class="content">
+	    The Browser now supports embedding XULRunner 10.0.x (note that XULRunner versions 4.x - 9.x are not supported).  Apps wishing to use this must ship a XULRunner 10 runtime and explicitly point at it as described in <a href="http://www.eclipse.org/swt/faq.php#specifyxulrunner">the FAQ</a> .
+   	     </td>
+  	</tr>
+ 
+  <tr id="ContextMenuTrigger">
+    <td width="30%" valign="top" align="left"><b>Provide context menu trigger</td>
+    <td width="70%" valign="top">
+      <tt>MenuDetectEvent</tt> now fills in the event <tt>detail</tt> field to indicate
+      whether the context menu is being triggered by the <tt>SWT.MENU_MOUSE</tt> or <tt>SWT.MENU_KEYBOARD</tt>.
+      If the <tt>event.detail</tt> is <tt>SWT.MENU_KEYBOARD</tt>, custom controls can appropriately position
+      the context menu based on current focus or selection.
+  </tr>
+  
+ <tr id="CustomColors">
+    	    <td class="title">Set/get custom colors in ColorDialog</td>
+    	    <td class="content">
+     		  <tt>ColorDialog</tt> now supports <tt>getRGBs()</tt> and <tt>setRGBs(RGB[])</tt> to allow applications
+      to retrieve, save, and restore any custom colors that the user selected in the dialog.
+      <p><img src="images/custom-colors.png" alt="Custom Colors section of a win32 ColorDialog"></p>
+   	     </td>
+  	</tr>
+  
+  <tr id="BIDI">
+    	    <td class="title">BIDI segments on text widget</td>
+    	    <td class="content">
+     		  The <tt>Text</tt> widget now supports adding <tt>SegmentListener</tt> for BIDI support. This allows BIDI ordering to be applied to segments of the text instead of the entire text.
+   	     </td>
+  	</tr>
+  
+  <tr id="Browser">
+    	    <td class="title">Browser Function Access</td>
+    	    <td class="content">
+     		 <tt>BrowserFunction</tt> can now be installed into specific frames.
+   	     </td>
+  	</tr>
+  
+  <tr id="JarLoading">
+    	    <td class="title">SWT Runtime introspection</td>
+    	    <td class="content">
+     		 <tt>SWT.isLoadable()</tt> can be used to determine whether the SWT implementation can be loaded in the current running environment.
+   	     </td>
+  	</tr>
+  
+	<tr id="Overlay">
+    	    <td class="title">Overlay scrollbars</td>
+    	    <td class="content">
+     		  <tt>Scrollable.getScrollbarsMode()</tt> can be used to determine whether the platform shows overlay scrollbars.
+   	     </td>
+  	</tr>
+
+</table>
+
+</body>
+</html>

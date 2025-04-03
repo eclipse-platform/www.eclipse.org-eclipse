@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Language" content="en-us" />
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Eclipse &quot;New and Noteworthy&quot; Template</title>
+</head>
+<body>
+<h1><font face="Verdana">Eclipse E4 0.9 - New and Noteworthy in SWT Browser Edition</font></h1>
+
+<ul>
+	<li><a href="#m1">Milestone M1</a></li>
+	<li><a href="#m2">Milestone M2</a></li>
+</ul>
+
+
+<h2><font face="Verdana"><a name=m1>Milestone M1</a></font></h2>
+
+<table border="0" width="80%" cellpadding="10" cellspacing="0">
+  <tr id="itemname">
+    <td width="30%" valign="top" align="left"><b>ActionScript Development Environment </b></td>
+    <td width="70%" valign="top">To facilitate the development of SWT apps in ActionScript, the 
+	first pass at a development environment was implemented. The end goal of thie work is to provide a seamless Java coding
+	experience for SWT Browser Edition (SWT/BE) that is similar to the desktop. Features include:
+	<ul>
+	<li>Debugger support</li>
+	<li>Incremental build support</li>
+	<li>Launch support</li>
+	<li>Code completion for the subset JCL</li>
+	<li>Error reporting</li>
+	</ul>
+
+	<p>Here is the debug view. You can set breakpoints and step in Java code that is cross-compiled to ActionScript. 
+When you step through the Java code, you are actually stepping within the Flash player. You can click on stack frames and inspect variables.
+	<p><img src="images/debug.PNG" alt="Debugger"></p>
+	
+
+	<p>Just like on the desktop, you can concentrate on writing your Java code and let the project builder automatically build and keep your project's ActionScript code incrementally up to date. 
+	<p><img src="images/runas.PNG" alt="Run"></p>
+	</p>
+
+	<p>You can configure, run and debug your app using the integrated launch support. The launch support allows for both static and dynamic linking of ActionScript code in the
+	generated SWF files. SWFs are automatically deployed a local Jetty server, provided by the launch support.
+	<p><img src="images/launcher.PNG" alt="Launcher"></p>
+	</p>
+
+	<p>When you type, code completion is provided against the subset JCL that ships with SWT/BE. This means that
+you will not reference classes or methods that do not exist in the subset.
+	<p><img src="images/codecompletion.PNG" alt="Code completion"></p>
+	</p>
+	
+	<p>For debugging purposes, you can monitor build progress in the ActionScript console.
+	<p><img src="images/console.PNG" alt="Console"></p>
+	</p>
+	
+      </td>
+  </tr>
+  <tr>
+    <td colspan="2"><hr />
+    </td>
+  </tr>
+  <tr id="itemname2">
+    <td width="30%" valign="top" align="left"><b>SWT JCL and 1.5 support</b></td>
+    <td width="70%" valign="top">The new SWT JCL includes new 1.5 classes and language constructs compliant with most of the Java 1.5 specification.</td>
+  </tr>
+  <tr>
+    <td colspan="2"><hr />
+    </td>
+  </tr>
+  <tr id="itemname3">
+    <td width="30%" valign="top" align="left"><b>Incremental J2AS Compiler</b></td>
+    <td width="70%" valign="top">The incremental Java to ActionScript compiler takes existing Java code and translates it to equivalent ActionScript code, optimizing it wherever possible. It also
+	provides mapping functionality which enables debugging. </td>
+  </tr>
+  <tr>
+    <td colspan="2"><hr />
+    </td>
+  </tr>
+ <tr id="itemname2">
+    <td width="30%" valign="top" align="left"><b>J2AS Execution Environment</b></td>
+    <td width="70%" valign="top">A new J2AS Execution Environment was defined which allows launching of ActionScript applications in a user specified browser.</td>
+  </tr>
+  <tr>
+    <td colspan="2"><hr />
+    </td>
+<tr id="itemname2">
+    <td width="30%" valign="top" align="left"><b>SWT/BE Examples</b></td>
+    <td width="70%" valign="top">Here are some examples of the SWT Browser Edition:
+
+	<p>Basic hello world example:
+	<p><img src="images/helloworld.PNG" alt="Hello World"></p>
+	</p>
+
+	<p>Control Example which shows all of the SWT controls:
+	<p><img src="images/controlexample.PNG" alt="Control Example"></p>
+	</p>
+
+	<p>Draw2D example which shows an app making use of the Draw2D libraries to draw some diagrams:
+	<p><img src="images/draw2d.PNG" alt="Draw2d"></p>
+	</p>
+
+
+	<p>The Flickr example demonstrates how an SWT app might make use of REST services. This simple app queries and displays pictures obtained via Flickr Services.
+	<p><img src="images/flickrviewer.PNG" alt="Flickr"></p>
+	</p>
+
+	</td>
+  </tr>
+  <tr>
+    <td colspan="2"><hr />
+    </td>
+
+  </tr>
+
+
+</table>
+
+<h2><font face="Verdana"><a name=m2>Milestone M2</a></font></h2>
+
+<table border="0" width="80%" cellpadding="10" cellspacing="0">
+<tr> 
+    <td colspan="2"> <hr> </td>
+  </tr>
+   <tr id="deploy">
+    <td width="30%" valign="top" align="left"><b>Deploy ActionScript project</b></td>
+    <td width="70%" valign="top">A new ActionScript export wizard was added which deploys a compiled ActionScript project to a specified server location. For more info, see the <a href="http://wiki.eclipse.org/E4/SWT/Running_the_demos">e4 SWT wiki page.</a>
+    <p><img src="images/export_deploy.PNG" alt="Export deploy"></p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><hr />
+    </td>
+  </tr>
+  <tr id="theme">
+    <td width="30%" valign="top" align="left"><b>Theme support</b></td>
+    <td width="70%" valign="top">Theme support was added to both the launcher and the export wizard. This allows new or existing ActionScript themes to be applied to a compiled project.
+    <p><img src="images/theme_orig.PNG" alt="Theme before"></p>
+    <p><img src="images/theme.PNG" alt="Theme after"></p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><hr />
+    </td>
+  </tr>
+</table>
+</body>
+</html>

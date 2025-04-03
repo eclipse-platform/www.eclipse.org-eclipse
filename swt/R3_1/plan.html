@@ -1,0 +1,404 @@
+<html>
+<head>
+<title>Platform SWT 3.1</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="http://dev.eclipse.org/default_style.css" type="text/css">
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000">
+<table border=0 cellspacing=5 cellpadding=2 width="100%" >
+  <tr> 
+    <td align=left width="72%"> <font class=indextop>Platform SWT R3.1</font> <br>
+      <font class=indexsub> Platform SWT</font></td>
+    <td width="28%">
+    	<img src="http://dev.eclipse.org/images/Idea.jpg" height=86 width=120
+    	alt="Eclipse documentation banner"
+    	></td>
+  </tr>
+</table>
+<table border=0 cellspacing=5 cellpadding=2 width="100%" >
+  <tr> 
+    <a NAME="Overall_Planning">
+    <td align=LEFT valign=TOP colspan="2" bgcolor="#0080C0"><b><font color="#FFFFFF" face="Arial,Helvetica">
+      Overall 3.1 Plan
+    </font></b></td>
+    </a>
+  </tr>
+	<tr>
+		<td colspan="2">
+		Last revised: Monday February 20, 2006.
+		<p></td>
+	</tr>
+	
+	<tr>
+		<td valign="top" width="2%"><img src="http://dev.eclipse.org/images/Adarrow.gif"
+			nosave="" border="0" height="16" width="16"></td>
+		<td><b>Top Items</b>
+		<ul>
+			<li>Performance</li>
+			<li>Advanced Graphics Support</li>
+			<li>Cross Platform Consistency</li>
+		</ul>
+		</td>
+	</tr>
+	<tr>
+		<td valign="top" width="2%"><img src="http://dev.eclipse.org/images/Adarrow.gif"
+			nosave="" border="0" height="16" width="16"></td>
+		<td><b>Overall Platform Themes</b>
+		<ul>
+			<li>Built to Last</li>
+			<li>Simple to Use</li>
+			<li>Rich Client Platform</li>
+			<li>J2SE 5 Support</li>
+			<li>Large-scale Development</li>
+			<li>Broadening the Community</li>
+		</ul>
+		</td>
+	</tr>
+	<tr>
+		<td valign="top" width="2%"><img src="http://dev.eclipse.org/images/Adarrow.gif"
+			nosave="" border="0" height="16" width="16"></td>
+		<td><b>Built to Last</b>
+		<ul>
+			<li><img src="../images/progress.gif" nosave="" height="5" width="14" border="0"> Improve Cross Platform Consistency</li>
+			<li>( ) Multiple Displays on GTK <a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=93294">(93294)</a></li>
+			<li>( ) Use Mac HIView <a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=41467">(41467)</a></li>
+		</ul>
+		</td>
+	</tr>
+	<tr>
+		<td valign="top" width="2%"><img src="http://dev.eclipse.org/images/Adarrow.gif"
+			nosave="" border="0" height="16" width="16"></td>
+		<td><b>Simple to Use</b>
+		<ul>
+		    <li><img src="../images/ok.gif" nosave="" height="10" width="10" border="0"> Improve Layout Support</li>
+		    <li><img src="../images/ok.gif" nosave="" height="10" width="10" border="0"> SWT Application Launcher for Eclipse</li>
+		</ul>
+		</td>
+	</tr>
+	<tr>
+		<td valign="top" width="2%"><img src="http://dev.eclipse.org/images/Adarrow.gif"
+			nosave="" border="0" height="16" width="16"></td>
+		<td><b>Rich Client Platform</b>
+		<ul>
+			<li><img src="../images/ok.gif" nosave="" height="10" width="10" border="0"> Support Advanced Graphics <a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=TBD">(TBD)</a></li>
+			<li><img src="../images/ok.gif" nosave="" height="10" width="10" border="0"> Improve StyledText (e.g. strike through) <a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=TBD">(TBD)</a></li>
+			<li><img src="../images/ok.gif" nosave="" height="10" width="10" border="0"> Improve Support for Automated Testing <a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=38436">(38436)</a></li>
+			<li><img src="../images/ok.gif" nosave="" height="10" width="10" border="0"> Native Table Tree <a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=TBD">(TBD)</a></li>
+			<li><img src="../images/ok.gif" nosave="" height="10" width="10" border="0"> More Native Widgets (e.g. Spinner) <a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=TBD">(TBD)</a></li>
+			<li><img src="../images/ok.gif" nosave="" height="10" width="10" border="0"> Improve Clipboard Support <a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=TBD">(TBD)</a></li>
+			<li><img src="../images/ok.gif" nosave="" height="10" width="10" border="0"> Improve Browser Widget <a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=TBD">(TBD)</a></li>
+			<li><img src="../images/progress.gif" nosave="" height="5" width="14" border="0"> Investigate Embedded Platforms <a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=TBD">(TBD)</a></li>
+			<li>( ) Extend SWT/Swing Interoperability <a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=TBD">(TBD)</a></li>
+			<li>( ) Improve Drag and Drop Drag Under Effects <a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=TBD">(TBD)</a></li>
+		</ul>
+		</td>
+	</tr>
+</table>
+
+<table border="0" cellspacing="5" cellpadding="2" width="100%">
+	<tbody>
+		<tr>
+			<td align="left" valign="top" colspan="4" bgcolor="#0080c0"
+				width="100%"><b><font face="Arial,Helvetica"><font color="#ffffff">
+			Legend</font></font></b></td>
+		</tr>
+		<tr>
+			<td valign="top"><img src="../images/progress.gif" nosave="" height="5" width="14" border="0">
+			</td>
+			<td width="50%">item is under development.
+			</td>
+			<td valign="top"><img src="../images/glass.gif" nosave="" height="10" width="10" border="0">
+			</td>
+			<td width="50%">item is under investigation.
+			</td>
+		</tr>
+		<tr>
+			<td valign="top"><img src="../images/ok.gif" nosave="" height="10" width="10" border="0">
+			</td>
+			<td width="50%">item is finished.
+			</td>
+			<td valign="top">( )
+			</td>
+			<td width="50%">item is time permitted.
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<table border="0" cellspacing="5" cellpadding="2" width="100%">
+	<tbody>
+	<tr>
+	    <a NAME="Milestone_Planning">
+		<td align="left" valign="top" colspan="2" bgcolor="#0080c0"
+			width="100%"><b><font face="Arial,Helvetica"><font color="#ffffff">
+			Maintenace Plan 3.1.2 January, 2006</font></font></b></td>
+		</a>
+	</tr>
+	<tr>
+		<td valign="top" width="2%"><img src="http://dev.eclipse.org/images/Adarrow.gif" nosave=""
+			border="0" height="16" width="16"></td>
+		<td><ul>
+			<li><a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=110342">110342</a> SWT Example Launcher: Double-click on "Standalone" folder...</li>
+			<li><a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=111836">111836</a> 3.1.1 tree background problem</li>
+			<li><a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=118909">118909</a> Problems with accents using SWT_AWT</li>
+			<li><a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=122428">122428</a> Performance on OS X still degrades on 10.4.3 - dispose OS timer</li>
+		</ul></td>
+	</tr>
+	</tbody>
+</table>
+
+<table border="0" cellspacing="5" cellpadding="2" width="100%">
+	<tbody>
+	<tr>
+	    <a NAME="Milestone_Planning">
+		<td align="left" valign="top" colspan="2" bgcolor="#0080c0"
+			width="100%"><b><font face="Arial,Helvetica"><font color="#ffffff">
+			Maintenace Plan 3.1.1 September, 2005</font></font></b></td>
+		</a>
+	</tr>
+	<tr>
+		<td valign="top" width="2%"><img src="http://dev.eclipse.org/images/Adarrow.gif" nosave=""
+			border="0" height="16" width="16"></td>
+		<td><ul>
+			<li><a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=106384">106384</a> TVT 3.1 - TCT 478 - String truncation in editor template preferences
+				<ul><li>fixed by upgrading to GTK+ 2.8.0</li></ul></li>
+			<li><a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=106396">106396</a> Run As Eclipse Application fails on gtk_init_check</li>
+		</ul></td>
+	</tr>
+	</tbody>
+</table>
+
+<table border="0" cellspacing="5" cellpadding="2" width="100%">
+	<tbody>
+	<tr>
+		<td align="left" valign="top" colspan="2" bgcolor="#0080c0"
+			width="100%"><b><font face="Arial,Helvetica"><font color="#ffffff">
+			Milestone Plan 3.1 RC1 May 27, 2005</font></font></b></td>
+	</tr>
+	<tr>
+		<td valign="top" width="2%"><img src="http://dev.eclipse.org/images/Adarrow.gif" nosave=""
+			border="0" height="16" width="16"></td>
+		<td><ul>
+			<li>Bug fixing</li>
+			<li>Performance</li>
+			<li>Consistency</li>
+		</ul></td>
+	</tr>
+	</tbody>
+</table>
+
+<table border="0" cellspacing="5" cellpadding="2" width="100%">
+	<tbody>
+	<tr>
+		<td align="left" valign="top" colspan="2" bgcolor="#0080c0"
+			width="100%"><b><font face="Arial,Helvetica"><font color="#ffffff">
+			Milestone Plan 3.1 M7 May 13, 2005</font></font></b></td>
+	</tr>
+	<tr>
+		<td valign="top" width="2%"><img src="http://dev.eclipse.org/images/Adarrow.gif" nosave=""
+			border="0" height="16" width="16"></td>
+		<td><ul>
+			<li>Advanced Graphics</li>
+				<ul>
+				<li>Anti-Aliasing hints</li>
+				<li>Anti-Aliasing Text hints</li>
+				<li>Interpolation hints</li>
+				<li>Fill Pattern</li>
+				</ul>
+			<li>Bug fixing</li>
+			<li>Performance</li>
+			<li>Consistency</li>
+		</ul></td>
+	</tr>
+	</tbody>
+</table>
+<table border="0" cellspacing="5" cellpadding="2" width="100%">
+	<tbody>
+	<tr>
+		<td align="left" valign="top" colspan="2" bgcolor="#0080c0"
+			width="100%"><b><font face="Arial,Helvetica"><font color="#ffffff">
+			Milestone Plan 3.1 M6 April 1, 2005</font></font></b></td>
+	</tr>
+	<tr>
+		<td valign="top" width="2%"><img src="http://dev.eclipse.org/images/Adarrow.gif" nosave=""
+			border="0" height="16" width="16"></td>
+		<td><ul>
+			<li>Advanced Graphics</li>
+				<ul>
+				<li>Path Hit Test</li>
+				<li>Path Bounds</li>
+				<li>Fill Rule</li>
+				</ul>
+			<li>Extend supported Mozilla versions (84053)</li>
+			<li>RCP Launcher</li>				
+			<li>Key events for Browser</li>
+			<li>Key events for OleClientSite</li>
+			<li>Convert to EPL copyrights</li>
+			<li>GTK Performance</li>		
+			<li>Make Motif Table consistent with Tree</li>
+			<li>Photon testing</li>
+			<li>Flip native widgets on GTK</li>
+			<li>Strikethrough and Underline support for StyledText</li>
+			<li>Improve Junit test coverage</li>
+			<li>Investigate System Theme changed notification</li>
+			<li>Investigate Selectable Label</li>
+			<li>Investigate Expandable Group widget</li>
+		</ul>
+    	</td>
+	</tr>
+	</tbody>
+</table>
+
+<table border="0" cellspacing="5" cellpadding="2" width="100%">
+	<tbody>
+	<tr>
+		<td align="left" valign="top" colspan="2" bgcolor="#0080c0"
+			width="100%"><b><font face="Arial,Helvetica"><font color="#ffffff">
+			Milestone Plan 3.1 M5 February 18, 2005</font></font></b></td>
+	</tr>
+	<tr>
+		<td valign="top" width="2%"><img src="http://dev.eclipse.org/images/Adarrow.gif" nosave=""
+			border="0" height="16" width="16"></td>
+		<td><ul>
+			<li>Implement Tree with columns</li>
+			<li>Implement Link widget</li>
+			<li>Reorder table columns dynamically <a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=22035">(22035)</a></li>
+			<li>Advanced Graphics improvements</li>
+			<ul>
+			<li>transformation of lines, shapes, and text</li>
+			<li>alpha-blending of lines, shapes, and text</li>
+			</ul>
+			<li>Implement mechanism to exclude widgets from layout</li>
+			<li>Platform Launcher <a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=76722">(76722)</a> <a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=81463">(81463)</a></li>
+			<li>Critical bug fixes for 3.0.2</li>
+			<li>Investigate image transparency in all widgets</li>
+			<li>Investigate Disclosure button</li>
+			<li>Investigate GTK performance issues</li>
+			<li>Prepare for EclipseCon</li>
+		</ul>
+    	</td>
+	</tr>
+	</tbody>
+</table>
+
+<table border="0" cellspacing="5" cellpadding="2" width="100%">
+	<tbody>
+	<tr>
+		<td align="left" valign="top" colspan="2" bgcolor="#0080c0"
+			width="100%"><b><font face="Arial,Helvetica"><font color="#ffffff">
+			Milestone Plan 3.1 M4 December 17, 2004</font></font></b></td>
+		</a>
+	</tr>
+	<tr>
+		<td valign="top" width="2%"><img src="http://dev.eclipse.org/images/Adarrow.gif" nosave=""
+			border="0" height="16" width="16"></td>
+		<td><ul>
+			<li>Spinner widget <a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=14297">(14297)</a></li>
+			<li>Advanced Graphics improvements</li>
+			<ul>
+			<li>Line cap, join and dashed styles</li>
+			<li>Thick line styles <a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=4853">(4853)</a></li>
+			<li>Investigate additional areas</li>
+			</ul>
+			<li>Improved layout mechanism (deferred layouts, caching, ...)</li>
+			<li>Assist plugin teams to improve screen reader accessibility in Eclipse</li>
+			<li>Improve SWT interaction with commercially available screen readers</li>
+			<li>Improve Clipboard and Drag and Drop</li>
+			<ul>
+			   <li>Copy and paste of X Windows Selection <a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=26878">(26878)</a></li>
+			</ul>
+			<li>Extend mouse support</li>
+			<li>Implement PNG transparency <a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=35040">(35040)</a></li>
+			<li>Investigate SWT support for Windows Longhorn</li>
+			<li>Investigate automated whitebox testing <a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=38436">(38436)</a></li>
+			<li>Investigate "DrawThemedBackground" <a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=24538">(24538)</a></li>
+			<li>Investigate Link widget</li>
+		</ul>
+    	</td>
+	</tr>
+	</tbody>
+</table>
+	
+<table border="0" cellspacing="5" cellpadding="2" width="100%">
+	<tbody>
+	<tr>
+		<td align="left" valign="top" colspan="2" bgcolor="#0080c0"
+			width="100%"><b><font face="Arial,Helvetica"><font color="#ffffff">
+			Milestone Plan 3.1 M3 November 5, 2004</font></font></b></td>
+	</tr>
+	<tr>
+		<td valign="top" width="2%"><img src="http://dev.eclipse.org/images/Adarrow.gif" nosave=""
+			border="0" height="16" width="16"></td>
+		<td><ul>
+			<li>Bug fixing, bug fixing, bug fixing</li>
+			<li>Support execution of javascript commands in a Browser</li>
+			<li>Enable automation of 64 bit GTK and Motif builds</li>
+			<li>Improve sleep/wake behaviour on Motif and GTK</li>
+			<li>Extensive bug fixing on Mac Browser widget</li>
+			<li>Present SWT tutorial at OOPSLA</li>
+			<li>Make Focus callback behaviour consistent across platforms</li>
+			<li>Make "free resize on shell open" behaviour consistent across platforms</li>
+			<li>Support wrapped text widgets  in GridLayout and FormLayout</li>
+			<li>Support minimum sizes in GridLayout</li>
+			<li>Support verify listener in Combo</li>
+			<li>Support GTKFileChooser dialog when using GTK 2.4.10 or higher</li>
+			<li>Implement performance tests for SWT</li>
+			<li>Investigate seven button mouse support</li>
+			<li>Investigate improved test automation and consistency checking using Display.post()</li>
+			<li>Investigate Advanced Graphics</li>
+			<li>Investigate a defer mechanism for layouts to allow multiple layout requests to be merged</li>
+			<li>Investigate a mechanism for flushing cached layout data for specific children</li>
+			<li>Investigate selection clipboard on GTK and Motif</li>
+			<li>Investigate support for URLTransfer</li>
+			<li>Investigate Spinner widget</li>
+			<li>Investigate dragging selected text</li>
+		</ul>
+		</td>
+	</tr>
+	</tbody>
+</table>
+
+<table border="0" cellspacing="5" cellpadding="2" width="100%">
+	<tbody>
+	<tr>
+		<td align="left" valign="top" colspan="2" bgcolor="#0080c0"
+			width="100%"><b><font face="Arial,Helvetica"><font color="#ffffff">
+			Milestone Plan 3.1 M2 September 24, 2004</font></font></b></td>
+	</tr>
+	<tr>
+		<td valign="top" width="2%"><img src="http://dev.eclipse.org/images/Adarrow.gif" nosave=""
+			border="0" height="16" width="16"></td>
+		<td><ul>
+			<li>Investigate Advanced Graphics</li>
+			<li>Investigate improvements to Layouts</li>
+		</ul>
+		</td>
+	</tr>
+	</tbody>
+</table>
+
+<table border="0" cellspacing="5" cellpadding="2" width="100%">
+	<tbody>
+	<tr>
+		<td align="left" valign="top" colspan="2" bgcolor="#0080c0"
+			width="100%"><b><font face="Arial,Helvetica"><font color="#ffffff">
+			Milestone Plan 3.1 M1 August 13, 2004</font></font></b></td>
+	</tr>
+	<tr>
+		<td valign="top" width="2%"><img src="http://dev.eclipse.org/images/Adarrow.gif" nosave=""
+			border="0" height="16" width="16"></td>
+		<td><ul>
+			<li>3.0.1 Bug Fixing</li>
+			<li>Bug fixing, bug fixing, bug fixing</li>
+			<li>Snippets and newsgroup support</li>
+			<li>Cross platform consistency improvements</li>
+			<li>Platform accessibility improvements</li>
+		</ul>
+		</td>
+	</tr>
+	</tbody>
+</table>
+
+</body>
+</html>

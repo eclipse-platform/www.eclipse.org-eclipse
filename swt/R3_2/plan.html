@@ -1,0 +1,292 @@
+<html>
+<head>
+<title>Platform SWT 3.2</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="http://dev.eclipse.org/default_style.css" type="text/css">
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000">
+<table border=0 cellspacing=5 cellpadding=2 width="100%" >
+  <tr> 
+    <td align=left width="72%"> <font class=indextop>Platform SWT R3.2</font> <br>
+      <font class=indexsub> Platform SWT</font></td>
+    <td width="28%">
+    	<img src="http://dev.eclipse.org/images/Idea.jpg" height=86 width=120
+    	alt="Eclipse documentation banner"
+    	></td>
+  </tr>
+</table>
+<table border=0 cellspacing=5 cellpadding=2 width="100%" >
+  <tr> 
+    <a NAME="Overall_Planning">
+    <td align=LEFT valign=TOP colspan="2" bgcolor="#0080C0"><b><font color="#FFFFFF" face="Arial,Helvetica">
+      Overall 3.2 Plan
+    </font></b></td>
+    </a>
+  </tr>
+	<tr>
+		<td colspan="2">The 3.2 plan below is a proto plan and input from the
+		community is very welcome.
+		<br>
+		Last revised: Wednesday Augsut 16, 2006.
+		<p></td>
+	</tr>
+	
+	<tr>
+		<td valign="top" width="2%"><img src="http://dev.eclipse.org/images/Adarrow.gif"
+			nosave="" border="0" height="16" width="16"></td>
+		<td><b>Top Items</b>
+		<ul>
+			<li>Performance</li>
+			<li>New Widgets, New Features</li>
+			<li>Consistency</li>
+		</ul>
+		</td>
+	</tr>
+	<tr>
+		<td valign="top" width="2%"><img src="http://dev.eclipse.org/images/Adarrow.gif"
+			nosave="" border="0" height="16" width="16"></td>
+		<td><b>Overall Platform themes</b>
+		<ul>
+			<li>Scaling Up</li>
+			<li>Enterprise Ready</li>
+			<li>Design for Extensibility: Be a Better Platform</li>
+		</ul>
+		</td>
+	</tr>
+	<tr>
+		<td valign="top" width="2%"><img src="http://dev.eclipse.org/images/Adarrow.gif"
+			nosave="" border="0" height="16" width="16"></td>
+		<td><b>Plan items</b>
+		<ul>
+			<li><img src="../images/ok.gif" nosave="" height="10" width="10" border="0"> Improve and extend the SWT widget set
+			(<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=106182">106182</a>, 
+			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=83431">83431</a>, 
+			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=92341">92341</a>)</li>
+			<li><img src="../images/ok.gif" nosave="" height="10" width="10" border="0"> Address new window system capabilities
+			(<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=106184">106184</a>)</li>			
+			<li>( ) Improve UI Forms
+			(<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=106203">106203</a>,
+			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=5160">5160</a>)</li>
+			<li><img src="../images/ok.gif" nosave="" height="10" width="10" border="0"> Improve text support
+			(<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=54426">54426</a>, 
+			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=83405">83405</a>, 
+			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=83406">83406</a>, 
+			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=83408">83408</a>,
+			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=83430">83430</a>)</li>
+			<li><img src="../images/progress.gif" nosave="" height="5" width="14" border="0"> General API for drawing standard UI components
+			(<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=80554">80554</a>, 
+			<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=37706">37706</a>)</li>
+			<li><img src="../images/ok.gif" nosave="" height="10" width="10" border="0"> Improve drag and drop support
+			(<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=100258">100258</a>, 
+			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=4433">4433</a>, 
+			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=106372">106372</a>, 
+			<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=100245">100245</a>)</li>
+			<li>( ) Multiple Displays on GTK
+			(<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=93294">93294</a>)</li>
+			<li><img src="../images/ok.gif" nosave="" height="10" width="10" border="0"> Use Mac HIView
+			(<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=41467">41467</a>)</li>
+			<li>( ) Improve Cross Platform Consistency
+			(<a href="https://bugs.eclipse.org/bugs/buglist.cgi?short_desc_type=allwordssubstr&short_desc=&product=Platform&component=SWT&long_desc_type=allwordssubstr&long_desc=&bug_file_loc_type=allwordssubstr&bug_file_loc=&keywords_type=allwords&keywords=consistency&bug_status=NEW&bug_status=ASSIGNED&bug_status=REOPENED">consistency keyword</a>)</li>
+		</ul>
+		</td>
+	</tr>
+</table>
+
+<table border="0" cellspacing="5" cellpadding="2" width="100%">
+	<tbody>
+		<tr>
+			<td align="left" valign="top" colspan="4" bgcolor="#0080c0"
+				width="100%"><b><font face="Arial,Helvetica"><font color="#ffffff">
+			Legend</font></font></b></td>
+		</tr>
+		<tr>
+			<td valign="top"><img src="../images/progress.gif" nosave="" height="5" width="14" border="0">
+			</td>
+			<td width="50%">item is under development
+			</td>
+			<td valign="top"><img src="../images/glass.gif" nosave="" height="10" width="10" border="0">
+			</td>
+			<td width="50%">item is under investigation
+			</td>
+		</tr>
+		<tr>
+			<td valign="top"><img src="../images/ok.gif" nosave="" height="10" width="10" border="0">
+			</td>
+			<td width="50%">item is finished
+			</td>
+			<td valign="top">( )
+			</td>
+			<td width="50%">item is time permitting
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<table border="0" cellspacing="5" cellpadding="2" width="100%">
+	<tbody>
+	<tr>
+		<a NAME="Milestone_Planning">
+		<td align="left" valign="top" colspan="2" bgcolor="#0080c0"
+			width="100%"><b><font face="Arial,Helvetica"><font color="#ffffff">
+			Milestone Plan 3.2 M6 March 31, 2006 </font></font></b></td>
+		</a>
+	</tr>
+	<tr>
+		<td valign="top" width="2%"><img src="http://dev.eclipse.org/images/Adarrow.gif" nosave=""
+			border="0" height="16" width="16"></td>
+		<td><ul>
+			<li>Implement custom draw for table and tree</li>
+			<li>Implement native drag source effects for cursor</li>
+			<li>Implement ImageTransfer support</li>
+			<li>Implement Balloon tooltips</li>
+			<li>Implement Accessibility on Mac OS X</li>
+		</ul>
+    	</td>
+	</tr>
+	</tbody>
+</table>
+
+<table border="0" cellspacing="5" cellpadding="2" width="100%">
+	<tbody>
+	<tr>
+		<a NAME="Milestone_Planning">
+		<td align="left" valign="top" colspan="2" bgcolor="#0080c0"
+			width="100%"><b><font face="Arial,Helvetica"><font color="#ffffff">
+			Milestone Plan 3.2 M5 February 17, 2006 </font></font></b></td>
+		</a>
+	</tr>
+	<tr>
+		<td valign="top" width="2%"><img src="http://dev.eclipse.org/images/Adarrow.gif" nosave=""
+			border="0" height="16" width="16"></td>
+		<td><ul>
+			<li>Implement ExpandBar, an expandable group</li>
+			<li>Implement bullets and lists for StyledText</li>
+			<li>Add support for Mac OS X Intel/x86</li>
+			<li>Investigate custom draw for table and tree</li>
+			<li>Investagate native drag source effects for cursor</li>
+			<li>Investigate ImageTransfer support</li>
+			<li>Investigate Accessibility on Mac OS X 10.4</li>
+		</ul>
+    	</td>
+	</tr>
+	</tbody>
+</table>
+
+<table border="0" cellspacing="5" cellpadding="2" width="100%">
+	<tbody>
+	<tr>
+		<a NAME="Milestone_Planning">
+		<td align="left" valign="top" colspan="2" bgcolor="#0080c0"
+			width="100%"><b><font face="Arial,Helvetica"><font color="#ffffff">
+			Milestone Plan 3.2 M4 December 16, 2005 </font></font></b></td>
+		</a>
+	</tr>
+	<tr>
+		<td valign="top" width="2%"><img src="http://dev.eclipse.org/images/Adarrow.gif" nosave=""
+			border="0" height="16" width="16"></td>
+		<td><ul>
+			<li>Implement dragging in text widgets <a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=100245">(100245)</a></li>
+			<li>Implement native image loading where supported</li>
+			<li>Implement improvements to StyledText (multi-font, embed objects, bullets etc)</li>
+			<li>Implement background images for Controls</li>
+		</ul>
+    	</td>
+	</tr>
+	</tbody>
+</table>
+
+<table border="0" cellspacing="5" cellpadding="2" width="100%">
+	<tbody>
+	<tr>
+		<a NAME="Milestone_Planning">
+		<td align="left" valign="top" colspan="2" bgcolor="#0080c0"
+			width="100%"><b><font face="Arial,Helvetica"><font color="#ffffff">
+			Milestone Plan 3.2 M3 November 4, 2005 </font></font></b></td>
+		</a>
+	</tr>
+	<tr>
+		<td valign="top" width="2%"><img src="http://dev.eclipse.org/images/Adarrow.gif" nosave=""
+			border="0" height="16" width="16"></td>
+		<td><ul>
+			<li>Ensure SWT runs well on Vista <a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=78839">(78839)</a></li>
+			<li>Implement SWT.VIRTUAL style for Tree <a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=92341">(92341)</a></li>
+			<li>Implement OpenGL support in SWT</li>
+			<li>Support text with image in a button</li>
+			<li>Implement TextLayout indent, justify, alignment, embed objects, and adjust rise</li>
+			<li>Implement Mac HIView <a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=41467">41467</a></li>
+			<li>Implement clear for browser global session <a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=85962">(85962)</a></li>
+			<li>Investigate background images for widgets </li>
+			<li>Investigate new widgets (Date Time Picker, Expandable Group)</li>
+			<li>Investigate operating system theme drawing API (Windows, GTK, Mac)</li>
+			<li>Prepared and presented OOPSLA Tutorial</li>
+			<li>Have baby (GG + AG)</li>
+		</ul>
+    	</td>
+	</tr>
+	</tbody>
+</table>
+
+<table border="0" cellspacing="5" cellpadding="2" width="100%">
+	<tbody>
+	<tr>
+		<td align="left" valign="top" colspan="2" bgcolor="#0080c0"
+			width="100%"><b><font face="Arial,Helvetica"><font color="#ffffff">
+			Milestone Plan 3.2 M2 September 23, 2005 </font></font></b></td>
+		</a>
+	</tr>
+	<tr>
+		<td valign="top" width="2%"><img src="http://dev.eclipse.org/images/Adarrow.gif" nosave=""
+			border="0" height="16" width="16"></td>
+		<td><ul>
+			<li>Ensure SWT runs well on Vista <a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=78839">(78839)</a></li>
+			<li>First cut of SWT bindings for LWJGL </li>
+			<li>Implement SWT.VERTICAL style for CoolBar <a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=92013">(92013)</a></li>
+			<li>Implement System theme changed notification <a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=13813">(13813)</a></li>
+			<li>Implement Save for animated GIF's <a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=46387">(46387)</a></li>
+			<li>Implement file input field types for browser <a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=80490">(80490)</a></li>
+			<li>Implement download dialog for browser <a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=83444">(83444)</a></li>
+			<li>Investigate SWT.VIRTUAL style for Tree <a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=92341">(92341)</a></li>
+			<li>Investigate dragging in text widgets <a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=100245">(100245)</a></li>
+			<li>Investigate new widgets (Date Time Picker, Expandable Group)</li>
+			<li>Investigate browser maintaining global session <a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=85962">(85962)</a></li>
+			<li>Investigate operating system theme drawing API (Windows, GTK, Mac)</li>
+			<li>Investigate StyledText (multi-font, ...)</li>
+			<li>Investigate background images for widgets </li>
+			<li>Have baby (SSQ + RQ)</li>
+		</ul>
+    	</td>
+	</tr>
+	</tbody>
+</table>
+
+<table border="0" cellspacing="5" cellpadding="2" width="100%">
+	<tbody>
+	<tr>
+		<td align="left" valign="top" colspan="2" bgcolor="#0080c0"
+			width="100%"><b><font face="Arial,Helvetica"><font color="#ffffff">
+			Milestone Plan 3.2 M1 August 12, 2005</font></font></b></td>
+	</tr>
+	<tr>
+		<td valign="top" width="2%"><img src="http://dev.eclipse.org/images/Adarrow.gif" nosave=""
+			border="0" height="16" width="16"></td>
+		<td><ul>
+			<li>Reduce bug count</li>
+			<li>Investigate operating system theme drawing API</li>
+			<li>Port advanced graphics to latest version of Cairo</li>
+			<li>Implement 3.1.1 patches</li>
+			<li>Implement sort indicator in Table and Tree</li>
+			<li>Implement reorderable columns in Tree</li>
+			<li>Improve XP theme support</li>
+			<li>Improve dispose notification strategy</li>
+			<li>Optimize deferred layout</li>
+			<li>Implement progress bar in splash screen</li>
+			<li>Snippets and newsgroup support</li>
+		</ul>
+		</td>
+	</tr>
+	</tbody>
+</table>
+
+</body>
+</html>

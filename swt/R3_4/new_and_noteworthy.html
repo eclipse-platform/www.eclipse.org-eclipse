@@ -1,0 +1,353 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="en-us">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>Eclipse 3.4 Milestone New and Noteworthy Items - SWT</title>
+</head>
+
+<body>
+
+<h1><font face="Verdana">Eclipse 3.4 - New and Noteworthy in SWT</font></h1>
+
+<ul>
+	<li><a href="#m1">Milestone M1</a></li>
+	<li><a href="#m2">Milestone M2</a></li>
+	<li><a href="#m3">Milestone M3</a></li>
+	<li><a href="#m4">Milestone M4</a></li>
+	<li><a href="#m5">Milestone M5</a></li>
+	<li><a href="#m6">Milestone M6</a></li>
+	<li><a href="#m7">Milestone M7</a></li>
+</ul>
+
+
+<h2><font face="Verdana"><a name=m1>Milestone M1</a></font></h2>
+
+<table border="0" width="80%" cellpadding="10" cellspacing="0">
+  <tr> 
+    <td colspan="2"> <hr> </td>
+  </tr>
+  <tr> 
+    <td width="30%" valign="top" align="left"><b>SWT for 64-bit Windows</b></td>
+    <td width="70%" valign="top">Windows x86_64/AMD64 has joined the lineup of supported 
+    configurations for which SWT and Eclipse are routinely built.  To use it you must be 
+    running on a 64-bit edition of Windows with a 64-bit JRE.  (Note that the 32-bit 
+    versions of SWT and Eclipse can still be used on these configurations with a 32-bit JRE).
+    <p><img border="0" src="images/swtwinx64.png" alt="Eclipse on Windows 64"></p>
+    </td>
+  </tr>
+  <tr> 
+    <td colspan="2"> <hr /> </td>
+  </tr>
+</table>
+
+
+<h2><font face="Verdana"><a name=m2>Milestone M2</a></font></h2>
+
+<table border="0" width="80%" cellpadding="10" cellspacing="0">
+  <tr> 
+    <td colspan="2"> <hr> </td>
+  </tr>
+ <tr>
+    <td width="30%" valign="top" align="left"><b>SWT RTL support for Linux GTK</b></td>
+    <td width="70%" valign="top">SWT now provides support for mirroring on Linux
+      GTK platforms.
+      <p><img src="images/swtgtkrtl.png" alt="RTL on Linux GTK" /></p></td>
+  </tr>
+  <tr>
+    <td colspan="2"><hr /></td>
+  </tr>
+  <tr>
+    <td width="30%" valign="top" align="left"><b>SWT inline input method</b></td>
+    <td width="70%" valign="top">StyledText has added support for inline input
+      method in Win32, GTK, and Carbon.
+      <p><img src="images/swtinline.png" alt="Inline input method" /></p></td>
+  </tr>
+  <tr>
+    <td colspan="2"><hr /></td>
+  </tr>
+  <tr>
+    <td width="30%" valign="top" align="left"><b>SWT features in TextLayout and
+        StyledText</b></td>
+    <td width="70%" valign="top">TextLayout and StyledText now allow different
+      strikeout colors, underline colors, and different underline styles.
+      <p><img src="images/swtunderline.png" alt="SWT Underline" /></p></td>
+  </tr>
+  <tr>
+    <td colspan="2"><hr /></td>
+  </tr>
+  <tr>
+    <td width="30%" valign="top" align="left"><b>SWT full screen state</b></td>
+    <td width="70%" valign="top">API was added to put a Shell into a full
+        screen state. Full screen should be used rather than creating an ON_TOP shell the size
+        of the screen, which may not obscure the task bar or other desktop adornments under
+		certain operating systems.<p><img src="images/swtfullscreen.png" alt="Fullscreen" /></p></td>
+  </tr>
+  <tr> 
+    <td colspan="2"> <hr /> </td>
+  </tr>
+</table>
+
+<h2><font face="Verdana"><a name=m3>Milestone M3</a></font></h2>
+
+<table border="0" width="80%" cellpadding="10" cellspacing="0">
+   <tr>
+    <td colspan="2"><hr />    </td>
+  </tr>
+  <tr id="hpux">
+    <td width="30%" valign="top" align="left"><b>SWT on HP-UX IA64</b></td>
+    <td width="70%" valign="top">SWT will now run (in 32-bit mode) on HP-UX Itanium
+      machines.
+    <p><img src="images/hpux.png" alt="HPUX" /></p></td>
+  </tr>
+  <tr>
+    <td colspan="2"><hr />    </td>
+  </tr>
+  <tr id="alpha">
+    <td width="30%" valign="top" align="left"><b>Alpha on shells</b></td>
+    <td width="70%" valign="top">There is new SWT API that allows the
+      setting of an alpha value on a shell. Note: some operating systems do not
+      support this functionality.
+    <p><img src="images/alpha.png" alt="alpha" /></p></td>
+  </tr>
+  <tr>
+    <td colspan="2"><hr />    </td>
+  </tr>
+  <tr id="image-xfer">
+    <td width="30%" valign="top" align="left"><b>Image transfer support</b></td>
+    <td width="70%" valign="top">New API was added to support copy and paste
+      of an image to and from the clipboard.</td>
+  </tr>
+</table>
+<h2><font face="Verdana"><a name=m4>Milestone M4</a></font></h2>
+
+<table border="0" width="80%" cellpadding="10" cellspacing="0">
+   <tr>
+    <td colspan="2"><hr />    </td>
+  </tr>
+ <tr id="swt-1">
+    <td width="30%" valign="top" align="left"><b>Accessibility for Mac OS X</b></td>
+    <td width="70%" valign="top">Eclipse is now accessible on Mac OS X Carbon.
+      The Mac screen reader, VoiceOver, can be turned on and off with <b>Command+F5</b>.
+      The snapshot below shows the VoiceOver cursor highlighting a tool item
+      in Eclipse.
+      <p><img src="images/voiceover.png" alt="VoiceOver showing focus on Eclipse tool item" /></p></td>
+  </tr>
+  <tr>
+    <td colspan="2"><hr />
+    </td>
+  </tr>
+  <tr id="swt-2">
+    <td width="30%" valign="top" align="left"><b>URL transfer support</b></td>
+    <td width="70%" valign="top">There is new Drag and Drop API to support the
+      conversion between text in URL format and a platform-specific representation
+      of the data.
+  <p><img src="images/URL-transfer-before.png" alt="URL transfer before" />
+  <p><img src="images/URL-transfer-after.png" alt="URL transfer after" /></p>
+  For further details, see <a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet284.java">Snippet 284</a>.
+</td>
+  </tr>
+  <tr>
+    <td colspan="2"><hr />
+    </td>
+  </tr>
+  <tr id="swt-3">
+    <td width="30%" valign="top" align="left"><b>Create a region from a path</b></td>
+    <td width="70%" valign="top">There is new API to flatten a graphics path
+      into line segments. Line segments can be used to create a region, which
+      is used for non-rectangular shells. This <a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet285.java">snippet</a> creates
+      a circular shell from a path.
+      <p><img src="images/regionfrompath.png" alt="Region from Path" /></p></td>
+  </tr>
+  <tr>
+    <td colspan="2"><hr />
+    </td>
+  </tr>
+  <tr id="swt-4">
+    <td width="30%" valign="top" align="left"><b>OpenGL support on Solaris</b></td>
+    <td width="70%" valign="top">OpenGL support has been added on the Solaris-GTK
+      and Solaris-Motif platforms.
+      <p><img src="images/solarisopengl.png" alt="Solaris OpenGL" /></p></td>
+  </tr>
+  <tr>
+    <td colspan="2"><hr />
+    </td>
+  </tr>
+  <tr id="swt-5">
+    <td width="30%" valign="top" align="left"><b>Proxy settings on Mozilla-based
+        Browsers</b></td>
+    <td width="70%" valign="top">Mozilla-based Browsers now support access to
+      the web through a proxy. This can be set by specifying the <code>network.proxy_host</code> and <code>network.proxy_port</code> java
+      properties at startup.
+      <p> For more info see <a href="http://www.eclipse.org/swt/faq.php#browserproxy">How
+          do I set a proxy for the Browser to use?</a></p></td>
+  </tr>
+ 
+</table>
+
+<h2><font face="Verdana"><a name=m5>Milestone M5</a></font></h2>
+
+<table border="0" cellpadding="10" cellspacing="0" width="80%">
+  <tr>
+    <td colspan="2"><hr /></td>
+  </tr>
+  <tr id="swt-1">
+    <td width="30%" valign="top" align="left"><b>Regions on controls</b></td>
+    <td width="70%" valign="top">You can now set a Region into a Control, which
+      allows for the creation of non-rectangular controls. This <a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet294.java">example snippet</a>
+      created the snapshot shown below.
+    <p><img src="images/regiononcontrol.png" alt="Region on Control" /></p></td>
+  </tr>
+
+  <tr>
+    <td colspan="2"><hr />
+    </td>
+  </tr>
+  <tr id="swt-2">
+    <td width="30%" valign="top" align="left"><b>Tristate buttons</b></td>
+    <td width="70%" valign="top">API was added to allow for tristate check buttons
+      similar to the check buttons in a table or tree. This <a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet293.java">example snippet</a>
+
+      created the snapshot shown below.
+    <p><img src="images/tristate.png" alt="Tristate button" /></p></td>
+  </tr>
+  <tr>
+    <td colspan="2"><hr />
+    </td>
+  </tr>
+  <tr id="swt-3">
+    <td width="30%" valign="top" align="left"><b>Draw control to GC</b></td>
+
+    <td width="70%" valign="top">API was added to allow the drawing of any Control
+      to a GC. For more info, check out <a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet292.java">Snippet
+      292</a>.
+      <p><img src="images/printControl.png" alt="Print a Control" /></p></td>
+  </tr>
+  <tr>
+    <td colspan="2"><hr />
+    </td>
+  </tr>
+  <tr id="swt-4">
+
+    <td width="30%" valign="top" align="left"><b>Browser now uses XULRunner 1.9
+        interfaces</b></td>
+    <td width="70%" valign="top">The Browser widget has been updated to work
+      with the upcoming <a href="http://wiki.mozilla.org/XUL:Xul_Runner" target="_blank">XULRunner</a> 1.9 release (which is compatible with older
+      XULRunner versions). This affects all Browser instances on Linux, as well
+      as Windows and OSX Browser instances created with style SWT.MOZILLA.
+      <p><img src="images/xulrunner19.png" alt="xulrunner19" /></p></td>
+  </tr>
+  <tr>
+    <td colspan="2"><hr />
+    </td>
+
+  </tr>
+  <tr id="swt-5">
+    <td width="30%" valign="top" align="left"><b>Drag and drop improvements on
+        Mac</b></td>
+    <td width="70%" valign="top">When inserting an item into a tree, an indicator
+      is now displayed to show where the item will end up.
+      <p><img src="images/mactree.png" alt="Mac tree insert" /></p></td>
+  </tr>
+  <tr>
+    <td colspan="2"><hr />
+    </td>
+
+  </tr>
+  <tr  id="swt-6">
+    <td width="30%" valign="top" align="left"><b>SWT for Windows 64-bit Itanium
+        Edition</b></td>
+    <td width="70%" valign="top">Windows IA64 has joined the lineup of supported
+      configurations for which SWT is routinely built. To use it you must be
+      running on Windows 64-bit Itanium Edition with a 64-bit JRE.</td>
+  </tr>
+</table>
+
+
+<h2><font face="Verdana"><a name=m6>Milestone M6</a></font></h2>
+
+<table border="0" cellpadding="10" cellspacing="0" width="80%">
+  <tr>
+    <td colspan="2"><hr /></td>
+  </tr>
+  <tr id="swt-1">
+    <td width="30%" valign="top" align="left"><b>Shear transform</b></td>
+    <td width="70%" valign="top">SWT has new API that allows for shearing of
+      images. For more info, check out <a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet298.java">SWT
+      Snippet 298</a>.
+      <p><img src="images/sheep.jpg" alt="Shear Transform" /></p></td>
+  </tr>
+  <tr>
+    <td colspan="2"><hr />
+    </td>
+  </tr>
+  <tr id="swt-2">
+    <td width="30%" valign="top" align="left"><b>File overwrite prompt</b></td>
+    <td width="70%" valign="top">The SWT FileDialog now optionally prompts the
+      user to confirm when a file will be overwritten. This allows the user to
+      stay within the dialog when choosing a file to save.
+      <p><img src="images/file-overwrite.png" alt="File Overwrite" /></p></td>
+  </tr>
+  <tr>
+    <td colspan="2"><hr />
+    </td>
+  </tr>
+  <tr id="swt-3">
+    <td width="30%" valign="top" align="left"><b>RowLayout center alignment</b></td>
+    <td width="70%" valign="top">New API was added to SWT RowLayout to allow
+      for the centering of controls. For more info, check out <a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet299.java">SWT
+      Snippet 299</a>.
+      <p><img src="images/rowlayout.png" alt="Row Layout center" /></p></td>
+  </tr>
+  <tr>
+    <td colspan="2"><hr />
+    </td>
+  </tr>
+  <tr id="swt-4">
+    <td width="30%" valign="top" align="left"><b>Cocoa improvements</b></td>
+    <td width="70%" valign="top">Work on the Mac Cocoa port of SWT is still in
+      the early stages, but some important improvements have been made:
+      <ul>
+        <li>Menu bar support</li>
+        <li>Command Q support</li>
+        <li>Advanced graphics improvements</li>
+        <li>Checkbox in Tables and Trees</li>
+        <li>Key events</li>
+        <li>Tab traversal</li>
+      </ul>
+      <p>Thanks to the community for contributing patches, bug reports and testing.</p>
+      <p><img src="images/cocoa.jpg" alt="SWT on Cocoa" /></p></td>
+  </tr>
+  <tr>
+    <td colspan="2"><hr />
+    </td>
+  </tr>
+  <tr id="swt-5">
+    <td width="30%" valign="top" align="left"><b>Progress bar (Vista)</b></td>
+    <td width="70%" valign="top">The SWT ProgressBar control now supports the
+      native Windows Vista styles.
+      <p><img src="images/progress-bar.png" alt="Progress Bar Vista" /></p></td>
+  </tr>
+</table>
+
+<h2><font face="Verdana"><a name=m7>Milestone M7</a></font></h2>
+
+<table border="0" cellpadding="10" cellspacing="0" width="80%">
+  <tr>
+    <td colspan="2"><hr /></td>
+  </tr>
+  <tr id="swt-1">
+    <td width="30%" valign="top" align="left"><b>No scrollbars</b></td>
+    <td width="70%" valign="top">The style bit NO_SCROLL was added on all platforms
+      to prevent scrollbars in tables and trees. This is useful if you know that
+      a certain table or tree is a fixed size and will never contain enough elements
+      to warrant scrollbars. For more info, check out <a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet301.java">SWT
+      snippet 301</a>.
+      <p><img src="images/noscroll.png" alt="No Scroll" /></p></td>
+  </tr>
+  
+</table>
+</body>
+</html>

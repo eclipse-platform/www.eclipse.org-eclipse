@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml"  width="100%" height="100%" creationComplete="startUp();">
+	<mx:Script><![CDATA[
+		import org.eclipse.swt.examples.texteditor.TextEditor;
+		import java.lang.JavaArray;
+		import java.lang.System;
+
+		private function startUp():void {
+			java.lang.System.currentTimeMillis__();
+			var result: JavaArray = new JavaArray("[Ljava/lang/String;").lengths(0);
+			org.eclipse.swt.examples.texteditor.TextEditor.main___3Ljava_lang_String_2(result);
+		}
+	]]></mx:Script>
+</mx:Application>

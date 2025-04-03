@@ -1,0 +1,458 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="en-us">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>Eclipse 3.3 Milestone New and Noteworthy Items - SWT</title>
+</head>
+
+<body>
+
+<h1><font face="Verdana">Eclipse 3.3 - New and Noteworthy in SWT</font></h1>
+
+<ul>
+	<li><a href="#m1">Milestone M1</a></li>
+	<li><a href="#m2">Milestone M2</a></li>
+	<li><a href="#m3">Milestone M3</a></li>
+	<li><a href="#m4">Milestone M4</a></li>
+	<li><a href="#m5">Milestone M5</a></li>
+	<li><a href="#m6">Milestone M6</a></li>
+	<li><a href="#m7">Milestone M7</a></li>
+</ul>
+
+
+<h2><font face="Verdana"><a name=m1>Milestone M1</a></font></h2>
+
+<table border="0" width="80%" cellpadding="10" cellspacing="0">
+  <tr>
+    <td colspan="2">
+      <hr>
+    </td>
+  </tr>
+  <tr>
+    <td width="30%" valign="top" align="left">
+      <p align="right"><b>Printing support added on GTK+</b></td>
+    <td width="70%" valign="top">Printing support has been added for GTK+.  It is important to note that the user must
+      be running with GTK+ 2.10 or newer in order for this support to be utilized.</td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <hr>
+    </td>
+  </tr>
+  <tr>
+    <td width="30%" valign="top" align="left">
+      <p align="right"><b>Option to print line numbers added to StyledText</b></td>
+    <td width="70%" valign="top">When printing a StyledText, line numbers can now be printed by setting the
+	<code>StyledTextPrintOptions.printLineNumbers</code> field to <em>true</em>.</td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <hr>
+    </td>
+  </tr>
+  <tr>
+    <td width="30%" valign="top" align="left">
+      <p align="right"><b>System tray support added on OS X</b></td>
+    <td width="70%" valign="top">Icons placed on the system tray will now appear when running on OS X in the status bar.
+      <p><img border="0" src="images/osxtray.png" width="234" height="75"></p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <hr>
+    </td>
+  </tr>
+  <tr>
+    <td width="30%" valign="top" align="left">
+      <p align="right"><b>PNG format write support</b></td>
+    <td width="70%" valign="top">Images can now be written to disk in PNG format
+      <a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet246.java">(example snippet)</a>.
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <hr>
+    </td>
+  </tr>
+  <tr>
+    <td width="30%" valign="top" align="left">
+      <p align="right"><b>Browser profiles now utilized on GTK+ and linux-motif</b></td>
+    <td width="70%" valign="top">The Browser widget is now utilizing profiles on GTK+ and linux-motif.  As a result many previous shortcomings
+      have been fixed, including the inability to display https pages, not rendering visited links properly, and not caching visited pages.
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <hr>
+    </td>
+  </tr>
+  <tr>
+    <td width="30%" valign="top" align="left">
+      <p align="right"><b>Browser support added on PPC</b></td>
+    <td width="70%" valign="top">Browser support has been added for the PowerPC architecture (GTK+).
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <hr>
+    </td>
+  </tr>
+  <tr>
+    <td width="30%" valign="top" align="left">
+      <p align="right"><b>GtkComboBox now utilized when available</b></td>
+    <td width="70%" valign="top">GtkComboBox is now utilized natively for users that are running with gtk+ version 2.4 or newer.</p>
+      <p><img border="0" src="images/gtkcombobox.png" width="155" height="37"></p>
+    </td>
+  </tr>
+  <tr> 
+    <td colspan="2"> <hr> </td>
+  </tr>
+</table>
+
+
+<h2><font face="Verdana"><a name=m2>Milestone M2</a></font></h2>
+
+<table border="0" width="80%" cellpadding="10" cellspacing="0">
+  <tr> 
+    <td colspan="2"> <hr> </td>
+  </tr>
+  <tr> 
+    <td width="30%" valign="top" align="left"><b>Color cursors on Mac OSX</b></td>
+    <td width="70%" valign="top">You can now create color cursors on Mac OSX.
+      This <a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet119.java">example snippet</a>
+      created the cursor shown in the snapshot below.
+      <p><img border="0" src="images/mac-cursor.png" alt="A Color Cursor on the Mac"></p>
+    </td>
+  </tr>
+  <tr> 
+    <td colspan="2"> <hr /> </td>
+  </tr>
+  <tr> 
+    <td width="30%" valign="top" align="left"><b>JPEG/PNG image loading performance improvements</b></td>
+    <td width="70%" valign="top">JPEG images now load from 30 to 70 percent faster, and PNG images load 2 to 3 times faster, depending on the image.
+	</td>
+  </tr>
+  <tr> 
+    <td colspan="2"> <hr /> </td>
+  </tr>
+  <tr> 
+    <td width="30%" valign="top" align="left"><b>GraphicsExample</b></td>
+    <td width="70%" valign="top">Try out the new SWT GraphicsExample, which showcases some of SWT's graphics capabilities.
+	This example is available with the Example Plug-ins on the Eclipse Project Downloads page.
+      <p><img border="0" src="images/graphicsexample.png" alt="GraphicsExample"></p>
+	</td>
+  </tr>
+  <tr> 
+    <td colspan="2"> <hr /> </td>
+  </tr>
+</table>
+
+
+<h2><font face="Verdana"><a name=m3>Milestone M3</a></font></h2>
+
+<table border="0" width="80%" cellpadding="10" cellspacing="0">
+  <tr> 
+    <td colspan="2"> <hr> </td>
+  </tr>
+  <tr>
+    <td width="30%" valign="top" align="left"><b>New DateTime control</b></td>
+    <td width="70%" valign="top">Your users can now enter dates or times using
+      the new DateTime control. You can see the DateTime control in action on
+      the DateTime tab of the SWT ControlExample. The ControlExample is included
+      with the other example plug-ins (see the &quot;Example Plug-ins&quot; section
+      of the 3.3M3 download page).
+      <p><img border="0" src="images/datetime-date.png" alt="DateTime control with SWT.DATE style" /></p>
+      <p><img border="0" src="images/datetime-time.png" alt="DateTime control with SWT.TIME style" /></p>
+      <p><img border="0" src="images/datetime-calendar.png" alt="DateTime control with SWT.CALENDAR style on Windows" /></p>
+      <p>For more information, please see <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=19945#c41">this
+          comment</a> in the feature request.</p></td>
+  </tr>
+  <tr> 
+    <td colspan="2"> <hr> </td>
+  </tr>
+</table>
+
+
+<h2><font face="Verdana"><a name=m4>Milestone M4</a></font></h2>
+
+<table border="0" width="80%" cellpadding="10" cellspacing="0">
+  <tr> 
+    <td colspan="2"> <hr> </td>
+  </tr>
+  <tr>
+    <td width="30%" valign="top" align="left"><b>New DateTime styles</b></td>
+    <td width="70%" valign="top">DateTime control now supports <code>SWT.SHORT</code>, <code>SWT.MEDIUM</code>, and <code>SWT.LONG</code> styles.
+      This <a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet251.java">example snippet</a>
+      created the snapshots shown below.
+      <p><img border="0" src="images/datetime-short-date.png" alt="DateTime control with SWT.DATE | SWT.SHORT style on Windows" /></p>
+      <p><img border="0" src="images/datetime-short-time.png" alt="DateTime control with SWT.TIME | SWT.SHORT style" /></p>
+    </td>
+  </tr>
+  <tr> 
+    <td colspan="2"> <hr> </td>
+  </tr>
+  <tr>
+    <td width="30%" valign="top" align="left"><b>New graphics line drawing capabilities</b></td>
+    <td width="70%" valign="top">SWT graphics now supports much finer control of line attributes, including fractional line widths,
+      dashed line offsets, and miter limits. These capabilities are provided by the new <code>LineAttributes</code> class and the new
+      <code>GC</code> methods <code>GC.setLineAttributes(LineAttributes)</code> and <code>GC.getLineAttributes(LineAttributes)</code>.
+      This <a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet252.java">example snippet</a>
+      created the snapshot shown below.
+      <p><img border="0" src="images/line-attributes.png" alt="LineAttributes" /></p>
+    </td>
+  </tr>
+  <tr> 
+    <td colspan="2"> <hr> </td>
+  </tr>
+  <tr>
+    <td width="30%" valign="top" align="left"><b>SWT libraries automatically found</b></td>
+    <td width="70%" valign="top">The SWT libraries are now loaded from the SWT jar when an SWT application is launched.
+      Within Eclipse, you can just use the <b>Run As-&gt;Java Application</b> menu item and the libraries will be found.
+      When launching from the command line, you no longer need to specify the SWT library path.
+    </td>
+  </tr>
+  <tr> 
+    <td colspan="2"> <hr> </td>
+  </tr>
+  <tr>
+    <td width="30%" valign="top" align="left"><b>SWT on Vista (win32)</b></td>
+    <td width="70%" valign="top">SWT now gets everything right on Vista.
+      <p><img border="0" src="images/vista-win32.png" alt="Eclipse on Vista (win32)" /></p>
+    </td>
+  </tr>
+  <tr> 
+    <td colspan="2"> <hr> </td>
+  </tr>
+</table>
+
+
+<h2><font face="Verdana"><a name=m5>Milestone M5</a></font></h2>
+
+<table border="0" width="80%" cellpadding="10" cellspacing="0">
+  <tr> 
+    <td colspan="2"> <hr> </td>
+  </tr>
+  <tr>
+    <td width="30%" valign="top" align="left"><b>DragDetect API</b></td>
+    <td width="70%" valign="top">Custom widget implementors can now use <code>Control.setDragDetect()</code>
+      to disable the default drag detection and <code>Control.dragDetect()</code>
+      to implement their own. For example, a custom list control could start dragging only
+      when an item is selected. 
+      Typed events for drag detection are now available (see <code>DragDetectListener</code> and <code>DragDetectEvent</code>).
+      This <a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet259.java">example snippet</a> created the snapshot shown below.
+      <p><img border="0" src="images/drag-detect-api.png" alt="Drag detect in a custom control" /></p>
+    </td>
+  </tr>
+  <tr> 
+    <td colspan="2"> <hr> </td>
+  </tr>
+  <tr>
+    <td width="30%" valign="top" align="left"><b>Drag over and drag under effects</b></td>
+    <td width="70%" valign="top">Custom drag over and drag under effects can now be implemented
+      for any control.  Custom widget implementors can provide feedback that is appropriate
+      for their control by subclassing <code>DragSourceEffect</code> and <code>DropTargetEffect</code>.
+ 	  The default effects for the <code>Table</code>, <code>Tree</code> and <code>StyledText</code>
+      controls have been changed to use these classes (see <code>TreeDragSourceEffect</code>,
+      <code>TreeDropTargetEffect</code> and the corresponding classes for these controls).
+      This <code>StyledText</code> <a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet257.java">example snippet</a>
+      created the snapshot shown below.
+      <p><img border="0" src="images/drag-under.png" alt="StyledText dragging selected text to show 'insert cursor' drag under effect" /></p>
+    </td>
+  </tr>
+  <tr> 
+    <td colspan="2"> <hr> </td>
+  </tr>
+  <tr>
+    <td width="30%" valign="top" align="left"><b>Color cursors on GTK</b></td>
+    <td width="70%" valign="top">You can now create color cursors on GTK.
+      This <a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet119.java">example snippet</a>
+      created the cursor shown in the snapshot below.
+      <p><img border="0" src="images/gtk-cursor.png" alt="A Color Cursor on GTK"></p>
+    </td>
+  </tr>
+  <tr> 
+    <td colspan="2"> <hr> </td>
+  </tr>
+  <tr>
+    <td width="30%" valign="top" align="left"><b>Text SEARCH style</b></td>
+    <td width="70%" valign="top">On platforms that have this concept,
+      <code>Text</code> controls can now have the look and feel of a search
+      field with the <code>SWT.SEARCH</code> style.
+      Adding the <code>SWT.CANCEL</code> style gives the user a way to cancel the search.
+      This <a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet258.java">example snippet</a>
+	  created the <code>Text</code> control shown in the snapshot below.
+      <p><img border="0" src="images/search-text.png" alt="A search Text on the Mac"></p>
+    </td>
+  </tr>
+  <tr> 
+    <td colspan="2"> <hr> </td>
+  </tr>
+  <tr>
+    <td width="30%" valign="top" align="left"><b>Mnemonics and the focus indicator</b></td>
+    <td width="70%" valign="top">Custom widgets respect the platform settings when drawing mnemonics and the focus indicator.
+      You do not need to do anything special to get this behavior - the paint gc respects platform preferences.
+      See <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=118709">this bug</a> for more information.
+    </td>
+  </tr>
+  <tr> 
+    <td colspan="2"> <hr> </td>
+  </tr>
+  <tr>
+    <td width="30%" valign="top" align="left"><b>Mozilla everywhere</b></td>
+    <td width="70%" valign="top">Mozilla can now be used as the underlying browser control on Windows and OS X,
+      providing that you have <a href="http://developer.mozilla.org/en/docs/XULRunner">XULRunner</a> installed and registered.
+	  To use this just create your Browser with the <code>SWT.MOZILLA</code> style.
+	  For more specific version requirements for running on OS X see
+	  <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=79213#c46">bug 79213 comment 46</a>.
+      This <a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet260.java">example snippet</a>
+	  created the snapshot below.
+	  <p><img border="0" src="images/mozilla.png" alt="Mozilla on Windows"></p>
+    </td>
+  </tr>
+  <tr> 
+    <td colspan="2"> <hr> </td>
+  </tr>
+  <tr>
+    <td width="30%" valign="top" align="left"><b>SWT on Vista (WPF)</b></td>
+    <td width="70%" valign="top">
+		There is now an early access version of the SWT port to Windows Presentation Foundation (WPF),
+		a new window system that comes pre-installed on Microsoft Windows Vista. 
+		<p>
+		The port is in its
+		early stages. Many things work, including the ControlExample, but there is still a lot more
+		work to do. You can help by trying out the new code and entering bug reports. The new code
+		is available in the Eclipse GIT repository
+		
+	 	<a href="http://www.eclipse.org/swt/git.php">(Using SWT from GIT)</a>
+
+		but there are no regular builds at this time.
+		</p>
+		<p>
+		Note that the Win32 port of SWT continues to work well on Windows platforms and fully exploits
+		the new look and feel of Windows Vista.
+		</p>
+      <p><img border="0" src="images/vista-wpf.png" alt="ControlExample on Vista (WPF)"></p>
+    </td>
+  </tr>
+  <tr> 
+    <td colspan="2"> <hr> </td>
+  </tr>
+</table>
+
+
+<h2><font face="Verdana"><a name=m6>Milestone M6</a></font></h2>
+
+<table border="0" width="80%" cellpadding="10" cellspacing="0">
+  <tr> 
+    <td colspan="2"> <hr> </td>
+  </tr>
+  <tr>
+    <td width="30%" valign="top" align="left"><b>Eclipse on Vista (WPF)</b></td>
+    <td width="70%" valign="top">Eclipse now runs on WPF (Windows Presentation Foundation).
+    	It is still early access, but it is stable enough for us to develop on it.
+    	You can try it yourself by getting it from the eclipse downloads page.
+		<p><img border="0" src="images/eclipse-vista-wpf.png" alt="Eclipse on Vista (WPF)"></p>
+    </td>
+  </tr>
+  <tr> 
+    <td colspan="2"> <hr> </td>
+  </tr>
+  <tr>
+    <td width="30%" valign="top" align="left"><b>Native features on Vista (win32)</b></td>
+    <td width="70%" valign="top">We are now exploiting more of the native features of the Vista platform.
+    For example, using native double-buffering on Vista win32 makes painting in double-buffered Canvases twice as fast.
+    </td>
+  </tr>
+  <tr> 
+    <td colspan="2"> <hr> </td>
+  </tr>
+  <tr>
+    <td width="30%" valign="top" align="left"><b>JavaXPCOM support</b></td>
+    <td width="70%" valign="top"><code>SWT.MOZILLA</code>-style Browsers can now be programmed to via JavaXPCOM.
+    	This requires that <a href="http://developer.mozilla.org/en/docs/XULRunner">XULRunner</a> 1.8.1.2 be installed,
+    	whose current release status is summarized <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=173117#c2">here</a>.
+    	This <a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet267.java">example snippet</a>
+    	created the snapshot below.
+		<p><img border="0" src="images/javaxpcom.png" alt="Browser JavaXPCOM"></p>
+    </td>
+  </tr>
+  <tr> 
+    <td colspan="2"> <hr> </td>
+  </tr>
+  <tr>
+    <td width="30%" valign="top" align="left"><b>OLEExample and OLE improvements</b></td>
+    <td width="70%" valign="top">The new OLEExample showcases SWT OLE (win32) support.
+    	We now do a better job of hosting OLE documents in SWT. For example, OleClientSite
+    	in-place activation scrollbars work correctly.
+		The OLEExample comes with the Example Plug-ins on the Eclipse Project Downloads page.
+    	To install and run the SWT Examples, see <a href="http://www.eclipse.org/swt/examples.php">this page</a>.
+		<p><img border="0" src="images/oleexample.png" alt="OLEExample"></p>
+    </td>
+  </tr>
+  <tr> 
+    <td colspan="2"> <hr> </td>
+  </tr>
+  <tr>
+    <td width="30%" valign="top" align="left"><b>Reparenting support on Mac OSX</b></td>
+    <td width="70%" valign="top">SWT on Mac OSX now supports reparenting.
+    </td>
+  </tr>
+  <tr> 
+    <td colspan="2"> <hr> </td>
+  </tr>
+  <tr>
+    <td width="30%" valign="top" align="left"><b>Display.post() supports more mouse events</b></td>
+    <td width="70%" valign="top">Display.post() now supports generating mouse button 4 and 5 and mouse wheel events.
+    This <a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet268.java">example snippet</a>
+    automatically scrolls a StyledText.
+    </td>
+  </tr>
+  <tr> 
+    <td colspan="2"> <hr> </td>
+  </tr>
+  <tr>
+    <td width="30%" valign="top" align="left"><b>Advanced graphics supports mirroring</b></td>
+    <td width="70%" valign="top">Advanced graphics now renders correctly in RTL mode. The snapshot below
+    shows bidirectional text drawn using transforms and patterns on a Canvas.
+	<p><img border="0" src="images/advanced-bidi.png" alt="Advanced graphics in RTL mode"></p>
+    </td>
+  </tr>
+  <tr> 
+    <td colspan="2"> <hr> </td>
+  </tr>
+</table>
+
+
+<h2><font face="Verdana"><a name=m7>Milestone M7</a></font></h2>
+
+<table border="0" width="80%" cellpadding="10" cellspacing="0">
+  <tr> 
+    <td colspan="2"> <hr> </td>
+  </tr>
+  <tr>
+    <td width="30%" valign="top" align="left"><b>Drag & Drop, Clipboard on Vista (WPF)</b></td>
+    <td width="70%" valign="top">Drag & Drop and Clipboard operations now work on Vista WPF.
+    The snapshot below shows a file being dragged from Eclipse onto the Vista Desktop. 
+		<p><img border="0" src="images/vista-drag-drop.png" alt="Drag & Drop on Vista (WPF)"></p>
+    </td>
+  </tr>
+  <tr> 
+    <td colspan="2"> <hr> </td>
+  </tr>
+  <tr>
+    <td width="30%" valign="top" align="left"><b>Improved Detection of Mozilla Plug-ins</b></td>
+    <td width="70%" valign="top">Users of Mozilla-based Browsers can now augment the default set
+    of Mozilla plug-in paths that are searched by defining environment variable <code>MOZ_PLUGIN_PATH</code>.
+    For example: <br><code>export MOZ_PLUGIN_PATH=/usr/lib/browser-plugins</code>
+    </td>
+  </tr>
+  <tr> 
+    <td colspan="2"> <hr> </td>
+  </tr>
+</table>
+
+</body>
+</html>

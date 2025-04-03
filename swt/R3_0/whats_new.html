@@ -1,0 +1,149 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="en-us">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>What's New in SWT for 3.0</title>
+</head>
+
+<body>
+
+<h1>What's New in SWT for 3.0</h1>
+<p>June 24, 2004</p>
+<table border="0" width="80%" cellpadding="10" cellspacing="0">
+  <tr>
+    <td colspan="2">
+      <hr>
+    </td>
+  </tr>
+
+  <tr>
+    <td width="30%" valign="top" align="left">
+      <p align="right"><b>SWT and AWT/Swing Interoperability</b>
+    </td>
+    <td width="70%">
+	<p>Embedding Swing/AWT widgets inside SWT widgets is now supported on Windows with JDK 1.4 and above,
+	and on GTK and Motif with recent early access versions of Sun JDK 1.5.</p>
+	<p>This screen shot shows an SWT Shell containing a Swing JTable to the right of an SWT Tree.</p>
+    <p><font face="Verdana" size="2"><img src="swt-swing.gif" align="CENTER" alt="swt and swing"></font></p>
+    <p>Here is the <a href="http://dev.eclipse.org/viewcvs/index.cgi/~checkout~/platform-swt-home/snippits/snippet135.html">
+       SWT snippet</a> that was used for this example.</p>
+    </td>
+  </tr>
+
+  <tr>
+    <td colspan="2">
+      <hr>
+    </td>
+  </tr>
+
+  <tr>
+    <td width="30%" valign="top" align="left">
+      <p align="right"><b>Browser Widget</b>
+    </td>
+    <td width="70%">
+	<p>SWT has a new browser widget that can display HTML documents. This native widget is supported on Windows (using Internet Explorer 5.0 and above),
+	Linux GTK and Linux Motif (requires Mozilla 1.4 GTK2; Mozilla 1.5 GTK2 and Mozilla 1.6 GTK2 are also supported), Mac (Safari) and QNX (Voyager).</p>
+      <p><font face="Verdana" size="2"><img src="browser.gif" align="CENTER" alt="browser widget"></font></p>
+	<p>See the <a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/platform-swt-home/snippits/snippet148.html">SWT browser snippet</a>
+	and the <a href="http://dev.eclipse.org/viewcvs/index.cgi/%7Echeckout%7E/platform-swt-home/faq.html#browserplatforms">SWT FAQ</a> for details.
+	The Eclipse Browser plug-in shown above is available from the Eclipse download page in the Example Plug-ins.</p>
+    </td>
+  </tr>
+
+  <tr>
+    <td colspan="2">
+      <hr>
+    </td>
+  </tr>
+
+  <tr>
+    <td width="30%" valign="top" align="left">
+      <p align="right"><b>Mac OS X Improvements</b>
+    </td>
+    <td width="70%">
+	<p>The Mac OS X implementation of SWT has been significantly extended and improved, particularly in the following areas:</p>
+	<ul>
+	   <li>Eclipse Launcher support, including launcher arguments and tilde expansion for the -data parameter</li>
+	   <li>Stability and Performance</li>
+	   <li>Native Drag and Drop Support</li>
+	   <li>Printing support using the Quartz-based Mac OS X Printing Manager. Developers can now print high-quality output on raster and PostScript printers, generate PDF files, or use the standard previewer.
+      	  <p><font face="Verdana" size="2"><img src="osx-print.gif" align="CENTER" alt="osx print preview"></font></p></li>
+	</ul>
+    </td>
+  </tr>
+
+  <tr>
+    <td colspan="2">
+      <hr>
+    </td>
+  </tr>
+
+  <tr>
+    <td width="30%" valign="top" align="left">
+      <p align="right"><b>Complex Script and Right-to-Left Language Support</b>
+    </td>
+    <td width="70%">
+	<p>In order to handle right-to-left and complex scripts it is necessary to deal with several problems.
+	For example, languages like Hebrew and Arabic are written from right to left, which requires the
+	text to be reordered according to the Bidi Algorithm described in Unicode annex #9, before drawing and measuring.
+	Other languages, like Arabic and Farsi, require contextual shaping, which means that the same character can assume
+	different forms according to its position in the word. Other common problems are combined characters or ligatures
+	(two characters that are joined together). Languages like Thai have special rules for word breaking and cursor navigation.
+	Windows supports all cases previously mentioned. On GTK support for Bidi is implemented but complex scripts
+	(Thai, South Asian scripts) are still not properly tested and implemented.</p>
+      <p><font face="Verdana" size="2"><img src="bidi.gif" align="CENTER" alt="complex scripts"></font></p>
+    </td>
+  </tr>
+
+  <tr>
+    <td colspan="2">
+      <hr>
+    </td>
+  </tr>
+
+  <tr>
+    <td width="30%" valign="top" align="left">
+      <p align="right"><b>Virtual Table and Improved Table Performance</b>
+    </td>
+    <td width="70%">
+	<p>In addition to significant performance improvements in this release, Table now supports the SWT.VIRTUAL style.
+	This lets developers create tables with large amounts of data quickly. When TableItems are needed, they are created on-demand.</p>
+      <p><font face="Verdana" size="2"><img src="virtual-table.gif" align="CENTER" alt="virtual table"></font></p>
+    <p>Here is the <a href="http://dev.eclipse.org/viewcvs/index.cgi/~checkout~/platform-swt-home/snippits/snippet144.html">
+       SWT snippet</a> that was used for this example.</p>
+    </td>
+  </tr>
+
+  <tr>
+    <td colspan="2">
+      <hr>
+    </td>
+  </tr>
+
+  <tr>
+    <td width="30%" valign="top" align="left">
+      <p align="right"><b>Other Improvements</b>
+    </td>
+    <td width="70%">
+	<p>There were numerous other new features and improvements in this release, including:</p>
+	<ul>
+	   <li>Multiple Monitors</li>
+	   <li>Non-Rectangular Windows</li>
+	   <li>Add Items to System Tray</li>
+	   <li>GTK Accessibility</li>
+	   <li>TIFF Image Decoding</li>
+	   <li>Color Cursors</li>
+	   <li>Colored Cells in Tables</li>
+	   <li>Italic Font in StyledText</li>
+	   <li>Linux GTK on AMD64</li>
+	   <li>Post Mouse/Keyboard Event to Event Queue</li>
+	</ul>
+    </td>
+  </tr>
+
+</table>
+
+</body>
+
+</html>

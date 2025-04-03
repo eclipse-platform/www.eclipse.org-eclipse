@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Language" content="en-us" />
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <style type="text/css">
+p, table, td, th {  font-family: verdana, arial, helvetica, geneva; font-size: 10pt}
+pre {  font-family: "Courier New", Courier, mono; font-size: 10pt}
+h2 { font-family: verdana, arial, helvetica, geneva; font-size: 18pt; font-weight: bold ; line-height: 14px}
+code {  font-family: "Courier New", Courier, mono; font-size: 10pt}
+sup {  font-family: verdana, arial, helvetica, geneva; font-size: 10px}
+h3 {  font-family: verdana, arial, helvetica, geneva; font-size: 14pt; font-weight: bold}
+li {  font-family: verdana, arial, helvetica, geneva; font-size: 10pt}
+h1 {  font-family: verdana, arial, helvetica, geneva; font-size: 24pt; font-weight: bold}
+body {  font-family: verdana, arial, helvetica, geneva; font-size: 10pt; margin-top: 5mm; margin-left: 3mm}
+.indextop { font-size: x-large; font-family: verdana, arial, helvetica, sans-serif; font-weight: bold}
+.indexsub { font-size: xx-small; font-family: verdana, arial, helvetica, sans-serif; color: #8080FF}
+a.bar:link {  text-decoration: none; color: #FFFFFF}
+a.bar:visited {  color: #FFFFFF; text-decoration: none}
+a.bar:hover {  color: #FFFFFF; text-decoration: underline}
+a.bar {  color: #FFFFFF}
+
+.section {font-size: 20px; font-weight: bold;}
+table.news td {border-top: solid thin black;}
+table.news tr {vertical-align: top;}
+table.news tr td.title {vertical-align: top; width: 30%; font-weight: bold;}
+table.news tr td.content {vertical-align: top; width: 70%;}
+  </style>
+<title>Eclipse &quot;New and Noteworthy&quot; Template</title>
+</head>
+
+<body>
+<h1><font face="Verdana">Eclipse 4.4 (Luna) - New and Noteworthy in SWT</font></h1>
+
+<ul>
+	<li><a href="#m2">Milestone M2</a></li>
+	<li><a href="#m3">Milestone M3</a></li>
+	<li><a href="#m4">Milestone M4</a></li>
+	<li><a href="#m5">Milestone M5</a></li>
+	<li><a href="#m6">Milestone M6</a></li>
+	<li><a href="#m7">Milestone M7</a></li>
+</ul>
+
+
+<table class="news" border="0" cellpadding="10" cellspacing="0" width="80%" summary="news entries">
+
+  <tr>
+    <td id="m2" class="section" colspan="2"><h2>Milestone M2</h2></td>
+  </tr>
+
+  <tr id="timing-api">
+  	<td class="title">Added UI Timing API</td>
+    <td class="content">
+      SWT has added two new events: <code>SWT.PreEvent</code> and <code>SWT.PostEvent</code> which are sent before and after 
+      all events and async runnables. These events can be used to measure the time spent on processing any events. This can be 
+      useful for detecting slow event listeners. Because of its pervasive effect on all events, this listener should be used 
+      with extreme caution. For an example of how this can be used, take a look at the 
+	  <a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.examples.watchdog">
+      Watchdog</a> plugin in SWT examples.
+   	</td>
+  </tr>
+  
+  <tr>
+    <td id="m3" class="section" colspan="2"><h2>Milestone M3</h2></td>
+  </tr>
+
+  <tr id="gtk3-as-default"> 
+    <td class="title">GTK+ 3 used by default instead of GTK+ 2</td>
+    <td class="content">
+      SWT and Eclipse will use the GTK+ 3 libraries by default on all Linux/Unix platforms,
+      whenever GTK+ 3 is installed and available. 
+      <p>The GTK+ 3 port of SWT is still early access and you can force Eclipse to use the 
+      more stable GTK+2 port by setting the environment variable SWT_GTK3 to 0, if needed.
+      (For example: export SWT_GTK3=0) </p>
+    </td>
+  </tr>
+  
+  <tr id="styled-text-api"> 
+    <td class="title">Added new API in StyledText to get text selection state</td>
+    <td class="content">
+      <code>StyledText.isTextSelected()</code> can be used to quickly determine whether any text
+      in the widget is selected or not.
+    </td>
+  </tr>
+    
+  <tr>
+    <td id="m4" class="section" colspan="2"><h2>Milestone M4</h2></td>
+  </tr>
+  
+  <tr id="swt-needs-1.5"> 
+    <td class="title">SWT requires JRE 1.5</td>
+    <td class="content">
+      The SWT project has moved to Java 1.5 compliance level. SWT applications will now require JRE 1.5 or higher to run.
+    </td>
+  </tr>
+
+  <tr>
+    <td id="m5" class="section" colspan="2"><h2>Milestone M5</h2></td>
+  </tr>
+
+  <tr id="swt-xulrunner24"> 
+    <td class="title">SWT Browser now supports XULRunner 24.x</td>
+    <td class="content">
+        An SWT Browser created with style <code>SWT.MOZILLA</code> can now be used with the XULRunner 24.x runtime.
+    </td>
+  </tr>
+  
+  <tr id="sleep-monitor-api"> 
+    <td class="title">Added API for sleep monitoring</td>
+    <td class="content">
+        SWT has added two new events, <code>SWT.Sleep</code> and <code>SWT.Wakeup</code>,
+        which are sent before the <code>Display</code> event loop goes into sleep and after
+        it wakes up from sleep respectively. These events can e.g. be used to monitor the duration
+        of sleep time in SWT applications.
+    </td>
+  </tr>
+
+  <tr>
+    <td id="m6" class="section" colspan="2"><h2>Milestone M6</h2></td>
+  </tr>
+  
+  <tr id="swt-webkit">
+    <td class="title">Experimental support for WebKit2 added to the SWT Browser</td>
+    <td class="content">
+      The SWT Browser now has preliminary support for WebKit2. To try it out, create a browser
+      widget with style <code>SWT.WEBKIT</code>, and set the environment variable SWT_WEBKIT2
+      to 1. This is only supported with GTK+ 3.x; if GTK+ 3 is disabled the browser will 
+      fallback to WebKit1.
+    </td>
+  </tr>
+
+  <tr id="bidi-segments">
+    <td class="title">BIDI segments support for Combo on Windows</td>
+    <td class="content">
+      The <code>Combo</code> widget now supports the same <code>SegmentListener</code> API as <code>Text</code>.
+      This allows an application to specify segment boundaries and Unicode Control Characters to use in the segment boundaries.
+      <p>
+      <a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet332.java"> 
+      Snippet332</a> shows how to accomplish RTL override in a Combo.
+      </p>
+      <p><img src="images/combo-bidi-segments.png" alt=""/></p>
+      <p>JFace clients can use <code>BidiUtils#applyBidiProcessing(...)</code> to set pre-defined text types.</p>
+    </td>
+  </tr>
+
+  <tr>
+    <td id="m7" class="section" colspan="2"><h2>Milestone M7</h2></td>
+  </tr>
+  
+  <tr id="styledtext-bidi">
+    <td class="title">Set text direction for the <code>StyledText</code> widget on Windows</td>
+    <td class="content">
+      The <code>StyledText</code> widget now supports setting the text direction via the
+      <code>setTextDirection(int)</code> API on the Windows platform. The <code>setTextDirection
+      (int)</code> and <code>getTextDirection ()</code> APIs are also added to <code>TextLayout</code>
+      (implemented only on Windows currently).
+    </td>
+  </tr>
+  
+  <tr id="windows-taskbar-grouping">
+    <td class="title">SWT applications will not be grouped together in the Windows taskbar by default</td>
+    <td class="content">
+      SWT does not initialize the <b>AppUserModelID</b> (which is used by Windows for taskbar grouping)
+      to "SWT" by default anymore. SWT applications which desire to be grouped together in the
+      Windows taskbar should set an appropriate application name before creating the
+      <code>Display</code> object as shown below:
+      <p>
+      <code>Display.setAppName("APP_NAME"); // APP_NAME will used as AppUserModelID</code><br>
+      <code>Display display = new Display ();</code>
+      </p>
+    </td>
+  </tr>
+
+  <tr>
+    <td colspan="2"/>
+  </tr>
+  
+</table>
+</body>
+</html>

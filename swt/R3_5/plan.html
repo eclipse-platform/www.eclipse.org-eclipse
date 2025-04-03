@@ -1,0 +1,498 @@
+<html>
+<head>
+<title>Platform SWT 3.5</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="http://dev.eclipse.org/default_style.css" type="text/css">
+</head>
+
+<!--
+M1 - August 8, 2008 (6 weeks) 
+>>>  (3.4.1/Ganymede-SR1 +0 dates:  RC1-September 1, RC2-September 8, RC3-September 15) 
+
+M2 - September 19, 2008 (6 weeks) - PLANNING 
+
+M3 - October 31, 2008 (6 weeks) - DEV 
+- block selection
+- link
+- all prototype etc. for BIDI done
+- image improvements
+	- save (properties, conversion)
+	- tiff / multi-image
+- Mac cocoa graphics
+	- non UI thread
+	- textlayout boxes, objects, default foreground
+	- drawText flags 
+	- wait cursor and others
+- Mac cocoa drag and drop
+- Mac cocoa widgets
+	- custom draw in table/tree
+	- modality
+	- verify / modify
+	- keyboard
+		- key up/down, traversal
+		- menu accelerators (action and text), menu arm
+	- mouse
+		- events, wheel etc.
+		- SWT.DragDectect and API
+		- SWT.MenuDetect
+		- when disabled, event goes to parent
+		- cursor on grab
+	- Display
+		- application icon on the dock (Shell.setImage)
+		- -Xdock:icon
+	- small font/focus ring
+	- preferred size
+
+M4 - December 12, 2008 (6 weeks) - DEV 
+- BIDI
+- Theme drawing go/no go
+- Header and HeaderItem go/no go
+- IA2
+- Mac cocoa graphics
+	- textlayout bidi
+	- GC.copyArea
+	- gradient patterns
+	- native image loading
+	- Image.setBackground()
+- Mac cocoa widgets
+	- painting and drawing
+		- setRedraw()
+		- scroll/paint/update
+		- region in control
+		- Display.update
+	- print()
+
+	- Dialogs
+
+	- widgets draw attributes
+		- font and foreground
+		- background/background image
+	
+	- default selection
+		- default button
+		- default selection and text/table/tree
+		
+	- Display
+		- SWT.Settings
+		
+	- preferred size
+	
+- Mac cocoa accessibility
+
+M5 - January 30, 2009 (7 weeks) - MAJOR FEATURE WORK COMPLETED 
+>>>  (3.4.2/Ganymede-SR2 +0 dates:  RC1-February 2, RC2-February 9, RC3-February 16) 
+- Theme drawing
+- Header and HeaderItem
+- printer API
+- Mac cocoa widgets
+	- preferred size
+	- individual widget test / fix pass
+- Mac cocoa internationalization (IME, BIDI, DBCS)
+- Mac cocoa OpenGL
+- Mac cocoa printing
+- Mac cocoa AWT/Swing interop
+
+M6 - March 13, 2009 (6 weeks) - API FREEZE, FEATURE TUNING, I18N & ACCESSIBILITY 
+>>>  (EclipseCon March 23-27) 
+- Cocoa done
+	- mirror or not?
+
+M7 - May 1st, 2009 (7 weeks) - PERFORMANCE & POLISH, BEST EFFORT ON DOC 
+
+RC1 (2 weeks) - May 15, 2009 
+RC2 (1 week) - May 22, 2009 
+RC3 (1 week) - May 29, 2009 
+RC4 (1 week) - June 5, 2009
+-->
+
+<body bgcolor="#FFFFFF" text="#000000">
+<table border=0 cellspacing=5 cellpadding=2 width="100%" >
+  <tr> 
+    <td align=left width="72%"> <font class=indextop>Platform SWT R3.5</font> <br>
+      <font class=indexsub> Platform SWT</font></td>
+    <td width="28%">
+    	<img src="http://dev.eclipse.org/images/Idea.jpg" height=86 width=120
+    	alt="Eclipse documentation banner"
+    	></td>
+  </tr>
+</table>
+<table border=0 cellspacing=5 cellpadding=2 width="100%" >
+  <tr> 
+    <a NAME="Overall_Planning">
+    <td align=LEFT valign=TOP colspan="2" bgcolor="#0080C0"><b><font color="#FFFFFF" face="Arial,Helvetica">
+      Overall 3.5 Plan
+    </font></b></td>
+    </a>
+  </tr>
+  
+    <tr>
+		<td colspan="2">The 3.5 plan below is a proto plan and input from the
+		community is very welcome.
+		<br>
+		Last revised: January 27, 2009.
+		<p></td>
+	</tr>
+	
+	<tr>
+		<td valign="top" width="2%"><img src="http://dev.eclipse.org/images/Adarrow.gif"
+			nosave="" border="0" height="16" width="16"></td>
+		<td><b>Overall Platform Themes</b>
+		<ul>
+			<li>...</li>
+			<li>Platforms</li>
+			<li>The Future</li>
+			<li>...</li>
+		</ul>
+		</td>
+	</tr>
+	<tr>
+		<td valign="top" width="2%"><img src="http://dev.eclipse.org/images/Adarrow.gif"
+			nosave="" border="0" height="16" width="16"></td>
+		<td><b>Plan Items</b>
+		<ul>
+			<li><img src="../images/progress.gif" nosave="" height="5" width="14" border="0"> Port SWT to Mac cocoa
+			(<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=252644">252644</a>)</li>
+			
+			<li><img src="../images/progress.gif" nosave="" height="5" width="14" border="0"> Implement SWT Browser Edition
+			(<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=252659">252659</a>, 
+			<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=252656">252656</a>)
+			</li>
+		
+			<li>( ) Complete SWT WPF port
+			(<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=200082">200082</a>)</li>		
+				
+			<li><font class="indexsub" color="#8080ff">[&gt;3.5]</font> BIDI support for text input widgets
+			(<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=230854">230854</a>)</li>
+			
+			<li>( ) General API for drawing standard UI components
+			(<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=80554">80554</a>, 
+			<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=37706">37706</a>)</li>
+			
+			<li>( ) Implement more native behavior (Header control, Mac tool bar, ...)
+			(<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXX">XXXX</a>)</li>
+			
+			<li><img src="../images/glass.gif" nosave="" height="10" width="10" border="0"> Support non-native assistive technologies
+			(<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=252646">252646</a>)</li>
+			
+			<li><img src="../images/ok.gif" nosave="" height="10" width="10" border="0"> Improve StyledText
+			(<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=8521">8521</a>, 
+			<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=83408">83408</a>)</li>
+			
+			<li><img src="../images/glass.gif" nosave="" height="10" width="10" border="0"> Investigate light weight performance tools
+			(<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXX">XXXX</a>)</li>
+			
+			<li><img src="../images/glass.gif" nosave="" height="10" width="10" border="0"> Improve image support
+			(<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=XXXX">XXXX</a>)</li>
+			
+		</ul>
+		</td>
+	</tr>
+</table>
+
+<table border="0" cellspacing="5" cellpadding="2" width="100%">
+	<tbody>
+		<tr>
+			<td align="left" valign="top" colspan="4" bgcolor="#0080c0"
+				width="100%"><b><font face="Arial,Helvetica"><font color="#ffffff">
+			Legend</font></font></b></td>
+		</tr>
+		<tr>
+			<td valign="top"><img src="../images/progress.gif" nosave="" height="5" width="14" border="0"></td>
+			<td width="50%">item is under development</td>
+			<td valign="top"><img src="../images/glass.gif" nosave="" height="10" width="10" border="0"></td>
+			<td width="50%">item is under investigation</td>
+		</tr>
+		<tr>
+			<td valign="top"><img src="../images/ok.gif" nosave="" height="10" width="10" border="0"></td>
+			<td width="50%">item is finished</td>
+			<td valign="top">( )</td>
+			<td width="50%">item is time permitting</td>
+		</tr>
+		<tr>
+			<td valign="top"><font class="indexsub" color="#8080ff">[&gt;3.5]</font></td>
+			<td width="50%">item is deferred</td>
+			<td valign="top"><font class="indexsub"><img src="../images/new.gif" alt="" border="0"></font></td>
+			<td width="50%">new</td>
+		</tr>
+	</tbody>
+</table>
+
+<table border="0" cellspacing="5" cellpadding="2" width="100%">
+	<tbody>
+	<tr>
+		<td align="left" valign="top" colspan="2" bgcolor="#0080c0"
+			width="100%"><b><font face="Arial,Helvetica"><font color="#ffffff">
+			Milestone Plan 3.5 M1 - August 8, 2008</font></font></b></td>
+	</tr>
+	<tr>
+		<td valign="top" width="2%"><img src="http://dev.eclipse.org/images/Adarrow.gif" nosave=""
+			border="0" height="16" width="16"></td>
+		<td><ul>
+			<li>Reduce bug count</li>
+			<li>Support cairo on AIX</li>
+			<li>Mac cocoa: Improve the Mac cocoa SWT port</li>
+			<li>Write snippets and support newsgroup</li>
+		</ul>
+		</td>
+	</tr>
+	</tbody>
+</table>
+ 
+<table border="0" cellspacing="5" cellpadding="2" width="100%">
+	<tbody>
+	<tr>
+		<td align="left" valign="top" colspan="2" bgcolor="#0080c0"
+			width="100%"><b><font face="Arial,Helvetica"><font color="#ffffff">
+			Milestone Plan 3.5 M2 - September 19, 2008</font></font></b></td>
+	</tr>
+	<tr>
+		<td valign="top" width="2%"><img src="http://dev.eclipse.org/images/Adarrow.gif" nosave=""
+			border="0" height="16" width="16"></td>
+		<td><ul>
+			<li>Reduce bug count</li>
+			<li>Make GDI and GDI+ string drawing be the same</li>
+			<li>Mac cocoa: Rewrite the JNI generator as a plugin</li>
+			<li>Mac cocoa: Provide early access version of Eclipse and SWT</li>
+			<li>Write snippets and support newsgroup</li>
+		</ul>
+		</td>
+	</tr>
+	</tbody>
+</table>
+ 
+<table border="0" cellspacing="5" cellpadding="2" width="100%">
+	<tbody>
+	<tr>
+		<td align="left" valign="top" colspan="2" bgcolor="#0080c0"
+			width="100%"><b><font face="Arial,Helvetica"><font color="#ffffff">
+			Milestone Plan 3.5 M3 - October 31, 2008</font></font></b></td>
+	</tr>
+	<tr>
+		<td valign="top" width="2%"><img src="http://dev.eclipse.org/images/Adarrow.gif" nosave=""
+			border="0" height="16" width="16"></td>
+		<td><ul>
+			<li>Reduce bug count</li>
+			<li>Implement block selection for StyledText 
+				(<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=8521">8521</a>)
+				<img src="../images/ok.gif" nosave="" height="10" width="10" border="0">
+			</li>
+			<li>Complete exploration for "BIDI support for text input widgets" 
+				(<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=230854">230854</a>)
+				<img src="../images/ok.gif" nosave="" height="10" width="10" border="0">
+			</li>
+			<li>Implement image improvements (properties, conversion, etc)
+				(<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=96320">96320</a>,
+				<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=145358">145358</a>,
+				<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=38232">38232</a>,
+				<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=6172">6172</a>,
+				<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=37494">37494</a>,
+				<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=38186">38186</a>,
+				<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=71807">71807</a>,
+				<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=4764">4764</a>)</li>
+			<li>Mac cocoa graphics: Implement graphics in non-UI thread 
+				(<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=249000">249000</a>)
+				<img src="../images/ok.gif" nosave="" height="10" width="10" border="0"></li>
+			<li>Mac cocoa graphics: Implement TextLayout (boxes, objects, default foreground ...) 
+				<img src="../images/ok.gif" nosave="" height="10" width="10" border="0"></li>
+			<li>Mac cocoa graphics: Implement GC drawFlags 
+			  	(<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=249001">249001</a>)
+				<img src="../images/ok.gif" nosave="" height="10" width="10" border="0"></li>
+			<li>Mac cocoa graphics: Implement wait cursor (and others) 
+				(<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=249003">249003</a>)
+				<img src="../images/ok.gif" nosave="" height="10" width="10" border="0"></li>
+			<li>Mac cocoa widgets: Implement custom draw for table and tree 
+				(<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=248773">248773</a>)
+				<img src="../images/ok.gif" nosave="" height="10" width="10" border="0"></li>
+			<li>Mac cocoa widgets: Implement shell modality 
+				(<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=223518">223518</a>)
+				<img src="../images/ok.gif" nosave="" height="10" width="10" border="0"></li>
+			<li>Mac cocoa widgets: Implement traversal and key events 
+				(<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=249004">249004</a>)
+				<img src="../images/ok.gif" nosave="" height="10" width="10" border="0"></li>
+			<li>Mac cocoa widgets: Implement mouse events and mouse wheel 
+				(<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=249005">249005</a>)
+				<img src="../images/ok.gif" nosave="" height="10" width="10" border="0"></li>
+			<li>Mac cocoa widgets: Implement mouse cursor on grab 
+				(<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=249006">249006</a>)
+				<img src="../images/ok.gif" nosave="" height="10" width="10" border="0"></li>
+			<li>Mac cocoa widgets: Implement menu accelerators (action, text drawing) 
+				(<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=248167">248167</a>)
+				<img src="../images/ok.gif" nosave="" height="10" width="10" border="0"></li>
+			<li>Mac cocoa widgets: Implement modify / verify event 
+				(<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=249007">249007</a>)
+				<img src="../images/ok.gif" nosave="" height="10" width="10" border="0"></li>
+			<li>Mac cocoa widgets: Implement SWT.MenuDetect and allow native text menu 
+				(<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=249008">249008</a>)
+				<img src="../images/ok.gif" nosave="" height="10" width="10" border="0"></li>
+			<li>Mac cocoa widgets: Implement Shell.setImage() and -Xdock:icon 
+				(<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=249009">249009</a>)
+				<img src="../images/ok.gif" nosave="" height="10" width="10" border="0"></li>
+			<li>Mac cocoa widgets: Implement small fonts and focus ring for the Eclipse IDE
+				(<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=225266">225266</a>)
+				<img src="../images/ok.gif" nosave="" height="10" width="10" border="0">
+				(<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=249011">249011</a>)</li>
+			<li>Mac cocoa widgets: Implement preferred size for simple widgets (button, label ...) 
+				(<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=249015">249015</a>)
+				<img src="../images/progress.gif" nosave="" height="5" width="14" border="0"></li>
+			<li>Mac cocoa drag and drop: Implement drag and drop for Mac cocoa 
+				(<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=211652">211652</a>)
+				<img src="../images/ok.gif" nosave="" height="10" width="10" border="0"></li>
+			<li>Mac cocoa drag and drop: Implement SWT.DragDetect and Control.setDragDetect()
+				<img src="../images/ok.gif" nosave="" height="10" width="10" border="0"></li>
+			<li>Write snippets and support newsgroup</li>
+		</ul>
+		</td>
+	</tr>
+	</tbody>
+</table>
+
+<table border="0" cellspacing="5" cellpadding="2" width="100%">
+	<tbody>
+	<tr>
+		<td align="left" valign="top" colspan="2" bgcolor="#0080c0"
+			width="100%"><b><font face="Arial,Helvetica"><font color="#ffffff">
+			Milestone Plan 3.5 M4 - December 12, 2008</font></font></b></td>
+	</tr>
+	<tr>
+		<td valign="top" width="2%"><img src="http://dev.eclipse.org/images/Adarrow.gif" nosave=""
+			border="0" height="16" width="16"></td>
+		<td><ul>
+			<li>Reduce bug count</li>
+			<li>BIDI support for text input widgets (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=230854">230854</a>)</li>
+			<li>Support non-native assistive technologies (<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=252646">252646</a>)</li>
+			<li>Implement link style for StyledText 
+				(<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=83408">83408</a>)
+				<img src="../images/ok.gif" nosave="" height="10" width="10" border="0">
+			</li>
+			<li>Mac cocoa graphics: Support BIDI in TextLayout
+				(<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=253215">253215</a>)
+				<img src="../images/ok.gif" nosave="" height="10" width="10" border="0"></li>
+			<li>Mac cocoa graphics: Implement GC.copyArea()
+				(<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=253217">253217</a>)</li>
+			<li>Mac cocoa graphics: Implement gradient Patterns
+				(<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=253219 ">253219 </a>)
+				<img src="../images/ok.gif" nosave="" height="10" width="10" border="0"></li>
+			<li>Mac cocoa graphics: Support native image loading
+				(<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=253220">253220</a>)
+				<img src="../images/ok.gif" nosave="" height="10" width="10" border="0"></li>
+			<li>Mac cocoa graphics: Implement Image.setBackground()
+				(<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=253221">253221</a>)
+				<img src="../images/ok.gif" nosave="" height="10" width="10" border="0"></li>
+			<li>Mac cocoa widgets: Implement painting (setRedraw(), scroll/paint/update, setRegion(), Display.update() ...)
+				(<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=253223">253223</a>)
+				<img src="../images/ok.gif" nosave="" height="10" width="10" border="0"></li>
+			<li>Mac cocoa widgets: Implement Control.print()
+				(<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=253225">253225</a>)
+				<img src="../images/ok.gif" nosave="" height="10" width="10" border="0"></li>
+			<li>Mac cocoa widgets: Implement widget attributes (foreground, background, font, background image)
+				(<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=253226">253226</a>)
+				<img src="../images/progress.gif" nosave="" height="5" width="14" border="0"></li>
+			<li>Mac cocoa widgets: Implement default button
+				(<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=253227">253227</a>)
+				<img src="../images/ok.gif" nosave="" height="10" width="10" border="0"></li>
+			<li>Mac cocoa widgets: Implement default selection (text, tree, table ...)
+				(<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=253228">253228</a>)
+				<img src="../images/ok.gif" nosave="" height="10" width="10" border="0"></li>
+			<li>Mac cocoa widgets: Implement SWT.Settings for Display
+				(<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=253229">253229</a>)</li>
+			<li>Mac cocoa widgets: Implement preferred size for scrolled widgets (text, tree, table ...)
+				(<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=253230">253230</a>)
+				<img src="../images/progress.gif" nosave="" height="5" width="14" border="0"></li>
+			<li>Mac cocoa accessibility: Implement accessibility for Mac cocoa
+				<img src="../images/ok.gif" nosave="" height="10" width="10" border="0"></li>
+			<li>Mac cocoa 64 bit: Support 64 bit cocoa
+				(<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=239301">239301</a>)
+				<img src="../images/ok.gif" nosave="" height="10" width="10" border="0"></li>				
+			<li>Write snippets and support newsgroup</li>
+		</ul>
+		</td>
+	</tr>
+	</tbody>
+</table>
+
+<table border="0" cellspacing="5" cellpadding="2" width="100%">
+	<tbody>
+	<tr>
+		<td align="left" valign="top" colspan="2" bgcolor="#0080c0"
+			width="100%"><b><font face="Arial,Helvetica"><font color="#ffffff">
+			Milestone Plan 3.5 M5 - January 30, 2009</font></font></b></td>
+	</tr>
+	<tr>
+		<td valign="top" width="2%"><img src="http://dev.eclipse.org/images/Adarrow.gif" nosave=""
+			border="0" height="16" width="16"></td>
+		<td><ul>
+			<li>Reduce bug count</li>
+			<li>Implement Header and HeaderItem</li>
+			<li>Implement Mac tool bar</li>
+			<li>Implement theme drawing API</li>
+			<li>Implement API to handle more printer options
+				(<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=73290">73290</a>,
+				<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=52789">52789</a>,
+				<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=23618">23618</a>,
+				<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=25612">25612</a>,
+				<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=146061">146061</a>,
+				<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=96394">96394</a>,
+				<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=80079">80079</a>,
+				<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=25554">25554</a>,
+				<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=146061">146061</a>)</li>
+			<li>Mac cocoa graphics/widgets: Implement internationalization (IME, BIDI, DBCS ...)
+				(<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=259027">259027</a>)</li>
+			<li>Mac cocoa widgets: Implement preferred size for remaining widgets</li>
+			<li>Mac cocoa OpenGL: Implement OpenGL
+				(<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=253990">253990</a>)
+				<img src="../images/ok.gif" nosave="" height="10" width="10" border="0"></li>
+			<li>Mac cocoa printing: Implement printing
+				(<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=252245">252245</a>)
+				<img src="../images/ok.gif" nosave="" height="10" width="10" border="0"></li>
+			<li>Mac cocoa AWT/Swing interop: Implement AWT/Swing interop
+				(<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=259028">259028</a>)</li>
+			<li>Mac cocoa: Fix bugs, implement missing features, test ...</li>
+			<li>Write snippets and support newsgroup</li>
+		</ul>
+		</td>
+	</tr>
+	</tbody>
+</table>
+
+<table border="0" cellspacing="5" cellpadding="2" width="100%">
+	<tbody>
+	<tr>
+		<td align="left" valign="top" colspan="2" bgcolor="#0080c0"
+			width="100%"><b><font face="Arial,Helvetica"><font color="#ffffff">
+			Milestone Plan 3.5 M6 - March 13, 2009</font></font></b></td>
+	</tr>
+	<tr>
+		<td valign="top" width="2%"><img src="http://dev.eclipse.org/images/Adarrow.gif" nosave=""
+			border="0" height="16" width="16"></td>
+		<td><ul>
+			<li>Reduce bug count</li>
+			<li>Mac cocoa: Fix bugs, implement missing features, test ...</li>
+			<li>Mac cocoa: Port SWT to Mac cocoa completed</li>
+			<li>Write snippets and support newsgroup</li>
+		</ul>
+		</td>
+	</tr>
+	</tbody>
+</table>
+
+<table border="0" cellspacing="5" cellpadding="2" width="100%">
+	<tbody>
+	<tr>
+		<td align="left" valign="top" colspan="2" bgcolor="#0080c0"
+			width="100%"><b><font face="Arial,Helvetica"><font color="#ffffff">
+			Milestone Plan 3.5 M7 - May 1st, 2009</font></font></b></td>
+	</tr>
+	<tr>
+		<td valign="top" width="2%"><img src="http://dev.eclipse.org/images/Adarrow.gif" nosave=""
+			border="0" height="16" width="16"></td>
+		<td><ul>
+			<li>Reduce bug count</li>
+			<li>Write snippets and support newsgroup</li>
+		</ul>
+		</td>
+	</tr>
+	</tbody>
+</table>
+
+</body>
+</html>

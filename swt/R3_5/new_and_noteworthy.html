@@ -1,0 +1,376 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="en-us">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>Eclipse 3.5 Milestone New and Noteworthy Items - SWT</title>
+</head>
+
+<body>
+
+<h1><font face="Verdana">Eclipse 3.5 - New and Noteworthy in SWT</font></h1>
+
+<ul>
+	<li><a href="#m1">Milestone M1</a></li>
+	<li><a href="#m2">Milestone M2</a></li>
+	<li><a href="#m3">Milestone M3</a></li>
+	<li><a href="#m4">Milestone M4</a></li>
+	<li><a href="#m5">Milestone M5</a></li>
+	<li><a href="#m6">Milestone M6</a></li>
+	<li><a href="#m7">Milestone M7</a></li>
+</ul>
+
+
+<h2><font face="Verdana"><a name=m1>Milestone M1</a></font></h2>
+
+<table border="0" width="80%" cellpadding="10" cellspacing="0">
+  <tr> 
+    <td colspan="2"> <hr> </td>
+  </tr>
+  <tr> 
+    <td width="30%" valign="top" align="left"><b>Cairo on AIX</b></td>
+    <td width="70%" valign="top">Cairo support has been added to the AIX platform. This enables
+	advanced graphics support on AIX.
+     <p><img src="images/cairoaix.png" alt="Cairo on AIX"></p>
+  </tr>
+  <tr> 
+    <td colspan="2"> <hr /> </td>
+  </tr>
+</table>
+
+
+<h2><font face="Verdana"><a name=m2>Milestone M2</a></font></h2>
+
+<table border="0" width="80%" cellpadding="10" cellspacing="0">
+  <tr> 
+    <td colspan="2"> <hr> </td>
+  </tr>
+  <tr> 
+    <td width="30%" valign="top" align="left"><b>JNI Generator</b></td>
+    <td width="70%" valign="top">A new plugin based tool has been added to simplify the process of generating the SWT JNI code. For more info 
+click <a href="http://www.eclipse.org/swt/jnigen.php">here</a>.
+     <p><img src="images/jnigen.png" alt="JNIGen"></p>
+  </tr>
+  <tr> 
+    <td colspan="2"> <hr /> </td>
+  </tr>
+</table>
+
+<h2><font face="Verdana"><a name=m3>Milestone M3</a></font></h2>
+
+<table border="0" width="80%" cellpadding="10" cellspacing="0">
+<tr> 
+    <td colspan="2"> <hr> </td>
+  </tr>
+   <tr id="cocoa">
+    <td width="30%" valign="top" align="left"><b>SWT for 32-bit Cocoa</b></td>
+    <td width="70%" valign="top">32-bit OSX Cocoa has joined the lineup of supported configurations for which SWT and Eclipse are routinely
+	built.  This implementation is currently early access.  Everyone is encouraged to download and test these new builds, and
+	to log bugs in <a href="https://bugs.eclipse.org/bugs/enter_bug.cgi?product=Platform">bugzilla</a>.
+	<p>
+	  <img src="images/cocoa.png" alt="Eclipse on Cocoa"/>
+	</p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><hr />
+    </td>
+  </tr>
+  <tr id="blockselection">
+    <td width="30%" valign="top" align="left"><b>Block selection in StyledText</b></td>
+    <td width="70%" valign="top">StyledTexts can be switched into block selection mode with new API <code>StyledText.setBlockSelection(true)</code>.
+	<p>
+	  <img src="images/blockselection.png" alt="Block Selection in StyledText"/>
+	</p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><hr />
+    </td>
+  </tr>
+</table>
+
+
+
+<h2><font face="Verdana"><a name=m4>Milestone M4</a></font></h2>
+
+<table border="0" width="80%" cellpadding="10" cellspacing="0">
+  <tr> 
+    <td colspan="2"> <hr> </td>
+  </tr>
+   <tr id="cocoa64">
+    <td width="30%" valign="top" align="left"><b>SWT for 64-bit Cocoa</b></td>
+    <td width="70%" valign="top">64-bit OSX Cocoa is now available.  As with the 32-bit implementation, 
+    this work is under active development, but available as an early access release.  Everyone is 
+    encouraged to download and test these new builds, and to log bugs in 
+    <a href="https://bugs.eclipse.org/bugs/enter_bug.cgi?product=Platform">bugzilla</a>.
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><hr />
+    </td>
+  </tr>
+   <tr id="jstojava">
+    <td width="30%" valign="top" align="left"><b>JavaScript-to-Java</b></td>
+    <td width="70%" valign="top">JavaScript can now call out to Java.
+    Supported types are numbers, booleans, strings, null's, and arrays (example 
+    <a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet307.java?view=co">
+    snippet</a>).
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><hr />
+    </td>
+  </tr>
+   <tr id="javatojs">
+    <td width="30%" valign="top" align="left"><b>Improved Java-to-JavaScript</b></td>
+    <td width="70%" valign="top">Java can now call into JavaScript.  An expression is evaluated in the context of a Browser document and 
+     a value is returned.  Supported types are numbers, booleans, strings, null's, and arrays (example 
+    <a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet308.java?view=co">
+    snippet</a>).
+    </td>
+  </tr>  
+    <tr>
+    <td colspan="2"><hr />
+    </td>
+  </tr>
+   <tr id="caretListener">
+    <td width="30%" valign="top" align="left"><b>New Caret Listener</b></td>
+    <td width="70%" valign="top">New API has been added to StyledText to allow you to listen for changes in the caret offset.
+    See StyledText.addCaretListener() and StyledText.removeCaretListener() for more information.
+    </td>
+  </tr>  
+  </tr>  
+    <tr>
+    <td colspan="2"><hr />
+    </td>
+  </tr>
+   <tr id="texteditor">
+    <td width="30%" valign="top" align="left"><b>New Text Editor Demo</b></td>
+    <td width="70%" valign="top">This new example makes extensive use of StyledText to demonstrate how it can be
+	used to create a multi-font rich text editor with bullets, links and embedded objects.
+    	<p>
+	  		<img src="images/editor.png" alt="Text Editor"/>
+		</p>
+    </td>
+  </tr>    
+</table>
+
+<h2><font face="Verdana"><a name=m5>Milestone M5</a></font></h2>
+
+<table border="0" width="80%" cellpadding="10" cellspacing="0">
+  <tr>
+    <td colspan="2"><hr />
+    </td>
+   </tr>
+  <tr id="cocoa">
+    <td width="30%" valign="top" align="left"><b>Cocoa port is no longer **early access**</b></td>
+    <td width="70%" valign="top">The Cocoa port of SWT is nearing completion and 
+		we've removed the **early access** warning from the download page.  Cocoa is
+		feature complete, and is the future of Eclipse on the Mac.  Please download 
+		and enter bug reports.</td>
+  </tr>
+  <tr>
+    <td colspan="2"><hr />
+    </td>
+  </tr>
+  <tr id="opengl">
+    <td width="30%" valign="top" align="left"><b>OpenGL on Cocoa</b></td>
+    <td width="70%" valign="top">
+	OpenGL support has been completed for the Cocoa port.
+	<p><img src="images/opengl.png" alt="Yeehaw!"/></p></td>
+  </tr>
+  <tr>
+    <td colspan="2"><hr />
+    </td>
+  </tr>
+  <tr id="swtsearch">
+    <td width="30%" valign="top" align="left"><b>Improved Search Field</b></td>
+    <td width="70%" valign="top">The SWT.SEARCH style is now supported on 
+	all platforms, allowing the application to display a text message when 
+	the control is awaiting input. The SWT.ICON_SEARCH and 
+	SWT.ICON_CANCEL hints control the appearance of the search field (example 
+	<a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet309.java?view=co">
+	snippet</a>).</p>
+	<p><img src="images/search.png" alt="Text with SWT.SEARCH"/></p></td>
+  </tr>
+  <tr>
+    <td colspan="2"><hr />
+    </td>
+  </tr>
+  <tr id="nautiluscopypaste"> 
+    <td width="30%" valign="top" align="left"><b>Improved Copy and Paste 
+	support</b></td>
+    <td width="70%" valign="top">Support has been added to the FileTransfer 
+	class to allow for copy/paste operations between the Explorer and 
+	the Nautilus file manager.
+     <p><img src="images/nautiluscopy.png" alt="Nautilus copy"/></p></td>
+  </tr>
+  <tr> 
+    <td colspan="2"> <hr /> </td>
+  </tr>
+  <tr id="stlinks"> 
+    <td width="30%" valign="top" align="left"><b>Links in StyledText</b></td>
+    <td width="70%" valign="top">StyledText now allows users to include add
+	hyperlinks to the text in the widget. 
+     <p><img src="images/link.png" alt="Link in StyledText"/></p></td>
+  </tr>
+  <tr> 
+    <td colspan="2"> <hr /> </td>
+  </tr>
+</table>
+
+<h2><font face="Verdana"><a name=m6>Milestone M6</a></font></h2>
+
+<table border="0" width="80%" cellpadding="10" cellspacing="0">
+  <tr>
+    <td colspan="2"><hr />
+      <h2>SWT</h2>
+      <hr />
+	</td>
+  </tr>
+    <tr id="setMargins">
+    <td width="30%" valign="top" align="left"><b>StyledText setMargins/setMarginColor</b></td>
+    <td width="70%" valign="top">
+		<p>New API has been added to StyledText to set margin spacing and color. 
+		See <a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet316.java?revision=1.1&amp;view=markup">Snippet316</a>.</p>
+		<p><img src="images/margins.png" alt="StyledText with margins" /></p>
+	</td>
+  </tr>
+  <tr>
+    <td colspan="2"><hr />
+    </td>
+  </tr>
+  
+  <tr id="disablescript">
+    <td width="30%" valign="top" align="left"><b>Disabling Javascript</b></td>
+    <td width="70%" valign="top">
+		<p>Javascript can be disabled from running in a Browser with the new API <code>Browser.setJavascriptEnabled(boolean)</code>.</p>
+	</td>
+  </tr>
+  <tr>
+    <td colspan="2"><hr />
+    </td>
+  </tr>
+  <tr id="cookies">
+    <td width="30%" valign="top" align="left"><b>Browser Cookies</b></td>
+    <td width="70%" valign="top">
+		<p>Cookies can be created and accessed in the Browser with new API <code>Browser.setCookie()</code> and <code>Browser.getCookie()</code>.</p>
+	</td>
+  </tr>
+  <tr>
+    <td colspan="2"><hr />
+    </td>
+  </tr>
+    <tr id="authlistener">
+    <td width="30%" valign="top" align="left"><b>Authentication Listener</b></td>
+    <td width="70%" valign="top">
+		<p>Browser clients can now provide a listener that responds to basic authentication challenges.  This is 
+		useful for enabling users to access sites without presenting them with a manual authentication prompter.
+		See <a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet317.java?revision=1.1&amp;view=markup">Snippet317</a>.</p>
+	</td>
+  </tr>
+  <tr>
+    <td colspan="2"><hr />
+    </td>
+  </tr>
+  <tr id="buttonorder">
+    <td width="30%" valign="top" align="left"><b>Alternate button order</b></td>
+    <td width="70%" valign="top">
+		<p>On GTK, it is now possible to change the default button order for Eclipse.  To enable this feature,
+		edit .gktrc file and include the line "gtk-alternative-button-order=1".</p>
+		<p><img src="images/alternate.png" alt="Alternate button order" /></p>
+	</td>
+  </tr>
+  <tr>
+    <td colspan="2"><hr />
+    </td>
+  </tr>
+    <tr id="modifiedshell">
+    <td width="30%" valign="top" align="left"><b>Shell modified state hint</b></td>
+    <td width="70%" valign="top">
+		<p>New API has been added to shell to provide a hint to the user that the window is in a modified state.
+		See <a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet314.java?revision=1.1&amp;view=markup">Snippet314</a>.</p>
+		<p><img src="images/modified.png" alt="Shell.setModified" /></p>
+	</td>
+  </tr>
+  <tr> 
+    <td colspan="2"> <hr /> </td>
+  </tr>
+  <tr id="datetimedropdown"> 
+    <td width="30%" valign="top" align="left"><b>DateTime DROP_DOWN</b></td>
+    <td width="70%" valign="top">DateTime widgets created with SWT.DATE style can now also have SWT.DROP_DOWN style.
+     <p><img src="images/datetime-dropdown.png" alt="DateTime with DROP_DOWN style"/></p></td>
+  </tr>
+  <tr>
+    <td colspan="2"><hr />
+    </td>
+  </tr>
+</table>
+
+<h2><font face="Verdana"><a name=m7>Milestone M7</a></font></h2>
+
+<table border="0" width="80%" cellpadding="10" cellspacing="0">
+  <tr>
+    <td colspan="2"><hr />
+      <h2>SWT</h2>
+      <hr /></td>
+  </tr>
+  <tr id="sheet">
+    <td width="30%" valign="top" align="left"><b>SWT.SHEET Style for Shell</b></td>
+	<td width="70%" valign="top">Sheet windows are now supported on Mac OS X Cocoa.
+      <p><img src='images/sheet.png' alt='Shell with SWT.SHEET style'/></p>
+	</td>
+  </tr>
+  <tr>
+    <td colspan="2"><hr />
+    </td>
+  </tr>
+<tr> 
+    <td width="30%" valign="top" align="left"><b>SWT for Solaris x86</b></td>
+    <td width="70%" valign="top">Solaris x86 has joined the lineup of supported configurations for which SWT and Eclipse are routinely built.
+		<p><img src="images/solarisx86.png" alt="Solaris x86"/></p>
+	</td>
+  </tr>
+  <tr>
+    <td colspan="2"><hr />
+    </td>
+  </tr>
+  <tr> 
+    <td width="30%" valign="top" align="left"><b>Mozilla Browser Support on Solaris x86</b></td>
+    <td width="70%" valign="top">Mozilla browser support has been added to the Solaris x86 platform.
+		<p><img src="images/solarisx86_browser.png" alt="Solaris x86 Browser"/></p>
+	</td>
+  </tr>
+  <tr>
+    <td colspan="2"><hr />
+    </td>
+  </tr>
+  <tr id="cocoadnd">
+    <td width="30%" valign="top" align="left"><b>Improved DND feedback on Cocoa</b></td>
+    <td width="70%" valign="top">Cocoa drag and drop in trees and tables is fully supported. Aside
+	from the visual feedback, native features such as automatic collapse of tree items is supported 
+	when the drag.
+	<p><img src='images/dnd.png' alt='Cocoa drag and drop feedback'/></p>
+	</td>
+  </tr>
+  <tr>
+    <td colspan="2"><hr />
+    </td>
+  </tr>
+  <tr id="paperorientation"> 
+    <td width="30%" valign="top" align="left"><b>Paper Orientation</b></td>
+    <td width="70%" valign="top">Applications can now programmatically select portrait or landscape mode when printing,
+    or when opening a PrintDialog.
+     See <a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet318.java?view=co">Snippet318</a>.
+     <p><img src="images/printdialog.png" alt="PrintDialog seeded with Landscape orientation"/></p></td>
+  </tr>
+  <tr>
+    <td colspan="2"><hr />
+    </td>
+  </tr>
+  </table>
+</body>
+</html>

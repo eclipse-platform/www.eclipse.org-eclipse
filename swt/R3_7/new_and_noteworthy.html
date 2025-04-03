@@ -1,0 +1,278 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="en-us">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>Eclipse 3.7 Milestone New and Noteworthy Items - SWT</title>
+</head>
+
+<body>
+
+<h1><font face="Verdana">Eclipse 3.7 - New and Noteworthy in SWT</font></h1>
+
+<ul>
+	<li><a href="#m1">Milestone M1</a></li>
+	<li><a href="#m2">Milestone M2</a></li>
+	<li><a href="#m3">Milestone M3</a></li>
+	<li><a href="#m4">Milestone M4</a></li>
+	<li><a href="#m5">Milestone M5</a></li>
+	<li><a href="#m6">Milestone M6</a></li>
+	<!--
+	<li><a href="#m7">Milestone M7</a></li>
+	-->
+</ul>
+
+
+<h2><font face="Verdana"><a name=m1>Milestone M1</a></font></h2>
+
+<table border="0" width="80%" cellpadding="10" cellspacing="0">
+  <tr> 
+    <td colspan="2"><hr /></td>
+  </tr>
+
+  <tr id="cocoatool">
+    <td width="30%" valign="top" align="left"><b>Tool shell support on Cocoa</b></td>
+    <td width="70%" valign="top">
+      The Cocoa port now supports the <tt>SWT.TOOL</tt> style bit. See <a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet344.java">Snippet 344</a>.
+      <p><img src="images/cocoatool.png" alt="Cocoa Tool"/></p></td>
+  </tr>
+  <tr> 
+    <td colspan="2"><hr /></td>
+  </tr>
+  <tr id="webkitgtk">
+    <td width="30%" valign="top" align="left"><b>Browser on Linux defaults to WebKitGTK+</b></td>
+    <td width="70%" valign="top">
+      Browsers created with style <tt>SWT.NONE</tt> on Linux now use WebKitGTK+ as the default native renderer if it is found on the user's machine.  If WebKitGTK+ is not found then a Mozilla-based native renderer is used instead.
+      <p><img src="images/webkitgtk.png" alt="WebKitGTK+ Image"/></p></td>
+  </tr>
+  <tr> 
+    <td colspan="2"><hr /></td>
+  </tr>
+</table>
+
+<h2><font face="Verdana"><a name=m2>Milestone M2</a></font></h2>
+
+<table border="0" width="80%" cellpadding="10" cellspacing="0">
+  <tr> 
+    <td colspan="2"><hr /></td>
+  </tr>
+  <tr id="wrappablebuttons">
+    <td width="30%" valign="top" align="left"><b>Wrappable buttons</b></td>
+    <td width="70%" valign="top">
+      <p>The button control now supports the SWT.WRAP style bit on all platforms. This allows for the creation of buttons that will automatically
+wrap any text when resized. For more info, please see <a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet345.java">Snippet 345</a>.
+      </p>
+      <p><img src="images/wrap.png" alt="Button with Wrap"></p>
+  </tr>
+  <tr> 
+    <td colspan="2"><hr /></td>
+  </tr>
+</table>
+
+<h2><font face="Verdana"><a name=m3>Milestone M3</a></font></h2>
+
+<table border="0" width="80%" cellpadding="10" cellspacing="0">
+  <tr> 
+    <td colspan="2"><hr /></td>
+  </tr>
+  <tr id="AIX">
+    <td width="30%" valign="top" align="left"><b>AIX for GTK 32/64</b></td>
+    <td width="70%" valign="top">
+      <p>2 new GTK ports for AIX (one for 32 bit and another one for 64 bit architectures) have joined the lineup of supported configurations for which SWT and Eclipse are routinely built. </p>
+      <p><img src="images/AIX.png" alt="GTK on AIX"></p>
+  </tr>
+  <tr>
+    <td colspan="2"><hr /></td>
+  </tr>
+
+  <tr id="appmenu">
+    <td width="30%" valign="top" align="left"><b>Cocoa Display.getMenuBar</b></td>
+    <td width="70%" valign="top">
+      <p>Display.getMenuBar() is a new API that returns a Menu that is displayed when no Shell is visible or when the active Shell doesn't have a menu bar of its own. Right now, this API is only available in the Mac OS X Cocoa port. It will return null on all other platforms.  See <a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet347.java">this snippet</a> for an example of how you can use this API in a cross-platform application.
+      <br>Note: This new API was originally called Display.getAppMenuBar().
+      </p>
+      <p><img src="images/AppMenuBar.png" alt="Application Menu Bar"></p>
+  </tr>
+  <tr>
+    <td colspan="2"><hr /></td>
+  </tr>
+<tr id="toolbar">
+    <td width="30%" valign="top" align="left"><b>Cocoa Shell.getToolbar</b></td>
+    <td width="70%" valign="top">
+      <p>Shell.getToolBar() returns a ToolBar that appears in the title area of the Shell. ToolItems added to that ToolBar will have the look and feel of the platform. You can also add special separator items that provide a fixed-width spacer or a flexible-width spacer that pushes the ToolItems on either side of it out to the next fixed item, or the edge of the Shell.
+Please note that this API is a work in progress, and is currently Cocoa-only. Please follow bug 222859 or watch future N&N announcements for more info.
+      </p>
+      <p><img src="images/NativeToolBar.png" alt="Native Toolbar"></p>
+  </tr>
+  <tr>
+    <td colspan="2"><hr /></td>
+  </tr>
+<tr id="textChar">
+    <td width="30%" valign="top" align="left"><b>Text setTextChars</b></td>
+    <td width="70%" valign="top">
+      <p>There is new API in Text that allows applications to get and set text as a char array in a secure manner. For more info, please see <a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet346.java">Snippet 346</a>.
+ </p>
+  </tr>
+  <tr> 
+    <td colspan="2"><hr /></td>
+  </tr>
+  <tr id="accessibleeditabletext">
+    <td width="30%" valign="top" align="left"><b>AccessibleEditableText support</b></td>
+    <td width="70%" valign="top">
+      SWT Accessibility now has API to support the platform's EditableText interface used by accessibility tools such as speech recognition systems.
+      For details, see <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=324005">bug 324005</a>.
+    </td>
+  </tr>
+  <tr> 
+    <td colspan="2"><hr /></td>
+  </tr>
+</table>
+
+<h2><font face="Verdana"><a name=m4>Milestone M4</a></font></h2>
+
+<table border="0" width="80%" cellpadding="10" cellspacing="0">
+  <tr> 
+    <td colspan="2"><hr /></td>
+  </tr>
+  <tr id="HPUX">
+    <td width="30%" valign="top" align="left"><b>HPUX for GTK</td>
+    <td width="70%" valign="top">
+      A new GTK port for HPUX (32 bit) has joined the lineup of supported configurations for which SWT and Eclipse are routinely built.
+      <p><img src="images/hpux.png" alt="GTK on HPUX"></p>
+  </tr>
+ 
+  <tr>
+    <td colspan="2"><hr /></td>
+  </tr>
+  <tr id="duplex">
+    <td width="30%" valign="top" align="left"><b>Duplex printing</td>
+    <td width="70%" valign="top">
+      New API has been added to <tt>PrinterData</tt> to enable duplex (double-sided) printing without using the <tt>PrintDialog</tt>.
+      This can also be used to seed the <tt>PrintDialog</tt>'s duplex setting before presenting it to the user.
+      <p><img src="images/duplex-printing-pl.png" alt="PrintDialog showing double-sided portrait printing that can be bound on the long edge"></p>
+      <p><img src="images/duplex-printing-ps.png" alt="PrintDialog showing double-sided portrait printing that can be bound on the short edge"></p>
+      <p><img src="images/duplex-printing-ll.png" alt="PrintDialog showing double-sided landscape printing that can be bound on the long edge"></p>
+      <p><img src="images/duplex-printing-ls.png" alt="PrintDialog showing double-sided landscape printing that can be bound on the short edge"></p>
+  </tr>
+ 
+  <tr>
+    <td colspan="2"><hr /></td>
+  </tr>
+  <tr id="CocoaDateTime">
+    <td width="30%" valign="top" align="left"><b>Improved Cocoa DateTime support</td>
+    <td width="70%" valign="top">
+      On Cocoa, the <tt>DateTime</tt> control now supports the <tt>SWT.DROP_DOWN</tt> option bit.
+      <p><img src="images/cocoadatetime.png" alt="Cocoa DateTime"></p>
+  </tr>
+ 
+  <tr> 
+    <td colspan="2"><hr /></td>
+  </tr>
+</table>
+
+<h2><font face="Verdana"><a name=m5>Milestone M5</a></font></h2>
+
+<table border="0" width="80%" cellpadding="10" cellspacing="0">
+  <tr> 
+    <td colspan="2"><hr /></td>
+  </tr>
+  <tr id="touch-support">
+    <td width="30%" valign="top" align="left"><b>Touch and gesture support</td>
+    <td width="70%" valign="top">If your hardware supports it, you can now listen for touches or 
+    gestures on SWT controls. Four standard gestures are supported: two-finger panning, 
+    rotation, magnification, and swipe (three fingers on Mac OS X, flicks on Windows). 
+    You can also listen for 'raw' touches on a MacBook touchpad, Magic Trackpad or 
+    Magic Mouse, or a touch-sensitive display that is supported by Windows Touch.
+	For examples of how to use the touch and gesture support see 
+	<a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet352.java">Snippet 352</a> 
+	and <a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet353.java">Snippet 353</a>.
+	<p><img src="images/gesture.png" alt="Gesture" title="A gesture from our fearless leader"/></p>
+    </td>
+  </tr>
+ 
+  <tr>
+    <td colspan="2"><hr /></td>
+  </tr>
+  <tr id="WebKit_Everywhere">
+    <td width="30%" valign="top" align="left"><b>WebKit everywhere</td>
+    <td width="70%" valign="top">The SWT browser now supports using WebKit as its native renderer 
+    on Windows.  Consequently, browsers created with new style <code>SWT.WEBKIT</code> 
+    will use WebKit on Windows, Linux and OS X, provided that the user's machine satisfies the 
+    <a href="http://www.eclipse.org/swt/faq.php#howusewebkit">runtime requirements</a>.  
+    For an example of using WebKit see <a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet351.java">Snippet 351</a>.
+	<p><img src="images/webkitWindows.png" alt="Webkit"/></p>
+    </td>
+  </tr>
+ 
+  <tr>
+    <td colspan="2"><hr /></td>
+  </tr>
+  <tr id="Change_Orientation">
+    <td width="30%" valign="top" align="left"><b>Change orientation</td>
+    <td width="70%" valign="top">
+      New methods have been added to <tt>Control</tt> and <tt>Menu</tt> to 
+      allow the application to change the orientation of these interface elements. Prior to 
+      the introduction of these methods, the application was required to recreate the 
+      element to achieve the same result. 
+      Note: these methods are only relevant on platforms where BIDI mirroring is supported.
+	  See <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=29779">Bug 29779</a> for more information.
+    </td>
+  </tr>
+  
+  <tr> 
+    <td colspan="2"><hr /></td>
+  </tr>
+</table>
+
+<h2><font face="Verdana"><a name=m6>Milestone M6</a></font></h2>
+
+<table border="0" width="80%" cellpadding="10" cellspacing="0">
+  <tr> 
+    <td colspan="2"><hr /></td>
+  </tr>
+  <tr id="systemMenu">
+    <td width="30%" valign="top" align="left"><b>Cocoa Display.getSystemMenu</td>
+    <td width="70%" valign="top">
+      Display.getSystemMenu() is a new API that returns the system-provided menu for the application.
+      You can access menu items in the system menu by comparing a MenuItem's id with various SWT.ID_* constants.
+      Right now, this API is only available in the Mac OS X Cocoa port. It will return null on all other platforms.
+      See <a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet354.java">this snippet</a>
+      for an example of how you can use this API in a cross-platform application.
+      <p><img src="images/system-menu.png" alt="Cocoa System Menu"></p>
+    </td>
+  </tr>
+  
+  <tr> 
+    <td colspan="2"><hr /></td>
+  </tr>
+  <tr id="GTKDateTime">
+    <td width="30%" valign="top" align="left"><b>Improved GTK DateTime support</td>
+    <td width="70%" valign="top">
+      On GTK, the <tt>DateTime</tt> control now supports <tt>SWT.DROP_DOWN</tt> style to drop down a calendar from a date editor.
+      All platforms now support this style, and the <tt>HINT</tt> keyword has been removed from the <tt>SWT.DROP_DOWN</tt> style bit.
+      <p><img src="images/gtk-datetime.png" alt="GTK DateTime DROP_DOWN calendar"></p>
+  </tr>
+  
+  <tr> 
+    <td colspan="2"><hr /></td>
+  </tr>
+</table>
+
+<!--
+<h2><font face="Verdana"><a name=m7>Milestone M7</a></font></h2>
+
+<table border="0" width="80%" cellpadding="10" cellspacing="0">
+  <tr> 
+    <td colspan="2"><hr /></td>
+  </tr>
+  
+  <tr> 
+    <td colspan="2"><hr /></td>
+  </tr>
+</table>
+-->
+
+</body>
+</html>

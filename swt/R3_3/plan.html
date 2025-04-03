@@ -1,0 +1,263 @@
+<html>
+<head>
+<title>Platform SWT 3.3</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="http://dev.eclipse.org/default_style.css" type="text/css">
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000">
+<table border=0 cellspacing=5 cellpadding=2 width="100%" >
+  <tr> 
+    <td align=left width="72%"> <font class=indextop>Platform SWT R3.3</font> <br>
+      <font class=indexsub> Platform SWT</font></td>
+    <td width="28%">
+    	<img src="http://dev.eclipse.org/images/Idea.jpg" height=86 width=120
+    	alt="Eclipse documentation banner"
+    	></td>
+  </tr>
+</table>
+<table border=0 cellspacing=5 cellpadding=2 width="100%" >
+  <tr> 
+    <a NAME="Overall_Planning">
+    <td align=LEFT valign=TOP colspan="2" bgcolor="#0080C0"><b><font color="#FFFFFF" face="Arial,Helvetica">
+      Overall 3.3 Plan
+    </font></b></td>
+    </a>
+  </tr>
+	
+	<tr>
+		<td valign="top" width="2%"><img src="http://dev.eclipse.org/images/Adarrow.gif"
+			nosave="" border="0" height="16" width="16"></td>
+		<td><b>Overall Platform themes</b>
+		<ul>
+			<li>Components</li>
+			<li>Consumability</li>
+			<li>Java</li>
+			<li>Vista</li>
+			<li>UI Evolution</li>
+			<li>API</li>
+		</ul>
+		</td>
+	</tr>
+	<tr>
+		<td valign="top" width="2%"><img src="http://dev.eclipse.org/images/Adarrow.gif"
+			nosave="" border="0" height="16" width="16"></td>
+		<td><b>Plan items</b>
+		<ul>
+			<li><img src="../images/ok.gif" nosave="" height="10" width="10" border="0"> Implement printing on GTK
+			(<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=154101">154101</a>)</li>
+			<li><img src="../images/ok.gif" nosave="" height="10" width="10" border="0"> Port SWT to WinFX and WPF
+			(<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=154117">154117</a>)</li>			
+			<li><font class="indexsub" color="#8080ff">[&gt;3.3]</font> Generalize the win32 version of SWT to win64
+			(<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=154118">154118</a>)</li>
+			<li><img src="../images/ok.gif" nosave="" height="10" width="10" border="0"> Fully support the win32 version of SWT on Vista
+			(<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=154116">154116</a>)</li>
+			<li><img src="../images/ok.gif" nosave="" height="10" width="10" border="0">Implement missing text editor productivity features
+			(<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=154119">154119</a>)</li>
+			<li><font class="indexsub" color="#8080ff">[&gt;3.3]</font> General API for drawing standard UI components
+			(<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=80554">80554</a>, 
+			<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=37706">37706</a>)</li>
+			<li><img src="../images/ok.gif" nosave="" height="10" width="10" border="0"> Mozilla Everywhere
+			(<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=154124">154124</a>)</li>
+			<li><img src="../images/ok.gif" nosave="" height="10" width="10" border="0"> Provide access to more native controls
+			(<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=154128">154128</a>)</li>
+			<li><img src="../images/ok.gif" nosave="" height="10" width="10" border="0"> Custom widget API support
+			(<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=154129">154129</a>)</li>
+			<li><img src="../images/ok.gif" nosave="" height="10" width="10" border="0"> Graphics Improvements
+			(<a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=154134">154134</a>)</li>
+		</ul>
+		</td>
+	</tr>
+</table>
+
+<table border="0" cellspacing="5" cellpadding="2" width="100%">
+	<tbody>
+		<tr>
+			<td align="left" valign="top" colspan="4" bgcolor="#0080c0"
+				width="100%"><b><font face="Arial,Helvetica"><font color="#ffffff">
+			Legend</font></font></b></td>
+		</tr>
+		<tr>
+			<td valign="top"><img src="../images/progress.gif" nosave="" height="5" width="14" border="0"></td>
+			<td width="50%">item is under development</td>
+			<td valign="top"><img src="../images/glass.gif" nosave="" height="10" width="10" border="0"></td>
+			<td width="50%">item is under investigation</td>
+		</tr>
+		<tr>
+			<td valign="top"><img src="../images/ok.gif" nosave="" height="10" width="10" border="0"></td>
+			<td width="50%">item is finished</td>
+			<td valign="top">( )</td>
+			<td width="50%">item is time permitting</td>
+		</tr>
+		<tr>
+			<td valign="top"><font class="indexsub" color="#8080ff">[&gt;3.3]</font></td>
+			<td width="50%">item is deferred</td>
+			<td valign="top"><font class="indexsub"><img src="../images/new.gif" alt="" border="0"></font></td>
+			<td width="50%">new</td>
+		</tr>
+	</tbody>
+</table>
+
+<table border="0" cellspacing="5" cellpadding="2" width="100%">
+	<tbody>
+	<tr>
+		<td align="left" valign="top" colspan="2" bgcolor="#0080c0"
+			width="100%"><b><font face="Arial,Helvetica"><font color="#ffffff">
+			Milestone Plan 3.3 M7 May 3, 2007</font></font></b></td>
+	</tr>
+	<tr>
+		<td valign="top" width="2%"><img src="http://dev.eclipse.org/images/Adarrow.gif" nosave=""
+			border="0" height="16" width="16"></td>
+		<td><ul>
+			<li>Reduce bug count</li>
+			<li>Drag and Drop, Clipboard support for Windows (WPF)</li>
+			<li>Write snippets and support newsgroup</li>
+		</ul>
+		</td>
+	</tr>
+	</tbody>
+</table>
+
+<table border="0" cellspacing="5" cellpadding="2" width="100%">
+	<tbody>
+	<tr>
+		<td align="left" valign="top" colspan="2" bgcolor="#0080c0"
+			width="100%"><b><font face="Arial,Helvetica"><font color="#ffffff">
+			Milestone Plan 3.3 M6 March 23, 2007</font></font></b></td>
+	</tr>
+	<tr>
+		<td valign="top" width="2%"><img src="http://dev.eclipse.org/images/Adarrow.gif" nosave=""
+			border="0" height="16" width="16"></td>
+		<td><ul>
+			<li>Reduce bug count</li>
+			<li>Eclipse running on Vista (WPF)</li>
+			<li>Native double buffering for Windows Vista (win32)</li>
+			<li>Reparenting on the Mac</li>
+			<li>Write snippets and support newsgroup</li>
+		</ul>
+		</td>
+	</tr>
+	</tbody>
+</table>
+
+<table border="0" cellspacing="5" cellpadding="2" width="100%">
+	<tbody>
+	<tr>
+		<td align="left" valign="top" colspan="2" bgcolor="#0080c0"
+			width="100%"><b><font face="Arial,Helvetica"><font color="#ffffff">
+			Milestone Plan 3.3 M5 February 9, 2007</font></font></b></td>
+	</tr>
+	<tr>
+		<td valign="top" width="2%"><img src="http://dev.eclipse.org/images/Adarrow.gif" nosave=""
+			border="0" height="16" width="16"></td>
+		<td><ul>
+			<li>Reduce bug count</li>
+			<li>Mozilla everywhere</li>
+			<li>Drag detect for Custom Controls</li>
+			<li>Drag Effects for Custom Controls</li>
+			<li>New SWT.SEARCH style for text controls</li>
+			<li>SWT on Vista (WPF)</li>
+			<li>Write snippets and support newsgroup</li>
+		</ul>
+		</td>
+	</tr>
+	</tbody>
+</table>
+
+<table border="0" cellspacing="5" cellpadding="2" width="100%">
+	<tbody>
+	<tr>
+		<td align="left" valign="top" colspan="2" bgcolor="#0080c0"
+			width="100%"><b><font face="Arial,Helvetica"><font color="#ffffff">
+			Milestone Plan 3.3 M4 December 15, 2006</font></font></b></td>
+	</tr>
+	<tr>
+		<td valign="top" width="2%"><img src="http://dev.eclipse.org/images/Adarrow.gif" nosave=""
+			border="0" height="16" width="16"></td>
+		<td><ul>
+			<li>Reduce bug count</li>
+			<li>New DateTime styles</li>
+			<li>New graphics line drawing capabilities</li>
+			<li>SWT libraries automatically found</li>
+			<li>SWT on Vista (win32)</li>
+			<li>Write snippets and support newsgroup</li>
+		</ul>
+		</td>
+	</tr>
+	</tbody>
+</table>
+
+<table border="0" cellspacing="5" cellpadding="2" width="100%">
+	<tbody>
+	<tr>
+		<td align="left" valign="top" colspan="2" bgcolor="#0080c0"
+			width="100%"><b><font face="Arial,Helvetica"><font color="#ffffff">
+			Milestone Plan 3.3 M3 November 3, 2006</font></font></b></td>
+	</tr>
+	<tr>
+		<td valign="top" width="2%"><img src="http://dev.eclipse.org/images/Adarrow.gif" nosave=""
+			border="0" height="16" width="16"></td>
+		<td><ul>
+			<li>Reduce bug count</li>
+			<li>New DateTime control</li>
+			<li>Write snippets and support newsgroup</li>
+		</ul>
+		</td>
+	</tr>
+	</tbody>
+</table>
+
+<table border="0" cellspacing="5" cellpadding="2" width="100%">
+	<tbody>
+	<tr>
+		<td align="left" valign="top" colspan="2" bgcolor="#0080c0"
+			width="100%"><b><font face="Arial,Helvetica"><font color="#ffffff">
+			Milestone Plan 3.3 M2 September 22, 2006</font></font></b></td>
+	</tr>
+	<tr>
+		<td valign="top" width="2%"><img src="http://dev.eclipse.org/images/Adarrow.gif" nosave=""
+			border="0" height="16" width="16"></td>
+		<td><ul>
+			<li>Reduce bug count</li>
+			<li>Color cursors on Mac OSX</li>
+			<li>JPEG/PNG image loading performance improvements</li>
+			<li>GraphicsExample</li>
+			<li>Write snippets and support newsgroup</li>
+		</ul>
+		</td>
+	</tr>
+	</tbody>
+</table>
+
+<table border="0" cellspacing="5" cellpadding="2" width="100%">
+	<tbody>
+	<tr>
+		<td align="left" valign="top" colspan="2" bgcolor="#0080c0"
+			width="100%"><b><font face="Arial,Helvetica"><font color="#ffffff">
+			Milestone Plan 3.3 M1 August 10, 2006</font></font></b></td>
+	</tr>
+	<tr>
+		<td valign="top" width="2%"><img src="http://dev.eclipse.org/images/Adarrow.gif" nosave=""
+			border="0" height="16" width="16"></td>
+		<td><ul>
+			<li>Reduce bug count</li>
+			<li>Implement Printing on GTK <a href="http://bugs.eclipse.org/bugs/show_bug.cgi?id=24796">(24796)</a></li>
+			<li>Add system tray support on OS X</li>
+			<li>Write images in PNG format</li>
+			<li>Use browser profiles on linux</li>
+			<li>Add Browser support on linux-PPC</li>
+			<li>Use GtkComboBox widget if available</li>
+			<li>Add multi-click notification</li>
+			<li>Add copy()/cut()/paste() API to CCombo</li>
+			<li>Improve PNG loading performance</li>
+			<li>Write snippets and support newsgroup</li>
+		</ul>
+		</td>
+	</tr>
+	</tbody>
+</table>
+
+</table>
+
+</body>
+</html>

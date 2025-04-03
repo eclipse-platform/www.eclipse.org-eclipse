@@ -1,0 +1,557 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="en-us">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>Eclipse 3.6 Milestone New and Noteworthy Items - SWT</title>
+</head>
+
+<body>
+
+<h1><font face="Verdana">Eclipse 3.6 - New and Noteworthy in SWT</font></h1>
+
+<ul>
+	<li><a href="#m1">Milestone M1</a></li>
+	<li><a href="#m2">Milestone M2</a></li>
+	<li><a href="#m3">Milestone M3</a></li>
+	<li><a href="#m4">Milestone M4</a></li>
+	<li><a href="#m5">Milestone M5</a></li>
+	<li><a href="#m6">Milestone M6</a></li>
+	<li><a href="#m7">Milestone M7</a></li>
+</ul>
+
+
+<h2><font face="Verdana"><a name=m1>Milestone M1</a></font></h2>
+
+<table border="0" width="80%" cellpadding="10" cellspacing="0">
+  <tr> 
+    <td colspan="2"> <hr> </td>
+  </tr>
+  <tr> 
+    <td width="30%" valign="top" align="left"><b>Icon support for GTK Text widgets</b></td>
+    <td width="70%" valign="top">The text widget can now display the search and cancel icons inside the widget. This runs on Linux platforms with a GTK version of 2.16 or greater.
+     <p><img src="images/text_search.png" alt="Icon support"></p>
+  </tr>
+  <tr> 
+    <td colspan="2"> <hr /> </td>
+  </tr>
+</table>
+
+
+<h2><font face="Verdana"><a name=m2>Milestone M2</a></font></h2>
+
+<table border="0" width="80%" cellpadding="10" cellspacing="0">
+  <tr> 
+    <td colspan="2"> <hr> </td>
+  </tr>
+   <tr> 
+    <td width="30%" valign="top" align="left"><b>Mozilla Browser Support on Solaris SPARC</b></td>
+    <td width="70%" valign="top">Mozilla browser support has been added for the Solaris SPARC platform (Solaris 10, GTK+).</td>
+  </tr>
+  <tr>
+    <td colspan="2"><hr />
+    </td>
+  </tr>
+  <tr> 
+    <td width="30%" valign="top" align="left"><b>Browser.close() API</td>
+    <td width="70%" valign="top">Browser.close() is used to close a Browser, but allows the close to be cancelled by an onbeforeunload handler.  
+	See <a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet326.java">Snippet 326</a>.
+     <p><img src="images/browserclose.png" alt="Browser close"></p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><hr />
+    </td>
+  </tr>
+
+  <tr> 
+    <td width="30%" valign="top" align="left"><b>Multipage TIFF image</b></td>
+    <td width="70%" valign="top">Support for loading multipage TIFF images is now available.</td> 
+  </tr>
+  <tr>
+    <td colspan="2"><hr />
+    </td>
+  </tr>
+
+  <tr> 
+    <td width="30%" valign="top" align="left"><b>Key event for F16-F20 </b></td>
+    <td width="70%" valign="top">Added new constants for key events from F16 to F20.</td> 
+  </tr>
+  <tr>
+    <td colspan="2"><hr />
+  </td>
+
+  <tr> 
+    <td width="30%" valign="top" align="left"><b>DND.FEEDBACK_INSERT_BEFORE and DND.FEEDBACK_INSERT_AFTER for Table</b></td>
+    <td width="70%" valign="top">The default drop target effect for Table now supports DND.FEEDBACK_INSERT_BEFORE and DND.FEEDBACK_INSERT_AFTER.
+     <p><img src="images/tablednd.png" alt="desc"></p>
+    </td> 
+  </tr>
+  <tr>
+    <td colspan="2"><hr />
+  </td>
+
+  <tr> 
+    <td width="30%" valign="top" align="left"><b>Horizontal Mouse Wheel</b></td>
+    <td width="70%" valign="top">Added new event for horizontal mouse wheel. See SWT#MouseHorizontalWheel and SWT#MouseVerticalWheel.</td> 
+  </tr>
+  <tr>
+    <td colspan="2"><hr />
+    </td>
+  </tr>
+
+  <tr> 
+    <td width="30%" valign="top" align="left"><b>StyledText: variable tab stops</b></td>
+    <td width="70%" valign="top">New API in StyledText allows the application to specify a non-uniform sequence of tab stops.
+	See <a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet325.java">Snippet 325</a>.
+     <p><img src="images/sttabs.png" alt="desc"></p>
+    </td> 
+  </tr>
+  <tr> 
+    <td colspan="2"> <hr /> </td>
+  </tr>
+</table>
+
+<h2><font face="Verdana"><a name=m3>Milestone M3</a></font></h2>
+
+<table border="0" width="80%" cellpadding="10" cellspacing="0">
+  <tr> 
+    <td colspan="2"> <hr> </td>
+  </tr>
+  <tr> 
+    <td width="30%" valign="top" align="left">
+      <b>StyledText: per line variable tab stops</b>
+    </td>
+    <td width="70%" valign="top">
+      Improved current support to allow each line to have its own sequence of tab stops.
+      <p><img src="images/variable-tab-stops.png" alt="Icon support"></p>
+    </td> 
+  </tr>
+  <tr>
+    <td colspan="2"><hr />
+    </td>
+  </tr>
+
+  <tr> 
+    <td width="30%" valign="top" align="left"><b>CLabel set/get margins</b></td>
+    <td width="70%" valign="top">New API has been added to CLabel to set and get the left, top, right and bottom margin spacing.
+    </td> 
+  </tr>
+  <tr>
+    <td colspan="2"><hr />
+    </td>
+  </tr>
+
+  <tr> 
+    <td width="30%" valign="top" align="left">
+      <b>Key location</b>
+    </td>
+    <td width="70%" valign="top">
+      A new field has been added to key event to allow the application to identify which key originated the event.
+      See <code>Event.keyLocation</code>.
+    </td> 
+  </tr>
+  <tr>
+    <td colspan="2"><hr />
+    </td>
+  </tr>
+
+  <tr> 
+    <td width="30%" valign="top" align="left">
+      <b>New API in Scrollbar</b>
+    </td>
+    <td width="70%" valign="top">
+      New methods have been added to Scrollbar to return the bounds for the thumb and its track.
+      See <code>ScrollBar.getThumbBounds()</code> and <code>ScrollBar.getThumbTrackBounds()</code>.
+    </td> 
+  </tr>
+  <tr>
+    <td colspan="2"><hr />
+    </td>
+  </tr>
+
+  <tr> 
+    <td width="30%" valign="top" align="left">
+      <b>State mask for Selection events</b>
+    </td>
+    <td width="70%" valign="top">
+	The stateMask is now set in Selection and DefaultSelection events for all native controls.
+    </td> 
+  </tr>
+  <tr>
+    <td colspan="2"><hr />
+    </td>
+  </tr>
+
+  <tr> 
+    <td width="30%" valign="top" align="left">
+      <b>Orientation event</b>
+    </td>
+    <td width="70%" valign="top">
+	A new event has been added to Text, Combo, and StyledText. It is sent when the writing direction is changed via keyboard shortcut.
+        See <code>SWT.OrientationChanged</code>
+    </td> 
+  </tr>
+  <tr>
+    <td colspan="2"><hr />
+    </td>
+  </tr>
+  
+  <tr> 
+    <td width="30%" valign="top" align="left"><b>Browser.setUrl() can specify post data and headers</b></td>
+    <td width="70%" valign="top">New Browser API <code>setUrl(String url, String postData, String[] headers)</code> allows clients
+      to include post data and add/override header values when initiating HTTP requests.  See
+      <a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet330.java">Snippet 330</a>.
+    </td> 
+  </tr>
+  <tr> 
+    <td colspan="2"> <hr /> </td>
+  </tr>
+</table>
+
+
+<h2><font face="Verdana"><a name=m4>Milestone M4</a></font></h2>
+
+<table border="0" width="80%" cellpadding="10" cellspacing="0">
+  <tr> 
+    <td colspan="2"> <hr> </td>
+  </tr>
+ <tr> 
+    <td width="30%" valign="top" align="left">
+      <b>SWT for PowerPC 64</b>
+    </td>
+    <td width="70%" valign="top">
+     PowerPC 64 has joined the lineup of supported configurations for which SWT and Eclipse are routinely built.
+    </td> 
+  </tr>
+  <tr>
+    <td colspan="2"><hr />
+    </td>
+  </tr>
+
+  <tr> 
+    <td width="30%" valign="top" align="left">
+      <b>Wrap indent in StyledText</b>
+    </td>
+    <td width="70%" valign="top">
+      StyledText and TextLayout now offer API to allow the application to control the amount of indent space for wrapped lines.
+      See <a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet331.java">Snippet 331</a>.
+      <p><img src="images/wrapindent.PNG" alt="Wrap Indent"></p>
+    </td> 
+  </tr>
+  <tr>
+    <td colspan="2"><hr />
+    </td>
+  </tr>
+
+  <tr> 
+    <td width="30%" valign="top" align="left">
+      <b>Improved bidi segments support</b>
+    </td>
+    <td width="70%" valign="top">
+      The bidi segments support in StyledText and TextLayout was changed to allow the application to specify which Unicode Control Characters to use in the segments boundaries.
+      See <a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet332.java">Snippet 332</a>.
+      <p><img src="images/segmentsChars.PNG" alt="Improved Bidi Segments support"></p>
+    </td> 
+
+  </tr>
+  <tr>
+    <td colspan="2"><hr />
+    </td>
+  </tr>
+
+  <tr> 
+    <td width="30%" valign="top" align="left">
+      <b>Right-to-Left text support on Cocoa</b>
+    </td>
+    <td width="70%" valign="top">
+      On Cocoa, setting the <code>SWT.RIGHT_TO_LEFT</code> flag changes the default text reading direction to right to left. 
+      <p><img src="images/cocoartl.PNG" alt="Right-to-Left text support on Cocoa"></p>
+    </td> 
+  </tr>
+  <tr>
+    <td colspan="2"><hr />
+    </td>
+  </tr>
+
+  <tr> 
+    <td width="30%" valign="top" align="left">
+      <b>Skin engine support</b>
+    </td>
+    <td width="70%" valign="top">
+      New API added to allow CSS engines to skin widgets at the appropriate time (See <code>SWT.Skin</code> and <code>Widget#reskin(int)</code>). For more info see <a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet333.java">Snippet 333</a>. 
+
+    </td> 
+  </tr>
+  <tr>
+    <td colspan="2"><hr />
+    </td>
+  </tr>
+
+  <tr> 
+    <td width="30%" valign="top" align="left">
+      <b>New layout API</b>
+    </td>
+    <td width="70%" valign="top">
+	New API added to <code>Composite</code> to support automatic deferred layout.
+        See <code>Composite#layout(Control[], int)</code>.
+    </td> 
+  </tr>
+  <tr>
+    <td colspan="2"><hr />
+    </td>
+  </tr>
+  
+  <tr> 
+    <td width="30%" valign="top" align="left">
+      <b>Browser.setText() can restrict content permissions</b>
+    </td>
+    <td width="70%" valign="top">
+        New Browser API <code>setText(String html, boolean trusted)</code> allows clients to restrict the permissions
+        that are given to Browser content that is set from a String.  Restricting permissions is suggested when the
+        source of the content is not trusted.
+    </td> 
+  </tr>
+  <tr>
+    <td colspan="2"><hr />
+    </td>
+  </tr>
+</table>
+
+<h2><font face="Verdana"><a name=m5>Milestone M5</a></font></h2>
+
+<table border="0" width="80%" cellpadding="10" cellspacing="0">
+  <tr> 
+    <td colspan="2"> <hr> </td>
+  </tr>
+ <tr> 
+    <td width="30%" valign="top" align="left">
+      <b>Accessibility upgrade (preview)</b>
+    </td>
+    <td width="70%" valign="top">
+    <p>SWT Accessibility has new API for making applications more accessible to Assistive Technology products such as screen readers. Note that this API is still early access. <a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet334.java">Snippet 334</a> shows a simple custom text control with enhanced text accessibility.</p>
+</td> 
+  </tr>
+  <tr>
+    <td colspan="2"><hr />
+    </td>
+  </tr>
+
+  <tr> 
+    <td width="30%" valign="top" align="left">
+      <b>SWT.OpenDoc Event</b>
+    </td>
+    <td width="70%" valign="top">
+    <p>A new event type has been added to SWT to notify applications that a document should be opened. Listeners for OpenDoc events can be added to a &nbsp;Display.</p>
+    <p>Support has also been added to the Equinox launcher, and the Eclipse workbench. Users are now able to associate file types to Eclipse and have Eclipse launched when they open a file of an associated type.</p> 
+    </td> 
+  </tr>
+  <tr>
+    <td colspan="2"><hr />
+    </td>
+  </tr>
+
+ <tr> 
+    <td width="30%" valign="top" align="left">
+      <b>Program working directory</b>
+    </td>
+    <td width="70%" valign="top">
+    <p>New API has been added to Program to allow the working directory to be specified when launching an executable. See <code>Program.launch(String fileName, String workingDir)</code> for more details.</p> 
+    </td> 
+  </tr>
+  <tr>
+    <td colspan="2"><hr />
+    </td>
+  </tr>
+ 
+ <tr> 
+    <td width="30%" valign="top" align="left">
+      <b>XULRunner 1.9.2 support</b>
+    </td>
+    <td width="70%" valign="top">
+    <p>The Browser now has full support for the recent release of XULRunner 1.9.2.</p>
+    </td> 
+  </tr>
+  <tr>
+    <td colspan="2"><hr />
+    </td>
+  </tr> 
+</table>
+
+<h2><font face="Verdana"><a name=m6>Milestone M6</a></font></h2>
+
+<table border="0" width="80%" cellpadding="10" cellspacing="0">
+  <tr> 
+    <td colspan="2"> <hr> </td>
+  </tr>
+
+  <tr> 
+    <td width="30%" valign="top" align="left">
+      <b>TaskItem Overlay Image</b>
+    </td>
+    <td width="70%" valign="top">
+      <p>The new API <code>TaskItem#setOverlayImage(Image)</code> allows clients to set an image to be displayed on top of application button in the taskbar.
+      See <a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet336.java">Snippet 336</a> for an example.
+      </p>
+      <p><img src="images/overlayimage.png" alt="Overlay Image"></p>
+    </td> 
+  </tr>
+  <tr>
+    <td colspan="2"><hr />
+    </td>
+  </tr>
+
+
+
+  <tr> 
+    <td width="30%" valign="top" align="left">
+      <b>TaskItem Overlay Text</b>
+    </td>
+    <td width="70%" valign="top">
+      <p>The new API <code>TaskItem#setOverlayText(String)</code> allows clients to set a short text to be displayed on top of application button in the taskbar.
+      See <a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet336.java">Snippet 336</a> for an example. 
+      </p>
+      <p><img src="images/overlaytext.png" alt="Overlay Text"></p>
+    </td> 
+  </tr>
+  <tr>
+    <td colspan="2"><hr />
+    </td>
+  </tr>
+
+  <tr> 
+    <td width="30%" valign="top" align="left">
+      <b>TaskItem Progress</b>
+    </td>
+    <td width="70%" valign="top">
+      <p>The new APIs <code>TaskItem#setProgress(int)</code> and <code>TaskItem#setProgressState(int)</code> allows clients to show progress indication in the application button in the taskbar.
+      See <a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet336.java">Snippet 336</a> for an example.
+      </p>
+      <p><img src="images/progress.png" alt="Progress"></p>
+    </td> 
+  </tr>
+  <tr>
+    <td colspan="2"><hr />
+    </td>
+  </tr>
+
+  <tr> 
+    <td width="30%" valign="top" align="left">
+      <b>TaskItem Menu</b>
+    </td>
+    <td width="70%" valign="top">
+      <p>The new API <code>TaskItem#setMenu(Menu)</code> allows clients to specify a menu for the application button in the taskbar.
+      </p>
+      Running on Windows 7:<br> 
+     <p><img src="images/menu-win32.png" alt="Menu on Windows"></p>
+      Running on Mac OS X:<br> 
+     <p><img src="images/menu-mac.png" alt="Menu on Mac"></p>
+    </td> 
+  </tr>
+  <tr>
+    <td colspan="2"><hr />
+    </td>
+  </tr>
+
+  <tr> 
+    <td width="30%" valign="top" align="left">
+      <b>CTabFolder Renderer</b>
+    </td>
+    <td width="70%" valign="top">
+      <p>CTabFolder has been improved and now allows clients to change its look by implementing their own renderers.
+      </p>
+	<p><img src="images/newctab.png" alt="New CTabFolder"></p>
+    </td> 
+  </tr>
+  <tr>
+    <td colspan="2"><hr />
+    </td>
+  </tr>
+
+  <tr> 
+    <td width="30%" valign="top" align="left">
+      <b>Gradients on CTabFolder unselected tabs</b>
+    </td>
+    <td width="70%" valign="top">
+      <p>New API has been added to CTabFolder to allow a gradient background on unselected tabs. See 
+<a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet339.java">Snippet 339</a> for more info.
+      </p>
+	<p><img src="images/gradient.png" alt="Gradient on CTabFolder"></p>
+    </td> 
+  </tr>
+  <tr>
+    <td colspan="2"><hr />
+    </td>
+  </tr>
+
+ <tr> 
+    <td width="30%" valign="top" align="left">
+      <b>Accessibility</b>
+    </td>
+    <td width="70%" valign="top">
+      <p>The enhanced Accessibility API on all platforms has been finalized and released.
+      </p>
+    </td> 
+  </tr>
+  <tr>
+    <td colspan="2"><hr />
+    </td>
+  </tr>
+
+  <tr> 	
+    <td width="30%" valign="top" align="left">
+      <b>Custom Traversals</b>
+    </td>
+    <td width="70%" valign="top">
+      <p>New API <code>Control.traverse(int, event)</code> enables clients to request that a customized traversal be performed.  For an example of this see
+        <a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet338.java">Snippet 338</a>.
+      </p>
+    </td> 
+  </tr>
+  <tr>
+    <td colspan="2"><hr />
+    </td>
+  </tr>
+
+  <tr> 
+    <td width="30%" valign="top" align="left">
+      <b>DrawBackground at an offset</b>
+    </td>
+    <td width="70%" valign="top">
+      <p>New API was added in <code>Composite.drawBackground</code> that allows for drawing of a parent background at an offset specified by the child. This
+	is useful for aligning patterns between the parent and child when dealing with non-rectangular shapes. 
+      </p>
+    </td> 
+  </tr>
+  <tr>
+    <td colspan="2"><hr />
+    </td>
+  </tr>
+</table>
+
+<h2><font face="Verdana"><a name=m7>Milestone M7</a></font></h2>
+
+<table border="0" width="80%" cellpadding="10" cellspacing="0">
+  <tr> 
+    <td colspan="2"> <hr> </td>
+  </tr>
+
+    <tr id="webkitgtk">
+    <td width="30%" valign="top" align="left"><b>Browser can use WebKitGTK+</b></td>
+    <td width="70%" valign="top">
+      <p>Linux users can now use WebKitGTK+ instead of Mozilla as the Browser control's native renderer.  See
+      <a href="http://www.eclipse.org/swt/faq.php#browserwebkitgtk">Can the Browser use the WebKit renderer on GTK?</a>.
+      </p>
+      <p><img src="images/webkitgtk.png" alt="WebKitGTK+ Image"/></p>
+	</td>
+  </tr>
+   <tr>
+    <td colspan="2"><hr />
+    </td>
+  </tr>
+</table>
+
+</body>
+</html>

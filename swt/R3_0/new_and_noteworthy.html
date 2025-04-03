@@ -1,0 +1,591 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="en-us">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>Eclipse 3.0 Milestone New and Noteworthy Items - SWT</title>
+</head>
+
+<body>
+
+<h1><font face="Verdana">Eclipse 3.0 - New and Noteworthy in SWT</font></h1>
+
+<ul>
+	<li><a href="#m1">Milestone M1</a></li>
+	<li><a href="#m2">Milestone M2</a></li>
+	<li><a href="#m3">Milestone M3</a></li>
+	<li><a href="#m4">Milestone M4</a></li>
+	<li><a href="#m5">Milestone M5</a></li>
+	<li><a href="#m6">Milestone M6</a></li>
+	<li><a href="#m7">Milestone M7</a></li>
+	<li><a href="#m8">Milestone M8</a></li>
+	<li><a href="#m9">Milestone M9</a></li>
+</ul>
+
+<h2><font face="Verdana"><a name=m1>Milestone M1</a></font></h2>
+
+<table border="0" cellpadding="10" cellspacing="0">
+  <tr>
+    <td colspan="2">
+      <hr>
+    </td>
+  </tr>
+  <tr>
+    <td width="30%" valign="top" align="left">
+      <p align="right"><b>Eclipse launcher for Mac
+      OS X</b></p>
+    </td>
+    <td width="70%" valign="top" align="left">The
+      Eclipse Launcher has been ported to Mac OS X.
+      <ul>
+        <li>All Eclipse launcher arguments can be
+          specified via the &quot;Eclipse&quot; section in Eclipse's Info.plist
+          file. Please note that the standard &quot;Java&quot; section in
+          Info.plist is ignored since we are no longer using the
+          JavaApplicationStub. So if you want to run Eclipse on the 1.4.1 VM you
+          will have to specify the path to the 1.4.1 binary with the &quot;-vm&quot;
+          argument and not with the &quot;JVMVersion&quot; tag.</li>
+        <li>When specifying the workspace location
+          via the &quot;-data&quot; argument, you can use tilde expansion as
+          known from /bin/sh. So &quot;-data ~/Documents/workspace&quot; will
+          put the workspace in your Documents folder.</li>
+      </ul>
+      <p><img border="0" src="macosx1.jpg" width="466" height="253"></p>
+      <p><img border="0" src="macosx2.jpg" width="466" height="268"></p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <hr>
+    </td>
+  </tr>
+  <tr>
+    <td width="30%" valign="top" align="left">
+      <p align="right"><b>Other Mac OS X
+      improvements</b></td>
+    <td width="70%" valign="top" align="left">Drag
+      and dropping views and editors now works on the Mac, and UI performance is
+      significantly better thanks to various SWT improvements. (Note that most
+      of these Mac improvements will also be in the upcoming Eclipse 2.1.1
+      maintenance release.)</td>
+  </tr>
+  <tr>
+    <td colspan="2" valign="top" align="left">
+      <hr>
+    </td>
+  </tr>
+  <tr>
+    <td width="30%" valign="top" align="left">
+      <p align="right"><b>SWT support for right to
+      left languages</b></td>
+    <td width="70%" valign="top" align="left">SWT
+      now provides for the mirroring of controls as required by right-to-left
+      languages like Hebrew. The affected SWT API includes Display.map(),
+      SWT.LEFT_TO_RIGHT, SWT.RIGHT_TO_LEFT, SWT.LEAD, SWT.TRAIL, a new GC
+      constructor, and GC.getStyle(). This is implemented on Windows at this
+      point (but not on other window systems).</td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <hr>
+    </td>
+  </tr>
+  <tr>
+    <td width="30%" valign="top" align="left">
+      <p align="right"><b>SWT supports multiple
+      monitors</b></td>
+    <td width="70%" valign="top" align="left">Multiple
+      monitors are now supported by SWT. See the new Monitor class,
+      Display.getMonitors(), and Display.getPrimaryMonitor(). SWT clients should
+      use the new multi-monitor API when positioning and sizing dialogs, menus,
+      etc. This code snippet shows usage: <a href="http://dev.eclipse.org/viewcvs/index.cgi/~checkout~/platform-swt-home/snippits/snippet120.html">
+      center a shell on the primary monitor</a>.</td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <hr>
+    </td>
+  </tr>
+  <tr>
+    <td width="30%" valign="top" align="left">
+      <p align="right"><b>SWT supports color
+      cursors</b></td>
+    <td width="70%" valign="top" align="left">SWT
+      now support color cursors on Windows (on other window systems, the bit
+      depth is reduced internally if necessary). These code snippets show usage:
+      <a href="http://dev.eclipse.org/viewcvs/index.cgi/~checkout~/platform-swt-home/snippits/snippet119.html">create
+      a color cursor from a source and a mask</a>; <a href="http://dev.eclipse.org/viewcvs/index.cgi/~checkout~/platform-swt-home/snippits/snippet118.html">create
+      a color cursor from an image file</a>.</td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <hr>
+    </td>
+  </tr>
+  <tr>
+    <td width="30%" valign="top" align="left">
+      <p align="right"><b>Improved SWT clipboard</b></td>
+    <td width="70%" valign="top" align="left">SWT
+      support for the clipboard has been improved by the addition of way to
+      query whether a data type is available on the clipboard. SWT clients
+      should use this API when deciding to enable or disable a paste menu or
+      button (clients currently use Clipboard.getContent() which is slow and can
+      have negative side effects such as deleting data from the clipboard in a
+      cut operation). This code snippet shows correct usage: 
+      <a href="http://dev.eclipse.org/viewcvs/index.cgi/~checkout~/platform-swt-home/snippits/snippet122.html">
+      enable/disable menu depending on clipboard content availability</a></td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <hr>
+    </td>
+  </tr>
+  <tr>
+    <td width="30%" valign="top" align="left">
+      <p align="right"><b>Added TIFF Image Decoding</b></td>
+    <td width="70%" valign="top" align="left">SWT
+      now supports TIFF image decoding for T4-encoding CCITT T.4 1D.</td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <hr>
+    </td>
+  </tr>
+  <tr>
+    <td width="30%" valign="top" align="left">
+      <p align="right"><b>Added MenuDetect Event</b></td>
+    <td width="70%" valign="top" align="left">You can now use the
+    SWT MenuDetect event to determine when to show a context (pop-up) menu (instead of hooking
+    MouseDown and testing the button). This code snippet shows correct usage: 
+    <a href="http://dev.eclipse.org/viewcvs/index.cgi/~checkout~/platform-swt-home/snippits/snippet131.html">
+	show a popup menu (wait for it to close)</a></td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <hr>
+    </td>
+  </tr>
+</table>
+
+<h2><font face="Verdana"><a name=m2>Milestone M2</a></font></h2>
+
+<table border="0" cellpadding="10" cellspacing="0" width="80%">
+  <tr>
+    <td colspan="2">
+      <hr>
+    </td>
+  </tr>
+  <tr>
+    <td width="30%" valign="top" align="left">
+      <p align="right"><b>Accessibility on GTK</b></td>
+    <td width="70%" valign="top">The SWT Accessibility API is now
+    implemented for GTK using GTK's ATK.</td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <hr>
+    </td>
+  </tr>
+</table>
+
+<h2><font face="Verdana"><a name=m3>Milestone M3</a></font></h2>
+
+<table border="0" cellpadding="10" cellspacing="0" width="80%">
+  <tr>
+    <td colspan="2">
+      <hr>
+    </td>
+  </tr>
+  <tr>
+    <td width="30%" valign="top" align="left">
+      <p align="right"><b>HTML browser widget</b></td>
+    <td width="70%" valign="top">SWT has a new
+      browser widget that can display HTML documents. This native widget is
+      currently supported on Windows (using Internet Explorer 5.0 and above) and
+      Linux GTK (using Mozilla 1.4 GTK2).
+      <p><img src="browser-windows.gif" title alt="SWT window containing new browser widget" style="width: 467px; height: 271px;" width="467" height="271"></p>
+      <p>See the <a href="http://dev.eclipse.org/viewcvs/index.cgi/~checkout~/platform-swt-home/snippits/snippet128.html">SWT
+      browser snippet</a> and the <a href="http://dev.eclipse.org/viewcvs/index.cgi/~checkout~/platform-swt-home/faq.html#whatisbrowser">SWT
+      FAQ</a> for details. Please be aware that the Browser API is still in flux
+      and may change before the end of Eclipse 3.0.</td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <hr>
+    </td>
+  </tr>
+  <tr>
+    <td width="30%" valign="top" align="left">
+      <p align="right"><b>Tables with colored
+      cells</b></td>
+    <td width="70%" valign="top">The SWT table
+      widget now supports setting the foreground and background colors of
+      individual cells.
+      <p><img src="table.gif" align="CENTER" alt="table widget with multi-colored cells" width="371" height="237"></p>
+      <p>See the <a href="http://dev.eclipse.org/viewcvs/index.cgi/~checkout~/platform-swt-home/snippits/snippet129.html">SWT
+      colored table snippet</a> to find out how.</p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <hr>
+    </td>
+  </tr>
+</table>
+
+<h2><font face="Verdana"><a name=m4>Milestone M4</a></font></h2>
+
+<table border="0" cellpadding="10" cellspacing="0" width="80%">
+  <tr>
+    <td colspan="2">
+      <hr>
+    </td>
+  </tr>
+  <tr>
+    <td width="30%" valign="top" align="left">
+      <p align="right"><b>Non-rectangular windows</b></td>
+    <td width="70%" valign="top">
+      <p>An SWT shell can now have an irregular
+      shape defined by a region created from an arbitrary combination of
+      rectangles and polygons.</p>
+      <p><img src="non-rect.gif" title alt="Irregularly shaped SWT window" width="394" height="242"></p>
+      <p>See the <a href="http://dev.eclipse.org/viewcvs/index.cgi/~checkout~/platform-swt-home/snippits/snippet134.html">SWT
+      non-rectangular window snippet</a> for details.</p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <hr>
+    </td>
+  </tr>
+  <tr>
+    <td width="30%" valign="top" align="left">
+      <p align="right"><b>Accessibility API for
+      custom text widgets</b></td>
+    <td width="70%" valign="top">
+      <p>SWT custom widgets that provide text
+      editing capability must implement the new AccessibleTextListener to
+      provide caret offset and selection range information. Custom text editor
+      widgets must also notify the screen-reader of text-related events by
+      calling Accessible.textChanged, Accessible.textCaretMoved and
+      Accessible.textSelectionChanged when appropriate. This new accessibility
+      extension is required for proper interaction with the native accessibility
+      story on GTK. See org.eclipse.swt.custom.StyledText for an example
+      implementation.</p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <hr>
+    </td>
+  </tr>
+</table>
+
+<h2><font face="Verdana"><a name=m5>Milestone M5</a></font></h2>
+
+<table border="0" cellpadding="10" cellspacing="0" width="80%">
+  <tr>
+    <td colspan="2">
+      <hr>
+    </td>
+  </tr>
+  <tr>
+    <td align="left" valign="top" width="30%">
+      <p align="right"><b>Printing for Mac OS X</b></p>
+    </td>
+    <td width="70%" valign="top">SWT for Mac OS X now supports the Quartz-based
+      Mac OS X Printing Manager. This allows SWT applications to print
+      high-quality output on all classes of raster and PostScript printers, to
+      generate PDF files, or to use the standard previewer.
+      <p><img src="macosx-printing.gif" alt="Print preview" width="466" height="300"></p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <hr>
+    </td>
+  </tr>
+  <tr>
+    <td align="left" valign="top" width="30%">
+      <p align="right"><b>Improved native tab folder</b></p>
+    </td>
+    <td width="70%" valign="top">The SWT native tab folder (<code>TabFolder</code>)
+      can now be created with tabs located on either the bottom or the top, just
+      like the emulated tab folder (<code>CTabFolder</code>).</td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <hr>
+    </td>
+  </tr>
+  <tr>
+    <td align="left" valign="top" width="30%">
+      <p align="right"><b>Improved keyboard support</b></p>
+    </td>
+    <td width="70%" valign="top">SWT keyboard support has been improved. There
+      are now key events for keys like Caps Lock, Scroll Lock, and Pause. And it
+      is now possible to distinguish key events coming from the numeric keypad.</td>
+  </tr>
+  <tr>
+    <td colspan="2" height="16">
+      <hr>
+    </td>
+  </tr>
+</table>
+
+<h2><font face="Verdana"><a name=m6>Milestone M6</a></font></h2>
+
+<table border="0" cellpadding="10" cellspacing="0" width="80%">
+  <tr>
+    <td colspan="2">
+      <hr>
+    </td>
+  </tr>
+  <tr>
+    <td width="30%" valign="top" align="left">
+      <p align="right"><b>Embedding Swing widgets inside SWT widgets</b></td>
+    <td width="70%" valign="top" align="left">SWT now supports embedding
+      Swing/AWT widgets inside SWT widgets. Until now, this support was internal
+      and only worked on Windows. It is now working on Windows with JDK 1.4 and
+      above, and on GTK and Motif with recent early access versions of Sun JDK
+      1.5.
+      <p>This screen shot shows an SWT Shell containing a Swing JTable to the
+      right of an SWT Tree:</p>
+      <p><img src="swt-awt.gif" width="463" height="343"></p>
+      <p>(<a href="http://dev.eclipse.org/viewcvs/index.cgi/~checkout~/platform-swt-home/snippits/snippet135.html">SWT
+      snippet</a> showing how this screen shot was created.)</p>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <hr>
+    </td>
+  </tr>
+  <tr>
+    <td width="30%" valign="top" align="left">
+      <p align="right"><b>Multiple sizes of shell images</b></td>
+    <td width="70%" valign="top" align="left">Images are displayed by the window
+      manager in the trim as well as other locations like the program switcher
+      (Alt+Tab) and the task bar. Depending where a shell's image is displayed,
+      the platform chooses the image with the best size. SWT now allows the
+      application to provide images of varying sizes for the operating system to
+      choose from.
+      <p><img src="shell-images.gif" width="420" height="135"></p>
+      <p>(<a href="http://dev.eclipse.org/viewcvs/index.cgi/~checkout~/platform-swt-home/snippits/snippet138.html">SWT
+      snippet</a> showing how to do this.)</td>
+  </tr>
+  <tr>
+    <td colspan="2"></td>
+  </tr>
+</table>
+
+<h2><font face="Verdana"><a name=m7>Milestone M7</a></font></h2>
+
+<table border="0" cellpadding="10" cellspacing="0" width="80%">
+  <tr>
+    <td colspan="2">
+      <hr>
+    </td>
+  </tr>
+  <tr>
+    <td width="30%" valign="top" align="left">
+      <p align="right"><b>Table and Tree widget improvements</b></td>
+    <td width="70%" valign="top">The SWT <code>Table</code> widget now allows a
+      column to be scrolled into view by calling <code>Table.showColumn(TableColumn)</code>.
+      <code>TableCursor</code> uses this new method to ensure that the current
+      cell is scrolled into view.
+      <p>Also, both the <code>Table</code> and <code>Tree</code> widgets now let
+      you set the font for a row or an individual cell.</p>
+      <p><img src="table-tree.gif" align="CENTER" alt="table and tree widget with multiple fonts" width="457" height="196"></p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <hr>
+    </td>
+  </tr>
+  <tr>
+    <td width="30%" valign="top" align="left">
+      <p align="right"><b>Browser widget </b><b>improvements</b></td>
+    <td width="70%" valign="top">The SWT <code>Browser</code> widget has new
+      methods to determine if the receiver can navigate backward or forward. See
+      <code>Browser.isBackEnabled()</code> and <code>Browser.isForwardEnabled()</code>.
+      <p>Also, it now provides notification when the title of the document
+      changes. See <code>Browser.addTitleListener(TitleListener)</code>.</p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <hr>
+    </td>
+  </tr>
+</table>
+
+<h2><font face="Verdana"><a name=m8>Milestone M8</a></font></h2>
+
+<table border="0" cellpadding="10" cellspacing="0" width="80%">
+  <tr>
+    <td colspan="2">
+      <hr>
+    </td>
+  </tr>
+   <tr>
+    <td width="30%" valign="top" align="left">
+      <p align="right"><b>New Look for CTabFolder</b></td>
+    <td width="70%">
+    <p>CTabFolder now supports a simple look (default) and a curved look.</p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <hr>
+    </td>
+  </tr>
+   <tr>
+    <td width="30%" valign="top" align="left">
+      <p align="right"><b>Virtual Table</b></td>
+    <td width="70%">
+    <p>Table now supports the SWT.VIRTUAL style.  This allows you to create tables with large
+    amounts of data quickly.  When TableItems are needed, they are created on-demand.
+    (Note: The API to do this may change between M8 and M9).</p>
+    <p><img src="virtual-table.gif" align="CENTER" alt="A Table with 1,000,000 items"></p>
+    <p>(<a href="http://dev.eclipse.org/viewcvs/index.cgi/~checkout~/platform-swt-home/snippits/snippet144.html">SWT
+    snippet</a> showing how to do this)</p>
+    </td>
+  </tr>
+    <td colspan="2">
+      <hr>
+    </td>
+  </tr>
+  <tr>
+    <td width="30%" valign="top" align="left">
+      <p align="right"><b>Tray & TrayItem</b></td>
+    <td width="70%">
+    <p>You can now place icons in the System Tray.  The System Tray is usually a row of small
+    icons located somewhere on the Task Bar on some operating systems.</p>
+    <p><img src="tray-item.gif" align="CENTER" alt="An SWT TrayItem in the Windows XP system tray"></p>
+    <p>(<a href="http://dev.eclipse.org/viewcvs/index.cgi/~checkout~/platform-swt-home/snippits/snippet143.html">SWT
+	snippet</a> showing how to do this)</p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <hr>
+    </td>
+  </tr>
+  <tr>
+    <td width="30%" valign="top" align="left">
+      <p align="right"><b>TextLayout & TextStyle</b></td>
+    <td width="70%">
+    <p>StyledText has been rewritten to use the new classes TextLayout & TextStyle.  This means that
+    it will now correctly render complex scripts, BIDI, and baselines for bold fonts.  TextLayout styling
+    includes font, color, line wrap, alignment, line spacing, hit test, measuring, caret navigation,
+    bidi reordering, and more.  The TextLayout classes are available for general use however the API
+    will change between M8 and M9.</p>
+    <p><img src="text-layout.gif" align="CENTER" alt="Draw internationalized styled text on a shell"></p>
+    <p>(<a href="http://dev.eclipse.org/viewcvs/index.cgi/~checkout~/platform-swt-home/snippits/snippet145.html">SWT
+	snippet</a> showing how to do this)</p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <hr>
+    </td>
+  </tr>
+  <tr>
+    <td width="30%" valign="top" align="left">
+      <p align="right"><b>Display.post(Event)</b></td>
+    <td width="70%">
+    <p>SWT now lets you generate low level keyboard and mouse events to enable automated
+    UI testing tools.
+    <p><img src="post-mouse.gif" align="CENTER" alt="Post a mouse event to a Button"></p>
+    <p>(<a href="http://dev.eclipse.org/viewcvs/index.cgi/~checkout~/platform-swt-home/snippits/snippet142.html">SWT
+    snippet</a> showing how to post mouse events)</p>
+    <p><img src="post-keys.gif" align="CENTER" alt="Post key events to a Text widget"></p>
+    <p>(<a href="http://dev.eclipse.org/viewcvs/index.cgi/~checkout~/platform-swt-home/snippits/snippet146.html">SWT
+    snippet</a> showing how to post key events)</p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <hr>
+    </td>
+  </tr>
+  <tr>
+    <td width="30%" valign="top" align="left">
+      <p align="right"><b>64 bit Linux GTK port (AMD)</b></td>
+    <td width="70%">
+    <p>SWT now runs on 64 bit AMD processors running GTK Linux.
+    <br>Eclipse on 64 bit GTK Linux is not yet production quality, and the Browser widget is not implemented,
+    however we would like people to go ahead and use this platform and report bugs against it.</p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <hr>
+    </td>
+  </tr>
+ </table>
+  
+  <h2><font face="Verdana"><a name=m9>Milestone M9</a></font></h2>
+
+<table border="0" cellpadding="10" cellspacing="0" width="80%">
+  <tr>
+    <td colspan="2">
+      <hr>
+    </td>
+  </tr>
+  
+   <tr>
+    <td width="30%" valign="top" align="left">
+      <p align="right"><b>Browser widget on Mac OS X</b></td>
+    <td width="70%">
+    <p>The SWT Browser widget is now available on the Mac. It uses Safari, the Mac OS X default web browser.</p>
+    <p><img src="safari.gif" align="CENTER" alt="Safari browser embedded in SWT application"></p>
+    </td>
+  </tr>
+  
+  <table border="0" cellpadding="10" cellspacing="0" width="80%">
+  <tr>
+    <td colspan="2">
+      <hr>
+    </td>
+  </tr>
+  
+  <tr>
+    <td width="30%" valign="top" align="left">
+      <p align="right"><b>Italic Fonts in StyledText</b></td>
+    <td width="70%">
+    <p>The SWT StyledText widget now supports italic fonts.</p>
+    <p><img src="italic.gif" align="CENTER" alt="StyledText displaying italic text"></p>
+    </td>
+  </tr>
+  
+  <table border="0" cellpadding="10" cellspacing="0" width="80%">
+  <tr>
+    <td colspan="2">
+      <hr>
+    </td>
+  </tr>
+  
+   <tr>
+    <td width="30%" valign="top" align="left">
+      <p align="right"><b>System Images and System Cursors</b></td>
+    <td width="70%">
+    <p>You can now access the native images that appear in message dialogs and use them in your own dialogs.</p>
+    <p><img src="system_image.gif" align="CENTER" alt="System images as they appear on Windows XP"></p>
+    </td>
+  </tr>
+  
+  <table border="0" cellpadding="10" cellspacing="0" width="80%">
+  <tr>
+    <td colspan="2">
+      <hr>
+    </td>
+  </tr>
+</table>
+
+</body>
+
+</html>

@@ -1,0 +1,603 @@
+{ "commiters" : [ { "email" : "Silenio_Quarti@ca.ibm.com",
+        "id" : "SSQ",
+        "name" : "Silenio"
+      },
+      { "email" : "Carolyn_MacLeod@ca.ibm.com",
+        "id" : "CM",
+        "name" : "Carolyn"
+      },
+      { "email" : "grant_gayed@ca.ibm.com",
+        "id" : "GG",
+        "name" : "Grant"
+      },
+      { "email" : "gheorghe@ca.ibm.com",
+        "id" : "BG",
+        "name" : "Bogdan"
+      },
+      { "email" : "pinnamur@in.ibm.com",
+        "id" : "PV",
+        "name" : "Praveen"
+      },
+      { "email" : "felipe_heidrich@ca.ibm.com",
+        "id" : "FH",
+        "name" : "Felipe"
+      },
+      { "email" : "s.kovatch@us.ibm.com",
+        "id" : "SK",
+        "name" : "Scott"
+      },
+      { "email" : "lshanmug@in.ibm.com",
+        "id" : "LS",
+        "name" : "Lakshmi"
+      },
+      { "email" : "rdowdall@qnx.com",
+        "id" : "RD",
+        "name" : "Rodney"
+      }
+    ],
+  "components" : [ { "OS" : [ { "name" : "GTK",
+              "owner" : "SSQ",
+              "second" : "FH"
+            },
+            { "name" : "Carbon",
+              "owner" : "SSQ",
+              "second" : "FH"
+            },
+            { "name" : "Cocoa",
+              "owner" : "SSQ",
+              "second" : "FH"
+            },
+            { "name" : "Motif",
+              "owner" : "SSQ",
+              "second" : "FH"
+            },
+            { "name" : "Photon",
+              "owner" : "RD",
+              "second" : "SSQ"
+            },
+            { "name" : "Win32",
+              "owner" : "SSQ",
+              "second" : "FH"
+            },
+            { "name" : "WPF",
+              "owner" : "SSQ",
+              "second" : "FH"
+            }
+          ],
+        "component" : "PI",
+        "description" : "All bugs dealing with the native library interfaces"
+      },
+      { "OS" : [ { "name" : "GTK",
+              "owner" : "SSQ",
+              "second" : "BG"
+            },
+            { "name" : "Carbon",
+              "owner" : "SSQ",
+              "second" : "FH"
+            },
+            { "name" : "Cocoa",
+              "owner" : "SK",
+              "second" : "SSQ"
+            },
+            { "name" : "Motif",
+              "owner" : "SSQ",
+              "second" : "FH"
+            },
+            { "name" : "Photon",
+              "owner" : "RD",
+              "second" : "SSQ"
+            },
+            { "name" : "Win32",
+              "owner" : "SSQ",
+              "second" : "FH"
+            },
+            { "name" : "WPF",
+              "owner" : "FH",
+              "second" : "SSQ"
+            }
+          ],
+        "component" : "Graphics",
+        "description" : "All bugs dealing with graphics"
+      },
+      { "OS" : [ { "name" : "GTK",
+              "owner" : "SSQ",
+              "second" : "BG"
+            },
+            { "name" : "Carbon",
+              "owner" : "SSQ",
+              "second" : "SK"
+            },
+            { "name" : "Cocoa",
+              "owner" : "SSQ",
+              "second" : "SK"
+            },
+            { "name" : "Motif",
+              "owner" : "SSQ",
+              "second" : "BG"
+            },
+            { "name" : "Photon",
+              "owner" : "RD",
+              "second" : "SSQ"
+            },
+            { "name" : "Win32",
+              "owner" : "SSQ",
+              "second" : "FH"
+            },
+            { "name" : "WPF",
+              "owner" : "SSQ",
+              "second" : "FH"
+            }
+          ],
+        "component" : "Theme",
+        "description" : "Theme issues"
+      },
+      { "OS" : [ { "name" : "GTK",
+              "owner" : "CM",
+              "second" : "GG"
+            },
+            { "name" : "Carbon",
+              "owner" : "CM",
+              "second" : "SSQ"
+            },
+            { "name" : "Cocoa",
+              "owner" : "SK",
+              "second" : "CM"
+            },
+            { "name" : "Motif",
+              "owner" : "CM",
+              "second" : "SSQ"
+            },
+            { "name" : "Photon",
+              "owner" : "RD",
+              "second" : "CM"
+            },
+            { "name" : "Win32",
+              "owner" : "CM",
+              "second" : "GG"
+            },
+            { "name" : "WPF",
+              "owner" : "CM",
+              "second" : "FH"
+            }
+          ],
+        "component" : "Accessibility",
+        "description" : "Accessibility issues"
+      },
+      { "OS" : [ { "name" : "GTK",
+              "owner" : "CM",
+              "second" : "FH"
+            },
+            { "name" : "Carbon",
+              "owner" : "CM",
+              "second" : "SSQ"
+            },
+            { "name" : "Cocoa",
+              "owner" : "SK",
+              "second" : "SSQ"
+            },
+            { "name" : "Motif",
+              "owner" : "CM",
+              "second" : "SSQ"
+            },
+            { "name" : "Photon",
+              "owner" : "RD",
+              "second" : "CM"
+            },
+            { "name" : "Win32",
+              "owner" : "CM",
+              "second" : "SSQ"
+            },
+            { "name" : "WPF",
+              "owner" : "CM",
+              "second" : "FH"
+            }
+          ],
+        "component" : "Printing",
+        "description" : "Printing issues"
+      },
+      { "OS" : [ { "name" : "GTK",
+              "owner" : "PV",
+              "second" : "BG"
+            },
+            { "name" : "Carbon",
+              "owner" : "LS",
+              "second" : "SSQ"
+            },
+            { "name" : "Cocoa",
+              "owner" : "LS",
+              "second" : "SK"
+            },
+            { "name" : "Motif",
+              "owner" : "PV",
+              "second" : "SSQ"
+            },
+            { "name" : "Photon",
+              "owner" : "RD",
+              "second" : "SSQ"
+            },
+            { "name" : "Win32",
+              "owner" : "PV",
+              "second" : "FH"
+            },
+            { "name" : "WPF",
+              "owner" : "PV",
+              "second" : "FH"
+            }
+          ],
+        "component" : "DND",
+        "description" : "Drag and Drop issues"
+      },
+       { "OS" : [ { "name" : "GTK",
+              "owner" : "PV",
+              "second" : "BG"
+            },
+            { "name" : "Carbon",
+              "owner" : "LS",
+              "second" : "SSQ"
+            },
+            { "name" : "Cocoa",
+              "owner" : "LS",
+              "second" : "SK"
+            },
+            { "name" : "Motif",
+              "owner" : "PV",
+              "second" : "SSQ"
+            },
+            { "name" : "Photon",
+              "owner" : "RD",
+              "second" : "SSQ"
+            },
+            { "name" : "Win32",
+              "owner" : "PV",
+              "second" : "FH"
+            },
+            { "name" : "WPF",
+              "owner" : "PV",
+              "second" : "FH"
+            }
+          ],
+        "component" : "Clipboard",
+        "description" : "Clipboard issues"
+      },
+      { "OS" : [ { "name" : "GTK",
+              "owner" : "BG",
+              "second" : "PV"
+            },
+            { "name" : "Carbon",
+              "owner" : "SSQ",
+              "second" : "LS"
+            },
+            { "name" : "Cocoa",
+              "owner" : "SK",
+              "second" : "SSQ"
+            },
+            { "name" : "Motif",
+              "owner" : "BG",
+              "second" : "SSQ"
+            },
+            { "name" : "Photon",
+              "owner" : "RD",
+              "second" : "SSQ"
+            },
+            { "name" : "Win32",
+              "owner" : "FH",
+              "second" : "SSQ"
+            },
+            { "name" : "WPF",
+              "owner" : "FH",
+              "second" : "SSQ"
+            }
+          ],
+        "component" : "Widgets",
+        "description" : "Bugs concerning widget appearance, behavior etc."
+      },
+      { "OS" : [ { "name" : "All",
+              "owner" : "LS",
+              "second" : "CM"
+            } ],
+        "component" : "Custom Widgets",
+        "description" : "Bugs concerning custom widget appearance, behavior etc."
+      },
+      { "OS" : [ { "name" : "All",
+              "owner" : "FH",
+              "second" : "SSQ"
+            } ],
+        "component" : "WinCE",
+        "description" : "Bugs concerning the WinCE platform"
+      },
+      { "OS" : [ { "name" : "GTK",
+              "owner" : "BG",
+              "second" : "SSQ"
+            },
+            { "name" : "Carbon",
+              "owner" : "SSQ",
+              "second" : "SK"
+            },
+            { "name" : "Cocoa",
+              "owner" : "SK",
+              "second" : "SSQ"
+            },
+            { "name" : "Motif",
+              "owner" : "BG",
+              "second" : "SSQ"
+            },
+            { "name" : "Photon",
+              "owner" : "RD",
+              "second" : "SSQ"
+            },
+            { "name" : "Win32",
+              "owner" : "FH",
+              "second" : "SSQ"
+            },
+            { "name" : "WPF",
+              "owner" : "FH",
+              "second" : "SSQ"
+            }
+          ],
+        "component" : "OpenGL",
+        "description" : "OpenGL issues"
+      },
+      { "OS" : [ { "name" : "GTK",
+              "owner" : "PV",
+              "second" : "BG"
+            },
+            { "name" : "Carbon",
+              "owner" : "LS",
+              "second" : "SSQ"
+            },
+            { "name" : "Cocoa",
+              "owner" : "LS",
+              "second" : "SK"
+            },
+            { "name" : "Motif",
+              "owner" : "PV",
+              "second" : "BG"
+            },
+            { "name" : "Photon",
+              "owner" : "RD",
+              "second" : "SSQ"
+            },
+            { "name" : "Win32",
+              "owner" : "PV",
+              "second" : "FH"
+            },
+            { "name" : "WPF",
+              "owner" : "FH",
+              "second" : "SSQ"
+            }
+          ],
+        "component" : "Program",
+        "description" : "Any bug that has to do with the Program class"
+      },
+      { "OS" : [ { "name" : "All",
+              "owner" : "PV",
+              "second" : "FH"
+            } ],
+        "component" : "OLE",
+        "description" : "OLE issues"
+      },
+       { "OS" : [ { "name" : "All",
+              "owner" : "FH",
+              "second" : "SSQ"
+            } ],
+        "component" : "Bidi",
+        "description" : "Bidi issues"
+      },
+      { "OS" : [ { "name" : "GTK",
+              "owner" : "GG",
+              "second" : "SSQ"
+            },
+            { "name" : "Carbon",
+              "owner" : "GG",
+              "second" : "SSQ"
+            },
+            { "name" : "Cocoa",
+              "owner" : "GG",
+              "second" : "SSQ"
+            },
+            { "name" : "Motif",
+              "owner" : "GG",
+              "second" : "SSQ"
+            },
+            { "name" : "Photon",
+              "owner" : "RD",
+              "second" : "GG"
+            },
+            { "name" : "Win32",
+              "owner" : "GG",
+              "second" : "SSQ"
+            },
+            { "name" : "WPF",
+              "owner" : "GG",
+              "second" : "FH"
+            }
+          ],
+        "component" : "Browser",
+        "description" : "Browser issues"
+      },
+      { "OS" : [ { "name" : "GTK",
+              "owner" : "SSQ",
+              "second" : "FH"
+            },
+            { "name" : "Carbon",
+              "owner" : "SK",
+              "second" : "SSQ"
+            },
+            { "name" : "Cocoa",
+              "owner" : "SK",
+              "second" : "SSQ"
+            },
+            { "name" : "Motif",
+              "owner" : "SSQ",
+              "second" : "FH"
+            },
+            { "name" : "Photon",
+              "owner" : "RD",
+              "second" : "SSQ"
+            },
+            { "name" : "Win32",
+              "owner" : "SSQ",
+              "second" : "FH"
+            },
+            { "name" : "WPF",
+              "owner" : "FH",
+              "second" : "SSQ"
+            }
+          ],
+        "component" : "SWT/AWT",
+        "description" : "Any bug that deals with the SWT/AWT class or Swing issues"
+      },
+      { "OS" : [ { "name" : "GTK",
+              "owner" : "FH",
+              "second" : "SSQ"
+            },
+            { "name" : "Carbon",
+              "owner" : "FH",
+              "second" : "SSQ"
+            },
+            { "name" : "Cocoa",
+              "owner" : "FH",
+              "second" : "SK"
+            },
+            { "name" : "Motif",
+              "owner" : "FH",
+              "second" : "SSQ"
+            },
+            { "name" : "Photon",
+              "owner" : "RD",
+              "second" : "SSQ"
+            },
+            { "name" : "Win32",
+              "owner" : "FH",
+              "second" : "SSQ"
+            },
+            { "name" : "WPF",
+              "owner" : "FH",
+              "second" : "SSQ"
+            }
+          ],
+        "component" : "I18N",
+        "description" : "Any internationalization issues"
+      },
+      { "OS" : [ { "name" : "GTK",
+              "owner" : "GG",
+              "second" : "SSQ"
+            },
+            { "name" : "Carbon",
+              "owner" : "GG",
+              "second" : "SSQ"
+            },
+            { "name" : "Cocoa",
+              "owner" : "GG",
+              "second" : "SSQ"
+            },
+            { "name" : "Win32",
+              "owner" : "GG",
+              "second" : "FH"
+            },
+            { "name" : "WPF",
+              "owner" : "GG",
+              "second" : "SSQ"
+            }
+          ],
+        "component" : "64",
+        "description" : "Any issues with 64 bit"
+      },
+      { "OS" : [ { "name" : "All",
+              "owner" : "FH",
+              "second" : "SSQ"
+            } ],
+        "component" : "StyledText",
+        "description" : "All Styled Text issues"
+      },
+      { "OS" : [ { "name" : "All",
+              "owner" : "CM",
+              "second" : "SSQ"
+            } ],
+        "component" : "Image Loading",
+        "description" : "All Image Loading issues"
+      },
+      { "OS" : [ { "name" : "All",
+              "owner" : "CM",
+              "second" : "SSQ"
+            } ],
+        "component" : "Layout",
+        "description" : "All Layout issues"
+      },
+      { "OS" : [ { "name" : "All",
+              "owner" : "CM",
+              "second" : "FH"
+            } ],
+        "component" : "Examples",
+        "description" : "All bugs related to the SWT Examples"
+      },
+      { "OS" : [ { "name" : "All",
+              "owner" : "CM",
+              "second" : "SSQ"
+            } ],
+        "component" : "Snippets",
+        "description" : "All bugs dealing with the SWT snippets"
+      },
+      { "OS" : [ { "name" : "All",
+              "owner" : "CM",
+              "second" : "GG"
+            } ],
+        "component" : "JUnit",
+        "description" : "All bugs that deal with the JUnit tests"
+      }
+    ],
+  "platforms" : [ { "alias" : [ { "name" : "Windows All" },
+            { "name" : "Windows 95" },
+            { "name" : "Windows 98" },
+            { "name" : "Windows 2000" },
+            { "name" : "Windows Server 2003" },
+            { "name" : "Windows Server 2008" },
+            { "name" : "Windows 7" },
+            { "name" : "Windows CE" },
+            { "name" : "Windows ME" },
+            { "name" : "Windows Mobile 2003" },
+            { "name" : "Windows Mobile 5.0" },
+            { "name" : "Windows NT" },
+            { "name" : "Windows XP" },
+            { "name" : "Windows Vista" }
+          ],
+        "name" : "Win32"
+      },
+      { "alias" : [ { "name" : "AIX Motif" },
+            { "name" : "HP-UX" },
+            { "name" : "Linux-Motif" },
+            { "name" : "Solaris-Motif" }
+          ],
+        "name" : "Motif"
+      },
+      { "alias" : [ { "name" : "Linux" },
+            { "name" : "Linux-GTK" },
+            { "name" : "Solaris" },
+            { "name" : "Solaris-GTK" },
+            { "name" : "Unix All" }
+          ],
+        "name" : "GTK"
+      },
+      { "alias" : [ { "name" : "Mac OS X" } ],
+        "name" : "Carbon"
+      },
+      { "alias" : [ { "name" : "Mac OS X - Cocoa" } ],
+        "name" : "Cocoa"
+      },
+      { "alias" : [ { "name" : "QNX-Photon" },
+            { "name" : "Neutrino" }
+          ],
+        "name" : "Photon"
+      },
+      { "alias" : [ { "name" : "Windows Vista-WPF" } ],
+        "name" : "WPF"
+      },
+      { "alias" : [ { "name" : "All" },
+            { "name" : "other" },
+            { "name" : "SymbianOS-Series 80" },
+            { "name" : "SymbianOS S60" }
+          ],
+        "name" : "Win32"
+      }
+    ]
+}

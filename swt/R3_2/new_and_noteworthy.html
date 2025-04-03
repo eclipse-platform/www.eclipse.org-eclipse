@@ -1,0 +1,592 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="en-us">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>Eclipse 3.2 Milestone New and Noteworthy Items - SWT</title>
+</head>
+
+<body>
+
+<h1><font face="Verdana">Eclipse 3.2 - New and Noteworthy in SWT</font></h1>
+
+<ul>
+	<li><a href="#m1">Milestone M1</a></li>
+	<li><a href="#m2">Milestone M2</a></li>
+	<li><a href="#m3">Milestone M3</a></li>
+	<li><a href="#m4">Milestone M4</a></li>
+	<li><a href="#m5">Milestone M5</a></li>
+	<li><a href="#m6">Milestone M6</a></li>
+</ul>
+
+<h2><font face="Verdana"><a name=m1>Milestone M1</a></font></h2>
+
+<p>Download: <a href="http://download.eclipse.org/downloads/drops/S-3.2M1-200508111530/index.php#swt">M1 Build</a> (August 11, 2005)
+<p>Build Notes: <a href="http://download.eclipse.org/downloads/drops/S-3.2M1-200508111530/buildnotes/buildnotes_swt.html">M1 Build Notes</a>
+
+<table border="0" cellpadding="10" cellspacing="0">
+  <tr>
+    <td colspan="2">
+      <hr>
+    </td>
+  </tr>
+  <tr>
+    <td width="30%" valign="top" align="left">
+      <p align="right"><b>Sort Indicator in Table and Tree</b></p>
+    </td>
+    <td width="70%" valign="top" align="left">Table and Tree now support a sort 
+    direction indicator in the header of the column.
+    <p>See the following SWT snippets for examples of 
+     <a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet2.java">sorting by column (simple)</a>
+     and <a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet192.java">sorting by column (virtual table)</a>.
+    <p><img border="0" src="sort.png" width="292" height="331"></p>
+    </td>
+  </tr>
+
+  <tr>
+    <td colspan="2">
+      <hr>
+    </td>
+  </tr>
+  <tr>
+    <td width="30%" valign="top" align="left">
+      <p align="right"><b>Reorderable columns in Tree</b></p>
+    </td>
+    <td width="70%" valign="top" align="left">In Eclipse 3.1, we added the 
+    ability to reorder columns in a Table and now that support has been added to Tree.
+    <p>The display order of columns in a tree can be changed by dragging the column header or  
+    can be set programmatically.
+    <p><img border="0" src="moveable.png" width="387" height="245"></p>
+    <p>For more details see the example 
+    <a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet193.java">snippet</a>.</p>
+    </td>
+  </tr>
+
+  <tr>
+    <td colspan="2">
+      <hr>
+    </td>
+  </tr>
+  <tr>
+    <td width="30%" valign="top" align="left">
+      <p align="right"><b>Improved XP Theme Support</b></p>
+    </td>
+    <td width="70%" valign="top" align="left">
+     <p>On Windows XP, SWT now shows the textured background in tab folders. The 
+     groups, labels, check boxes, etc. are all transparent to this background.  
+     Also, custom widgets, such as StyledText, now show the correct border for 
+	 the prevailing Windows XP theme.
+     <p><img border="0" src="xptheme.png" width="252" height="219"></p>
+     <p>See the 
+     <a href="http://eclipse.org/swt/faq.html#xpthemes">SWT FAQ</a>
+     for instructions on how to run with a Windows XP skin.</p></p>
+    </td>
+  </tr>
+</table>
+
+<h2><font face="Verdana"><a name=m2>Milestone M2</a></font></h2>
+
+<p>Download: <a href="http://download.eclipse.org/downloads/drops/S-3.2M2-200509231000/index.php#swt">M2 Build</a> (September 23, 2005)
+<p>Build Notes: <a href="http://download.eclipse.org/downloads/drops/S-3.2M2-200509231000/buildnotes/buildnotes_swt.html">M2 Build Notes</a>
+
+<table border="0" cellpadding="10" cellspacing="0">
+  <tr>
+    <td colspan="2">
+      <hr>
+    </td>
+  </tr>
+  <tr>
+    <td width="30%" valign="top" align="left">
+      <p align="right"><b>Dispose notification</b></p>
+    </td>
+    <td width="70%" valign="top" align="left">
+    <p>Previously, when a <code>SWT.Dispose</code> event was received for a parent composite, all 
+    the children were disposed and therefore could not be referenced.  For 3.2,
+    the Dispose event is received before the children have been released in the OS. 
+    </td>
+  </tr>
+
+  <tr>
+    <td colspan="2">
+      <hr>
+    </td>
+  </tr>
+  <tr>
+    <td width="30%" valign="top" align="left">
+      <p align="right"><b>Desktop appearance notification</b></p>
+    </td>
+    <td width="70%" valign="top" align="left">
+    <p>When the appearance settings such as theme, font, or default colours are 
+    changed for the desktop, an <code>SWT.Settings</code> event is issued for
+    the <code>Display</code>.
+    <p><img border="0" src="settings.png" width="403" height="456"></p>
+    </td>
+  </tr>
+  
+  <tr>
+    <td colspan="2">
+      <hr>
+    </td>
+  </tr>
+  <tr>
+    <td width="30%" valign="top" align="left">
+      <p align="right"><b>Animated GIFs</b></p>
+    </td>
+    <td width="70%" valign="top" align="left">
+    <p>Animated GIF images can be saved to file.</p>
+    <p><img border="0" src="animated_gif.gif" width="101" height="55"></p>
+    <p>For an example see the SWT  
+     <a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet194.java">snippet</a>.
+    </td>
+  </tr>
+
+  <tr>
+    <td colspan="2">
+      <hr>
+    </td>
+  </tr>
+  <tr>
+    <td width="30%" valign="top" align="left">
+      <p align="right"><b>Tooltips for Columns</b></p>
+    </td>
+    <td width="70%" valign="top" align="left">Tooltip text can be set on a table 
+    or tree column header using <code>TableColumn/TreeColumn.setTooltipText(String)</code>.
+    </td>
+  </tr>
+
+  <tr>
+    <td colspan="2">
+      <hr>
+    </td>
+  </tr>
+  <tr>
+    <td width="30%" valign="top" align="left">
+      <p align="right"><b>Vertical CoolBar</b></p>
+    </td>
+    <td width="70%" valign="top" align="left">A vertical coolbar can be created
+    by using the <code>SWT.VERTICAL</code> style.
+    <p><img border="0" src="verticalCoolbar.png" width="95" height="162"></p>
+    </td>
+  </tr>
+  
+  <tr>
+    <td colspan="2">
+      <hr>
+    </td>
+  </tr>
+  <tr>
+    <td width="30%" valign="top" align="left">
+      <p align="right"><b>Nathalie</b></p>
+    </td>
+    <td width="70%" valign="top" align="left">Congratulations to Silenio and Rose.
+    <p><img border="0" src="nathalie.png" width="300" height="400"></p>
+    </td>
+  </tr>
+</table>
+
+<h2><font face="Verdana"><a name=m3>Milestone M3</a></font></h2>
+
+<p>Download: <a href="http://download.eclipse.org/downloads/drops/S-3.2M3-200511021600/index.php#swt">M3 Build</a> (November 2, 2005)
+<p>Build Notes: <a href="http://download.eclipse.org/downloads/drops/S-3.2M3-200511021600/buildnotes/buildnotes_swt.html">M3 Build Notes</a>
+
+<table border="0" cellpadding="10" cellspacing="0">
+  <tr>
+    <td colspan="2">
+      <hr>
+    </td>
+  </tr>
+  <tr>
+    <td width="30%" valign="top" align="left">
+      <p align="right"><b>OpenGL support</b></p>
+    </td>
+    <td width="70%" valign="top" align="left">
+    <p>You can now use <a href="http://www.eclipse.org/swt/opengl/">
+    OpenGL in SWT applications</a>. 
+    The OpenGL interface works with third-party OpenGL libraries such as LWJGL.
+    <p><img border="0" src="lwjglexample.png" width="372" height="289"></p>
+    <p>For examples, see the SWT snippets 
+    <ul>
+      <li><a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet174.java">org.eclipse.opengl snippet</a></li>
+      <li><a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet195.java">LWJGL snippet</a></li>
+    </ul>
+    </td>
+  </tr>
+  
+  <tr>
+    <td colspan="2">
+      <hr>
+    </td>
+  </tr>
+  <tr>
+    <td width="30%" valign="top" align="left">
+      <p align="right"><b>Virtual Tree</b></p>
+    </td>
+    <td width="70%" valign="top" align="left">
+    <p>Tree now supports the SWT.VIRTUAL style. This allows you to create trees 
+    with large amounts of data quickly. When TreeItems are needed, they are 
+    created on-demand.
+    <p>For an example see the SWT  
+     <a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet202.java">snippet</a>.
+    </td>
+  </tr>
+  
+  <tr>
+    <td colspan="2">
+      <hr>
+    </td>
+  </tr>
+  <tr>
+    <td width="30%" valign="top" align="left">
+      <p align="right"><b>Buttons with image and text</b></p>
+    </td>
+    <td width="70%" valign="top" align="left">
+    <p>Buttons can now show an image as well as text.  This feature is supported
+    on Windows XP, Mac OS X, and GTK.
+    <p><img border="0" src="buttonImageText.png" width="123" height="85"></p>
+    </td>
+  </tr>
+
+  <tr>
+    <td colspan="2">
+      <hr>
+    </td>
+  </tr>
+  <tr>
+    <td width="30%" valign="top" align="left">
+      <p align="right"><b>HIView on Mac OS X</b></p>
+    </td>
+    <td width="70%" valign="top" align="left">
+    <p>SWT now makes use of HIView on Mac OS X.  This resolves many clipping and 
+    sizing issues.
+    </td>
+  </tr>
+
+  <tr>
+    <td colspan="2">
+      <hr>
+    </td>
+  </tr>
+  
+  <tr>
+    <td width="30%" valign="top" align="left">
+      <p align="right"><b>Embedding objects in text</b></p>
+    </td>
+    <td width="70%" valign="top" align="left">
+    <p>Using TextLayout, it is now possible to embed objects such as images or 
+    widgets inside text.  Glyph metrics such as ascent, descent and width can be
+    specified.  Objects wrap with the text.
+    <p><img border="0" src="textObjects.png" width="252" height="145"></p>
+    <p>For an example see the SWT  
+     <a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet205.java">snippet</a>.
+    </td>
+  </tr>
+  
+  <tr>
+    <td colspan="2">
+      <hr>
+    </td>
+  </tr>
+  <tr>
+    <td width="30%" valign="top" align="left">
+      <p align="right"><b>Indent, align and justify text</b></p>
+    </td>
+    <td width="70%" valign="top" align="left">
+    <p>TextLayout now supports indenting, justifying and aligning text.
+    <p><img border="0" src="indentJustifyAlign.png" width="264" height="307"></p>
+    <p>For an example see the SWT  
+     <a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet203.java">snippet</a>.
+    </td>
+  </tr>
+  
+  <tr>
+    <td colspan="2">
+      <hr>
+    </td>
+  </tr>
+  <tr>
+    <td width="30%" valign="top" align="left">
+      <p align="right"><b>Text Baseline Rise</b></p>
+    </td>
+    <td width="70%" valign="top" align="left">
+    <p>Using TextLayout and TextStyle, it is now possible to specify the baseline rise for a range of text.
+    <p><img border="0" src="rise.png" width="207" height="158"></p>
+    <p>For an example see the SWT  
+     <a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet204.java">snippet</a>.
+    </td>
+  </tr>
+  
+  <tr>
+    <td colspan="2">
+      <hr>
+    </td>
+  </tr>
+  <tr>
+    <td width="30%" valign="top" align="left">
+      <p align="right"><b>Alea</b></p>
+    </td>
+    <td width="70%" valign="top" align="left">Congratulations to Grant and Andrea.
+    <p><img border="0" src="alea.png" width="301" height="377"></p>
+    </td>
+  </tr>
+</table>
+
+<h2><font face="Verdana"><a name=m4>Milestone M4</a></font></h2>
+
+<p>Download: <a href="http://download.eclipse.org/downloads/drops/S-3.2M4-200512151506/index.php#swt">M4 Build</a> (December 15, 2005)
+<p>Build Notes: <a href="http://download.eclipse.org/downloads/drops/S-3.2M4-200512151506/buildnotes/buildnotes_swt.html">M4 Build Notes</a>
+
+<table border="0" cellpadding="10" cellspacing="0">
+  <tr>
+    <td colspan="2">
+      <hr>
+    </td>
+  </tr>
+  <tr>
+    <td width="30%" valign="top" align="left">
+      <p align="right"><b>Hue, Saturation, Brightness</b></p>
+    </td>
+    <td width="70%" valign="top" align="left">
+    <p>A color can be created by specifying the hue, saturation and brightness.
+    In addition, for a given color, the hue saturation and brightness can be queried.
+    <p><img border="0" src="hsb.png" width="455" height="605"></p>
+    <p>For an example, see the 
+    <a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet208.java">
+    SWT snippet</a>
+    </td>
+  </tr>
+
+  <tr>
+    <td colspan="2">
+      <hr>
+    </td>
+  </tr>
+  <tr>
+    <td width="30%" valign="top" align="left">
+      <p align="right"><b>StyledText Alignment, Indentation, Justification</b></p>
+    </td>
+    <td width="70%" valign="top" align="left">
+    <p>StyledText now supports indenting, justifying and aligning text.</p>
+    <p><img border="0" src="styledAlign.png" width="300" height="283"></p>
+    <p>For an example, see the 
+    <a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet213.java">
+    SWT snippet</a></p>
+    </td>
+  </tr>
+  
+  <tr>
+    <td colspan="2">
+      <hr>
+    </td>
+  </tr>
+  
+  <tr>
+    <td width="30%" valign="top" align="left">
+      <p align="right"><b>Embedded Objects in StyledText</b></p>
+    </td>
+    <td width="70%" valign="top" align="left">
+    <p>StyledText now allows you to embed objects such as images or widgets 
+    inside the text.  Objects wrap with the text.</p>
+    <p><img border="0" src="styledObject.png" width="422" height="320"></p>
+    <p>For an example, see the 
+    <a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet212.java">
+    SWT snippet</a></p>
+    </td>
+  </tr>
+  
+  <tr>
+    <td colspan="2">
+      <hr>
+    </td>
+  </tr>
+  
+  <tr>
+    <td width="30%" valign="top" align="left">
+      <p align="right"><b>Background Image</b></p>
+    </td>
+    <td width="70%" valign="top" align="left">
+    <p>
+    A background image can be set into a control.  In addition, the background 
+    can be inherited by child widgets such as labels.
+    </p>
+    <p><img border="0" src="backImage.png" width="191" height="184"></p>
+    <p>For an example, see the 
+    <a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet214.java">
+    SWT snippet</a></p>
+    </td>
+  </tr>
+  
+  <tr>
+    <td colspan="2">
+      <hr>
+    </td>
+  </tr>
+  
+  <tr>
+    <td width="30%" valign="top" align="left">
+      <p align="right"><b>Native Image Loading</b></p>
+    </td>
+    <td width="70%" valign="top" align="left">
+    <p>The constructor <code>Image(Device device, String filename)</code> will now load images 
+    using native Operating System calls. This has improved performance of image 
+    loading and increased the maximum size of image that can be loaded.</p>
+    </td>
+  </tr>
+ 
+  <tr>
+    <td colspan="2">
+      <hr>
+    </td>
+  </tr>
+  
+  <tr>
+    <td width="30%" valign="top" align="left">
+      <p align="right"><b>Dragging Text</b></p>
+    </td>
+    <td width="70%" valign="top" align="left">
+    <p>If the <code>SWT.DragDetect</code> event is hooked on Text or StyledText, 
+    the selection will not be cleared when the user drags from within a selected
+    range of text.  This makes it possible to support dragging from the Text and
+    StyledText widgets.</p>
+    <p>For an example, see the 
+    <a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet210.java">
+    SWT snippet</a></p>
+    </td>
+  </tr>  
+ </table>
+ 
+<h2><font face="Verdana"><a name=m5>Milestone M5</a></font></h2>
+
+<p>Download: <a href="http://download.eclipse.org/downloads/drops/S-3.2M5-200602171115/index.php#swt">M5 Build</a> (February 17, 2006)
+<p>Build Notes: <a href="http://download.eclipse.org/downloads/drops/S-3.2M5-200602171115/buildnotes/buildnotes_swt.html">M5 Build Notes</a>
+
+<table border="0" cellpadding="10" cellspacing="0">
+  <tr>
+    <td colspan="2">
+      <hr>
+    </td>
+  </tr>
+  <tr>
+    <td width="30%" valign="top" align="left">
+      <p align="right"><b>New ExpandBar Widget</b></p>
+    </td>
+    <td width="70%" valign="top" align="left">
+    <p>The ExpandBar widget allows the user to show and hide collections of widgets 
+    by clicking on a header.  The ExpandBar contains multiple items that can each 
+    have an image and title in the header.
+    <p><img border="0" src="expandbar.png" width="466" height="609"></p>
+    <p>For an example, see the 
+    <a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet223.java">
+    SWT snippet</a>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <hr>
+    </td>
+  </tr>
+  <tr>
+    <td width="30%" valign="top" align="left">
+      <p align="right"><b>Bullets in StyledText</b></p>
+    </td>
+    <td width="70%" valign="top" align="left">
+    <p>StyledText can now show lists formatted in a variety of styles such as
+    numbered, upper case or lower case letters, bullets or a custom defined
+    style.
+    <p><img border="0" src="bullets.png" width="380" height="546"></p>
+    <p>For an example, see the 
+    <a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet222.java">
+    SWT snippet</a>
+    </td>
+  </tr>
+    <tr>
+    <td colspan="2">
+      <hr>
+    </td>
+  </tr>
+  <tr>
+    <td width="30%" valign="top" align="left">
+      <p align="right"><b>Mac OS X on X86/Intel</b></p>
+    </td>
+    <td width="70%" valign="top" align="left">
+    <p>The eclipse launcher and SWT libraries have been compiled as 
+    universal binaries so that you can run Eclipse on Mac OS X X86/Intel
+    platforms using the Mac OS X (Mac/Carbon) downloads.
+    </td>
+  </tr>
+  </table> 
+<h2><font face="Verdana"><a name=m6>Milestone M6</a></font></h2>
+
+<p>Download: <a href="http://download.eclipse.org/downloads/drops/S-3.2M6-200603312000/index.php#swt">M6 Build</a> (March 31, 2006)
+<p>Build Notes: <a href="http://download.eclipse.org/downloads/drops/S-3.2M6-200603312000/buildnotes/buildnotes_swt.html">M6 Build Notes</a>
+
+<table border="0" cellpadding="10" cellspacing="0">
+  <tr>
+    <td colspan="2">
+      <hr>
+    </td>
+  </tr>
+  <tr>
+    <td width="30%" valign="top" align="left">
+      <p align="right"><b>Custom Draw Tree</b></p>
+    </td>
+    <td width="70%" valign="top" align="left">
+    <p>The Tree widget now supports custom draw for individual cells.  Applications can 
+    enhance the native look and feel of the tree by custom rendering of the data.
+    The application has control over row height so multiple lines of text can be drawn.
+    In addition, the user can present multiple images in the same cell, change
+    font or color multiple times and change the way selection is drawn.
+    <p><img border="0" src="customTree.png" width="466" height="791"></p>
+    <p>For examples, see the following snippets:
+    <ul>
+       <li><a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet220.java">Images on right side of TreeItem</a>
+       <li><a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet232.java">Show results as a bar chart in Tree</a>
+       <li><a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet226.java">Custom gradient selection for Tree</a>
+       <li><a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet227.java">Multiple lines in a TreeItem</a>
+    </ul>
+    </td>
+  </tr>
+    <tr>
+    <td colspan="2">
+      <hr>
+    </td>
+  </tr>
+  <tr>
+    <td width="30%" valign="top" align="left">
+      <p align="right"><b>Custom Draw Table</b></p>
+    </td>
+    <td width="70%" valign="top" align="left">
+    <p>The Table widget now supports custom draw for individual cells.  While 
+    still maintianing the native look and feel of the table, users can customize
+    how cells are drawn to display data in a form other than text with an image,
+    to show multiple lines of text in one cell, to change font and color multiple
+    times within the same cell, to override the native selection drawing etc.
+    <p><img border="0" src="customTable.png" width="466" height="767"></p>
+    <p>For examples, see the following snippets:
+    <ul>
+       <li><a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet230.java">Images on right side of TableItem</a>
+       <li><a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet228.java">Show results as a bar chart in Table</a>
+       <li><a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet229.java">Custom gradient selection for Table</a>
+       <li><a href="http://git.eclipse.org/c/platform/eclipse.platform.swt.git/tree/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet231.java">Multiple lines in a TableItem</a>
+    </ul>
+    </td>
+  </tr>
+    <tr>
+    <td colspan="2">
+      <hr>
+    </td>
+  </tr>
+  <tr>
+  <tr>
+    <td width="30%" valign="top" align="left">
+      <p align="right"><b>Drag over effects for Table and Tree</b></p>
+    </td>
+    <td width="70%" valign="top" align="left">
+    <p>The Table and Tree widgets now provide visual feedback of what is being dragged.
+    <p><img border="0" src="dragEffect.png" width="424" height="594"></p>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

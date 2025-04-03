@@ -1,0 +1,35 @@
+<html>
+<head>
+<script>
+function connect() {
+	var field = document.getElementById('portText');
+	var url = "http://www.eclipse.org/swt/frames.html";//"localhost:" + field.value + "/json";
+	var xhr = XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject("Microsoft.XMLHTTP"); 
+	if (xhr) {
+alert(url);
+		xhr.onreadystatechange=function() {
+			if (xhr.readyState == 4) {
+				alert(xhr.readyState + ":" + xhr.responseText);
+			}
+		}
+		xhr.onerror = function() { 
+			alert("onerror: " + xhr.status); 
+		};
+		xhr.open("GET", url, true);
+		xhr.send(null)
+	}
+}
+
+</script>
+</head>
+<body>
+
+<textarea id="portText" rows="1" cols="99">
+</textarea>
+<input type=button id="connectButton" value="Connect" onClick="connect()">
+<textarea id="console" rows="9" cols="99">
+</textarea>
+<input type=button id="evaluateButton" value="Evaluate" disabled="disabled" onClick="evaluate()">
+
+</body>
+</html>
