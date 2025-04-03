@@ -75,6 +75,46 @@ ul {padding-left: 13px;}
     <h2>General Updates </h2>
     </td>
   </tr>
+  <tr id="rescaleOnRuntimePreference"> <!-- https://github.com/eclipse-platform/eclipse.platform.ui/pull/2868 -->
+    <td class="title">Monitor-Specific UI Scaling as Default (Windows only)</td>
+    <td class="content">
+      <p>
+        In the previous releases, a preference to enable an improved, monitor- and resolution-specific UI scaling on
+        Windows was introduced (see the news for <a href="../4.34/platform.php#rescale-on-runtime-preference">4.34</a> and
+        <a href="../4.35/platform.php#rescaleOnRuntimePreference">4.35</a>). The feature has been further improved since
+        then and is now <b>enabled by default</b>.
+      </p>
+      <p>
+        The feature makes each window adapt its scaling to the monitor it is currently placed on in a sharp,
+        resolution-specific way and without requiring the application to restart. When using multiple windows, each of
+        them will adapt its scaling to the monitor it is placed on. When enabled, this new feature replaces the current,
+        limited scaling support for high-resolution monitors, which initializes the application's window according to the
+        scaling of the primary monitor at application startup and produces blurry scaling when moving the window to
+        another monitor unless you restart the application.
+      </p>
+      <p>
+        To disable this feature, uncheck the <i>Monitor-specific UI scaling</i> box on the <b>Appearance</b> preference
+        page (<b>Window > Preferences > General > Appearance</b>), as shown in the image below. The feature is still under
+        further development. We encourage users to <b>share their feedback</b> to help us improve the functionality.
+      </p>
+      <p>
+        <img src="images/rescaling_settings-preference.png" alt="Monitor-Specific UI Rescaling Preference" />
+      </p>
+      <p>
+        The images below demonstrate the scaling behavior in an extract of an Eclipse application when moving the window
+        from a primary monitor with 100% scaling to another monitor with 200% scaling, first having the feature disabled
+        and second having it enabled.
+      </p>
+      <p>
+        On a 200% monitor with the feature being <b>disabled</b>:
+        <img src="images/rescaling-disabled.png" alt="Monitor-Specific UI Rescaling Disabled" />
+      </p>
+      <p>
+        On a 200% monitor with the feature being <b>enabled</b>:
+        <img src="images/rescaling-enabled.png" alt="Monitor-Specific UI Rescaling Enabled" />
+      </p>
+    </td>
+  </tr>
   <!-- ******************* End of General Updates ************************************* -->
   <tr><td colspan="2"/></tr>
 </tbody>
