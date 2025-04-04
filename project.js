@@ -53,6 +53,7 @@ let defaultAside = toElements(`
 <a class="separator" href="https://projects.eclipse.org/projects/eclipse"><i class='fa fa-cube'></i> Eclipse Project</a>
 <a href="https://projects.eclipse.org/projects/eclipse.equinox">Equinox</a>
 <a href="https://projects.eclipse.org/projects/eclipse.platform">Platform</a>
+<a href="swt/index.html">&nbsp;&nbsp;&bullet;&nbsp;SWT</a>
 <a href="https://projects.eclipse.org/projects/eclipse.jdt">Java Development Tools</a>
 <a href="https://projects.eclipse.org/projects/eclipse.pde">Plug-in Development Environment</a>
 <span class="separator"><i class='fa fa-github'></i> GitHub</span>
@@ -687,7 +688,7 @@ function loadProjectPortingGuides() {
 }
 
 function generateSelf(element) {
-	element.innerText = selfContent.replace(/\t/g, '    ').replace(/\n\n\n+/g, '\n\n');
+	element.innerText = selfContent.replace(/\t/g, '    ').replace(/\n\n\n+/g, '\n\n').replace(/<\/script><\/body>/,'</script>\n</body>');
 }
 
 function hasElement(id) {

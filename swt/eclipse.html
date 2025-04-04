@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Eclipse | SWT</title>
+	<meta name="keywords" content="eclipse,swt" />
+	<link rel="preconnect stylesheet" href="../project.css" />
+	<script src="../project.js"></script>
+	<script src="project.js"></script>
+	<style>
+		/* <![CDATA[*/
+		/*]]>*/
+	</style>
+</head>
+
+<body>
+
+	<div data-generate="generateDefaultBreadcrumb(this)">
+		<a href="index.html">SWT</a>
+		<span>Eclipse</span>
+	</div>
+
+	<div data-generate="generateDefaults(this)">
+	</div>
+
+	<main>
+		<div id="midcolumn">
+			<h1>Developing SWT applications using Eclipse</h1>
+
+			<p>While SWT is integrated as part of the Eclipse plug-in API, for standalone
+				application development it is best to develop against the SWT standalone
+				download. This document will help you get set up.</p>
+
+			<p>First, download the .zip of SWT for your platform from the
+				<a href="index.html">SWT homepage</a>.
+			</p>
+
+			<p>The SWT .zip file can then be imported into your workspace. In the
+				<i>File</i> menu, choose <i>Import</i> and select the
+				<i>Existing Projects Into Workspace</i> wizard.
+				(In newer versions of eclipse, you can find <i>Existing Projects Into Workspace</i>
+				in the <i>General</i> category).
+			</p>
+
+			<center>
+				<p><img src="images/existing.png" alt="Existing Projects Into Workspace Wizard"></p>
+			</center>
+
+			<p>Direct the wizard to the location where you downloaded the .zip file.
+				This will create a project called <i>org.eclipse.swt</i> in your
+				workspace.</p>
+
+			<center>
+				<p><img src="images/import-projects.png" alt="Import Projects Wizard"></p>
+			</center>
+
+			<p>Your Java projects can then add the SWT project as a dependency.
+				Open the properties dialog of your Java project, and on the <i>Java
+					Build Path</i> page, include the org.eclipse.swt project.</p>
+
+			<center>
+				<p><img src="images/add-project.png" alt="Project Properties"></p>
+			</center>
+
+			<p>With the SWT project as a dependency, you can now benefit from
+				Eclipse features such as the Javadoc view and code assist.</p>
+
+			<center>
+				<p><img src="images/swt-example.png" alt="SWT Eclipse Example"></p>
+			</center>
+
+			<p>Now you can run any main class in your project by selecting the class and then selecting
+				<i>Run &gt; Run As &gt; Java Application</i>
+			</p>
+
+		</div>
+	</main>
+
+	<script>
+		generate();	
+	</script>
+</body>
+
+</html>
