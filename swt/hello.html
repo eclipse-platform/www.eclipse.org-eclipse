@@ -1,0 +1,17 @@
+<html>
+<script>
+	function OnMessage (event) {
+		alert('received a message');
+	}
+	window.loaded = function() {
+//		window.addEventListener ("message", OnMessage, false);
+		alert("loaded");
+		theJavaFunction('hi');
+		alert("still alive");
+//		window.fnToinvoke = frame.fnToInvoke;
+	};
+</script>
+<body onload="loaded()">
+hi added bf
+</body>
+</html>
