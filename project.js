@@ -90,7 +90,11 @@ function generate() {
 	}
 }
 
-function generateDefaults(element) {
+function generateDefaults(element, id) {
+	if (id != null && getQueryParameter(id) != null) {
+		return;
+	}
+
 	const parts = [];
 	if (!hasElement('header')) {
 		parts.push(generateDefaultHeader(document.createElement('div')));
@@ -293,12 +297,11 @@ function generateBreadcrumb() {
 
 function generateExtraBreadcrumb() {
 	const location = new URL(window.location);
-	const search = new URLSearchParams(location.search);
-	const crumb = search.get('crumb');
+	const crumb = getQueryParameter('crumb');
 	if (crumb) {
 		return `<span>${crumb}</span>`;
 	} else {
-		const file = search.get('file');
+		const file = getQueryParameter('file');
 		if (file != null) {
 			const match = file.match(/[^\/]+/g);
 			if (match.length == 1) {
@@ -483,7 +486,7 @@ function parseHTML(request, handler) {
 
 function load(location) {
 	const baseURI = document.baseURI;
-	const effectiveLocation = location ?? new URLSearchParams(window.location.search).get('file') ?? 'index.html';
+	const effectiveLocation = location ?? getQueryParameter('file') ?? 'index.html';
 	const resolvedLocation = new URL(effectiveLocation, baseURI);
 	sendRequest(resolvedLocation, request => {
 		if (request.status != 200) {
@@ -583,7 +586,7 @@ function generateProjectPlans() {
 }
 
 function loadPojectPlan() {
-	const file = new URLSearchParams(location.search).get('file');
+	const file = getQueryParameter('file');
 	if (file) {
 		load();
 	} else {
@@ -614,7 +617,7 @@ function generateProjectReleaseNotes() {
 }
 
 function loadProjectReleaseNotes() {
-	const file = new URLSearchParams(location.search).get('file');
+	const file = getQueryParameter('file');
 	if (file) {
 		load();
 	} else {
@@ -647,7 +650,7 @@ function generateProjectAcknowledgements() {
 }
 
 function loadProjectAcknowledgements() {
-	const file = new URLSearchParams(location.search).get('file');
+	const file = getQueryParameter('file');
 	if (file) {
 		load();
 	} else {
@@ -679,7 +682,7 @@ function generateProjectPortingGuides() {
 }
 
 function loadProjectPortingGuides() {
-	const file = new URLSearchParams(location.search).get('file');
+	const file = getQueryParameter('file');
 	if (file) {
 		load();
 	} else {
@@ -688,7 +691,7 @@ function loadProjectPortingGuides() {
 }
 
 function generateSelf(element) {
-	element.innerText = selfContent.replace(/\t/g, '    ').replace(/\n\n\n+/g, '\n\n').replace(/<\/script><\/body>/,'</script>\n</body>');
+	element.innerText = selfContent.replace(/\t/g, '    ').replace(/\n\n\n+/g, '\n\n').replace(/<\/script><\/body>/, '</script>\n</body>');
 }
 
 function hasElement(id) {
@@ -717,6 +720,12 @@ function addBase(htmlDocument, location) {
 	const base = htmlDocument.createElement('base');
 	base.href = location;
 	htmlDocument.head.appendChild(base);
+}
+
+function getQueryParameter(id) {
+	const location = new URL(window.location);
+	const search = new URLSearchParams(location.search);
+	return search.get(id);
 }
 
 function toggleMenu() {
