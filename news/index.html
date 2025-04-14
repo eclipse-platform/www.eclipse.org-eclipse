@@ -6,6 +6,13 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" href="news.css" type="text/css">
 <title>Eclipse - New and Noteworthy</title>
+<script type="text/javascript">
+	// The new.html wraps the index.html with styling for the website
+	// but that only works when served by the server not for file: protocol.
+	if (!window.location.href.startsWith('file:')) {
+		window.location.href = "news.html"
+	}
+</script>
 </head>
 <body>
 
