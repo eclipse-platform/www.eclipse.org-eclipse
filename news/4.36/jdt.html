@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
-	<meta name="copyright" content="Copyright (c) Eclipse contributors and others 2018, 2019. This page is made available under license. For full details see the LEGAL in the documentation book that contains this page." />
+	<meta name="copyright" content="Copyright (c) Eclipse contributors and others 2018, 2025. This page is made available under license. For full details see the LEGAL in the documentation book that contains this page." />
 	<meta http-equiv="Content-Language" content="en-us" />
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<link rel="STYLESHEET" href="news.css" type="text/css" />
@@ -191,6 +191,35 @@
 						<img src="images/navigate-to-variables.png" alt="Original" />
 					</p><br>
 				</td>
+				</td>
+			</tr>
+
+			<tr id="Auto-resume-triggerpoints">
+				<td class="title">Auto-Resuming Trigger Points</td>  
+				<td class="content">
+					Trigger points can now be configured to automatically resume execution when hit, allowing breakpoints after the trigger point to be activated while skipping those before it,
+					enabling more focused and efficient debugging workflows. 
+					<br><br>
+					On enabling a trigger point a new option will be shown its left to <b>Continue execution </b> on hit or not
+					<p>
+					<img src="images/TriggerEnabled.png" alt="Triggerpoint Enabled" />
+					</p><br>
+					<br><br>
+					Once <b>Continue execution on hit</b> is toggled, breakpoint label will update to <b>[Resume on hit]</b> meaning it wont suspend on hit
+					<p>
+					<img src="images/TriggerContinue.png" alt="Triggerpoint Continue" />
+					</p><br>
+					<br><br>
+					Resume trigger also supports conditions, meaning if condition is met true it will resume the execution else it will suspend
+					<p>
+					<img src="images/ResumeWithCondition.png" alt="Resume-Triggerpoint with conditions" />
+					</p><br>
+					<br><br>
+					Now when you run in debug, Trigger point wont hit, allowing you to skip previous breakpoints and hit on the actual breakpoint you need to focus. <br><br>
+					For example, here <i>Resume trigger</i> was set on line number 7 and during debugging it hit on line number 8 by skipping all the previous breakpoints
+					<p>
+					<img src="images/TriggerExecution.png" alt="Resume-Triggerpoint execution" />
+					</p><br>
 				</td>
 			</tr>
 
