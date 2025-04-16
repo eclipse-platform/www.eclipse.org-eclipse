@@ -99,36 +99,29 @@
 				</td>
 			</tr>
 			<tr id="customFoldingRegions">
-				<td class="title">Custom folding regions</td>
+				<td class="title">Custom Folding Regions</td>
 				<td class="content">
 					It is now possible to create custom folding regions by specifying a comment at the start and end of the region.
 					You can enable and configure this feature under <b>Window &gt; Preferences &gt; Java &gt; Editor &gt; Folding &gt; Custom folding regions</b>.
+					<img src="images/custom_folding_regions_preferences.png" alt="Preference page for custom folding regions" />
 					<p>
-						<img src="images/custom_folding_regions_preferences.png" alt="Preference page for custom folding regions" />
-					</p>
-					<p>
-						In that preference page, you can specify the text that should be used to start and end a custom folding region.
+						on that preference page, you can specify the text that should be used to start and end a custom folding region.
 						When this is enabled, writing a comment starting with the specified region start followed by another comment starting with the specified region end creates a folding region.
 					</p>
-					<p>
-						<img src="images/custom_folding_regions_code_expanded.png" alt="code containing comments with the text 'region' and 'endregion'" />
-					</p>
+					<img src="images/custom_folding_regions_code_expanded.png" alt="code containing comments with the text 'region' and 'endregion'" />
 					<p>
 						Custom folding regions can be collapsed like any other folding regions.
 					</p>
-					<p>
-						<img src="images/custom_folding_regions_code_collapsed.png" alt="custom folding regions are collapsed" />
-					</p>
+					<img src="images/custom_folding_regions_code_collapsed.png" alt="custom folding regions are collapsed" />
 				</td>
 			</tr>
 			<tr id="foldingProjectPreferences">
-				<td class="title">Project Properties page for folding</td>
+				<td class="title">Project Properties Page for Folding</td>
 				<td class="content">
-					Preferences for folding can now be configured on a per-project basis in addition to configuring folding for workspaces.
+					Preferences for folding can now be configured on a per-project basis in addition to configuring folding for the workspace.
 					This page is available under <b>Project &gt; Properties &gt; Java Editor &gt; Folding</b>.
-					<p>
-						<img src="images/folding_property_page.png" alt="Project Properties page for folding" />
-					</p>
+					<p></p>
+					<img src="images/folding_property_page.png" alt="Project Properties page for folding" />
 				</td>
 			</tr>
 			<!-- ******************* End of Java Editor ************************************* -->
@@ -164,68 +157,67 @@
 				</td>
 			</tr>
 			<tr id="collapsing-stackframes">
-				<td class="title">Collapsing stack frames</td>
+				<td class="title">Collapsing Stack Frames</td>
 				<td class="content">
-					Navigating in deep stack frames can be challenging during debuging, due to high number of stack frames that are not relevant for most of the time, for example because they are provided by either the JDK or a testing framework, or by some library</b>
-					This feature tries to help focusing on the stack frames, that are the coming from the user created projects, drastically reducing the unnecessary noise in the Debug View
+					Navigating in deep stack frames can be challenging during debuging, due to the high number of stack frames that are not relevant most of the time,
+					for example because they are provided by either the JDK, by a testing framework, or by a library</b>
+					This feature tries to help focus on the stack frames that are coming from the user-created projects,
+					drastically reducing the unnecessary noise in the Debug View.
+					<p></p>
+					<img src="images/not-collapsed.png" alt="Original" />
 					<p>
-						<img src="images/not-collapsed.png" alt="Original" />
-					</p><br>
-					The feature can be enabled from the Debug toolbar in Debug → Java → Collapse Stack Frames.<br>
+						The feature can be enabled from the Debug toolbar in <b>Debug &gt; Java &gt; Collapse Stack Frames</b>.<br>
+					</p>
+					<img src="images/menuitem.png" alt="Menu to enable" />
 					<p>
-						<img src="images/menuitem.png" alt="Menu to enable" />
-					</p><br>
-					After enabling it, the view becomes much simpler and less intimidating:
-					<p>
-						<img src="images/collapsed.png" alt="Collapsed stack frames" />
-					</p><br>
+						After enabling it, the view becomes much simpler and less intimidating:
+					</p>
+					<img src="images/collapsed.png" alt="Collapsed stack frames" />
 				</td>
 				</td>
 			</tr>
 
 			<tr id="Navigate-to-variable-declaration-from-variable-view">
-				<td class="title">Navigate to variable declaration</td>
+				<td class="title">Navigate to Variable Declaration</td>
 				<td class="content">
-					Users can now navigate to a variable’s declaration directly from the Variables view during a debug session, making it easier to trace variables—especially in methods with numerous local variables.
-					<br><br>
-					Choose <b>Navigate to Declaration</b> from context menu of variables
+					Users can now navigate to a variable’s declaration directly from the Variables view during a debug session,
+					making it easier to locate a variable, especially in methods with numerous local variables.
 					<p>
-						<img src="images/NavigateToDeclareMenu.png" alt="Navigation_menu" />
-					</p><br>
-					<br><br>
-					Now editor will jump and highlight its declaration
+						Choose <b>Navigate to Declaration</b> from context menu of a variable.
+					</p>
+					<img src="images/NavigateToDeclareMenu.png" alt="Navigation_menu" />
 					<p>
-						<img src="images/Navigation.png" alt="Navigation_done" />
-					</p><br>
+						The editor will jump and highlight its declaration.
+					</p>
+					<img src="images/Navigation.png" alt="Navigation_done" />
 				</td>
 			</tr>
 
 			<tr id="Auto-resume-triggerpoints">
-				<td class="title">Auto-Resuming Trigger Points</td>  
+				<td class="title">Auto-Resuming Trigger Points</td>
 				<td class="content">
-					Trigger points can now be configured to automatically resume execution when hit, allowing breakpoints after the trigger point to be activated while skipping those before it,
-					enabling more focused and efficient debugging workflows. 
-					<br><br>
-					On enabling a trigger point a new option will be shown its left to <b>Continue execution </b> on hit or not
+					Trigger points can now be configured to automatically resume execution when hit,
+					allowing breakpoints after the trigger point to be activated while skipping those before it,
+					thereby enabling a more focused and efficient debugging workflow.
 					<p>
+						Upon enabling a trigger point, a new option will be shown to <b>Continue execution on hit</b> or not.
+					</p>
 					<img src="images/TriggerEnabled.png" alt="Triggerpoint Enabled" />
-					</p><br>
-					<br><br>
-					Once <b>Continue execution on hit</b> is toggled, breakpoint label will update to <b>[Resume on hit]</b> meaning it wont suspend on hit
 					<p>
+						Once <b>Continue execution on hit</b> is toggled, the breakpoint label will update to <b>[Resume on hit]</b> meaning it won't suspend on hit.
+					</p>
 					<img src="images/TriggerContinue.png" alt="Triggerpoint Continue" />
-					</p><br>
-					<br><br>
-					Resume trigger also supports conditions, meaning if condition is met true it will resume the execution else it will suspend
 					<p>
+						Resume trigger also supports conditions, meaning if condition is true it will resume the execution otherwise it will suspend.
+					</p>
 					<img src="images/ResumeWithCondition.png" alt="Resume-Triggerpoint with conditions" />
-					</p><br>
-					<br><br>
-					Now when you run in debug, Trigger point wont hit, allowing you to skip previous breakpoints and hit on the actual breakpoint you need to focus. <br><br>
-					For example, here <i>Resume trigger</i> was set on line number 7 and during debugging it hit on line number 8 by skipping all the previous breakpoints
 					<p>
+						Now when you run in debug mode, the trigger point won't hit, allowing you to skip previous breakpoints, and stop on the actual breakpoint on which you need to focus.
+					</p>
+					<p>
+						For example, here <i>Resume trigger</i> was set on line number 7 and during debugging it hit on line number 8 by skipping all the previous breakpoints.
+					</p>
 					<img src="images/TriggerExecution.png" alt="Resume-Triggerpoint execution" />
-					</p><br>
 				</td>
 			</tr>
 			<tr id="DefaultFoldingMechanism">
