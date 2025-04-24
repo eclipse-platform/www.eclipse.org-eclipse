@@ -1,0 +1,152 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<title>Documentation | Eclipse Project</title>
+	<link rel="preconnect stylesheet" href="../project.css" />
+	<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/marked/lib/marked.umd.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/marked-gfm-heading-id/lib/index.umd.js"></script>
+	<script src="../project.js"></script>
+</head>
+
+<body>
+	<div data-generate="generateDefaultBreadcrumb(this)">
+		<a href="../index.html">Eclipse</a>
+	</div>
+
+	<div data-generate="generateDefaults(this)">
+	</div>
+
+	<main>
+		<div id="markdown-target"></div>
+	</main>
+
+	<script>
+		generate();
+
+		const targetElement = document.getElementById('markdown-target');
+		const file = new URLSearchParams(window.location.search).get('file');
+		const parts = /(?<org>[^/]+)\/(?<repo>[^/]+)\/(?<branch>[^/]+)\/(?<path>.*)/.exec(file);
+		const repoNames = {
+			"eclipse-platform/eclipse.platform": "Platform",
+			"eclipse-platform/eclipse.platform.ui": "Platform UI",
+			"eclipse-pde/eclipse.pde": "PDE",
+			"eclipse-equinox/p2": "Equinox p2",
+			"eclipse-ide/.github": "Eclipse IDE",
+		};
+
+		function niceName(name) {
+			return name.replaceAll(/[_-]/g, ' ').replaceAll(/([a-z])([A-Z])/g, '$1 $2').replace(/^([a-z])/, letter => letter.toLocaleUpperCase())
+		}
+
+		function fixHash(hash) {
+			return hash.toLowerCase();
+		}
+
+		function generateFileList(files) {
+			const fileElements = files.map(file => {
+				const fileURL = new URL(file.url);
+				const fileName = fileURL.pathname.endsWith('/docs') || fileURL.pathname.endsWith('/profile') ?
+					/(?<filename>[^/]+)$/.exec(fileURL.pathname) :
+					/(?<filename>[^/]+)\.md$/.exec(fileURL.pathname);
+				if (fileName == null) {
+					return '';
+				}
+				const branch = fileURL.searchParams.get('ref');
+				const parts = /\/repos\/(?<org>[^/]+)\/(?<repo>[^/]+)\/contents\/(?<path>.*)/.exec(fileURL.pathname);
+				const url = new URL(window.location);
+				url.hash = '';
+				url.search = `?file=${parts.groups.org}/${parts.groups.repo}/${branch}/${parts.groups.path}`;
+				const label = niceName(fileName.groups.filename);
+				return `<div><a href="${url}">${label}<a/></div>\n`;
+			});
+
+			const folder = parts.groups.path.replace(/\/$/, '');
+			const heading = `<h2>Contents of ${parts.groups.org}/${parts.groups.repo}${folder.length == 0 ? '' : ` - ${folder}`}</h2>\n`;
+
+			targetElement.innerHTML = heading + fileElements.join('');
+		}
+
+		if (parts == null || parts.length == 0) {
+			targetElement.innerHTML = 'No well-formed query parameter of the form <code>?file=org/repo/branch/path</code> has been specified.';
+		} else {
+			const org = parts.groups.org;
+			const repo = parts.groups.repo;
+			const repoName = repoNames[`${org}/${repo}`];
+			if (repoName == null) {
+				targetElement.innerHTML = `The repository ${org}/${repo} is not on the allowed list.`;
+			} else {
+				document.title = `${repoName} Documentation | Eclipse Project`;
+
+				const branch = parts.groups.branch;
+				const path = parts.groups.path;
+
+				const breadcrumb = document.querySelector(".breadcrumb");
+				const normalizedPath = path.replace(/\/$/, '');
+				const segments = normalizedPath == '' ? [''] : ['', ...normalizedPath.split('/')];
+				let crumbPath = '';
+				for (const segment of segments) {
+					crumbPath = (crumbPath == '/' ? '/' : crumbPath + '/') + segment;
+					breadcrumb.append(...toElements(`<li><a href="?file=${org}/${repo}/${branch}${crumbPath}">${segment.length == 0 ? repoName : niceName(segment.replace(/\.md$/, ''))}</a></li>`));
+				}
+
+				const logicalBaseURL = new URL(`https://api.github.com/repos/${org}/${repo}/contents/${path}`);
+				const mdLocation = `${logicalBaseURL}?ref=${branch}`;
+
+				sendRequest(mdLocation, request => {
+					const response = JSON.parse(request.responseText);
+					if (response instanceof Array) {
+						generateFileList(response)
+					} else {
+						const text = blobToText(response.content);
+						const editLink = `<a id="edit-markdown-link" href=""><span class="orange">\u270E Improve this page</span></a>\n`;
+						targetElement.innerHTML = editLink + marked.use(markedGfmHeadingId.gfmHeadingId()).parse(text);
+
+						const imgs = targetElement.querySelectorAll("img[src]");
+						for (const img of imgs) {
+							const src = img.getAttribute('src');
+							if (!src.startsWith('http')) {
+								img.src = `https://raw.githubusercontent.com/${org}/${repo}/${branch}/${src}`;
+							}
+						}
+
+						const as = targetElement.querySelectorAll("a[href]");
+						for (const a of as) {
+							const href = a.getAttribute('href');
+							if (href == null) {
+								continue;
+							}
+
+							if (href.startsWith('#')) {
+								a.setAttribute('href', fixHash(href));
+								continue;
+							}
+
+							const logicalHref = new URL(href, logicalBaseURL);
+							const url = new URL(window.location);
+							url.hash = fixHash(logicalHref.hash);
+							if (logicalHref.hostname == 'api.github.com') {
+								const parts = /\/repos\/(?<org>[^/]+)\/(?<repo>[^/]+)\/contents\/(?<path>.*)/.exec(logicalHref.pathname);
+								if (parts != null) {
+									url.search = `?file=${parts.groups.org}/${parts.groups.repo}/${branch}/${parts.groups.path}`;
+									a.href = url;
+								}
+							} else if (logicalHref.hostname == 'github.com') {
+								const parts = /(?<org>[^/]+)\/(?<repo>[^/]+)\/blob\/(?<branch>[^/]+)\/(?<path>.*)/.exec(logicalHref.pathname);
+								if (parts != null) {
+									url.search = `?file=${parts.groups.org}/${parts.groups.repo}/${parts.groups.branch}/${parts.groups.path}`;
+									a.href = url;
+								}
+							}
+						}
+
+						document.getElementById('edit-markdown-link').href = `https://github.com/${org}/${repo}/blob/${branch}/${path}`;
+					}
+				});
+			}
+		}
+	</script>
+
+</body>
