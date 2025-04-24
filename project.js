@@ -53,7 +53,7 @@ let defaultAside = toElements(`
 <a class="separator" href="https://projects.eclipse.org/projects/eclipse"><i class='fa fa-cube'></i> Eclipse Project</a>
 <a href="https://projects.eclipse.org/projects/eclipse.equinox">Equinox</a>
 <a href="https://projects.eclipse.org/projects/eclipse.platform">Platform</a>
-<a href="swt/index.html">&nbsp;&nbsp;&bullet;&nbsp;SWT</a>
+<a href="${scriptBase}swt/index.html">&nbsp;&nbsp;&bullet;&nbsp;SWT</a>
 <a href="https://projects.eclipse.org/projects/eclipse.jdt">Java Development Tools</a>
 <a href="https://projects.eclipse.org/projects/eclipse.pde">Plug-in Development Environment</a>
 <span class="separator"><i class='fa fa-github'></i> GitHub</span>
@@ -61,6 +61,12 @@ let defaultAside = toElements(`
 <a href="https://github.com/eclipse-platform/">Platform</a>
 <a href="https://github.com/eclipse-jdt/">Java Development Tools</a>
 <a href="https://github.com/eclipse-pde/">Plug-in Development Environment</a>
+<span class="separator"><i class='fa fa-edit'></i> Markdown</span>
+<a href="${scriptBase}markdown/index.html?file=eclipse-platform/eclipse.platform/master/docs">Platform</a>
+<a href="${scriptBase}markdown/index.html?file=eclipse-platform/eclipse.platform.ui/master/docs">Platform UI</a>
+<a href="${scriptBase}markdown/index.html?file=eclipse-pde/eclipse.pde/master/docs">PDE</a>
+<a href="${scriptBase}markdown/index.html?file=eclipse-equinox/p2/master/docs">Equinox p2</a>
+<a href="${scriptBase}markdown/index.html?file=eclipse-ide/.github/main/">Eclipse IDE</a>
 `);
 
 let selfContent = document.documentElement.outerHTML;
@@ -444,19 +450,23 @@ function sendRequest(location, handler) {
 
 function getHTMLText(request) {
 	if (request.responseURL.endsWith('.php')) {
-		const php = JSON.parse(request.responseText);
-		const binary = window.atob(php.content);
-		const bytes = new Uint8Array(binary.length);
-		for (var i = 0; i < binary.length; i++) {
-			bytes[i] = binary.charCodeAt(i);
-		}
-		const decoder = new TextDecoder();
-		const realText = decoder.decode(bytes);
-		return realText;
+		const response = JSON.parse(request.responseText);
+		return blobToText(response.content);
 	}
 
 	const html = request.responseText;
 	return html;
+}
+
+function blobToText(blob) {
+	const binary = window.atob(blob);
+	const bytes = new Uint8Array(binary.length);
+	for (var i = 0; i < binary.length; i++) {
+		bytes[i] = binary.charCodeAt(i);
+	}
+	const decoder = new TextDecoder();
+	const realText = decoder.decode(bytes);
+	return realText;
 }
 
 function parseHTML(request, handler) {
@@ -474,8 +484,8 @@ function parseHTML(request, handler) {
 				const resultDocument = xsltProcessor.transformToFragment(xml, htmlDocument);
 				handler(resultDocument);
 			});
+			return;
 		}
-		return;
 	}
 
 	const html = getHTMLText(request);
