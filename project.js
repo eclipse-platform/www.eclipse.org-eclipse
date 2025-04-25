@@ -49,25 +49,40 @@ let defaultNav = toElements(`
 </a>
 `);
 
-let defaultAside = toElements(`
+
+let projectAside = `
 <a class="separator" href="https://projects.eclipse.org/projects/eclipse"><i class='fa fa-cube'></i> Eclipse Project</a>
 <a href="https://projects.eclipse.org/projects/eclipse.equinox">Equinox</a>
 <a href="https://projects.eclipse.org/projects/eclipse.platform">Platform</a>
 <a href="${scriptBase}swt/index.html">&nbsp;&nbsp;&bullet;&nbsp;SWT</a>
 <a href="https://projects.eclipse.org/projects/eclipse.jdt">Java Development Tools</a>
 <a href="https://projects.eclipse.org/projects/eclipse.pde">Plug-in Development Environment</a>
+`;
+
+let githubAside = `
 <span class="separator"><i class='fa fa-github'></i> GitHub</span>
 <a href="https://github.com/eclipse-equinox/">Equinox</a>
 <a href="https://github.com/eclipse-platform/">Platform</a>
 <a href="https://github.com/eclipse-jdt/">Java Development Tools</a>
 <a href="https://github.com/eclipse-pde/">Plug-in Development Environment</a>
+`;
+
+let markdownAside = `
 <span class="separator"><i class='fa fa-edit'></i> Markdown</span>
 <a href="${scriptBase}markdown/index.html?file=eclipse-platform/eclipse.platform/master/docs">Platform</a>
 <a href="${scriptBase}markdown/index.html?file=eclipse-platform/eclipse.platform.ui/master/docs">Platform UI</a>
 <a href="${scriptBase}markdown/index.html?file=eclipse-pde/eclipse.pde/master/docs">PDE</a>
 <a href="${scriptBase}markdown/index.html?file=eclipse-equinox/p2/master/docs">Equinox p2</a>
 <a href="${scriptBase}markdown/index.html?file=eclipse-ide/.github/main/">Eclipse IDE</a>
+`;
+
+let defaultAside = toElements(`
+${projectAside}
+${githubAside}
+${markdownAside}
 `);
+
+let tableOfContentsAside = '';
 
 let selfContent = document.documentElement.outerHTML;
 
@@ -139,6 +154,7 @@ function generateBody() {
 					</div>
 				</div>
 				${generateAside()}
+				${tableOfContentsAside}
 			</div>
 		</div>
 	</main>
