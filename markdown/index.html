@@ -37,6 +37,59 @@
 			white-space: nowrap;
 		}
 
+		#table-of-contents {
+			padding: 0;
+			margin: 0;
+			margin-left: 0.5em;
+
+		}
+
+		.tl1 {
+			margin-left: 0em;
+			font-size: 90%;
+		}
+
+		.tl2 {
+			margin-left: 0.5em;
+			font-size: 85%;
+		}
+
+		.tl3 {
+			margin-left: 1.0em;
+			font-size: 80%;
+		}
+
+		.tl4 {
+			margin-left: 1.5em;
+			font-size: 75%;
+		}
+
+		.tl5 {
+			margin-left: 2.0em;
+			font-size: 75%;
+		}
+
+		.tl6 {
+			margin-left: 2.5em;
+			font-size: 75%;
+		}
+
+		#toc {
+			float: right;
+			position: sticky;
+			top: 0;
+			margin-top: 1.5em;
+		}
+
+		toc .sideitem {
+			padding: 0.5em 0.5em;
+		}
+
+		#toc h2 {
+			margin-bottom: 0.5em;
+			padding-bottom: 0.0em;
+		}
+
 		/*]]>*/
 	</style>
 </head>
@@ -56,18 +109,45 @@
 	<script>
 		//<![CDATA[
 
-		generate();
-
-		const targetElement = document.getElementById('markdown-target');
-		const file = new URLSearchParams(window.location.search).get('file');
-		const parts = /(?<org>[^/]+)\/(?<repo>[^/]+)\/(?<branch>[^/]+)\/(?<path>.*)/.exec(file);
 		const repoNames = {
 			"eclipse-platform/eclipse.platform": "Platform",
 			"eclipse-platform/eclipse.platform.ui": "Platform UI",
+			"eclipse-platform/www.eclipse.org-eclipse": "Eclipse Website",
 			"eclipse-pde/eclipse.pde": "PDE",
 			"eclipse-equinox/p2": "Equinox p2",
 			"eclipse-ide/.github": "Eclipse IDE",
 		};
+
+		const file = new URLSearchParams(window.location.search).get('file');
+		const parts = /(?<org>[^/]+)\/(?<repo>[^/]+)\/(?<branch>[^/]+)\/(?<path>.*)/.exec(file);
+		const org = parts == null ? '' : parts.groups.org;
+		const repo = parts == null ? '' : parts.groups.repo;
+		const branch = parts == null ? '' : parts.groups.branch;
+		const path = parts == null ? '' : parts.groups.path;
+
+		const selfHosted = repo == 'www.eclipse.org-eclipse';
+		const repoName = parts == null ? '' : repoNames[`${org}/${repo}`];
+
+		defaultAside = toElements(`${markdownAside}`);
+
+		if (parts != null && parts.groups.path.endsWith('.md')) {
+			tableOfContentsAside = `
+<div id="toc" class="col-md-6">
+	<aside
+		<ul class="ul-left-nav">
+			<div  class="sideitem">
+				<h2>Table of Contents</h2>
+				<div id="toc-target">
+				</div>
+			</div>
+		</ul>
+	</aside>
+</div>`;
+		}
+
+		generate();
+
+		const targetElement = document.getElementById('markdown-target');
 
 		function niceName(name) {
 			return name.replaceAll(/[_-]/g, ' ').replaceAll(/([a-z])([A-Z])/g, '$1 $2').replace(/^([a-z])/, letter => letter.toLocaleUpperCase())
@@ -101,19 +181,81 @@
 			targetElement.innerHTML = heading + fileElements.join('');
 		}
 
+		function generateMarkdown(logicalBaseURL, response) {
+			if (response instanceof Array) {
+				generateFileList(response)
+			} else {
+				const text = response;
+				const editLink = `<a id="edit-markdown-link" href=""><span class="orange">\u270E Improve this page</span></a>\n`;
+				marked.use(markedGfmHeadingId.gfmHeadingId());
+				marked.use({
+					hooks: {
+						postprocess(html) {
+							return `${html}`;
+						}
+					}
+				});
+				targetElement.innerHTML = editLink + marked.parse(text);
+
+
+				const headings = markedGfmHeadingId.getHeadingList();
+				const headingText = `
+			<ul id="table-of-contents">
+			${headings.map(({id, raw, level}) => `<li class="tl${level}"><a href="#${id}">${raw}</a></li>`).join(' ')}
+			</ul>
+			`;
+				document.getElementById('toc-target').replaceChildren(...toElements(headingText));
+
+				const imgs = targetElement.querySelectorAll("img[src]");
+				for (const img of imgs) {
+					const src = img.getAttribute('src');
+					if (!src.startsWith('http')) {
+						img.src = `https://raw.githubusercontent.com/${org}/${repo}/${branch}/${src}`;
+					}
+				}
+
+				const as = targetElement.querySelectorAll("a[href]");
+				for (const a of as) {
+					const href = a.getAttribute('href');
+					if (href == null) {
+						continue;
+					}
+
+					if (href.startsWith('#')) {
+						a.setAttribute('href', fixHash(href));
+						continue;
+					}
+
+					const logicalHref = new URL(href, logicalBaseURL);
+					const url = new URL(window.location);
+					url.hash = fixHash(logicalHref.hash);
+					if (logicalHref.hostname == 'api.github.com') {
+						const parts = /\/repos\/(?<org>[^/]+)\/(?<repo>[^/]+)\/contents\/(?<path>.*)/.exec(logicalHref.pathname);
+						if (parts != null) {
+							url.search = `?file=${parts.groups.org}/${parts.groups.repo}/${branch}/${parts.groups.path}`;
+							a.href = url;
+						}
+					} else if (logicalHref.hostname == 'github.com') {
+						const parts = /(?<org>[^/]+)\/(?<repo>[^/]+)\/blob\/(?<branch>[^/]+)\/(?<path>.*)/.exec(logicalHref.pathname);
+						if (parts != null) {
+							url.search = `?file=${parts.groups.org}/${parts.groups.repo}/${parts.groups.branch}/${parts.groups.path}`;
+							a.href = url;
+						}
+					}
+				}
+
+				document.getElementById('edit-markdown-link').href = `https://github.com/${org}/${repo}/blob/${branch}/${path}`;
+			}
+		}
+
+
 		if (parts == null || parts.length == 0) {
 			targetElement.innerHTML = 'No well-formed query parameter of the form <code>?file=org/repo/branch/path</code> has been specified.';
 		} else {
-			const org = parts.groups.org;
-			const repo = parts.groups.repo;
-			const repoName = repoNames[`${org}/${repo}`];
 			if (repoName == null) {
 				targetElement.innerHTML = `The repository ${org}/${repo} is not on the allowed list.`;
 			} else {
 				document.title = `${repoName} Documentation | Eclipse Project`;
-
-				const branch = parts.groups.branch;
-				const path = parts.groups.path;
 
 				const breadcrumb = document.querySelector(".breadcrumb");
 				const normalizedPath = path.replace(/\/$/, '');
@@ -125,56 +267,17 @@
 				}
 
 				const logicalBaseURL = new URL(`https://api.github.com/repos/${org}/${repo}/contents/${path}`);
-				const mdLocation = `${logicalBaseURL}?ref=${branch}`;
-
-				sendRequest(mdLocation, request => {
-					const response = JSON.parse(request.responseText);
-					if (response instanceof Array) {
-						generateFileList(response)
+				fetch(selfHosted ? `${scriptBase}${path}` : `${logicalBaseURL}?ref=${branch}`).then(response => {
+					console.log(response);
+					return response.text();
+				}).then(text => {
+					if (text.startsWith('<')) {
+						console.log('Unsupported');
+					} else if (text.startsWith('{') || text.startsWith('[')) {
+						const json = JSON.parse(text);
+						generateMarkdown(logicalBaseURL, json instanceof Array ? json : blobToText(json.content));
 					} else {
-						const text = blobToText(response.content);
-						const editLink = `<a id="edit-markdown-link" href=""><span class="orange">\u270E Improve this page</span></a>\n`;
-						targetElement.innerHTML = editLink + marked.use(markedGfmHeadingId.gfmHeadingId()).parse(text);
-
-						const imgs = targetElement.querySelectorAll("img[src]");
-						for (const img of imgs) {
-							const src = img.getAttribute('src');
-							if (!src.startsWith('http')) {
-								img.src = `https://raw.githubusercontent.com/${org}/${repo}/${branch}/${src}`;
-							}
-						}
-
-						const as = targetElement.querySelectorAll("a[href]");
-						for (const a of as) {
-							const href = a.getAttribute('href');
-							if (href == null) {
-								continue;
-							}
-
-							if (href.startsWith('#')) {
-								a.setAttribute('href', fixHash(href));
-								continue;
-							}
-
-							const logicalHref = new URL(href, logicalBaseURL);
-							const url = new URL(window.location);
-							url.hash = fixHash(logicalHref.hash);
-							if (logicalHref.hostname == 'api.github.com') {
-								const parts = /\/repos\/(?<org>[^/]+)\/(?<repo>[^/]+)\/contents\/(?<path>.*)/.exec(logicalHref.pathname);
-								if (parts != null) {
-									url.search = `?file=${parts.groups.org}/${parts.groups.repo}/${branch}/${parts.groups.path}`;
-									a.href = url;
-								}
-							} else if (logicalHref.hostname == 'github.com') {
-								const parts = /(?<org>[^/]+)\/(?<repo>[^/]+)\/blob\/(?<branch>[^/]+)\/(?<path>.*)/.exec(logicalHref.pathname);
-								if (parts != null) {
-									url.search = `?file=${parts.groups.org}/${parts.groups.repo}/${parts.groups.branch}/${parts.groups.path}`;
-									a.href = url;
-								}
-							}
-						}
-
-						document.getElementById('edit-markdown-link').href = `https://github.com/${org}/${repo}/blob/${branch}/${path}`;
+						generateMarkdown(logicalBaseURL, text);
 					}
 				});
 			}
