@@ -9,6 +9,36 @@
 	<script src="https://cdn.jsdelivr.net/npm/marked/lib/marked.umd.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/marked-gfm-heading-id/lib/index.umd.js"></script>
 	<script src="../project.js"></script>
+	<style>
+		/* <![CDATA[*/
+
+		img {
+			max-width: 100%;
+		}
+
+		th,
+		td {
+			border: 1px solid black;
+			padding: 0.2ex 1em;
+		}
+
+		th {
+			text-align: center;
+		}
+
+		td {
+			text-align: left;
+		}
+
+		table {
+			border: 1px solid black;
+			border-collapse: collapse;
+			margin-bottom: 2ex;
+			white-space: nowrap;
+		}
+
+		/*]]>*/
+	</style>
 </head>
 
 <body>
@@ -24,6 +54,8 @@
 	</main>
 
 	<script>
+		//<![CDATA[
+
 		generate();
 
 		const targetElement = document.getElementById('markdown-target');
@@ -147,6 +179,8 @@
 				});
 			}
 		}
+
+		//]]>
 	</script>
 
 </body>
