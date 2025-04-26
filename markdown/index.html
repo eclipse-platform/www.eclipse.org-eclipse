@@ -160,6 +160,18 @@
 			return hash.toLowerCase();
 		}
 
+		function toSiteURL(url) {
+			if (url.hostname == 'api.github.com' && url.pathname.startsWith('/repos/eclipse-platform/www.eclipse.org-eclipse/contents')) {
+				const result = new URL(window.location);
+				result.pathname = url.pathname.replace(/\/repos\/eclipse-platform\/www.eclipse.org-eclipse\/contents/, '/eclipse')
+				result.hash = url.hash;
+				result.search = url.search;
+				return result;
+			} else {
+				return null;
+			}
+		}
+
 		function generateFileList(files) {
 			const fileElements = files.map(file => {
 				const fileURL = new URL(file.url);
@@ -212,8 +224,18 @@
 				const imgs = targetElement.querySelectorAll("img[src]");
 				for (const img of imgs) {
 					const src = img.getAttribute('src');
+					if (src == null) {
+						continue;
+					}
+
 					if (!src.startsWith('http')) {
-						img.src = `https://raw.githubusercontent.com/${org}/${repo}/${branch}/${src}`;
+						const logicalSrc = new URL(src, logicalBaseURL);
+						const siteURL = toSiteURL(logicalSrc);
+						if (siteURL != null) {
+							img.src = siteURL;
+						} else {
+							img.src = `https://raw.githubusercontent.com/${org}/${repo}/${branch}/${src}`;
+						}
 					}
 				}
 
@@ -230,6 +252,14 @@
 					}
 
 					const logicalHref = new URL(href, logicalBaseURL);
+					if (!logicalHref.pathname.endsWith('.md')) {
+						const siteURL = toSiteURL(logicalHref);
+						if (siteURL != null) {
+							a.href = siteURL;
+						}
+						continue;
+					}
+
 					const url = new URL(window.location);
 					url.hash = fixHash(logicalHref.hash);
 					if (logicalHref.hostname == 'api.github.com') {
