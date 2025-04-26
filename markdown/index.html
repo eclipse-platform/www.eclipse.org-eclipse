@@ -110,6 +110,7 @@
 		//<![CDATA[
 
 		const repoNames = {
+			"eclipse-platform/.github": "Platform .github",
 			"eclipse-platform/eclipse.platform": "Platform",
 			"eclipse-platform/eclipse.platform.ui": "Platform UI",
 			"eclipse-platform/www.eclipse.org-eclipse": "Eclipse Website",
@@ -125,10 +126,12 @@
 		const branch = parts == null ? '' : parts.groups.branch;
 		const path = parts == null ? '' : parts.groups.path;
 
+		const isLocalHost = window.location.hostname == 'localhost';
 		const selfHosted = repo == 'www.eclipse.org-eclipse';
 		const repoName = parts == null ? '' : repoNames[`${org}/${repo}`];
 
-		defaultAside = toElements(`${markdownAside}`);
+		const localSiteNavigator = isLocalHost ? `<a href="${scriptBase}markdown/index.html?file=eclipse-platform/www.eclipse.org-eclipse/master/">Eclipse Website Navigator</a>` : '';
+		defaultAside = toElements(`${markdownAside}${localSiteNavigator}`);
 
 		if (parts != null && parts.groups.path.endsWith('.md')) {
 			tableOfContentsAside = `
@@ -160,8 +163,8 @@
 		function generateFileList(files) {
 			const fileElements = files.map(file => {
 				const fileURL = new URL(file.url);
-				const fileName = fileURL.pathname.endsWith('/docs') || fileURL.pathname.endsWith('/profile') ?
-					/(?<filename>[^/]+)$/.exec(fileURL.pathname) :
+				const fileName = fileURL.pathname.endsWith('/docs') || fileURL.pathname.endsWith('/profile') || fileURL.pathname.endsWith('/') || isLocalHost && file['type'] == 'dir' ?
+					/(?<filename>[^./][^/]+)\/?$/.exec(fileURL.pathname) :
 					/(?<filename>[^/]+)\.md$/.exec(fileURL.pathname);
 				if (fileName == null) {
 					return '';
@@ -170,7 +173,7 @@
 				const parts = /\/repos\/(?<org>[^/]+)\/(?<repo>[^/]+)\/contents\/(?<path>.*)/.exec(fileURL.pathname);
 				const url = new URL(window.location);
 				url.hash = '';
-				url.search = `?file=${parts.groups.org}/${parts.groups.repo}/${branch}/${parts.groups.path}`;
+				url.search = `?file=${parts.groups.org}/${parts.groups.repo}/${branch}/${parts.groups.path}`.replace('//', '/');
 				const label = niceName(fileName.groups.filename);
 				return `<div><a href="${url}">${label}<a/></div>\n`;
 			});
@@ -183,7 +186,7 @@
 
 		function generateMarkdown(logicalBaseURL, response) {
 			if (response instanceof Array) {
-				generateFileList(response)
+				generateFileList(response);
 			} else {
 				const text = response;
 				const editLink = `<a id="edit-markdown-link" href=""><span class="orange">\u270E Improve this page</span></a>\n`;
@@ -266,20 +269,51 @@
 					breadcrumb.append(...toElements(`<li><a href="?file=${org}/${repo}/${branch}${crumbPath}">${segment.length == 0 ? repoName : niceName(segment.replace(/\.md$/, ''))}</a></li>`));
 				}
 
+
 				const logicalBaseURL = new URL(`https://api.github.com/repos/${org}/${repo}/contents/${path}`);
-				fetch(selfHosted ? `${scriptBase}${path}` : `${logicalBaseURL}?ref=${branch}`).then(response => {
-					console.log(response);
-					return response.text();
-				}).then(text => {
-					if (text.startsWith('<')) {
-						console.log('Unsupported');
-					} else if (text.startsWith('{') || text.startsWith('[')) {
-						const json = JSON.parse(text);
-						generateMarkdown(logicalBaseURL, json instanceof Array ? json : blobToText(json.content));
-					} else {
-						generateMarkdown(logicalBaseURL, text);
-					}
-				});
+				const apiURL = `${logicalBaseURL}?ref=${branch}`;
+				const defaultURL = selfHosted ? `${scriptBase}${path}` : apiURL;
+
+				function defaultHandler(url) {
+					fetch(url).then(response => {
+						return response.text();
+					}).then(text => {
+						if (text.startsWith('<')) {
+							if (text.startsWith('<img') || text.match(/<ul><li><a href="[^"]+"> Parent Directory<\/a><\/li>/)) {
+								const links = [...text.matchAll(/href="([^./][^"]+?(\.md|\/))"/g).map(match => {
+									return {url: `https://api.github.com/repos/${org}/${repo}/contents/${path}/${match[1]}?ref=${branch}`};
+								})];
+								generateFileList(links);
+							} else if (url != apiURL) {
+								targetElement.innerHTML = `Cannot produce directory listing ${url} redirecting to ${apiURL}.`;
+								defaultHandler(apiURL);
+							} else {
+								targetElement.innerHTML = `Cannot produce directory listing ${url}.`;
+							}
+						} else if (text.startsWith('{') || text.startsWith('[')) {
+							const json = JSON.parse(text);
+							generateMarkdown(logicalBaseURL, json instanceof Array ? json : blobToText(json.content));
+						} else {
+							generateMarkdown(logicalBaseURL, text);
+						}
+					});
+				}
+
+				if (!selfHosted && isLocalHost) {
+					const localURL = new URL(window.location);
+					localURL.hash = '';
+					localURL.search = '';
+					localURL.pathname = `${org}/${repo}/${branch}/${path}`;
+					fetch(localURL, {method: 'HEAD', cache: "no-store"}).then(response => {
+						if (response.status == 200 && response.headers.get('Server') == 'org.eclipse.oomph.internal.util.HTTPServer') {
+							defaultHandler(localURL);
+						} else {
+							defaultHandler(defaultURL);
+						}
+					});
+				} else {
+					defaultHandler(defaultURL);
+				}
 			}
 		}
 
