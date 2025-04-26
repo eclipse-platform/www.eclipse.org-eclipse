@@ -153,7 +153,14 @@
 		const targetElement = document.getElementById('markdown-target');
 
 		function niceName(name) {
-			return name.replaceAll(/[_-]/g, ' ').replaceAll(/([a-z])([A-Z])/g, '$1 $2').replace(/^([a-z])/, letter => letter.toLocaleUpperCase())
+			const result = name.replaceAll(/[_-]/g, ' ').replaceAll(/([a-z])([A-Z])/g, '$1 $2').replace(/^([a-z])/, letter => letter.toLocaleUpperCase())
+			if (result == 'Platform isv') {
+				return 'Platform ISV';
+			}
+			if (result == 'Api' || result == 'Pde' || result == 'Jdt') {
+				return result.toLocaleUpperCase();
+			}
+			return result;
 		}
 
 		function fixHash(hash) {
@@ -281,6 +288,24 @@
 			}
 		}
 
+		function generateNewsBreadcrumb(normalizedPath) {
+			if (selfHosted) {
+				const parts = /news\/(?<version>[^/]+)\/(?<filename>[^/]+).md/.exec(normalizedPath);
+				if (parts != null) {
+					const breadcrumb = document.querySelector(".breadcrumb");
+					const version = parts.groups.version;
+					const filename = parts.groups.filename;
+					const lastPart = filename == 'index' ? '' : `<li>${niceName(filename)}</li>`;
+					breadcrumb.append(...toElements(`
+<li><a href="${scriptBase}news/index.html">News</a></li>
+<li><a href="${scriptBase}markdown/index.html?file=eclipse-platform/www.eclipse.org-eclipse/master/news/${version}/index.md">${version}</a></li>
+${lastPart}
+`));
+					return true;
+				}
+			}
+			return false;
+		}
 
 		if (parts == null || parts.length == 0) {
 			targetElement.innerHTML = 'No well-formed query parameter of the form <code>?file=org/repo/branch/path</code> has been specified.';
@@ -290,15 +315,16 @@
 			} else {
 				document.title = `${repoName} Documentation | Eclipse Project`;
 
-				const breadcrumb = document.querySelector(".breadcrumb");
 				const normalizedPath = path.replace(/\/$/, '');
-				const segments = normalizedPath == '' ? [''] : ['', ...normalizedPath.split('/')];
-				let crumbPath = '';
-				for (const segment of segments) {
-					crumbPath = (crumbPath == '/' ? '/' : crumbPath + '/') + segment;
-					breadcrumb.append(...toElements(`<li><a href="?file=${org}/${repo}/${branch}${crumbPath}">${segment.length == 0 ? repoName : niceName(segment.replace(/\.md$/, ''))}</a></li>`));
+				if (!generateNewsBreadcrumb(normalizedPath)) {
+					const breadcrumb = document.querySelector(".breadcrumb");
+					const segments = normalizedPath == '' ? [''] : ['', ...normalizedPath.split('/')];
+					let crumbPath = '';
+					for (const segment of segments) {
+						crumbPath = (crumbPath == '/' ? '/' : crumbPath + '/') + segment;
+						breadcrumb.append(...toElements(`<li><a href="?file=${org}/${repo}/${branch}${crumbPath}">${segment.length == 0 ? repoName : niceName(segment.replace(/\.md$/, ''))}</a></li>`));
+					}
 				}
-
 
 				const logicalBaseURL = new URL(`https://api.github.com/repos/${org}/${repo}/contents/${path}`);
 				const apiURL = `${logicalBaseURL}?ref=${branch}`;
