@@ -7,6 +7,9 @@ window.onscroll = function() {
 
 const scriptBase = new URL(".", document.currentScript.src).href
 const apiGitHub = 'https://api.github.com/repos/eclipse-platform/www.eclipse.org-eclipse/contents/';
+const markdownBase = `${scriptBase}markdown/index.html?file=`;
+const selfHostedMarkdownBase = `${markdownBase}eclipse-platform/www.eclipse.org-eclipse/master/`;
+const newsBase = `${scriptBase}news/news.html?file=`;
 
 let meta = toElements(`
 <meta charset="utf-8">
@@ -35,7 +38,7 @@ let defaultNav = toElements(`
 <a class="fa-book" href="https://help.eclipse.org/" title="Documentation: help.eclipse.org">
 	Documentation<p>help.eclipse.org</p>
 </a>
-<a class="fa-users" href="https://github.com/eclipse-ide/.github/blob/main/CONTRIBUTING.md"
+<a class="fa-users" href="${markdownBase}eclipse-ide/.github/main/CONTRIBUTING.md"
 	title="Contribution: Environment Setup">
 	Contribution<p>Environment Setup</p>
 </a>
@@ -85,6 +88,13 @@ ${markdownAside}
 let tableOfContentsAside = '';
 
 let selfContent = document.documentElement.outerHTML;
+
+function redirect(href) {
+	const location = href != null ? href : new URL(`${scriptBase}markdown/index.html?file=eclipse-platform/www.eclipse.org-eclipse/master${window.location.pathname.replace(/^\/eclipse/, '').replace(/\.html$/, '.md')}`);
+	const body = document.querySelector('body')
+	replaceChildren(body, "body", ...toElements(`<div>If you are not redirected automatically, 	follow this <a href='${location}'>link</a>.</div>`));
+	window.location = location;
+}
 
 function generate() {
 	selfContent = document.documentElement.innerHTML;
@@ -510,12 +520,128 @@ function parseHTML(request, handler) {
 	handler(htmlDocument);
 }
 
+const newAndNoteworthySubjects = {
+	platform: {
+		label: 'New features in the Platform and Equinox.'
+	},
+	jdt: {
+		label: 'New features for Java developers.'
+	},
+	platform_isv: {
+		label: 'New APIs in the Platform and Equinox.'
+	},
+	pde: {
+		label: 'New features for Plug-in developers'
+	}
+};
+
+function generateNewAndNoteworthy(element) {
+	const id = 'new-and-noteworthy-target';
+	element.id = id;
+	getFileList(apiGitHub + 'news/', /4\.([0-9]+)/, files => {
+		const items = files.slice(0, 12).map(file => {
+			const match = file.match;
+			const version = `4.${match[1]}`;
+			const minorVersionNumber = Number(match[1]);
+			const offset = minorVersionNumber - 11;
+			const year = 2019 + Math.floor(offset / 4);
+			let quarter;
+			switch (offset % 4) {
+				case 0:
+					{
+						quarter = "03";
+						break;
+					}
+				case 1:
+					{
+						quarter = "06";
+						break;
+					}
+				case 2:
+					{
+						quarter = "09";
+						break;
+					}
+				default:
+					{
+						quarter = "12";
+						break;
+					}
+			}
+			const alias = year + "-" + quarter;
+			const verisonId = `${id}-${version}-a`;
+
+			/*
+				getFileList(apiGitHub + `news/${version}`, /.*(?:\.md|\.html)$/, subjects => {
+					const properSubjects = new Map();
+					for (const subject of subjects) {
+						const subjectMatch = /(?<name>pde|jdt|platform|platform_isv)\.(?<extension>md|html)/.exec(subject.name);
+						if (subjectMatch != null) {
+							const name = subjectMatch.groups.name
+							const url = `${selfHostedMarkdownBase}news/${version}/${subject.name}`;
+							if (subjectMatch.groups.extension == 'html') {
+								if (!properSubjects.has(name)) {
+									properSubjects.set(name, url);
+								}
+							} else {
+								properSubjects.set(name, url);
+							}
+						}
+					}
+
+					const children = Object.entries(newAndNoteworthySubjects).map(entry => {
+						const url = properSubjects.get(entry[0]);
+						if (url == null) {
+							return '';
+						}
+						return `<li><a href="${url}">${entry[1].label}</a></li>`;
+					});
+
+					const subjectTarget = document.getElementById(verisonId);
+					subjectTarget.replaceChildren(...toElements(children));
+				});
+			}
+			*/
+
+			const defaultFileExtension = minorVersionNumber >= 36 ? '.md' : '.html';
+			const defaultBaseURL = minorVersionNumber >= 36 ? `${selfHostedMarkdownBase}news/${version}/` : `${newsBase}${version}/`;
+			const defaultChildren = Object.entries(newAndNoteworthySubjects).map(entry => {
+				return `<li><a href="${defaultBaseURL}${entry[0]}${defaultFileExtension}">${entry[1].label}</a></li>`;
+			});
+
+			return `
+<p><a id='${verisonId}-a' href="${defaultBaseURL}index${defaultFileExtension}">${alias} (4.${match[1]}) release:</a></p>
+	<blockquote>
+	<ul id='${verisonId}'>
+		${defaultChildren.join('\n')}
+	</ul>
+	</blockquote>
+`;
+		});
+
+		const target = document.getElementById(id);
+		target.replaceChildren(...toElements(`
+<h1>Eclipse - New and Noteworthy</h1>
+<p>
+This page links to the recent new and noteworthy changes in the Eclipse SDK project.
+</p>
+<ul>
+	${items.join('\n')}
+</ul>
+	` ));
+	},
+		request => {
+			const target = document.getElementById(id);
+			target.replaceChildren(...toElements(`<pre>Problem: ${request.responseText}</pre>`));
+		});
+}
+
 function load(location) {
 	const baseURI = document.baseURI;
 	const effectiveLocation = location ?? getQueryParameter('file') ?? 'index.html';
 	const resolvedLocation = new URL(effectiveLocation, baseURI);
 	sendRequest(resolvedLocation, request => {
-		if (request.status != 200) {
+		if (request.status >= 400) {
 			const main = document.getElementById('midcolumn');
 			if (window.location.protocol == 'file:') {
 				main.append(...generateFileProtocolFailure(resolvedLocation));
@@ -560,23 +686,34 @@ function load(location) {
 	});
 }
 
-function getFileList(location, pattern, handler) {
+function getFileList(location, pattern, handler, errorHandler) {
 	sendRequest(location, request => {
-		const files = JSON.parse(request.responseText);
 		const map = new Map();
+		if (request.status >= 400) {
+			if (errorHandler != null) {
+				errorHandler(request);
+			}
+			return;
+		}
+		const files = JSON.parse(request.responseText);
+		let count = 0;
 		for (const file of files) {
 			const match = pattern.exec(file.name);
 			if (match) {
-				file.match = match;
-				let ordinal = 0.0;
-				for (let index = 1; index < match.length; ++index) {
-					const x = 100000000;
-					const segment = match[index];
-					ordinal = ordinal * x + Number(segment ?? '0');
-				}
-				const existingValue = map.get(ordinal);
-				if (existingValue == null || existingValue.name.endsWith('.php')) {
-					map.set(ordinal, file);
+				if (match.length > 1) {
+					file.match = match;
+					let ordinal = 0.0;
+					for (let index = 1; index < match.length; ++index) {
+						const x = 100000000;
+						const segment = match[index];
+						ordinal = ordinal * x + Number(segment ?? '0');
+					}
+					const existingValue = map.get(ordinal);
+					if (existingValue == null || existingValue.name.endsWith('.php')) {
+						map.set(ordinal, file);
+					}
+				} else {
+					map.set(count++, file);
 				}
 			}
 		}
