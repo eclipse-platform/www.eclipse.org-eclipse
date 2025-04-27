@@ -7,9 +7,9 @@ window.onscroll = function() {
 
 const scriptBase = new URL(".", document.currentScript.src).href
 const apiGitHub = 'https://api.github.com/repos/eclipse-platform/www.eclipse.org-eclipse/contents/';
-const markdownBase = `${scriptBase}markdown/index.html?file=`;
-const selfHostedMarkdownBase = `${markdownBase}eclipse-platform/www.eclipse.org-eclipse/master/`;
+const markdownBase = `${scriptBase}markdown/?file=`;
 const newsBase = `${scriptBase}news/news.html?file=`;
+const selfHostedMarkdownBase = `${markdownBase}eclipse-platform/www.eclipse.org-eclipse/master/`;
 
 let meta = toElements(`
 <meta charset="utf-8">
@@ -46,7 +46,7 @@ let defaultNav = toElements(`
 	title="Support: Discussions">
 	Support<p>Discussions</p>
 </a>
-<a class="fa-newspaper-o" href="${scriptBase}news/news.html"
+<a class="fa-newspaper-o" href="${scriptBase}news/"
 	title="News: Noteworthy">
 	News<p>Noteworthy</p>
 </a>
@@ -57,7 +57,7 @@ let projectAside = `
 <a class="separator" href="https://projects.eclipse.org/projects/eclipse"><i class='fa fa-cube'></i> Eclipse Project</a>
 <a href="https://projects.eclipse.org/projects/eclipse.equinox">Equinox</a>
 <a href="https://projects.eclipse.org/projects/eclipse.platform">Platform</a>
-<a href="${scriptBase}swt/index.html">&nbsp;&nbsp;&bullet;&nbsp;SWT</a>
+<a href="${scriptBase}swt">&nbsp;&nbsp;&bullet;&nbsp;SWT</a>
 <a href="https://projects.eclipse.org/projects/eclipse.jdt">Java Development Tools</a>
 <a href="https://projects.eclipse.org/projects/eclipse.pde">Plug-in Development Environment</a>
 `;
@@ -72,11 +72,11 @@ let githubAside = `
 
 let markdownAside = `
 <span class="separator"><i class='fa fa-edit'></i> Markdown</span>
-<a href="${scriptBase}markdown/index.html?file=eclipse-platform/eclipse.platform/master/docs">Platform</a>
-<a href="${scriptBase}markdown/index.html?file=eclipse-platform/eclipse.platform.ui/master/docs">Platform UI</a>
-<a href="${scriptBase}markdown/index.html?file=eclipse-pde/eclipse.pde/master/docs">PDE</a>
-<a href="${scriptBase}markdown/index.html?file=eclipse-equinox/p2/master/docs">Equinox p2</a>
-<a href="${scriptBase}markdown/index.html?file=eclipse-ide/.github/main/">Eclipse IDE</a>
+<a href="${markdownBase}eclipse-platform/eclipse.platform/master/docs">Platform</a>
+<a href="${markdownBase}eclipse-platform/eclipse.platform.ui/master/docs">Platform UI</a>
+<a href="${markdownBase}eclipse-pde/eclipse.pde/master/docs">PDE</a>
+<a href="${markdownBase}eclipse-equinox/p2/master/docs">Equinox p2</a>
+<a href="${markdownBase}eclipse-ide/.github/main/">Eclipse IDE</a>
 `;
 
 let defaultAside = toElements(`
@@ -90,9 +90,9 @@ let tableOfContentsAside = '';
 let selfContent = document.documentElement.outerHTML;
 
 function redirect(href) {
-	const location = href != null ? href : new URL(`${scriptBase}markdown/index.html?file=eclipse-platform/www.eclipse.org-eclipse/master${window.location.pathname.replace(/^\/eclipse/, '').replace(/\.html$/, '.md')}`);
+	const location = href != null ? `${href}${window.location.search}${window.location.hash}`  : new URL(`${markdownBase}eclipse-platform/www.eclipse.org-eclipse/master${window.location.pathname.replace(/^\/eclipse/, '').replace(/\.html$/, '.md')}`);
 	const body = document.querySelector('body')
-	replaceChildren(body, "body", ...toElements(`<div>If you are not redirected automatically, 	follow this <a href='${location}'>link</a>.</div>`));
+	replaceChildren(body, "body", ...toElements(`<div style="display: none">If you are not redirected automatically, 	follow this <a href='${location}'>link</a>.</div>`));
 	window.location = location;
 }
 
@@ -377,7 +377,7 @@ function generateNav() {
 	return `
 <div class="header_nav">
 	<div class="col-xs-24 col-md-10 vcenter">
-		<a href="${scriptBase}index.html">
+		<a href="${scriptBase}">
 			<img src="${scriptBase}eclipse.svg" alt="The Main Index Page" xwidth="50%" xheight="auto" class="img-responsive header_nav_logo"/>
 		</a>
 	</div><!-- NO SPACES

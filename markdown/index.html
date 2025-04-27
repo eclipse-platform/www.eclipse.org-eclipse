@@ -96,7 +96,7 @@
 
 <body>
 	<div data-generate="generateDefaultBreadcrumb(this)">
-		<a href="../index.html">Eclipse</a>
+		<a href="../">Eclipse</a>
 	</div>
 
 	<div data-generate="generateDefaults(this)">
@@ -130,7 +130,7 @@
 		const selfHosted = repo == 'www.eclipse.org-eclipse';
 		const repoName = parts == null ? '' : repoNames[`${org}/${repo}`];
 
-		const localSiteNavigator = isLocalHost ? `<a href="${scriptBase}markdown/index.html?file=eclipse-platform/www.eclipse.org-eclipse/master/">Eclipse Website Navigator</a>` : '';
+		const localSiteNavigator = isLocalHost ? `<a href="${markdownBase}eclipse-platform/www.eclipse.org-eclipse/master/">Eclipse Website Navigator</a>` : '';
 		defaultAside = toElements(`${markdownAside}${localSiteNavigator}`);
 
 		if (parts != null && parts.groups.path.endsWith('.md')) {
@@ -297,8 +297,8 @@
 					const filename = parts.groups.filename;
 					const lastPart = filename == 'index' ? '' : `<li>${niceName(filename)}</li>`;
 					breadcrumb.append(...toElements(`
-<li><a href="${scriptBase}news/index.html">News</a></li>
-<li><a href="${scriptBase}markdown/index.html?file=eclipse-platform/www.eclipse.org-eclipse/master/news/${version}/index.md">${version}</a></li>
+<li><a href="${scriptBase}news/">News</a></li>
+<li><a href="${markdownBase}eclipse-platform/www.eclipse.org-eclipse/master/news/${version}/index.md">${version}</a></li>
 ${lastPart}
 `));
 					return true;
