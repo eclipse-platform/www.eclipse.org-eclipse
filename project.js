@@ -8,8 +8,8 @@ window.onscroll = function() {
 const scriptBase = new URL(".", document.currentScript.src).href
 const apiGitHub = 'https://api.github.com/repos/eclipse-platform/www.eclipse.org-eclipse/contents/';
 const markdownBase = `${scriptBase}markdown/?file=`;
+const selfHostedMarkdownBase = `${scriptBase}markdown/?f=`;
 const newsBase = `${scriptBase}news/news.html?file=`;
-const selfHostedMarkdownBase = `${markdownBase}eclipse-platform/www.eclipse.org-eclipse/master/`;
 
 let meta = toElements(`
 <meta charset="utf-8">
@@ -90,7 +90,9 @@ let tableOfContentsAside = '';
 let selfContent = document.documentElement.outerHTML;
 
 function redirect(href) {
-	const location = href != null ? `${href}${window.location.search}${window.location.hash}`  : new URL(`${markdownBase}eclipse-platform/www.eclipse.org-eclipse/master${window.location.pathname.replace(/^\/eclipse/, '').replace(/\.html$/, '.md')}`);
+	const location = href != null ?
+		`${href}${window.location.search}${window.location.hash}` :
+		new URL(`${selfHostedMarkdownBase}${window.location.pathname.replace(/^\/eclipse\//, '').replace(/\/$/, '/index.html').replace(/\.html$/, '.md')}`);
 	const body = document.querySelector('body')
 	replaceChildren(body, "body", ...toElements(`<div style="display: none">If you are not redirected automatically, 	follow this <a href='${location}'>link</a>.</div>`));
 	window.location = location;
