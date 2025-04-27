@@ -119,7 +119,28 @@
 			"eclipse-ide/.github": "Eclipse IDE",
 		};
 
-		const file = new URLSearchParams(window.location.search).get('file');
+		function getFileParameter() {
+			const search = new URLSearchParams(window.location.search);
+			return search.get('file') ?? (search.get('f') == null ? null : `eclipse-platform/www.eclipse.org-eclipse/master/${search.get('f')}`);
+		}
+
+		function getMarkdownSearch(path) {
+			const parts = /eclipse-platform\/www\.eclipse\.org-eclipse\/master(.*)/.exec(path);
+			if (parts == null) {
+				return `?file=${path}`;
+			}
+			return `?f=${parts[1].replace(/^\//, '')}`;
+		}
+
+		function getMarkdownURL(path) {
+			const parts = /eclipse-platform\/www\.eclipse\.org-eclipse\/master(.*)/.exec(path);
+			if (parts == null) {
+				return `${markdownBase}${path}`;
+			}
+			return `${selfHostedMarkdownBase}${parts[1].replace(/^\//,'')}`;
+		}
+
+		const file = getFileParameter();
 		const parts = /(?<org>[^/]+)\/(?<repo>[^/]+)\/(?<branch>[^/]+)\/(?<path>.*)/.exec(file);
 		const org = parts == null ? '' : parts.groups.org;
 		const repo = parts == null ? '' : parts.groups.repo;
@@ -130,7 +151,7 @@
 		const selfHosted = repo == 'www.eclipse.org-eclipse';
 		const repoName = parts == null ? '' : repoNames[`${org}/${repo}`];
 
-		const localSiteNavigator = isLocalHost ? `<a href="${markdownBase}eclipse-platform/www.eclipse.org-eclipse/master/">Eclipse Website Navigator</a>` : '';
+		const localSiteNavigator = isLocalHost ? `<a href="${getMarkdownURL('eclipse-platform/www.eclipse.org-eclipse/master/')}">Eclipse Website Navigator</a>` : '';
 		defaultAside = toElements(`${markdownAside}${localSiteNavigator}`);
 
 		if (parts != null && parts.groups.path.endsWith('.md')) {
@@ -192,7 +213,7 @@
 				const parts = /\/repos\/(?<org>[^/]+)\/(?<repo>[^/]+)\/contents\/(?<path>.*)/.exec(fileURL.pathname);
 				const url = new URL(window.location);
 				url.hash = '';
-				url.search = `?file=${parts.groups.org}/${parts.groups.repo}/${branch}/${parts.groups.path}`.replace('//', '/');
+				url.search = getMarkdownSearch(`${parts.groups.org}/${parts.groups.repo}/${branch}/${parts.groups.path}`.replace('//', '/'));
 				const label = niceName(fileName.groups.filename);
 				return `<div><a href="${url}">${label}<a/></div>\n`;
 			});
@@ -272,13 +293,13 @@
 					if (logicalHref.hostname == 'api.github.com') {
 						const parts = /\/repos\/(?<org>[^/]+)\/(?<repo>[^/]+)\/contents\/(?<path>.*)/.exec(logicalHref.pathname);
 						if (parts != null) {
-							url.search = `?file=${parts.groups.org}/${parts.groups.repo}/${branch}/${parts.groups.path}`;
+							url.search = getMarkdownSearch(`${parts.groups.org}/${parts.groups.repo}/${branch}/${parts.groups.path}`);
 							a.href = url;
 						}
 					} else if (logicalHref.hostname == 'github.com') {
 						const parts = /(?<org>[^/]+)\/(?<repo>[^/]+)\/blob\/(?<branch>[^/]+)\/(?<path>.*)/.exec(logicalHref.pathname);
 						if (parts != null) {
-							url.search = `?file=${parts.groups.org}/${parts.groups.repo}/${parts.groups.branch}/${parts.groups.path}`;
+							url.search = getMarkdownSearch(`=${parts.groups.org}/${parts.groups.repo}/${parts.groups.branch}/${parts.groups.path}`);
 							a.href = url;
 						}
 					}
@@ -298,7 +319,7 @@
 					const lastPart = filename == 'index' ? '' : `<li>${niceName(filename)}</li>`;
 					breadcrumb.append(...toElements(`
 <li><a href="${scriptBase}news/">News</a></li>
-<li><a href="${markdownBase}eclipse-platform/www.eclipse.org-eclipse/master/news/${version}/index.md">${version}</a></li>
+<li><a href="${getMarkdownURL(`eclipse-platform/www.eclipse.org-eclipse/master/news/${version}/index.md`)}">${version}</a></li>
 ${lastPart}
 `));
 					return true;
@@ -322,7 +343,8 @@ ${lastPart}
 					let crumbPath = '';
 					for (const segment of segments) {
 						crumbPath = (crumbPath == '/' ? '/' : crumbPath + '/') + segment;
-						breadcrumb.append(...toElements(`<li><a href="?file=${org}/${repo}/${branch}${crumbPath}">${segment.length == 0 ? repoName : niceName(segment.replace(/\.md$/, ''))}</a></li>`));
+						const href = getMarkdownSearch(`${org}/${repo}/${branch}${crumbPath}`);
+						breadcrumb.append(...toElements(`<li><a href="${href}">${segment.length == 0 ? repoName : niceName(segment.replace(/\.md$/, ''))}</a></li>`));
 					}
 				}
 
