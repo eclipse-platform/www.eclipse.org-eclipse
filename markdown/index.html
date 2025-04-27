@@ -299,7 +299,7 @@
 					} else if (logicalHref.hostname == 'github.com') {
 						const parts = /(?<org>[^/]+)\/(?<repo>[^/]+)\/blob\/(?<branch>[^/]+)\/(?<path>.*)/.exec(logicalHref.pathname);
 						if (parts != null) {
-							url.search = getMarkdownSearch(`=${parts.groups.org}/${parts.groups.repo}/${parts.groups.branch}/${parts.groups.path}`);
+							url.search = getMarkdownSearch(`${parts.groups.org}/${parts.groups.repo}/${parts.groups.branch}/${parts.groups.path}`);
 							a.href = url;
 						}
 					}
