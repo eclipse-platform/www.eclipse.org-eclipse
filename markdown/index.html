@@ -117,6 +117,7 @@
 			"eclipse-pde/eclipse.pde": "PDE",
 			"eclipse-equinox/p2": "Equinox p2",
 			"eclipse-ide/.github": "Eclipse IDE",
+			"eclipse-simrel/.github": "Eclipse SimRel",
 		};
 
 		function getFileParameter() {
@@ -137,7 +138,7 @@
 			if (parts == null) {
 				return `${markdownBase}${path}`;
 			}
-			return `${selfHostedMarkdownBase}${parts[1].replace(/^\//,'')}`;
+			return `${selfHostedMarkdownBase}${parts[1].replace(/^\//, '')}`;
 		}
 
 		const file = getFileParameter();
@@ -262,7 +263,7 @@
 						if (siteURL != null) {
 							img.src = siteURL;
 						} else {
-							img.src = `https://raw.githubusercontent.com/${org}/${repo}/${branch}/${src}`;
+							img.src = new URL(`https://raw.githubusercontent.com/${org}/${repo}/${branch}/${path}/../${src}`);
 						}
 					}
 				}
@@ -332,7 +333,15 @@ ${lastPart}
 			targetElement.innerHTML = 'No well-formed query parameter of the form <code>?file=org/repo/branch/path</code> has been specified.';
 		} else {
 			if (repoName == null) {
-				targetElement.innerHTML = `The repository ${org}/${repo} is not on the allowed list.`;
+				const url = `https://github.com/${org}/${repo}/${branch}/${path}`;
+				targetElement.innerHTML = `
+<div>
+The repository ${org}/${repo} is not on the allowed list.
+</div>
+<ul>
+<li><a href="{$url}${window.location.hash}">${url}</a></li>
+</ul>
+`;
 			} else {
 				document.title = `${repoName} Documentation | Eclipse Project`;
 
