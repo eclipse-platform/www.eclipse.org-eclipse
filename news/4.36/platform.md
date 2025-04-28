@@ -88,3 +88,33 @@ On a 200% monitor with the feature being **disabled**:
 On a 200% monitor with the feature being **enabled**:
 
 ![Monitor-Specific UI Rescaling Enabled](images/rescaling-enabled.png)
+
+### Support for SVG Images <!-- https://github.com/eclipse-platform/eclipse.platform.swt/pull/1638 -->
+
+Until now, Eclipse only supported loading of raster graphics. This limited the ability to scale icons without
+quality loss and required manual rasterization of SVG files outside to generate icons in different sizes that can
+be embedded in Eclipse products, leading to additional effort and many separate icon files.
+
+Support for vector graphics (SVG) has now been added. Instead of providing multiple rasterized images for different
+sizes, a single SVG file can be referenced. The SVG is rasterized on-the-fly at the required size
+when the image is retrieved at runtime. This ensures optimal image quality for arbitrary scaling factors
+without manual preprocessing. Support for loading raster graphics remains available.
+Together with the [on-the-fly generation of disabled versions of icons](#improved-disabled-icons-generation-),
+only one source file per icon needs to be managed for all required zoom levels as well as their visualization in
+enabled and disabled state.
+
+As part of this change, most icons across all Eclipse SDK bundles have been added as SVGs, and the corresponding paths
+(e.g., in `plugin.xml` files) have been updated accordingly.
+
+This improvement is especially beneficial for High-DPI displays, where crisp, scalable icons enhance the
+visual appearance and usability of the user interface. It also ensures better adaptation to different display
+settings and dynamic scaling scenarios.
+
+**DEPRECATION NOTE:** The obsolete PNG files are now considered deprecated. They may be *removed with Eclipse 2027-06*.
+
+The following screenshots compare the use of raster graphics and vector graphics when loading icons with 125% monitor scaling.
+
+| Image Source | Example at 125% |
+| --- | --- |
+| PNG with scaling mode `nearest` | ![Rendering with PNG icons](images/image_rendering_png.png) |
+| SVG | ![Rendering with SVG icons](images/image_rendering_svg.png) |
