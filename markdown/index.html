@@ -368,6 +368,35 @@ ${lastPart}
 			return false;
 		}
 
+		const specializedBreadcrumpbs = [
+			{pattern: /^eclipse-simrel\/.github\/main\/$/, replacement: {label: 'Eclipse SimRel', href: getMarkdownSearch('eclipse-simrel/.github\/main/profile/README.md')}},
+			{pattern: /^eclipse-simrel\/.github\/main\/(profile\/?)?$/, replacement: null},
+			{pattern: /^eclipse-simrel\/.github\/main\/profile\/README.md?$/, replacement: null},
+			{pattern: /^eclipse-simrel\/.github\/main\/wiki\/?$/, replacement: {label: 'Wiki', href: getMarkdownSearch('eclipse-simrel/.github\/main/wiki/README.md')}},
+			{pattern: /^eclipse-simrel\/.github\/main\/wiki\/README.md$/, replacement: null},
+			{pattern: /^eclipse-simrel\/.github\/main\/wiki\/SimRel\/?$/, replacement: null},
+			{pattern: /^eclipse-simrel\/.github\/main\/wiki\/?$/, replacement: {label: 'Wiki', href: getMarkdownSearch('eclipse-simrel/.github\/main/wiki/README.md')}},
+		];
+
+		function generatBreadcrumbPath(crumbPath, segment) {
+			const fullPath = `${org}/${repo}/${branch}${crumbPath}`;
+			console.log(fullPath);
+
+			for (const matcher of specializedBreadcrumpbs) {
+				const match = matcher.pattern.exec(fullPath);
+				if (match != null) {
+					console.log(match);
+					const replacement = matcher.replacement;
+					return replacement;
+				}
+			}
+
+			return {
+				label: segment.length == 0 ? repoName : niceName(segment.replace(/\.md$/, '')),
+				href: getMarkdownSearch(fullPath)
+			};
+		}
+
 		if (parts == null || parts.length == 0) {
 			targetElement.innerHTML = 'No well-formed query parameter of the form <code>?file=org/repo/branch/path</code> has been specified.';
 		} else {
@@ -391,8 +420,10 @@ The repository ${org}/${repo} is not on the allowed list.
 					let crumbPath = '';
 					for (const segment of segments) {
 						crumbPath = (crumbPath == '/' ? '/' : crumbPath + '/') + segment;
-						const href = getMarkdownSearch(`${org}/${repo}/${branch}${crumbPath}`);
-						breadcrumb.append(...toElements(`<li><a href="${href}">${segment.length == 0 ? repoName : niceName(segment.replace(/\.md$/, ''))}</a></li>`));
+						const crumb = generatBreadcrumbPath(crumbPath, segment);
+						if (crumb != null) {
+							breadcrumb.append(...toElements(`<li><a href="${crumb.href}">${crumb.label}</a></li>`));
+						}
 					}
 				}
 
