@@ -346,6 +346,8 @@ ${headings.map(({id, raw, level}) => `<li class="tl${level}"><a href="#${id}">${
 				if (document.location.hash.includes('#')) {
 					document.location.hash = document.location.hash;
 				}
+
+				updateTocSize();
 			}
 		}
 
@@ -473,6 +475,19 @@ The repository ${org}/${repo} is not on the allowed list.
 				}
 			}
 		}
+
+		function updateTocSize() {
+			const toc = document.getElementById('toc');
+			const tocInner = document.getElementById('table-of-contents');
+			if (toc != null && tocInner != null) {
+				const height = window.document.documentElement.clientHeight;
+				tocInner.style.maxHeight = `${height - tocInner.getBoundingClientRect().top - 20}px`;
+				toc.style.maxHeight = `${height - toc.getBoundingClientRect().top - 20}px`;
+			}
+		}
+
+		window.onscroll = updateTocSize;
+		window.onresize = updateTocSize;
 
 		//]]>
 	</script>
