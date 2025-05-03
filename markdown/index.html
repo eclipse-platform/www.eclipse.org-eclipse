@@ -486,7 +486,14 @@ The repository ${org}/${repo} is not on the allowed list.
 			}
 		}
 
-		window.onscroll = updateTocSize;
+
+		const onscroll = window.onscroll;
+		window.onscroll = function (event) {
+			if (onscroll != null) {
+				onscroll(event);
+			}
+			updateTocSize();
+		};
 		window.onresize = updateTocSize;
 
 		//]]>
