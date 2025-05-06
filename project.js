@@ -722,7 +722,7 @@ function getFileList(location, pattern, handler, errorHandler) {
 		}
 
 		const entries = [...map].sort((a, b) => {
-			return a[0] < b[0]
+			return b[0] - a[0]
 		}).map(entry => entry[1]);
 
 		handler(entries);
