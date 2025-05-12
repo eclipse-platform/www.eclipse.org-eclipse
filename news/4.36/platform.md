@@ -52,6 +52,30 @@ The following screenshots demonstrate the different options.
 ---
 ## Views, Dialogs and Toolbar
 -->
+---
+## Debug
+
+### Custom Labels for Breakpoints <!-- https://github.com/eclipse-platform/eclipse.platform/pull/1803 -->
+Managing breakpoints in large codebases just got easier. You can now assign `custom labels` to breakpoints in the `Breakpoints view`.
+When debugging complex applications, it's common to set numerous breakpoints. Identifying the important ones quickly can be 
+time-consuming and error-prone. 
+
+This new feature allows you to add meaningful labels to breakpoints so that you can locate, categorize, and prioritize them more effectively.
+
+To label a breakpoint, simply right-click on a breakpoint in the `Breakpoints view` and choose `Label`.
+
+![Breakpoint label option in breakpoint context menu](images/Breakpoint-Label-Option.png)
+
+Now provide appropriate label of your choice or leave blank to show default label
+
+![Providing custom label for a breakpoint](images/Breakpoint-Label-Custom.png)
+
+Once a label is assigned, the labeled breakpoint is visually highlighted for easier identification
+
+![Labelled breakpoints in breakpoints view](images/labelled-breakpoint.png)
+
+This improves clarity when navigating through breakpoints during complex debugging sessions, and enhances overall productivity—especially
+in projects with dozens of breakpoints.
 
 ---
 ## General Updates
