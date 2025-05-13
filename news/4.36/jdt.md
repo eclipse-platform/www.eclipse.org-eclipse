@@ -54,6 +54,48 @@ The feature can be disabled in the settings under `Java > Editor > Folding`.
 
 ![Settings view of the folding](images/settings-folding.png)
 
+### Unnecessary SuppressWarnings Clean-up
+
+A new clean-up has been added to remove unnecessary @SuppressWarnings tokens.  To access the new clean-up, go to <b>Source -> Cleanups... -> Configure</b> and on the <b>Unnecessary Code</b> tab, select: <b>Remove unnecessary suppresswarnings tokens</b>.
+
+For example:
+
+![Before unnecessary supppresswarnings clean-up](images/unnecessary-before.png)
+
+is changed to:
+
+![After unnecessary suppresswarnings clean-up](images/unnecessary-after.png)
+
+### Improved Pattern instanceof to Switch Clean-up
+
+The Pattern instanceof to switch clean-up for Java 21 and up has been improved and a number of errors have been fixed from the initial version released in 4.35.  The Pattern instanceof clean-up is available via the <b>Java Feature</b> tab of the clean-up configuration dialog under the <b>Java 21</b> group.
+
+The first improvement is that the clean-up now recognizes checks for <b>null</b> and will use any statements to generate the <b>case null</b> in the switch. A <b>default</b> clause will still be generated based on any else clause (possibly empty if no else clause exists).
+
+The second improvement is that in the case of a Pattern instanceof if statement that has no else clause, but is followed by a <b>return</b> or <b>throws</b> statement, these statements will be considered if a <b>switch expression</b> is possible.
+
+A third improvement is that if a pattern variable is not used by the code in the if statement and the Java version is 22 or higher, then the unnamed variable: "_" will be substituted in the case.
+
+For example:
+
+![Pattern instanceof to switch before](images/pattern-instanceof-before.png)
+
+gets converted to:
+
+![Pattern instanceof to switch after](images/pattern-instanceof-after.png)
+
+### Inliner Improvements for Lambdas
+
+The inline refactoring has been improved with regards to lambda expressions.  In the past, only a simple return statement could be used to inline a method call inside a lambda expression body.  This is now enhanced to include an empty method or multiple statement methods.  Additionally, a lambda method reference is now recognized as a site for inlining a method.  This is important in the case where the original method is being deleted.
+
+For example, if we inline b in the following:
+
+![Inline in lambda before](images/lambda-inline-before.png)
+
+We get:
+
+![Inline in lambda after](images/lambda-inline-after.png)
+
 <!--
 ---
 ## Java Views and Dialogs
