@@ -80,6 +80,18 @@ in projects with dozens of breakpoints.
 ---
 ## General Updates
 
+### Explicit Minimum Windows Version <!-- https://github.com/eclipse-platform/eclipse.platform.swt/pull/2054 -->
+Currently, Eclipse officially supports Windows 10 and 11. By now, this was not validated explicitly but only defined as an implicit requirement.
+When using an unsupported Windows version, it could happen that startup of an Eclipse or plain SWT application failed with a linkage error because unavailable functions of more recent operating system versions are linked.
+
+SWT now validates the supported Windows version during application startup and fails with an according error message if the version is not supported.
+It is supposed to improve comprehensibility of the reason for initialization to fail by logging a better error message.
+
+The minimum Windows version is set to build 14393, which conforms to the original Window 10 and Windows Server 2016 releases.
+In case you are facing issues with the version check, it can be disabled with the system property `swt.disableWindowsVersionCheck`. Note that you may then face linkage errors instead.
+
+**Note:** This validation is not part of the Eclipse update process, i.e., it will not prevent an existing Eclipse installation from being updated on an unsupported Windows version.
+
 ### Monitor-Specific UI Scaling as Default (Windows only)
 
 In the previous releases, a preference to enable an improved, monitor- and resolution-specific UI scaling on Windows was introduced,
