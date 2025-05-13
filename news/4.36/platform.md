@@ -128,7 +128,9 @@ only one source file per icon needs to be managed for all required zoom levels a
 enabled and disabled state.
 
 As part of this change, most icons across all Eclipse SDK bundles have been added as SVGs, and the corresponding paths
-(e.g., in `plugin.xml` files) have been updated accordingly.
+(e.g., in `plugin.xml` files) have been updated accordingly. 
+
+For icons that were not available as SVGs, new SVGs were either created manually or generated automatically. The automatic approach was used in particular for all wizard icons, as these contain many intricate details that make manual redesign challenging. In these cases, the rasterized images were converted to SVGs using the Trace Bitmap feature in Inkscape (accessible via Path -> Trace Bitmap -> Pixel Art). Depending on the complexity of the original image, this process may result in SVG files containing many paths and therefore having a large file size. However, performance tests showed that rasterizing such large SVGs does not noticeably increase the rendering time. This makes the method a practical solution for converting complex raster graphics into SVG format without requiring manual effort.
 
 This improvement is especially beneficial for High-DPI displays, where crisp, scalable icons enhance the
 visual appearance and usability of the user interface. It also ensures better adaptation to different display
