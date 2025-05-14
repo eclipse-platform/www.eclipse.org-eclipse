@@ -26,6 +26,7 @@ writing a comment starting with the specified region start followed by another c
 
 ![code containing comments with the text 'region' and 'endregion'](images/custom_folding_regions_code_expanded.png)
 					
+<br/>
 Custom folding regions can be collapsed like any other folding regions.
 
 ![custom folding regions are collapsed](images/custom_folding_regions_code_collapsed.png)
@@ -37,14 +38,14 @@ This page is available under `Project > Properties > Java Editor > Folding`.
 
 ![Project Properties page for folding](images/folding_property_page.png)
 			
-### New folding mechanism as Default
+### New Folding Mechanism as Default
 
 In the previous release, a preference to enable different kinds of folding was introduced,
 see the news for [4.35](../4.35/jdt.html#new-folding).
 The feature has been further improved since then and is now **enabled by default**.
 
-This feature enhances the code folding mechanism in Eclipse JDT by enabling folding for control statements 
-such as **if**, **while**, **switch**, and **for**.
+This feature enhances the code folding mechanism in Eclipse JDT by enabling folding for control statements
+such as `if`, `while`, `switch`, and `for`.
 It improves code readability and navigation by allowing developers to collapse and expand structured blocks.
 
 ![View of the new folding](images/new-folding.png)
@@ -56,43 +57,50 @@ The feature can be disabled in the settings under `Java > Editor > Folding`.
 
 ### Unnecessary SuppressWarnings Clean-up
 
-A new clean-up has been added to remove unnecessary @SuppressWarnings tokens.  To access the new clean-up, go to <b>Source -> Cleanups... -> Configure</b> and on the <b>Unnecessary Code</b> tab, select: <b>Remove unnecessary suppresswarnings tokens</b>.
-
-For example:
+A new clean-up has been added to remove unnecessary `@SuppressWarnings` tokens.
+To access the new clean-up, go to `Source > Cleanups... > Configure` and on the `Unnecessary Code` tab, select `Remove unnecessary suppresswarnings tokens`, e.g.,
 
 ![Before unnecessary supppresswarnings clean-up](images/unnecessary-before.png)
 
-is changed to:
+is changed to
 
 ![After unnecessary suppresswarnings clean-up](images/unnecessary-after.png)
 
 ### Improved Pattern instanceof to Switch Clean-up
 
-The Pattern instanceof to switch clean-up for Java 21 and up has been improved and a number of errors have been fixed from the initial version released in 4.35.  The Pattern instanceof clean-up is available via the <b>Java Feature</b> tab of the clean-up configuration dialog under the <b>Java 21</b> group.
+The Pattern instanceof to switch clean-up for Java 21 and higher has been improved and a number of errors have been fixed from the initial version released in 4.35.
+The Pattern instanceof clean-up is available via the `Java Feature` tab of the clean-up configuration dialog under the `Java 21` group.
 
-The first improvement is that the clean-up now recognizes checks for <b>null</b> and will use any statements to generate the <b>case null</b> in the switch. A <b>default</b> clause will still be generated based on any else clause (possibly empty if no else clause exists).
+The first improvement is that the clean-up now recognizes checks for `null` and will use any statements to generate the `case null` in the switch.
+A `default` clause will still be generated based on any else clause (possibly empty if no else clause exists).
 
-The second improvement is that in the case of a Pattern instanceof if statement that has no else clause, but is followed by a <b>return</b> or <b>throws</b> statement, these statements will be considered if a <b>switch expression</b> is possible.
+The second improvement is that in the case of a Pattern instanceof if statement that has no else clause,
+but is followed by a `return` or `throws` statement,
+these statements will be taken into consideration for whether a `switch expression` is possible.
 
-A third improvement is that if a pattern variable is not used by the code in the if statement and the Java version is 22 or higher, then the unnamed variable: "_" will be substituted in the case.
+A third improvement is that if a pattern variable is not used by the code in the if statement and the Java version is 22 or higher, then the unnamed variable `_` will be substituted in the case.
 
 For example:
 
 ![Pattern instanceof to switch before](images/pattern-instanceof-before.png)
 
-gets converted to:
+gets converted to
 
 ![Pattern instanceof to switch after](images/pattern-instanceof-after.png)
 
 ### Inliner Improvements for Lambdas
 
-The inline refactoring has been improved with regards to lambda expressions.  In the past, only a simple return statement could be used to inline a method call inside a lambda expression body.  This is now enhanced to include an empty method or multiple statement methods.  Additionally, a lambda method reference is now recognized as a site for inlining a method.  This is important in the case where the original method is being deleted.
+The inline refactoring has been improved with regards to lambda expressions.
+In the past, only a simple return statement could be used to inline a method call inside a lambda expression body.
+This is now enhanced to include an empty method or multiple statement methods.
+Additionally, a lambda method reference is now recognized as a site for inlining a method.
+This is important in the case where the original method is being deleted.
 
-For example, if we inline b in the following:
+For example, if we inline `b` in the following:
 
 ![Inline in lambda before](images/lambda-inline-before.png)
 
-We get:
+we get
 
 ![Inline in lambda after](images/lambda-inline-after.png)
 

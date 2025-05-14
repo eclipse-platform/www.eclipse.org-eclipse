@@ -76,7 +76,7 @@ and preference page paths `Preferences > General > Keys`,
 Avoid other emphasis markup,
 but prefer **bold** over _emphasis_ if you must use one.
 
-Break long sentences into phrases on separate lines to ease editing.
+To ease editing, start each sentence a new line and break long sentences into phrases on separate lines.
 
 See entries in published news documents for correct examples.
 These published news entries have been already reviewed,
