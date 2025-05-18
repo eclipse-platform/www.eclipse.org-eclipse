@@ -7,6 +7,10 @@ Last revised 2025-05-08.
 ### Content Organization 	
 
 As of 4.36, New and Noteworthy is authored in markdown.
+<!-- TODO: Add link to syntax guide.
+ - https://spec.commonmark.org/0.31.2/
+ - https://docs.github.com/en/get-started/writing-on-github
+  -->
 
 #### Markdown Preview
 
@@ -36,6 +40,22 @@ you can add a new section to the document to highlight a feature,
 but best to add a subsection.
 Keep an eye on the automatically-rendered Table of Contents.
 
+#### Template
+
+The following is a template describing the recommended basic structure of a N&N entry:
+```
+### A notworthy new feature 
+<!-- Optional link(s) to issues or PRs as invisible comment -->
+contributed by [Foo Bar](https://github.com/ghost)
+***
+
+Describe the change here. See the instructions in the paragraphs below regarding style recommendation and things to consider.
+You can use all markdown features and ,if required and supported, inline HTML.
+
+An image can say more than a thousand words:
+![Foo View](images/foo-view.png)
+```
+
 ### News Item Title and Description
 
 The whole entry should be a blurb pitched to the Eclipse end-user community,
@@ -59,7 +79,7 @@ and don't repeat yourself.
 The description should be complete sentences, with trailing punctuation.
 
 Make the entry self-contained and mention API classes.
-Do not link to issues and don't promote individuals or third-party products.
+Do not link to issues and don't promote third-party products.
 
 Use active voice, i.e., say "you", not "the user",
 and follow other advice in [Eclipse Doc Style Guide](https://github.com/eclipse-platform/eclipse.platform/blob/master/docs/Eclipse_Doc_Style_Guide.md#topic-content).
@@ -139,6 +159,14 @@ but the label can be interesting unless it's already part of the description.
 
 Use regular markdown for the image so it can be appropriately rendered and styled.
 
+### Contributor mentioning
+
+The invidividuals that have contributed to a noteworty change _can_ be mentioned as contributors of it.
+Contributors should be mentioned below the headline as suggested in the [template](#template).
+If somebody else than the author of the N&N entry is listed, that person's consent should be obtained.
+All invidividuals who made relevant contributions to the described change should be mentioned as contributors,
+but at the same time, the list of contributors should not become too long.
+It's the discretion of the entry author to decide what's suitable in each case.
 
 ### Initialization
 
