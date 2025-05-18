@@ -12,7 +12,7 @@ provide a pull request review to add it.
 Instructions for contributing a New & Noteworthy entry
 ------------------------------------------------------
 
-See [these instructions](https://eclipse.dev/eclipse/news/instructions.html) ([raw](news/instructions.html))
+See [these instructions](https://eclipse.dev/eclipse/news/instructions.html) ([raw](news/instructions.md))
 
 For more Information:
 ---------------------

@@ -10,17 +10,13 @@ As of 4.36, New and Noteworthy is authored in markdown.
 
 #### Markdown Preview
 
-The standard
-[Oomph Setup](https://github.com/eclipse-platform/.github/blob/main/CONTRIBUTING.md#creating-an-eclipse-development-environment)
-for the website Github repository
-provides a launch configuration
-```Run > Run Configurations > Eclipse Applications > HTTPServer```
+A launch configuration is provided, named
+`Run > Run Configurations > Eclipse Applications > Eclipse-website-local-server`
 that you can run in order to serve the content of the Eclipse website project's contents via `localhost`.
 It will open a page in your default browser where the first link is to the root of the Eclipse website.
 This allows you to preview all the changes that you make to the website locally **before** you commit them.
 Sometimes it's necessary to do a deep refresh,
 e.g., `Ctrl-F5`.
-
 
 #### Pages
 
@@ -33,7 +29,7 @@ The `index.md` page describes the release and contains links to the component ne
 Add a new entry to the appropriate section in the corresponding markdown document.
 General standard sections are initially commented out in the markdown template.
 When adding an entry to a commented out section,
-remove the comment markers `<-- -->` arounding the section.
+remove the comment markers `<-- -->` surrounding the section.
 
 If required,
 you can add a new section to the document to highlight a feature,
