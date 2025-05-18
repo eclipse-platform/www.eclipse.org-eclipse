@@ -7,6 +7,12 @@ Last revised 2025-05-08.
 ### Content Organization 	
 
 As of 4.36, New and Noteworthy is authored in markdown.
+The following markdown flavors are supported:
+- `Markdown 1.0`
+- [`Common Mark 0.31`](https://spec.commonmark.org/0.31.2/)
+- [`GitHub Flavored Markdown 0.29`](https://github.github.com/gfm/)
+
+See also [GitHub's writing documentation](https://docs.github.com/en/get-started/writing-on-github). 
 
 #### Markdown Preview
 
@@ -36,6 +42,27 @@ you can add a new section to the document to highlight a feature,
 but best to add a subsection.
 Keep an eye on the automatically-rendered Table of Contents.
 
+#### Template
+
+The following is a template describing the recommended basic structure of a N&N entry:
+```
+### A Noteworthy New Feature 
+<!-- Optional link(s) to issues or PRs as invisible comment -->
+<details>
+<summary>Contributors</summary>
+
+- [John Doe](https://github.com/ghost)
+</details>
+
+Describe the change here.
+See the instructions in the paragraphs below regarding style recommendation and things to consider.
+You can use all markdown features and, if required and supported, inline HTML.
+
+An image can say more than a thousand words:
+
+![Foo View](images/foo-view.png)
+```
+
 ### News Item Title and Description
 
 The whole entry should be a blurb pitched to the Eclipse end-user community,
@@ -59,7 +86,7 @@ and don't repeat yourself.
 The description should be complete sentences, with trailing punctuation.
 
 Make the entry self-contained and mention API classes.
-Do not link to issues and don't promote individuals or third-party products.
+Do not link to issues and don't promote third-party products.
 
 Use active voice, i.e., say "you", not "the user",
 and follow other advice in [Eclipse Doc Style Guide](https://github.com/eclipse-platform/eclipse.platform/blob/master/docs/Eclipse_Doc_Style_Guide.md#topic-content).
@@ -139,6 +166,14 @@ but the label can be interesting unless it's already part of the description.
 
 Use regular markdown for the image so it can be appropriately rendered and styled.
 
+### Contributor Mentioning
+
+The individuals that have contributed to a noteworthy change _can_ be mentioned as contributors of it.
+Contributors should be mentioned below the headline, and the name of each contributor can be backed by a link to that person's GitHub profile as suggested in the [template](#template).
+It's recommended to use real full names, in the spirit of an open and transparent community, but if desired, a contributor's pseudonym can be used as well.
+If anybody other than the author of the N&N entry is listed, that person's consent should be obtained
+(for regular contributors, who have been mentioned in other entries already, general consent can be assumed and it's sufficient to make them aware of a new entry with the possibility to object).
+Every individual who made code contributions to the described change should be mentioned as contributors (if consented).
 
 ### Initialization
 
