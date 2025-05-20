@@ -1,5 +1,7 @@
 # Java Development Tools - 4.36
 
+A special thanks to everyone who [contributed to JDT](acknowledgements.md#java-development-tools) in this release!
+
 <!--
 ---
 ## Java&trade; XX Support 

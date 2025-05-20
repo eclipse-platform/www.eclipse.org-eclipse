@@ -535,6 +535,9 @@ const newAndNoteworthySubjects = {
 	},
 	pde: {
 		label: 'New features for Plug-in developers'
+	},
+	acknowledgements: {
+		label: 'Contributor acknowledgements'
 	}
 };
 

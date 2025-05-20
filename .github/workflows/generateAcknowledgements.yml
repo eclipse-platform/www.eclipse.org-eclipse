@@ -1,0 +1,140 @@
+name: Generate Acknowledgements
+on:
+  workflow_dispatch:
+    inputs:
+      eclipse-version:
+        description: The version of the Eclipse-TLPs to be released. Something like '4.36'
+        required: true
+        type: string
+
+permissions: {}
+
+jobs:
+  generate-acknowledgements:
+    name: Generate Acknowledgements
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+    - name: Checkout Eclipse-Platform Releng Aggregator
+      uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      with:
+        repository: eclipse-platform/eclipse.platform.releng.aggregator
+        ref: master
+        path: eclipse.platform.releng.aggregator
+    - name: Checkout website
+      uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      with:
+        path: website
+    - name: Collect Eclipse TLP repositories
+      id: collect-repos
+      working-directory: eclipse.platform.releng.aggregator
+      run: |
+        repos=$(git config --file .gitmodules --get-regexp '\.url$' | awk '{print $2}' | tr '\n' ' ')
+        echo "repos: ${repos}"
+        echo "repos=${repos}" >> "$GITHUB_OUTPUT"
+    - name: Collect contributors
+      uses: actions/github-script@60a0d83039c74a4aee543508d2ffcb1c3799cdea # v7.0.1
+      with:
+        script: |
+          // Collect all repositories
+          const submoduleURLs = '${{ steps.collect-repos.outputs.repos }}'.trim()
+          console.log("Repo list is: " + submoduleURLs)
+          const ghBaseURL = 'https://github.com/'
+          const gitSuffix = '.git'
+          const allRepos = submoduleURLs.split(' ').map(url => {
+            if (!url.startsWith(ghBaseURL) || !url.endsWith(gitSuffix)) {
+              core.error('Unsupported repository URL format: ' + url)
+              throw new Error('Unsupported repository URL format: ' + url)
+            }
+            const repo = url.substring(ghBaseURL.length, url.length - gitSuffix.length)
+            if (repo.split('/').length != 2) {
+              throw new Error('Unsupported repository URL format: ' + url)
+            }
+            return repo
+          })
+          allRepos.unshift('eclipse-platform/eclipse.platform.releng.aggregator')
+          console.log('All repositories: ' + allRepos)
+          
+          let [major, minor] = '${{ inputs.eclipse-version }}'.split('.')
+          let previousMinor = parseInt(minor) - 1
+          let lastReleaseTag = 'R' + major + '_' + previousMinor
+          console.log("Query all commits from tag '" + lastReleaseTag + "' up to master")
+          
+          const orgaContributors = new Map()
+          for (const repo of allRepos) {
+            let [organization, repository] = repo.split('/')
+            let contributorName2profileURL = orgaContributors.get(organization)
+            if (!contributorName2profileURL) {
+              contributorName2profileURL = new Map()
+              orgaContributors.set(organization, contributorName2profileURL)
+            }
+            
+            console.log("Query for organization '" + organization + "' repository '" + repository + "'" )
+            // See https://octokit.github.io/rest.js/v21/#repos-compare-commits-with-basehead
+            // About pagination, see https://github.com/octokit/octokit.js#pagination
+            let responseIterator = github.paginate.iterator(github.rest.repos.compareCommitsWithBasehead, {
+              owner: organization,
+              repo: repository,
+              basehead: lastReleaseTag + '...master',
+              per_page: 200,
+            })
+            let commitCount = 0
+            for await (const response of responseIterator) { // iterate through each response
+              for (const commitData of response.data.commits) {
+                let authorName = commitData.commit.author.name
+                let authorGHProfileURL = commitData.author?.html_url
+                // console.log(commitData)
+                if (commitData.author) { // author is null for directly pushed commits, which happens e.g. for I-build submodule updates
+                  contributorName2profileURL.set(authorName, authorGHProfileURL)
+                } else {
+                  console.log('Skip commit of ' + authorName)
+                }
+                commitCount++
+              }
+            }
+            console.log('Processed commits: ' + commitCount)
+          }
+          
+          // Insert the list of contributors into the template file for each organization
+          const acknowledgementsFile = 'website/news/${{ inputs.eclipse-version }}/acknowledgements.md'
+          const fs = require('fs')
+          let lines = fs.readFileSync(acknowledgementsFile, {encoding: 'utf8'}).split(/\r?\n/)
+          const orgaContributorsLists = new Map()
+          for (const [organization, contributors] of orgaContributors) {
+            console.log('Insert contributors of ' + organization)
+            const startMarker = lines.indexOf('<!-- START: ' + organization + ' contributors -->')
+            const endMarker   = lines.indexOf('<!-- END:   ' + organization + ' contributors -->')
+            if (startMarker < 0 || endMarker < 0) {
+              throw new Error('Start or end marker to found for organization: ' + organization)
+            }
+            let contributorEntries = []
+            for (const [contributorName, contributorProfile] of contributors) {
+              console.log(contributorName + ' = ' + contributorProfile)
+              contributorEntries.push('- [' + contributorName + '](' + contributorProfile + ')')
+            }
+            lines.splice(startMarker + 1,endMarker - (startMarker + 1), ...contributorEntries)
+          }
+          const lastRevisedLineIndex = lines.findIndex(lin => lin.startsWith('Last revised: '));
+          lines[lastRevisedLineIndex] = 'Last revised: ' + new Date().toLocaleDateString("en-US", {
+            year: "numeric",
+            month: "long",
+            day: "numeric",
+          })
+          fs.writeFileSync(acknowledgementsFile, lines.join('\n'), {encoding: 'utf8'})
+          // TODO: check for duplicates based on their GH profile URL?! Use their GH profile name then?
+            // or collect all names and use the longest one?
+          //TODO: check the current output, sometimes the author seems wrong?
+          // TODO: consider coauthors/also-by?
+    - name: Create Acknowledgements for Release ${{ github.event.milestone.title }}
+      uses: peter-evans/create-pull-request@271a8d0340265f705b14b6d32b9829c1cb33d45e # v7.0.8
+      with:
+        path : website
+        author: Eclipse Releng Bot <eclipse-releng-bot@eclipse.org>
+        commit-message: Update Acknowledgements for ${{ inputs.eclipse-version }}
+        branch: acknowledgements_${{ inputs.eclipse-version }}
+        title: Update Acknowledgements for ${{ inputs.eclipse-version }}
+        body: |
+          Update the list of contributors in the Acknowledgements for ${{ inputs.eclipse-version }}.
+        delete-branch: true
