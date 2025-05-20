@@ -1,0 +1,257 @@
+name: Generate Acknowledgements
+on:
+  workflow_dispatch:
+    inputs:
+      eclipse-version:
+        description: The version of the Eclipse-TLPs to be released. Something like '4.36'
+        required: true
+        type: string
+
+permissions: {}
+
+jobs:
+  generate-acknowledgements:
+    name: Generate Acknowledgements
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+    - name: Checkout Eclipse-Platform Releng Aggregator
+      uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      with:
+        repository: eclipse-platform/eclipse.platform.releng.aggregator
+        ref: master
+        path: eclipse.platform.releng.aggregator
+    - name: Checkout website
+      uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      with:
+        path: website
+    - name: Collect Eclipse TLP repositories
+      id: collect-repos
+      working-directory: eclipse.platform.releng.aggregator
+      run: |
+        repos=$(git config --file .gitmodules --get-regexp '\.url$' | awk '{print $2}' | tr '\n' ' ')
+        echo "repos: ${repos}"
+        echo "repos=${repos}" >> "$GITHUB_OUTPUT"
+    - name: Collect contributors
+      uses: actions/github-script@60a0d83039c74a4aee543508d2ffcb1c3799cdea # v7.0.1
+      id: collect-contributors
+      with:
+        script: |
+          const maxContributorsPerRow = 3
+          let [major, minor] = '${{ inputs.eclipse-version }}'.split('.')
+          const previousMinor = parseInt(minor) - 1
+          const previousReleaseTag = 'R' + major + '_' + previousMinor
+          let currentReleaseTag = 'master'
+          if (await isTagAvailable('R' + major + '_' + minor)) {
+            currentReleaseTag = 'R' + major + '_' + minor
+          } else if (await isTagAvailable('S' + major + '_' + minor + '_0_RC2')) {
+            currentReleaseTag = 'S' + major + '_' + minor + '_0_RC2'
+          }
+          
+          // ----------------------------------------------
+          // Collect all repositories
+          // ----------------------------------------------
+          const submoduleURLs = '${{ steps.collect-repos.outputs.repos }}'.trim()
+          console.log("Repo list is: " + submoduleURLs)
+          const ghBaseURL = 'https://github.com/'
+          const gitSuffix = '.git'
+          const allRepos = submoduleURLs.split(' ').map(url => {
+            if (!url.startsWith(ghBaseURL) || !url.endsWith(gitSuffix)) {
+              core.error('Unsupported repository URL format: ' + url)
+              throw new Error('Unsupported repository URL format: ' + url)
+            }
+            const repo = url.substring(ghBaseURL.length, url.length - gitSuffix.length)
+            if (repo.split('/').length != 2) {
+              throw new Error('Unsupported repository URL format: ' + url)
+            }
+            return repo
+          })
+          allRepos.unshift('eclipse-platform/eclipse.platform.releng.aggregator')
+          console.log('All repositories: ' + allRepos)
+          
+          // ----------------------------------------------
+          // Collect the contributors for each organization
+          // ----------------------------------------------
+          console.log("Query all commits betweens tag '" + previousReleaseTag + "' and '" + currentReleaseTag + "'")
+          const orgaContributors = new Map()
+          const contributorNames = new Map()
+          const profileReplacements = new Set()
+          const skippedBotAccounts = new Set()
+          for (const repo of allRepos) {
+            let [organization, repository] = repo.split('/')
+            let contributors = computeIfAbsent(orgaContributors, organization, () => new Set())
+            console.log("Query for organization '" + organization + "' repository '" + repository + "'" )
+            // Determine the date of the previous release commit
+            const previousReleaseTagSHA = (await github.rest.git.getRef({
+              owner: organization, repo: repository,
+              ref: 'tags/' + previousReleaseTag,
+            })).data.object.sha
+            const previousReleaseCommitSHA = (await github.rest.git.getTag({
+              owner: organization, repo: repository,
+              tag_sha: previousReleaseTagSHA,
+            })).data.object.sha
+            const previousReleaseCommitDate = Date.parse((await github.rest.git.getCommit({
+              owner: organization, repo: repository,
+              commit_sha: previousReleaseCommitSHA,
+            })).data.committer.date)
+            
+            // See https://octokit.github.io/rest.js/v21/#repos-compare-commits-with-basehead
+            // About pagination, see https://github.com/octokit/octokit.js#pagination
+            let responseIterator = github.paginate.iterator(github.rest.repos.compareCommitsWithBasehead, {
+              owner: organization, repo: repository,
+              basehead: previousReleaseTag + '...' + currentReleaseTag,
+              per_page: 200,
+            })
+            let commitCount = 0
+            for await (const response of responseIterator) { // iterate through each response
+              for (const commitData of response.data.commits) {
+                // console.log(JSON.stringify(commitData))
+                if (Date.parse(commitData.commit.committer.date) < previousReleaseCommitDate){
+                  console.log("Skip commit committed before previous release (probably merged from older branch): " + commitData.sha)
+                  continue;
+                }
+                let authorName = commitData.commit.author.name
+                if (commitData.author) {
+                  let profile = commitData.author.login
+                  if (isBot(commitData.commit.author)) { // Exclude contributors from bot-accounts
+                    skippedBotAccounts.add(profile)
+                    continue;
+                  }
+                  const committerProfile = commitData.committer?.login
+                  if (commitData.commit.author.name == commitData.commit.committer.name
+                        && committerProfile && profile != committerProfile) {
+                    // Sometimes contributors use different profiles. Let the committer profile take precedence
+                    profileReplacements.add("@" + profile + " -> @" + committerProfile)
+                    profile = committerProfile
+                  }
+                  contributors.add(profile)
+                  computeIfAbsent(contributorNames, profile, () => new Set()).add(authorName)
+                } else { // author is null for directly pushed commits, which happens e.g. for I-build submodule updates
+                  console.log("Skip commit of " + authorName)
+                }
+                commitCount++
+              }
+            }
+            console.log('Processed commits: ' + commitCount)
+          }
+          
+          // ------------------------------------------------------
+          // Select name if multiple have been found for one contributor
+          // ------------------------------------------------------
+          const selectedContributorNames = new Map()
+          const nameInconsistencies = []
+          for (const [profile, names] of contributorNames) {
+            // Select longest name, assuming that's correct
+            let selectedName = [...names].reduce((n1, n2) => n1.length > n2.length ? n1 : n2)
+            if (names.size > 1) {
+              console.log("Multiple names encountered for " + profile + ": " + Array.from(names).join(', '))
+              nameInconsistencies.push("@" + profile + ": " + Array.from(names).map(n => n==selectedName ? ("**`" + n + "`**") : ("`" + n + "`")).join(', '))
+            }
+            selectedContributorNames.set(profile, selectedName)
+          }
+          
+          // ------------------------------------------------------
+          // Insert the list of contributors into the template file
+          // ------------------------------------------------------
+          const fs = require('fs')
+          const acknowledgementsFile = 'website/news/${{ inputs.eclipse-version }}/acknowledgements.md'
+          let lines = fs.readFileSync(acknowledgementsFile, {encoding: 'utf8'}).split(/\r?\n/)
+          let elementsInLine = 0
+          for (const [organization, contributors] of orgaContributors) {
+            console.log('Insert contributors of ' + organization)
+            const startMarker = lines.indexOf('<!-- START: ' + organization + ' contributors -->')
+            const endMarker   = lines.indexOf('<!-- END:   ' + organization + ' contributors -->')
+            if (startMarker < 0 || endMarker < 0) {
+              throw new Error('Start or end marker to found for organization: ' + organization)
+            }
+            const contributorEntries = Array.from(contributors, profile => {
+              const name = selectedContributorNames.get(profile)
+              if (!name) {
+                 throw new Error('No selected name for profile: ' + profile)
+              }
+              return [name, profile]
+            })
+            // Sort by name in ascending order
+            contributorEntries.sort((e1, e2) => e1[0].localeCompare(e2[0]))
+            
+            const contributorLines = ['|'.repeat(maxContributorsPerRow) + '|', '|---'.repeat(maxContributorsPerRow) + '|']
+            let line = ''
+            let elements = 0
+            for (const [name, profileId] of contributorEntries) {
+              line += ('| [' + name + '](' + ghBaseURL + profileId + ') ')
+              if (++elements >= maxContributorsPerRow) {
+                contributorLines.push(line + '|')
+                line = ''
+                elements = 0
+              }
+            }
+            if (line.length !== 0) {
+              contributorLines.push(line + ' |')
+            }
+            lines.splice(startMarker + 1, endMarker - (startMarker + 1), ...contributorLines)
+          }
+          // Update last-revised date
+          const lastRevisedLineIndex = lines.findIndex(l => l.startsWith('Last revised: '))
+          lines[lastRevisedLineIndex] = 'Last revised: ' + new Date().toLocaleDateString("en-US", {
+            year: "numeric",
+            month: "long",
+            day: "numeric",
+          })
+          fs.writeFileSync(acknowledgementsFile, lines.join('\n'), {encoding: 'utf8'})
+          
+          // Set adjustments as outputs in order to append them to the PR message
+          core.setOutput('profile-replacements', Array.from(profileReplacements).map(r => "  - " + r).join("\n"));
+          core.setOutput('skipped-bots', Array.from(skippedBotAccounts).map(b => "  - @" + b).join("\n"));
+          core.setOutput('name-inconsistencies', nameInconsistencies.map(l => "  - " + l).join("\n"));
+          
+          function isTagAvailable(tagName) {
+            return github.rest.git.getRef({
+              owner: 'eclipse-platform', repo: 'eclipse.platform.releng.aggregator',
+              ref: 'tags/' + tagName,
+            }).then(value => {
+              console.log("Tag found: " + tagName)
+              return value.data.object.type == 'tag';
+            }, error => {
+              console.log("Tag not found: " + tagName)
+              return false;
+            });
+          }
+          
+          function isBot(author) {
+            return author.email.endsWith("-bot@eclipse.org") || author.email.endsWith("[bot]@users.noreply.github.com") || author.name == 'eclipse-releng-bot'
+          }
+          
+          function computeIfAbsent(map, key, valueSupplier) {
+            let value = map.get(key)
+            if (!value) {
+              value = valueSupplier()
+              map.set(key, value)
+            }
+            return value
+          }
+          
+    - name: Create Acknowledgements Update PR
+      uses: peter-evans/create-pull-request@271a8d0340265f705b14b6d32b9829c1cb33d45e # v7.0.8
+      with:
+        path : website
+        author: Eclipse Releng Bot <releng-bot@eclipse.org>
+        commit-message: Update Acknowledgements for ${{ inputs.eclipse-version }}
+        branch: acknowledgements_${{ inputs.eclipse-version }}
+        title: Update Acknowledgements for ${{ inputs.eclipse-version }}
+        body: |
+          Update the list of contributors in the Acknowledgements for `${{ inputs.eclipse-version }}`.
+          
+          Adjustments to the lists of contributors:
+          - Replaced profiles:
+          ${{ steps.collect-contributors.outputs.profile-replacements && steps.collect-contributors.outputs.profile-replacements || 'None' }}
+          - Profiles with inconsistent git author names:
+          _To avoid this in the future, please ensure you use the same author names across all your local git repositories (e.g. by setting `git config --global user.name "Your Name"`) and across devices!
+          If the selected name, simply the longest one (and marked in bold), is incorrect, please let us know._
+          ${{ steps.collect-contributors.outputs.name-inconsistencies && steps.collect-contributors.outputs.name-inconsistencies || 'None' }}
+          - Excluded bot-accounts:
+          ${{ steps.collect-contributors.outputs.skipped-bots && steps.collect-contributors.outputs.skipped-bots || 'None' }}
+          
+          Please verify these adjustments for correctness and grant those who are affected sufficient time to refine the adjustments.
+        delete-branch: true

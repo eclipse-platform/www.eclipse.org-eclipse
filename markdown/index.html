@@ -40,7 +40,6 @@
 			padding: 0;
 			margin: 0;
 			margin-left: 0.5em;
-
 		}
 
 		.tl1 {
@@ -130,21 +129,30 @@
 			transition: .2s;
 		}
 
+		p .avatar,
 		summary .avatar {
 			width: 2em;
 		}
 
+		td .avatar,
 		li .avatar {
 			width: 3.5em;
 		}
 
+		p .avatar:hover,
 		summary .avatar:hover {
 			transform: scale(3);
 		}
 
+		td .avatar:hover,
 		li .avatar:hover,
 		.avatar-hover {
 			transform: scale(2);
+		}
+
+		/* intended for table, tr, th, td */
+		.contributor-list {
+			border: none;
 		}
 
 		/*]]>*/
@@ -296,22 +304,13 @@
 				if (ul?.localName == 'ul') {
 					const details = ul.parentElement;
 					if (details?.localName == 'details') {
-						const avatar = toElements(`<span>${generateAvatar(logicalHref)}&nbsp;</span>`)[0];
-						li.insertBefore(avatar, a);
+						injectAvatars(a, logicalHref)
 
 						const summary = details.querySelector('summary');
 						if (summary.children.length == 0) {
 							summary.innerHTML += '&nbsp;';
 						}
 						summary.innerHTML += generateAvatar(logicalHref);
-
-						a.onmouseenter = () => {
-							avatar.querySelector('img').classList.add('avatar-hover')
-						};
-						a.onmouseleave = () => {
-							avatar.querySelector('img').classList.remove('avatar-hover')
-						};
-
 
 						// We only need to process the overall contributor section once.
 						if (ul.style.listStyleType != 'none') {
@@ -330,6 +329,39 @@
 					}
 				}
 			}
+		}
+		
+		function generateContributorAvatars(a, logicalHref) {
+			injectAvatars(a, logicalHref)
+			const td = a.parentElement;
+			// We only need to process the overall contributor table once.
+			if (td.localName == 'td' && !td.classList.contains('contributor-list')) {
+				const tr = td.parentElement;
+				if (tr?.localName == 'tr') {
+					const tbody = tr.parentElement;
+					if (tbody?.localName == 'tbody') {
+						const table = tbody.parentElement;
+						if (table?.localName == 'table') {
+							table.classList.add('contributor-list')
+							const tableElements = table.querySelectorAll('th, tr, td');
+							for (const e of tableElements) {
+								e.classList.add('contributor-list')
+							}
+						}
+					}
+				}
+			}
+		}
+		
+		function injectAvatars(a, logicalHref) {
+			const avatar = toElements(`<span>${generateAvatar(logicalHref)}&nbsp;</span>`)[0];
+			a.parentElement.insertBefore(avatar, a);
+			a.onmouseenter = () => {
+				avatar.querySelector('img').classList.add('avatar-hover')
+			};
+			a.onmouseleave = () => {
+				avatar.querySelector('img').classList.remove('avatar-hover')
+			};
 		}
 
 		function generateMarkdown(logicalBaseURL, response) {
@@ -376,6 +408,7 @@ ${headings.map(({id, raw, level}) => `<li class="tl${level}"><a href="#${id}">${
 				}
 
 				const as = targetElement.querySelectorAll("a[href]");
+				const isAcknowledgements = logicalBaseURL.pathname.endsWith("acknowledgements.md")
 				for (const a of as) {
 					const href = a.getAttribute('href');
 					if (href == null) {
@@ -390,7 +423,11 @@ ${headings.map(({id, raw, level}) => `<li class="tl${level}"><a href="#${id}">${
 					const logicalHref = new URL(href, logicalBaseURL);
 					if (!logicalHref.pathname.endsWith('.md')) {
 						if (/^https:\/\/github.com\/[^\/]+$/.exec(logicalHref.toString())) {
-							generateContributorSection(a, logicalHref);
+							if (isAcknowledgements) {
+								generateContributorAvatars(a, logicalHref);
+							} else {
+								generateContributorSection(a, logicalHref);
+							}
 						} else {
 							const siteURL = toSiteURL(logicalHref);
 							if (siteURL != null) {

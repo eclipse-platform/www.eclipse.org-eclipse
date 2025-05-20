@@ -523,20 +523,28 @@ function parseHTML(request, handler) {
 	handler(htmlDocument);
 }
 
-const newAndNoteworthySubjects = {
-	platform: {
-		label: 'New features in the Platform and Equinox.'
-	},
-	jdt: {
-		label: 'New features for Java developers.'
-	},
-	platform_isv: {
-		label: 'New APIs in the Platform and Equinox.'
-	},
-	pde: {
-		label: 'New features for Plug-in developers'
+function newAndNoteworthySubjects(withAcknowledgements) {
+	const subjects = {
+		platform: {
+			label: 'New features in the Platform and Equinox.'
+		},
+		jdt: {
+			label: 'New features for Java developers.'
+		},
+		platform_isv: {
+			label: 'New APIs in the Platform and Equinox.'
+		},
+		pde: {
+			label: 'New features for Plug-in developers'
+		},
+	};
+	if (withAcknowledgements) {
+		subjects.acknowledgements = {
+			label: 'Contributor acknowledgements'
+		};
 	}
-};
+	return subjects;
+}
 
 function generateNewAndNoteworthy(element) {
 	const id = 'new-and-noteworthy-target';
@@ -605,10 +613,9 @@ function generateNewAndNoteworthy(element) {
 				});
 			}
 			*/
-
 			const defaultFileExtension = minorVersionNumber >= 36 ? '.md' : '.html';
 			const defaultBaseURL = minorVersionNumber >= 36 ? `${selfHostedMarkdownBase}news/${version}/` : `${newsBase}${version}/`;
-			const defaultChildren = Object.entries(newAndNoteworthySubjects).map(entry => {
+			const defaultChildren = Object.entries(newAndNoteworthySubjects(minorVersionNumber >= 36)).map(entry => {
 				return `<li><a href="${defaultBaseURL}${entry[0]}${defaultFileExtension}">${entry[1].label}</a></li>`;
 			});
 
@@ -807,7 +814,10 @@ function generateProjectAcknowledgements() {
 
 		const main = document.getElementById('midcolumn');
 		main.replaceChildren(...toElements(`
-<h2><span class="fa fa-address-book-o"> Acknowlegements</span></h2>
+<h2><span class="fa fa-address-book-o"> Acknowledgements</span></h2>
+<p>
+  Acknowledgements of later releases are directly published in the <a href="../news">News</a> section.
+</p>
 <ul>
 	${items.join('\n')}
 </ul>
