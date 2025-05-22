@@ -109,10 +109,20 @@ we get
 ## Java Views and Dialogs
 -->
 
-<!--
 ---
 ## Java Compiler
--->
+
+The compiler and the basic IDE support for the following JEPs are available
+
+### JEP 488: Primitive Types in Patterns, instanceof, and switch (Second Preview)
+Enhance pattern matching by allowing primitive types in all pattern contexts, and extend instanceof and switch to work with all primitive types.
+### JEP 492: Flexible Constructor Bodies (Third Preview)
+In constructors, allow statements to appear before an explicit constructor invocation, i.e., `super(..)` or `this(..)`.
+### JEP 494: Module Import Declarations (Second Preview)
+Enhance the ability to succinctly import all of the packages exported by a module.
+### JEP 495: Simple Source Files and Instance Main Methods (Fourth Preview)
+Evolve the Java programming language so that beginners can write their first programs without needing to understand language features designed for large programs.
+
 
 <!--
 ---
