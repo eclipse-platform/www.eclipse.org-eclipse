@@ -119,6 +119,34 @@
 			margin-bottom: 1em;
 		}
 
+		.avatar {
+			border-radius: 50%;
+			border-style: solid;
+			border-color: rgba(255, 255, 255, 0.75);
+			background-clip: padding-box;
+			background-color: white;
+			border-width: 2px;
+			vertical-align: middle;
+			transition: .2s;
+		}
+
+		summary .avatar {
+			width: 2em;
+		}
+
+		li .avatar {
+			width: 3.5em;
+		}
+
+		summary .avatar:hover {
+			transform: scale(3);
+		}
+
+		li .avatar:hover,
+		.avatar-hover {
+			transform: scale(2);
+		}
+
 		/*]]>*/
 	</style>
 </head>
@@ -257,6 +285,53 @@
 			targetElement.innerHTML = heading + fileElements.join('');
 		}
 
+		function generateAvatar(profileHref) {
+			return `<a href="${profileHref}"><img class="avatar" src="${profileHref}.png"/></a>`;
+		}
+
+		function generateContributorSection(a, logicalHref) {
+			const li = a.parentElement;
+			if (li.localName == 'li') {
+				const ul = li.parentElement;
+				if (ul?.localName == 'ul') {
+					const details = ul.parentElement;
+					if (details?.localName == 'details') {
+						const avatar = toElements(`<span>${generateAvatar(logicalHref)}&nbsp;</span>`)[0];
+						li.insertBefore(avatar, a);
+
+						const summary = details.querySelector('summary');
+						if (summary.children.length == 0) {
+							summary.innerHTML += '&nbsp;';
+						}
+						summary.innerHTML += generateAvatar(logicalHref);
+
+						a.onmouseenter = () => {
+							avatar.querySelector('img').classList.add('avatar-hover')
+						};
+						a.onmouseleave = () => {
+							avatar.querySelector('img').classList.remove('avatar-hover')
+						};
+
+
+						// We only need to process the overall contributor section once.
+						if (ul.style.listStyleType != 'none') {
+							ul.style.listStyleType = 'none';
+							ul.style.paddingLeft = '1em';
+
+							summary.onclick = () => {
+								setTimeout(() => {
+									const avatars = summary.querySelectorAll('*');
+									for (const avatar of avatars) {
+										avatar.style.display = details.open ? 'none' : 'inline-block';
+									}
+								}, 10);
+							};
+						}
+					}
+				}
+			}
+		}
+
 		function generateMarkdown(logicalBaseURL, response) {
 			if (response instanceof Array) {
 				generateFileList(response);
@@ -314,11 +389,15 @@ ${headings.map(({id, raw, level}) => `<li class="tl${level}"><a href="#${id}">${
 
 					const logicalHref = new URL(href, logicalBaseURL);
 					if (!logicalHref.pathname.endsWith('.md')) {
-						const siteURL = toSiteURL(logicalHref);
-						if (siteURL != null) {
-							a.href = siteURL;
-						} else if (!href.startsWith('http')) {
-							a.href = new URL(`https://github.com/${org}/${repo}/blob/${branch}/${path}/../${href}`);
+						if (/^https:\/\/github.com\/[^\/]+$/.exec(logicalHref.toString())) {
+							generateContributorSection(a, logicalHref);
+						} else {
+							const siteURL = toSiteURL(logicalHref);
+							if (siteURL != null) {
+								a.href = siteURL;
+							} else if (!href.startsWith('http')) {
+								a.href = new URL(`https://github.com/${org}/${repo}/blob/${branch}/${path}/../${href}`);
+							}
 						}
 						continue;
 					}
@@ -382,12 +461,10 @@ ${lastPart}
 
 		function generatBreadcrumbPath(crumbPath, segment) {
 			const fullPath = `${org}/${repo}/${branch}${crumbPath}`;
-			console.log(fullPath);
 
 			for (const matcher of specializedBreadcrumpbs) {
 				const match = matcher.pattern.exec(fullPath);
 				if (match != null) {
-					console.log(match);
 					const replacement = matcher.replacement;
 					return replacement;
 				}
