@@ -22,6 +22,14 @@
 <!-- https://github.com/eclipse-platform/eclipse.platform.swt/pull/1936 -->
 ### Improved Disabled Icons Generation
 
+<details>
+<summary>Contributors</summary>
+
+- [Manuel Killinger](https://github.com/killingerm)
+- [Heiko Klare](https://github.com/HeikoKlare)
+- [Hannes Wellmann](https://github.com/hanneswell)
+</details>
+
 Up to now, disabled versions of icons usually were and had to be provided as explicit, separate image files.
 In case no such icon was provided, an algorithm in SWT was used to generate a disabled icon.
 However, that algorithm was very limited and produced poor results.
@@ -98,6 +106,16 @@ Note that you may then face linkage errors instead.
 
 ### Monitor-Specific UI Scaling as Default (Windows only)
 
+<details>
+<summary>Contributors</summary>
+
+- [Shahzaib Ibrahim](https://github.com/ShahzaibIbrahim)
+- [Federico Jeanne](https://github.com/fedejeanne)
+- [Heiko Klare](https://github.com/HeikoKlare)
+- [Andreas Koch](https://github.com/akoch-yatta)
+- [Amartya Parijat](https://github.com/amartya4256)
+</details>
+
 In the previous releases, a preference to enable an improved, monitor- and resolution-specific UI scaling on Windows was introduced,
 see the news for [4.34](../4.34/platform.html#rescale-on-runtime-preference)
 and [4.35](../4.35/platform.html#rescaleOnRuntimePreference) for details.
@@ -132,6 +150,13 @@ On a 200% monitor with the feature being **enabled**:
 <!-- https://github.com/eclipse-platform/eclipse.platform.swt/pull/1638 -->
 ### Support for SVG Images
 
+<details>
+<summary>Contributors</summary>
+
+- [Michael Bangas](https://github.com/michael5601)
+- [Heiko Klare](https://github.com/HeikoKlare)
+- [Hannes Wellmann](https://github.com/hanneswell)
+</details>
 Until now, Eclipse only supported loading of raster graphics.
 This limited the ability to scale icons without quality loss and required manual rasterization of SVG files outside to generate icons in different sizes that can be embedded in Eclipse products,
 leading to additional effort and many separate icon files.

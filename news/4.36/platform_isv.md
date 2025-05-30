@@ -10,6 +10,16 @@
 
 ### Lazy Handle Generation for Images and Fonts (Windows only)
 
+<details>
+<summary>Contributors</summary>
+
+- [Shahzaib Ibrahim](https://github.com/ShahzaibIbrahim)
+- [Federico Jeanne](https://github.com/fedejeanne)
+- [Heiko Klare](https://github.com/HeikoKlare)
+- [Andreas Koch](https://github.com/akoch-yatta)
+- [Amartya Parijat](https://github.com/amartya4256)
+</details>
+
 When creating resources like image `Image` and `Font`, the necessary OS handles were previously created eagerly upon instantiation of the resource.
 On Windows, this behavior was changed for images and fonts.
 Handles are now generated upon first access.
