@@ -14,6 +14,11 @@
 ## Java Editor
 
 ### Custom Folding Regions
+<details>
+<summary>Contributors</summary>
+
+- [Daniel Schmid](https://github.com/danthe1st)
+</details>
 
 It is now possible to create custom folding regions by specifying a comment at the start and end of the region.
 You can enable and configure this feature under `Window > Preferences > Java > Editor > Folding > Custom folding regions`.
@@ -32,6 +37,11 @@ Custom folding regions can be collapsed like any other folding regions.
 ![custom folding regions are collapsed](images/custom_folding_regions_code_collapsed.png)
 					
 ### Project Properties Page for Folding
+<details>
+<summary>Contributors</summary>
+
+- [Daniel Schmid](https://github.com/danthe1st)
+</details>
 				
 Preferences for folding can now be configured on a per-project basis in addition to configuring folding for the workspace.
 This page is available under `Project > Properties > Java Editor > Folding`.
