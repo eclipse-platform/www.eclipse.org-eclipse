@@ -25,6 +25,7 @@ jobs:
     - name: Create Pull Request for Release ${{ github.event.milestone.title }}
       uses: peter-evans/create-pull-request@271a8d0340265f705b14b6d32b9829c1cb33d45e # v7.0.8
       with:
+        author: Eclipse Releng Bot <releng-bot@eclipse.org>
         commit-message: Prepare Release ${{ github.event.milestone.title }}
         branch: prepare_R${{ github.event.milestone.title }}
         title: Prepare Release ${{ github.event.milestone.title }}
