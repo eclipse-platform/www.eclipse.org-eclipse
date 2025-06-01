@@ -1,6 +1,6 @@
 # Eclipse New and Noteworthy Authoring
 
-Last revised 2025-05-08.
+Last revised 2025-06-01.
 
 ## Instructions
 
@@ -177,7 +177,7 @@ Every individual who made code contributions to the described change should be m
 
 ### Initialization
 
-To create the directory and all the related content for a new release,
-use the [4.x-template directory](4.x-template).
-Replace `4.x` in the markdown files with the Eclipse project's release version
-and replace `YYYY-MM` with the corresponding SimRel release name.
+To automatically initialize the news folder for a new release, run the `scripts/applyTemplate.sh` script. 
+Instructions to run the script can be found in `scripts/instructions.txt`.
+It creates the directory and all the related content for a new release, useing the [4.x-template directory](4.x-template).
+It also replaces the placeholder `4.x` with the Eclipse project's release version and `YYYY-MM` with the corresponding SimRel release name in all markdown files.
