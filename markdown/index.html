@@ -289,6 +289,8 @@
 			return `<a href="${profileHref}"><img class="avatar" src="${profileHref}.png"/></a>`;
 		}
 
+		//TODO: inject Avatar in acknoledgements too
+
 		function generateContributorSection(a, logicalHref) {
 			const li = a.parentElement;
 			if (li.localName == 'li') {
@@ -311,8 +313,6 @@
 						a.onmouseleave = () => {
 							avatar.querySelector('img').classList.remove('avatar-hover')
 						};
-
-
 						// We only need to process the overall contributor section once.
 						if (ul.style.listStyleType != 'none') {
 							ul.style.listStyleType = 'none';
