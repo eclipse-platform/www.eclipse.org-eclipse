@@ -11,3 +11,5 @@ Here are some of the more noteworthy items available in this release.
 - [New features for Java developers](jdt.md)
 - [New APIs in the Platform and Equinox](platform_isv.md)
 - [New features for plug-in developers](pde.md)
+
+A special thanks to [everyone who contributed](acknowledgements.md) to this Eclipse release!
