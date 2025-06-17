@@ -41,7 +41,7 @@ well as these applications require a so called [pseudo terminal](https://en.wiki
 together with a [terminal emulator](https://en.wikipedia.org/wiki/Terminal_emulator) to behave as if it was
 executed on native command prompt.
 
-While the [VT100 terminal emulator}(https://en.wikipedia.org/wiki/VT100) was already added the in the last release,
+While the [VT100 terminal emulator](https://en.wikipedia.org/wiki/VT100) was already added the in the last release,
 there was still the need to start the application in a terminal session what is now available when launching a run from
 inside Eclipse as well!
 
