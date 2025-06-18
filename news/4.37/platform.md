@@ -30,35 +30,46 @@ A special thanks to everyone who [contributed to Eclipse-Platform](acknowledgeme
 ---
 ## General Updates
 
-### Support for launching a run inside a Terminal session
+### Support Launching with a Terminal Console
 
-When launching a run in Eclipse one can currently choose to allocate a console for input/output
-and since a while we also support ANSI color codes there what makes integration of console applications
-that use color output possible.
+<details>
+<summary>Contributors</summary>
 
-But for the input side and more advanced features like text base user interfaces this still does not work
-well as these applications require a so called [pseudo terminal](https://en.wikipedia.org/wiki/Pseudoterminal)
-together with a [terminal emulator](https://en.wikipedia.org/wiki/Terminal_emulator) to behave as if it was
-executed on native command prompt.
+- [Christoph Läubrich ](https://github.com/laeubi)
+</details>
+When launching a process in Eclipse you can currently choose to allocate a console for input/output.
+Via such a console, the relatively-recent support for ANSI color encoding enables integration of console applications that produce colorized output.
 
-While the [VT100 terminal emulator](https://en.wikipedia.org/wiki/VT100) was already added the in the last release,
-there was still the need to start the application in a terminal session what is now available when launching a run from
-inside Eclipse as well!
+In terms of input though,
+and for more advanced features such as text-based user interaction,
+this still does not work well 
+because advanced applications require a so-called [pseudo terminal](https://en.wikipedia.org/wiki/Pseudoterminal)
+together with a [terminal emulator](https://en.wikipedia.org/wiki/Terminal_emulator)
+to behave as if it were executed via a native command prompt.
 
-This is currently preliminary support and we would like to get feedback, so don't hesitate to [open a bug report](https://github.com/eclipse-platform/eclipse.platform/issues)
-if something is missing or not working as expected, this can be enabled in the following way:
+While the [VT100 terminal emulator](https://en.wikipedia.org/wiki/VT100) was already added  in the previous release,
+there remained the need to start the application in a proper terminal session.
+That support is now provided by the new `Terminal Console`.
 
-- Download the latest integration build SDK [here](https://download.eclipse.org/eclipse/downloads/)
-- Go to "Install new Software" and add the site https://download.eclipse.org/tools/cdt/releases/12.1/cdt-12.1.0/ then select 'Terminal (Console) View' and 'TM Terminal Local Connector Extension'
-- Now in the toolbar choose the 'Open a Terminal' icon and make sure the Terminal View works for your platform
-- Go to "Install new Software" and add the site https://download.eclipse.org/eclipse/updates/4.37-I-builds/ then select '...'
+This is currently preliminary support and we would appreciate to get feedback.
+Please don't hesitate to open an [isue](https://github.com/eclipse-platform/eclipse.platform/issues)
+if something is missing or not working as expected.
 
-Now the terminal console support is installed and you can use it. You can install m2e PDE support from https://download.eclipse.org/technology/m2e/releases/latest/ and
-then use this [example project](images/test.terminal.zip):
+The terminal support can be installed as follows:
 
-- open the console.target and set it as active target platform
-- open the console.product and start it, you will see a warning and some garbled characters
-- go to the launch configuration and then open the tab 'common' and choose 'Allocate Terminal'
-- run it again and you will get colors and autocompletion using `<tab>`
+- Download the latest integration build SDK [here](https://download.eclipse.org/eclipse/downloads/).
+- Go to "Install new Software" and add the site https://download.eclipse.org/tools/cdt/releases/12.1/cdt-12.1.0/.
+  Then select `Terminal (Console) View` and `TM Terminal Local Connector Extension`.
+- Now in the toolbar choose the `Open a Terminal` icon ensure the `Terminal` view works for your platform.
+- Go to `Help > Install New Software` and add the site https://download.eclipse.org/eclipse/updates/4.37-I-builds/ then select `...`.
+
+Now that the terminal console support is installed, you can use it.
+You can install m2e PDE support from https://download.eclipse.org/technology/m2e/releases/latest/
+and then use this [example project](images/test.terminal.zip):
+
+- Open the `console.target` and set it as active target platform.
+- Open the `console.product` and start it; you will see a warning and some garbled characters.
+- Go to the launch configuration and then open the tab `Common` and choose `Allocate Terminal`.
+- Run it again and you will get colorized content and auto-completion using `<tab>`.
 
 ![Preference page for enabling terminal console](images/terminal_console.png)
