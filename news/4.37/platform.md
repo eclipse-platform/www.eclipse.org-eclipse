@@ -52,7 +52,7 @@ there remained the need to start the application in a proper terminal session.
 That support is now provided by the new `Terminal Console`.
 
 This is currently preliminary support and we would appreciate to get feedback.
-Please don't hesitate to open an [isue](https://github.com/eclipse-platform/eclipse.platform/issues)
+Please don't hesitate to open an [issue](https://github.com/eclipse-platform/eclipse.platform/issues)
 if something is missing or not working as expected.
 
 The terminal support can be installed as follows:
