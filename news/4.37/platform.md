@@ -58,10 +58,9 @@ if something is missing or not working as expected.
 The terminal support can be installed as follows:
 
 - Download the latest integration build SDK [here](https://download.eclipse.org/eclipse/downloads/).
-- Go to "Install new Software" and add the site https://download.eclipse.org/tools/cdt/releases/12.1/cdt-12.1.0/.
-  Then select `Terminal (Console) View` and `TM Terminal Local Connector Extension`.
+- Go to `Help > Install New Software` and add the site https://download.eclipse.org/eclipse/updates/4.37-I-builds/ then select
+  `Terminal Feature` and `Terminal Session Support`.
 - Now in the toolbar choose the `Open a Terminal` icon ensure the `Terminal` view works for your platform.
-- Go to `Help > Install New Software` and add the site https://download.eclipse.org/eclipse/updates/4.37-I-builds/ then select `...`.
 
 Now that the terminal console support is installed, you can use it.
 You can install m2e PDE support from https://download.eclipse.org/technology/m2e/releases/latest/
