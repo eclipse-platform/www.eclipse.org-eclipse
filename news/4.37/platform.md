@@ -72,3 +72,37 @@ and then use this [example project](images/test.terminal.zip):
 - Run it again and you will get colorized content and auto-completion using `<tab>`.
 
 ![Preference page for enabling terminal console](images/terminal_console.png)
+
+### Provide Search Capabilities for WebKit Browser on GTK+
+
+<details>
+<summary>Contributors</summary>
+
+- [Simeon Andreev ](https://github.com/trancexpress)
+- [Andrey Loskutov ](https://github.com/iloveeclipse)
+</details>
+
+We added rudimentary searching capabilities to `Browser` widgets based on WebKit and GTK+.
+The hotkey to open the search dialog is `Ctrl+F`,
+the dialog opens at the bottom left of the client area of the Browser widget. See screenshots below.
+
+The search dialog is closed with `Esc`.
+Its also closed when resizing or moving the `Browser` widget or its parent `Shell`.
+The dialog can be dragged and will remember its position until such a resize or move.
+
+The search dialog is not available for `Browser` widgets in a `Shell` with the `SWT.TOOL` style.
+
+The search can be disabled globally with the following VM property:
+
+```
+-Dorg.eclipse.swt.internal.webkitgtk.disableBrowserSearch=true
+```
+
+Searching in the `Help Contents` dialog: 
+
+![Browser search dialog in Help Contents dialog](images/webkit_browser_search_dialog1.png)
+
+Searching in the `Help` view: 
+
+![Browser search dialog in Help View](images/webkit_browser_search_dialog2.png)
+
