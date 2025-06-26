@@ -83,6 +83,7 @@ and then use this [example project](images/test.terminal.zip):
 </details>
 
 We added rudimentary searching capabilities to `Browser` widgets based on WebKit and GTK+.
+The search is enabled by setting the `SWT.SEARCH` style flag of the `Browser` widget.
 The hotkey to open the search dialog is `Ctrl+F`,
 the dialog opens at the bottom left of the client area of the Browser widget. See screenshots below.
 
@@ -90,9 +91,7 @@ The search dialog is closed with `Esc`.
 Its also closed when resizing or moving the `Browser` widget or its parent `Shell`.
 The dialog can be dragged and will remember its position until such a resize or move.
 
-The search dialog is not available for `Browser` widgets in a `Shell` with the `SWT.TOOL` style.
-
-The search can be disabled globally with the following VM property:
+The search can be disabled globally with the following VM property, e.g. in case of WebKit crashes:
 
 ```
 -Dorg.eclipse.swt.internal.webkitgtk.disableBrowserSearch=true
