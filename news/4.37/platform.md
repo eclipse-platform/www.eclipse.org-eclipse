@@ -64,7 +64,7 @@ The terminal support can be installed as follows:
 
 Now that the terminal console support is installed, you can use it.
 You can install m2e PDE support from https://download.eclipse.org/technology/m2e/releases/latest/
-and then use this [example project](images/test.terminal.zip):
+and then use this [example project](examples/terminal):
 
 - Open the `console.target` and set it as active target platform.
 - Open the `console.product` and start it; you will see a warning and some garbled characters.
