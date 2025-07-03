@@ -105,3 +105,36 @@ Searching in the `Help` view:
 
 ![Browser search dialog in Help View](images/webkit_browser_search_dialog2.png)
 
+![Preference page for enabling terminal console](images/terminal_console.png)
+
+### Compare/Replace with Clipboard
+
+<details>
+<summary>Contributors</summary>
+
+- [Lars Vogel ](https://github.com/vogella)
+- [Andrey Loskutov ](https://github.com/iloveeclipse)
+- [Sougandh S ](https://github.com/SougandhS)
+</details>
+
+A new feature has been added to enhance file and selection comparisons in Eclipse editors. 
+You can now compare the current file content or a selected portion with the content of the system clipboard. 
+This is particularly useful for quickly checking differences between a copied snippet and what's in your working file.
+
+To use this, simply right-click within an editor and choose `Compare With → Clipboard`. 
+
+![Compare Clipboard Context Menu](images/CompareClipBoard.png)
+
+A comparison editor will open, highlighting differences between the selected text (or entire file if nothing is selected) and the clipboard content.
+
+![Compare Clipboard Result](images/CompareResult.png)
+
+Additionally, you can use the `Replace With → Clipboard` action to replace the selected content or entire file with the clipboard contents directly.
+
+![Replace Clipboard Context Menu](images/ReplaceClipBoard.png)
+
+
+
+
+
+
