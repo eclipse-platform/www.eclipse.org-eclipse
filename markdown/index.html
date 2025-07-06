@@ -186,6 +186,8 @@
 			"eclipse-packaging/packages": "Eclipse Packaging Project",
 			"eclipse-orbit/.github": "Eclipse Orbit",
 			"eclipse-cbi/epl-license-feature": "EPL License Feature",
+			"eclipse-cbi/p2repo-aggregator": "CBI p2 Aggregator",
+			"eclipse-tycho/tycho": "Eclipse Tycho",
 		};
 
 		function getFileParameter() {
@@ -330,7 +332,7 @@
 				}
 			}
 		}
-		
+
 		function generateContributorAvatars(a, logicalHref) {
 			injectAvatars(a, logicalHref)
 			const td = a.parentElement;
@@ -352,7 +354,7 @@
 				}
 			}
 		}
-		
+
 		function injectAvatars(a, logicalHref) {
 			const avatar = toElements(`<span>${generateAvatar(logicalHref)}&nbsp;</span>`)[0];
 			a.parentElement.insertBefore(avatar, a);

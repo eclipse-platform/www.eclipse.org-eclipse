@@ -78,6 +78,7 @@ let markdownAside = `
 <a href="${markdownBase}eclipse-equinox/p2/master/docs">Equinox p2</a>
 <a href="${markdownBase}eclipse-ide/.github/main/">Eclipse IDE</a>
 <a href="${markdownBase}eclipse-simrel/.github/main/profile/README.md">Eclipse SimRel</a>
+<a href="${markdownBase}eclipse-tycho/tycho/main/README.md">Eclipse Tycho</a>
 `;
 
 let defaultAside = toElements(`
