@@ -4,6 +4,30 @@ A special thanks to everyone who [contributed to PDE](acknowledgements.md#plug-i
 
 ## General Updates
 
+### JUnit Plugin-test launches
+
+<details>
+<summary>Contributors</summary>
+
+- [Christoph Läubrich ](https://github.com/laeubi)
+</details>
+
+PDE previously has created JUnit Plugin-test launches with some broad inclusion settings and defaults that do not always fit different project setups.
+From now on, it uses a more minimal approach when creating new JUnit Plugin-test launches by default that is only selecting the test-plugin and leverage
+the option to include all required dependencies automatically.
+
+This results in much smaller launches that start up faster and do not pull in everything in your workspace by default what is especially a problem when
+many independent components in a workspace are to be tested.
+
+Beside of this it is now possible to configure the used default settings for new launches to adapt to individual needs, because of this 
+we **strongly recommend** you review these settings and make sure they fit your needs after an upgrade.
+
+![New PDE Launch Settings](images/pde_junit_launch_config.png)
+
+As this only affects new launches, you either need to adapt existing launches or delete older ones so they are created with fresh settings on the next run,
+if you find any issues or difficulties using this feature don't hesitate to let us know and open an [issue](https://github.com/eclipse-pde/eclipse.pde/issues)
+or a new [discussion](https://github.com/eclipse-pde/eclipse.pde/discussions).
+
 ### OSGi Test Framework Support
 
 <details>

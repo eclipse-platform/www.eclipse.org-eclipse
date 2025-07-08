@@ -105,8 +105,6 @@ Searching in the `Help` view:
 
 ![Browser search dialog in Help View](images/webkit_browser_search_dialog2.png)
 
-![Preference page for enabling terminal console](images/terminal_console.png)
-
 ### Compare/Replace with Clipboard
 
 <details>
