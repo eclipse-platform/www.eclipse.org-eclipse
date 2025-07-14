@@ -12,6 +12,7 @@ The previously provided Terminal View and the Local, SHH and Telnet Connectors f
 It has been part of the Eclipse EPPs for along time already and proven an useful extension to Eclipse IDE!
 
 To use it in your own product, or install it in a custom Eclipse IDE setup you can from now on use the feature `org.eclipse.terminal.feature`.
+
 <!--
 ---
 ## SWT Changes
