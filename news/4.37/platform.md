@@ -132,7 +132,29 @@ Additionally, you can use the `Replace With → Clipboard` action to replace the
 ![Replace Clipboard Context Menu](images/ReplaceClipBoard.png)
 
 
+---
+## Debugger
 
 
+### Group Breakpoints by Enablement
 
+<details>
+<summary>Contributors</summary>
+
+- [Andrey Loskutov ](https://github.com/iloveeclipse)
+- [Sougandh S ](https://github.com/SougandhS)
+</details>
+
+To make breakpoint management easier, the `Breakpoints view` now organizes breakpoints into separate groups based on their enablement status. 
+This clearly distinguishes between breakpoints that are `enabled` and those that are `disabled`.
+
+To use this, go to more options of `Breakpoints view` then `Group By -> Enablement`
+
+![Breakpoint Grouping Menu](images/BreakpointGroupMenu.png)
+
+When this option is selected, enabled breakpoints are listed together at the top under an `Enabled group`.
+Disabled breakpoints appear below under `Disabled group`. This organization helps you quickly locate breakpoints that are enabled or disabled. 
+It makes it easier to re-enable or disable breakpoints without scrolling through a long list.
+
+![Breakpoint Enablement Grouping](images/EnablementGrouping.png)
 
