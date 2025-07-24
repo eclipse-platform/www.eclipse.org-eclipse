@@ -132,6 +132,28 @@ Additionally, you can use the `Replace With → Clipboard` action to replace the
 ![Replace Clipboard Context Menu](images/ReplaceClipBoard.png)
 
 
+### Toggle Indicator in Windows 11 Menus
+
+<details>
+<summary>Contributors</summary>
+
+- [Stephan Wahlbrink ](https://github.com/wahlbrink)
+</details>
+
+On Windows 11, menu entries that can be toggled do not show their toggle state if they also contain an image.
+This affects both checked items as well as radio items.
+ 
+A workaround was implemented in SWT such that those states are visualized again.
+By default, a checkmark or radio bullet is drawn on top of the image if the item is selected.
+
+The behavior may also be configured via the system property `org.eclipse.swt.internal.win32.menu.customSelectionImage`, but note that this property may be subject to change or removal.
+This is how it looks with different values of that property:
+| System Property Value | 0 (default) | 1 | 2 |
+| --- | --- | --- | -- |
+| | ![Menu with Overlay Selection Indication](images/menu_state_overlay.png) | ![Menu with Selection Indication Overwriting Image](images/menu_state_noimage.png) | ![Menu with System Behavior Showing No Selection Indication](images/menu_state_system.png) |
+
+
+
 ---
 ## Debugger
 
