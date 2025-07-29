@@ -16,6 +16,12 @@ See [Support Launching with a Terminal Console](platform.md#support-launching-wi
 
 ### Perspective Switcher Menu Can Now Be Hidden Programmatically
 
+<details>
+<summary>Contributors</summary>
+
+- [Lars Vogel](https://github.com/vogella)
+</details>
+
 It is now possible to dynamically hide the context menu in the perspective switcher using the application model API. 
 This enables Eclipse RCP apps using 3.x API to enable and disable the menu at runtime.
 
