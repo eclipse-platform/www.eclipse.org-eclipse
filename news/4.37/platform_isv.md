@@ -14,7 +14,25 @@ To use them in your own product, or install it in a custom Eclipse IDE setup, yo
 
 See [Support Launching with a Terminal Console](platform.md#support-launching-with-a-terminal-console) for a use case.
 
+### Perspective Switcher Menu Can Now Be Hidden Programmatically
+
+It is now possible to dynamically hide the context menu in the perspective switcher using the application model API. 
+This enables Eclipse RCP apps using 3.x API to enable and disable the menu at runtime.
+
+Example usage:
+```java
+Display.getDefault().asyncExec(() -> {
+  List<MToolControl> elements = modelService.findElements(window, "PerspectiveSwitcher", MToolControl.class, null,
+      EModelService.IN_TRIM);
+  if (elements != null && !elements.isEmpty()) {
+    elements.get(0).getTags().add("NoMenu");
+  }
+});
+```
+
 <!--
 ---
 ## SWT Changes
 -->
+
+
