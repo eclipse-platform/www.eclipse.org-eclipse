@@ -148,9 +148,9 @@ By default, a checkmark or radio bullet is drawn on top of the image if the item
 
 The behavior may also be configured via the system property `org.eclipse.swt.internal.win32.menu.customSelectionImage`, but note that this property may be subject to change or removal.
 This is how it looks with different values of that property:
-| System Property Value | 0 (default) | 1 | 2 |
+| System Property Value | 0 | 1 | 2 (default) |
 | --- | --- | --- | -- |
-| | ![Menu with Overlay Selection Indication](images/menu_state_overlay.png) | ![Menu with Selection Indication Overwriting Image](images/menu_state_noimage.png) | ![Menu with System Behavior Showing No Selection Indication](images/menu_state_system.png) |
+| | ![Menu with System Behavior Showing No Selection Indication](images/menu_state_system.png) | ![Menu with Selection Indication Overwriting Image](images/menu_state_noimage.png) | ![Menu with Overlay Selection Indication](images/menu_state_overlay.png) |
 
 
 
