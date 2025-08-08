@@ -38,7 +38,19 @@ This marker can then be used in comments to separate start and end regions.
 
 ![The same Java class with some regions collapsed](images/overlappingStartEndCustomRegionMarkersCollapsed.png)
 
+## Debugger
 
+### Toggle Triggerpoint and Breakpoint with Hit Count
+<details>
+<summary>Contributors</summary>
+
+- [Andrey Loskutov](https://github.com/iloveeclipse)
+- [Suby S Surendran](https://github.com/subyssurendran666)
+</details>
+
+The ruler context menu in the editor has been enhanced to make debugging setup more efficient. You can now directly toggle a breakpoint with hit count or a triggerpoint by `right-clicking on the vertical ruler` (left margin), where the context menu includes the options Toggle Breakpoint with Hit Count and Toggle Triggerpoint.
+
+![Ruler context menu in the Java editor showing new entries for Toggle Breakpoint with Hit Count and Toggle Triggerpoint](images/rulerToggleMenuWithHitcountAndTriggerpoint.png)
 
 <!--
 ---
