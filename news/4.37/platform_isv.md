@@ -36,9 +36,17 @@ Display.getDefault().asyncExec(() -> {
 });
 ```
 
-<!--
----
+
 ## SWT Changes
--->
 
+### Clarified ImageDataProvider Contract
 
+The `ImageDataProvider` API documentation has been updated to clarify that 
+implementations are expected to return **linearly scaled** `ImageData` 
+based on the zoom level. For example, if `getImageData(100)` returns 
+an image of width *w* and height *h*, then `getImageData(200)` must 
+return an image of width `2 * w` and height `2 * h`, if non-null.
+
+Additionally, strict runtime checks verifying this linear scaling behavior  
+are available as a debugging feature to assist developers in validating 
+their implementations.
