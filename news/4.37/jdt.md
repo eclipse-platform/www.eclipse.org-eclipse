@@ -38,6 +38,40 @@ This marker can then be used in comments to separate start and end regions.
 
 ![The same Java class with some regions collapsed](images/overlappingStartEndCustomRegionMarkersCollapsed.png)
 
+### New quick-fix/clean-up to replace deprecated fields
+<details>
+<summary>Contributors</summary>
+
+- [Jeff Johnston](https://github.com/jjohnstn)
+</details>
+
+In a previous release, support was added to replace deprecated method calls with a suggested replacement found in Javadoc.  With this release, it is now possible to also replace fields with suggested replacements.
+
+The new clean-up is found by going to the `Source Fixing` tab of the Clean-up Configuration dialog and selecting: `Replace deprecated field where possible`.  The quick-fix is accessible by clicking CTRL+space on the deprecated field reference.
+
+![Setting the deprecated field clean-up](images/deprecatedFieldCleanUp.png)
+
+To make the field replaceable, the Javadoc should specify the alternate field or constant to use.  For example, for the following code:
+
+![Code example for deprecated field](images/deprecatedFieldExampleBefore.png)
+
+results in:
+
+![Code example after clean-up](images/deprecatedFieldExampleAfter.png)
+
+after applying the clean-up.
+
+### Access modifier specification added to Extract Method
+<details>
+<summary>Contributors</summary>
+
+- [Jeff Johnston](https://github.com/jjohnstn)
+</details>
+
+When extracting code to a method, a user can now specify access modifiers for the new method including: `public`, `protected`, `package-private`, `private`, `final`, and `synchronized`.
+
+![Example of new Extract Method dialog](images/extractMethodAccessors.png)
+
 ## Debugger
 
 ### Toggle Triggerpoint and Breakpoint with Hit Count

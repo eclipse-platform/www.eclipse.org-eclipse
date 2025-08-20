@@ -1,10 +1,144 @@
-<!DOCTYPE html>
-<html>
+<h1>Java Development Tools - 4.37</h1>
 
-<head>
-	<script src="../../project.js"></script>
-</head>
+<p>A special thanks to everyone who <a href="acknowledgements.md#java-development-tools">contributed to JDT</a> in this release!</p>
 
-<body onload="redirect()"></body>
+<!--
+---
+## Java&trade; XX Support 
+-->
 
-</html>
+
+
+
+<!--
+---
+## JUnit
+-->
+
+
+<hr />
+
+<h2>Java Editor</h2>
+
+<h3>Support Overlapping Start and End Markers for Custom Folding Regions</h3>
+
+<p><details>
+<summary>Contributors</summary></p>
+
+<ul>
+<li><a href="https://github.com/danthe1st">Daniel Schmid</a>
+</details></li>
+</ul>
+
+
+<p>Custom Folding Regions have been enhanced to allow using the same text for both the start and end region comment.
+If the start and end region markers are the same, the same comment can be used to end a folding region and start a new one.
+The last section automatically ends when the last block is closed or at the end of the file.</p>
+
+<p>This is useful if a class (or other Java file) contains multiple sections that are seperated with some comment.
+To use this functionality, check &ldquo;Enable folding of custom regions&rdquo; in <code>Window &gt; Preferences &gt; Java &gt; Editor &gt; Folding</code> and enter the same text in &ldquo;Region start comment text&rdquo; and &ldquo;Region end comment text&rdquo;.</p>
+
+<p><img src="images/overlappingStartEndCustomRegionMarkersPrefs.png" alt="Preference window with folding of custom regions enabled and the start and end region markers set to the same text" /></p>
+
+<p>This marker can then be used in comments to separate start and end regions.</p>
+
+<p><img src="images/overlappingStartEndCustomRegionMarkersExpanded.png" alt="Java class with multiple sections seperated by comments" /></p>
+
+<p><img src="images/overlappingStartEndCustomRegionMarkersCollapsed.png" alt="The same Java class with some regions collapsed" /></p>
+
+<h3>New quick-fix/clean-up to replace deprecated fields</h3>
+
+<p><details>
+<summary>Contributors</summary></p>
+
+<ul>
+<li><a href="https://github.com/jjohnstn">Jeff Johnston</a>
+</details></li>
+</ul>
+
+
+<p>In a previous release, support was added to replace deprecated method calls with a suggested replacement found in Javadoc.  With this release, it is now possible to also replace fields with suggested replacements.</p>
+
+<p>The new clean-up is found by going to the <code>Source Fixing</code> tab of the Clean-up Configuration dialog and selecting: <code>Replace deprecated field where possible</code>.  The quick-fix is accessible by clicking CTRL+space on the deprecated field reference.</p>
+
+<p><img src="images/deprecatedFieldCleanUp.png" alt="Setting the deprecated field clean-up" /></p>
+
+<p>To make the field replaceable, the Javadoc should specify the alternate field or constant to use.  For example, for the following code:</p>
+
+<p><img src="images/deprecatedFieldExampleBefore.png" alt="Code example for deprecated field" /></p>
+
+<p>results in:</p>
+
+<p><img src="images/deprecatedFieldExampleAfter.png" alt="Code example after clean-up" /></p>
+
+<p>after applying the clean-up.</p>
+
+<h3>Access modifier specification added to Extract Method</h3>
+
+<p><details>
+<summary>Contributors</summary></p>
+
+<ul>
+<li><a href="https://github.com/jjohnstn">Jeff Johnston</a>
+</details></li>
+</ul>
+
+
+<p>When extracting code to a method, a user can now specify access modifiers for the new method including: <code>public</code>, <code>protected</code>, <code>package-private</code>, <code>private</code>, <code>final</code>, and <code>synchronized</code>.</p>
+
+<p><img src="images/extractMethodAccessors.png" alt="Example of new Extract Method dialog" /></p>
+
+<h2>Debugger</h2>
+
+<h3>Toggle Triggerpoint and Breakpoint with Hit Count</h3>
+
+<p><details>
+<summary>Contributors</summary></p>
+
+<ul>
+<li><a href="https://github.com/iloveeclipse">Andrey Loskutov</a></li>
+<li><a href="https://github.com/subyssurendran666">Suby S Surendran</a>
+</details></li>
+</ul>
+
+
+<p>The ruler context menu in the editor has been enhanced to make debugging setup more efficient. You can now directly toggle a breakpoint with hit count or a triggerpoint by <code>right-clicking on the vertical ruler</code> (left margin), where the context menu includes the options Toggle Breakpoint with Hit Count and Toggle Triggerpoint.</p>
+
+<p><img src="images/rulerToggleMenuWithHitcountAndTriggerpoint.png" alt="Ruler context menu in the Java editor showing new entries for Toggle Breakpoint with Hit Count and Toggle Triggerpoint" /></p>
+
+<!--
+---
+## Java Views and Dialogs
+-->
+
+
+
+
+<!--
+---
+## Java Compiler
+-->
+
+
+
+
+<!--
+---
+## Java Formatter
+-->
+
+
+
+
+<!--
+---
+## Debug
+-->
+
+
+
+
+<!--
+### JDT Developers
+--> 
+
