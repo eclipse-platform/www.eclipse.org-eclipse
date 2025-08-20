@@ -138,14 +138,33 @@ jobs:
           }
           
           // ------------------------------------------------------
+          // Read existing names
+          // ------------------------------------------------------
+          const fs = require('fs')
+          const acknowledgementsFile = 'website/news/${{ inputs.eclipse-version }}/acknowledgements.md'
+          let lines = fs.readFileSync(acknowledgementsFile, {encoding: 'utf8'}).split(/\r?\n/)
+          
+          const nameIdRegex = /\[(?<name>[^\]]+)\]\(https:\/\/github\.com\/(?<id>[^\)/]+)\)/g
+          const existingContributorNames = new Map()
+          for (line of lines) {
+            for (match of line.matchAll(nameIdRegex)) {
+              existingContributorNames.set(match.groups.id.trim(), match.groups.name.trim())
+            }
+          }
+          // ------------------------------------------------------
           // Select name if multiple have been found for one contributor
           // ------------------------------------------------------
           const selectedContributorNames = new Map()
           const nameInconsistencies = []
           for (const [profile, names] of contributorNames) {
             // Select longest name, assuming that's correct
-            let selectedName = [...names].reduce((n1, n2) => n1.length > n2.length ? n1 : n2)
-            if (names.size > 1) {
+            let selectedName = [...names][0]
+            const existingName = existingContributorNames.get(profile)
+            if (existingName && (selectedName != existingName || names.size > 1)) {
+              selectedName = existingName
+              console.log("Reuse existing name '" + existingName + "' for " + profile + ", instead of encountered: " + Array.from(names).join(', '))
+            } else if (names.size > 1) {
+              selectedName = [...names].reduce((n1, n2) => n1.length > n2.length ? n1 : n2)
               console.log("Multiple names encountered for " + profile + ": " + Array.from(names).join(', '))
               nameInconsistencies.push("@" + profile + ": " + Array.from(names).map(n => n==selectedName ? ("**`" + n + "`**") : ("`" + n + "`")).join(', '))
             }
@@ -155,9 +174,6 @@ jobs:
           // ------------------------------------------------------
           // Insert the list of contributors into the template file
           // ------------------------------------------------------
-          const fs = require('fs')
-          const acknowledgementsFile = 'website/news/${{ inputs.eclipse-version }}/acknowledgements.md'
-          let lines = fs.readFileSync(acknowledgementsFile, {encoding: 'utf8'}).split(/\r?\n/)
           let elementsInLine = 0
           for (const [organization, contributors] of orgaContributors) {
             console.log('Insert contributors of ' + organization)
