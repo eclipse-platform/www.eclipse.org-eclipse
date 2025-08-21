@@ -58,7 +58,7 @@ if something is missing or not working as expected.
 The terminal support can be installed as follows:
 
 - Download the latest integration build SDK [here](https://download.eclipse.org/eclipse/downloads/).
-- Go to `Help > Install New Software` and add the site https://download.eclipse.org/eclipse/updates/4.37-I-builds/ then select
+- Go to `Help → Install New Software` and add the site https://download.eclipse.org/eclipse/updates/4.37-I-builds/ then select
   `Terminal Feature` and `Terminal Session Support`.
 - Now in the toolbar choose the `Open a Terminal` icon ensure the `Terminal` view works for your platform.
 
@@ -88,10 +88,10 @@ The hotkey to open the search dialog is `Ctrl+F`,
 the dialog opens at the bottom left of the client area of the Browser widget. See screenshots below.
 
 The search dialog is closed with `Esc`.
-Its also closed when resizing or moving the `Browser` widget or its parent `Shell`.
+It's also closed when resizing or moving the `Browser` widget or its parent `Shell`.
 The dialog can be dragged and will remember its position until such a resize or move.
 
-The search can be disabled globally with the following VM property, e.g. in case of WebKit crashes:
+The search can be disabled globally with the following VM property, e.g., in case of WebKit crashes:
 
 ```
 -Dorg.eclipse.swt.internal.webkitgtk.disableBrowserSearch=true
@@ -167,15 +167,15 @@ This is how it looks with different values of that property:
 - [Sougandh S ](https://github.com/SougandhS)
 </details>
 
-To make breakpoint management easier, the `Breakpoints view` now organizes breakpoints into separate groups based on their enablement status. 
+To make breakpoint management easier, the `Breakpoints` view now organizes breakpoints into separate groups based on their enablement status. 
 This clearly distinguishes between breakpoints that are `enabled` and those that are `disabled`.
 
-To use this, go to more options of `Breakpoints view` then `Group By -> Enablement`
+To use this, go to more options of `Breakpoints` view then `Group By → Enablement`
 
 ![Breakpoint Grouping Menu](images/BreakpointGroupMenu.png)
 
-When this option is selected, enabled breakpoints are listed together at the top under an `Enabled group`.
-Disabled breakpoints appear below under `Disabled group`. This organization helps you quickly locate breakpoints that are enabled or disabled. 
+When this option is selected, enabled breakpoints are listed together at the top under an `Enabled` group.
+Disabled breakpoints appear below under `Disabled` group. This organization helps you quickly locate breakpoints that are enabled or disabled. 
 It makes it easier to re-enable or disable breakpoints without scrolling through a long list.
 
 ![Breakpoint Enablement Grouping](images/EnablementGrouping.png)

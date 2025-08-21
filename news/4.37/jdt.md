@@ -28,7 +28,8 @@ If the start and end region markers are the same, the same comment can be used t
 The last section automatically ends when the last block is closed or at the end of the file.
 
 This is useful if a class (or other Java file) contains multiple sections that are seperated with some comment.
-To use this functionality, check "Enable folding of custom regions" in `Window > Preferences > Java > Editor > Folding` and enter the same text in "Region start comment text" and "Region end comment text".
+To use this functionality, check `Enable folding of custom regions` in `Window → Preferences → Java → Editor → Folding`
+and enter the same text in `Region start comment text` and `Region end comment text`.
 
 ![Preference window with folding of custom regions enabled and the start and end region markers set to the same text](images/overlappingStartEndCustomRegionMarkersPrefs.png)
 
@@ -38,7 +39,7 @@ This marker can then be used in comments to separate start and end regions.
 
 ![The same Java class with some regions collapsed](images/overlappingStartEndCustomRegionMarkersCollapsed.png)
 
-### New quick-fix/clean-up to replace deprecated fields
+### New Quick-fix/Clean-up to Replace Deprecated Fields
 <details>
 <summary>Contributors</summary>
 
@@ -47,7 +48,7 @@ This marker can then be used in comments to separate start and end regions.
 
 In a previous release, support was added to replace deprecated method calls with a suggested replacement found in Javadoc.  With this release, it is now possible to also replace fields with suggested replacements.
 
-The new clean-up is found by going to the `Source Fixing` tab of the Clean-up Configuration dialog and selecting: `Replace deprecated field where possible`.  The quick-fix is accessible by clicking CTRL+space on the deprecated field reference.
+The new clean-up is found by going to the `Source Fixing` tab of the `Custom Clean Ups` dialog and selecting: `Replace deprecated field where possible`.  The quick-fix is accessible by clicking CTRL+space on the deprecated field reference.
 
 ![Setting the deprecated field clean-up](images/deprecatedFieldCleanUp.png)
 
@@ -61,7 +62,7 @@ results in:
 
 after applying the clean-up.
 
-### Access modifier specification added to Extract Method
+### Access Modifier Specification Added to Extract Method
 <details>
 <summary>Contributors</summary>
 
@@ -82,7 +83,8 @@ When extracting code to a method, a user can now specify access modifiers for th
 - [Suby S Surendran](https://github.com/subyssurendran666)
 </details>
 
-The ruler context menu in the editor has been enhanced to make debugging setup more efficient. You can now directly toggle a breakpoint with hit count or a triggerpoint by `right-clicking on the vertical ruler` (left margin), where the context menu includes the options Toggle Breakpoint with Hit Count and Toggle Triggerpoint.
+The ruler context menu in the editor has been enhanced to make debugging setup more efficient. You can now directly toggle a breakpoint with hit count or a triggerpoint
+by right-clicking on the vertical ruler (in left margin), where the context menu includes the options `Toggle Breakpoint with Hit Count` and `Toggle Triggerpoint`.
 
 ![Ruler context menu in the Java editor showing new entries for Toggle Breakpoint with Hit Count and Toggle Triggerpoint](images/rulerToggleMenuWithHitcountAndTriggerpoint.png)
 

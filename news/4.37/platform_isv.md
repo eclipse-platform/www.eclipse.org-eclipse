@@ -23,7 +23,7 @@ See [Support Launching with a Terminal Console](platform.md#support-launching-wi
 </details>
 
 It is now possible to dynamically hide the context menu in the perspective switcher using the application model API. 
-This enables Eclipse RCP apps using 3.x API to enable and disable the menu at runtime.
+This allows Eclipse RCP apps using 3.x API to enable and disable the menu at runtime.
 
 Example usage:
 ```java
@@ -45,5 +45,6 @@ The `ImageDataProvider` API documentation has been updated to clarify that imple
 For example, if `getImageData(100)` returns an image of width `w` and height `h`, then `getImageData(200)` must return an image of width `2 * w` and height `2 * h`, if non-null.
 This only makes an implicit assumption explicit, some consumers have always relied on this linear scaling behavior, and lack of it may have led to unexpected behavior in the past.
 
-Additionally, optional runtime checks verifying this linear scaling behavior are available as a debugging feature to assist developers in validating their implementations.  
+Additionally, optional runtime checks verifying this linear scaling behavior are available as a debugging feature to assist developers in validating their implementations.
+
 These checks can be enabled by starting the application with `-Dorg.eclipse.swt.internal.enableStrictChecks`, but note that this system property may be subject to change in future releases without prior notice.
