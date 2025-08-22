@@ -62,7 +62,27 @@ If you encounter issues or have suggestions don't hesitate to let us know by ope
 ## API Tools
 -->
 
-<!--
----
-## PDE Compiler 
--->
+
+## PDE Compiler
+
+### Auto-Correction of Malformed Bundle Header Names
+<details>
+<summary>Contributors</summary>
+
+- [Gireesh Punathil ](https://github.com/gireeshpunathil)
+- [Neha Burnwal ](https://github.com/nburnwal09)
+
+</details>
+
+A quick fix was added for correcting invalid header names in the `MANIFEST.MF` file. 
+It automatically sanitizes header names by removing any characters other than alphanumeric `(A–Z, a–z, 0–9)`, hyphen `(-)`, and underscore `(_)`.
+
+![Invalid characters check in manifest](images/invalidCharactersCheck.png)
+
+Additionally, the quick fix ensures proper formatting by removing a space between the header name and the colon `(:)` if one is found.
+
+![Quick fix to add a space](images/spaceCheckBeforeColon.png)
+
+The quick fix is labeled as `Remove invalid characters from header`. 
+Once the user clicks on `Finish`, it updates the header. 
+This quick fix is added to enhance user experience.
