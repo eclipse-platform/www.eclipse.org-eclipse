@@ -1,6 +1,6 @@
 ## Eclipse 2025-09 Acknowledgements
 
-Last revised: August 20, 2025
+Last revised: August 29, 2025
 
 We would also like to thank the users and adopters who support our efforts through a range of activities, including early testing, being a Friend of Eclipse, contracting special work, or outright employment.
 
@@ -18,18 +18,18 @@ Special thanks to all code contributors (alphabetically):
 |---|---|---|
 | [Alexander Fedorov](https://github.com/ruspl-afed) | [Amartya Parijat](https://github.com/amartya4256) | [Andreas Koch](https://github.com/akoch-yatta) |
 | [Andrey Loskutov](https://github.com/iloveeclipse) | [arunjose696](https://github.com/arunjose696) | [Christoph Läubrich](https://github.com/laeubi) |
-| [Christoph Rueger](https://github.com/chrisrueger) | [Ed Merks](https://github.com/merks) | [Elsa Zacharia](https://github.com/elsazac) |
-| [Federico Jeanne](https://github.com/fedejeanne) | [Gesa Hentschke](https://github.com/ghentschke) | [Hannes Wellmann](https://github.com/HannesWell) |
-| [Heiko Klare](https://github.com/HeikoKlare) | [Hélios GILLES](https://github.com/RoiSoleil) | [Jeff Johnston](https://github.com/jjohnstn) |
-| [Jerry Laruba Festus](https://github.com/IamLRBA) | [John Bampton](https://github.com/jbampton) | [Jose Diaz Fernandez](https://github.com/josediazfer) |
-| [Kellner, Niklas](https://github.com/N1k145) | [Lars Vogel](https://github.com/vogella) | [Matthias Becker](https://github.com/BeckerWdf) |
-| [Michael Bangas](https://github.com/Michael5601) | [Mickael Istria](https://github.com/mickaelistria) | [miscose](https://github.com/miscose) |
-| [Nicolai Timofeev](https://github.com/tnikolai2) | [Patrick Ziegler](https://github.com/ptziegler) | [Pauline DEVILLE](https://github.com/pdeville2) |
-| [raghucssit](https://github.com/raghucssit) | [Rahul Mohanan](https://github.com/MohananRahul) | [Rubén Porras Campo](https://github.com/rubenporras) |
-| [Sebastian Ratz](https://github.com/sratz) | [Shahzaib Ibrahim](https://github.com/ShahzaibIbrahim) | [Simeon Andreev](https://github.com/trancexpress) |
-| [Sougandh S](https://github.com/SougandhS) | [Stephan Wahlbrink](https://github.com/wahlbrink) | [Theo Dann-Muirhead](https://github.com/Theo-Dann-Muirhead-Renesas) |
-| [Till Brychcy](https://github.com/brychcy) | [Tobias Melcher](https://github.com/tobias-melcher) | [Vasili Gulevich](https://github.com/basilevs) |
-| [Александър Куртаков](https://github.com/akurtakov)  |
+| [Christoph Rueger](https://github.com/chrisrueger) | [dan1st](https://github.com/danthe1st) | [Ed Merks](https://github.com/merks) |
+| [Elsa Zacharia](https://github.com/elsazac) | [Federico Jeanne](https://github.com/fedejeanne) | [Gesa Hentschke](https://github.com/ghentschke) |
+| [Hannes Wellmann](https://github.com/HannesWell) | [Heiko Klare](https://github.com/HeikoKlare) | [Hélios GILLES](https://github.com/RoiSoleil) |
+| [Jeff Johnston](https://github.com/jjohnstn) | [Jerry Laruba Festus](https://github.com/IamLRBA) | [John Bampton](https://github.com/jbampton) |
+| [Jose Diaz Fernandez](https://github.com/josediazfer) | [Kellner, Niklas](https://github.com/N1k145) | [Lars Vogel](https://github.com/vogella) |
+| [Matthias Becker](https://github.com/BeckerWdf) | [Michael Bangas](https://github.com/Michael5601) | [Mickael Istria](https://github.com/mickaelistria) |
+| [miscose](https://github.com/miscose) | [Nicolai Timofeev](https://github.com/tnikolai2) | [Patrick Ziegler](https://github.com/ptziegler) |
+| [Pauline DEVILLE](https://github.com/pdeville2) | [raghucssit](https://github.com/raghucssit) | [Rahul Mohanan](https://github.com/MohananRahul) |
+| [Rubén Porras Campo](https://github.com/rubenporras) | [Sebastian Ratz](https://github.com/sratz) | [Shahzaib Ibrahim](https://github.com/ShahzaibIbrahim) |
+| [Simeon Andreev](https://github.com/trancexpress) | [Sougandh S](https://github.com/SougandhS) | [Stephan Wahlbrink](https://github.com/wahlbrink) |
+| [Suby S Surendran](https://github.com/subyssurendran666) | [Theo Dann-Muirhead](https://github.com/Theo-Dann-Muirhead-Renesas) | [Till Brychcy](https://github.com/brychcy) |
+| [Tobias Melcher](https://github.com/tobias-melcher) | [Vasili Gulevich](https://github.com/basilevs) | [Александър Куртаков](https://github.com/akurtakov) |
 <!-- END:   eclipse-platform contributors -->
 
 ## Java Development Tools
@@ -58,10 +58,10 @@ Special thanks to all code contributors (alphabetically):
 ||||
 |---|---|---|
 | [Alexander Fedorov](https://github.com/ruspl-afed) | [Christoph Läubrich](https://github.com/laeubi) | [Ed Merks](https://github.com/merks) |
-| [Hannes Wellmann](https://github.com/HannesWell) | [Heiko Klare](https://github.com/HeikoKlare) | [Jennifer Nerlich](https://github.com/jnerlich) |
-| [Lars Vogel](https://github.com/vogella) | [Lola](https://github.com/oohwooh) | [Michael Bangas](https://github.com/Michael5601) |
-| [Rahul Mohanan](https://github.com/MohananRahul) | [Sage Bain](https://github.com/Shyesta) | [steffenschmitt1](https://github.com/steffenschmitt1) |
-| [William Riley](https://github.com/Kummallinen) | [Александър Куртаков](https://github.com/akurtakov)  |
+| [Elsa Zacharia](https://github.com/elsazac) | [Hannes Wellmann](https://github.com/HannesWell) | [Heiko Klare](https://github.com/HeikoKlare) |
+| [Jennifer Nerlich](https://github.com/jnerlich) | [Lars Vogel](https://github.com/vogella) | [Lola](https://github.com/oohwooh) |
+| [Michael Bangas](https://github.com/Michael5601) | [Rahul Mohanan](https://github.com/MohananRahul) | [Sage Bain](https://github.com/Shyesta) |
+| [steffenschmitt1](https://github.com/steffenschmitt1) | [William Riley](https://github.com/Kummallinen) | [Александър Куртаков](https://github.com/akurtakov) |
 <!-- END:   eclipse-pde contributors -->
 
 ## Equinox
