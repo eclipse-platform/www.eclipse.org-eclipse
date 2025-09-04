@@ -4,7 +4,7 @@ A special thanks to everyone who [contributed to PDE](acknowledgements.md#plug-i
 
 ## General Updates
 
-### JUnit Plugin-test launches
+### JUnit Plugin-Test Launches
 
 <details>
 <summary>Contributors</summary>
