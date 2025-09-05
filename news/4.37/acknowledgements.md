@@ -1,6 +1,6 @@
 ## Eclipse 2025-09 Acknowledgements
 
-Last revised: August 29, 2025
+Last revised: September 5, 2025
 
 We would also like to thank the users and adopters who support our efforts through a range of activities, including early testing, being a Friend of Eclipse, contracting special work, or outright employment.
 
