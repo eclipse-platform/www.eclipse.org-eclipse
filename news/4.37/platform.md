@@ -153,6 +153,27 @@ This is how it looks with different values of that property:
 | | ![Menu with System Behavior Showing No Selection Indication](images/menu_state_system.png) | ![Menu with Selection Indication Overwriting Image](images/menu_state_noimage.png) | ![Menu with Overlay Selection Indication](images/menu_state_overlay.png) |
 
 
+### Sort Quick Search Results
+
+<details>
+<summary>Contributors</summary>
+
+- [Ed Merks ](https://github.com/merks)
+- [Andrey Loskutov ](https://github.com/iloveeclipse)
+- [Sougandh S ](https://github.com/SougandhS)
+</details>
+
+Quick Search will now support sorting of results, making it easier to navigate and analyze large result sets. 
+You can sort the entries by `Line`, `Text`, or `Path`, helping you quickly locate the most relevant matches.
+
+To use this, simply click on any column you wish to sort by in the `Quick Search` results view
+ 
+![Results Sorted by Ascending](images/QuickSearchAscendingSort.png)
+
+Clicking the sorted column again will toggle the sorting order between ascending and descending.
+
+![Results Sorted by Descending](images/QuickSearchDescendingSort.png)
+
 
 ---
 ## Debugger
