@@ -158,8 +158,6 @@ This is how it looks with different values of that property:
 <details>
 <summary>Contributors</summary>
 
-- [Ed Merks ](https://github.com/merks)
-- [Andrey Loskutov ](https://github.com/iloveeclipse)
 - [Sougandh S ](https://github.com/SougandhS)
 </details>
 
