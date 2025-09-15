@@ -110,8 +110,6 @@ Searching in the `Help` view:
 <details>
 <summary>Contributors</summary>
 
-- [Lars Vogel ](https://github.com/vogella)
-- [Andrey Loskutov ](https://github.com/iloveeclipse)
 - [Sougandh S ](https://github.com/SougandhS)
 </details>
 
