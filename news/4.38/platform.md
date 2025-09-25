@@ -27,7 +27,29 @@ A special thanks to everyone who [contributed to Eclipse-Platform](acknowledgeme
 ## Views, Dialogs and Toolbar
 -->
 
-<!--
 ---
 ## General Updates
--->
+
+### Configurable Elapsed Time Display in Console
+<details>
+<summary>Contributors</summary>
+
+- [Sougandh S ](https://github.com/SougandhS)
+</details>
+
+The Console view now lets you customize or disable the elapsed time shown in its title. A new option is available in the `Console Preferences` that provides an editable dropdown with several predefined time formats.
+
+![Console Elapsed Time](images/ConsoleElapsedPreference.png)
+
+When you select a format, a live preview in the console shows how it will appear. You can also edit the format string to create your own custom style, and the preview will validate whether it is correct or not.
+
+![Console Elapsed Time Dropdown](images/ConsoleElapsedDropDown.png)
+
+![Console Elapsed Time Selection](images/ConsoleElapsedSelection.png)
+
+Once the setting is saved, the console title updates in the chosen format
+
+![Console Elapsed Time Format](images/ConsoleElapsedFormat.png)
+
+
+
