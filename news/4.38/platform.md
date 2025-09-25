@@ -51,5 +51,23 @@ Once the setting is saved, the console title updates in the chosen format
 
 ![Console Elapsed Time Format](images/ConsoleElapsedFormat.png)
 
+---
+## Debugger
+
+### Prompt on Debug Launch with Skipped Breakpoints
+
+<details>
+<summary>Contributors</summary>
+
+- [Sougandh S ](https://github.com/SougandhS)
+- [Andrey Loskutov ](https://github.com/iloveeclipse)
+</details>
+
+A new safeguard has been added to help avoid confusion when debugging with breakpoints skipped.
+If you start a debug session while the `Skip All Breakpoints` option enabled, a warning dialog now appears to remind you that breakpoints will be ignored. 
+This prevents the common situation where developers assume the debugger is malfunctioning because no breakpoints are hit.
+
+![Debug Prompt](images/DebugPromptOnSkipBreakpoints.png)
+
 
 
