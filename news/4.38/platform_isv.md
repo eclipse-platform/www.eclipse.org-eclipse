@@ -34,3 +34,26 @@ gc.drawImage(image, 0, 0, 200, 100);
 When using the new `drawImage` method, images that can provide size-specific data (such as SVGs or images backed by `ImageDataAtSizeProvider`) are loaded at the destination size, avoiding blurry scaling.  
 For all other images the behavior remains the same as before _i.e._ they are loaded at the closest available zoom level.  
 This destination-size loading is currently only available in the new method but may be added to the existing method in the future.
+
+### Cursor Constructor Deprecation and Replacement
+
+<details>
+<summary>Contributors</summary>
+
+- [Shahzaib Ibrahim](https://github.com/ShahzaibIbrahim)
+</details>
+
+The constructor `Cursor(Device, ImageData, ImageData, int, int)` has been **deprecated** in SWT due to its limited DPI support. 
+This constructor allows creating a cursor by providing a source image and a 1-bit mask to define transparency. 
+This approach requires developers to manually define mask pixels and works reliably **only** in fixed DPI environments.
+
+However, this approach has become uncommon, as modern practices typically encode mask data directly into the image data itself (for example, by using alpha channels).
+
+If you are currently using the deprecated constructor, you can switch to one of the following alternatives:
+
+- `Cursor(Device, ImageData, int, int)`: This constructor that accepts a single ImageData object (containing both the image and mask information) is not deprecated since the mask data is directly encoded into the image and as a user you don't need to define mask pixel by pixel.
+
+- (**Recommended**) `Cursor(Device, ImageDataProvider, int, int)`: This constructor ensures the best possible image for a cursor at all zoom levels.
+
+#### Call for Action
+We encourage you to update your code and use the **recommended** constructor for better compatibility and a more future-proof code.
