@@ -22,10 +22,47 @@ A special thanks to everyone who [contributed to JDT](acknowledgements.md#java-d
 ## Java Views and Dialogs
 -->
 
-<!--
 ---
 ## Java Compiler
--->
+
+### Multi-Release JAR Compilation Support
+<!-- https://github.com/eclipse-jdt/eclipse.jdt.core/pull/3900 -->
+<!-- https://github.com/eclipse-jdt/eclipse.jdt.ui/pull/2260 -->
+<!-- https://github.com/eclipse-jdt/eclipse.jdt.debug/pull/753 -->
+<!-- https://github.com/eclipse-m2e/m2e-core/pull/2058 -->
+<details>
+<summary>Contributors</summary>
+
+- [Christoph Laeubrich](https://github.com/laeubi)
+- [Stephan Herrmann](https://github.com/stephan-herrmann)
+</details>
+
+JDT now supports native compilation of Multi-Release JARs.
+[Multi-Release JARs](https://openjdk.org/jeps/238) are a feature introduced in Java 9 that allows a single JAR file to contain multiple versions of the same class,
+each compiled for a specific Java release.
+This enables libraries to take advantage of newer Java features while maintaining backward compatibility with older Java versions.
+
+With this new feature, you can now compile Multi-Release Types directly within Eclipse.
+Multi-Release Types are classes that exist in different variants with the same name across different source folders,
+where each variant is automatically compiled with the appropriate Java release settings and placed in the correct output folder.
+
+This implementation follows the "Pattern 3: Single Project" approach described in the [Maven Compiler Plugin documentation](https://maven.apache.org/plugins/maven-compiler-plugin/multirelease.html).
+Previously, this pattern had limited IDE support, but Eclipse now provides a simple and elegant solution by compiling individual class files with the corresponding release option.
+
+To enable Multi-Release compilation for a source folder, open the source folder properties in the Build Path configuration and specify the target Java release:
+
+![Multi-Release JAR configuration dialog](images/multi-release-jar-config.png)
+
+Once configured, you can:
+- Edit and compile Multi-Release Types simultaneously across different Java versions
+- Run Multi-Release compiled projects directly from the Eclipse IDE
+- Use m2eclipse's built-in support to automatically map `maven-compiler-plugin` executions for Multi-Release JARs into JDT configuration
+
+This feature significantly simplifies the development workflow for libraries that need to support multiple Java versions.
+We welcome your feedback and testing of this new capability.
+For known issues and to report problems, please visit the [JDT Core issue tracker](https://github.com/eclipse-jdt/eclipse.jdt.core/issues/4275).
+
+For more details on m2eclipse integration, see the [m2e-core release notes](https://github.com/eclipse-m2e/m2e-core/blob/main/RELEASE_NOTES.md#multi-release-jar-support).
 
 <!--
 ---
