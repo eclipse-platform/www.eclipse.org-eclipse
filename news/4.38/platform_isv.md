@@ -11,6 +11,12 @@ A special thanks to everyone who [contributed to Eclipse-Platform](acknowledgeme
 
 ### New API: `GC#drawImage(Image image, int destX, int destY, int destWidth, int destHeight)`
 
+<details>
+    <summary>Contributors</summary>
+    
+    - [Arun Jose](https://github.com/arunjose696)
+</details>
+
 #### Description
 A new `drawImage` method in `GC` allows drawing the **full image** into a specified destination rectangle.  
 Until now, the existing method  
