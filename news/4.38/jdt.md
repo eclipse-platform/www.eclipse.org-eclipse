@@ -121,6 +121,33 @@ Comparison also works with `Arrays` and `Primitives` too.
 
 ![Variable Compare with Clipboard Array](images/VariableCompareWithCllipboardPrimitives.png)
 
+
+
+### Breakpoint Support for In-line Chained Lambdas
+
+<details>
+<summary>Contributors</summary>
+
+- [Sougandh S ](https://github.com/SougandhS)
+- [Andrey Loskutov ](https://github.com/iloveeclipse)
+</details>
+
+The Java debugger now supports setting breakpoints on individual lambdas defined within single-line chained lambda expressions. When toggling a `Lambda Entry Breakpoint` on such an expression,
+a dialog appears showing all lambdas defined on that line in their order of appearance. As you move the selection over a lambda in the list, the corresponding lambda in the source is highlighted, 
+helping you easily identify which one you’re about to select.
+
+![Lambda Breakpoint Selection Dialog](images/LambdaBreakpointDialog.png)
+
+
+The dialog also includes a `filter field` to quickly narrow down the list when multiple lambdas are present
+
+![Lambda Filtering in Dialog](images/LambdaFilteringInDialog.png)
+
+Once confirmed, the `breakpoint` is added specifically to that lambda, giving precise control when debugging complex chained expressions.
+The selected lambda’s name is also displayed clearly in the `Breakpoints view` for better traceability.
+
+
+![Selected Lambda in Breakpoints View](images/LambdaInlineBreakpointsView.png)
 <!--
 ### JDT Developers
 --> 
