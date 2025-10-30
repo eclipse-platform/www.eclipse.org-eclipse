@@ -42,6 +42,38 @@ This behavior now more aligns with JPMS and OSGi semantics, where inherited publ
 
 Implementers of `IClasspathConainer` are advised to revisit their usage of access restrictions to see if this new concepts still meets their expectations or possibly need adaption.
 
+### Changed concerning Deprecation Warnings
+<!-- https://github.com/eclipse-jdt/eclipse.jdt.core/issues/4572 -->
+<details>
+<summary>Contributors</summary>
+
+- [Stephan Herrmann](https://github.com/stephan-herrmann)
+</details>
+
+It was discovered that the Eclipse Compiler for Java (ECJ) was not conforming to JLS in several matters of deprecation warnings.
+
+Therefore a significant overhaul in this area was performed. As a result users may experience fewer or more deprecation warnings in their code, depending on how `@Deprecated` and `@SuppressWarnings("deprecation")` are used in their code.
+
+#### Changes in problem reporting
+* Previously, ECJ regarded all **members** (fields, methods, member types) of a deprecated type as **"implicitly deprecated"**. This concept is not backed by JLS and has been corrected, such that ECJ now reports fewer warnings.
+    * In this situation deprecation warnings will only be raised against references to the deprecated type, not at locations where only its members are referenced.
+    * If previously such warnings were suppressed in the code, then this `@SuppressWarnings` annotation may be flagged as unnecessary.
+    * If a deprecated type is extended or implemented by a non-deprecated type, clients of the subtype may now freely use its inherited members without triggering a warning. In this situation the `extends` or `implements` clauses are now the only location where deprecation will cause a warning (unless suppressed there).
+* Previously, ECJ did not raise any deprecation warnings when using deprecated elements from **within the same compilation unit** (file). JLS specifies this slightly different: not a compilation unit is the point of reference, but declaration and use must be located within the same **top-level type** in order to be exempted from deprecation warnings.
+    * This will bring about more warnings in situations where users assumed that code within the same compilation unit is **"friendly"** and thus privileged to use deprecated elements.
+* New warnings are also raised against usage of a deprecated **annotation element**.
+    * This is relevant when an annotation type itself is not deprecated, but the way how annotation details are specified is changing and deprecation is used for guiding users during migration.
+  
+#### New support for reacting to the above changes
+
+Users may have gotten used to warnings regarding "implicitly deprecated" members, and thus feel the correction of ECJ to be a loss in visibility of pending migration issues. 
+
+For this situation a new configurable warning (severity is info by default) has been implemented that will alert the user when a deprecated type contains members that are not marked as deprecated (private members are exempted).
+
+Along with the new warning a quickfix is provided that allows to mechanically add `@Deprecated` to all affected members, thus restoring warnings regarding the use of any of these members.
+
+If this new hint is not desired, setting the option to "ignore" will turn it off.
+
 ### Multi-Release JAR Compilation Support
 <!-- https://github.com/eclipse-jdt/eclipse.jdt.core/pull/3900 -->
 <!-- https://github.com/eclipse-jdt/eclipse.jdt.ui/pull/2260 -->
