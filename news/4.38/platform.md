@@ -12,10 +12,27 @@ A special thanks to everyone who [contributed to Eclipse-Platform](acknowledgeme
 ## Text Editors
 -->
 
-<!--
 ---
 ## Preferences
--->
+
+### New Filtering Options in Preference Page
+<details>
+<summary>Contributors</summary>
+
+- [Elsa Zacharia](https://github.com/elsazac)
+- [Sougandh S](https://github.com/SougandhS)
+</details>
+
+Filtering has now been introduced in more areas of the Preference page to make it easier to find and manage entries.
+
+A filtering option is now available in the File Content section under the `Version Control (Team)` preferences, providing quick filtering of file specific extensions.
+In addition, filtering options have been added to the Templates sections under the `Java Editor`, `Ant Editor`, and `Template Editor`.
+This has also been added to the `Add to favorite` dialog under Run/Debug launches, and also to the `Export Launch Configurations` dialog. 
+
+![Version Control Preference](images/VersionControlPreference.png)
+*Figure : Version Control (Team) Preference page showing the filtering option.*
+
+These enhancements improves usability by making it easier to locate templates and extensions by name, filter and sort launches by type, and quickly find specific launch configurations without manually expanding or scrolling through long lists.
 
 <!--
 ---
