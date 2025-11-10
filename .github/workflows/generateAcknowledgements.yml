@@ -236,7 +236,10 @@ jobs:
           }
           
           function isBot(author) {
-            return author.email.endsWith("-bot@eclipse.org") || author.email.endsWith("[bot]@users.noreply.github.com") || author.name == 'eclipse-releng-bot'
+            const email = author.email.toLowerCase()
+            return email.endsWith("-bot@eclipse.org") || email.endsWith("[bot]@users.noreply.github.com") || author.name == 'eclipse-releng-bot'
+              || email.endsWith('+copilot@users.noreply.github.com')
+              || email.endsWith('+claude@users.noreply.github.com')
           }
           
           function computeIfAbsent(map, key, valueSupplier) {
