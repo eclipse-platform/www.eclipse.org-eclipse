@@ -208,13 +208,6 @@ jobs:
             }
             lines.splice(startMarker + 1, endMarker - (startMarker + 1), ...contributorLines)
           }
-          // Update last-revised date
-          const lastRevisedLineIndex = lines.findIndex(l => l.startsWith('Last revised: '))
-          lines[lastRevisedLineIndex] = 'Last revised: ' + new Date().toLocaleDateString("en-US", {
-            year: "numeric",
-            month: "long",
-            day: "numeric",
-          })
           fs.writeFileSync(acknowledgementsFile, lines.join('\n'), {encoding: 'utf8'})
           
           // Set adjustments as outputs in order to append them to the PR message
