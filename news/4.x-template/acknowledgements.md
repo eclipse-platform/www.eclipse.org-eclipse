@@ -1,7 +1,5 @@
 ## Eclipse YYYY-MM Acknowledgements
 
-Last revised: <!-- Insert date: February 25, 2025-->
-
 We would also like to thank the users and adopters who support our efforts through a range of activities, including early testing, being a Friend of Eclipse, contracting special work, or outright employment.
 
 A special thanks goes to [Holger Voormann](https://github.com/howlger) for his Eclipse IDE promotion videos.
