@@ -7,10 +7,47 @@ A special thanks to everyone who [contributed to JDT](acknowledgements.md#java-d
 ## Java&trade; XX Support 
 -->
 
-<!--
+
 ---
 ## JUnit
--->
+
+### Eclipse support for JUnit 6.0.1
+<!-- https://github.com/eclipse-jdt/eclipse.jdt/issues/147 -->
+<details>
+<summary>Contributors</summary>
+
+- [Andrey Loskutov](https://github.com/iloveeclipse)
+- [Christoph Laeubrich](https://github.com/laeubi)
+- [Ed Merks](https://github.com/merks)
+- [Hannes Wellmann](https://github.com/HannesWell)
+- [Simeon Andreev](https://github.com/trancexpress)
+</details>
+
+**JUnit 6 requires Java 17+**
+
+#### Create a new JUnit Jupiter test via **New JUnit Test Case** wizard:
+
+![New JUnit Jupiter Test Case Wizard](images/JUnit6NewTestCaseWizard.png)
+
+#### Add JUnit 6 library to the build path:
+
+The JUnit Test Case wizard offers to add it while creating a new JUnit Jupiter test:
+
+![Add JUnit 6 Container for New Test Case](images/JUnit6AddClasspathContainer.png)
+
+Quick Fix **(Ctrl+1)** proposal on `@Test`, `@TestFactory`, `@ParameterizedTest` and `@RepeatedTest` annotations:
+
+![Quick Fix Proposal JUnit 6 Container](images/JUnit6QuickFixProposal.png)
+
+Add JUnit library in Java Build Path dialog:
+
+![Build Properties Page JUnit 6 Container](images/JUnit6BuildPropertiesContainer.png)
+
+See also:
+
+[JUnit 6 Changelog](https://docs.junit.org/6.0.0/release-notes/)
+
+[JUnit 5 New & Noteworthy in Eclipse 4.8](https://eclipse.dev/eclipse/news/4.8/jdt.html#JUnit)
 
 <!--
 ---
