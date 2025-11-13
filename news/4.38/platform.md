@@ -2,10 +2,24 @@
 
 A special thanks to everyone who [contributed to Eclipse-Platform](acknowledgements.md#eclipse-platform) or [contributed to Equinox](acknowledgements.md#equinox) in this release!
 
-<!--
----
 ## Views, Dialogs and Toolbar
--->
+
+### Pin the Console view
+<details>
+<summary>Contributors</summary>
+
+- [Loskutov A](https://github.com/iloveeclipse)
+- [Andreev S](https://github.com/trancexpress)
+- [Karaman M](https://github.com/mehmet-karaman)
+</details>
+
+The 'Open New Console View' action has been improved to pin both the active and newly opened Console views, ensuring their content remains visible during output processing.
+
+![Console Pin new Console](images/Autopin.png)
+
+A new option has been added to `Console Preferences` that allows users to enable or disable the pinning feature.
+
+![Console Pin new Console](images/AutopinPreference.png)
 
 <!--
 ---
