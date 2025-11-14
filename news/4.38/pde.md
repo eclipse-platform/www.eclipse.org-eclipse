@@ -31,3 +31,10 @@ or update the test launch to use JUnit 6. Other unbound dependencies to JUnit Ju
 A more difficult to analyze problem is when a transitive dependency of the plug-in has an unbound dependency to JUnit Jupiter.
 The Plug-in Explorer view or the [Plug-in Dependencies](https://github.com/iloveeclipse/plugindependencies) view
 can be used to analyze unexpected dependencies to JUnit 6.
+
+Example issues that indicate mixed JUnit 5 and 6 in the dependencies and/or package imports:
+
+* Launch is executed by runs no tests or reports that no tests were found
+* Launch configuration dialog shows validation error: `Cannot find class 'org.junit.platform.commons.annotation.Testable' on project build path`
+* Runtime error: `Bundle "X" not found. Possible causes include missing dependencies, too restrictive version ranges, mixed JUnit versions, or a non-matching required execution environment.`
+* Runtime error: `java.util.ServiceConfigurationError: org.junit.platform.engine.TestEngine: org.junit.jupiter.engine.JupiterTestEngine not a subtype`
