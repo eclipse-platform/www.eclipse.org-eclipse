@@ -14,19 +14,19 @@ Special thanks to all code contributors (alphabetically):
 <!-- START: eclipse-platform contributors -->
 ||||
 |---|---|---|
-| [Alejandro Navarro](https://github.com/grissinibread) | [Amartya Parijat](https://github.com/amartya4256) | [Andreas Koch](https://github.com/akoch-yatta) |
-| [Andrey Loskutov](https://github.com/iloveeclipse) | [arunjose696](https://github.com/arunjose696) | [Christoph Läubrich](https://github.com/laeubi) |
-| [danthe1st](https://github.com/danthe1st) | [Deepika Udayagiri](https://github.com/deepika-u) | [Denis Ungemach](https://github.com/DenisUngemach) |
-| [Dietrich Travkin](https://github.com/travkin79) | [Ed Merks](https://github.com/merks) | [Elsa Zacharia](https://github.com/elsazac) |
-| [Federico Jeanne](https://github.com/fedejeanne) | [Hannes Wellmann](https://github.com/HannesWell) | [Heiko Klare](https://github.com/HeikoKlare) |
-| [Jonah Graham](https://github.com/jonahgraham) | [Lars Vogel](https://github.com/vogella) | [Marcus Hoepfner](https://github.com/marcushoepfner) |
-| [Matthias Becker](https://github.com/BeckerWdf) | [Matthias Mailänder](https://github.com/Mailaender) | [Mehmet Emin Karaman](https://github.com/mehmet-karaman) |
-| [Mickael Istria](https://github.com/mickaelistria) | [Nikita Akilov](https://github.com/flambchap) | [Patrick Ziegler](https://github.com/ptziegler) |
-| [Pauline DEVILLE](https://github.com/pdeville2) | [Philipp Kurrle](https://github.com/Philipp0205) | [raghucssit](https://github.com/raghucssit) |
-| [Rahul Mohanan](https://github.com/MohananRahul) | [Sebastian Ratz](https://github.com/sratz) | [sebthom](https://github.com/sebthom) |
-| [Shahzaib Ibrahim](https://github.com/ShahzaibIbrahim) | [Simeon Andreev](https://github.com/trancexpress) | [Sougandh S](https://github.com/SougandhS) |
-| [Stephan Wahlbrink](https://github.com/wahlbrink) | [Tobias Melcher](https://github.com/tobias-melcher) | [Tue Ton](https://github.com/chirontt) |
-| [Александър Куртаков](https://github.com/akurtakov)  |
+| [Alejandro Navarro](https://github.com/grissinibread) | [Alois Zoitl](https://github.com/azoitl) | [Amartya Parijat](https://github.com/amartya4256) |
+| [Andreas Koch](https://github.com/akoch-yatta) | [Andrey Loskutov](https://github.com/iloveeclipse) | [arunjose696](https://github.com/arunjose696) |
+| [Christoph Läubrich](https://github.com/laeubi) | [danthe1st](https://github.com/danthe1st) | [Deepika Udayagiri](https://github.com/deepika-u) |
+| [Denis Ungemach](https://github.com/DenisUngemach) | [Dietrich Travkin](https://github.com/travkin79) | [Ed Merks](https://github.com/merks) |
+| [Elsa Zacharia](https://github.com/elsazac) | [Federico Jeanne](https://github.com/fedejeanne) | [Hannes Wellmann](https://github.com/HannesWell) |
+| [Heiko Klare](https://github.com/HeikoKlare) | [Jonah Graham](https://github.com/jonahgraham) | [Lars Vogel](https://github.com/vogella) |
+| [Marcus Hoepfner](https://github.com/marcushoepfner) | [Matthias Becker](https://github.com/BeckerWdf) | [Matthias Mailänder](https://github.com/Mailaender) |
+| [Mehmet Emin Karaman](https://github.com/mehmet-karaman) | [Mickael Istria](https://github.com/mickaelistria) | [Nikita Akilov](https://github.com/flambchap) |
+| [Patrick Ziegler](https://github.com/ptziegler) | [Pauline DEVILLE](https://github.com/pdeville2) | [Philipp Kurrle](https://github.com/Philipp0205) |
+| [raghucssit](https://github.com/raghucssit) | [Rahul Mohanan](https://github.com/MohananRahul) | [Sebastian Ratz](https://github.com/sratz) |
+| [sebthom](https://github.com/sebthom) | [Shahzaib Ibrahim](https://github.com/ShahzaibIbrahim) | [Simeon Andreev](https://github.com/trancexpress) |
+| [Sougandh S](https://github.com/SougandhS) | [Stephan Wahlbrink](https://github.com/wahlbrink) | [Tobias Melcher](https://github.com/tobias-melcher) |
+| [Tue Ton](https://github.com/chirontt) | [Александър Куртаков](https://github.com/akurtakov)  |
 <!-- END:   eclipse-platform contributors -->
 
 ## Java Development Tools
@@ -41,10 +41,10 @@ Special thanks to all code contributors (alphabetically):
 | [Federico Jeanne](https://github.com/fedejeanne) | [Hannes Wellmann](https://github.com/HannesWell) | [Hélios GILLES](https://github.com/RoiSoleil) |
 | [Jay Arthanareeswaran](https://github.com/jarthana) | [Jeff Johnston](https://github.com/jjohnstn) | [kkrzywanski](https://github.com/kamilkrzywanski) |
 | [mbazley2](https://github.com/mbazley2) | [Mickael Istria](https://github.com/mickaelistria) | [Noopur Gupta](https://github.com/noopur2507) |
-| [Patrick Ziegler](https://github.com/ptziegler) | [Shahzaib Ibrahim](https://github.com/ShahzaibIbrahim) | [Simeon Andreev](https://github.com/trancexpress) |
-| [Snjezana Peco](https://github.com/snjeza) | [Sougandh S](https://github.com/SougandhS) | [Srikanth Sankaran](https://github.com/srikanth-sankaran) |
-| [Stephan Herrmann](https://github.com/stephan-herrmann) | [Suby S Surendran](https://github.com/subyssurendran666) | [Zsombor Gegesy](https://github.com/gzsombor) |
-| [Александър Куртаков](https://github.com/akurtakov)  |
+| [Patrick Ziegler](https://github.com/ptziegler) | [Rob Stryker](https://github.com/robstryker) | [Shahzaib Ibrahim](https://github.com/ShahzaibIbrahim) |
+| [Simeon Andreev](https://github.com/trancexpress) | [Snjezana Peco](https://github.com/snjeza) | [Sougandh S](https://github.com/SougandhS) |
+| [Srikanth Sankaran](https://github.com/srikanth-sankaran) | [Stephan Herrmann](https://github.com/stephan-herrmann) | [Suby S Surendran](https://github.com/subyssurendran666) |
+| [Zsombor Gegesy](https://github.com/gzsombor) | [Александър Куртаков](https://github.com/akurtakov)  |
 <!-- END:   eclipse-jdt contributors -->
 
 ## Plug-in Development Environment
@@ -70,7 +70,7 @@ Special thanks to all code contributors (alphabetically):
 | [Andrey Loskutov](https://github.com/iloveeclipse) | [Christoph](https://github.com/chrisrueger) | [Christoph Läubrich](https://github.com/laeubi) |
 | [Ed Merks](https://github.com/merks) | [Elsa Zacharia](https://github.com/elsazac) | [Hannes Wellmann](https://github.com/HannesWell) |
 | [Lars Vogel](https://github.com/vogella) | [Sebastian Ratz](https://github.com/sratz) | [Thomas Watson](https://github.com/tjwatson) |
-| [Александър Куртаков](https://github.com/akurtakov)  |
+| [Vasili Gulevich](https://github.com/basilevs) | [Александър Куртаков](https://github.com/akurtakov)  |
 <!-- END:   eclipse-equinox contributors -->
 
 ## Eclipse Foundation
