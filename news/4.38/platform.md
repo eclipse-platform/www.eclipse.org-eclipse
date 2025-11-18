@@ -82,6 +82,67 @@ Once the setting is saved, the console title updates in the chosen format
 
 ![Console Elapsed Time Format](images/ConsoleElapsedFormat.png)
 
+
+---
+### Enhancements of Monitor-Specific UI Scaling on Windows
+
+<details>
+<summary>Contributors</summary>
+
+- [Shahzaib Ibrahim](https://github.com/ShahzaibIbrahim)
+- [Federico Jeanne](https://github.com/fedejeanne)
+- [Arun Jose](https://github.com/arunjose696)
+- [Heiko Klare](https://github.com/HeikoKlare)
+- [Andreas Koch](https://github.com/akoch-yatta)
+- [Amartya Parijat](https://github.com/amartya4256)
+</details>
+
+In the Eclipse 2025-06 release, [monitor-specific scaling was enabled as the default mode](../4.36/platform.md#monitor-specific-ui-scaling-as-default-windows-only) for UI scaling on Windows. 
+With that feature enabled, each application window adapts to the zoom of the monitor it is placed on in a sharp, resolution-specific way.
+
+In this release, several quality improvements for this feature have been implemented.
+The feature is still under continuous development.
+We encourage users to [share their feedback](https://github.com/eclipse-platform/eclipse.platform.swt/issues/1961) to help us improve the functionality.
+
+#### Improvements
+The improvements in this release include (but are not limited to) the following.
+
+##### Performance
+The performance when moving a window from one monitor to another with a different zoom has been significantly improved.
+This makes moving a window to another monitor feel faster.
+It is based on these two improvements:
+- The general performance of the adaptation logic has been improved. 
+- The adaptation of window contents to the new monitor is now executed asynchronously.
+
+##### Layouting
+Several improvements regarding layouting for different monitor zooms have been implemented.
+- In particular, control sizes may have been a bit too small before, which is not the case anymore.
+- Non-resizable dialogs now adapt their layout better when moved to another monitor with a different zoom.
+- Some spacing calculations based on fixed numbers have been improved to better incorporate the actual monitor zoom.
+
+##### Images and Icons
+Image handling has been further improved, also including a [new feature for sharp rendering](platform_isv.md/new-gc-api-for-drawing-scaled-images).
+In addition, the following specific issues have been addressed:
+- When using Gif images, they may not loose their transparency (i.e, get black backgrounds) when moving between different monitors with different zooms anymore.
+- An issue with some application icons (for title bar and task bar) becoming invisible has been fixed.
+
+##### Cursors
+Custom cursors may have not been properly scaled, as they did not adhere to Windows cursor size settings. Adapting the cursor size to the Windows settings has been implemented.
+
+#### Appearance
+
+The images below demonstrate the scaling behavior in an extract of an Eclipse application when moving the window from a primary monitor with 150% scaling to another monitor with 200% scaling.
+In the first image, the feature disabled (possible via Eclipse preferences), and in the second it is enabled.
+
+On a 200% monitor with the feature being **disabled**:
+
+![Monitor-Specific UI Scaling Disabled](images/MonitorSpecificScalingOff.png)
+
+On a 200% monitor with the feature being **enabled**:
+
+![Monitor-Specific UI Scaling Enabled](images/MonitorSpecificScalingOn.png)
+
+
 ---
 ## Debugger
 
