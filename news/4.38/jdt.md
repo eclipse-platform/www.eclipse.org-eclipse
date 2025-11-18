@@ -49,15 +49,100 @@ See also:
 
 [JUnit 5 New & Noteworthy in Eclipse 4.8](https://eclipse.dev/eclipse/news/4.8/jdt.html#JUnit)
 
-<!--
 ---
 ## Java Editor
--->
 
-<!--
+### Java 25 Import Module Support
+<details>
+<summary>Contributors</summary>
+
+- [Jeff Johnston](https://github.com/jjohnstn)
+</details>
+
+Java 25 has added the ability to use `import module` to specify access to all
+classes of packages exported directly or via a transitive required module
+statement for the specified module name.  For the newly offered implicitly
+declared class, an `import module java.base;` statement is already implied.
+To use an `import module` statement, the module must either be specified
+as a required module in `module-info.java` or else be `java.base`.
+
+#### Organize Imports
+
+The organize imports operation has been enhanced to support recognizing an
+`import module` statement and to remove extraneous imports for classes
+already included by the module.  It will leave imports that are required either
+because they are not part of the exported module classes or they are found 
+in more than one package for the modules imported or they are static imports.
+
+For example:
+
+![Organize imports before](images/organize-imports-before.png)
+
+becomes:
+
+![Organize imports after](images/organize-imports-after.png)
+
+#### New Use Import Module Clean-up
+
+A new clean-up has been added for Java 25 to convert an existing Java class
+to use `import module` to replace various import statements.  The modules
+chosen are from the list of required modules in the `module-info.java` file
+or the default `java.base`.  This differs from <b>Organize Imports</b> in that 
+the organize imports operation does not add `import module` statements
+if they weren't present before.
+
+To use the new clean-up, go to <b>Source → Clean Up... → Configure</b> and 
+on the <b>Java Features tab</b> choose <b>Java 25 → Use Import Module</b>.
+
+For example:
+
+![Before using import module clean-up](images/add-import-module-before.png)
+
+is changed to:
+
+![After using import module clean-up](images/add-import-module-after.png)
+
+### Markdown Comment Templates
+<details>
+<summary>Contributors</summary>
+
+- [Jeff Johnston](https://github.com/jjohnstn)
+</details>
+
+As of Java 23, Javadoc comments can be specified in markdown format.  There
+are various clean-ups, quick-assists, and code actions where a Javadoc
+comment is added on behalf of the end-user and these are created using
+the templates found in the <b>Code Templates</b> dialog in <b>Preferences</b>.
+For example, adding new getters/setters has an option to add comments and
+this will add Javadoc comments to the new methods.
+
+A new category: <b>Markdown Comments</b> has been added to the dialog as well
+as a new option: <b>Use markdown comments where available</b>.  When the option
+is enabled and the level of Java is 23 or above, then new Javadoc comments
+added on behalf of the end-user will use the new markdown templates.  As with
+regular comment templates, these can be edited in the dialog and saved.
+
+![Code Templates Dialog](images/markdown-comments-templates.png)
+
 ---
 ## Java Views and Dialogs
--->
+
+### Open Type Dialog Enhancement
+<details>
+<summary>Contributors</summary>
+
+- [Jeff Johnston](https://github.com/jjohnstn)
+</details>
+
+The Open Type dialog has been enhanced to default wild-card characters between
+camel-case segments.  If the string is entirely upper-case such as `OOME`, no
+wild-cards will be defaulted and the prior camel-case search logic will occur.
+The new logic will prioritize class names in the sort that start with the
+most characters of the original string.
+
+For example, specifying `OutMemory` will find `OutOfMemoryError` whereas
+it did not before.  If there is a class called `OutMemoryAdapter`, it
+will appear ahead of `OutOfMemoryError` in the result list.
 
 ---
 ## Java Compiler
