@@ -61,16 +61,18 @@ See also:
 
 Java 25 has added the ability to use `import module` to specify access to all
 classes of packages exported directly or via a transitive required module
-statement for the specified module name.  For the newly offered implicitly
-declared class, an `import module java.base;` statement is already implied.
-To use an `import module` statement, the module must either be specified
-as a required module in `module-info.java` or else be `java.base`.
+statement for the specified module name.
+For the newly offered implicitly declared class, an `import module java.base;`
+statement is already implied.
+To use an `import module` statement, the module name must either be specified
+as a required module in `module-info.java` (if it exists) or else be `java.base`.
 
 #### Organize Imports
 
-The organize imports operation has been enhanced to support recognizing an
+The `Organize Imports` operation has been enhanced to support recognizing an
 `import module` statement and to remove extraneous imports for classes
-already included by the module.  It will leave imports that are required either
+already included by the module.
+It will leave imports that are required either
 because they are not part of the exported module classes or they are found 
 in more than one package for the modules imported or they are static imports.
 
@@ -85,14 +87,15 @@ becomes:
 #### New Use Import Module Clean-up
 
 A new clean-up has been added for Java 25 to convert an existing Java class
-to use `import module` to replace various import statements.  The modules
-chosen are from the list of required modules in the `module-info.java` file
-or the default `java.base`.  This differs from <b>Organize Imports</b> in that 
+to use `import module` to replace various import statements.
+The modules chosen are from the list of required modules in the
+`module-info.java` file (if it exists) or the default `java.base`.
+This differs from `Organize Imports` in that 
 the organize imports operation does not add `import module` statements
 if they weren't present before.
 
-To use the new clean-up, go to <b>Source → Clean Up... → Configure</b> and 
-on the <b>Java Features tab</b> choose <b>Java 25 → Use Import Module</b>.
+To use the new clean-up, go to `Source → Clean Up... → Configure` and 
+on the `Java Features tab` choose `Java 25 → Use Import Module`.
 
 For example:
 
@@ -109,18 +112,19 @@ is changed to:
 - [Jeff Johnston](https://github.com/jjohnstn)
 </details>
 
-As of Java 23, Javadoc comments can be specified in markdown format.  There
-are various clean-ups, quick-assists, and code actions where a Javadoc
+As of Java 23, Javadoc comments can be specified in markdown format.
+There are various clean-ups, quick-assists, and code actions where a Javadoc
 comment is added on behalf of the end-user and these are created using
-the templates found in the <b>Code Templates</b> dialog in <b>Preferences</b>.
+the templates found in the `Code Templates` dialog in `Preferences`.
 For example, adding new getters/setters has an option to add comments and
 this will add Javadoc comments to the new methods.
 
-A new category: <b>Markdown Comments</b> has been added to the dialog as well
-as a new option: <b>Use markdown comments where available</b>.  When the option
-is enabled and the level of Java is 23 or above, then new Javadoc comments
-added on behalf of the end-user will use the new markdown templates.  As with
-regular comment templates, these can be edited in the dialog and saved.
+A new category: `Markdown Comments` has been added to the dialog as well
+as a new option: `Use markdown comments where available`.
+When the option is enabled and the level of Java is 23 or above, new
+Javadoc comments added on behalf of the end-user will use the new markdown
+templates.
+As with regular comment templates, these can be edited in the dialog and saved.
 
 ![Code Templates Dialog](images/markdown-comments-templates.png)
 
@@ -135,13 +139,15 @@ regular comment templates, these can be edited in the dialog and saved.
 </details>
 
 The Open Type dialog has been enhanced to default wild-card characters between
-camel-case segments.  If the string is entirely upper-case such as `OOME`, no
+camel-case segments.
+If the string is entirely upper-case such as `OOME`, no
 wild-cards will be defaulted and the prior camel-case search logic will occur.
 The new logic will prioritize class names in the sort that start with the
 most characters of the original string.
 
 For example, specifying `OutMemory` will find `OutOfMemoryError` whereas
-it did not before.  If there is a class called `OutMemoryAdapter`, it
+it did not before.
+If there is a class called `OutMemoryAdapter`, it
 will appear ahead of `OutOfMemoryError` in the result list.
 
 ---
