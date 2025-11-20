@@ -90,7 +90,6 @@ Once the setting is saved, the console title updates in the chosen format
 <summary>Contributors</summary>
 
 - [Shahzaib Ibrahim](https://github.com/ShahzaibIbrahim)
-- [Federico Jeanne](https://github.com/fedejeanne)
 - [Arun Jose](https://github.com/arunjose696)
 - [Heiko Klare](https://github.com/HeikoKlare)
 - [Andreas Koch](https://github.com/akoch-yatta)
