@@ -49,6 +49,14 @@ See also:
 
 [JUnit 5 New & Noteworthy in Eclipse 4.8](https://eclipse.dev/eclipse/news/4.8/jdt.html#JUnit)
 
+#### JUnit 5 and JUnit 6 conflicts
+
+When mixing JUnit 5 and 6 versions in JUnit test launch type and Java project classpath dependencies, the following errors can be encountered:
+
+* Launch configuration dialog shows validation error: `Cannot find class 'org.junit.platform.commons.annotation.Testable' on project build path`
+
+One example of this is having JUnit 6 on the project classpath but using a JUnit 5 launch.
+
 ---
 ## Java Editor
 
