@@ -141,6 +141,37 @@ On a 200% monitor with the feature being **enabled**:
 
 ![Monitor-Specific UI Scaling Enabled](images/MonitorSpecificScalingOn.png)
 
+---
+### Merging the JVM and the operating system trust stores
+<details>
+<summary>Contributors</summary>
+
+- [Sebastian Ratz](https://github.com/sratz)
+- [Ed Merks](https://github.com/merks)
+- [Christoph Läubrich](https://github.com/laeubi)
+</details>
+
+A new system property `-Declipse.platform.mergeTrust=true` was added to merge the trust store of the JVM (`lib/security/cacerts`)
+and the trust store of the operating system (`Windows-ROOT` on Windows, `Apple KeychainStore` on macOS).
+
+Previously, the Eclipse Platform was only using the JVM store (before Eclipse 2024-12) or only the OS trust store (starting with Eclipse 2024-12)
+which could result in the common error
+
+`javax.net.ssl.SSLHandshakeException: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target`
+
+e.g., when updating Eclipse or installing new software.
+
+The new `-Declipse.platform.mergeTrust=true` property is added by default to the Platform SDK and Runtime Binary as well as to all the IDE packages starting with 2025-12.
+
+The strategy of merging trust stores is also applied by browser vendors, e.g. [Microsoft Edge](https://learn.microsoft.com/en-us/deployedge/microsoft-edge-security-cert-verification).
+
+For more background information see also:
+- https://bugs.eclipse.org/bugs/show_bug.cgi?id=567504
+- https://github.com/eclipse-packaging/packages/pull/224
+- https://github.com/eclipse-packaging/packages/pull/224#issuecomment-2627576123
+- https://github.com/eclipse-platform/eclipse.platform/issues/1690#issuecomment-3178636555
+- https://github.com/eclipse-platform/eclipse.platform/pull/2241
+
 
 ---
 ## Debugger
