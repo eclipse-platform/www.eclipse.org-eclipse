@@ -25,11 +25,11 @@ A special thanks to everyone who [contributed to JDT](acknowledgements.md#java-d
 
 **JUnit 6 requires Java 17+**
 
-#### Create a new JUnit Jupiter test via **New JUnit Test Case** wizard:
+#### Create a New JUnit Jupiter Test via **New JUnit Test Case** Wizard:
 
 ![New JUnit Jupiter Test Case Wizard](images/JUnit6NewTestCaseWizard.png)
 
-#### Add JUnit 6 library to the build path:
+#### Add JUnit 6 Library to the Build Path:
 
 The JUnit Test Case wizard offers to add it while creating a new JUnit Jupiter test:
 
@@ -49,7 +49,7 @@ See also:
 
 [JUnit 5 New & Noteworthy in Eclipse 4.8](https://eclipse.dev/eclipse/news/4.8/jdt.html#JUnit)
 
-#### JUnit 5 and JUnit 6 conflicts
+#### JUnit 5 and JUnit 6 Conflicts
 
 When mixing JUnit 5 and 6 versions in JUnit test launch type and Java project classpath dependencies, the following errors can be encountered:
 
@@ -146,10 +146,10 @@ As with regular comment templates, these can be edited in the dialog and saved.
 - [Jeff Johnston](https://github.com/jjohnstn)
 </details>
 
-The Open Type dialog has been enhanced to default wild-card characters between
+The Open Type dialog has been enhanced to default wildcard characters between
 camel-case segments.
 If the string is entirely upper-case such as `OOME`, no
-wild-cards will be defaulted and the prior camel-case search logic will occur.
+wildcards will be defaulted and the prior camel-case search logic will occur.
 The new logic will prioritize class names in the sort that start with the
 most characters of the original string.
 
@@ -170,15 +170,15 @@ will appear ahead of `OutOfMemoryError` in the result list.
 - [Stephan Herrmann](https://github.com/stephan-herrmann)
 </details>
 
-The Java compiler now handles access restriction warnings different than before when calling inherited methods.
+The Java compiler now handles access restriction warnings differently than before when calling inherited methods.
 Previously, calling a public method on an accessible type would trigger an access restriction warning if that method was inherited from a restricted (non-API) parent class.
 
-With this change, the compiler recognizes that inherited public methods accessed through an accessible type are legal and do not require access to the restricted parent class.
-This behavior now more aligns with JPMS and OSGi semantics, where inherited public methods are accessible through the public subclass without requiring visibility to the parent class's package.
+With this change, the compiler recognizes that inherited public methods accessed through an accessible type are legal and do not require access to the restricted parent class's package.
+This behavior now aligns more closely with JPMS and OSGi semantics, where inherited public methods are accessible through the public subclass without requiring visibility to the parent class's package.
 
-Implementers of `IClasspathConainer` are advised to revisit their usage of access restrictions to see if this new concepts still meets their expectations or possibly need adaption.
+Implementers of `IClasspathContainer` are advised to revisit their usage of access restrictions to see if this new concept still meets their expectations or possibly needs adaptation.
 
-### Changes concerning Deprecation Warnings
+### Changes Concerning Deprecation Warnings
 <!-- https://github.com/eclipse-jdt/eclipse.jdt.core/issues/4572 -->
 <details>
 <summary>Contributors</summary>
@@ -188,25 +188,30 @@ Implementers of `IClasspathConainer` are advised to revisit their usage of acces
 
 It was discovered that the Eclipse Compiler for Java (ECJ) was not conforming to JLS in several matters of deprecation warnings.
 
-Therefore a significant overhaul in this area was performed. As a result you may experience fewer or more deprecation warnings in your code, depending on how `@Deprecated` and `@SuppressWarnings("deprecation")` are used in your code (in these regards the old javadoc tag `@deprecated` has the same effect as the annotation).
+Therefore a significant overhaul in this area was performed.
+As a result you may experience fewer or more deprecation warnings in your code, depending on how `@Deprecated` and `@SuppressWarnings("deprecation")` are used in your code (in these regards the old javadoc tag `@deprecated` has the same effect as the annotation).
 
-#### Changes in problem reporting
-* Previously, ECJ regarded all **members** (fields, methods, member types) of a deprecated type as **"implicitly deprecated"**. This concept is not backed by JLS and has been corrected, such that ECJ now reports fewer warnings.
+#### Changes in Problem Reporting
+
+* Previously, ECJ regarded all **members** (fields, methods, member types) of a deprecated type as **"implicitly deprecated"**.
+  This concept is not backed by JLS and has been corrected, such that ECJ now reports fewer warnings.
     * In this situation deprecation warnings will only be raised against references to the deprecated type, not at locations where only its members are referenced.
         * Invocations of a default constructor count as a reference to the type, i.e., those get a warning, too.
     * If previously such warnings were suppressed in the code, then this `@SuppressWarnings` annotation may be flagged as unnecessary.
-    * If a deprecated type is extended or implemented by a non-deprecated type, clients of the subtype may now freely use its inherited members without triggering a warning. In this situation the `extends` or `implements` clauses are now the only location where deprecation will cause a warning (unless suppressed there).
-* Previously, ECJ did not raise any deprecation warnings when using deprecated elements from **within the same compilation unit** (file). JLS specifies this slightly different: not a compilation unit is the point of reference, but declaration and use must be located within the same **top-level type** in order to be exempted from deprecation warnings.
+    * If a deprecated type is extended or implemented by a non-deprecated type, clients of the subtype may now freely use its inherited members without triggering a warning.
+      In this situation the `extends` or `implements` clauses are now the only location where deprecation will cause a warning (unless suppressed there).
+* Previously, ECJ did not raise any deprecation warnings when using deprecated elements from **within the same compilation unit** (file).
+  JLS specifies this slightly differently: not a compilation unit is the point of reference, but declaration and use must be located within the same **top-level type** in order to be exempted from deprecation warnings.
     * This will bring about more warnings in situations where you may have assumed that code within the same compilation unit is **"friendly"** and thus privileged to use deprecated elements.
 * New warnings are also raised against usage of a deprecated **annotation element**.
     * This is relevant when an annotation type itself is not deprecated, but the way how annotation details are specified is changing and deprecation is used for guiding users during migration.
 
 
-#### New support for reacting to the above changes
+#### New Support for Reacting to Problem Reporting Changes
 
 You may have gotten used to warnings regarding "implicitly deprecated" members, and thus feel the correction of ECJ to be a loss in visibility of pending migration issues. 
 
-For this situation a new configurable warning (severity is `info` by default) has been implemented that will alert you when a deprecated type contains members that are not marked as deprecated (private members are exempted).
+For this situation a new configurable warning (severity is `info` by default) has been implemented that will alert you when a deprecated type contains members that are not marked as deprecated (private members).
 
 Along with the new warning a quickfix is provided that allows to mechanically add `@Deprecated` to all affected members, thus restoring warnings regarding the use of any of these members.
 
@@ -289,7 +294,7 @@ For more details on m2eclipse integration, see the [m2e-core release notes](http
 <details>
 <summary>Contributors</summary>
 
-- [Sougandh S ](https://github.com/SougandhS)
+- [Sougandh S](https://github.com/SougandhS)
 </details>
 
 The Variables view now provides an option to compare a selected variable’s `toString()` value directly with the current clipboard content. 
@@ -317,13 +322,13 @@ Comparison also works with `Arrays` and `Primitives` too.
 
 
 
-### Breakpoint Support for In-line Chained Lambdas
+### Breakpoint Support for Inline Chained Lambdas
 
 <details>
 <summary>Contributors</summary>
 
-- [Sougandh S ](https://github.com/SougandhS)
-- [Andrey Loskutov ](https://github.com/iloveeclipse)
+- [Sougandh S](https://github.com/SougandhS)
+- [Andrey Loskutov](https://github.com/iloveeclipse)
 </details>
 
 The Java debugger now supports setting breakpoints on individual lambdas defined within single-line chained lambda expressions. When toggling a `Lambda Entry Breakpoint` on such an expression,
