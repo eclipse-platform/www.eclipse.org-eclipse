@@ -32,10 +32,24 @@ A special thanks to everyone who [contributed to JDT](acknowledgements.md#java-d
 ## Java Formatter
 -->
 
-<!--
----
-## Debug
--->
+## Debugger
+
+
+### Improved Highlighting for Inline Chained Lambdas
+
+<details>
+<summary>Contributors</summary>
+
+- [Sougandh S](https://github.com/SougandhS)
+</details>
+
+
+Building on the `inline lambda breakpoint` support added in **Eclipse 4.38**, the Java debugger now highlights the specific inline lambda expression when it is suspended.
+Previously, selecting or focusing a lambda stack frame in a chained expression highlighted the entire line, making it difficult to identify the exact lambda. 
+Now only the suspended lambda is highlighted, making it much easier to follow execution in complex chained expressions.
+
+![Lambda Highlighting](images/LambdaHighlight.gif)
+
 
 <!--
 ### JDT Developers
