@@ -12,10 +12,19 @@ A special thanks to everyone who [contributed to JDT](acknowledgements.md#java-d
 ## JUnit
 -->
 
-<!--
+
 ---
 ## Java Editor
--->
+
+### Folding with Showing Selected Java Elements
+<details>
+<summary>Contributors</summary>
+
+- [Daniel Schmid](https://github.com/danthe1st)
+</details>
+
+Folding can now be used in the Java Editor when `Window` > `Preferences` > `Java` > `Editor` > `Only show the selected Java element` is enabled.
+In previous releases, this option automatically disabled code folding.
 
 <!--
 ---
