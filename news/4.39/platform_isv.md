@@ -27,7 +27,42 @@ toolControl.getTags().remove(IPresentationEngine.NO_MOVE);
 ```
 
 
-<!--
 ---
 ## SWT Changes
--->
+
+### Native PDF Output Support
+
+<details>
+<summary>Contributors</summary>
+
+- [Christoph Läubrich](https://github.com/laeubi)
+</details>
+
+SWT now provides native PDF generation capabilities through a new `PDFDocument` class, enabling direct export of widget content to PDF files without requiring external libraries.
+
+Applications can now export SWT widget content to PDF using the standard `Control.print(GC)` API with the familiar GC drawing operations, or create fully customized PDF documents programmatically.
+
+#### Platform Support
+
+| Platform | Implementation |
+|----------|----------------|
+| GTK (Linux) | Cairo PDF surface |
+| Cocoa (macOS) | Core Graphics CGPDFContext |
+| Win32 (Windows) | Microsoft Print to PDF |
+
+#### Example Usage
+
+```java
+// Create a PDF document
+PDFDocument pdf = new PDFDocument(display, "output.pdf", 595, 842); // A4 size in points
+
+// Print a control to the PDF
+GC gc = new GC(pdf);
+control.print(gc);
+gc.dispose();
+
+// Dispose the document when done
+pdf.dispose();
+```
+
+This enhancement eliminates the need for external PDF libraries and provides a native, platform-integrated solution for PDF generation in SWT applications. See Snippet388 for a complete working example.
