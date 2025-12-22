@@ -5,9 +5,15 @@
 	<meta charset="utf-8" />
 	<title>Documentation | Eclipse Project</title>
 	<link rel="preconnect stylesheet" href="../project.css" />
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.11.1/build/styles/default.min.css">
 	<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/marked/lib/marked.umd.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/marked-gfm-heading-id/lib/index.umd.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/marked-highlight/lib/index.umd.js"></script>
+	<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.11.1/build/highlight.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/java.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/xml.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/properties.min.js"></script>
 	<script src="../project.js"></script>
 	<style>
 		/* <![CDATA[*/
@@ -153,6 +159,31 @@
 		/* intended for table, tr, th, td */
 		.contributor-list {
 			border: none;
+		}
+
+		.language-java .hljs-number {
+			color: mediumblue;
+		}
+
+		.language-java .hljs-string {
+			color: darkcyan;
+		}
+
+		.language-java .hljs-title {
+			color: indigo;
+		}
+
+		.language-xml .hljs-string {
+			color: darkslategray;
+		}
+
+		.language-xml .hljs-attr {
+			color: purple;
+		}
+
+		.language-xml .hljs-name {
+			font-weight: 100;
+			color: darkblue;
 		}
 
 		/*]]>*/
@@ -374,6 +405,14 @@
 				const text = response;
 				const editLink = `<a id="edit-markdown-link" href=""><span class="orange">\u270E Improve this page</span></a>\n`;
 				marked.use(markedGfmHeadingId.gfmHeadingId());
+				marked.use(markedHighlight.markedHighlight({
+					emptyLangClass: 'hljs',
+					langPrefix: 'hljs language-',
+					highlight(code, lang, info) {
+						const language = hljs.getLanguage(lang) ? lang : 'plaintext';
+						return hljs.highlight(code, {language}).value;
+					}
+				}));
 				marked.use({
 					hooks: {
 						postprocess(html) {
