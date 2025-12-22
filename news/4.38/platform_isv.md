@@ -22,7 +22,7 @@ A special thanks to everyone who [contributed to Eclipse-Platform](acknowledgeme
 
 A new `drawImage` method in `GC` allows drawing the **full image** into a specified destination rectangle:
 ```java
-GC#drawImage(image, destX, destY, destWidth, destHeight)
+GC.drawImage(image, destX, destY, destWidth, destHeight)
 ```
 Until now, the existing method `drawImage(image, srcX, srcY, srcWidth, srcHeight, destX, destY, destWidth, destHeight)`  was used for this purpose by specifying the full source bounds.
 The new method simplifies the process by eliminating the need to provide the actual image bounds when drawing the entire image.
