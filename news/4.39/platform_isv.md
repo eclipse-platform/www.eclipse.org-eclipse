@@ -67,3 +67,46 @@ pdf.dispose();
 
 This enhancement eliminates the need for external PDF libraries and provides a native, platform-integrated solution for PDF generation in SWT applications.
 See [Snippet388](https://github.com/eclipse-platform/eclipse.platform.swt/blob/master/examples/org.eclipse.swt.snippets/src/org/eclipse/swt/snippets/Snippet388.java) for a complete working example.
+
+### ImageDataAtSizeProvider Referencable
+
+<details>
+<summary>Contributors</summary>
+
+- [Michael Bangas](https://github.com/Michael5601)
+- [Heiko Klare](https://github.com/HeikoKlare)
+- [Arun Jose](https://github.com/arunjose696)
+</details>
+
+The `ImageDataAtSizeProvider` interface is now officially referencable.
+It allows SWT users to provide image data at a custom width and height, rather than relying solely on zoom-based scaling.
+
+
+The `ImageDataAtSizeProvider` is particularly useful in cases where precise control over image dimensions is needed, allowing users to create image data at a specific width and height.
+
+#### Example Usage
+
+```java
+// Lambda implementation of ImageDataAtSizeProvider
+ImageDataAtSizeProvider provider = (width, height) -> {
+    PaletteData palette = new PaletteData(0xFF0000, 0xFF00, 0xFF);
+    ImageData data = new ImageData(width, height, 32, palette);
+    int pixel = palette.getPixel(drawnRgb);
+
+    // Draw a border
+    for (int i = 0; i < width; i++) {
+        data.setPixel(i, 0, pixel);
+        data.setPixel(i, height - 1, pixel);
+    }
+    for (int i = 0; i < height; i++) {
+        data.setPixel(0, i, pixel);
+        data.setPixel(width - 1, i, pixel);
+    }
+    return data;
+};
+
+// Create an Image using the provider
+Image image = new Image(display, provider);
+```
+
+Images from this provider can be drawn at a specific size using `GC.drawImage(Image, int, int, int, int)`. 
