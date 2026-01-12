@@ -72,6 +72,7 @@ let githubAside = `
 
 let markdownAside = `
 <span class="separator"><i class='fa fa-edit'></i> Markdown</span>
+<a href="${markdownBase}eclipse-platform/eclipse.platform.swt/master/docs">SWT</a>
 <a href="${markdownBase}eclipse-platform/eclipse.platform/master/docs">Platform</a>
 <a href="${markdownBase}eclipse-platform/eclipse.platform.ui/master/docs">Platform UI</a>
 <a href="${markdownBase}eclipse-pde/eclipse.pde/master/docs">PDE</a>
