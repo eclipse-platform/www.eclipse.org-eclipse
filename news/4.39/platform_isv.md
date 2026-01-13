@@ -114,3 +114,15 @@ Image image = new Image(display, provider);
 
 Images from this provider can be drawn at a specific size using `GC.drawImage(Image, int, int, int, int)`.
 See also the [news on the introduction of that method](../4.38/platform_isv.md#new-gc-api-for-drawing-scaled-images).
+
+### New API Shell.getZoom()
+
+<details>
+<summary>Contributors</summary>
+
+- [Amartya Parijat](https://github.com/amartya4256)
+</details>
+
+A new API, `Shell.getZoom()`, has been added to retrieve the **native zoom level of a shell**.
+The returned value is the zoom of the shell as originally considered by the OS and not an adjusted zoom value as considered by SWT autoscaling capabilities.
+On Windows, the value is calculated from the device DPI, while on other platforms it is provided via `DPIUtil#getNativeDeviceZoom()`.
