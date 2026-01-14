@@ -126,3 +126,27 @@ See also the [news on the introduction of that method](../4.38/platform_isv.md#n
 A new API, `Shell.getZoom()`, has been added to retrieve the **native zoom level of a shell**.
 The returned value is the zoom of the shell as originally considered by the OS and not an adjusted zoom value as considered by SWT autoscaling capabilities.
 When using the monitor-specific scaling capability on Windows, the value conforms to the zoom of the monitor the shell is placed on. On other platforms or when monitor-specific scaling is disabled on Windows, it conforms to the global application scale factor according to `DPIUtil#getNativeDeviceZoom()`.
+
+### Clarification of Device.getDPI() contract
+
+<details>
+<summary>Contributors</summary>
+
+- [Shahzaib Ibrahim](https://github.com/ShahzaibIbrahim)
+- [Heiko Klare](https://github.com/HeikoKlare)
+- [Andreas Koch](https://github.com/akoch-yatta)
+</details>
+
+`Device.getDPI()` is a long-standing API method in SWT. 
+It was introduced at a time when monitor zooming — typically relevant only for HiDPI displays — was not yet a concern. 
+As a result, the method implicitly established a contract whereby a Display exposes a single, global DPI value, independent of the number of connected monitors.
+
+When SWT was adapted to better support HiDPI monitors roughly a decade ago, this implicit contract was retained but extended through the introduction of autoscaling. 
+Under this extended contract, the DPI returned by `Device.getDPI()` is derived as follows: if the autoscaled zoom used by the SWT autoscaling mechanism differs from the native zoom, the returned DPI will be calculated relative from the autoscaled zoom to the DPI of the native zoom. 
+For example, in the Windows implementation (with a base DPI of 96), this method returns 120 when autoscale mode is set to *integer*, and 96 when autoscale mode is set to *quarter*.
+
+With the subsequent introduction of monitor-specific scaling in the Windows implementation of SWT, the original assumption of a single DPI value per `Display`, independent of the number of connected monitors, is no longer valid in all scenarios.
+With this release, the method is adapted in Windows to always return the system base DPI (which is currently `96`) when monitor-specific scaling is enabled, as with that mode the autoscaled zoom used by SWT for a shell is always the same as the native zoom of the monitor the shell is placed on.
+
+Because existing usages of `Device.getDPI()` may still rely on the mentioned assumption, it is recommended that such usages be reviewed. 
+In many cases, they may no longer be necessary or can be replaced with calculations based on the new monitor-aware API `Shell.getZoom()`.
