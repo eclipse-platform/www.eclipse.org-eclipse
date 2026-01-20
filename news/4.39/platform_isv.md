@@ -150,3 +150,49 @@ With this release, the method is adapted in Windows to always return the system 
 
 Because existing usages of `Device.getDPI()` may still rely on the mentioned assumption, it is recommended that such usages be reviewed. 
 In many cases, they may no longer be necessary or can be replaced with calculations based on the new monitor-aware API `Shell.getZoom()`.
+
+### API to Disable Autoscaling for Controls
+
+<details>
+<summary>Contributors</summary>
+
+- [Amartya Parijat](https://github.com/amartya4256)
+- [Heiko Klare](https://github.com/HeikoKlare)
+- [Andreas Koch](https://github.com/akoch-yatta)
+</details>
+
+The autoscaling implementation on Windows differs fundamentally from the implementations on GTK (Linux) and Cocoa (macOS).
+On Linux and macOS, autoscaling is realized by computing and applying a single, global scale factor; the operating system then transparently handles all further scaling internally.
+On Windows, the situation is considerably more complex. 
+The SWT implementation must explicitly convert every pixel-based value—such as positions, sizes, and bounds—according to the active autoscaling settings before passing them to the operating system. 
+When fractional zoom levels are used (for example, 125% or 175%), these conversions can introduce rounding errors.
+
+In most scenarios, particularly when working with standard widgets, these rounding effects rarely result in visible issues. 
+However, when custom rendering using a `GC` is involved, they can easily lead to rendering artifacts on a `Canvas`. 
+A common example is an incorrectly converted clipping region that becomes slightly too large or too small after scaling.
+
+The most reliable way to avoid such issues is to remove SWT autoscaling from the equation entirely and render directly to the `GC` using pixel coordinates. 
+To support this use case, a new API has been added to `Control`: `Control.setAutoscalingMode(AutoscalingMode)`.
+
+There are currently three enum values available for `AutoscalingMode`:
+
+- `Enabled`: Default value. Autoscaling is applied as usual.
+- `Disabled`: Autoscaling is disabled; the Control behaves as if the zoom were 100%.
+- `Disabled_Inherited`: Same as `Disabled`, but the autoscaling mode is inherited by **newly** created child controls.
+
+`Control.setAutoscalingMode(AutoscalingMode)` returns a boolean indicating whether the requested mode was accepted and applied. 
+On Linux and macOS, the current implementations always return false.
+`Control.isAutoScalable()` is implemented for Windows as well and utilizes the currently set autoscaling mode to return a meaningful value. 
+If you overwrite this method in custom implementations of a `Control`, it could make sense to revise that.
+
+Example:
+```java
+Canvas canvas = new Canvas(parent, SWT.None);
+boolean autoscalingDisabled = canvas.setAutoScalingMode(AutoscalingMode.Disabled);
+...
+GC gc = new Gc(canvas, SWT.None);
+gc.drawText("This is a test", x, y);
+```
+
+A `GC` always inherits its rendering context from the `Drawable` it is created for. 
+Consequently, when autoscaling is disabled on the `Control`, the associated `GC` will also render with autoscaling disabled.
