@@ -196,3 +196,65 @@ gc.drawText("This is a test", x, y);
 
 A `GC` always inherits its rendering context from the `Drawable` it is created for. 
 Consequently, when autoscaling is disabled on the `Control`, the associated `GC` will also render with autoscaling disabled.
+
+
+### Monitor-Specific Scaling by Default (Windows)
+
+<details>
+<summary>Contributors</summary>
+
+- [Heiko Klare](https://github.com/HeikoKlare)
+- [Andreas Koch](https://github.com/akoch-yatta)
+</details>
+
+Monitor-specific scaling is used as default in RCP products on Windows [since the 4.36 release of Eclipse](../4.36/platform.md#monitor-specific-ui-scaling-as-default-windows-only).
+So far, SWT still defaults to use the pre-existing HiDPI support based on one zoom for the whole application during its lifecycle.
+
+With this release, SWT defaults to having monitor-specific scaling enabled on Windows as well.
+In consequene, all SWT-based application will start with monitor-specific scaling enabled, unless configured otherwise.
+
+This change comes with some updates of defaults regarding autoscaling properties to unify the behavior and establish reasonable default behaviors.
+It affects the autoscaling setting (via `swt.autoScale`) and the DPI awareness used by the UI thread.
+While the existing scaling support used `swt.autoScale=integer` and a DPI awareness of "System" by default, monitor-specific scaling requires `swt.autoScale=quarter` and a DPI awareness of "PerMonitorV2" to work properly.
+
+_Note:_ The Equinox launcher executable has also been adapted to start the process with DPI awareness "PerMonitorV2", such that the process DPI awareness fits to the default settings of the application (monitor-specific scaling being enabled).
+This conforms to the default DPI awareness of the JVM.
+The former default of the Equinox launcher executable was DPI awareness "System".
+See also [the according news](platform.md#equinox-launcher-scaling-defaults-windows-only).  
+
+#### Default
+
+The most relevant configurations are the new and the previous defaults: 
+
+- Monitor-specific scaling enabled (no configuration, new default): When instantiating a `Display`, the DPI awareness of the UI thread is set to "PerMonitorV2" and the `swt.autoScale` mode defaults to `quarter`.
+- Monitor-specific scaling disabled (`-Dswt.autoScale.updateOnRuntime=false`, former default): When instantiating a `Display`, the DPI awareness of the UI thread is set to "System" and the `swt.autoScale` mode defaults to `integer`.
+
+The latter configuration conforms to what Eclipse products used as default before monitor-specific scaling was enabled by default.
+Note that with a plain SWT-based application, using `-Dswt.autoScale.updateOnRuntime=false` will lead to a slighly different result than before.
+While previously the DPI awareness was taken from the JVM, it is now changed to "System", because the JVM default "PerMonitorV2" does not produce reasonable results with the pre-existing scaling support.
+It might have been reasonable when using custom `swt.autoScale` values such as `false`, which why in case such a custom autoscale value is specified, the DPI awareness of the JVM is still used.
+
+As a result of this, a runtime application started from an Eclipse IDE will use the same DPI awareness than a final product using the Equinox launcher executable (unless a custom `swt.autoScale` value is specified).
+Previously, the experience with monitor-specific scaling disabled was different in a runtime application and in a product using the Equinox launcher executable.
+ 
+
+#### Custom `swt.autoScale` Values
+
+The `swt.autoScale` property allows to set different autoscaling modes, such as `integer` (rounding fractional scale values to multiples of 100) or `false` (completely disable autoscaling).
+When a custom autoscale value is set, no automatic change of the DPI awareness of the UI thread is performed but the JVM default is used.
+This preserves existing behavior of autoscale-customized applications.
+The DPI awareness can still be customized via a system property (see subsequent section).
+
+In case you used to use a custom `swt.autoScale` value, you may now need to set `-Dswt.autoScale.updateOnRuntime=false` to preserve your behavior.
+
+*Note:* With monitor-specific scaling enabled, only the autoscale values `quarter` and `exact` are valid. 
+
+*Note:* Instead of using `-Dswt.autoScale=false`, you may now consider using autoscale disablement at the level of `Controls` instead, see [the according news](#api-to-disable-autoscaling-for-controls). 
+
+#### Custom DPI Awareness
+
+To allow the customization of the DPI awareness for an application without changing the application's manifest, an according system property has been introduced: `org.eclipse.swt.internal.win32.dpiAwareness`
+With this system property, the DPI awareness can be specified to "System", "PerMonitor" and "PerMonitorV2".
+For example, to start an application with System DPI awareness, you can specify: `-Dorg.eclipse.swt.internal.win32.dpiAwareness=System`
+
+*Note:* This property is flagged as internal and may be subject to change with any subsequent Eclipse release.
