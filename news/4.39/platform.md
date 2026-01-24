@@ -49,3 +49,7 @@ __Before__
 __After__
 
 ![Console icon after](images/ConsoleAfter.png)
+
+This behavior can be turned off from the `Console` preferences if you prefer the default static console view icon.
+
+![Console preference](images/ConsolePreference.png)
