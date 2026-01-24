@@ -94,7 +94,7 @@ in projects with dozens of breakpoints.
 <!-- https://github.com/eclipse-platform/eclipse.platform.swt/pull/2054 -->
 ### Explicit Minimum Windows Version
 
-Currently, Eclipse officially supports Windows 10 and 11. By now, this was not validated explicitly but only defined as an implicit requirement.
+Currently, Eclipse officially supports Windows 10 and 11. Until now, this was not validated explicitly but only defined as an implicit requirement.
 When using an unsupported Windows version, it could happen that startup of an Eclipse or plain SWT application failed with a linkage error because unavailable functions of more recent operating system versions are linked.
 
 SWT now validates the supported Windows version during application startup and fails with an according error message if the version is not supported.
