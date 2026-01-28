@@ -182,8 +182,6 @@ There are currently three enum values available for `AutoscalingMode`:
 
 `Control.setAutoscalingMode(AutoscalingMode)` returns a boolean indicating whether the requested mode was accepted and applied. 
 On Linux and macOS, the current implementations always return false.
-`Control.isAutoScalable()` is implemented for Windows as well and utilizes the currently set autoscaling mode to return a meaningful value. 
-If you overwrite this method in custom implementations of a `Control`, it could make sense to revise that.
 
 Example:
 ```java
