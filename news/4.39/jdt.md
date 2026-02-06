@@ -93,6 +93,25 @@ Now only the suspended lambda is highlighted, making it much easier to follow ex
 ![Lambda Highlighting](images/LambdaHighlight.gif)
 
 
+### Drag and Drop Variables and Expressions into the Debug Shell
+
+<details>
+<summary>Contributors</summary>
+
+- [Sougandh S](https://github.com/SougandhS)
+</details>
+
+The `Debug Shell` now supports drag and drop from the `Variables` and `Expressions` views. 
+You can drag a variable or expression directly into the `Debug Shell`, where it is inserted at the caret location. 
+This makes it easier to reuse existing expressions and quickly build new ones using variables during a debug session, without manual typing or copying.
+
+#### Variable Drop
+![Variable Drop](images/VariableDrop.gif)
+
+#### Expression Drop
+![Expression Drop](images/ExpressionDrop.gif)
+
+
 <!--
 ### JDT Developers
 -->
