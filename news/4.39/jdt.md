@@ -58,6 +58,35 @@ Javadoc pop‑up shown after activating the proposal
 
 ![Javadoc pop‑up shown after activating the proposal](images/JavadocControl.png)
 
+### New Convert Class To Record Quick-assist / Refactoring
+
+<details>
+<summary>Contributors</summary>
+
+- [Jeff Johnston](https://github.com/jjohnstn)
+</details>
+
+A new refactoring has been added: `Right-click` -> `Refactoring` -> `Convert Class to Record...`, which will convert an appropriate class into a record.
+
+1. the class must have only one or more private instance field members that are all initialized in a single constructor by simple assignment and no static members.
+2. the class must have, at most, one getter method per instance field that simply returns the field value and no other methods.
+3. The class can only extend Object and cannot implement any interface.
+
+The refactoring may note that the conversion is not possible or issue a warning before conversion: for example, if there is a field that does not have a getter, a warning will be issued that the field will be exposed via an accessor and the user may choose to continue or not.
+
+When the record is created, all references to the previous getters will be changed to call the appropriate record accessors.
+
+A corresponding quick-assist (`CTRL-1` -> `Convert to record`) is also added to convert such a class.
+The quick-assist differs from the refactoring in that any warnings will cause the assist to not be offered.
+
+For example, the following:
+
+![Convert to record - before](images/convert-to-record-before.png)
+
+will be converted to:
+
+![Convert to record - after](images/convert-to-record-after.png)
+
 <!--
 ---
 ## Java Views and Dialogs
