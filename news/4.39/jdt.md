@@ -89,6 +89,27 @@ will be converted to:
 
 ![Convert to record - after](images/convert-to-record-after.png)
 
+### New Disable/Enable Test Quick-assist
+
+<details>
+<summary>Contributors</summary>
+
+- [Carsten Hammer](https://github.com/carstenartur)
+- [Github Copilot](https://github.com/apps/copilot-swe-agent)
+</details>
+
+A new quick-assist has been added to disable or enable a JUnit test in the editor.
+To disable an active test, select within the JUnit test and perform `Ctrl-1` -> `Disable test with @Disabled`.
+To enable a disabled test, select within the JUnit test and perform `Ctrl-1` -> `Enable test (remove @Enabled)`
+
+For example:
+
+![Disable test - before](images/disable-test-before.png)
+
+results in:
+
+![Disable test - after](images/disable-test-after.png)
+
 <!--
 ---
 ## Java Views and Dialogs
