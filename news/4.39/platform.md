@@ -12,10 +12,23 @@ A special thanks to everyone who [contributed to Eclipse-Platform](acknowledgeme
 ## Text Editors
 -->
 
-<!--
----
+
+
 ## Preferences
--->
+
+### Improved Theme Descriptions in Colors and Fonts Preferences
+
+<details>
+<summary>Contributors</summary>
+
+- [Elsa Zacharia ](https://github.com/elsazac)
+</details>
+
+The `Colors and Fonts` preferences page now displays descriptions for the top level theme categories in addition to the individual sub tree elements.
+Previously, only child entries in the tree provided descriptive text. 
+With this update, parent categories such as `Java`, `Basic`, `Debug`, `Text Compare` etc. also include descriptions, helping users better understand what each category covers and making it easier to locate relevant settings.
+
+![Theme category description](images/ColorsandFonts.png)
 
 <!--
 ---
