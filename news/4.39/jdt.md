@@ -27,7 +27,7 @@ Folding can now be used in the Java Editor when `Window` > `Preferences` > `Java
 
 In previous releases, this option automatically disabled code folding.
 
-### Show Javadoc From Annotation/Quick‑Fix Hover
+### Show Javadoc From Annotation/Quick-Fix Hover
 <details>
 <summary>Contributors</summary>
 
