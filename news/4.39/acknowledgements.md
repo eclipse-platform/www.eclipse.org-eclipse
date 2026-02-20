@@ -21,9 +21,9 @@ Special thanks to all code contributors (alphabetically):
 | [Hannes Wellmann](https://github.com/HannesWell) | [Heiko Klare](https://github.com/HeikoKlare) | [Jonah Graham](https://github.com/jonahgraham) |
 | [Lars Vogel](https://github.com/vogella) | [Matthias Becker](https://github.com/BeckerWdf) | [Matthias Mailänder](https://github.com/Mailaender) |
 | [Patrick Ziegler](https://github.com/ptziegler) | [Phillipus](https://github.com/Phillipus) | [raghucssit](https://github.com/raghucssit) |
-| [Sebastian Ratz](https://github.com/sratz) | [Shahzaib Ibrahim](https://github.com/ShahzaibIbrahim) | [Sougandh S](https://github.com/SougandhS) |
-| [Stephan Wahlbrink](https://github.com/wahlbrink) | [Tobias Melcher](https://github.com/tobiasmelcher) | [Tobias Melcher](https://github.com/tobias-melcher) |
-| [Vasili Gulevich](https://github.com/basilevs) | [Александър Куртаков](https://github.com/akurtakov)  |
+| [Rahul Mohanan](https://github.com/MohananRahul) | [Sebastian Ratz](https://github.com/sratz) | [Shahzaib Ibrahim](https://github.com/ShahzaibIbrahim) |
+| [Sougandh S](https://github.com/SougandhS) | [Stephan Wahlbrink](https://github.com/wahlbrink) | [Tobias Melcher](https://github.com/tobiasmelcher) |
+| [Tobias Melcher](https://github.com/tobias-melcher) | [Vasili Gulevich](https://github.com/basilevs) | [Александър Куртаков](https://github.com/akurtakov) |
 <!-- END:   eclipse-platform contributors -->
 
 ## Java Development Tools
@@ -34,14 +34,15 @@ Special thanks to all code contributors (alphabetically):
 ||||
 |---|---|---|
 | [Andrey Loskutov](https://github.com/iloveeclipse) | [Arun Jose](https://github.com/arunjose696) | [Carsten Hammer](https://github.com/carstenartur) |
-| [coehlrich](https://github.com/coehlrich) | [danthe1st](https://github.com/danthe1st) | [David Thompson](https://github.com/datho7561) |
-| [Ed Merks](https://github.com/merks) | [Federico Jeanne](https://github.com/fedejeanne) | [Hannes Wellmann](https://github.com/HannesWell) |
-| [Harisankars007](https://github.com/Harisankars007) | [Jay Arthanareeswaran](https://github.com/jarthana) | [Jeff Johnston](https://github.com/jjohnstn) |
-| [Kamil Krzywanski](https://github.com/kamilkrzywanski) | [Manoj N Palat](https://github.com/mpalat) | [Mehmet Emin Karaman](https://github.com/mehmet-karaman) |
-| [Patrick Ziegler](https://github.com/ptziegler) | [raghucssit](https://github.com/raghucssit) | [Rob Stryker](https://github.com/robstryker) |
-| [Simeon Andreev](https://github.com/trancexpress) | [Snjezana Peco](https://github.com/snjeza) | [Sougandh S](https://github.com/SougandhS) |
-| [Srikanth Sankaran](https://github.com/srikanth-sankaran) | [Stephan Herrmann](https://github.com/stephan-herrmann) | [Suby S Surendran](https://github.com/subyssurendran666) |
-| [Tobias Melcher](https://github.com/tobiasmelcher) | [Александър Куртаков](https://github.com/akurtakov)  |
+| [Christoph Läubrich](https://github.com/laeubi) | [coehlrich](https://github.com/coehlrich) | [danthe1st](https://github.com/danthe1st) |
+| [David Thompson](https://github.com/datho7561) | [Ed Merks](https://github.com/merks) | [Elsa Zacharia](https://github.com/elsazac) |
+| [Federico Jeanne](https://github.com/fedejeanne) | [Hannes Wellmann](https://github.com/HannesWell) | [Harisankars007](https://github.com/Harisankars007) |
+| [Jay Arthanareeswaran](https://github.com/jarthana) | [Jeff Johnston](https://github.com/jjohnstn) | [Kamil Krzywanski](https://github.com/kamilkrzywanski) |
+| [Manoj N Palat](https://github.com/mpalat) | [Mehmet Emin Karaman](https://github.com/mehmet-karaman) | [Patrick Ziegler](https://github.com/ptziegler) |
+| [raghucssit](https://github.com/raghucssit) | [Rob Stryker](https://github.com/robstryker) | [Simeon Andreev](https://github.com/trancexpress) |
+| [Snjezana Peco](https://github.com/snjeza) | [Sougandh S](https://github.com/SougandhS) | [Srikanth Sankaran](https://github.com/srikanth-sankaran) |
+| [Stephan Herrmann](https://github.com/stephan-herrmann) | [Suby S Surendran](https://github.com/subyssurendran666) | [Tobias Melcher](https://github.com/tobiasmelcher) |
+| [Александър Куртаков](https://github.com/akurtakov)  |
 <!-- END:   eclipse-jdt contributors -->
 
 ## Plug-in Development Environment
