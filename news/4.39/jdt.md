@@ -120,10 +120,26 @@ results in:
 ## Java Compiler
 -->
 
-<!--
----
 ## Java Formatter
--->
+
+### Support for Markdown Syntax in Java Comment Formatting
+
+<details>
+<summary>Contributors</summary>
+
+- [Sougandh S](https://github.com/SougandhS)
+- [Mateusz Matela](https://github.com/mateusz-matela)
+</details>
+
+When `Enable Markdown Javadoc formatting` is enabled, the `formatter` now recognizes structured Markdown syntax inside `///` comments and formats it appropriately instead of treating it as plain text. 
+Supported elements include __headings__, __ordered__ and __unordered lists__ (with proper nesting), __fenced__ and __indented code blocks__, __tables__ and __markdown-style tag annotations__.
+
+Nested lists are aligned consistently, wrapped list items preserve correct indentation, and fenced code blocks (both ` ``` ` and `~~~` styles) are recognized and their enclosed code snippets are formatted while preserving structure.
+The formatter also validates and handles malformed list or numbering patterns gracefully without disrupting the surrounding content.
+
+![Markdown Formatter](images/MarkdownTagFormatting.gif)
+
+The formatting behavior follows the [CommonMark specification](https://spec.commonmark.org/), ensuring consistent and predictable Markdown structure handling.
 
 ## Debugger
 
