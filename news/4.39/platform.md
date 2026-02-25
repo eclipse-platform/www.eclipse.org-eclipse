@@ -21,12 +21,12 @@ A special thanks to everyone who [contributed to Eclipse-Platform](acknowledgeme
 <details>
 <summary>Contributors</summary>
 
-- [Elsa Zacharia ](https://github.com/elsazac)
+- [Elsa Zacharia](https://github.com/elsazac)
 </details>
 
-The `Colors and Fonts` preferences page now displays descriptions for the top level theme categories in addition to the individual sub tree elements.
-Previously, only child entries in the tree provided descriptive text. 
-With this update, parent categories such as `Java`, `Basic`, `Debug`, `Text Compare` etc. also include descriptions, helping users better understand what each category covers and making it easier to locate relevant settings.
+The `Colors and Fonts` preferences page now displays descriptions for the top-level theme categories in addition to the individual subtree elements.
+Previously, only child entries in the tree provided descriptive text.
+With this update, parent categories such as `Java`, `Basic`, `Debug`, `Text Compare`, etc. also include descriptions, helping users better understand what each category covers and making it easier to locate relevant settings.
 
 ![Theme category description](images/ColorsandFonts.png)
 
@@ -81,7 +81,7 @@ The Equinox launcher executable still contained a manifest that defines a DPI aw
 
 Until now, this led to the splash screen not properly being scaled and to potentially incorrect results at the handover of the splash screen to SWT and the Platform Workbench.
 With this release, the Equinox launcher process defaults to DPI awareness "PerMonitorV2" and uses the same autoscale defaults as SWT again.
-For information about the SWT defaults, which also have been updated and unified with this release, see [the according news](platform_isv.md#monitor-specific-scaling-by-default-windows).
+For information about the SWT defaults, which also have been updated and unified with this release, see [the related news](platform_isv.md#monitor-specific-scaling-by-default-windows).
 
 Monitor-specific scaling can be disabled via `-Dswt.autoScale.updateOnRuntime=false`, which will also make the Equinox launcher use the preexisting autoscaling defaults for the splash screen.
 The process will still use DPI awareness "PerMonitorV2", but this will automatically be overwritten by SWT for a Display's UI thread to be "System" again.
