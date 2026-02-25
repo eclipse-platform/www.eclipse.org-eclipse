@@ -24,10 +24,9 @@ A special thanks to everyone who [contributed to JDT](acknowledgements.md#java-d
 </details>
 
 Folding can now be used in the Java Editor when `Window` > `Preferences` > `Java` > `Editor` > `Only show the selected Java element` is enabled.
-
 In previous releases, this option automatically disabled code folding.
 
-### Show Javadoc From Annotation/Quick‑Fix Hover
+### Show Javadoc From Annotation/Quick-Fix Hover
 <details>
 <summary>Contributors</summary>
 
@@ -35,30 +34,27 @@ In previous releases, this option automatically disabled code folding.
 - [Andrey Loskutov](https://github.com/iloveeclipse)
 </details>
 
-The annotation/quick‑fix hover now includes a “Javadoc” proposal that opens the Javadoc information pop‑up for the Java element referenced by the annotation.
-
-You can now view an element’s API documentation directly from an annotation hover without navigating to the element’s source file.
-
-Previously annotation hover took precedence and blocked the usual Javadoc pop‑up for the element under the annotation.
+The annotation/quick-fix hover now includes a Javadoc proposal that opens the Javadoc information pop-up for the Java element referenced by the annotation.
+You can now view an element's API documentation directly from an annotation hover without navigating to the element's source file.
+Previously, annotation hover took precedence and blocked the usual Javadoc pop-up for the element under the annotation.
 To read the Javadoc you had to open or navigate to the original Java source.
-
-The fix removes that friction.
+The change removes that friction.
 
 #### Annotation Hover Javadoc Behavior
-- When an annotation/quick‑fix hover is shown and the annotation refers to a Java element that has Javadoc, a “Show Javadoc” entry appears in the hover’s proposals list.
-- Activating the proposal opens the standard Javadoc information control (the same browser‑based Javadoc pop‑up used elsewhere).
-- The Javadoc pop‑up replaces the annotation hover for a natural, contextual display.
-- The Javadoc pop‑up is closed automatically when the user clicks outside — preventing stale pop‑ups.
+- When an annotation/quick-fix hover is shown and the annotation refers to a Java element that has Javadoc, a `Show Javadoc` entry appears in the hover's proposals list.
+- Activating the proposal opens the standard Javadoc information control (the same browser-based Javadoc pop-up used elsewhere).
+- The Javadoc pop-up replaces the annotation hover for a natural, contextual display.
+- The Javadoc pop-up is closed automatically when the user clicks outside preventing stale pop-ups.
 
-New Show Javadoc proposal in annotation hover
+New Show Javadoc proposal in annotation hover:
 
 ![Show Javadoc proposal in annotation hover](images/ShowJavadocQuickfix.png)
 
-Javadoc pop‑up shown after activating the proposal
+Javadoc pop-up shown after activating the proposal:
 
-![Javadoc pop‑up shown after activating the proposal](images/JavadocControl.png)
+![Javadoc pop-up shown after activating the proposal](images/JavadocControl.png)
 
-### New Convert Class To Record Quick-assist / Refactoring
+### New Convert Class to Record Quick-assist / Refactoring
 
 <details>
 <summary>Contributors</summary>
@@ -66,15 +62,15 @@ Javadoc pop‑up shown after activating the proposal
 - [Jeff Johnston](https://github.com/jjohnstn)
 </details>
 
-A new refactoring has been added: `Right-click` -> `Refactoring` -> `Convert Class to Record...`, which will convert an appropriate class into a record.
+A new refactoring has been added, `Right-click` -> `Refactoring` -> `Convert Class to Record...`, which will convert an appropriate class into a record.
 
 1. The class must have only one or more private instance field members that are all initialized in a single constructor by simple assignment and no static members.
 2. The class must have at most one getter method per instance field that simply returns the field value.
 3. The class can only extend Object and cannot implement any interface.
 4. The class may override `equals()`, `hashCode()`, or `toString()` from Object and these will be copied into the record but it cannot have any other methods except for the aforementioned constructor and getter methods.
 
-The refactoring may note that the conversion is not possible or issue a warning before conversion:
-for example, if there is a field that does not have a getter, a warning will be issued that the field will be exposed via an accessor and the user may choose to continue or not.
+The refactoring may note that the conversion is not possible or issue a warning before conversion.
+For example, if there is a field that does not have a getter, a warning will be issued that the field will be exposed via an accessor and the user may choose to continue or not.
 
 When the record is created, all references to the previous getters will be changed to call the appropriate record accessors.
 
@@ -100,7 +96,7 @@ will be converted to:
 
 A new quick-assist has been added to disable or enable a JUnit test in the editor.
 To disable an active test, select within the JUnit test and perform `Ctrl-1` -> `Disable test with @Disabled`.
-To enable a disabled test, select within the JUnit test and perform `Ctrl-1` -> `Enable test (remove @Enabled)`
+To enable a disabled test, select within the JUnit test and perform `Ctrl-1` -> `Enable test (remove @Disabled)`.
 
 For example:
 
@@ -131,8 +127,8 @@ results in:
 - [Mateusz Matela](https://github.com/mateusz-matela)
 </details>
 
-When `Enable Markdown Javadoc formatting` is enabled, the `formatter` now recognizes structured Markdown syntax inside `///` comments and formats it appropriately instead of treating it as plain text. 
-Supported elements include __headings__, __ordered__ and __unordered lists__ (with proper nesting), __fenced__ and __indented code blocks__, __tables__ and __markdown-style tag annotations__.
+When `Enable Markdown Javadoc formatting` is enabled, the `formatter` now recognizes structured Markdown syntax inside `///` comments and formats it appropriately instead of treating it as plain text.
+Supported elements include __headings__, __ordered__ and __unordered lists__ (with proper nesting), __fenced__, and __indented code blocks__, __tables__, and __markdown-style tag annotations__.
 
 Nested lists are aligned consistently, wrapped list items preserve correct indentation, and fenced code blocks (both ` ``` ` and `~~~` styles) are recognized and their enclosed code snippets are formatted while preserving structure.
 The formatter also validates and handles malformed list or numbering patterns gracefully without disrupting the surrounding content.
@@ -144,7 +140,7 @@ The formatting behavior follows the [CommonMark specification](https://spec.comm
 ## Debugger
 
 
-### Improved Highlighting For Inline Chained Lambdas
+### Improved Highlighting for Inline Chained Lambdas
 
 <details>
 <summary>Contributors</summary>
@@ -156,7 +152,7 @@ Building on the `inline lambda breakpoint` support added in **Eclipse 4.38**, th
 
 Previously, selecting or focusing a lambda stack frame in a chained expression highlighted the entire line, making it difficult to identify the exact lambda.
 
-Now only the suspended lambda is highlighted, making it much easier to follow execution in complex chained expressions.
+Now, only the suspended lambda is highlighted, making it much easier to follow execution in complex chained expressions.
 
 ![Lambda Highlighting](images/LambdaHighlight.gif)
 
@@ -169,8 +165,8 @@ Now only the suspended lambda is highlighted, making it much easier to follow ex
 - [Sougandh S](https://github.com/SougandhS)
 </details>
 
-The `Debug Shell` now supports drag and drop from the `Variables` and `Expressions` views. 
-You can drag a variable or expression directly into the `Debug Shell`, where it is inserted at the caret location. 
+The `Debug Shell` now supports drag and drop from the `Variables` and `Expressions` views.
+You can drag a variable or expression directly into the `Debug Shell`, where it is inserted at the caret location.
 This makes it easier to reuse existing expressions and quickly build new ones using variables during a debug session, without manual typing or copying.
 
 #### Variable Drop
