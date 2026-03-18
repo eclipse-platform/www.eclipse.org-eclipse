@@ -54,3 +54,20 @@ Tree#VariablesViewer
   SWT background: rgb(47,47,47)
   Bounds: x=1124 y=196 w=385 h=413
 ```
+
+### Always show Installable Unit (IU) ID in target editor
+<!-- https://github.com/eclipse-pde/eclipse.pde/pull/2208 -->
+<details>
+<summary>Contributors</summary>
+
+- [Lars Vogel](https://github.com/vogella)
+</details>
+
+The Target Platform Editor now always displays the technical ID of Installable Units (IUs) 
+in the `Definition` and `Content` tabs.
+This ensures a clear mapping between the UI representation and the underlying source.
+If a descriptive name exists and differs from the ID, 
+both are shown in the format `Name [ID]`; 
+otherwise, only the ID is displayed.
+
+![Target Editor showing IU IDs](images/target-editor-iu-id.png)
