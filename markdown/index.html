@@ -255,6 +255,8 @@
 		const selfHosted = repo == 'www.eclipse.org-eclipse';
 		const repoName = parts == null ? '' : repoNames[`${org}/${repo}`];
 
+		var applicableLocalURL = null;
+
 		const localSiteNavigator = isLocalHost ? `<a href="${getMarkdownURL('eclipse-platform/www.eclipse.org-eclipse/master/')}">Eclipse Website Navigator</a>` : '';
 		defaultAside = toElements(`${markdownAside}${localSiteNavigator}`);
 
@@ -444,6 +446,8 @@ ${headings.map(({id, raw, level}) => `<li class="tl${level}"><a href="#${id}">${
 						const siteURL = toSiteURL(logicalSrc);
 						if (siteURL != null) {
 							img.src = siteURL;
+						} else if (applicableLocalURL != null) {
+							img.src = new URL(src, applicableLocalURL);
 						} else {
 							img.src = new URL(`https://raw.githubusercontent.com/${org}/${repo}/${branch}/${path}/../${src}`);
 						}
@@ -622,6 +626,7 @@ The repository ${org}/${repo} is not on the allowed list.
 					localURL.pathname = `${org}/${repo}/${branch}/${path}`;
 					fetch(localURL, {method: 'HEAD', cache: "no-store"}).then(response => {
 						if (response.status == 200 && response.headers.get('Server') == 'org.eclipse.oomph.internal.util.HTTPServer') {
+							applicableLocalURL = localURL;
 							defaultHandler(localURL);
 						} else {
 							defaultHandler(defaultURL);
