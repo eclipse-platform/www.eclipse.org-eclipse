@@ -12,10 +12,29 @@ A special thanks to everyone who [contributed to JDT](acknowledgements.md#java-d
 ## JUnit
 -->
 
-<!--
----
 ## Java Editor
--->
+
+### Improvements for Enhanced Folding and Custom Folding Regions
+<details>
+<summary>Contributors</summary>
+
+- [Federico Jeanne](https://github.com/fedejeanne)
+- [Daniel Schmid](https://github.com/danthe1st)
+</details>
+
+
+#### Visible Improvements
+
+Several improvements have been made to the enhanced folding and the custom folding regions features introduced in previous releases, including:
+- The performance of the enhanced folding mechanism has been improved, especially for large files with many foldable elements.
+- Folding regions now include the entire body of control statements, including the opening and closing braces, for a more intuitive folding experience.
+- Minor glitches in the folding behavior have been fixed.
+- The complete list of addressed issues can be found in the [PR #2860](https://github.com/eclipse-jdt/eclipse.jdt.ui/pull/2860)
+
+#### API/Contract Clarifications
+
+With these changes, custom subclasses of `DefaultJavaFoldingStructureProvider` will also contain the enhanced and the custom folding regions in their results
+if the appropriate preferences have been activated.
 
 <!--
 ---
