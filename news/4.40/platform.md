@@ -17,20 +17,21 @@ A special thanks to everyone who [contributed to Eclipse-Platform](acknowledgeme
 ## Preferences
 -->
 
-<!--
 ---
 ## Themes and Styling
--->
 
-<!--
----
-## Views, Dialogs and Toolbar
--->
+### Removed Rounded Tabs Support
+<!-- https://github.com/eclipse-platform/eclipse.platform.ui/pull/3822 -->
+<details>
+<summary>Contributors</summary>
 
-<!--
+- [Lars Vogel](https://github.com/vogella)
+</details>
+
+Eclipse now only supports square tabs in `CTabRendering`. The **Use round tabs** checkbox in the **General > Appearance** preference page and the `swt-corner-radius` CSS property are no longer available. All tabs now have square corners.
+
 ---
 ## General Updates
--->
 
 ### Global Search Navigation Shortcuts
 <details>
