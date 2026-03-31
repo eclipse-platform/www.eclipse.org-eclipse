@@ -62,7 +62,7 @@ Since the site is static with JS rendering, any HTTP server works:
   - Emphasis: Prefer **bold** over *italics*.
 - **Images:** 
   - All lowercase, hyphen-separated names (e.g., `new-feature.png`).
-  - PNG format only.
+  - PNG format only for screenshots, GIF format for screen recordings
 - **Acknowledgements:** Do not manually edit `acknowledgements.md` unless fixing errors; it is managed by GitHub Actions.
 
 ## Key Files
