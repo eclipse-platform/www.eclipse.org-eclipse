@@ -80,6 +80,22 @@ __After__ (Will take only 3 Step Over(s) to complete `tet()` method invocation)
 ![After Filter](images/AfterFilter.gif)
 
 
+### Context-Aware Watch Expressions
+
+<details>
+<summary>Contributors</summary>
+
+- [Sougandh S](https://github.com/SougandhS)
+</details>
+
+Watch expressions created from the `Variables View` now correctly include their evaluation context.
+Previously, creating a watch expression on a field under an object generated only the field name, which led to evaluation failures.
+With this improvement, both the `Watch action` and `Drag and Drop` now generate fully qualified expressions,
+for example `myobj.myfield`, ensuring they evaluate correctly for the current context.
+
+![Watch Context](images/WatchExpressions.gif)
+
+
 <!--
 ### JDT Developers
 --> 
