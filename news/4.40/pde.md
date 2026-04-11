@@ -71,3 +71,21 @@ both are shown in the format `Name [ID]`;
 otherwise, only the ID is displayed.
 
 ![Target Editor showing IU IDs](images/target-editor-iu-id.png)
+
+
+### Version Mapping for Required Bundles and Imported Packages
+<details>
+<summary>Contributors</summary>
+
+- [Neha Burnwal ](https://github.com/nburnwal09)
+
+</details>
+
+A quick fix is provided for adding the available matching version range for required bundles and imported packages 
+in the `MANIFEST.MF` file. 
+
+![Addition of matching version](images/versionAdd_quickFix.png)
+
+The quick fix is labeled as `Require latest available version range`. 
+Once the user clicks on `Finish`, it adds the version range to the specific require bundle or import package.
+For example, version 7.2.3 is interpreted as the compatible range [7.2.0,8.0.0)
