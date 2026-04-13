@@ -50,3 +50,26 @@ This feature implements global search navigation commands `Alt+,` and `Alt+.` (`
 ![Global Search Navigation](images/GlobalSearchNavigationDemoFinal.gif)
 
 The GIF demonstrates navigation using the new commands despite the user switching out of the Search view.
+
+## Debugger
+
+### Paste Multiple Expressions from Clipboard in Expressions View
+<details>
+<summary>Contributors</summary>
+
+- [Sougandh S](https://github.com/SougandhS)
+</details>
+
+The `Expressions View` now improves pasting behavior when clipboard content contains line separators (such as `\n` etc). 
+In such cases, a dialog prompts you to choose whether to treat the content as a single expression or split it into multiple expressions, one per line.
+
+![Paste Prompt](images/ExpressionPaste.png)
+
+This also makes it easier to copy multiple expressions (for example, from the `Expressions View`) and paste them as separate expressions in another `Eclipse` instance, simplifying sharing and migration. 
+The selected behavior can be saved as a preference and changed later in the `Run/Debug `settings. 
+
+![Expression Paste Preference](images/ExpressionPastePref.png)
+
+A context menu entry for `Expression Paste` has also been added, improving discoverability.
+
+![Expression Paste Context](images/ExpPasteContext.png)
