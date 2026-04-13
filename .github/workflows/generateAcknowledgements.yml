@@ -79,6 +79,7 @@ jobs:
           const contributorNames = new Map()
           const profileReplacements = new Set()
           const skippedBotAccounts = new Set()
+          const missingAuthors = new Map()
           for (const repo of allRepos) {
             let [organization, repository] = repo.split('/')
             let contributors = computeIfAbsent(orgaContributors, organization, () => new Set())
@@ -130,6 +131,7 @@ jobs:
                   computeIfAbsent(contributorNames, profile, () => new Set()).add(authorName)
                 } else { // author is null for directly pushed commits, which happens e.g. for I-build submodule updates
                   console.log("Skip commit of " + authorName)
+                  computeIfAbsent(missingAuthors, authorName, () => new Set()).add(commitData.html_url)
                 }
                 commitCount++
               }
@@ -211,9 +213,41 @@ jobs:
           fs.writeFileSync(acknowledgementsFile, lines.join('\n'), {encoding: 'utf8'})
           
           // Set adjustments as outputs in order to append them to the PR message
-          core.setOutput('profile-replacements', Array.from(profileReplacements).map(r => "  - " + r).join("\n"));
-          core.setOutput('skipped-bots', Array.from(skippedBotAccounts).map(b => "  - @" + b).join("\n"));
-          core.setOutput('name-inconsistencies', nameInconsistencies.map(l => "  - " + l).join("\n"));
+          let contributorAdjustments = ''
+          if (nameInconsistencies.length) {
+            contributorAdjustments += `
+          > [!WARNING]
+          > Profiles with inconsistent git author names:
+          ${nameInconsistencies.map(n => '> - ' + n).join('\n')}
+          >
+          > _To avoid name inconsistencies in the future, please ensure you use the same author names across all your local git repositories (e.g. by setting \`git config --global user.name "Your Name"\`) and across devices!
+          > If the selected name, simply the longest one (and marked in bold), is incorrect, please let us know._
+          `
+          }
+          if (missingAuthors.size > 0) {
+            contributorAdjustments += `
+          > [!WARNING]
+          > Authors skipped due to missing author metadata on GitHub:
+          ${Array.from(missingAuthors.keys()).map(a => '> - \`' + a + '\` contributed\n' +  Array.from(missingAuthors.get(a)).map(c => '>   - ' + c).join('\n') ).join('\n')}
+          >
+          > Probably the author's email isn't connected to their GitHub accounts.
+          `
+          }
+          if (profileReplacements.size > 0) {
+            contributorAdjustments += `
+          > [!IMPORTANT]
+          > Replaced profiles:
+          ${Array.from(profileReplacements).map(r => '> - ' + r).join('\n')}
+          `
+          }
+          if (skippedBotAccounts.size > 0) {
+            contributorAdjustments += `
+          > [!NOTE]
+          > Excluded bot accounts:
+          ${Array.from(skippedBotAccounts).map(b => '> - @' + b).join('\n')}
+          `
+          }
+          core.setOutput('contributor-adjustments', contributorAdjustments)
           
           function isTagAvailable(tagName) {
             return github.rest.git.getRef({
@@ -230,7 +264,7 @@ jobs:
           
           function isBot(author) {
             const email = author.email.toLowerCase()
-            return email.endsWith("-bot@eclipse.org") || email.endsWith("[bot]@users.noreply.github.com") || author.name == 'eclipse-releng-bot'
+            return email.endsWith("-bot@eclipse.org") || email.endsWith("[bot]@users.noreply.github.com")
               || email.endsWith('+copilot@users.noreply.github.com')
               || email.endsWith('+claude@users.noreply.github.com')
           }
@@ -255,15 +289,7 @@ jobs:
         body: |
           Update the list of contributors in the Acknowledgements for `${{ inputs.eclipse-version }}`.
           
-          Adjustments to the lists of contributors:
-          - Replaced profiles:
-          ${{ steps.collect-contributors.outputs.profile-replacements && steps.collect-contributors.outputs.profile-replacements || 'None' }}
-          - Profiles with inconsistent git author names:
-          _To avoid this in the future, please ensure you use the same author names across all your local git repositories (e.g. by setting `git config --global user.name "Your Name"`) and across devices!
-          If the selected name, simply the longest one (and marked in bold), is incorrect, please let us know._
-          ${{ steps.collect-contributors.outputs.name-inconsistencies && steps.collect-contributors.outputs.name-inconsistencies || 'None' }}
-          - Excluded bot-accounts:
-          ${{ steps.collect-contributors.outputs.skipped-bots && steps.collect-contributors.outputs.skipped-bots || 'None' }}
-          
-          Please verify these adjustments for correctness and grant those who are affected sufficient time to refine the adjustments.
+          The list of contributors has been adjusted with the changes listed below.
+          Verify them for correctness and, if necessary, grant the affected persons sufficient time to refine these adjustments.
+          ${{ steps.collect-contributors.outputs.contributor-adjustments }}
         delete-branch: true
