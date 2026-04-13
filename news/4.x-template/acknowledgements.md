@@ -38,4 +38,4 @@ Special thanks to all code contributors (alphabetically):
 ## Eclipse Foundation
 
 The entire Eclipse Project team would like to thank the [Eclipse Foundation staff](https://www.eclipse.org/org/foundation/staff/) for their tireless efforts and especially
-[Frederic Gurr](https://github.com/fredg02) and [Sébastien Heurtematte](https://github.com/heurtematte) for not only keeping all that infrastructure going but also constantly improving it.
+[Frederic Gurr](https://github.com/fredg02), [Sébastien Heurtematte](https://github.com/heurtematte), and [Paweł Stankiewicz](https://github.com/pstankie) for not only keeping all that infrastructure going but also constantly improving it.
