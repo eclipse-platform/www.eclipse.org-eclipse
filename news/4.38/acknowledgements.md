@@ -57,8 +57,8 @@ Special thanks to all code contributors (alphabetically):
 | [Andrey Loskutov](https://github.com/iloveeclipse) | [Christoph Läubrich](https://github.com/laeubi) | [Daniel Krügler](https://github.com/Dani-Hub) |
 | [Ed Merks](https://github.com/merks) | [Elsa Zacharia](https://github.com/elsazac) | [Federico Jeanne](https://github.com/fedejeanne) |
 | [Hannes Wellmann](https://github.com/HannesWell) | [Heiko Klare](https://github.com/HeikoKlare) | [Lars Vogel](https://github.com/vogella) |
-| [Marc SAINT-PIERRE](https://github.com/amelodev) | [Matthias Becker](https://github.com/BeckerWdf) | [Simeon Andreev](https://github.com/trancexpress) |
-| [Александър Куртаков](https://github.com/akurtakov)  |
+| [Marc SAINT-PIERRE](https://github.com/amelodev) | [Matthias Becker](https://github.com/BeckerWdf) | [Neha Burnwal](https://github.com/nburnwal09) |
+| [Simeon Andreev](https://github.com/trancexpress) | [Александър Куртаков](https://github.com/akurtakov)  |
 <!-- END:   eclipse-pde contributors -->
 
 ## Equinox
