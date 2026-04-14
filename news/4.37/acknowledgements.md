@@ -60,8 +60,9 @@ Special thanks to all code contributors (alphabetically):
 | [Alexander Fedorov](https://github.com/ruspl-afed) | [Christoph Läubrich](https://github.com/laeubi) | [Ed Merks](https://github.com/merks) |
 | [Elsa Zacharia](https://github.com/elsazac) | [Hannes Wellmann](https://github.com/HannesWell) | [Heiko Klare](https://github.com/HeikoKlare) |
 | [Jennifer Nerlich](https://github.com/jnerlich) | [Lars Vogel](https://github.com/vogella) | [Lola](https://github.com/oohwooh) |
-| [Michael Bangas](https://github.com/Michael5601) | [Rahul Mohanan](https://github.com/MohananRahul) | [Sage Bain](https://github.com/Shyesta) |
-| [steffenschmitt1](https://github.com/steffenschmitt1) | [William Riley](https://github.com/Kummallinen) | [Александър Куртаков](https://github.com/akurtakov) |
+| [Michael Bangas](https://github.com/Michael5601) | [Neha Burnwal](https://github.com/nburnwal09) | [Rahul Mohanan](https://github.com/MohananRahul) |
+| [Sage Bain](https://github.com/Shyesta) | [steffenschmitt1](https://github.com/steffenschmitt1) | [William Riley](https://github.com/Kummallinen) |
+| [Александър Куртаков](https://github.com/akurtakov)  |
 <!-- END:   eclipse-pde contributors -->
 
 ## Equinox
@@ -72,7 +73,7 @@ Special thanks to all code contributors (alphabetically):
 ||||
 |---|---|---|
 | [Christoph Läubrich](https://github.com/laeubi) | [Ed Merks](https://github.com/merks) | [Hannes Wellmann](https://github.com/HannesWell) |
-| [Jörg Kubitz](https://github.com/EcljpseB0T) | [Rahul Mohanan](https://github.com/MohananRahul) | [Simeon Andreev](https://github.com/trancexpress) |
+| [Jörg Kubitz](https://github.com/jukzi) | [Rahul Mohanan](https://github.com/MohananRahul) | [Simeon Andreev](https://github.com/trancexpress) |
 | [Sougandh S](https://github.com/SougandhS) | [Thomas Watson](https://github.com/tjwatson) | [Александър Куртаков](https://github.com/akurtakov) |
 <!-- END:   eclipse-equinox contributors -->
 
