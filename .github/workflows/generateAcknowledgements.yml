@@ -114,14 +114,16 @@ jobs:
                   continue;
                 }
                 let authorName = commitData.commit.author.name
-                if (commitData.author) {
-                  let profile = commitData.author.login
-                  if (isBot(commitData.commit.author)) { // Exclude contributors from bot-accounts
+                let profile = commitData.author?.login
+                if (isBot(commitData.commit.author)) { // Exclude contributions from bot-accounts
+                  if (profile) {
                     skippedBotAccounts.add(profile)
-                    continue;
                   }
+                  continue
+                }
+                if (profile) {
                   const committerProfile = commitData.committer?.login
-                  if (commitData.commit.author.name == commitData.commit.committer.name
+                  if (authorName == commitData.commit.committer.name
                         && committerProfile && profile != committerProfile) {
                     // Sometimes contributors use different profiles. Let the committer profile take precedence
                     profileReplacements.add("@" + profile + " -> @" + committerProfile)
@@ -230,7 +232,8 @@ jobs:
           > Authors skipped due to missing author metadata on GitHub:
           ${Array.from(missingAuthors.keys()).map(a => '> - \`' + a + '\` contributed\n' +  Array.from(missingAuthors.get(a)).map(c => '>   - ' + c).join('\n') ).join('\n')}
           >
-          > Probably the author's email isn't connected to their GitHub accounts.
+          > Probably the authors' emails are not connected to their GitHub accounts.
+          > If possible, ask them to establish that connection and regenerate this acknowledgements.
           `
           }
           if (profileReplacements.size > 0) {
@@ -264,7 +267,7 @@ jobs:
           
           function isBot(author) {
             const email = author.email.toLowerCase()
-            return email.endsWith("-bot@eclipse.org") || email.endsWith("[bot]@users.noreply.github.com")
+            return email.endsWith('-bot@eclipse.org') || email.endsWith('[bot]@users.noreply.github.com') || email.endsWith('-bot@users.noreply.github.com')
               || email.endsWith('+copilot@users.noreply.github.com')
               || email.endsWith('+claude@users.noreply.github.com')
           }
