@@ -62,11 +62,11 @@ Special thanks to all code contributors (alphabetically):
 <!-- START: eclipse-pde contributors -->
 ||||
 |---|---|---|
-| [Александър Куртаков](https://github.com/akurtakov) | [Andrey Loskutov](https://github.com/iloveeclipse) | [Christoph Läubrich](https://github.com/laeubi) |
-| [Christoph Rueger](https://github.com/chrisrueger) | [Ed Merks](https://github.com/merks) | [Hannes Wellmann](https://github.com/HannesWell) |
-| [Heiko Klare](https://github.com/HeikoKlare) | [Jay Arthanareeswaran](https://github.com/jarthana) | [Lars Vogel](https://github.com/vogella) |
-| [Michael Bangas](https://github.com/Michael5601) | [Patrick Ziegler](https://github.com/ptziegler) | [Rahul Mohanan](https://github.com/MohananRahul) |
-| [Sebastian Ratz](https://github.com/sratz) | [Shahzaib Ibrahim](https://github.com/ShahzaibIbrahim)  |
+| [Andrey Loskutov](https://github.com/iloveeclipse) | [Christoph Läubrich](https://github.com/laeubi) | [Christoph Rueger](https://github.com/chrisrueger) |
+| [Ed Merks](https://github.com/merks) | [Hannes Wellmann](https://github.com/HannesWell) | [Heiko Klare](https://github.com/HeikoKlare) |
+| [Jay Arthanareeswaran](https://github.com/jarthana) | [Lars Vogel](https://github.com/vogella) | [Michael Bangas](https://github.com/Michael5601) |
+| [Neha Burnwal](https://github.com/nburnwal09) | [Patrick Ziegler](https://github.com/ptziegler) | [Rahul Mohanan](https://github.com/MohananRahul) |
+| [Sebastian Ratz](https://github.com/sratz) | [Shahzaib Ibrahim](https://github.com/ShahzaibIbrahim) | [Александър Куртаков](https://github.com/akurtakov) |
 <!-- END:   eclipse-pde contributors -->
 
 ## Equinox
