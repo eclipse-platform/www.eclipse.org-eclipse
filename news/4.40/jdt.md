@@ -96,6 +96,19 @@ for example `myobj.myfield`, ensuring they evaluate correctly for the current co
 ![Watch Context](images/WatchExpressions.gif)
 
 
+### Stepping in Class File Editor
+
+<details>
+<summary>Contributors</summary>
+
+- [Daniel Schmid](https://github.com/danthe1st)
+</details>
+
+The class file editor has been enhanced to support highlighting the instruction pointer.
+When stepping through Java classes without available source code, Eclipse will automatically highlight the next bytecode instruction to execute.
+
+![Stepping through a class without a source attachment](images/ClassFileDebugging.gif)
+
 <!--
 ### JDT Developers
 --> 
