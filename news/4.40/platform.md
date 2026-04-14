@@ -32,8 +32,50 @@ Eclipse now only supports square tabs in `CTabRendering`.
 The `Use round tabs` checkbox in the `General > Appearance` preference page and the `swt-corner-radius` CSS property are no longer available.
 All tabs now have square corners.
 
+### Removed Classic Theme
+<details>
+<summary>Contributors</summary>
+
+- [Lars Vogel](https://github.com/vogella)
+</details>
+
+The `Classic` theme (`org.eclipse.e4.ui.css.theme.e4_classic`) has been removed.
+Users who previously had the `Classic` theme selected will be automatically migrated to the `Light` theme upon the next startup.
+
+### Manage Default Theme
+<details>
+<summary>Contributors</summary>
+
+- [Lars Vogel](https://github.com/vogella)
+</details>
+
+A new `Manage default...` button has been added to the `General > Appearance` preference page, next to the theme selection.
+
+![Manage Default Theme](images/manage-default-theme.png)
+
+This allows you to set the currently selected theme as the default for new workspaces or workspaces that do not have an explicit theme configured.
+
+![Default Theme Dialog](images/default-theme-dialog.png)
+
+When switching themes, you also have the option to set the new theme as the default directly from the restart confirmation dialog.
+
+![Theme Switch Default Selection](images/theme-switch-default-selection.png)
+
+The default theme preference is product-scoped, allowing different Eclipse-based products to maintain their own independent defaults even when sharing the same user configuration.
+
 ---
 ## General Updates
+
+### Skip Dot-folders When Scanning for Projects to Import
+<details>
+<summary>Contributors</summary>
+
+- [Lars Vogel](https://github.com/vogella)
+</details>
+
+You can now skip directories starting with a `.` (e.g., `.git`, `.svn`, `.hg`) during recursive project scanning in the `Smart Import` and `Import Existing Projects` wizards.
+This significantly improves import performance for repositories with large metadata folders.
+A new `Skip folders starting with '.'` checkbox is available in both wizards and is enabled by default.
 
 ### Global Search Navigation Shortcuts
 <details>
