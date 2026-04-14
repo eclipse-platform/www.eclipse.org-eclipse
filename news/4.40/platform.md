@@ -73,3 +73,19 @@ The selected behavior can be saved as a preference and changed later in the `Run
 A context menu entry for `Expression Paste` has also been added, improving discoverability.
 
 ![Expression Paste Context](images/ExpPasteContext.png)
+
+### Refined Copy Actions in Variables and Expressions Views
+<details>
+<summary>Contributors</summary>
+
+- [Sougandh S](https://github.com/SougandhS)
+</details>
+
+Copy behavior in the `Variables` view and `Expressions` view has been refined to provide more predictable and controlled results. 
+Previously, copying would include the entire row (such as `Name`, `Value`, and `Types`), which could lead to unintended clipboard content.
+
+Dedicated actions are now available to copy only the `Variable` name and `Expression` text, or the full row when needed.
+
+![VariableAndExpression Copy](images/ExpressionAndVariable.png)
+
+This makes it easier to copy exactly what is required and ensures that variable names and expressions can be reused directly without unintended content
