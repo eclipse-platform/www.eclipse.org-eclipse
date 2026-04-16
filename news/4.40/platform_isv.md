@@ -18,11 +18,15 @@ A special thanks to everyone who [contributed to Eclipse-Platform](acknowledgeme
 - [Lars Vogel](https://github.com/vogella)
 </details>
 
-`CTabFolder` now supports an opt-in dirty indicator that shows a filled bullet dot (●) at the close button location for tabs with unsaved changes, replacing the traditional `*` prefix approach. On hover, the bullet transforms into the close button, matching VS Code behavior.
+`CTabFolder` now supports an opt-in dirty indicator that shows a filled bullet dot (●) at the close button location for tabs with unsaved changes.
+This is intended as an alternative to the `*` prefix dirty indicator currently used by the IDE.
+On hover, the bullet transforms into the close button, matching VS Code behavior.
 
 New API:
 - `CTabFolder.setDirtyIndicatorStyle(boolean)` — enables/disables the bullet-on-close-button style
+- `CTabFolder.getDirtyIndicatorStyle()` — returns whether the dirty indicator style is enabled
 - `CTabItem.setShowDirty(boolean)` — marks an item as having unsaved changes
+- `CTabItem.getShowDirty()` — returns whether the item is marked as dirty
 
 The feature is disabled by default to preserve backward compatibility.
 
