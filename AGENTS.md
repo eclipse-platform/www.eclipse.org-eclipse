@@ -69,4 +69,14 @@ Since the site is static with JS rendering, any HTTP server works:
 - `README.md`: Basic project intro.
 - `news/instructions.md`: **Crucial** detailed guide for N&N contributors.
 - `project.js`: The heart of the site's dynamic rendering.
-- `AGENTS.md`: Technical instructions for AI agentss
+- `AGENTS.md`: Technical instructions for AI agents.
+
+## Additional Rules
+
+### Markdown Formatting
+- **One sentence per line.** Start each sentence on a new line and break long sentences into phrases on separate lines. This eases editing and produces cleaner diffs. See `news/instructions.md` for details.
+- When listing API methods, include both setters and getters if they exist in the source code.
+
+### Pull Requests
+- PRs for this repo target `eclipse-platform/www.eclipse.org-eclipse` (upstream), not the fork.
+- Use `gh pr create` with `--repo eclipse-platform/www.eclipse.org-eclipse --head vogella:<branch>` when pushing from a fork.
