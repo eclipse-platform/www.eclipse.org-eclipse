@@ -125,7 +125,7 @@
 						parameter by prepending *. The parameter must not be NULL. <br>Used in: <i>@param</i></p>
 				</li>
 				<li> <b>unicode</b>
-					<p>Indicate that <code>GetStringChars()</code>should be used instead of <code>GetStringUTFChars()</code> to get
+					<p>Indicate that <code>GetStringChars()</code> should be used instead of <code>GetStringUTFChars()</code> to get
 						the
 						characters of a java.lang.String passed as a parameter to native methods. <br>Used in: <i>@param</i></p>
 				</li>
@@ -157,7 +157,7 @@
 				<li> <b>address</b>
 					<p>Indicate that the native method represents a structure global variable and the address of it should be
 						returned to
-						Java. This is done by prepending. <br>Used in: <i>@method</i></p>
+						Java. This is done by prepending &amp;. <br>Used in: <i>@method</i></p>
 				</li>
 				<li> <b>no_wince</b>
 					<p>Indicate that the item should be #ifdef out in the Windows CE platform, but not in the regular win32

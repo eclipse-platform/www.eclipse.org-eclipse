@@ -38,17 +38,22 @@
 			<ol>
 				<li>Add the function prototype in <code>OS.java</code>, copying the style and structure
 					of the other functions in that file. Note that for Mac/Cocoa, portions of <code>OS.java</code>
-					are also <a href="macgen.html">generated</a>.
+					are also <a href="macgen.html">generated</a>.</li>
 				<li>Install the latest SWT Tools from the <a href="https://download.eclipse.org/eclipse/downloads/">Update Site</a>.
-				<li>Restart Eclipse.
-				<li>Use code assist templates like <b>jni*</b> (i.e. <i>jnifield</i> and <i>jnimethod</i>) to add javadoc tags that describe flags and casts for any primitive types. See <a href="jnigen_metadata.html">metadata</a> for more documentation.
-					<center><img src="images/jnitemplates.png" alt="build.xml"></center>
-				<li>Save the file. This should generate the needed changes in the appropriate C files.
-
-				<li>Compile the new C code and copy the new libraries to the appropriate fragment by running the <code>Build-SWT-native-binaries-for-running-platform</code> launch configuration.
+				</li>
+				<li>Restart Eclipse.</li>
+				<li>Use code assist templates like <b>jni*</b> (i.e. <i>jnifield</i> and <i>jnimethod</i>) to add javadoc tags that
+					describe flags and casts for any primitive types. See <a href="jnigen_metadata.html">metadata</a> for more
+					documentation.
+					<center><img src="images/jnitemplates.png" alt="Templates in action screenshot"></center>
+				</li>
+				<li>Save the file. This should generate the needed changes in the appropriate C files.</li>
+			
+				<li>Compile the new C code and copy the new libraries to the appropriate fragment by running the
+					<code>Build-SWT-native-binaries-for-running-platform</code> launch configuration.
 					<center><img src="images/runnativebuild.png" alt="Natives build launcher"></center>
 				</li>
-					
+			
 			</ol>
 
 			<h3>Adding structs</h3>
