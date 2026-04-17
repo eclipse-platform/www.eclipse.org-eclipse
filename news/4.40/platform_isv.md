@@ -76,10 +76,10 @@ Newly available effects include:
 - Unlimited Balls.
 - Warp.
 
-![Flower effect](images/graphics-example-flower.gif)
+<img src="images/graphics-example-flower.gif" alt="Flower effect" width="400">
 
-![Mirror effect](images/graphics-example-mirror.gif)
+<img src="images/graphics-example-mirror.gif" alt="Mirror effect" width="400">
 
-![Ripple effect](images/graphics-example-ripple.gif)
+<img src="images/graphics-example-ripple.gif" alt="Ripple effect" width="400">
 
-![Scroll effect](images/graphics-example-scroll.gif)
+<img src="images/graphics-example-scroll.gif" alt="Scroll effect" width="400">
