@@ -33,3 +33,53 @@ The feature is disabled by default to preserve backward compatibility.
 ![Dirty Indicator Light Theme](images/dirty-indicator-light.png)
 
 ![Dirty Indicator Dark Theme](images/dirty-indicator-dark.png)
+
+### New Animated Effects in SWT GraphicsExample
+<!-- https://github.com/eclipse-platform/eclipse.platform.swt/issues/3189 -->
+<details>
+<summary>Contributors</summary>
+
+- [Laurent Caron](https://github.com/lcaron)
+- [Lars Vogel](https://github.com/vogella)
+</details>
+
+The SWT `GraphicsExample` snippet has been extended
+with a large collection of animated demo tabs in the new `Misc` category.
+These effects were migrated from the SWT-OldSchoolEffect project
+with permission from the original author, [Laurent Caron](https://github.com/lcaron),
+and serve as useful tests and demonstrations
+for SWT's `Canvas`, `GC`, and `Image` rendering.
+
+Newly available effects include:
+- Starfield.
+- Ripple.
+- Blob.
+- Burning Sea.
+- Copper Bars.
+- Explosion.
+- Fire.
+- Mandelbrot.
+- Moiré.
+- Plasma.
+- Raster Bars.
+- Shade Bobs.
+- Twister.
+- Wave.
+- Dancing.
+- Bump Mapping.
+- Flat Text.
+- Lens.
+- Block Effect.
+- Twirl.
+- Sine Wave.
+- Sky.
+- Unlimited Balls.
+- Warp.
+
+![Flower effect](images/graphics-example-flower.gif)
+
+![Mirror effect](images/graphics-example-mirror.gif)
+
+![Ripple effect](images/graphics-example-ripple.gif)
+
+![Scroll effect](images/graphics-example-scroll.gif)
