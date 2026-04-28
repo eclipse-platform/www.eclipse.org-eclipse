@@ -2,9 +2,23 @@
 
 A special thanks to everyone who [contributed to PDE](acknowledgements.md#plug-in-development-environment) in this release!
 
-<!--
 ## Editors
--->
+
+### Copy Entries from the Target Editor Content Tab
+<!-- https://github.com/eclipse-pde/eclipse.pde/pull/2302 -->
+<details>
+<summary>Contributors</summary>
+
+- [Lars Vogel](https://github.com/vogella)
+</details>
+
+You can now copy entries from the `Content` tab of the target-definition editor.
+This mirrors the behavior already available on the `Locations` tab.
+Copy is available from the context menu or via the platform copy keystroke.
+That is `Ctrl+C` on Linux and Windows, and `Cmd+C` on macOS.
+Multi-selection and expanded children are included in the copied text.
+The copy action is wired through the workbench binding service.
+Any user-remapped key binding for `Copy` is honored automatically.
 
 <!--
 ## API Tools
@@ -14,6 +28,21 @@ A special thanks to everyone who [contributed to PDE](acknowledgements.md#plug-i
 ---
 ## PDE Compiler 
 -->
+
+## Performance
+
+### Performance Improvements
+<details>
+<summary>Contributors</summary>
+
+- [Lars Vogel](https://github.com/vogella)
+</details>
+
+This release includes several performance and reliability improvements:
+
+- **Stable classpath order for plug-in dependencies:** The `Plug-in Dependencies` classpath container now uses a deterministic order when a target contains multiple bundles with the same symbolic name (for example two versions of `jakarta.annotation-api`), avoiding spurious **Updating plug-in dependencies** rebuilds at IDE startup.
+- **Faster syntax highlighting in the target definition editor:** The presentation reconciler no longer scans content past the damaged region on every keystroke, so editing large `.target` files feels noticeably more responsive.
+- **More reliable target resolution:** Resolve jobs are now serialized per target handle, preventing duplicate parallel resolves and the resulting `Cannot invoke ProfileLock.unlock()` errors when reloading the same target definition.
 
 ## Views and Dialogs
 
