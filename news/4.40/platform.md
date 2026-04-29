@@ -20,6 +20,25 @@ A special thanks to everyone who [contributed to Eclipse-Platform](acknowledgeme
 ---
 ## Themes and Styling
 
+### New Dirty Indicator for View and Editor Tabs
+<!-- https://github.com/eclipse-platform/eclipse.platform.ui/pull/2568 -->
+<details>
+<summary>Contributors</summary>
+
+- [Michael Schneider](https://github.com/schneidermic0)
+- [Lars Vogel](https://github.com/vogella)
+</details>
+
+A new bullet-style dirty indicator is available that overlays the tab's close button when a view or editor has unsaved changes,
+replacing the leading asterisk (`*`) in the tab title.
+You can enable it via `Indicate unsaved changes by overlaying the close button` in `Preferences > General > Appearance`,
+under `Dirty indicator for view and editor tabs`.
+The setting takes effect immediately for all open stacks.
+
+![Dirty indicator in light theme](images/view-editor-tab-dirty-indicator-light.png)
+
+![Dirty indicator in dark theme](images/view-editor-tab-dirty-indicator-dark.png)
+
 ### Removed Rounded Tabs Support
 <!-- https://github.com/eclipse-platform/eclipse.platform.ui/pull/3822 -->
 <details>
