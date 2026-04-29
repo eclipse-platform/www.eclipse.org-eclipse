@@ -70,17 +70,18 @@ Users who previously had the `Classic` theme selected will be automatically migr
 
 A new `Manage default...` button has been added to the `General > Appearance` preference page, next to the theme selection.
 
-![Manage Default Theme](images/manage-default-theme.png)
-
 This allows you to set the currently selected theme as the default for new workspaces or workspaces that do not have an explicit theme configured.
 
 ![Default Theme Dialog](images/default-theme-dialog.png)
 
 When switching themes, you also have the option to set the new theme as the default directly from the restart confirmation dialog.
 
-![Theme Switch Default Selection](images/theme-switch-default-selection.png)
+![Theme Changed Dialog with option to use as default theme](images/theme-changed-dialog.png)
 
 The default theme preference is product-scoped, allowing different Eclipse-based products to maintain their own independent defaults even when sharing the same user configuration.
+The workspace selection dialog will use the default theme as well.
+
+![Workspace selection](images/workspace-selection.png)
 
 ---
 ## General Updates
