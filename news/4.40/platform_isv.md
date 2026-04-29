@@ -15,6 +15,7 @@ A special thanks to everyone who [contributed to Eclipse-Platform](acknowledgeme
 <details>
 <summary>Contributors</summary>
 
+- [Michael Schneider](https://github.com/schneidermic0)
 - [Lars Vogel](https://github.com/vogella)
 </details>
 
