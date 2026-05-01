@@ -39,6 +39,24 @@ The setting takes effect immediately for all open stacks.
 
 ![Dirty indicator in dark theme](images/view-editor-tab-dirty-indicator-dark.png)
 
+### Updated Dark Theme Styling for Form-based UIs
+<!-- https://github.com/eclipse-platform/eclipse.platform.ui/pull/3949 -->
+<details>
+<summary>Contributors</summary>
+
+- [Lars Vogel](https://github.com/vogella)
+</details>
+
+The dark theme styling for form-based editors (such as the `Plug-in Manifest Editor` and the `Target Definition Editor`) now matches the regular view styling.
+
+Before:
+
+![Dark theme form styling before the change](images/dark-form-chrome-old.png)
+
+After:
+
+![Dark theme form styling after the change](images/dark-form-chrome-new.png)
+
 ### Removed Rounded Tabs Support
 <!-- https://github.com/eclipse-platform/eclipse.platform.ui/pull/3822 -->
 <details>
