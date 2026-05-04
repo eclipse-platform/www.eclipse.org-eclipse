@@ -1,11 +1,32 @@
-# Platform and Equinox - 4.40 
+# Platform and Equinox - 4.40
 
 A special thanks to everyone who [contributed to Eclipse-Platform](acknowledgements.md#eclipse-platform) or [contributed to Equinox](acknowledgements.md#equinox) in this release!
 
-<!--
----
 ## Views, Dialogs and Toolbar
--->
+
+### Line length limit in the Console
+<!-- https://github.com/eclipse-platform/eclipse.platform/pull/2494 -->
+<details>
+<summary>Contributors</summary>
+
+- [Andreev S](https://github.com/trancexpress)
+- [Loskutov A](https://github.com/iloveeclipse)
+</details>
+
+A new option has been added to `Console` view preferences that lets you control line length in the `Console`.
+
+If a launched application produces extremely long lines, displaying them in the `Console` view can cause the entire Eclipse UI to freeze.
+To prevent this, you can now enable the new line limit options for the `Console` view.
+
+When enabled, the `Console` view enforces a strict physical maximum line length.
+Lines that exceed the configured limit are either truncated or hard wrapped, depending on the selected option.
+
+When truncation is applied, an ellipsis (...) is appended to indicate that the line has been shortened.
+When wrapping is applied, the line is split into multiple lines to fit within the limit, ensuring that all content remains visible without freezing the UI.
+
+This feature is disabled by default.
+
+![Line limit preferences](images/LineLimitPreferences.png)
 
 <!--
 ---
@@ -123,7 +144,7 @@ A new `Skip folders starting with '.'` checkbox is available in both wizards and
 - [Shubham Waldiya](https://github.com/ShuWald)
 </details>
 
-The current search navigation commands `Ctrl+,` and `Ctrl+.` allow for navigation to the previous or next search result, respectively. 
+The current search navigation commands `Ctrl+,` and `Ctrl+.` allow for navigation to the previous or next search result, respectively.
 However, one limitation is that these shortcuts only work when the search view is in focus.
 This feature implements global search navigation commands `Alt+,` and `Alt+.` (`Cmd+Opt+,` and `Cmd+Opt+.` on macOS) to navigate to previous/next search results even when search view is out of focus, allowing for easier and more intuitive navigation.
 
@@ -140,13 +161,13 @@ The GIF demonstrates navigation using the new commands despite the user switchin
 - [Sougandh S](https://github.com/SougandhS)
 </details>
 
-The `Expressions View` now improves pasting behavior when clipboard content contains line separators (such as `\n` etc). 
+The `Expressions View` now improves pasting behavior when clipboard content contains line separators (such as `\n` etc).
 In such cases, a dialog prompts you to choose whether to treat the content as a single expression or split it into multiple expressions, one per line.
 
 ![Paste Prompt](images/ExpressionPaste.png)
 
-This also makes it easier to copy multiple expressions (for example, from the `Expressions View`) and paste them as separate expressions in another `Eclipse` instance, simplifying sharing and migration. 
-The selected behavior can be saved as a preference and changed later in the `Run/Debug `settings. 
+This also makes it easier to copy multiple expressions (for example, from the `Expressions View`) and paste them as separate expressions in another `Eclipse` instance, simplifying sharing and migration.
+The selected behavior can be saved as a preference and changed later in the `Run/Debug `settings.
 
 ![Expression Paste Preference](images/ExpressionPastePref.png)
 
@@ -161,7 +182,7 @@ A context menu entry for `Expression Paste` has also been added, improving disco
 - [Sougandh S](https://github.com/SougandhS)
 </details>
 
-Copy behavior in the `Variables` view and `Expressions` view has been refined to provide more predictable and controlled results. 
+Copy behavior in the `Variables` view and `Expressions` view has been refined to provide more predictable and controlled results.
 Previously, copying would include the entire row (such as `Name`, `Value`, and `Types`), which could lead to unintended clipboard content.
 
 Dedicated actions are now available to copy only the `Variable` name and `Expression` text, or the full row when needed.
