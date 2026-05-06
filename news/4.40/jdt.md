@@ -46,11 +46,20 @@ if the appropriate preferences have been activated.
 ## Java Compiler
 -->
 
-<!--
----
 ## Java Formatter
--->
 
+### New Formatter to Place Textblock Quotes on Their Own Line
+
+<details>
+<summary>Contributors</summary>
+
+- [Ivan Gualandri](https://github.com/inuyasha82)
+- [Jeff Johnston](https://github.com/jjohnstn)
+</details>
+
+When the option `After and before opening and closing quotes of text block` in the `New Lines` section is active the formatter will add a newline before the opening quotes, after the closing quotes, and after the last line of the textblock if the textblock doesn't end in a newline.
+
+![TextBlock Formatter Demo](images/textblock-formatter-example.gif)
 
 ## Debugger
 
