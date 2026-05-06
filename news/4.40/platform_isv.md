@@ -84,3 +84,31 @@ Newly available effects include:
 <img src="images/graphics-example-ripple.gif" alt="Ripple effect" width="400">
 
 <img src="images/graphics-example-scroll.gif" alt="Scroll effect" width="400">
+
+### Consistent Scaling of Images across GC#drawImage() Methods
+<!-- https://github.com/eclipse-platform/eclipse.platform.swt/pull/3201 -->
+<!-- https://github.com/eclipse-platform/eclipse.platform.swt/pull/3246 -->
+<details>
+<summary>Contributors</summary>
+
+- [Patrick Ziegler](https://github.com/ptziegler)
+- [Heiko Klare](https://github.com/HeikoKlare)
+</details>
+
+Over the last few releases,
+image scaling in `GC#drawImage()` has been progressively improved
+to always pick the best-available image source for the required scale.
+This includes high-resolution raster variants (e.g. `@2x`) and on-demand SVG rasterization.
+
+This release completes that work:
+
+- All `GC#drawImage()` overloads now apply high-quality scaling
+  consistently across all platforms.
+- Any `Transform` active on the `GC` is now taken into account
+  when choosing the image source and scaling method,
+  preventing blurry output when a non-identity transform is in use.
+
+You get sharper image rendering in custom-drawn widgets
+on HiDPI displays or when using zoom features,
+regardless of which `drawImage()` variant or platform is used.
+
