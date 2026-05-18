@@ -28,10 +28,29 @@ This feature is disabled by default.
 
 ![Line limit preferences](images/LineLimitPreferences.png)
 
-<!--
 ---
 ## Text Editors
--->
+
+### Show Zero-Width Spaces and Characters (ZWSP)
+<!-- https://github.com/eclipse-platform/eclipse.platform.ui/pull/1437 -->
+<details>
+<summary>Contributors</summary>
+
+- [Marcus Höpfner](https://github.com/marcushoepfner)
+
+</details>
+Zero-width spaces and characters (ZWSP) are invisible characters that can be used for various purposes, such as formatting.
+They can, for example, appear in content copied from another application.
+
+These spaces and characters are now visually indicated in text editors by a code mining label, `ZWSP`.
+
+![Zero-width space indication in the editor](images/zwsp_editor.png)
+
+The visibility of zero-width spaces and characters can be toggled via the new `Zero-Width Characters` option in `Text Editors` `Show whitespace characters` preferences.
+
+![Zero-width space indication in the editor](images/zwsp_preferences.png)
+
+This option is enabled by default in the whitespace character settings, while `Show whitespace characters` is disabled by default.
 
 <!--
 ---
