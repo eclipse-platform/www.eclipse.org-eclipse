@@ -9,8 +9,8 @@ A special thanks to everyone who [contributed to Eclipse-Platform](acknowledgeme
 <details>
 <summary>Contributors</summary>
 
-- [Andreev S](https://github.com/trancexpress)
-- [Loskutov A](https://github.com/iloveeclipse)
+- [Andreev Simeon](https://github.com/trancexpress)
+- [Loskutov Andrey](https://github.com/iloveeclipse)
 </details>
 
 A new option has been added to `Console` view preferences that lets you control line length in the `Console`.
@@ -30,6 +30,36 @@ This feature is disabled by default.
 
 ---
 ## Text Editors
+
+### Improved Defaults in Compare editor
+<!--
+https://github.com/eclipse-platform/eclipse.platform/pull/2564
+https://github.com/eclipse-platform/eclipse.platform/pull/2565
+https://github.com/eclipse-platform/eclipse.platform/pull/2566
+-->
+<details>
+<summary>Contributors</summary>
+
+- [Loskutov Andrey](https://github.com/iloveeclipse)
+</details>
+
+The default settings of the Compare editor have been modernized to provide a more intuitive and efficient experience out of the box:
+
+* **Structural compare shown in Outline by default** – the Outline view now shows structural differences automatically when available, making better use of available space and improving navigation.
+* **Improved visualization of changes** – line ranges are now used by default to connect differences, making change flows easier to follow visually.
+* **Natural diff order** – the compare panes now follow the commonly used convention with the original/base content on the left and the modified content on the right.
+
+These changes align Eclipse with common expectations from modern development tools and reduce the need for manual preference adjustments.
+
+The individual options can be found on the `Preferences > General > Compare/Patch > Compare editor` page:
+
+* `General > Show structural compare in the Outline view when possible`
+* `Text Compare > Connect ranges with single line`
+* `Text Compare > Swap left and right` (the toggle is also available in the compare editor toolbar)
+
+With these settings changed, the Compare editor now looks like below (changes are highlighted with green boxes):
+
+![Improved defaults in Compare editor](images/CompareEditorChanges.png)
 
 ### Show Zero-Width Spaces and Characters (ZWSP)
 <!-- https://github.com/eclipse-platform/eclipse.platform.ui/pull/1437 -->
