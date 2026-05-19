@@ -82,10 +82,33 @@ The visibility of zero-width spaces and characters can be toggled via the new `Z
 
 This option is enabled by default in the whitespace character settings, while `Show whitespace characters` is disabled by default.
 
-<!--
 ---
 ## Preferences
--->
+
+### Enhanced Colors and Fonts Preference Page with Toolbar Actions
+<!-- https://github.com/eclipse-platform/eclipse.platform.ui/pull/3968 -->
+<details>
+<summary>Contributors</summary>
+
+- [Deepika Udayagiri](https://github.com/deepika-u)
+</details>
+
+The `Colors and Fonts` preferences page has been modernized with improved usability and UI consistency. 
+
+Key improvements include:
+* Added a dedicated Collapse All toolbar action for quickly collapsing the full tree.
+* Replaced the older-style expand button with modern toolbar-based Expand All and Collapse All actions.
+* Improved alignment and spacing of the filter field, tree viewer, and action controls to better match other Eclipse preference pages.
+
+These updates make the `Colors and Fonts` page easier to navigate, especially when working with larger theme hierarchies.
+
+**Before:**
+
+![Colors and Fonts page before improvements](images/colors-fonts-before.png)
+
+**After:**
+
+![Colors and Fonts page after improvements](images/colors-fonts-after.png)
 
 ---
 ## Themes and Styling
@@ -200,6 +223,8 @@ This feature implements global search navigation commands `Alt+,` and `Alt+.` (`
 ![Global Search Navigation](images/GlobalSearchNavigationDemoFinal.gif)
 
 The GIF demonstrates navigation using the new commands despite the user switching out of the Search view.
+
+---
 
 ## Debugger
 
