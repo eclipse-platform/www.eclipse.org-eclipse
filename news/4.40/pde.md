@@ -25,7 +25,6 @@ Any user-remapped key binding for `Copy` is honored automatically.
 -->
 
 <!--
----
 ## PDE Compiler 
 -->
 
@@ -118,3 +117,17 @@ in the `MANIFEST.MF` file.
 The quick fix is labeled as `Require latest available version range`. 
 Once the user clicks on `Finish`, it adds the version range to the specific require bundle or import package.
 For example, version 7.2.3 is interpreted as the compatible range [7.2.0,8.0.0)
+
+
+### Expand-all and Collapse-all Support in Preference Pages
+<details>
+<summary>Contributors</summary>
+
+- [Elsa Zacharia](https://github.com/elsazac)
+</details>
+
+A new toolbar to support expanding and collapsing all preference sections has been added to the `Compilers` and `API Errors/Warnings` pages under `Plug-in Development`.
+These actions improve navigation on pages with many expandable categories by allowing all sections to be opened or closed in a single operation.
+
+![Compiler preference page](images/compilers.png)
+![API Errors/Warnings preference page](images/APIErrorsWarnings.png)
