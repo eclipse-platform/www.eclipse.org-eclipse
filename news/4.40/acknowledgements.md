@@ -46,7 +46,7 @@ Special thanks to all code contributors (alphabetically):
 | [Philipp0205](https://github.com/Philipp0205) | [Ragi George](https://github.com/RagiGeorge) | [Rob Stryker](https://github.com/robstryker) |
 | [Simeon Andreev](https://github.com/trancexpress) | [Sougandh S](https://github.com/SougandhS) | [Srikanth Sankaran](https://github.com/srikanth-sankaran) |
 | [Stephan Herrmann](https://github.com/stephan-herrmann) | [Suby S Surendran](https://github.com/subyssurendran666) | [sweettypdevassy](https://github.com/sweettypdevassy) |
-| [wenyutang-ms](https://github.com/wenytang-ms) | [Александър Куртаков](https://github.com/akurtakov)  |
+| [Tobias Melcher](https://github.com/tobias-melcher) | [wenyutang-ms](https://github.com/wenytang-ms) | [Александър Куртаков](https://github.com/akurtakov) |
 <!-- END:   eclipse-jdt contributors -->
 
 ## Plug-in Development Environment
