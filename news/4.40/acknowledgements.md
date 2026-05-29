@@ -24,9 +24,9 @@ Special thanks to all code contributors (alphabetically):
 | [Mehmet Karaman](https://github.com/mehmet-karaman) | [Mennig, Robin](https://github.com/r-mennig) | [NEETHIKA SUMESH](https://github.com/Neethika-sumesh12) |
 | [Patrick Ziegler](https://github.com/ptziegler) | [Ragi George](https://github.com/RagiGeorge) | [Rahul Mohanan](https://github.com/MohananRahul) |
 | [Simeon Andreev](https://github.com/trancexpress) | [Sougandh S](https://github.com/SougandhS) | [Stefan Winkler](https://github.com/xpomul) |
-| [Stephan Herrmann](https://github.com/stephan-herrmann) | [Stephan Wahlbrink](https://github.com/wahlbrink) | [sweettypdevassy](https://github.com/sweettypdevassy) |
-| [Tobias Melcher](https://github.com/tobiasmelcher) | [Tobias Melcher](https://github.com/tobias-melcher) | [Vasili Gulevich](https://github.com/basilevs) |
-| [Александър Куртаков](https://github.com/akurtakov)  |
+| [Stephan Herrmann](https://github.com/stephan-herrmann) | [Stephan Wahlbrink](https://github.com/wahlbrink) | [Suby S Surendran](https://github.com/subyssurendran666) |
+| [sweettypdevassy](https://github.com/sweettypdevassy) | [Tobias Melcher](https://github.com/tobiasmelcher) | [Tobias Melcher](https://github.com/tobias-melcher) |
+| [Vasili Gulevich](https://github.com/basilevs) | [Александър Куртаков](https://github.com/akurtakov)  |
 <!-- END:   eclipse-platform contributors -->
 
 ## Java Development Tools
