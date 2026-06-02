@@ -12,7 +12,7 @@ A special thanks to everyone who [contributed to PDE](acknowledgements.md#plug-i
 - [Lars Vogel](https://github.com/vogella)
 </details>
 
-You can now copy entries from the `Content` tab of the target-definition editor.
+You can now copy entries from the `Content` tab of the `Target Editor`.
 This mirrors the behavior already available on the `Locations` tab.
 Copy is available from the context menu or via the platform copy keystroke.
 That is `Ctrl+C` on Linux and Windows, and `Cmd+C` on macOS.
@@ -83,7 +83,7 @@ Tree#VariablesViewer
   Bounds: x=1124 y=196 w=385 h=413
 ```
 
-### Always show Installable Unit (IU) ID in target editor
+### Show Installable Unit ID in Target Editor
 <!-- https://github.com/eclipse-pde/eclipse.pde/pull/2208 -->
 <details>
 <summary>Contributors</summary>
@@ -91,7 +91,7 @@ Tree#VariablesViewer
 - [Lars Vogel](https://github.com/vogella)
 </details>
 
-The Target Platform Editor now always displays the technical ID of Installable Units (IUs) 
+The `Target Editor` now always displays the technical ID of each Installable Unit (IU) 
 in the `Definition` and `Content` tabs.
 This ensures a clear mapping between the UI representation and the underlying source.
 If a descriptive name exists and differs from the ID, 
@@ -116,7 +116,7 @@ in the `MANIFEST.MF` file.
 
 The quick fix is labeled as `Require latest available version range`. 
 Once the user clicks on `Finish`, it adds the version range to the specific require bundle or import package.
-For example, version 7.2.3 is interpreted as the compatible range [7.2.0,8.0.0)
+For example, version `7.2.3` is interpreted as the compatible range `[7.2.0,8.0.0)`.
 
 
 ### Expand-all and Collapse-all Support in Preference Pages
