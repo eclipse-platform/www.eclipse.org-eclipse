@@ -127,6 +127,8 @@ replacing the leading asterisk (`*`) in the tab title.
 You can enable it via `Indicate unsaved changes by overlaying the close button` in `Preferences > General > Appearance`,
 under `Dirty indicator for view and editor tabs`.
 The setting takes effect immediately for all open stacks.
+This is planned to become the default in the next release.
+Please share your feedback in [eclipse.platform.ui#4045](https://github.com/eclipse-platform/eclipse.platform.ui/issues/4045).
 
 ![Dirty indicator in light theme](images/view-editor-tab-dirty-indicator-light.png)
 
