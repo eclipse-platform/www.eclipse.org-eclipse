@@ -18,13 +18,13 @@ jobs:
       pull-requests: write
     steps:
     - name: Checkout Eclipse-Platform Releng Aggregator
-      uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+      uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10 # v6.0.3
       with:
         repository: eclipse-platform/eclipse.platform.releng.aggregator
         ref: master
         path: eclipse.platform.releng.aggregator
     - name: Checkout website
-      uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+      uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10 # v6.0.3
       with:
         path: website
     - name: Collect Eclipse TLP repositories
