@@ -51,31 +51,31 @@ with permission from the original author, [Laurent Caron](https://github.com/lca
 and serve as useful tests and demonstrations
 for SWT's `Canvas`, `GC`, and `Image` rendering.
 
-Newly available effects include:
-- Starfield.
-- Ripple.
-- Blob.
-- Burning Sea.
-- Copper Bars.
-- Explosion.
-- Fire.
-- Mandelbrot.
-- Moiré.
-- Plasma.
-- Raster Bars.
-- Shade Bobs.
-- Twister.
-- Wave.
-- Dancing.
-- Bump Mapping.
-- Flat Text.
-- Lens.
-- Block Effect.
-- Twirl.
-- Sine Wave.
-- Sky.
-- Unlimited Balls.
-- Warp.
+Newly available effects include the following:
+- Starfield
+- Ripple
+- Blob
+- Burning Sea
+- Copper Bars
+- Explosion
+- Fire
+- Mandelbrot
+- Moiré
+- Plasma
+- Raster Bars
+- Shade Bobs
+- Twister
+- Wave
+- Dancing
+- Bump Mapping
+- Flat Text
+- Lens
+- Block Effect
+- Twirl
+- Sine Wave
+- Sky
+- Unlimited Balls
+- Warp
 
 <img src="images/graphics-example-flower.gif" alt="Flower effect" width="400">
 
@@ -98,7 +98,7 @@ Newly available effects include:
 Over the last few releases,
 image scaling in `GC#drawImage()` has been progressively improved
 to always pick the best-available image source for the required scale.
-This includes high-resolution raster variants (e.g. `@2x`) and on-demand SVG rasterization.
+This includes high-resolution raster variants (e.g., `@2x`) and on-demand SVG rasterization.
 
 This release completes that work:
 

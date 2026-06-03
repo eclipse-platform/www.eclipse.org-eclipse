@@ -4,7 +4,7 @@ A special thanks to everyone who [contributed to Eclipse-Platform](acknowledgeme
 
 ## Views, Dialogs and Toolbar
 
-### Line length limit in the Console
+### Line Length Limit in the Console
 <!-- https://github.com/eclipse-platform/eclipse.platform/pull/2494 -->
 <details>
 <summary>Contributors</summary>
@@ -21,17 +21,17 @@ To prevent this, you can now enable the new line limit options for the `Console`
 When enabled, the `Console` view enforces a strict physical maximum line length.
 Lines that exceed the configured limit are either truncated or hard wrapped, depending on the selected option.
 
-When truncation is applied, an ellipsis (...) is appended to indicate that the line has been shortened.
+When truncation is applied, an ellipsis `...` is appended to indicate that the line has been shortened.
 When wrapping is applied, the line is split into multiple lines to fit within the limit, ensuring that all content remains visible without freezing the UI.
 
 This feature is disabled by default.
 
 ![Line limit preferences](images/LineLimitPreferences.png)
 
----
+
 ## Text Editors
 
-### Improved Defaults in Compare editor
+### Improved Defaults in Compare Editor
 <!--
 https://github.com/eclipse-platform/eclipse.platform/pull/2564
 https://github.com/eclipse-platform/eclipse.platform/pull/2565
@@ -43,7 +43,7 @@ https://github.com/eclipse-platform/eclipse.platform/pull/2566
 - [Loskutov Andrey](https://github.com/iloveeclipse)
 </details>
 
-The default settings of the Compare editor have been modernized to provide a more intuitive and efficient experience out of the box:
+The default settings of the `Compare` editor have been modernized to provide a more intuitive and efficient experience out of the box:
 
 * **Structural compare shown in Outline by default** – the Outline view now shows structural differences automatically when available, making better use of available space and improving navigation.
 * **Improved visualization of changes** – line ranges are now used by default to connect differences, making change flows easier to follow visually.
@@ -51,13 +51,13 @@ The default settings of the Compare editor have been modernized to provide a mor
 
 These changes align Eclipse with common expectations from modern development tools and reduce the need for manual preference adjustments.
 
-The individual options can be found on the `Preferences > General > Compare/Patch > Compare editor` page:
+The individual options can be found on the `Preferences > General > Compare/Patch` page:
 
 * `General > Show structural compare in the Outline view when possible`
 * `Text Compare > Connect ranges with single line`
-* `Text Compare > Swap left and right` (the toggle is also available in the compare editor toolbar)
+* `Text Compare > Swap left and right` (the toggle is also available in the `Compare` editor toolbar)
 
-With these settings changed, the Compare editor now looks like below (changes are highlighted with green boxes):
+With these settings changed, the `Compare` editor now looks like below (changes are highlighted with green boxes):
 
 ![Improved defaults in Compare editor](images/CompareEditorChanges.png)
 
@@ -93,11 +93,11 @@ This option is enabled by default in the whitespace character settings, while `S
 - [Deepika Udayagiri](https://github.com/deepika-u)
 </details>
 
-The `Colors and Fonts` preferences page has been modernized with improved usability and UI consistency. 
+The `Colors and Fonts` preferences page has been modernized with improved usability and UI consistency.
 
 Key improvements include:
-* Added a dedicated Collapse All toolbar action for quickly collapsing the full tree.
-* Replaced the older-style expand button with modern toolbar-based Expand All and Collapse All actions.
+* Added a dedicated collapse-all toolbar action for quickly collapsing the full tree.
+* Replaced the older-style expand button with modern toolbar-based expand-all and collapse-all actions.
 * Improved alignment and spacing of the filter field, tree viewer, and action controls to better match other Eclipse preference pages.
 
 These updates make the `Colors and Fonts` page easier to navigate, especially when working with larger theme hierarchies.
@@ -224,7 +224,7 @@ This feature implements global search navigation commands `Alt+,` and `Alt+.` (`
 
 ![Global Search Navigation](images/GlobalSearchNavigationDemoFinal.gif)
 
-The GIF demonstrates navigation using the new commands despite the user switching out of the Search view.
+The video demonstrates navigation using the new commands even when the user switches focus out of the `Search` view.
 
 ---
 
@@ -237,13 +237,13 @@ The GIF demonstrates navigation using the new commands despite the user switchin
 - [Sougandh S](https://github.com/SougandhS)
 </details>
 
-The `Expressions View` now improves pasting behavior when clipboard content contains line separators (such as `\n` etc).
+The `Expressions` view now improves pasting behavior when clipboard content contains line separators (such as `\n` etc).
 In such cases, a dialog prompts you to choose whether to treat the content as a single expression or split it into multiple expressions, one per line.
 
 ![Paste Prompt](images/ExpressionPaste.png)
 
-This also makes it easier to copy multiple expressions (for example, from the `Expressions View`) and paste them as separate expressions in another `Eclipse` instance, simplifying sharing and migration.
-The selected behavior can be saved as a preference and changed later in the `Run/Debug `settings.
+This also makes it easier to copy multiple expressions (for example, from the `Expressions` view) and paste them as separate expressions in another `Eclipse` instance, simplifying sharing and migration.
+The selected behavior can be saved as a preference and changed later in the `Run/Debug` settings.
 
 ![Expression Paste Preference](images/ExpressionPastePref.png)
 
