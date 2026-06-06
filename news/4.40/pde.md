@@ -43,6 +43,48 @@ This release includes several performance and reliability improvements:
 - **Faster syntax highlighting in the target definition editor:** The presentation reconciler no longer scans content past the damaged region on every keystroke, so editing large `.target` files feels noticeably more responsive.
 - **More reliable target resolution:** Resolve jobs are now serialized per target handle, preventing duplicate parallel resolves and the resulting `Cannot invoke ProfileLock.unlock()` errors when reloading the same target definition.
 
+### Complete classpath for plug-in projects
+<!-- https://github.com/eclipse-pde/eclipse.pde/pull/2253 -->
+<details>
+<summary>Contributors</summary>
+
+- [Christoph Läubrich](https://github.com/laeubi)
+</details>
+
+PDE's `Plug-in Dependencies` classpath container previously included only direct dependencies.
+This caused several long-standing problems:
+- **Spurious compile errors** — `"The type X cannot be resolved. It is indirectly referenced from required type Y"` — appearing non-deterministically depending on which methods the code calls.
+- **Broken "Remove unused dependencies" action** — removing a dependency that is unused at runtime but still required for compilation broke the build, leaving users confused about which entries to keep.
+- **Inconsistencies with Tycho / Maven builds** — code compiled cleanly in the IDE but failed on CI, or vice versa, because Tycho has always used the full transitive classpath.
+- **Incomplete type hierarchies** — code navigation, content assist, and call hierarchy views were silently missing types that the OSGi runtime would have available.
+
+To fix these problems, PDE now also adds all transitive dependencies of a plug-in to its classpath container, but configures them to be inaccessible from within the project.
+This makes the complete transitive hull of dependencies available for the Java compiler, fulfilling fundamental requirements of the Java type system.
+
+Additionally, this aligns PDE's compilation model with Tycho and with what the OSGi runtime would actually have available.
+
+#### Lean dependency tree
+
+In setups with large dependency trees, the extended classpath may increase the initial build time, but we are continuously working on improving it.
+The usual recommendation is to keep dependencies as small as possible:
+- Use `Find unused dependencies` to remove manifest entries for plug-ins you no longer reference.
+  This action now works reliably across the full transitive closure and has been validated against the Eclipse Platform codebase.
+- Maintain a clear API/implementation separation in your plug-ins.
+  API plug-ins used by many consumers should not carry heavy implementation dependencies; this limits the transitive fanout for all their consumers.
+  Use `Show plug-in dependency hierarchy` and `Show dependent plug-ins and fragments` to understand the impact.
+- If the extended classpath reveals _cyclic dependencies_, use `Look for cycles in the dependency graph` to trace the root cause.
+
+#### Temporary workaround
+
+To support the transition period, a system property is available:
+```
+-Dpde.addTransitiveDependenciesWithForbiddenAccess=false
+```
+Add this to your `eclipse.ini` to restore the previous (incomplete) classpath behavior for comparison and performance analysis.
+
+**Important:** This property is intended solely as a temporary diagnostic aid and is planned to become a no-op in a future release without further notice.
+
+
 ## Views and Dialogs
 
 ### CSS Spy Widget Hierarchy Export
