@@ -226,6 +226,21 @@ This feature implements global search navigation commands `Alt+,` and `Alt+.` (`
 
 The video demonstrates navigation using the new commands even when the user switches focus out of the `Search` view.
 
+### Ant Launching Requires Java 17
+
+<details>
+<summary>Contributors</summary>
+
+- [Ed Merks](https://github.com/merks)
+</details>
+
+The Ant libraries were updated to version 1.10.17
+and the release engineering infrastructure for the Platform's Ant support was upgraded to require Java 17.
+Therefore launching an `Ant Build` now requires Java 17 or higher.
+Unfortunately the error message warning about the need for Java 17 this was not updated to check properly for Java 17,
+so when launching with Java 11, for example, the launch will simply fail.
+Proper checking and an updated error message will be provided in the next release.
+
 ---
 
 ## Debugger
