@@ -58,3 +58,17 @@ This provides a faster way to launch multiple configurations together while stil
 
 ![Quick Launch Group](images/QuickLaunchGroupGif.gif)
 
+### Single Sign-On Enabled by Default for Edge/WebView2 Browser
+<details>
+<summary>Contributors</summary>
+
+- [Heiko Klare](https://github.com/HeikoKlare)
+- [Sebastian Ratz](https://github.com/sratz)
+</details>
+
+The SWT `Edge`/`WebView2` browser integration now enables Single Sign-On (SSO) with Azure Active Directory (AAD) resources by default,
+using the logged-in Windows account.
+This also enables SSO with websites using Microsoft accounts associated with the Windows login,
+aligning with the previous behavior of the Internet Explorer engine.
+To opt out, set the system property `org.eclipse.swt.browser.EdgeAllowSingleSignOnUsingOSPrimaryAccount` to `false`.
+
