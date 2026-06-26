@@ -49,3 +49,17 @@ When selected, the required `-console` argument is added automatically to the pr
 This removes the need to manually edit program arguments and helps preserve the setting when launch configurations are recreated.
 
 ![Enable OSGI console option](images/Enable_osgi_console.png)
+
+### Find Support Added in Plug-ins View
+<!-- https://github.com/eclipse-pde/eclipse.pde/pull/2343 -->
+<details>
+<summary>Contributors</summary>
+
+- [Neha Burnwal ](https://github.com/nburnwal09)
+</details>
+
+The `Plug-ins` view now includes a search box that allows you to filter plug-ins by name.
+You can type directly into the search box or use `Ctrl+F` (or `Cmd+F` on macOS) to focus it.
+This makes it easier to locate specific plug-ins in large workspaces.
+
+![Find support added in Plug-ins View](images/find_support.png)
