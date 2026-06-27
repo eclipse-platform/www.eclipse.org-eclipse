@@ -72,6 +72,22 @@ This also enables SSO with websites using Microsoft accounts associated with the
 aligning with the previous behavior of the Internet Explorer engine.
 To opt out, set the system property `org.eclipse.swt.browser.EdgeAllowSingleSignOnUsingOSPrimaryAccount` to `false`.
 
+### Last Execution Time in Launch History
+<details>
+<summary>Contributors</summary>
+
+- [Sougandh S](https://github.com/SougandhS)
+</details>
+
+The launch history menus now display the relative termination time of previously launched configurations in their tooltips.
+
+Instead of showing only the configuration name, the tooltip now provides additional context such as __*Last executed a moment ago*__, __*Last executed 5 mins ago*__, or __*Last executed 1 hour ago*__. 
+This makes it easier to identify recently used configurations and quickly relaunch the desired one.
+
+The additional context is particularly useful when `favorite configurations` are pinned to the top of the history menus, where the displayed order may not reflect recent usage.
+
+![Last Execution gif](images/LastExcecution.gif)
+
 ## Debugger
 
 ### Resume Other Threads During Debugging
@@ -91,4 +107,3 @@ This allows users to continue execution of background threads while inspecting t
 The action is available from the `Debug view` context menu and can also be invoked using the `Shift+F8` keyboard shortcut.
 
 ![Resume Other Threads Action](images/Resume_Other_Threads.gif)
-
