@@ -72,3 +72,23 @@ This also enables SSO with websites using Microsoft accounts associated with the
 aligning with the previous behavior of the Internet Explorer engine.
 To opt out, set the system property `org.eclipse.swt.browser.EdgeAllowSingleSignOnUsingOSPrimaryAccount` to `false`.
 
+## Debugger
+
+### Resume Other Threads During Debugging
+<details>
+<summary>Contributors</summary>
+
+- [Sougandh S](https://github.com/SougandhS)
+</details>
+
+The debugger now provides a `Resume Other Threads` action for multithreaded debugging. 
+
+![Resume Other Threads Context](images/Resume_Others.png)
+
+When a suspended thread is selected, this action resumes all other suspended threads in the same debug target while keeping the selected thread suspended. 
+This allows users to continue execution of background threads while inspecting the current thread.
+
+The action is available from the `Debug view` context menu and can also be invoked using the `Shift+F8` keyboard shortcut.
+
+![Resume Other Threads Action](images/Resume_Other_Threads.gif)
+
