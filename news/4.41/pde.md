@@ -50,6 +50,26 @@ This removes the need to manually edit program arguments and helps preserve the 
 
 ![Enable OSGI console option](images/Enable_osgi_console.png)
 
+### Enhancements to Show Launch Bundles Dialog
+<!-- https://github.com/eclipse-pde/eclipse.pde/pull/2395 -->
+<!-- https://github.com/eclipse-pde/eclipse.pde/issues/2371 -->
+<details>
+<summary>Contributors</summary>
+
+- [Neha Burnwal](https://github.com/nburnwal09)
+
+</details>
+
+The **Show Launch Bundles** dialog in the Eclipse launch configuration has been improved with three enhancements:
+
+- Bundles are now sorted **alphabetically**, making it easier to navigate the list.
+- A **search box** has been added to quickly filter bundles by name.
+- Bundles that share the same symbolic name are now **highlighted**, making duplicates easier to identify.
+
+![Search support in Show Launch Bundles dialog](images/show_launchBundles_find.png)
+
+![Duplicate bundles highlighted in Show Launch Bundles dialog](images/show_launchBundles_duplicate.png)
+
 ### Find Support Added in Plug-ins View
 <!-- https://github.com/eclipse-pde/eclipse.pde/pull/2343 -->
 <details>
