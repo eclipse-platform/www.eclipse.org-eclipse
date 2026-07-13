@@ -33,6 +33,36 @@ When navigating to a declaration, implementation, or method within the same edit
 
 This makes it easier to inspect implementations, compare code, and work with multiple locations in parallel without losing your current position.
 
+### Enhanced For-loop to ForEach Quick Assist
+
+<details>
+<summary>Contributors</summary>
+
+[Ivan Gualandri](https://github.com/inuyasha82)
+[Carsten Hammer](https://github.com/carstenartur)
+</details>
+
+With this new quick assist, on a enhanced for-loop like the following:
+
+```java
+for (String adj : list) {
+    System.out.println(adj);
+}
+```
+
+if the list item is an Iterable object a new option is added: `Convert Enhanced for loop to forEach`. 
+This let the user to convert the loop above, with a `forEach` statement:
+
+```java
+list.forEach(adj -> {
+    System.out.println(adj);
+});
+```
+Below an animation of the new quick assist:
+
+![Foreach conversion in action](images/foreachexample.gif)
+
+
 <!--
 ---
 ## Java Views and Dialogs
