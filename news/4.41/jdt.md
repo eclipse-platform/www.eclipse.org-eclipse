@@ -50,7 +50,7 @@ for (String adj : list) {
 }
 ```
 
-if the list item is an Iterable object a new option is added: `Convert Enhanced for loop to forEach`. 
+if the list item is an `Iterable` object, a new option is available: `Convert Enhanced 'for' loop to 'forEach'`. 
 This let the user to convert the loop above, with a `forEach` statement:
 
 ```java
