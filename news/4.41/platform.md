@@ -1,4 +1,4 @@
-# Platform and Equinox - 4.41 
+# Platform and Equinox - 4.41
 
 A special thanks to everyone who [contributed to Eclipse-Platform](acknowledgements.md#eclipse-platform) or [contributed to Equinox](acknowledgements.md#equinox) in this release!
 
@@ -30,6 +30,17 @@ A special thanks to everyone who [contributed to Eclipse-Platform](acknowledgeme
 ---
 ## General Updates
 
+### Faster Native File System Access on Linux x86_64
+<details>
+<summary>Contributors</summary>
+
+- [Loskutov Andrey](https://github.com/iloveeclipse)
+</details>
+
+The code responsible for retrieving file system data has been improved for x86_64 Linux systems.
+The Refresh (`F5`) operation in `Project Explorer` or `Package Explorer` on NFS-mounted file systems is now faster by an order of magnitude (seconds instead of minutes).
+If this change causes regressions, it can be disabled by setting the system property `-Declipse.filesystem.useFastLinuxNatives=false`.
+
 ### Active Launch Indicators in Run and Debug History
 <details>
 <summary>Contributors</summary>
@@ -52,7 +63,7 @@ This makes it easier to identify configurations that are already running and hel
 </details>
 
 The `Launch Configurations Dialog` now provides a `Quick Group Launch` action for selected launch configurations.
-Previously, creating a launch group required creating a new `Launch Group` configuration and manually adding each launch configuration as a group member. 
+Previously, creating a launch group required creating a new `Launch Group` configuration and manually adding each launch configuration as a group member.
 With this enhancement, Eclipse can create a launch group directly from the selected configurations, automatically adding them as group members.
 This provides a faster way to launch multiple configurations together while still allowing the generated `Launch Group` to be customized later if needed.
 
@@ -81,7 +92,7 @@ To opt out, set the system property `org.eclipse.swt.browser.EdgeAllowSingleSign
 
 The launch history menus now display the relative termination time of previously launched configurations in their tooltips.
 
-Instead of showing only the configuration name, the tooltip now provides additional context such as __*Last executed a moment ago*__, __*Last executed 5 mins ago*__, or __*Last executed 1 hour ago*__. 
+Instead of showing only the configuration name, the tooltip now provides additional context such as __*Last executed a moment ago*__, __*Last executed 5 mins ago*__, or __*Last executed 1 hour ago*__.
 This makes it easier to identify recently used configurations and quickly relaunch the desired one.
 
 The additional context is particularly useful when `favorite configurations` are pinned to the top of the history menus, where the displayed order may not reflect recent usage.
@@ -97,11 +108,11 @@ The additional context is particularly useful when `favorite configurations` are
 - [Sougandh S](https://github.com/SougandhS)
 </details>
 
-The debugger now provides a `Resume Other Threads` action for multithreaded debugging. 
+The debugger now provides a `Resume Other Threads` action for multithreaded debugging.
 
 ![Resume Other Threads Context](images/Resume_Others.png)
 
-When a suspended thread is selected, this action resumes all other suspended threads in the same debug target while keeping the selected thread suspended. 
+When a suspended thread is selected, this action resumes all other suspended threads in the same debug target while keeping the selected thread suspended.
 This allows users to continue execution of background threads while inspecting the current thread.
 
 The action is available from the `Debug view` context menu and can also be invoked using the `Shift+F8` keyboard shortcut.
