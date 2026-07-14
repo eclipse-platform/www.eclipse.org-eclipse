@@ -58,7 +58,7 @@ list.forEach(adj -> {
     System.out.println(adj);
 });
 ```
-Below an animation of the new quick assist:
+Below is an animation of the new quick assist:
 
 ![Foreach conversion in action](images/foreachexample.gif)
 
