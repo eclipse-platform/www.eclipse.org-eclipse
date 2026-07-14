@@ -42,7 +42,7 @@ This makes it easier to inspect implementations, compare code, and work with mul
 [Carsten Hammer](https://github.com/carstenartur)
 </details>
 
-With this new quick assist, on a enhanced for-loop like the following:
+With this new quick assist, on an enhanced for-loop like the following:
 
 ```java
 for (String adj : list) {
