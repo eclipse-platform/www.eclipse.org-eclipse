@@ -2,12 +2,29 @@
 
 A special thanks to everyone who [contributed to Eclipse-Platform](acknowledgements.md#eclipse-platform) or [contributed to Equinox](acknowledgements.md#equinox) in this release!
 
-<!--
----
+
 ## Views, Dialogs and Toolbar
--->
+
+### Zoom In and Out in the Console View
+<details>
+<summary>Contributors</summary>
+
+- [Raghunandana M](https://github.com/raghucssit)
+- [Loskutov Andrey](https://github.com/iloveeclipse)
+</details>
+
+The `Console` view now supports zooming the font of the console currently shown.
+
+Use `Ctrl++` / `Ctrl+-` (`Cmd++` / `Cmd+-` on macOS) while the `Console` view is focused to increase or decrease the font size.
+The corresponding `Zoom In Console Font` and `Zoom Out Console Font` commands can also be bound to other keys in `Preferences > General > Keys`.
+
+The zoom level is tracked per console type, so, for example, zooming a `Process Console` does not affect the `Java Stack Trace Console` or other console types, and it is applied to consoles of the same type that are opened later on.
+The chosen zoom level is remembered across restarts, and changing the console font in the preferences resets the zoom to that new font size.
+
+![Console Zoom](images/ConsoleZoom.gif)
 
 <!--
+
 ---
 ## Text Editors
 -->
