@@ -63,10 +63,30 @@ Below is an animation of the new quick assist:
 ![Foreach conversion in action](images/foreachexample.gif)
 
 
-<!--
----
+
 ## Java Views and Dialogs
--->
+
+### [JEP 512] Create Compact Source Files from the New Java Wizard
+
+<details>
+<summary>Contributors</summary>
+
+- [Sougandh S](https://github.com/SougandhS)
+</details>
+
+The Java wizard now provides a compact source file template for creating compact source files introduced in Java 25 (__[JEP 512](https://openjdk.org/jeps/512)__).
+
+![Wizard in Context](images/WizardInMenu.png)
+
+The wizard generates an implicit class source file with a top-level `void main()` method, making it easy to get started with compact programs without manually creating the required structure.
+
+![Compact Source Wizard Window](images/WizardWindowOptions.png)
+
+Compact source files are always created in the __default package__ and are available for __Java 25__ (or later) projects.
+
+![Sample Generated](images/GeneratedCompact.png)
+
+__Note__: If the `Compact Source File` option is not available in the Java wizard, try resetting the current perspective (`Window > Perspective > Reset Perspective`) to refresh the wizard contributions.
 
 <!--
 ---
