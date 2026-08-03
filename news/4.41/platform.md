@@ -23,11 +23,45 @@ The chosen zoom level is remembered across restarts, and changing the console fo
 
 ![Console Zoom](images/ConsoleZoom.gif)
 
-<!--
-
 ---
 ## Text Editors
--->
+
+### Customizable Key Bindings for the Find/Replace Overlay
+<!-- https://github.com/eclipse-platform/eclipse.platform.ui/issues/2015 -->
+<details>
+<summary>Contributors</summary>
+
+- [Heiko Klare](https://github.com/HeikoKlare)
+</details>
+
+You can now customize the keyboard shortcuts of the find/replace overlay,
+which is shown on top of the editor when pressing `Ctrl+F`.
+All its operations, such as searching for the next match or toggling the `Regular Expression` option,
+are listed in `Preferences > General > Keys` when filtering for `Find and Replace`,
+so that you can rebind them just like the shortcuts of any other operation.
+The default key bindings are unchanged.
+
+![Find/Replace Key Bindings Customization](images/findreplace_keybindings.png)
+
+To achieve this, the operations of the overlay are now realized as ordinary Eclipse commands,
+which are provided to the key binding framework while the overlay is focused,
+instead of the overlay processing key strokes on its own.
+
+### Content Assist for Regular Expressions in the Find/Replace Overlay Available in All Editors
+<!-- https://github.com/eclipse-platform/eclipse.platform.ui/issues/2651 -->
+<details>
+<summary>Contributors</summary>
+
+- [Heiko Klare](https://github.com/HeikoKlare)
+</details>
+
+Whenever the `Regular Expression` option of the find/replace overlay is enabled,
+you can press `Ctrl+Space` in its search and replace input fields to get proposals for regular expression constructs.
+This content assist is now available in all editors that support the overlay.
+So far, it only worked in editors that do not provide content assist themselves,
+so that, for example, no proposals were shown in Java editors.
+
+![Find/Replace Content Assist in Java Files](images/findreplace_contentassist_javafiles.png)
 
 <!--
 ---
