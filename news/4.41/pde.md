@@ -34,6 +34,32 @@ This prevents the manifest from listing packages that no longer contain any reso
 
 ![Empty package removed after deleting classes](images/handle_deletion.gif)
 
+### p2.inf Editor Support in Bundle and Feature Editors
+<!-- https://github.com/eclipse-pde/eclipse.pde/pull/2210 -->
+<details>
+<summary>Contributors</summary>
+
+- [Neha Burnwal ](https://github.com/nburnwal09)
+</details>
+
+The PDE Bundle Manifest Editor and Feature Editor now include a dedicated **p2.inf** tab.
+
+Previously, `p2.inf` files had to be opened and edited as plain text with no tooling support.
+Now, when you open a plug-in or feature project in PDE's multi-page editor, the `p2.inf` file automatically appears as an additional tab — right alongside `MANIFEST.MF` or `feature.xml`.
+
+The editor provides:
+
+- **Syntax highlighting** — keys and values are visually distinguished, making the file easier to read at a glance.
+- **Context-aware content assist** — press `Ctrl+Space` anywhere in the file to get smart suggestions for valid `p2.inf` keys such as `requires`, `provides`, `instructions`, and `properties`, as well as their nested sub-keys (e.g., `requires.0.namespace` and `requires.0.name`).
+Suggestions follow the exact key hierarchy that p2 expects.
+
+This works for both plug-in projects (where `p2.inf` lives in `META-INF/`) and feature projects (where it lives at the project root).
+For the full `p2.inf` syntax reference, see the [Customizing Metadata](https://eclipse.dev/eclipse/markdown/?file=eclipse-equinox/p2/master/docs/Customizing_Metadata.md) documentation.
+
+![p2.inf file shown as a dedicated tab alongside MANIFEST.MF and feature.xml](images/p2-inf-editor-tab.gif)
+
+![Context-aware content assist in the p2.inf editor](images/p2-inf-auto-completion.gif)
+
 ## Views and Dialogs
 
 ### Enable OSGi Console Option in Launch Configurations
