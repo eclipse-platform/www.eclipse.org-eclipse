@@ -126,6 +126,27 @@ The additional context is particularly useful when `favorite configurations` are
 
 ![Last Execution gif](images/LastExcecution.gif)
 
+### Faster and Size-Consistent Drawing of Scaled Images on Windows
+<details>
+<summary>Contributors</summary>
+
+- [Heiko Klare](https://github.com/HeikoKlare)
+</details>
+
+Drawing images at continuously changing sizes using one of the `GC.drawImage()` operations is significantly faster on Windows again.
+
+Since the 2025-12 release, every `GC.drawImage()` call that scaled an image to a size not used before had to prepare the image for that new size,
+even if the very same image content was already available from the previous call.
+This slowed down applications that repeatedly draw an image at changing sizes, such as an image viewer with a zoom slider or a view whose content scales with the window size.
+Zooming or resizing could stall visibly, with individual drawing operations taking up to ten times longer than before.
+
+Images are now prepared only when content of a different resolution is actually needed, and the prepared content is retained for subsequent drawing operations.
+Zooming and resizing images is thus as smooth as before, while images are still rendered as sharply as possible on HiDPI monitors.
+
+In addition, images are now drawn at consistent sizes on monitors with a zoom other than 100%, independent of which `GC.drawImage()` overload is used.
+Previously, the overload that supports cropping could render an image a few pixels off compared to the other overloads, which was particularly visible for images whose width and height differ substantially.
+
+
 ## Debugger
 
 ### Resume Other Threads During Debugging
