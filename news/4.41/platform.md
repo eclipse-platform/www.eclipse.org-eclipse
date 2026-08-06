@@ -29,10 +29,20 @@ The chosen zoom level is remembered across restarts, and changing the console fo
 ## Text Editors
 -->
 
-<!--
 ---
 ## Preferences
--->
+
+### Disable Reopening Terminals After Restart
+<details>
+<summary>Contributors</summary>
+
+- [Daniel Schmid](https://github.com/danthe1st)
+</details>
+
+The preference `Terminal > Reopen terminals after restart` has been added to allow disabling the automatic restoration of terminals.
+If the checkbox is unchecked, a terminal view kept open when restarting the Eclipse IDE will no longer reopen all active terminals in that view.
+
+![Preference to disable automatic reopening of terminals](images/preference-disable-terminal-restoration.png)
 
 <!--
 ---
