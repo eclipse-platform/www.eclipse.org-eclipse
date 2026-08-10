@@ -23,6 +23,22 @@ The chosen zoom level is remembered across restarts, and changing the console fo
 
 ![Console Zoom](images/ConsoleZoom.gif)
 
+### Text Filter for Problems, Tasks, Bookmarks and Markers Views
+<details>
+<summary>Contributors</summary>
+
+- [Raghunandana M](https://github.com/raghucssit)
+- [Loskutov Andrey](https://github.com/iloveeclipse)
+</details>
+
+The `Problems`, `Tasks`, `Bookmarks` and `Markers` views now provide a search box that lets you quickly narrow down the shown markers by typing a pattern.
+The search box matches against the values shown in all visible columns, e.g. the description, resource, path and location, so markers can be found without having to know in advance which column they will match.
+
+The visibility of the search box can be toggled on and off using the `Show text filter` entry in the view menu, and its state is remembered per view instance.
+Whether the search box is shown by default for views that have not been customized yet can be configured via the new `Initially show text filter in marker views` preference in `Preferences > General`.
+
+![Problems View Quick Filter](images/ProblemsViewQuickFilter.gif)
+
 ---
 ## Text Editors
 
