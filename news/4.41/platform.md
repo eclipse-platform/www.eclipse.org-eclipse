@@ -196,6 +196,25 @@ Zooming and resizing images is thus as smooth as before, while images are still 
 In addition, images are now drawn at consistent sizes on monitors with a zoom other than 100%, independent of which `GC.drawImage()` overload is used.
 Previously, the overload that supports cropping could render an image a few pixels off compared to the other overloads, which was particularly visible for images whose width and height differ substantially.
 
+### Sort Launch Configurations by Most Recent Launch
+<details>
+<summary>Contributors</summary>
+
+- [Sougandh S](https://github.com/SougandhS)
+</details>
+
+The `Launch Configurations` dialog now provides a toolbar option to toggle between the default alphabetical sorting
+and sorting by most recently launched configurations within each type group.
+
+![Launch Toolbar](images/Launch_toolbar.png)
+
+This makes it easier to quickly find configurations that were recently used, especially when many configurations have similar names.
+
+![Launch Configuration Sorting](images/Launch_config_sort.gif)
+
+The number of recent configurations considered is controlled by the existing `Size of recently launched applications list` preference.
+
+![Preference](images/Preference.png)
 
 ## Debugger
 
