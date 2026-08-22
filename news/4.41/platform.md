@@ -18,7 +18,7 @@ The `Console` view now supports zooming the font of the console currently shown.
 Use `Ctrl++` / `Ctrl+-` (`Cmd++` / `Cmd+-` on macOS) while the `Console` view is focused to increase or decrease the font size.
 The corresponding `Zoom In Console Font` and `Zoom Out Console Font` commands can also be bound to other keys in `Preferences > General > Keys`.
 
-The zoom level is tracked per console type, so, for example, zooming a `Process Console` does not affect the `Java Stack Trace Console` or other console types, and it is applied to consoles of the same type that are opened later on.
+The zoom level is tracked per console type, so, for example, zooming a `Process Console` does not affect the `Java Stack Trace Console` or other console types, and it is applied to consoles of the same type that are opened later.
 The chosen zoom level is remembered across restarts, and changing the console font in the preferences resets the zoom to that new font size.
 
 ![Console Zoom](images/ConsoleZoom.gif)
@@ -31,10 +31,10 @@ The chosen zoom level is remembered across restarts, and changing the console fo
 - [Loskutov Andrey](https://github.com/iloveeclipse)
 </details>
 
-The `Problems`, `Tasks`, `Bookmarks` and `Markers` views now provide a search box that lets you quickly narrow down the shown markers by typing a pattern.
-The search box matches against the values shown in all visible columns, e.g. the description, resource, path and location, so markers can be found without having to know in advance which column they will match.
+The `Problems`, `Tasks`, `Bookmarks`, and `Markers` views now provide a search box that lets you quickly narrow down the shown markers by typing a pattern.
+The search box matches against the values shown in all visible columns, e.g., the description, resource, path, and location, so markers can be found without having to know in advance which column they will match.
 
-The visibility of the search box can be toggled on and off using the `Show text filter` entry in the view menu, and its state is remembered per view instance.
+The visibility of the search box can be toggled on and off using the `Show Text Filter` entry in the view menu, and its state is remembered per view instance.
 Whether the search box is shown by default for views that have not been customized yet can be configured via the new `Initially show text filter in marker views` preference in `Preferences > General`.
 
 ![Problems View Quick Filter](images/ProblemsViewQuickFilter.gif)
@@ -139,7 +139,7 @@ This makes it easier to identify configurations that are already running and hel
 - [Sougandh S](https://github.com/SougandhS)
 </details>
 
-The `Launch Configurations Dialog` now provides a `Quick Group Launch` action for selected launch configurations.
+The `Launch Configurations` dialog now provides a `Quick Group Launch` action for selected launch configurations.
 Previously, creating a launch group required creating a new `Launch Group` configuration and manually adding each launch configuration as a group member.
 With this enhancement, Eclipse can create a launch group directly from the selected configurations, automatically adding them as group members.
 This provides a faster way to launch multiple configurations together while still allowing the generated `Launch Group` to be customized later if needed.
