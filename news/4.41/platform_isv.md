@@ -16,6 +16,38 @@ A special thanks to everyone who [contributed to Eclipse-Platform](acknowledgeme
 `ImageDescriptor` now provides `asDisabledDescriptor()`, which returns a lazily created, shared `ImageDescriptor` for the disabled version of the image.
 This allows you to use a single descriptor with a `ResourceManager` to share both the original and disabled images, instead of managing two independent descriptors.
 
+### New Internal CSS Parser Replaces Batik and SAC
+<!-- https://github.com/eclipse-platform/eclipse.platform.ui/pull/4092 -->
+<details>
+<summary>Contributors</summary>
+
+- [Lars Vogel](https://github.com/vogella)
+</details>
+
+The e4 CSS engine now parses stylesheets with an internal recursive-descent parser
+instead of the Batik and SAC parser stack, and the `org.apache.batik.css` dependency is gone.
+Selector matching, specificity and the resulting style model are unchanged.
+
+If you extend the CSS engine, note the following changes:
+
+- The `InputSource`-based overloads are replaced by `CSSEngine.parseStyleSheet(InputStream)` and `CSSEngine.parseStyleSheet(InputStream, String uri)`, the latter carrying the base location for relative `@import` resolution.
+- `ICSSPropertyHandler2` has been folded into `ICSSPropertyHandler`.
+- The SAC-based value and selector model has been replaced by internal types.
+- The margin and padding handlers of `org.eclipse.e4.ui.css.swt` now throw `IllegalArgumentException` instead of the SAC `CSSException`.
+
+### ICU Support Removed from Data Binding
+<!-- https://github.com/eclipse-platform/eclipse.platform.ui/pull/3985 -->
+<details>
+<summary>Contributors</summary>
+
+- [Lars Vogel](https://github.com/vogella)
+</details>
+
+The public ICU-based data binding API was removed in 2022.
+The remaining internal reflective support for `com.ibm.icu` is now gone as well,
+so data binding relies on `java.text` only.
+
+---
 ## Language Toolkit (LTK)
 
 ### Copy Refactoring Support
@@ -63,3 +95,19 @@ No rebuild is required, because the Linux SWT fragments ship both the GTK3 and t
 
 GTK4 support is a preview, so please run your own applications with it and report what you find in the [SWT issue tracker](https://github.com/eclipse-platform/eclipse.platform.swt/issues).
 These reports drive the remaining work needed to make GTK4 the default.
+
+### Reorder CTabFolder Tabs Without Recreating Them
+<!--
+https://github.com/eclipse-platform/eclipse.platform.swt/pull/3350
+https://github.com/eclipse-platform/eclipse.platform.swt/pull/3352
+-->
+<details>
+<summary>Contributors</summary>
+
+- [Lars Vogel](https://github.com/vogella)
+</details>
+
+`CTabFolder` gained `moveItem(int from, int to)`,
+which moves a tab to a new position without disposing and recreating the item,
+so the control shown by the tab stays attached.
+The chevron and the visible-tab state are updated along with the move.
