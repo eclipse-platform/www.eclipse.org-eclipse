@@ -39,6 +39,18 @@ Whether the search box is shown by default for views that have not been customiz
 
 ![Problems View Quick Filter](images/ProblemsViewQuickFilter.gif)
 
+### Reorder Terminal Tabs by Drag and Drop
+<!-- https://github.com/eclipse-platform/eclipse.platform/pull/2681 -->
+<details>
+<summary>Contributors</summary>
+
+- [Lars Vogel](https://github.com/vogella)
+</details>
+
+Dragging a tab inside the `Terminal` view now moves it to the drop position,
+matching the drag-to-reorder behavior you already know from editor and view tabs.
+The running terminal stays attached while it is moved.
+
 ---
 ## Text Editors
 
@@ -79,6 +91,38 @@ so that, for example, no proposals were shown in Java editors.
 
 ![Find/Replace Content Assist in Java Files](images/findreplace_contentassist_javafiles.png)
 
+### Unified Diff in the Compare Editor
+<!-- https://github.com/eclipse-platform/eclipse.platform.ui/issues/3771 -->
+<details>
+<summary>Contributors</summary>
+
+- [Tobias Melcher](https://github.com/tobiasmelcher)
+- [Lars Vogel](https://github.com/vogella)
+</details>
+
+A comparison can now be shown as a unified diff in a single editor pane,
+similar to `git diff` or the diff view of a pull request,
+instead of the classic side-by-side compare editor.
+Enable it with `EXPERIMENTAL: Use Unified Diff instead of 2-way compare when possible`
+on the `Preferences > General > Compare/Patch` page.
+
+Once enabled, the compare editor offers a `Show Unified Diff` toolbar action
+for every comparison that can be displayed this way,
+and the unified diff offers `Open in 2-way Compare Editor` to go back.
+Switching reuses the comparison that was already prepared and closes the editor you came from,
+so you end up with one editor instead of two.
+A file that exists on one side only, or that is gone from the workspace, is shown as a unified diff as well.
+
+Opening no longer blocks the UI thread,
+a large comparison is shown before its differences have been computed,
+and you can cancel a computation that takes too long.
+
+The unified diff is shown in an editor on the file in your workspace,
+so a comparison of two revisions with each other still opens in the classic compare editor.
+Unchanged regions cannot be collapsed yet.
+The whole file is shown with the differences overlaid.
+Both are expected for a future release.
+
 ---
 ## Preferences
 
@@ -94,10 +138,21 @@ If the checkbox is unchecked, a terminal view kept open when restarting the Ecli
 
 ![Preference to disable automatic reopening of terminals](images/preference-disable-terminal-restoration.png)
 
-<!--
 ---
 ## Themes and Styling
--->
+
+### Unsaved Changes Indicator on Tabs Is Now the Default
+<!-- https://github.com/eclipse-platform/eclipse.platform.ui/pull/4070 -->
+<details>
+<summary>Contributors</summary>
+
+- [Lars Vogel](https://github.com/vogella)
+</details>
+
+The bullet-style dirty indicator introduced in 4.40 is now enabled by default,
+so a view or editor with unsaved changes shows a filled bullet on its close button instead of a leading asterisk.
+You can turn it off again with `Indicate unsaved changes by overlaying the close button`
+in `Preferences > General > Appearance`.
 
 <!--
 ---
