@@ -60,6 +60,69 @@ For the full `p2.inf` syntax reference, see the [Customizing Metadata](https://e
 
 ![Context-aware content assist in the p2.inf editor](images/p2-inf-auto-completion.gif)
 
+### Dependency Cycles Through Import-Package Are Detected
+<!--
+https://github.com/eclipse-pde/eclipse.pde/pull/2406
+https://github.com/eclipse-pde/eclipse.pde/pull/2408
+-->
+<details>
+<summary>Contributors</summary>
+
+- [Lars Vogel](https://github.com/vogella)
+</details>
+
+The `Look for cycles in the dependency graph` action of the `MANIFEST.MF` editor only saw cycles formed by `Require-Bundle`.
+The bundles behind an `Import-Package` header were computed before the OSGi state was resolved and were therefore dropped,
+so cycles that close through package wiring were silently ignored.
+They are now reported as well, together with every cycle that runs through the edited plug-in.
+
+---
+## Launching
+
+### Fix Validation Problems Directly in the Validation Dialog
+<!-- https://github.com/eclipse-pde/eclipse.pde/pull/2351 -->
+<details>
+<summary>Contributors</summary>
+
+- [Lars Vogel](https://github.com/vogella)
+</details>
+
+The dialog shown by `Validate Plug-ins` on the `Plug-ins` tab of a launch configuration now offers two fixes:
+
+- `Select Required` adds the missing required plug-ins and features.
+- `Remove Unresolved` unchecks every plug-in that did not resolve.
+
+Validation is repeated after each pass,
+so plug-ins that only become unresolved once a dependency was removed are handled in the same click,
+and the dialog shows that there are no problems left once everything is resolved.
+The launch configuration tab is marked dirty so you can apply the change.
+
+---
+## Performance
+
+### Plug-in Classpaths Are Updated in Parallel
+<!--
+https://github.com/eclipse-pde/eclipse.pde/pull/2363
+https://github.com/eclipse-pde/eclipse.pde/pull/2375
+-->
+<details>
+<summary>Contributors</summary>
+
+- [Lars Vogel](https://github.com/vogella)
+- [Hannes Wellmann](https://github.com/HannesWell)
+</details>
+
+The `Plug-in Dependencies` classpath containers of all queued projects were computed one after another,
+which dominated the time spent reloading the target platform in a workspace with hundreds of plug-ins.
+They are now computed in parallel, queued requests for the same project are merged,
+and the results are applied to the Java model in a single batch.
+Reloading a target platform in a large workspace is noticeably faster.
+Projects backed by bnd keep being computed one after another, because they share a bnd workspace that is not thread-safe.
+
+You can switch the parallel computation off with the new `Update plug-in classpaths in parallel` preference
+on the `Preferences > Plug-in Development` page.
+
+---
 ## Views and Dialogs
 
 ### Enable OSGi Console Option in Launch Configurations
@@ -109,3 +172,38 @@ You can type directly into the search box or use `Ctrl+F` (or `Cmd+F` on macOS) 
 This makes it easier to locate specific plug-ins in large workspaces.
 
 ![Find support added in Plug-ins View](images/find_support.png)
+
+### Layout Spy Joins the PDE Spies
+<!--
+https://github.com/eclipse-pde/eclipse.pde/pull/2383
+https://github.com/eclipse-pde/eclipse.pde/pull/2388
+https://github.com/eclipse-pde/eclipse.pde/pull/2400
+-->
+<details>
+<summary>Contributors</summary>
+
+- [Lars Vogel](https://github.com/vogella)
+</details>
+
+The SWT layout spy now appears in the PDE spies window and menu next to the other spies,
+and it shows the widgets of the selected control in a tree.
+It keeps its global `Ctrl+Shift+Alt+F9` key binding (`Cmd+Shift+Alt+F9` on macOS), so you can still open it on top of a blocking dialog.
+
+The new `Find Class` button hides the spy, lets you click any control,
+and then reports the owning element of the e4 application model and its implementing class,
+including the contribution URI and the bundle.
+Parts of the 3.x compatibility layer are unwrapped, so you see the real view or editor class.
+For a control that does not belong to the application model, such as one in a plain JFace dialog,
+the shell and the class of its data object are reported instead.
+
+### Preference Spy Tracks the User Scope
+<!-- https://github.com/eclipse-pde/eclipse.pde/pull/2347 -->
+<details>
+<summary>Contributors</summary>
+
+- [Lars Vogel](https://github.com/vogella)
+</details>
+
+The preference spy watched the bundle default, configuration, default and instance scopes,
+so changes to the user scope, which stores per-user preferences under `<user.home>/.eclipse`, went unnoticed.
+The user scope is now watched as well and is included in `Show All Preferences`.
