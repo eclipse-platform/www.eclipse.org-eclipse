@@ -38,8 +38,8 @@ This makes it easier to inspect implementations, compare code, and work with mul
 <details>
 <summary>Contributors</summary>
 
-[Ivan Gualandri](https://github.com/inuyasha82)
-[Carsten Hammer](https://github.com/carstenartur)
+- [Ivan Gualandri](https://github.com/inuyasha82)
+- [Carsten Hammer](https://github.com/carstenartur)
 </details>
 
 With this new quick assist, on an enhanced for-loop such as the following:
