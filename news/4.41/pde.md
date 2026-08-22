@@ -42,7 +42,7 @@ This prevents the manifest from listing packages that no longer contain any reso
 - [Neha Burnwal ](https://github.com/nburnwal09)
 </details>
 
-The PDE Bundle Manifest Editor and Feature Editor now include a dedicated **p2.inf** tab.
+The PDE `Plug-in Manifest Editor` and `Feature Manifest Editor` now include a dedicated **p2.inf** tab.
 
 Previously, `p2.inf` files had to be opened and edited as plain text with no tooling support.
 Now, when you open a plug-in or feature project in PDE's multi-page editor, the `p2.inf` file automatically appears as an additional tab — right alongside `MANIFEST.MF` or `feature.xml`.
@@ -53,7 +53,7 @@ The editor provides:
 - **Context-aware content assist** — press `Ctrl+Space` anywhere in the file to get smart suggestions for valid `p2.inf` keys such as `requires`, `provides`, `instructions`, and `properties`, as well as their nested sub-keys (e.g., `requires.0.namespace` and `requires.0.name`).
 Suggestions follow the exact key hierarchy that p2 expects.
 
-This works for both plug-in projects (where `p2.inf` lives in `META-INF/`) and feature projects (where it lives at the project root).
+This works for both plug-in projects (where `p2.inf` resides in `META-INF/`) and feature projects (where it resides in the project root).
 For the full `p2.inf` syntax reference, see the [Customizing Metadata](https://eclipse.dev/eclipse/markdown/?file=eclipse-equinox/p2/master/docs/Customizing_Metadata.md) documentation.
 
 ![p2.inf file shown as a dedicated tab alongside MANIFEST.MF and feature.xml](images/p2-inf-editor-tab.gif)
@@ -72,7 +72,7 @@ For the full `p2.inf` syntax reference, see the [Customizing Metadata](https://e
 
 The launch configurations dialog now provides a new `Enable OSGi Console` option.
 When selected, the required `-console` argument is added automatically to the program arguments.
-This removes the need to manually edit program arguments and helps preserve the setting when launch configurations are recreated.
+This removes the need to manually edit the program arguments and helps preserve the setting when launch configurations are recreated.
 
 ![Enable OSGI console option](images/Enable_osgi_console.png)
 
@@ -86,7 +86,7 @@ This removes the need to manually edit program arguments and helps preserve the 
 
 </details>
 
-The **Show Launch Bundles** dialog in the Eclipse launch configuration has been improved with three enhancements:
+The `Show Launch Bundles` dialog in the Eclipse launch configuration has been improved with three enhancements:
 
 - Bundles are now sorted **alphabetically**, making it easier to navigate the list.
 - A **search box** has been added to quickly filter bundles by name.
