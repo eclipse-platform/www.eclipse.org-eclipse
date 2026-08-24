@@ -14,7 +14,7 @@
 #     IBM Corporation - initial API and implementation
 #******************************************************************************
 
-if [ "x$1" == "x"  ] || [ "x$2" == "x"  ]; then
+if [ -z "$1" ] || [ -z "$2" ]; then
  echo "Usage error: Pass release version and simrel release name as arguments"
  echo "For example: ./applyTemplate.sh 4.13 2019-09"
  exit 1

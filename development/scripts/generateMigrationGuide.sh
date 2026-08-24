@@ -1,7 +1,7 @@
 #!/bin/bash -e
 
 #******************************************************************************
-# Copyright (c) 2019, 2025 IBM Corporation and others.
+# Copyright (c) 2026 Hannes Wellmann and others.
 #
 # This program and the accompanying materials
 # are made available under the terms of the Eclipse Public License 2.0
@@ -11,22 +11,15 @@
 # SPDX-License-Identifier: EPL-2.0
 #
 # Contributors:
-#     IBM Corporation - initial API and implementation
-#     Hannes Wellmann - rework to create initial content based on the previous readme
+#     Hannes Wellmann - initial API and implementation
 #******************************************************************************
 
 if [ -z "$1" ] || [ -z "$2" ] || [ -z "$3" ] || [ -z "$4" ]; then
   echo 'Usage error: Pass the targeted eclipse version, the two previous versions and the targeted SimRel as arguments'
-  echo 'For example: scripts/readme/generatereadme.sh 4.41 4.40 4.39 2026-09'
+  echo 'For example: scripts/generatePortingGuide.sh 4.41 4.40 4.39 2026-09'
   exit 1
 fi
 # Previous version might not always just be the minor version decremented
 eclipseVersion="$1"
-simRelName="$4"
 
-"$(dirname $0)/../generateFromPreviousRelease.sh" "readme_eclipse_${eclipseVersion}.html" "$1" "$2" "$3" "$4"
-
-# Update copyright
-releaseYear=${simRelName%%-*}
-echo "Update copyright year to ${releaseYear}"
-sed --in-place --expression="s/Copyright Eclipse Contributors 2009, [0-9]\{4\}/Copyright Eclipse Contributors 2009, ${releaseYear}/g" "readme_eclipse_${eclipseVersion}.html"
+"$(dirname $0)/generateFromPreviousRelease.sh" "porting/eclipse_${eclipseVersion//./_}_porting_guide.html" "$1" "$2" "$3" "$4"
