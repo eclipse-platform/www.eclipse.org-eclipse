@@ -7,9 +7,10 @@ permissions:
   contents: read
 
 jobs:
-  prepare:
+  prepare-release:
     runs-on: ubuntu-latest
-    if: contains(github.event.milestone.description, 'Release')
+    if: endsWith(github.event.milestone.description, 'Release')
+    name: Prepare ${{ github.event.milestone.title }} release
     permissions:
       pull-requests: write
       contents: write
@@ -17,19 +18,70 @@ jobs:
     - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
       with:
         ref: master
-    - name: Create new release folder
+    - name: Create website resources for new release
+      env:
+        GH_TOKEN: ${{ github.token }}
       run: |
-        name=$(echo ${{ github.event.milestone.due_on }} | cut -d- -f-2)
-        cd news/scripts
-        ./applyTemplate.sh ${{ github.event.milestone.title }} $name
+        set -eo pipefail
+        eclipseVersion='${{ github.event.milestone.title }}'
+        # Fetch the latest 60 milestones (given 6 milestones per release, this should be more than sufficient)
+        milestones=$(gh api -H "X-GitHub-Api-Version: 2026-03-10" \
+          'repos/${{ github.repository }}/milestones?state=all&sort=due_on&direction=desc&per_page=60')
+        
+        function getPreviousReleaseOf() {
+          local ref="$1"
+          releases=$(echo "${milestones}" \
+            | jq --raw-output '.[] | select(.description != null and (.description | endswith("Release"))) | .title')
+          
+          # Return/echo previous release
+          printf '%s\n%s' "${releases}" "${ref}" | sort --version-sort --unique \
+            | grep --line-regexp --before-context=1 "$ref" | head -n 1
+        }
+        previousEclipseVersion=$(getPreviousReleaseOf '${{ github.event.milestone.title }}')
+        beforePreviousEclipseVersion=$(getPreviousReleaseOf ${previousEclipseVersion})
+        
+        simRelName=$(echo ${{ github.event.milestone.due_on }} | cut -d- -f-2)
+        
+        releaseEventDates=$(echo "${milestones}" \
+          | jq --compact-output "[.[] | select(.title | contains(\"$eclipseVersion\")) | {name: .title, date: .due_on[0:10]}]")
+        
+        echo "version: ${eclipseVersion}, previousVersion: ${previousEclipseVersion}, beforePreviousVersion: ${beforePreviousEclipseVersion}, simRel: ${simRelName}"
+        
+        chmod +x */scripts/**/*.sh
+        
+        git config --global user.email 'releng-bot@eclipse.org'
+        git config --global user.name 'Eclipse Releng Bot'
+        
+        pushd news/scripts
+          ./applyTemplate.sh "${eclipseVersion}" "${simRelName}"
+        popd
+        git add --all
+        git commit --message='Add news page structure for ${{ github.event.milestone.title }} release'
+        
+        pushd development
+          scripts/generateProjectPlan.sh "${eclipseVersion}" "${previousEclipseVersion}" "${beforePreviousEclipseVersion}" "${simRelName}" "${releaseEventDates}"
+          
+          scripts/readme/generatereadme.sh "${eclipseVersion}" "${previousEclipseVersion}" "${beforePreviousEclipseVersion}" "${simRelName}"
+          
+          scripts/generateMigrationGuide.sh "${eclipseVersion}" "${previousEclipseVersion}" "${beforePreviousEclipseVersion}" "${simRelName}"
+        popd
+        git add --all
+        git commit --message="Add initial Readme, project plan and porting guide for ${{ github.event.milestone.title }} release
+        
+        The initial content is based on the previous ${previousEclipseVersion} release."
+
     - name: Create Pull Request for Release ${{ github.event.milestone.title }}
       uses: peter-evans/create-pull-request@5f6978faf089d4d20b00c7766989d076bb2fc7f1 # v8.1.1
       with:
-        author: Eclipse Releng Bot <releng-bot@eclipse.org>
-        commit-message: Prepare Release ${{ github.event.milestone.title }}
         branch: prepare_R${{ github.event.milestone.title }}
         title: Prepare Release ${{ github.event.milestone.title }}
-        body: A new Release Milstone was created, please review the changes and merge if appropriate.
+        body: |
+          Create the website resources for the ${{ github.event.milestone.title }} release, including
+          - News pages (empty structure)
+          - Readme files
+          - Project plan
+          - Migration guide (porting)
+          
+          The content of the last three is based on the corresponding files from the previous release.
         delete-branch: true
         milestone: ${{ github.event.milestone.number }}
-
