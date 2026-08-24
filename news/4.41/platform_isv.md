@@ -25,7 +25,7 @@ This allows you to use a single descriptor with a `ResourceManager` to share bot
 </details>
 
 The e4 CSS engine now parses stylesheets with an internal recursive-descent parser
-instead of the Batik and SAC parser stack, and the `org.apache.batik.css` dependency is gone.
+instead of the Batik and SAC parser stack.
 Selector matching, specificity and the resulting style model are unchanged.
 
 If you extend the CSS engine, note the following changes:
@@ -35,17 +35,26 @@ If you extend the CSS engine, note the following changes:
 - The SAC-based value and selector model has been replaced by internal types.
 - The margin and padding handlers of `org.eclipse.e4.ui.css.swt` now throw `IllegalArgumentException` instead of the SAC `CSSException`.
 
-### ICU Support Removed from Data Binding
-<!-- https://github.com/eclipse-platform/eclipse.platform.ui/pull/3985 -->
+### Long-Standing Third-Party Bundles Removed from the Update Site
+<!--
+https://github.com/eclipse-platform/eclipse.platform.ui/pull/3985
+https://github.com/eclipse-platform/eclipse.platform.ui/pull/4092
+-->
 <details>
 <summary>Contributors</summary>
 
 - [Lars Vogel](https://github.com/vogella)
 </details>
 
-The public ICU-based data binding API was removed in 2022.
-The remaining internal reflective support for `com.ibm.icu` is now gone as well,
-so data binding relies on `java.text` only.
+The Eclipse SDK no longer uses and therefore no longer ships the following bundles:
+
+- `com.ibm.icu`, dropped after the last internal usage in data binding was replaced by `java.text`
+- `org.apache.batik.css`, `org.apache.batik.util`, `org.apache.batik.i18n` and `org.apache.batik.constants`
+- `org.eclipse.orbit.xml-apis-ext`, which provided the SAC API `org.w3c.css.sac`
+
+If your code or your product depends on any of them, replace the usage,
+or add the bundles to your target platform as Maven artifacts or from the
+[Orbit repository](https://download.eclipse.org/tools/orbit/simrel/orbit-aggregation/).
 
 ---
 ## Language Toolkit (LTK)
