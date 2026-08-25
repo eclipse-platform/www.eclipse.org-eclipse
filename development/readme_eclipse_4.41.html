@@ -24,20 +24,8 @@ https://validator.w3.org/check?uri=http%3A%2F%2Fwww.eclipse.org%2Feclipse%2Fdeve
   <p>
     <a
       class="mozTocH1"
-      name="mozTocId299852">Last revised August 24, 2026 </a>
+      name="mozTocId299852">Last revised August 24, 2026</a>
   </p>
-  <!-- 
-This following link to www.eclipse.org should be commented out
-or removed in final version of the 
-"web version" of the readme, since it does not make sense to 
-have there. But in the "product's readme" it will point people 
-to "the latest version" since there _might_ be changes made 
-after the release.
-  <p>
-    The latest version of this document can be found on the web at <a href="https://www.eclipse.org/eclipse/development/readme_eclipse_4.41.php">Eclipse Release Notes 4.41</a>. There may or may
-    not be changes made after the product is released. You can tell by checking the "last revised" date near the top of this page.
-  </p>
--->
 
   <p style="text-align: left; font-weight: bold;">
     <a
@@ -188,7 +176,7 @@ after the release.
   </p>
   <p>
     Eclipse 4.41 is tested and validated on a number of reference platforms. For the complete list, see <a
-      href="https://www.eclipse.org/projects/project-plan.php?planurl=https://www.eclipse.org/eclipse/development/plans/eclipse_project_plan_4_41.xml#target_environments">Target Environments in the
+      href="https://eclipse.dev/eclipse/development/plans.html?file=plans/eclipse_project_plan_4_41.xml#target_environments">Target Environments in the
       4.41 Plan</a>.
   </p>
   <p>
@@ -219,26 +207,26 @@ after the release.
     <a
       class="mozTocH3"
       name="mozTocId324309"> <strong>API Contract Compatibility:</strong> Eclipse SDK 4.41 is upwards contract-compatible with Eclipse SDK 4.40 except in those areas noted in the
-    </a><a href="https://www.eclipse.org/eclipse/development/porting/eclipse_4_41_porting_guide.html"><em>Eclipse 4.41 Plug-in Migration Guide</em></a>. Programs that use affected APIs and extension points
+    </a><a href="https://eclipse.dev/eclipse/development/porting/eclipse_4_41_porting_guide.html"><em>Eclipse 4.41 Plug-in Migration Guide</em></a>. Programs that use affected APIs and extension points
     will need to be ported to Eclipse SDK 4.41 APIs. Downward contract compatibility is not supported. There is no guarantee that compliance with Eclipse SDK 4.41 APIs would ensure compliance with
     Eclipse SDK 4.40 APIs. Refer to <a href="https://wiki.eclipse.org/Evolving_Java-based_APIs"><em>Evolving Java-based APIs</em></a> for a discussion of the kinds of API changes that maintain contract
     compatibility.
   </p>
   <p>
     <strong>Binary (plug-in) Compatibility:</strong> Eclipse SDK 4.41 is upwards binary-compatible with Eclipse SDK 4.40 except in those areas noted in the <a
-      href="https://www.eclipse.org/eclipse/development/porting/eclipse_4_41_porting_guide.html"><em>Eclipse 4.41 Plug-in Migration Guide</em> </a>. Downward plug-in compatibility is not supported.
+      href="https://eclipse.dev/eclipse/development/porting/eclipse_4_41_porting_guide.html"><em>Eclipse 4.41 Plug-in Migration Guide</em> </a>. Downward plug-in compatibility is not supported.
     Plug-ins for Eclipse SDK 4.41 will not be usable in Eclipse SDK 4.40. Refer to <a href="https://wiki.eclipse.org/Evolving_Java-based_APIs"> <em>Evolving Java-based APIs</em></a> for a discussion of
     the kinds of API changes that maintain binary compatibility.
   </p>
   <p>
     <strong>Source Compatibility:</strong> Eclipse SDK 4.41 is upwards source-compatible with Eclipse SDK 4.40 except in the areas noted in the <a
-      href="https://www.eclipse.org/eclipse/development/porting/eclipse_4_41_porting_guide.html"><em>Eclipse 4.41 Plug-in Migration Guide</em> </a>. This means that source files written to use Eclipse
+      href="https://eclipse.dev/eclipse/development/porting/eclipse_4_41_porting_guide.html"><em>Eclipse 4.41 Plug-in Migration Guide</em> </a>. This means that source files written to use Eclipse
     SDK 4.41 APIs might successfully compile and run against Eclipse SDK 4.40 APIs, although this is not guaranteed. Downward source compatibility is not supported. If source files use new Eclipse SDK
     APIs, they will not be usable with an earlier version of the Eclipse SDK.
   </p>
   <p>
     <strong>Workspace Compatibility:</strong> Eclipse SDK 4.41 is upwards workspace-compatible with earlier 3.x and 4.x versions of the Eclipse SDK unless noted. This means that workspaces and projects
-    created with Eclipse SDK 4.41, 4.40, 4.39, 4.38, 4.37, 4.36, 4.35, 4.34, 4.33, 4.32, 4.31, 4.30, 4.29, 4.28, 4.27, 4.26, 4.25, 4.24, 4.23, 4.22, 4.21, 4.20, 4.19, 4.18, 4.17, 4.16, 4.15, 4.14, 4.13, 4.12, 4.11, 4.10, 4.9, 4.8, 4.7, 4.6, 4.5 and 4.4 can be successfully opened by Eclipse SDK 4.41 and upgraded to a 4.41 workspace. This includes both hidden metadata, which is localized to a
+    created with Eclipse SDK 4.41, 4.40, ..., down to 4.4 can be successfully opened by Eclipse SDK 4.41 and upgraded to a 4.41 workspace. This includes both hidden metadata, which is localized to a
     particular workspace, as well as metadata files found within a workspace project (e.g., the .project file), which may propagate between workspaces via file copying or team repositories. Individual
     plug-ins developed for Eclipse SDK 4.41 should provide similar upwards compatibility for their hidden and visible workspace metadata created by earlier versions; 4.41 plug-in developers are
     responsible for ensuring that their plug-ins recognize metadata from earlier versions and process it appropriately. User interface session state may be discarded when a workspace is upgraded.
@@ -408,7 +396,7 @@ after the release.
     <a
       class="mozTocH4"
       name="mozTocId828477"> The default Welcome implementation is HTML-based and requires a supported browser in order to work. If no supported browser can be found, Welcome falls back to its
-      Forms-based implementation, which has a different (simpler) appearance. Consult the </a><a href="https://www.eclipse.org/swt/faq.php#browserplatforms">SWT FAQ</a> for supported browsers and setting
+      Forms-based implementation, which has a different (simpler) appearance. Consult the </a><a href="https://eclipse.dev/eclipse/swt/faq.html#browserplatforms">SWT FAQ</a> for supported browsers and setting
     up your browser to work with eclipse.
   </p>
   <h4>
@@ -585,7 +573,7 @@ after the release.
     <a
       class="mozTocH4"
       name="mozTocId69222"> The SWT Browser widget uses a platform-specific web browser to render HTML. The org.eclipse.swt.SWTError exception ("No more handles") is thrown on platforms that don't
-      meet the requirements for running the Browser widget. Supported platforms and prerequisites are listed on the SWT FAQ item </a><a href="https://www.eclipse.org/swt/faq.php#browserplatforms">
+      meet the requirements for running the Browser widget. Supported platforms and prerequisites are listed on the SWT FAQ item </a><a href="https://eclipse.dev/eclipse/swt/faq.html#browserplatforms">
       "Which platforms support the SWT Browser?"</a>.
   </p>
   <h4>
@@ -1431,7 +1419,7 @@ after the release.
     </a>
   </p>
   <hr />
-  <p>Sun, Solaris, Java and all Java-based trademarks are trademarks of Oracle Corporation. in the United States, other countries, or both.</p>
+  <p>Sun, Solaris, Java and all Java-based trademarks are trademarks of Oracle Corporation in the United States, other countries, or both.</p>
   <p>IBM is a trademark of International Business Machines Corporation in the United States, other countries, or both.</p>
   <p>Microsoft, Windows, Windows NT, Vista, and the Windows logo are trademarks of Microsoft Corporation in the United States, other countries, or both.</p>
   <p>Apple and Mac OS are trademarks of Apple Computer, Inc., registered in the U.S. and other countries.</p>
