@@ -16,7 +16,7 @@
 <p:introduction>
 <div>
 <p>
-Last revised July 15, 2026.
+Last revised August 25, 2026.
 
 
 </p>
@@ -76,28 +76,28 @@ Last revised July 15, 2026.
 <p:release_milestones>
 
 <p:preamble><p>      
-  Release milestones will be occurring at roughly 6 week intervals, and will be aligned with the
+  Release milestones will be occurring at roughly 3 week intervals, and will be aligned with the
   <a href="https://github.com/eclipse-simrel/.github/blob/main/wiki/SimRel/2026-09.md">
   2026-09 Simultaneous Release</a> train.</p>
 </p:preamble>
-<p:milestone date="2026-07-10" milestone="M1"><div>4.41 M1</div></p:milestone>
-<p:milestone date="2026-07-31" milestone="M2"><div>4.41 M2 (only submit I-build)</div></p:milestone>
-<p:milestone date="2026-08-21" milestone="M3"><div>4.41 M3 - <b>Release Record Deadline</b></div></p:milestone>
+<p:milestone date="2026-07-03" milestone="M1"><div>4.41 M1</div></p:milestone>
+<p:milestone date="2026-07-24" milestone="M2"><div>4.41 M2 (only submit I-build)</div></p:milestone>
+<p:milestone date="2026-08-14" milestone="M3"><div>4.41 M3 - <b>Release Record Deadline</b></div></p:milestone>
 <!--
 NOTE: This is only necessary once per year. For us with the 202x-03 release.
 <p:milestone date="2023-11-18" milestone=""><div>IP Log Submission Deadline</div></p:milestone>
 -->
-<p:milestone date="2026-08-28" milestone="RC1"><div>4.41 RC1 - <b>API and feature freeze</b></div></p:milestone>
+<p:milestone date="2026-08-21" milestone="RC1"><div>4.41 RC1 - <b>API and feature freeze</b></div></p:milestone>
 <!--
 NOTE: This is only necessary once per year. For us with the 202x-03 release.
 <p:milestone date="2023-11-25" milestone=""><div>Review Material Submission Deadline</div></p:milestone>
 -->
-<p:milestone date="2026-09-04" milestone="RC2"><div>4.41 RC2 - <b>New and Noteworthy Material Deadline</b></div></p:milestone>
+<p:milestone date="2026-08-28" milestone="RC2"><div>4.41 RC2 - <b>New and Noteworthy Material Deadline</b></div></p:milestone>
 <p:milestone date="2026-09-09" milestone="GA"><div>4.41 GA</div></p:milestone>
 
 <p:postamble>
 <div>
-<p>Our target is to complete 4.41 in September 2026.
+<p>
   All release deliverables will be available for download as soon as the release has been
   tested and validated in the target operating configurations listed below.</p>
 <p>PMC approval is required for API changes and additions after M3.</p>
@@ -178,10 +178,8 @@ NOTE: This is only necessary once per year. For us with the 202x-03 release.
 			</td>
 			<td rowspan="1">x86 64-bit</td>
 			<td rowspan="1">
-                OpenJDK 21.0.11 (LTS)<br/>
-				Oracle Java 21.0.11 (LTS)<br/>
+				OpenJDK 21.0.11 (LTS)<br/>
 				OpenJDK 25.0.3 (LTS)<br/>
-				Oracle Java 25.0.3 (LTS)<br/>
 			</td>
 			<td rowspan="1">Win32</td>
 		</tr>
@@ -197,9 +195,7 @@ NOTE: This is only necessary once per year. For us with the 202x-03 release.
 			</td>
 			<td rowspan="1">
 				OpenJDK 21.0.11 (LTS)<br/>
-				Oracle Java 21.0.11 (LTS)<br/>
 				OpenJDK 25.0.3 (LTS)<br/>
-				Oracle Java 25.0.3 (LTS)<br/>
 			</td>
 			<td rowspan="2">GTK 3</td>
 		</tr>
@@ -240,7 +236,7 @@ NOTE: This is only necessary once per year. For us with the 202x-03 release.
 				aarch64<br/>
 			</td>
 			<td rowspan="1">
-                OpenJDK 21.0.11 (LTS)<br/>
+				OpenJDK 21.0.11 (LTS)<br/>
 				OpenJDK 25.0.3 (LTS)<br/>
 			</td>
 			<td rowspan="1">GTK 3</td>
@@ -259,14 +255,12 @@ NOTE: This is only necessary once per year. For us with the 202x-03 release.
 			
 			<td rowspan="1">
 				OpenJDK 21.0.11 (LTS)<br/>
-				Oracle Java 21.0.11 (LTS)<br/>
 				OpenJDK 25.0.3 (LTS)<br/>
-				Oracle Java 25.0.3 (LTS)<br/>
 			</td>
 			
 			<td rowspan="2">Cocoa</td>
 		</tr>
- 	    <tr class="c0">
+		<tr class="c0">
 			<td rowspan="1">
 				14<br/>
 				15<br/>
@@ -275,11 +269,11 @@ NOTE: This is only necessary once per year. For us with the 202x-03 release.
 			<td rowspan="1">
 				M1 (arm64)
 			</td>
-            <td rowspan="1">
+			<td rowspan="1">
 				OpenJDK 21.0.11 (LTS)<br/>
-            	OpenJDK 25.0.3 (LTS)<br/>
-            </td>
-   		</tr>
+				OpenJDK 25.0.3 (LTS)<br/>
+			</td>
+		</tr>
 	</table>
  </center>
 
@@ -351,7 +345,7 @@ compared to bugs which are reproducible on the target environments listed above.
   
 <p><strong>Workspace Compatibility:</strong> Eclipse SDK 4.41 will be upwards
   workspace-compatible with earlier 3.x and 4.40 versions of the Eclipse SDK unless noted.
-  This means that workspaces and projects created with Eclipse SDK 4.40, 4.39, 4.38, 4.37....4.33,.. 4.26, .. 3.0 can be successfully
+  This means that workspaces and projects created with Eclipse SDK 4.40, 4.39, ..., down to 3.0 can be successfully
   opened by Eclipse SDK 4.41 and upgraded to a 4.41 workspace. This includes both
   hidden metadata, which is localized to a particular workspace, as well as metadata
   files found within a workspace project (e.g., the .project file ), which may
