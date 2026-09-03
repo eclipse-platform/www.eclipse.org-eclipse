@@ -71,10 +71,8 @@ https://github.com/eclipse-pde/eclipse.pde/pull/2408
 - [Lars Vogel](https://github.com/vogella)
 </details>
 
-The `Look for cycles in the dependency graph` action of the `MANIFEST.MF` editor only saw cycles formed by `Require-Bundle`.
-The bundles behind an `Import-Package` header were computed before the OSGi state was resolved and were therefore dropped,
-so cycles that close through package wiring were silently ignored.
-They are now reported as well, together with every cycle that runs through the edited plug-in.
+The `Look for cycles in the dependency graph` action of the `MANIFEST.MF` editor now also finds cycles that run through `Import-Package` dependencies.
+Previously only cycles formed by `Require-Bundle` were reported.
 
 ---
 ## Launching
@@ -112,12 +110,8 @@ https://github.com/eclipse-pde/eclipse.pde/pull/2375
 - [Hannes Wellmann](https://github.com/HannesWell)
 </details>
 
-The `Plug-in Dependencies` classpath containers of all queued projects were computed one after another,
-which dominated the time spent reloading the target platform in a workspace with hundreds of plug-ins.
-They are now computed in parallel, queued requests for the same project are merged,
-and the results are applied to the Java model in a single batch.
-Reloading a target platform in a large workspace is noticeably faster.
-Projects backed by bnd keep being computed one after another, because they share a bnd workspace that is not thread-safe.
+Reloading the target platform in a workspace with many plug-ins is noticeably faster,
+because the `Plug-in Dependencies` classpath of the affected projects is now computed in parallel.
 
 You can switch the parallel computation off with the new `Update plug-in classpaths in parallel` preference
 on the `Preferences > Plug-in Development` page.
