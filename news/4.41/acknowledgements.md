@@ -22,8 +22,8 @@ Special thanks to all code contributors (alphabetically):
 | [Martin Jobst](https://github.com/mx990) | [Patrick Ziegler](https://github.com/ptziegler) | [raghucssit](https://github.com/raghucssit) |
 | [Rahul Mohanan](https://github.com/MohananRahul) | [Robin Mennig](https://github.com/r-mennig) | [Sebastian Ratz](https://github.com/sratz) |
 | [Simeon Andreev](https://github.com/trancexpress) | [Sougandh S](https://github.com/SougandhS) | [Suby S Surendran](https://github.com/subyssurendran666) |
-| [Thomas Singer](https://github.com/tmssngr) | [Tobias Melcher](https://github.com/tobiasmelcher) | [Tobias Melcher](https://github.com/tobias-melcher) |
-| [Vasili Gulevich](https://github.com/basilevs) | [Александър Куртаков](https://github.com/akurtakov)  |
+| [Thomas Singer](https://github.com/tmssngr) | [Tobias Melcher](https://github.com/tobiasmelcher) | [Vasili Gulevich](https://github.com/basilevs) |
+| [Александър Куртаков](https://github.com/akurtakov) |
 <!-- END:   eclipse-platform contributors -->
 
 ## Java Development Tools
@@ -43,7 +43,7 @@ Special thanks to all code contributors (alphabetically):
 | [Robin Mennig](https://github.com/r-mennig) | [Simeon Andreev](https://github.com/trancexpress) | [Snjeza](https://github.com/snjeza) |
 | [Sougandh S](https://github.com/SougandhS) | [Srikanth Sankaran](https://github.com/srikanth-sankaran) | [Stephan Herrmann](https://github.com/stephan-herrmann) |
 | [Suby S Surendran](https://github.com/subyssurendran666) | [Vaclav Haisman](https://github.com/wilx) | [wenytang](https://github.com/wenytang-ms) |
-| [Александър Куртаков](https://github.com/akurtakov) | [沈英南](https://github.com/1799833473)  |
+| [Александър Куртаков](https://github.com/akurtakov) | [沈英南](https://github.com/1799833473) |
 <!-- END:   eclipse-jdt contributors -->
 
 ## Plug-in Development Environment

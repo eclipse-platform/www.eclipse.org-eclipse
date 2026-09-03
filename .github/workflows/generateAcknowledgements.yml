@@ -208,7 +208,7 @@ jobs:
               }
             }
             if (line.length !== 0) {
-              contributorLines.push(line + ' |')
+              contributorLines.push(line + '|')
             }
             lines.splice(startMarker + 1, endMarker - (startMarker + 1), ...contributorLines)
           }
