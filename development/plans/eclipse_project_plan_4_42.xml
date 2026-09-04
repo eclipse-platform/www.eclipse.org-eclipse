@@ -16,7 +16,7 @@
 <p:introduction>
 <div>
 <p>
-Last revised August 29, 2026.
+Last revised September 03, 2026.
 
 
 </p>
@@ -119,10 +119,10 @@ NOTE: This is only necessary once per year. For us with the 202x-03 release.
   environments, requiring their source code to only reference facilities available
   in particular class libraries (e.g. Java 22, Java 23, etc).</p>
 <p>
-  In general, the 4.42 release of the Eclipse Project is developed on Java SE 21 VMs.
+  In general, the 4.42 release of the Eclipse Project is developed on Java SE 25 VMs.
   As such, the Eclipse SDK as a whole
   is targeted at all modern, desktop Java VMs. Most functionality is available for
-  Java SE 21 level development everywhere, and extended development capabilities are made
+  Java SE 25 level development everywhere, and extended development capabilities are made
   available on the VMs that support them.</p>
 <p>There are many different implementations of the Java Platform running atop
   a variety of operating systems. We focus our testing on a handful of
@@ -178,8 +178,8 @@ NOTE: This is only necessary once per year. For us with the 202x-03 release.
 			</td>
 			<td rowspan="1">x86 64-bit</td>
 			<td rowspan="1">
-				OpenJDK 21.0.11 (LTS)<br/>
-				OpenJDK 25.0.3 (LTS)<br/>
+				OpenJDK 25.0.4 (LTS)<br/>
+				OpenJDK 26.0.2 (non-LTS)<br/>
 			</td>
 			<td rowspan="1">Win32</td>
 		</tr>
@@ -194,16 +194,16 @@ NOTE: This is only necessary once per year. For us with the 202x-03 release.
 				aarch64<br/>
 			</td>
 			<td rowspan="1">
-				OpenJDK 21.0.11 (LTS)<br/>
-				OpenJDK 25.0.3 (LTS)<br/>
+				OpenJDK 25.0.4 (LTS)<br/>
+				OpenJDK 26.0.2 (non-LTS)<br/>
 			</td>
 			<td rowspan="2">GTK 3</td>
 		</tr>
 		<tr class="c1">
 			<td rowspan="1">Power 64-bit LE</td>
 			<td rowspan="1">
-				OpenJDK 21.0.11 (LTS)<br/>
-				OpenJDK 25.0.3 (LTS)<br/>
+				OpenJDK 25.0.4 (LTS)<br/>
+				OpenJDK 26.0.2 (non-LTS)<br/>
 			</td>
 		</tr>
 		<!-- ************ SLES ************** -->
@@ -214,16 +214,16 @@ NOTE: This is only necessary once per year. For us with the 202x-03 release.
 			</td>
 			<td rowspan="1">x86 64-bit</td>
 			<td rowspan="1">
-				OpenJDK 21.0.11 (LTS)<br/>
-				OpenJDK 25.0.3 (LTS)<br/>
+				OpenJDK 25.0.4 (LTS)<br/>
+				OpenJDK 26.0.2 (non-LTS)<br/>
 			</td>
 			<td rowspan="2">GTK 3</td>
 		</tr>
 		<tr class="c0">
 			<td rowspan="1">Power 64-bit LE</td>
 			<td rowspan="1">
-				OpenJDK 21.0.11 (LTS)<br/>
-				OpenJDK 25.0.3 (LTS)<br/>
+				OpenJDK 25.0.4 (LTS)<br/>
+				OpenJDK 26.0.2 (non-LTS)<br/>
 			</td>
 		</tr>
 
@@ -236,8 +236,8 @@ NOTE: This is only necessary once per year. For us with the 202x-03 release.
 				aarch64<br/>
 			</td>
 			<td rowspan="1">
-				OpenJDK 21.0.11 (LTS)<br/>
-				OpenJDK 25.0.3 (LTS)<br/>
+				OpenJDK 25.0.4 (LTS)<br/>
+				OpenJDK 26.0.2 (non-LTS)<br/>
 			</td>
 			<td rowspan="1">GTK 3</td>
 		</tr>
@@ -254,8 +254,8 @@ NOTE: This is only necessary once per year. For us with the 202x-03 release.
 			<td rowspan="1">x86 64-bit</td>
 			
 			<td rowspan="1">
-				OpenJDK 21.0.11 (LTS)<br/>
-				OpenJDK 25.0.3 (LTS)<br/>
+				OpenJDK 25.0.4 (LTS)<br/>
+				OpenJDK 26.0.2 (non-LTS)<br/>
 			</td>
 			
 			<td rowspan="2">Cocoa</td>
@@ -270,8 +270,8 @@ NOTE: This is only necessary once per year. For us with the 202x-03 release.
 				M1 (arm64)
 			</td>
 			<td rowspan="1">
-				OpenJDK 21.0.11 (LTS)<br/>
-				OpenJDK 25.0.3 (LTS)<br/>
+				OpenJDK 25.0.4 (LTS)<br/>
+				OpenJDK 26.0.2 (non-LTS)<br/>
 			</td>
 		</tr>
 	</table>
@@ -345,7 +345,7 @@ compared to bugs which are reproducible on the target environments listed above.
   
 <p><strong>Workspace Compatibility:</strong> Eclipse SDK 4.42 will be upwards
   workspace-compatible with earlier 3.x and 4.41 versions of the Eclipse SDK unless noted.
-  This means that workspaces and projects created with Eclipse SDK 4.41, 4.39, ..., down to 3.0 can be successfully
+  This means that workspaces and projects created with Eclipse SDK 4.41, 4.39, ..., down to 4.0 can be successfully
   opened by Eclipse SDK 4.42 and upgraded to a 4.42 workspace. This includes both
   hidden metadata, which is localized to a particular workspace, as well as metadata
   files found within a workspace project (e.g., the .project file ), which may
