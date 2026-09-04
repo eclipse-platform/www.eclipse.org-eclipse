@@ -18,7 +18,7 @@ A special thanks to everyone who [contributed to JDT](acknowledgements.md#java-d
 - [Carsten Hammer](https://github.com/carstenartur)
 </details>
 
-The JUnit view now preserves finished and stopped test runs when you close Eclipse normally and reopen the same workspace.
+The `JUnit` view now preserves finished and stopped test runs when you close Eclipse normally and reopen the same workspace.
 Recent runs reappear in the existing history,
 up to the configured `Maximum count of remembered test runs`.
 You can inspect previous results and failure traces after a restart without running the tests again.
