@@ -103,10 +103,25 @@ CPU, user-mode and system values cover the measured test-execution thread, not w
 CPU details are shown only when recorded data is available; recording requires support from the test JVM.
 Recorded details are retained in the JUnit history across restarts and can be viewed without a running test JVM.
 
-<!--
 ---
 ## Java Editor
--->
+
+### Toggle Between `System.out` and `IO` with Quick Assist
+
+<details>
+<summary>Contributors</summary>
+
+- [Sougandh S](https://github.com/SougandhS)
+</details>
+
+The Java editor now provides a quick assist to convert `System.out.print` and `System.out.println` calls to `IO.print` and `IO.println`, and vice versa.
+
+![Convert to IO](images/Convert_to_IO.png)
+![Convert to Standard](images/Convert_to_standard.png)
+
+This makes it easier to switch between the traditional `System.out` APIs and the simplified `IO` APIs introduced for Java 25 compact source files.
+
+![Quick assist in action](images/Quick_assist_in_action.gif)
 
 <!--
 ---
