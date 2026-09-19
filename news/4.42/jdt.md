@@ -10,6 +10,28 @@ A special thanks to everyone who [contributed to JDT](acknowledgements.md#java-d
 ---
 ## JUnit
 
+### Disabled Parameterized Tests in the JUnit View
+<!-- https://github.com/eclipse-jdt/eclipse.jdt.ui/pull/3144 -->
+
+<details>
+<summary>Contributors</summary>
+
+- [Carsten Hammer](https://github.com/carstenartur)
+</details>
+
+Disabled parameterized JUnit Jupiter tests are now shown correctly in the `JUnit` view.
+When a parameterized method is annotated with `@Disabled`,
+Eclipse displays it with the disabled-test icon and counts it once in the total and skipped counts instead of omitting it.
+
+In the example below, the ordinary test and the disabled parameterized method give `Runs: 2/2 (1 skipped)`,
+even though the parameter source declares two values.
+
+![Java editor with an ordinary test and a method annotated with @Disabled, @ParameterizedTest and two input values, above the JUnit view showing Runs: 2/2 (1 skipped)](images/junit-disabled-parameterized-test.png)
+
+Disabled parameterized tests also appear in the flat layout and when `Show Skipped Tests Only` is enabled.
+Their skipped state and counters are preserved when you export and re-import the test run.
+This behavior is supported by both the JUnit 5 and JUnit 6 runners.
+
 ### Reload Imported JUnit Test Results
 <!-- https://github.com/eclipse-jdt/eclipse.jdt.ui/pull/3145 -->
 
