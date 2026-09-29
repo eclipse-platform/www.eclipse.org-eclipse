@@ -10,6 +10,34 @@ A special thanks to everyone who [contributed to JDT](acknowledgements.md#java-d
 ---
 ## JUnit
 
+### Exclude and Re-include Enum Test Values
+<!-- https://github.com/eclipse-jdt/eclipse.jdt.ui/pull/3136 -->
+
+<details>
+<summary>Contributors</summary>
+
+- [Carsten Hammer](https://github.com/carstenartur)
+</details>
+
+You can now change which enum values an `@EnumSource` parameterized test uses directly from the `JUnit` view.
+After running the test, right-click an individual invocation and select `Exclude Enum Value`.
+Eclipse updates the annotation in your Java source; rerun the test to apply the change.
+
+![Java source supplies RED, GREEN and BLUE; the GREEN invocation is selected with Exclude Enum Value highlighted in its context menu](images/junit-enumsource-exclude.png)
+
+In this example, excluding `GREEN` creates an `EXCLUDE` filter.
+The next run contains only `RED` and `BLUE`; `GREEN` is not counted as a skipped test.
+To restore values from an `EXCLUDE` filter, right-click the parameterized method or one of its invocations
+and open `Re-include Excluded Enum Values`.
+Select `Re-include 'GREEN'` or `Re-include All Enum Values`, then rerun.
+
+![Java source excludes GREEN and the JUnit view shows two invocations; the open submenu offers Re-include All Enum Values and Re-include 'GREEN'](images/junit-enumsource-reinclude.png)
+
+An explicit `INCLUDE` list is narrowed in place without changing its mode.
+At least one enum value must remain.
+The exclusion action is unavailable when Eclipse cannot safely identify the selected value,
+for example with multiple argument sources or regular-expression filters.
+
 ### Disabled Parameterized Tests in the JUnit View
 <!-- https://github.com/eclipse-jdt/eclipse.jdt.ui/pull/3144 -->
 
