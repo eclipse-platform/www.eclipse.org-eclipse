@@ -134,6 +134,26 @@ Recorded details are retained in the JUnit history across restarts and can be vi
 ---
 ## Java Editor
 
+### Add Refactor to Change Signature for Record ParameterizedTest
+<!-- https://github.com/eclipse-jdt/eclipse.jdt.ui/pull/3121 -->
+
+<details>
+<summary>Contributors</summary>
+
+- [Ivan Gualandri](https://github.com/inuyasha82)
+</details>
+
+Add a new refactoring that lets you change a record's signature.
+It works similar to method signature refactoring.
+
+The animation below shows how this works:
+![Animation Demo of how Refactoring record signature works.](images/RecordSignatureRefactor.gif)
+
+The refactoring also updates all the references in the code, not only in the declaration itself.
+It can be initiated either from the record declaration, or from any record instantiation anywhere else in the project.
+
+Parameter removal and reordering is still supported.
+
 ### Toggle Between `System.out` and `IO` with Quick Assist
 
 <details>
