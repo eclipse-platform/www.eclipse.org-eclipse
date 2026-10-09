@@ -186,10 +186,35 @@ This makes it easier to switch between the traditional `System.out` APIs and the
 ## Java Formatter
 -->
 
-<!--
 ---
 ## Debug
--->
+
+### Pin Fields to the Top of the Variables View
+<!-- https://github.com/eclipse-jdt/eclipse.jdt.debug/pull/1034 -->
+
+<details>
+<summary>Contributors</summary>
+
+- [Hélios GILLES](https://github.com/RoiSoleil)
+</details>
+
+You can now keep the fields you care about at the top of the `Variables` and `Expressions` views.
+Right-click one or more fields and select `Pin to Top`:
+they move above the other fields of their object and get a pin overlay on their icon.
+
+![Variables view where the pinned fields items and shippingAddress of an order are shown first, with a pin overlay on their icons](images/debug-pin-fields.png)
+
+A pinned field is shown first in every object of its declaring type and of its subtypes,
+and it stays pinned across debug sessions and restarts.
+Pinned fields are shown in the order in which you pinned them;
+use `Move Pin Up` and `Move Pin Down` to reorder them.
+Select `Pin to Top` again to unpin a field,
+or `Unpin All Fields` to restore the original order.
+
+Each view has its own pins:
+the fields pinned in the `Expressions` view below are not the ones pinned in the `Variables` view.
+
+![Expressions view with two other pinned fields, and the context menu of a pinned field with Pin to Top checked, Move Pin Up, Move Pin Down and Unpin All Fields](images/debug-pin-fields-expressions.png)
 
 <!--
 ### JDT Developers
