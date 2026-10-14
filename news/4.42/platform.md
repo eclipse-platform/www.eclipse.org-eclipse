@@ -47,7 +47,32 @@ If these optional dependencies are not available, the action is not provided.
 ## Views, Dialogs and Toolbar
 -->
 
-<!--
----
 ## General Updates
--->
+
+### Minimum glibc Version Raised to 2.34 on Linux
+<!-- https://github.com/eclipse-platform/eclipse.platform.releng.aggregator/issues/4080 -->
+<details>
+<summary>Contributors</summary>
+
+- [Alexander Kurtakov](https://github.com/akurtakov)
+</details>
+
+The native parts of Eclipse and SWT on Linux are now built on Debian 12 instead of Debian 11 (EOL).
+As a result, the Eclipse launcher and the SWT GTK 3 native libraries now require **glibc 2.34 or newer**, which the GTK 4 libraries already required.
+
+In glibc 2.34, `dlopen` and `dlsym` moved from `libdl` into `libc`.
+Binaries built against glibc 2.34 or newer link to these new symbol versions and can't be loaded on older systems.
+
+This means Eclipse no longer runs on Linux distributions that ship an older glibc, for example:
+
+- Red Hat Enterprise Linux 8 and derivatives such as AlmaLinux 8 and Rocky Linux 8 (glibc 2.28)
+- Ubuntu 20.04 (glibc 2.31)
+- Debian 11 (glibc 2.31)
+
+Red Hat Enterprise Linux 9, Ubuntu 22.04, Debian 12 and newer releases are not affected.
+
+On an unsupported system, the launcher fails to start with an error like:
+
+```
+./eclipse: /lib64/libc.so.6: version `GLIBC_2.34' not found (required by ./eclipse)
+```
