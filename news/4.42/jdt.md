@@ -171,6 +171,21 @@ This makes it easier to switch between the traditional `System.out` APIs and the
 
 ![Quick assist in action](images/Quick_assist_in_action.gif)
 
+### New Quick Fix for Converting `Map.of` Calls to `Map.ofEntries`
+<!-- https://github.com/eclipse-jdt/eclipse.jdt.ui/pull/3283 -->
+
+<details>
+<summary>Contributors</summary>
+
+- [Daniel Schmid](https://github.com/danthe1st)
+</details>
+
+If a call to the [`Map.of`](https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Map.html#of(K,V,K,V,K,V,K,V,K,V,K,V,K,V,K,V,K,V,K,V)) method shows a compilation error due to passing too many parameters,
+a quick fix is now available to convert it to a [`Map.ofEntries`](https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Map.html#ofEntries(java.util.Map.Entry...)) call.
+This quick fix is only available for method calls with an even number of arguments because there must be a value for each key.
+
+![Using the new Quick fix for converting Map.of to Map.ofEntries](images/quick_fix_MapOfEntries.gif)
+
 <!--
 ---
 ## Java Views and Dialogs
