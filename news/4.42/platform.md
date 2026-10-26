@@ -25,6 +25,31 @@ This makes it easier to identify differences between console output and expected
 The action is available when the `org.eclipse.compare` and` org.eclipse.compare.structuremergeviewer` bundles are present. 
 If these optional dependencies are not available, the action is not provided.
 
+### Find/Replace Overlay in the Console View
+<!-- https://github.com/eclipse-platform/eclipse.platform.ui/pull/4509 -->
+<details>
+<summary>Contributors</summary>
+
+- [Heiko Klare](https://github.com/HeikoKlare)
+</details>
+
+The find/replace overlay, which you know from text editors when pressing `Ctrl+F`,
+is now also available in the `Console` view.
+It is shown on top of the console output and behaves just like it does in an editor,
+so you no longer have to fall back to the find/replace dialog to search console output.
+
+![Find/replace overlay searching the output in the Console view](images/findreplace-overlay-console.png)
+
+You can restrict the overlay to text editors again with `Restrict find/replace overlay to text editors`
+in `Preferences > General > Editors > Text Editors`.
+The preference only serves as a fallback
+and may be removed again in any future release once the generalized behavior has proven itself.
+
+![Preference to restrict the find/replace overlay to text editors](images/findreplace-overlay-restrict-preference.png)
+
+See [the related news](platform_isv.md#findreplace-overlay-available-in-any-part-adapting-to-itextviewer)
+for how other views can offer the overlay.
+
 ---
 
 <!--
