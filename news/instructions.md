@@ -73,7 +73,10 @@ written in title case.
 The title should not use trailing punctuation.
 As markdown,
 the title defines the anchor,
-which is generally the lowercase equivalent with all non-alphanumberic characters replaced by `-`.
+which is the lowercase title
+with all spaces replaced by `-`
+and all characters other than letters, digits, `-` and `_` removed,
+such as `/`, parentheses and backticks.
 Please test your links.
 
 In the news description,
