@@ -217,7 +217,7 @@ Support includes:
  - Static field declarations and references
  - Static final field and enum constant declarations and references
 
-It should be noted that with heuristic scanning, the scanner must assume context as it does not actually compile code to resolve references, etc..
+It should be noted that with heuristic scanning, the scanner must assume context as it does not actually compile code to resolve references.
 
 For the following comment:
 
