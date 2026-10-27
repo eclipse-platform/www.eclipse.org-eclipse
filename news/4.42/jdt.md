@@ -193,14 +193,10 @@ This quick fix is only available for method calls with an even number of argumen
 <summary>Contributors</summary>
 
 - [Jeff Johnston](https://github.com/jjohnstn)
-- [Claude Opus 4.6](https://www.anthropic.com/news/claude-opus-4-6)
-- [Copilot Autofix powered by AI](https://copilot.microsoft.com)
 </details>
 
-When hovering over a Javadoc markdown comment which has a Java fenced block,
-the hover will use heuristic parsing and colorize the hovered block using
-user-preference colors.  The same colorized hovering will occur in the
-Javadoc view.
+When hovering over a Javadoc markdown comment which has a Java fenced block, the hover will use heuristic parsing and colorize the hovered block using user-preference colors.
+The same colorized hovering will occur in the Javadoc view.
 
 Support includes: 
 
@@ -221,9 +217,7 @@ Support includes:
  - Static field declarations and references
  - Static final field and enum constant declarations and references
 
-It should be noted that with heuristic scanning,the scanner must
-assume context as it does not actually compile code to resolve references,
-etc..
+It should be noted that with heuristic scanning,the scanner must assume context as it does not actually compile code to resolve references, etc..
 
 For the following comment:
 
