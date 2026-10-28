@@ -432,6 +432,11 @@
 ${headings.map(({id, raw, level}) => `<li class="tl${level}"><a href="#${id}">${raw}</a></li>`).join(' ')}
 </ul>
 `;
+				if (headings.length > 1) {
+					const descriptionText = `<meta name="description" content="${headings.map(({id, raw, level}) => raw.replaceAll('"', '&quot;')).join('; ')}" />`;
+					document.head.append(descriptionText);
+				}
+
 				document.getElementById('toc-target').replaceChildren(...toElements(headingText));
 
 				const imgs = targetElement.querySelectorAll("img[src]");
