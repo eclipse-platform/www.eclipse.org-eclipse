@@ -57,10 +57,28 @@ for how other views can offer the overlay.
 ## Text Editors
 -->
 
-<!--
----
 ## Preferences
--->
+
+### Default Shell for Terminals Without Absolute Path
+<!-- https://github.com/eclipse-platform/eclipse.platform/pull/3033 -->
+<!-- https://github.com/eclipse-platform/eclipse.platform/pull/2932 -->
+
+<details>
+<summary>Contributors</summary>
+
+- [Daniel Schmid](https://github.com/danthe1st)
+</details>
+
+The `Terminal` > `Local Terminal` preference page allows specifying a Shell Command
+which is executed when opening the Terminal view without explicitly specifying a command.
+In addition to absolute paths,
+this option now allows specifying the names of executables if they are available in the directories specified by the `PATH` environment variable.
+
+![Changing the default Shell Command for the Terminal view without using an absolute path](images/terminal-default-shell.gif)
+
+The preference for changing the default Shell Command is now available on Windows as well in addition to Linux and macOS.
+
+---
 
 <!--
 ---
