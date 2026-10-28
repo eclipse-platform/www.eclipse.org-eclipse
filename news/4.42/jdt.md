@@ -134,7 +134,7 @@ Recorded details are retained in the JUnit history across restarts and can be vi
 ---
 ## Java Editor
 
-### Add Refactor to Change Signature for Record ParameterizedTest
+### Add Refactor to Change Signature for Record
 <!-- https://github.com/eclipse-jdt/eclipse.jdt.ui/pull/3121 -->
 
 <details>
