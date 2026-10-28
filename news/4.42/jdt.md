@@ -186,6 +186,47 @@ This quick fix is only available for method calls with an even number of argumen
 
 ![Using the new Quick fix for converting Map.of to Map.ofEntries](images/quick_fix_MapOfEntries.gif)
 
+### New Syntax Coloring for Fenced Java Markdown Comments
+<!-- https://github.com/eclipse-jdt/eclipse.jdt.ui/pull/3266 -->
+
+<details>
+<summary>Contributors</summary>
+
+- [Jeff Johnston](https://github.com/jjohnstn)
+</details>
+
+When hovering over a Javadoc markdown comment which has a Java fenced block, the hover will use heuristic parsing and colorize the hovered block using user-preference colors.
+The same colorized hovering will occur in the Javadoc view.
+
+Support includes: 
+
+ - Java keywords and primitive types
+ - String and character literals (including text blocks)
+ - Single-line and multi-line comments
+ - Annotations (@ followed by identifier)
+ - Type names (uppercase-starting identifiers)
+ - Enum type names (declaration and references)
+ - Method declaration names
+ - Method invocation names
+ - Parameter variable references
+ - Local variable declaration names
+ - Local variable references
+ - Numeric literals (int, long, float, hex, binary)
+ - Type arguments in generics
+ - Instance field declarations and references
+ - Static field declarations and references
+ - Static final field and enum constant declarations and references
+
+It should be noted that with heuristic scanning, the scanner must assume context as it does not actually compile code to resolve references.
+
+For the following comment:
+
+![Markdown comment with java fenced block](images/Markdown_java_fenced_comment.png)
+
+the following is shown for Javadoc hover and in the Javadoc view:
+
+![Markdown colored fenced hover](images/Markdown_java_syntax_coloring.png)
+
 <!--
 ---
 ## Java Views and Dialogs
