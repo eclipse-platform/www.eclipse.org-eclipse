@@ -227,10 +227,28 @@ the following is shown for Javadoc hover and in the Javadoc view:
 
 ![Markdown colored fenced hover](images/Markdown_java_syntax_coloring.png)
 
-<!--
 ---
 ## Java Views and Dialogs
--->
+
+### Deselect All Tabs in the Clean Up Dialogs
+<!-- https://github.com/eclipse-jdt/eclipse.jdt.ui/pull/3269 -->
+
+<details>
+<summary>Contributors</summary>
+
+- [Lars Vogel](https://github.com/vogella)
+</details>
+
+You can now clear every tab of the clean up dialogs at once.
+Click the new `Deselect All Tabs` button next to the `X of Y clean ups selected` label,
+instead of visiting each tab and using its own `Deselect All` button.
+This lets you start from an empty profile and enable only the clean ups you want.
+
+The button is available in the clean up profile dialog
+and in the `Custom Clean Ups` dialog of `Source > Clean Up`,
+which is also used for the additional save actions.
+
+![The profile dialog after pressing Deselect All Tabs: every option is cleared, 0 of 127 clean ups are selected, and OK stays disabled until you select at least one](images/cleanup-deselect-all-tabs.png)
 
 <!--
 ---
