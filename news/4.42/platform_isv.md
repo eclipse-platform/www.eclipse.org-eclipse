@@ -26,7 +26,27 @@ Users can restrict the overlay to text editors again with `Restrict find/replace
 in `Preferences > General > Editors > Text Editors`,
 which serves as a fallback in case the overlay misbehaves in a part it has not been tried in yet.
 
-<!--
 ---
 ## SWT Changes
--->
+
+### `TabFolder` Honors Background and Foreground Colors (Windows)
+<!-- https://github.com/eclipse-platform/eclipse.platform.swt/pull/3785 -->
+<details>
+<summary>Contributors</summary>
+
+- [Lars Vogel](https://github.com/vogella)
+</details>
+
+On Windows, `TabFolder.setBackground()` and `TabFolder.setForeground()` now take effect on the tabs.
+This removes the white tabs and the bright frame from dialogs such as `Customize Perspective` in the dark theme.
+
+As soon as you set either color on a `TabFolder`,
+it paints its tab strip, tabs, pane and `SWT.BORDER` frame itself and gets a flat look instead of the native one.
+This also applies if your application already sets colors that had no visible effect so far,
+for example only a foreground, or a background matching the parent.
+Remove these calls if you want to keep the native look,
+which a `TabFolder` without its own colors retains.
+
+The `Customize Perspective` dialog before (top) and after (bottom) the change:
+
+![Customize Perspective dialog with white tabs and a bright frame on top, and with dark tabs and a subtle frame below](images/tabfolder-custom-colors-dark-theme.png)
