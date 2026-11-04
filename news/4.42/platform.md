@@ -62,10 +62,25 @@ for how other views can offer the overlay.
 ## Preferences
 -->
 
-<!--
----
 ## Themes and Styling
--->
+
+### Switch Themes from the Window Menu
+<!-- https://github.com/eclipse-platform/eclipse.platform.ui/pull/4356 -->
+<details>
+<summary>Contributors</summary>
+
+- [Lars Vogel](https://github.com/vogella)
+</details>
+
+The new `Window > Appearance > Themes` submenu lets you switch the theme without opening the preferences.
+It lists all installed themes, including custom themes contributed by plug-ins,
+applies your choice right away and remembers it for the next start.
+A switch between a light and a dark theme offers a restart.
+`Set current theme as default` makes the active theme the default for new workspaces.
+
+![Themes submenu listing the Dark and Light themes together with custom themes](images/themes-submenu.png)
+
+---
 
 <!--
 ---
