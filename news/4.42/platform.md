@@ -80,6 +80,29 @@ A switch between a light and a dark theme offers a restart.
 
 ![Themes submenu listing the Dark and Light themes together with custom themes](images/themes-submenu.png)
 
+### `DateTime` Follows the Dark Theme and Honors Custom Colors (Windows)
+<!-- https://github.com/eclipse-platform/eclipse.platform.swt/pull/3793 -->
+<details>
+<summary>Contributors</summary>
+
+- [Lars Vogel](https://github.com/vogella)
+</details>
+
+On Windows, `DateTime` no longer stands out with light colors in a dark application.
+Its month calendar, including the one in the drop-down, now follows the dark theme,
+and the date and time field is colored too, with the selected field still highlighted.
+The field has a flat border instead of the sunken native edge,
+and the drop-down button takes the field's color, leaving just the arrow.
+
+![Due Date field with a date and a drop-down arrow in a dark application](images/datetime-dark-theme-field.png)
+
+![Month calendar drop-down in dark colors](images/datetime-dark-theme-calendar.png)
+
+`DateTime.setBackground()` and `DateTime.setForeground()` now take effect too,
+and `DateTime.getBackground()` and `DateTime.getForeground()` return the colors in use.
+These colors take precedence over the dark defaults and also apply outside of dark mode.
+A `DateTime` without custom colors in light mode keeps its native look.
+
 ---
 
 <!--
