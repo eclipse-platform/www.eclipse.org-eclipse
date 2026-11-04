@@ -103,6 +103,24 @@ and `DateTime.getBackground()` and `DateTime.getForeground()` return the colors 
 These colors take precedence over the dark defaults and also apply outside of dark mode.
 A `DateTime` without custom colors in light mode keeps its native look.
 
+### Visible Selection in Unfocused Trees and Tables (Windows)
+<!-- https://github.com/eclipse-platform/eclipse.platform.swt/pull/3659 -->
+<details>
+<summary>Contributors</summary>
+
+- [Lars Vogel](https://github.com/vogella)
+</details>
+
+In the dark theme on Windows, you can now see the selection of a `Tree` or `Table` that does not have the focus.
+It used to be nearly invisible, for example in the `Project Explorer` while you work in an editor with `Link with Editor` enabled.
+The selection now has a subtle fill derived from the background of the control,
+which stays distinct from the focused and hovered states.
+The light theme and high contrast mode keep their native look.
+
+An unfocused selection on `build.properties` before (top) and after (bottom) the change:
+
+![Selected row that barely stands out from the dark background on top, and a subtle gray fill behind the icon and label below](images/unfocused-selection-dark-theme.png)
+
 ---
 
 <!--
