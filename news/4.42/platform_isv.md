@@ -151,6 +151,54 @@ The CSS engine now skips only what it cannot parse and logs it:
 a bad declaration is dropped on its own, and a bad selector drops its rule.
 The rest of your theme continues to apply.
 
+### Themes Can Declare That They Are Dark
+<!-- https://github.com/eclipse-platform/eclipse.platform.ui/pull/4354 -->
+<details>
+<summary>Contributors</summary>
+
+- [Lars Vogel](https://github.com/vogella)
+</details>
+
+The `org.eclipse.e4.ui.css.swt.theme` extension point has a new `isDarkTheme` attribute, and `ITheme.isDark()` returns its value.
+The platform uses it for the SWT appearance and when it follows a dark operating system setting,
+so a product that ships its own dark theme is now handled too.
+Themes without the attribute are still classified by their id.
+
+```xml
+<theme
+      id="com.example.theme.dark"
+      label="Example Dark"
+      basestylesheeturi="css/dark.css"
+      isDarkTheme="true">
+</theme>
+```
+
+The appearance preference page now only recommends a restart if you switch between a light and a dark theme.
+
+### Themes Can Place the Perspective Switcher and Hide Toolbars
+<!-- https://github.com/eclipse-platform/eclipse.platform.ui/pull/4475 -->
+<!-- https://github.com/eclipse-platform/eclipse.platform.ui/pull/4460 -->
+<details>
+<summary>Contributors</summary>
+
+- [Lars Vogel](https://github.com/vogella)
+</details>
+
+A theme can now arrange the workbench window through the preferences it sets.
+The new `perspectiveSwitcherSide` preference moves the perspective switcher to the `top`, `bottom`, `left` or `right` trim.
+On the left or right, it is laid out vertically and forms a compact bar along the side of the window.
+A position you drag the switcher to is kept until the value changes again.
+
+Workbench windows now also follow the `coolBarVisible` and `perspectiveBarVisible` preferences at runtime,
+so a theme can hide the main toolbar or the perspective bar.
+Your choice in `Window > Appearance > Show Toolbar` for a window still takes precedence.
+
+```css
+IEclipsePreferences#org-eclipse-ui-workbench {
+	preferences: 'perspectiveSwitcherSide=left' 'coolBarVisible=false';
+}
+```
+
 ---
 ## SWT Changes
 
