@@ -50,6 +50,18 @@ and may be removed again in any future release once the generalized behavior has
 See [the related news](platform_isv.md#findreplace-overlay-available-in-any-part-adapting-to-itextviewer)
 for how other views can offer the overlay.
 
+### Filtered Trees Keep Your Selection
+<!-- https://github.com/eclipse-platform/eclipse.platform.ui/pull/4490 -->
+<details>
+<summary>Contributors</summary>
+
+- [Lars Vogel](https://github.com/vogella)
+</details>
+
+When you widen or clear the filter of a filtered tree, your selection now stays selected and visible.
+The tree used to collapse completely, which moved the selection to a collapsed parent and left you searching for the element again.
+This applies to the preference dialogs and to all views that use `FilteredTree`.
+
 ---
 
 <!--
