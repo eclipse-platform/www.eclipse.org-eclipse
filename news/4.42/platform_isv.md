@@ -50,3 +50,33 @@ which a `TabFolder` without its own colors retains.
 The `Customize Perspective` dialog before (top) and after (bottom) the change:
 
 ![Customize Perspective dialog with white tabs and a bright frame on top, and with dark tabs and a subtle frame below](images/tabfolder-custom-colors-dark-theme.png)
+
+### `ToolItem` Inherits Its Parent's Background (Windows)
+<!-- https://github.com/eclipse-platform/eclipse.platform.swt/pull/3792 -->
+<details>
+<summary>Contributors</summary>
+
+- [Lars Vogel](https://github.com/vogella)
+</details>
+
+On Windows, `ToolItem.getBackground()` now returns the color the item inherits from a parent with a background mode,
+as set with `Composite.setBackgroundMode()`.
+It used to return the system default,
+which disagreed with `ToolBar.getBackground()` and with the behavior on GTK and macOS.
+If your application reads this value on Windows, you now get the inherited color.
+
+In the dark theme, this also improves selected toolbar buttons in the IDE.
+Buttons such as `Toggle Mark Occurrences` now use a subtle color derived from the toolbar
+instead of a bright block, so their icons remain easy to see.
+Hot items follow the same color logic.
+
+Colors set with `ToolItem.setBackground()` or `ToolBar.setBackground()` still take precedence,
+and tool bars without an inherited background are not affected.
+
+Before:
+
+![Selected Toggle Mark Occurrences button as a bright block on a dark toolbar](images/toolitem-selected-dark-theme-before.png)
+
+After:
+
+![Selected Toggle Mark Occurrences button in a subtle gray on a dark toolbar](images/toolitem-selected-dark-theme-after.png)
