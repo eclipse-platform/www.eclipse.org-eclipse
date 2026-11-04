@@ -26,6 +26,48 @@ Users can restrict the overlay to text editors again with `Restrict find/replace
 in `Preferences > General > Editors > Text Editors`,
 which serves as a fallback in case the overlay misbehaves in a part it has not been tried in yet.
 
+### POJO Handlers for `org.eclipse.ui.handlers`
+<!-- https://github.com/eclipse-platform/eclipse.platform.ui/pull/4242 -->
+<details>
+<summary>Contributors</summary>
+
+- [Lars Vogel](https://github.com/vogella)
+</details>
+
+Handlers contributed through the `org.eclipse.ui.handlers` extension point no longer have to implement `IHandler`.
+The class can be a plain Java object with `@Execute` and `@CanExecute` methods,
+whose arguments are injected from the active part context, as in E4 model handlers.
+This also applies to the `defaultHandler` attribute of `org.eclipse.ui.commands`.
+
+```xml
+<extension point="org.eclipse.ui.handlers">
+   <handler
+         commandId="com.example.commands.close"
+         class="com.example.CloseHandler">
+   </handler>
+</extension>
+```
+
+```java
+public class CloseHandler {
+
+	@CanExecute
+	public boolean canExecute(IWorkbench workbench) {
+		return !workbench.isClosing();
+	}
+
+	@Execute
+	public void execute(IWorkbench workbench) {
+		workbench.close();
+	}
+}
+```
+
+You can move your handler code to the E4 programming model one handler at a time,
+without changing the application model.
+Field injection, method injection and `@PostConstruct` work as well, but constructor injection and `IObjectWithState` are not supported.
+Handlers that implement `IHandler` continue to work as before.
+
 ---
 ## SWT Changes
 
