@@ -85,6 +85,72 @@ viewer.setLabelProvider(ColumnLabelProvider.createTextProvider(Person::getName))
 
 Existing callers continue to compile and run unchanged.
 
+### CSS `@media` Rules and the `:not()` Selector
+<!-- https://github.com/eclipse-platform/eclipse.platform.ui/pull/4323 -->
+<!-- https://github.com/eclipse-platform/eclipse.platform.ui/pull/4322 -->
+<details>
+<summary>Contributors</summary>
+
+- [Lars Vogel](https://github.com/vogella)
+</details>
+
+A theme no longer needs a second style sheet to differ on one platform.
+The CSS engine now evaluates `@media` rules with the features `-eclipse-os`, `-eclipse-ws` and `-eclipse-os-version`,
+and with `-eclipse-bundle` and `-eclipse-bundle-version`, so you can style an optional contribution only where it is installed.
+The version features also have minimum and maximum variants, such as `-eclipse-min-os-version`.
+An unknown feature, value or media type does not match, so the block contributes no rules.
+
+The new `:not()` selector excludes elements from a broad rule.
+Its argument is a single simple selector, and pseudo-classes are not supported as arguments.
+
+```css
+@media (-eclipse-os: linux) {
+  CTabFolder { background-color: #2f2f2f; }
+}
+
+Label:not(.highlighted) { color: #cccccc; }
+```
+
+### Relative Font Sizes and More Font Weights in CSS
+<!-- https://github.com/eclipse-platform/eclipse.platform.ui/pull/4315 -->
+<!-- https://github.com/eclipse-platform/eclipse.platform.ui/pull/4421 -->
+<!-- https://github.com/eclipse-platform/eclipse.platform.ui/pull/4369 -->
+<!-- https://github.com/eclipse-platform/eclipse.platform.ui/pull/4422 -->
+<!-- https://github.com/eclipse-platform/eclipse.platform.ui/pull/4458 -->
+<details>
+<summary>Contributors</summary>
+
+- [Lars Vogel](https://github.com/vogella)
+</details>
+
+`font-size` now accepts `em`, `%`, `larger` and `smaller`, resolved against the font the widget had before styling.
+A theme can therefore make a font a bit larger and still respect the size you configured.
+
+`font-weight` now accepts `normal`, `bold`, `bolder`, `lighter`, the numbers `100` to `900`,
+and face names such as `light` or `semi-bold`.
+A weight selects the installed face of the font family, or the nearest one if that weight is missing.
+
+```css
+Label { font-size: 1.2em; font-weight: semi-bold; }
+```
+
+If your style sheet uses `px`, check its font sizes.
+A `px` value was read as points so far and is now converted with 1px = 0.75pt, so it renders smaller.
+Use `pt` to keep the previous size.
+
+### A Malformed CSS Rule No Longer Discards the Style Sheet
+<!-- https://github.com/eclipse-platform/eclipse.platform.ui/pull/4321 -->
+<details>
+<summary>Contributors</summary>
+
+- [Lars Vogel](https://github.com/vogella)
+</details>
+
+A single unsupported construct used to discard every rule of a style sheet.
+The CSS engine now skips only what it cannot parse and logs it:
+a bad declaration is dropped on its own, and a bad selector drops its rule.
+The rest of your theme continues to apply.
+
 ---
 ## SWT Changes
 
