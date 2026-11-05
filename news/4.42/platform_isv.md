@@ -68,6 +68,23 @@ without changing the application model.
 Field injection, method injection and `@PostConstruct` work as well, but constructor injection and `IObjectWithState` are not supported.
 Handlers that implement `IHandler` continue to work as before.
 
+### Typed Factory Methods for JFace Label Providers
+<!-- https://github.com/eclipse-platform/eclipse.platform.ui/pull/4433 -->
+<details>
+<summary>Contributors</summary>
+
+- [Lars Vogel](https://github.com/vogella)
+</details>
+
+The `createTextProvider`, `createImageProvider` and `createTextImageProvider` methods of `LabelProvider` and `ColumnLabelProvider` are now generic,
+so you no longer have to cast the element inside the function.
+
+```java
+viewer.setLabelProvider(ColumnLabelProvider.createTextProvider(Person::getName));
+```
+
+Existing callers continue to compile and run unchanged.
+
 ---
 ## SWT Changes
 
