@@ -199,6 +199,30 @@ IEclipsePreferences#org-eclipse-ui-workbench {
 }
 ```
 
+### Shared Syntax Colors for Editors
+<!-- https://github.com/eclipse-platform/eclipse.platform.ui/pull/4372 -->
+<!-- https://github.com/eclipse-platform/eclipse.platform.ui/pull/4385 -->
+<details>
+<summary>Contributors</summary>
+
+- [Lars Vogel](https://github.com/vogella)
+</details>
+
+Editors can now share one set of theme colors for syntax coloring instead of defining their own colors and dark theme values.
+The new `SyntaxThemeConstants` class in `org.eclipse.ui.editors` provides the ids `TAG_COLOR`, `ATTRIBUTE_NAME_COLOR`, `STRING_COLOR`, `COMMENT_COLOR` and `DIRECTIVE_COLOR`,
+which you resolve against the workbench color registry.
+
+```java
+ColorRegistry colors = PlatformUI.getWorkbench().getThemeManager().getCurrentTheme().getColorRegistry();
+Color tagColor = colors.get(SyntaxThemeConstants.TAG_COLOR);
+```
+
+You can change these colors in the new `Syntax coloring` category of `Preferences > General > Appearance > Colors and Fonts`.
+The Ant editor, the target definition editor, the XML source pages of the PDE editors and the XMI tab of the model editor already use them,
+which replaces the `Syntax` tab of the Ant editor preferences and the `XML Highlighting` tab of the PDE editor preferences.
+The shared colors have no bold or italic setting,
+and colors you customized in the previous locations are not carried over.
+
 ---
 ## SWT Changes
 
