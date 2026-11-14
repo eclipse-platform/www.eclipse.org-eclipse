@@ -427,6 +427,9 @@
 
 
 				const headings = markedGfmHeadingId.getHeadingList();
+				if (headings.length > 0 && headings[0].level == 1) {
+					document.title = headings[0].raw;
+				}
 				const headingText = `
 <ul id="table-of-contents">
 ${headings.map(({id, raw, level}) => `<li class="tl${level}"><a href="#${id}">${raw}</a></li>`).join(' ')}
