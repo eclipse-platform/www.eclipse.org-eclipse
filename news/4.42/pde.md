@@ -67,3 +67,29 @@ The e4 model editor now works well with dark themes:
 its stylesheet no longer overrides the active theme, and the XMI and list tabs use theme-aware colors.
 If you paste an element where it is not allowed, it goes into the closest parent that accepts it instead of the paste failing.
 Larger drop zones in the tree make drag and drop easier to hit.
+
+### Dependencies Used Only in `plugin.xml` or for Shared Packages Are No Longer Reported as Unused
+<!--
+https://github.com/eclipse-pde/eclipse.pde/pull/2482
+https://github.com/eclipse-pde/eclipse.pde/pull/2578
+-->
+<details>
+<summary>Contributors</summary>
+
+- [Heiko Klare](https://github.com/HeikoKlare)
+</details>
+
+`Find unused dependencies` on the `Dependencies` page of the manifest editor
+and the `Organize Manifests Wizard` no longer report the following dependencies as unused,
+so removing unused dependencies no longer breaks your plug-in:
+
+- A dependency providing a class that your plug-in only refers to in `plugin.xml` or `fragment.xml`,
+  such as the class of a view or a handler.
+  Removing such a dependency used to leave a plug-in that still compiled
+  but failed at runtime as soon as the view or handler was used.
+- A dependency providing a package that your plug-in contains as well,
+  as is common for test plug-ins that place their tests in the packages of the plug-in they test.
+  Removing such a dependency used to break the compilation of your plug-in.
+
+For extension points from your target platform, classes in `plugin.xml` are only recognized
+if the target also contains the source bundle of the plug-in that declares the extension point.
