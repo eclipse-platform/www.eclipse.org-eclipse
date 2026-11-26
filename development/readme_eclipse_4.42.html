@@ -24,7 +24,7 @@ https://validator.w3.org/check?uri=http%3A%2F%2Fwww.eclipse.org%2Feclipse%2Fdeve
   <p>
     <a
       class="mozTocH1"
-      name="mozTocId299852">Last revised September 03, 2026</a>
+      name="mozTocId299852">Last revised November 14, 2026</a>
   </p>
 
   <p style="text-align: left; font-weight: bold;">
@@ -69,8 +69,6 @@ https://validator.w3.org/check?uri=http%3A%2F%2Fwww.eclipse.org%2Feclipse%2Fdeve
                 <li><a href="#mozTocId828477">Welcome page not displayed properly (Linux/Unix)</a></li>
                 <li><a href="#mozTocId26110">Help browser tool bar buttons do not work for some documents</a></li>
                 <li><a href="#mozTocId324012">Help documents not displayed in a browser or very slow document loading (Windows only)</a></li>
-                <li><a href="#mozTocId227368">Working disconnected from the network (Windows only)</a></li>
-                <li><a href="#mozTocId121403">Using Internet Explorer in offline mode (Windows only)</a></li>
               </ol></li>
             <li><a href="#mozTocId683637">Platform - UI</a>
               <ol>
@@ -90,6 +88,10 @@ https://validator.w3.org/check?uri=http%3A%2F%2Fwww.eclipse.org%2Feclipse%2Fdeve
                 <li><a href="#mozTocId414883">BIDI Segments in Text controls</a></li>
                 <li><a href="#mozTocId518357">Block Selection functionality provided by StyledText is not BIDI aware</a></li>
               </ol></li>
+            <li><a href="#network-connections">Platform - Network Connections</a>
+              <ol>
+                <li><a href="#mozTocId253283">Enabling GNOME proxy support</a></li>
+              </ol></li>
             <li><a href="#mozTocId805874">Platform - Install/Update</a>
               <ol>
                 <li><a href="#mozTocId914600">Manually installing features and plug-ins on a FAT file system (Windows only)</a></li>
@@ -98,13 +100,11 @@ https://validator.w3.org/check?uri=http%3A%2F%2Fwww.eclipse.org%2Feclipse%2Fdeve
               </ol></li>
             <li><a href="#mozTocId428861">Java development tools (JDT)</a>
               <ol>
-                <li><a href="#mozTocId577868">Cut, copy, paste not working for linked resources in views showing Java elements</a></li>
+                <li><a href="#mozTocId577868">Copying or moving linked resources in Java views</a></li>
                 <li><a href="#mozTocId554543">Java working sets not working correctly for elements from JRE system library container</a></li>
                 <li><a href="#mozTocId440090">Suspend on uncaught exception overrides exception breakpoint location filters</a></li>
-                <li><a href="#mozTocId812347">Running Java programs with non-Latin-1 characters in package or class names</a></li>
-                <li><a href="#mozTocId638407">Cannot run or debug class in a project with GB18030 characters in project name</a></li>
+                <li><a href="#debug-source-lookup">Slow source lookup during Java debugging</a></li>
                 <li><a href="#mozTocId994970">Cannot detect installed JRE with GB18030 characters in path name</a></li>
-                <li><a href="#mozTocId324283">Cannot generate Javadoc for packages with GB18030 characters in the name</a></li>
                 <li><a href="#mozTocId524553">Unable to debug stack overflows</a></li>
                 <li><a href="#mozTocId162517">Evaluation limitation</a></li>
                 <li><a href="#mozTocId408387">Missing debug attributes</a></li>
@@ -121,7 +121,7 @@ https://validator.w3.org/check?uri=http%3A%2F%2Fwww.eclipse.org%2Feclipse%2Fdeve
                 <li><a href="#mozTocId243421">PDE will not unzip source zips of some plug-ins</a></li>
                 <li><a href="#mozTocId722932">Emacs key bindings do not work in manifest editor fields</a></li>
                 <li><a href="#mozTocId828449">Export of plug-in may silently drop classes</a></li>
-                <li><a href="#mozTocId89714">Compilation errors when exporting projects not stored outside of the workspace</a></li>
+                <li><a href="#mozTocId89714">Compilation errors when exporting plug-ins stored outside the workspace</a></li>
                 <li><a href="#mozTocId270371">Headless build needs to be run from a fully qualified path</a></li>
                 <li><a href="#mozTocId73293">Importing in Eclipse application fails if plug-in exists in host workspace</a></li>
                 <li><a href="#mozTocId914239">Reusing a workspace after changing architectures silently breaks PDE models</a></li>
@@ -135,7 +135,7 @@ https://validator.w3.org/check?uri=http%3A%2F%2Fwww.eclipse.org%2Feclipse%2Fdeve
             <li><a href="#mozTocId60052">Allocating enough memory and solving OutOfMemoryErrors</a></li>
             <li><a href="#mozTocId735187">Selecting a workspace</a></li>
             <li><a href="#mozTocId620725">Specifying the Java virtual machine</a></li>
-            <li><a href="#mozTocId928700">Mac OS X</a></li>
+            <li><a href="#mozTocId928700">macOS</a></li>
             <li><a href="#mozTocId221199">Shared Install</a></li>
           </ol></li>
         <li><a href="#mozTocId575572">Upgrading Workspace from a Previous Release</a>
@@ -161,13 +161,7 @@ https://validator.w3.org/check?uri=http%3A%2F%2Fwww.eclipse.org%2Feclipse%2Fdeve
       name="mozTocId315234" />Target Operating Environments
   </h2>
   <p>In order to remain current, each Eclipse Project release targets reasonably current operating environments.</p>
-  <p>Most of the Eclipse SDK is "pure" Java code and has no direct dependence on the underlying operating system. The chief dependence is therefore on the Java Platform itself. Portions are
-    targeted to specific classes of operating environments, requiring their source code to only reference facilities available in particular class libraries (e.g. J2ME Foundation 1.1, J2SE 1.4, Java
-    5, etc).</p>
-  <p>In general, the 4.42 release of the Eclipse Project is developed on Java SE 25 VMs. As such, the Eclipse SDK as a whole is targeted at all modern, desktop Java VMs.</p>
-  <p>
-    <a href="#appendix">Appendix 1</a> contains a table that indicates the class library level required for each bundle.
-  </p>
+  <p>The Eclipse SDK requires Java SE 25 or later to run.</p>
   <p>
     There are many different implementations of the Java Platform running atop a variety of operating systems. We focus our testing on a handful of popular combinations of operating system and Java
     Platform; these are our <em>reference platforms</em>. Eclipse undoubtedly runs fine in many operating environments beyond the reference platforms we test. However, since we do not systematically
@@ -201,11 +195,6 @@ https://validator.w3.org/check?uri=http%3A%2F%2Fwww.eclipse.org%2Feclipse%2Fdeve
   <p>
     <a
       class="mozTocH3"
-      name="mozTocId324309">Eclipse 4.42 is compatible with Eclipse 4.41 (and all earlier 4.x and 3.x versions).</a>
-  </p>
-  <p>
-    <a
-      class="mozTocH3"
       name="mozTocId324309"> <strong>API Contract Compatibility:</strong> Eclipse SDK 4.42 is upwards contract-compatible with Eclipse SDK 4.41 except in those areas noted in the
     </a><a href="https://eclipse.dev/eclipse/development/porting/eclipse_4_42_porting_guide.html"><em>Eclipse 4.42 Plug-in Migration Guide</em></a>. Programs that use affected APIs and extension points
     will need to be ported to Eclipse SDK 4.42 APIs. Downward contract compatibility is not supported. There is no guarantee that compliance with Eclipse SDK 4.42 APIs would ensure compliance with
@@ -215,18 +204,17 @@ https://validator.w3.org/check?uri=http%3A%2F%2Fwww.eclipse.org%2Feclipse%2Fdeve
   <p>
     <strong>Binary (plug-in) Compatibility:</strong> Eclipse SDK 4.42 is upwards binary-compatible with Eclipse SDK 4.41 except in those areas noted in the <a
       href="https://eclipse.dev/eclipse/development/porting/eclipse_4_42_porting_guide.html"><em>Eclipse 4.42 Plug-in Migration Guide</em> </a>. Downward plug-in compatibility is not supported.
-    Plug-ins for Eclipse SDK 4.42 will not be usable in Eclipse SDK 4.41. Refer to <a href="https://wiki.eclipse.org/Evolving_Java-based_APIs"> <em>Evolving Java-based APIs</em></a> for a discussion of
-    the kinds of API changes that maintain binary compatibility.
+    Plug-ins that use APIs introduced in 4.42 require a target platform that provides those APIs. Refer to <a href="https://wiki.eclipse.org/Evolving_Java-based_APIs">
+    <em>Evolving Java-based APIs</em></a> for a discussion of the kinds of API changes that maintain binary compatibility.
   </p>
   <p>
     <strong>Source Compatibility:</strong> Eclipse SDK 4.42 is upwards source-compatible with Eclipse SDK 4.41 except in the areas noted in the <a
-      href="https://eclipse.dev/eclipse/development/porting/eclipse_4_42_porting_guide.html"><em>Eclipse 4.42 Plug-in Migration Guide</em> </a>. This means that source files written to use Eclipse
-    SDK 4.42 APIs might successfully compile and run against Eclipse SDK 4.41 APIs, although this is not guaranteed. Downward source compatibility is not supported. If source files use new Eclipse SDK
-    APIs, they will not be usable with an earlier version of the Eclipse SDK.
+      href="https://eclipse.dev/eclipse/development/porting/eclipse_4_42_porting_guide.html"><em>Eclipse 4.42 Plug-in Migration Guide</em></a>.
+    Subject to those exceptions, source code written against the public Eclipse SDK 4.41 APIs should compile against Eclipse SDK 4.42.
   </p>
   <p>
-    <strong>Workspace Compatibility:</strong> Eclipse SDK 4.42 is upwards workspace-compatible with earlier 3.x and 4.x versions of the Eclipse SDK unless noted. This means that workspaces and projects
-    created with Eclipse SDK 4.42, 4.41, ..., down to 4.0 can be successfully opened by Eclipse SDK 4.42 and upgraded to a 4.42 workspace. This includes both hidden metadata, which is localized to a
+    <strong>Workspace Compatibility:</strong> Eclipse SDK 4.42 is upwards workspace-compatible with earlier 3.x and 4.x versions of the Eclipse SDK unless noted. Eclipse SDK 4.42 can open and upgrade
+    workspaces and projects from those releases. This includes both hidden metadata, which is localized to a
     particular workspace, as well as metadata files found within a workspace project (e.g., the .project file), which may propagate between workspaces via file copying or team repositories. Individual
     plug-ins developed for Eclipse SDK 4.42 should provide similar upwards compatibility for their hidden and visible workspace metadata created by earlier versions; 4.42 plug-in developers are
     responsible for ensuring that their plug-ins recognize metadata from earlier versions and process it appropriately. User interface session state may be discarded when a workspace is upgraded.
@@ -267,7 +255,7 @@ https://validator.w3.org/check?uri=http%3A%2F%2Fwww.eclipse.org%2Feclipse%2Fdeve
   <ul>
     <li><a
       class="mozTocH4"
-      name="mozTocId693657">As shown </a><a href="#TargetOperatingEnvironments">above</a>, Eclipse 4.42 requires at least a Java SE 25. Perhaps an older version of the VM is being found in your path. To
+      name="mozTocId693657">As shown </a><a href="#TargetOperatingEnvironments2">above</a>, Eclipse 4.42 requires Java SE 25 or later. Perhaps an older version of the VM is being found in your path. To
       explicitly specify which VM to run with, use the Eclipse <code>-vm</code> command-line argument. (See also the <a href="#RunningEclipse">Running Eclipse</a> section below.)</li>
     <li>Eclipse must be installed to a clean directory and not installed over top of a previous installation. If you have done this then please re-install to a new directory. If your workspace is
       in a child directory of your old installation directory, then see the instructions below on "<a href="#Upgrading">Upgrading Workspace from a Previous Release"</a>.
@@ -415,56 +403,8 @@ https://validator.w3.org/check?uri=http%3A%2F%2Fwww.eclipse.org%2Feclipse%2Fdeve
       class="mozTocH4"
       name="mozTocId324012">Help documents not displayed in a browser or very slow document loading (Windows only)</a>
   </h4>
-  <p>
-    <a
-      class="mozTocH4"
-      name="mozTocId324012">If your LAN settings are not properly configured for local host access, your Help browser might open to a blank page or display an HTTP error instead of a help page, or
-      you may experience long delays when loading help documents. Your system administrator can configure your LAN settings so that help documents can be accessed from the local help server.</a>
-  </p>
-  <blockquote>
-    <ol>
-      <li><a
-        class="mozTocH4"
-        name="mozTocId324012">In the Control Panel, open <b>Internet Options</b>, select the <b>Connections</b> tab and choose <b>LAN Settings</b>.
-      </a></li>
-      <li><a
-        class="mozTocH4"
-        name="mozTocId324012">If your host was configured to use DHCP for IP assignment, make sure that the "Automatically detect settings" check box is cleared.</a></li>
-      <li><a
-        class="mozTocH4"
-        name="mozTocId324012">If you use a proxy server, ensure that the "Bypass proxy server for local addresses" is selected.</a></li>
-      <li><a
-        class="mozTocH4"
-        name="mozTocId324012">In "Advanced" settings for proxies, add "127.0.0.1;localhost" to the "Exceptions" if these addresses are not listed.</a></li>
-      <li><a
-        class="mozTocH4"
-        name="mozTocId324012">If you are using an automatic configuration script for proxy settings, and are not sure that the script is correct, clear the "Use automatic configuration script"
-          check box.</a></li>
-    </ol>
-  </blockquote>
-  <h4>
-    <a
-      class="mozTocH4"
-      name="mozTocId227368">Working disconnected from the network (Windows only)</a>
-  </h4>
-  <p>
-    <a
-      class="mozTocH4"
-      name="mozTocId227368"> If you are experiencing problems when not connected to the network, you must install the loopback adapter from the Windows installation CD. (bug </a><a
-      href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=831">831</a>)
-  </p>
-  <h4>
-    <a
-      class="mozTocH4"
-      name="mozTocId121403">Using Internet Explorer in offline mode (Windows only)</a>
-  </h4>
-  <p>
-    <a
-      class="mozTocH4"
-      name="mozTocId121403">If you have been using Internet Explorer in Offline mode, when you access the help system you will get a message indicating that the web page you requested is not
-      available offline or a blank page will display. Click <b>Connect</b> or deselect "Work Offline" in the Internet Explorer "File" menu to return the system behavior to normal.
-    </a>
-  </p>
+  <p>The help browser connects to a local help server. If requests to <code>localhost</code> or <code>127.0.0.1</code> go through a proxy,
+    ask your system administrator to configure a proxy exception for local connections.</p>
   <h3 id="I-Platform-UI">
     <a
       class="mozTocH3"
@@ -607,114 +547,14 @@ https://validator.w3.org/check?uri=http%3A%2F%2Fwww.eclipse.org%2Feclipse%2Fdeve
       name="mozTocId518357"> When the orientation of characters under the left and right edges of the block selection rectangle are not the same, the actual selection ranges (in memory) differ
       from the visual representation of the selection. (bug </a><a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=277929">277929</a>)
   </p>
-  <h3 id="I-Platform-Team-CVS">
-    <a
-      class="mozTocH3"
-      name="mozTocId263012">Platform - Team - CVS</a>
-  </h3>
-  <p>
-    <a
-      class="mozTocH3"
-      name="mozTocId263012"> The following are known problems with the CVS repository provider only, and do not apply to other repository providers. Additional information on how to use CVS from
-      Eclipse can be found in the </a><a href="https://wiki.eclipse.org/CVS_FAQ">Eclipse CVS FAQ</a>.
-  </p>
-  <h4>
-    <a
-      class="mozTocH4"
-      name="mozTocId262771">CVS server compatibility</a>
-  </h4>
-  <p>
-    <a
-      class="mozTocH4"
-      name="mozTocId262771">The CVS plug-in parses messages returned from the CVS server. If the format of these messages is not as expected, some of the plug-in's functionality may be missing.
-      The CVS plug-in is compatible with all stable 1.11.X builds of the CVS server, and should be compatible with future releases in that stream unless text message formats change (the last tested
-      server was 1.11.22). As for the 1.12.X feature releases of CVS, the Eclipse CVS client has been tested with builds up to 1.12.13. However, future releases could easily break the Eclipse CVS
-      client. Basic functionality, such as Checkout, Commit, and Update, should always work, but there may be problems with more advanced commands such as Synchronizing and Browsing the repository.</a>
-  </p>
-  <h4>
-    <a
-      class="mozTocH4"
-      name="mozTocId532855">Connection cannot be found after initially missing</a>
-  </h4>
-  <p>
-    <a
-      class="mozTocH4"
-      name="mozTocId532855"> If a connection initially fails due to a network problem, the connection may continue to fail even when the network problem is fixed. In order to establish the
-      connection you must exit and restart Eclipse. (bug </a><a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=9295">9295</a>)
-  </p>
-  <h4>
-    <a
-      class="mozTocH4"
-      name="mozTocId660590">Received broken pipe signal" error from server</a>
-  </h4>
-  <p>
-    <a
-      class="mozTocH4"
-      name="mozTocId660590"> Eclipse sometimes performs multiple commands within a single connection to the server. This may cause problems with CVS servers that are running server scripts in
-      response to certain commands. (bugs </a><a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=23575">23575</a> and <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=23581">23581</a>)
-  </p>
-  <h4>
-    <a
-      class="mozTocH4"
-      name="mozTocId971246">Terminated with fatal signal 10" error from server</a>
-  </h4>
-  <p>
-    <a
-      class="mozTocH4"
-      name="mozTocId971246"> There is a bug in the CVS server related to some compression levels. If you get this error, changing the compression level on the CVS preference page may help. (bug </a><a
-      href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=15724">15724</a>)
-  </p>
-  <h4>
-    <a
-      class="mozTocH4"
-      name="mozTocId689776">error using ext connection method</a>
-  </h4>
-  <p>
-    <a
-      class="mozTocH4"
-      name="mozTocId689776"> There are a few situations that can result in an "Unknown response" error messages when using the ext connection method. One situation involves using an external
-      communications client (e.g. rsh or ssh) that adds CRs to the communications channel (bug </a><a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=21180">21180</a>). Another involves Eclipse not
-    properly reading the stderr output of the external communications tool. (bug <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=11633">11633</a>)
-  </p>
-  <h4>
-    <a
-      class="mozTocH4"
-      name="mozTocId50418">A disabled CVS capability may not be auto-enabled in existing workspaces</a>
-  </h4>
-  <p>
-    <a
-      class="mozTocH4"
-      name="mozTocId50418"> New in 3.0 is the ability to disable capabilities and the CVS support in Eclipse can be disabled. However, for backwards compatibility the CVS capability is
-      auto-enabled in existing workspaces that already contain CVS projects. The auto-enabling function may not run if the team support plugin is not loaded at startup. (bug </a><a
-      href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=66977">66977</a>)
-  </p>
-  <h4>
-    <a
-      class="mozTocH4"
-      name="mozTocId533799">Builder output files may appear as changed</a>
-  </h4>
-  <p>
-    <a
-      class="mozTocH4"
-      name="mozTocId533799">When folders containing build output are shared they may get improperly marked as dirty when build output is generated.</a>
-  </p>
+  <h3 id="network-connections">Platform - Network Connections</h3>
   <h4>
     <a
       class="mozTocH4"
       name="mozTocId253283">Enabling GNOME proxy support</a>
   </h4>
-  <p>
-    <a
-      class="mozTocH4"
-      name="mozTocId253283"> GNOME applications can make use of proxy settings defined in this environment. If set, Eclipse will use it prior to proxy settings declared using env variables. This
-      feature is disabled by default, to enable it launch Eclipse with <code>"-Dorg.eclipse.core.net.enableGnome"</code> switch. That is,
-    </a>
-  </p>
-  <pre>
-    <a
-      class="mozTocH4"
-      name="mozTocId253283">eclipse -Dorg.eclipse.core.net.enableGnome</a>
-  </pre>
+  <p>To enable the GNOME proxy settings provider on Linux, pass its system property to the JVM:</p>
+  <pre>eclipse -vmargs -Dorg.eclipse.core.net.enableGnome=true</pre>
   <h3 id="I-Platform-Install-Update">
     <a
       class="mozTocH3"
@@ -767,14 +607,11 @@ https://validator.w3.org/check?uri=http%3A%2F%2Fwww.eclipse.org%2Feclipse%2Fdeve
   <h4>
     <a
       class="mozTocH4"
-      name="mozTocId577868">Cut, copy, paste not working for linked resources in views showing Java elements</a>
+      name="mozTocId577868">Copying or moving linked resources in Java views</a>
   </h4>
-  <p>
-    <a
-      class="mozTocH4"
-      name="mozTocId577868"> The cut, copy, and paste actions do not work for linked files and folders appearing in views that show Java elements, including the Package Explorer. The workaround is
-      to use these actions from the Navigator view instead. (bug </a><a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=34568">34568</a>)
-  </p>
+  <p>When copying or moving a linked resource in a Java view, the destination must be a project or a source folder that is also the project root.
+    To create another link to the same file or folder, follow the instructions for
+    <a href="https://help.eclipse.org/latest/topic/org.eclipse.platform.doc.user/tasks/tasks-45.htm">creating linked resources</a>.</p>
   <h4>
     <a
       class="mozTocH4"
@@ -798,44 +635,10 @@ https://validator.w3.org/check?uri=http%3A%2F%2Fwww.eclipse.org%2Feclipse%2Fdeve
       specific class, execution will still suspend when the user preference to suspend on uncaught exceptions is on. (bug
     </a><a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=66770">66770</a>)
   </p>
-  <h4>
-    <a
-      class="mozTocH4"
-      name="mozTocId812347">Running Java programs with non-Latin-1 characters in package or class names</a>
-  </h4>
-  <p>
-    <a
-      class="mozTocH4"
-      name="mozTocId812347">You get a <code>java.lang.NoClassDefFoundError</code> when running Java programs with non-Latin characters in the package or class names. The workaround is to package
-      the class files as a JAR file and run the program out of the JAR and not from the file system directly. (bug
-    </a><a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=4181">4181</a>)
-  </p>
-  <h4>
-    <a
-      class="mozTocH4"
-      name="mozTocId812347">Long Freezes During Eclipse Java Debugging - Workaround</a>
-  </h4>
-  <p>
-    <a
-      class="mozTocH4"
-      name="mozTocId812347">Eclipse can experience long freezes during Java debugging sessions, especially when hitting breakpoints, making the IDE unresponsive and disrupting workflow. 
-      The issue is often linked to the Java Debug component and can be aggravated by variable inspection or overly broad source lookup configurations. 
-      A key finding was that default source lookup settings—including all workspace projects and dependency JARs—significantly slowed performance in large workspaces.
-       Limiting source lookup to a focused Working Set with only main Java sources drastically improved response time, reducing delays from over 30 seconds to under 1 second, serving as an effective workaround. see
-    </a> <a href="https://github.com/eclipse-jdt/eclipse.jdt.debug/issues/814">814</a>
-  </p>
-  <h4>
-    <a
-      class="mozTocH4"
-      name="mozTocId638407">Cannot run or debug class in a project with GB18030 characters in project name</a>
-  </h4>
-  <p>
-    <a
-      class="mozTocH4"
-      name="mozTocId638407"> Most class libraries do not properly support the creation of a system process (via <code>java.lang.Runtime.exec(...)</code> ) when the specified command line contains
-      GB18030 characters. This limitation means the debugger cannot launch applications when the command line it generates contains GB18030 characters. (bug
-    </a><a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=32206">32206</a>)
-  </p>
+  <h4 id="debug-source-lookup">Slow source lookup during Java debugging</h4>
+  <p>In one large workspace, inspecting stack frames and expanding variables was slow when the source lookup path included all workspace projects
+    and dependency JARs. The reporter found that limiting source lookup to a working set of relevant sources reduced the delay.
+    See <a href="https://github.com/eclipse-jdt/eclipse.jdt.debug/issues/814">JDT Debug issue 814</a> for the configuration.</p>
   <h4>
     <a
       class="mozTocH4"
@@ -846,17 +649,6 @@ https://validator.w3.org/check?uri=http%3A%2F%2Fwww.eclipse.org%2Feclipse%2Fdeve
       class="mozTocH4"
       name="mozTocId994970"> Automatic JRE detection fails when the JRE is stored in a directory containing GB18030 characters in its name. (bug </a><a
       href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=33844">33844</a>)
-  </p>
-  <h4>
-    <a
-      class="mozTocH4"
-      name="mozTocId324283">Cannot generate Javadoc for packages with GB18030 characters in the name</a>
-  </h4>
-  <p>
-    <a
-      class="mozTocH4"
-      name="mozTocId324283"> Most class libraries do not properly support the creation of a system process (via <code>java.lang.Runtime.exec(...)</code> ) when the specified command line contains
-    </a><a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=32215">32215</a>)
   </p>
   <h4>
     <a
@@ -1041,13 +833,13 @@ https://validator.w3.org/check?uri=http%3A%2F%2Fwww.eclipse.org%2Feclipse%2Fdeve
   <h4>
     <a
       class="mozTocH4"
-      name="mozTocId89714">Compilation errors when exporting projects not stored outside of the workspace</a>
+      name="mozTocId89714">Compilation errors when exporting plug-ins stored outside the workspace</a>
   </h4>
   <p>
     <a
       class="mozTocH4"
-      name="mozTocId89714"> When exporting multiple plug-ins and one is stored outside of the workspace, compile errors occurs on export. To work around the problem, you can either export the
-      plug-ins one by one, or change their location. (bug </a><a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=98579">98579</a>)
+      name="mozTocId89714">When exporting multiple plug-ins together, compilation can fail if one of the projects is stored outside the workspace.
+      Try exporting the plug-ins individually or moving the external project. (bug </a><a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=98579">98579</a>)
   </p>
   <h4>
     <a
@@ -1103,43 +895,17 @@ https://validator.w3.org/check?uri=http%3A%2F%2Fwww.eclipse.org%2Feclipse%2Fdeve
       class="mozTocH2"
       name="mozTocId19817">Running Eclipse</a>
   </h2>
-  <p>
-    <a
-      class="mozTocH2"
-      name="mozTocId19817"> After installing the Eclipse SDK in a directory, you can start the Workbench by running the Eclipse executable included with the release (you also need a Java SE 25 JRE,
-      not included with the Eclipse SDK). With Oomph users can install required JRE courtesy of <a href="https://www.eclipse.org/justj">JustJ</a>. On Windows, the executable file is called <samp>eclipse.exe</samp> , and is located in the <code>eclipse</code> sub-directory of the install. If installed at
-      <code>C:\eclipse-SDK-4.42-win64</code> , the executable is <code>C:\eclipse-SDK-4.42-win64\eclipse\eclipse.exe</code> . <b>Note:</b> Set-up on most other operating environments is analogous.
-      Special instructions for Mac OS X are listed
-    </a><a href="#macosx">below</a>.
-  </p>
+  <p>Start the Workbench using the Eclipse executable included in the SDK archive. The archive requires a separate Java SE 25 or later runtime.
+    The Eclipse Installer can install a runtime from <a href="https://www.eclipse.org/justj">JustJ</a>.
+    On Windows, run <samp>eclipse.exe</samp> in the extracted <code>eclipse</code> directory. See also the <a href="#macosx">macOS instructions</a>.</p>
   <h3>
     <a
       class="mozTocH3"
       name="mozTocId60052">Allocating enough memory and solving OutOfMemoryErrors</a>
   </h3>
-  <p>
-    <a
-      class="mozTocH3"
-      name="mozTocId60052"> By default, Eclipse will allocate up to 1024 megabytes of Java heap memory. This should be ample for all typical development tasks. However, depending on the JRE that
-      you are running, the number of additional plug-ins you are using, and the number of files you will be working with, you could conceivably have to increase this amount. Eclipse allows you to pass
-      arguments directly to the Java VM using the <code>-vmargs</code> command line argument, which must follow all other Eclipse specific arguments. Thus, to increase the available heap memory, you
-      would typically use:
-    </a>
-  </p>
-  <blockquote>
-    <p>
-      <a
-        class="mozTocH3"
-        name="mozTocId60052"> <code>eclipse -vmargs -Xmx&lt;memory size&gt;</code>
-      </a>
-    </p>
-  </blockquote>
-  <p>
-    <a
-      class="mozTocH3"
-      name="mozTocId60052"> with the <code>&lt;memory size&gt;</code> value set to greater than "1024M" (1024 megabytes -- the default).
-    </a>
-  </p>
+  <p>By default, the JVM chooses the maximum Java heap size for the Eclipse SDK. To set an explicit maximum, pass <code>-Xmx</code>
+    after <code>-vmargs</code>. For example, the following limits the heap to 2 GiB:</p>
+  <pre>eclipse -vmargs -Xmx2g</pre>
   <p>
     <a
       class="mozTocH3"
@@ -1181,9 +947,8 @@ https://validator.w3.org/check?uri=http%3A%2F%2Fwww.eclipse.org%2Feclipse%2Fdeve
   <p>
     <a
       class="mozTocH3"
-      name="mozTocId620725"> <i>Tip:</i> It's generally a good idea to explicitly specify which Java VM to use when running Eclipse. This is achieved with the " <code>-vm</code> " command line
-      argument as illustrated above. If you don't use " <code>-vm</code> ", Eclipse will look on the OS path. When you install other Java-based products, they may change your path and could result in
-      a different Java VM being used when you next launch Eclipse.
+      name="mozTocId620725">Use <code>-vm</code> to select the Java runtime explicitly. Otherwise, the launcher may use a runtime supplied with
+      the installation or one found on the system path.
     </a>
   </p>
   <p>
@@ -1208,27 +973,13 @@ https://validator.w3.org/check?uri=http%3A%2F%2Fwww.eclipse.org%2Feclipse%2Fdeve
   <h3 id="macosx">
     <a
       class="mozTocH3"
-      name="mozTocId928700">Mac OS X</a>
+      name="mozTocId928700">macOS</a>
   </h3>
-  <p>
-    <a
-      class="mozTocH3"
-      name="mozTocId928700"> On Mac OS X, you start Eclipse by double clicking the Eclipse application. If you need to pass arguments to Eclipse, you'll have to edit the <code>eclipse.ini</code>
-      file inside the Eclipse application bundle: select the Eclipse application bundle icon while holding down the Control Key. This will present you with a popup menu. Select "Show Package Contents"
-      in the popup menu. Locate <code>eclipse.ini</code> file in the <code>Contents/Eclipse</code> sub-folder and open it with your favorite text editor to edit the command line options.
-    </a>
-  </p>
-  <p>
-    <a
-      class="mozTocH3"
-      name="mozTocId928700"> On MacOS X you can only launch a UI program more than once if you have separate copies of the program on disk. The reason for this behavior is that every UI
-      application on Mac can open multiple documents, so typically there is no need to open a program twice. Since Eclipse cannot open more than one workspace, this means you have to make a copy of
-      the Eclipse install if you want to open more then one workspace at the same time (bug </a><a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=139319">139319</a>).
-  </p>
-  <p>If you need to launch Eclipse from the command line, you can create a symbolic link such as "eclipse". It should point to the eclipse executable inside the application bundle and takes the
-    same arguments as "eclipse.exe" on other platforms.</p>
-  <p>On Mac OS X 10.4 and later, you may notice a slow down when working with significant numbers of resources if you allow Spotlight to index your workspace. To prevent this, start System
-    Preferences, select the Spotlight icon, then the Privacy tab, then click the Add button ("+") and find your workspace directory in the dialog that appears.</p>
+  <p>Double-click <code>Eclipse.app</code> to start Eclipse. To set persistent startup options, choose <b>Show Package Contents</b>
+    in Finder and edit <code>Contents/Eclipse/eclipse.ini</code> inside the application bundle.</p>
+  <p>To open another workspace at the same time, start a second process from the same installation with a different
+    <code>-data</code> directory. Adjust the application and workspace paths as needed.</p>
+  <pre>/Applications/Eclipse.app/Contents/MacOS/eclipse -data "$HOME/workspace-2"</pre>
   <h3 id="SharedInstall">
     <a
       class="mozTocH3"
@@ -1239,7 +990,7 @@ https://validator.w3.org/check?uri=http%3A%2F%2Fwww.eclipse.org%2Feclipse%2Fdeve
       class="mozTocH3"
       name="mozTocId221199"> The startup speed of a shared install can be improved if proper cache information is stored in the shared install area. To achieve this, after unzipping Eclipse
       distribution, run Eclipse once with the "-initialize" option from an account that has a write access to the install directory. See </a><a
-      href="%20https://help.eclipse.org/luna/index.jsp?topic=%2Forg.eclipse.platform.doc.isv%2Freference%2Fmisc%2Fmulti_user_installs.html">shared installs</a> in Eclipse Help for more information.
+      href="https://help.eclipse.org/latest/topic/org.eclipse.platform.doc.isv/reference/misc/multi_user_installs.html">shared installs</a> in Eclipse Help for more information.
   </p>
   <h2 id="Upgrading">
     <a
@@ -1259,9 +1010,8 @@ https://validator.w3.org/check?uri=http%3A%2F%2Fwww.eclipse.org%2Feclipse%2Fdeve
   <ol>
     <li><a
       class="mozTocH3"
-      name="mozTocId401691">Find the workspace directory used by your old version of Eclipse. Typically this is located inside the directory in which Eclipse was installed in a sub-directory
-        called "<code>workspace</code>". If you are using a shortcut or script to launch Eclipse, then it will be under the current working directory of that shortcut or script in a sub-directory
-        called "workspace". For Windows users, this is specified by the "Start in:" argument in your shortcut properties.
+      name="mozTocId401691">Locate the workspace you selected in the previous installation. The Eclipse SDK default is <code>workspace</code> in
+        your home directory on Windows and Linux, and <code>Documents/workspace</code> in your home directory on macOS.
     </a></li>
 
     <li><a
@@ -1361,13 +1111,8 @@ https://validator.w3.org/check?uri=http%3A%2F%2Fwww.eclipse.org%2Feclipse%2Fdeve
       class="mozTocH4"
       name="mozTocId226004">Sharing projects between heterogeneous Eclipse 4.42 and 4.41</a>
   </h4>
-  <p>Special care is required when a project in a team repository is being loaded and operated on by developers using Eclipse-based products based on different feature or plug-in versions. The
-    general problem is that the existence, contents, and interpretation of metadata files in the workspaces may be specific to a particular feature or plug-in version, and differ between versions. The
-    workspace compatibility guarantees only cover cases where all developers upgrade their Eclipse workspaces in lock step. In those cases there should be no problem with shared metadata. However,
-    when some developers are working in Eclipse 4.42 while others are working in Eclipse 3.x, there are no such guarantees. This section provides advice for what to do and not to do. It addresses the
-    specific issues with the Eclipse SDK.</p>
-  <p>The typical failure mode is noticed by the 4.42 user. 4.41 metadata is lost when a 4.42 user saves changes and then commits the updated metadata files to the repository. Here's how things
-    typically go awry:</p>
+  <p>Developers using different Eclipse versions can share a project through a team repository. Take care when editing shared project metadata.
+    An older version can discard settings introduced by a newer version when it rewrites the file. For example:</p>
   <ul>
     <li>A user working in Eclipse 4.42 creates or modifies a project in a way that results in changes to a shared metadata file that rely on 4.42-specific information. The user then commits the
       updated project files, including the shared metadata file, to the shared repository.</li>
