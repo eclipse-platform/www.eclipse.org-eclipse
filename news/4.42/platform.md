@@ -169,3 +169,23 @@ On an unsupported system, the launcher fails to start with an error like:
 ```
 ./eclipse: /lib64/libc.so.6: version `GLIBC_2.34' not found (required by ./eclipse)
 ```
+
+### Equinox Service Loader Mediator
+<!-- https://github.com/eclipse-equinox/equinox/pull/295 -->
+<details>
+<summary>Contributors</summary>
+
+- [Hannes Wellmann](https://github.com/HannesWell)
+- [Christoph Läubrich](https://github.com/laeubi)
+</details>
+
+To enable the use of the standard Java `ServiceLoader` facility across bundle boundaries in an OSGi runtime,
+the Equinox OSGi framework now has it's own [_Service Loader Mediator_](https://docs.osgi.org/specification/osgi.cmpn/8.1.0/service.loader.html) implementation named `org.eclipse.equinox.spi`.
+
+Previously `org.apache.aries.spifly.dynamic.bundle` from the _Apache Aries_ project was used for that purpose in most Eclipse applications.
+The new `org.eclipse.equinox.spi` framework extension has the advantage that it has zero dependencies and is more convenient to use:
+- `org.eclipse.equinox.spi` itself does not need to be started, it works automatically when included in a runtime.
+- Service provider bundles do not need to be started to be visible.
+
+By default `org.eclipse.equinox.spi` also does not print any output,
+but if debug information is required, it can be enabled via the `org.eclipse.equinox.spi/debug/registrations` tracing option.
