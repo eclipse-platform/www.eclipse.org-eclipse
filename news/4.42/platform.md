@@ -50,6 +50,51 @@ and may be removed again in any future release once the generalized behavior has
 See [the related news](platform_isv.md#findreplace-overlay-available-in-any-part-adapting-to-itextviewer)
 for how other views can offer the overlay.
 
+### Find/Replace Overlay: Shortcuts Work Wherever the Focus Is in the Overlay
+<!--
+https://github.com/eclipse-platform/eclipse.platform.ui/pull/4293
+https://github.com/eclipse-platform/eclipse.platform.ui/pull/4355
+https://github.com/eclipse-platform/eclipse.platform.ui/pull/4524
+-->
+<details>
+<summary>Contributors</summary>
+
+- [Heiko Klare](https://github.com/HeikoKlare)
+</details>
+
+While the focus is in the find/replace overlay, the keys you press no longer modify the document behind it.
+Previously, the editor's shortcuts applied again as soon as you moved to one of the overlay's buttons, for example with `Tab`,
+so that pressing `Ctrl+D` there deleted a line of the document.
+Now the overlay's shortcuts, such as `Esc` to close it or `Ctrl+Shift+C` to toggle case-sensitive search,
+work wherever the focus is within the overlay, and the editor's shortcuts are not in effect there.
+`Enter` still searches or replaces only in the input fields and presses a focused button as usual.
+
+In addition, these commands now act on the overlay while you type in one of its input fields:
+
+- `Find Next` and `Find Previous` (`Ctrl+K` and `Ctrl+Shift+K` by default) search for the term you are typing,
+  just like the search buttons of the overlay. Previously, they did nothing there.
+  This also works if you have bound these commands to other keys.
+- `Cut`, `Copy`, `Paste` and `Select All` from the `Edit` menu act on the input field.
+
+### Find/Replace Overlay: Consistent Colors in All Editors and in the Dark Theme
+<!-- https://github.com/eclipse-platform/eclipse.platform.ui/pull/4339 -->
+<details>
+<summary>Contributors</summary>
+
+- [Heiko Klare](https://github.com/HeikoKlare)
+</details>
+
+The find/replace overlay now looks the same wherever you open it,
+blending into the text it is shown on.
+In form-based editors with a text page, such as the EGit commit viewer,
+its tool bars and the area around its input fields used to be gray.
+In the dark theme, its search and replace input fields used to have a lighter shade than the rest of the overlay
+and now match it.
+
+The overlay in the dark theme before (top) and after (bottom) the change:
+
+![Overlay with a lighter input field and white tool bars on top, and a uniformly dark overlay below](images/findreplace-overlay-dark-theme.png)
+
 ### Filtered Trees Keep Your Selection
 <!-- https://github.com/eclipse-platform/eclipse.platform.ui/pull/4490 -->
 <details>
